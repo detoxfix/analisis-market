@@ -1,0 +1,81 @@
+{
+ "generated_at": "2026-10-27T16:27:55",
+ "results": {
+  "short": {
+   "n": 2669,
+   "win_rate": 0.406894,
+   "avg_ret": -0.00446,
+   "median_ret": -0.022553,
+   "profit_factor": 0.854263,
+   "avg_days": 6.868865,
+   "worst": -0.202963,
+   "best": 0.179884,
+   "outcomes": {
+    "SL": 1190,
+    "TIME": 740,
+    "TP2": 330,
+    "TP1+TIME": 273,
+    "TP1+BE": 136
+   },
+   "strong_only": {
+    "n": 625,
+    "win_rate": 0.4096,
+    "avg_ret": -0.004788,
+    "median_ret": -0.021167,
+    "profit_factor": 0.844225,
+    "avg_days": 6.7904,
+    "worst": -0.202963,
+    "best": 0.151903,
+    "outcomes": {
+     "SL": 277,
+     "TIME": 166,
+     "TP2": 77,
+     "TP1+TIME": 64,
+     "TP1+BE": 41
+    }
+   },
+   "period": [
+    "2023-11-24",
+    "2026-10-23"
+   ]
+  },
+  "medium": {
+   "n": 718,
+   "win_rate": 0.342618,
+   "avg_ret": -0.007554,
+   "median_ret": -0.069937,
+   "profit_factor": 0.878493,
+   "avg_days": 27.062674,
+   "worst": -0.275379,
+   "best": 0.441225,
+   "outcomes": {
+    "SL": 447,
+    "TP2": 96,
+    "TIME": 71,
+    "TP1+BE": 60,
+    "TP1+TIME": 44
+   },
+   "strong_only": {
+    "n": 70,
+    "win_rate": 0.342857,
+    "avg_ret": -0.000316,
+    "median_ret": -0.081588,
+    "profit_factor": 0.995146,
+    "avg_days": 23.357143,
+    "worst": -0.137372,
+    "best": 0.441225,
+    "outcomes": {
+     "SL": 44,
+     "TP2": 11,
+     "TIME": 7,
+     "TP1+BE": 6,
+     "TP1+TIME": 2
+    }
+   },
+   "period": [
+    "2024-01-25",
+    "2026-10-21"
+   ]
+  }
+ }
+}
