@@ -1,0 +1,80 @@
+# =====================================================================
+#  IHSG Signal — konfigurasi utama
+#  Semua angka Rupiah ditulis penuh (tanpa titik pemisah ribuan).
+# =====================================================================
+
+universe:
+  min_market_cap: 5000000000000      # hanya saham dengan kapitalisasi pasar >= Rp 5 T
+  min_avg_value_20d: 5000000000      # likuiditas: rata-rata nilai transaksi 20 hari >= Rp 5 M
+  min_price: 50
+  max_stale_days: 5                  # buang saham yang tidak diperdagangkan (suspensi) > 5 hari
+  use_idx_list: true                 # ambil daftar emiten + jumlah saham dari idx.co.id (publik)
+  seed_file: data/tickers_seed.csv   # cadangan bila situs IDX tidak bisa diakses
+  exclude: []                        # kode saham yang ingin dikecualikan manual, mis. [GOTO, BUKA]
+
+data:
+  history_period: 3y                 # riwayat harga harian yang diunduh
+  benchmark: "^JKSE"                 # IHSG
+  fundamentals_cache_days: 7         # fundamental di-refresh mingguan (berubah per kuartal)
+  shares_cache_days: 7
+
+capital: 100000000                   # modal acuan untuk menghitung lot (Rp 100 jt)
+risk_per_trade: 0.01                 # maks. rugi per posisi = 1% modal (batas jumlah lot)
+
+fees:                                # biaya broker rata-rata, sudah termasuk PPh final 0,1% saat jual
+  buy: 0.0015
+  sell: 0.0025
+
+thresholds:                          # skor -100..+100 -> sinyal
+  strong_buy: 60
+  buy: 30
+  sell: -30
+  strong_sell: -60
+
+horizons:
+  short:
+    label: "Jangka Pendek (Swing)"
+    allocation: 0.20                 # porsi modal untuk bucket ini
+    max_positions: 5
+    max_weight: 0.30                 # bobot maks. satu saham di dalam bucket
+    sector_cap: 0.50
+    hold_min_days: 3
+    hold_max_days: 10                # time-stop (hari bursa)
+    entry_atr: 0.5                   # area beli: harga - 0,5 ATR
+    chase_atr: 0.3                   # batas kejar: harga + 0,3 ATR (lewat ini, batal beli)
+    sl_atr: 1.5
+    max_sl_pct: 0.07
+    rr: [1.5, 2.5]                   # TP1 = 1,5R ; TP2 = 2,5R
+  medium:
+    label: "Jangka Menengah (1-3 bulan)"
+    allocation: 0.30
+    max_positions: 8
+    max_weight: 0.20
+    sector_cap: 0.40
+    hold_min_days: 20
+    hold_max_days: 60
+    entry_atr: 1.0
+    chase_atr: 0.2
+    sl_atr: 2.5
+    max_sl_pct: 0.12
+    rr: [2.0, 3.5]
+  long:
+    label: "Jangka Panjang (6-24 bulan)"
+    allocation: 0.50
+    max_positions: 10
+    max_weight: 0.15
+    sector_cap: 0.35
+    hold_min_days: 120
+    hold_max_days: 500
+    entry_atr: 1.5
+    chase_atr: 0.0
+    sl_atr: 4.0
+    max_sl_pct: 0.20
+    rr: [1.5, 3.0]
+
+backtest:
+  horizons: [short, medium]          # jangka panjang butuh fundamental historis, tidak di-backtest
+  refresh_days: 7
+
+notify:
+  telegram: true                     # aktif hanya bila env TELEGRAM_BOT_TOKEN & TELEGRAM_CHAT_ID ada
