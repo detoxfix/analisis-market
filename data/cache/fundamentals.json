@@ -7,11 +7,12 @@
   "pb": 2.225743,
   "roe": 0.21818,
   "der": null,
-  "div_yield": 0.0771,
+  "div_yield_raw": 7.71,
+  "v": 2,
   "eps_growth": 0.004,
   "rev_growth": 0.025,
   "shares": 122876240600.0,
-  "ts": "2026-10-27T16:28:48"
+  "ts": "2026-10-27T16:54:23"
  },
  "BBRI.JK": {
   "name": "PT Bank Rakyat Indonesia (Persero) Tbk",
@@ -21,11 +22,12 @@
   "pb": 1.357417,
   "roe": 0.18988,
   "der": null,
-  "div_yield": 0.1436,
+  "div_yield_raw": 14.36,
+  "v": 2,
   "eps_growth": 0.214,
   "rev_growth": 0.04,
   "shares": 150574927703.0,
-  "ts": "2026-10-27T16:28:48"
+  "ts": "2026-10-27T16:54:23"
  },
  "BMRI.JK": {
   "name": "PT Bank Mandiri (Persero) Tbk",
@@ -35,11 +37,12 @@
   "pb": 1.228398,
   "roe": 0.21758,
   "der": null,
-  "div_yield": 0.1389,
+  "div_yield_raw": 13.89,
+  "v": 2,
   "eps_growth": 0.139,
   "rev_growth": -0.103,
   "shares": 92847999999.0,
-  "ts": "2026-10-27T16:28:49"
+  "ts": "2026-10-27T16:54:24"
  },
  "BYAN.JK": {
   "name": "PT Bayan Resources Tbk.",
@@ -49,11 +52,12 @@
   "pb": 134459.45,
   "roe": 0.34774,
   "der": null,
-  "div_yield": 0.0258,
+  "div_yield_raw": 2.58,
+  "v": 2,
   "eps_growth": 0.671,
   "rev_growth": 0.255,
   "shares": 33333335000.0,
-  "ts": "2026-10-27T16:28:50"
+  "ts": "2026-10-27T16:54:25"
  },
  "BREN.JK": {
   "name": "PT Barito Renewables Energy Tbk",
@@ -63,11 +67,12 @@
   "pb": 432000.0,
   "roe": 0.21477,
   "der": 2.23239,
-  "div_yield": 0.18,
+  "div_yield_raw": 0.18,
+  "v": 2,
   "eps_growth": 0.412,
   "rev_growth": 0.132,
   "shares": 133779520000.0,
-  "ts": "2026-10-27T16:28:50"
+  "ts": "2026-10-27T16:54:25"
  },
  "AMMN.JK": {
   "name": "PT Amman Mineral Internasional Tbk",
@@ -77,11 +82,12 @@
   "pb": 47000.0,
   "roe": 0.16633,
   "der": 1.00183,
-  "div_yield": 0.0,
+  "div_yield_raw": 0.0,
+  "v": 2,
   "eps_growth": null,
   "rev_growth": 5.896,
   "shares": 72412413856.0,
-  "ts": "2026-10-27T16:28:51"
+  "ts": "2026-10-27T16:54:26"
  },
  "TLKM.JK": {
   "name": "Perusahaan Perseroan (Persero) PT Telekomunikasi Indonesia Tbk",
@@ -91,11 +97,12 @@
   "pb": 1.573148,
   "roe": 0.17683,
   "der": 0.59982,
-  "div_yield": 0.0992,
+  "div_yield_raw": 9.92,
+  "v": 2,
   "eps_growth": 0.28,
   "rev_growth": 0.064,
   "shares": 98580940799.0,
-  "ts": "2026-10-27T16:28:51"
+  "ts": "2026-10-27T16:54:26"
  },
  "ASII.JK": {
   "name": "PT Astra International Tbk",
@@ -105,11 +112,12 @@
   "pb": 0.803371,
   "roe": 0.11983,
   "der": 0.41125,
-  "div_yield": 0.0855,
+  "div_yield_raw": 8.55,
+  "v": 2,
   "eps_growth": -0.212,
   "rev_growth": -0.003,
   "shares": 39920061040.0,
-  "ts": "2026-10-27T16:28:52"
+  "ts": "2026-10-27T16:54:27"
  },
  "BRPT.JK": {
   "name": "PT Barito Pacific Tbk",
@@ -119,11 +127,12 @@
   "pb": 50961.54,
   "roe": 0.0646,
   "der": 1.33059,
-  "div_yield": 0.11,
+  "div_yield_raw": 0.11,
+  "v": 2,
   "eps_growth": -0.809,
   "rev_growth": 0.269,
   "shares": 93711740929.0,
-  "ts": "2026-10-27T16:28:53"
+  "ts": "2026-10-27T16:54:28"
  },
  "BBNI.JK": {
   "name": "PT Bank Negara Indonesia (Persero) Tbk",
@@ -133,11 +142,12 @@
   "pb": 0.75025,
   "roe": 0.1245,
   "der": null,
-  "div_yield": 0.1007,
+  "div_yield_raw": 10.07,
+  "v": 2,
   "eps_growth": 0.082,
   "rev_growth": 0.098,
   "shares": 354899856.0,
-  "ts": "2026-10-27T16:28:54"
+  "ts": "2026-10-27T16:54:29"
  },
  "TPIA.JK": {
   "name": "PT Chandra Asri Pacific Tbk",
@@ -147,11 +157,12 @@
   "pb": 29565.217,
   "roe": 0.03923,
   "der": 1.19069,
-  "div_yield": 0.0042,
+  "div_yield_raw": 0.42,
+  "v": 2,
   "eps_growth": -0.893,
   "rev_growth": 0.285,
   "shares": 86464496192.0,
-  "ts": "2026-10-27T16:28:54"
+  "ts": "2026-10-27T16:54:29"
  },
  "DSSA.JK": {
   "name": "PT Dian Swastatika Sentosa Tbk",
@@ -161,11 +172,12 @@
   "pb": 49285.71,
   "roe": 0.18789,
   "der": 0.62702,
-  "div_yield": 0.0,
+  "div_yield_raw": 0.0,
+  "v": 2,
   "eps_growth": 4.561,
   "rev_growth": 0.843,
   "shares": 154732123250.0,
-  "ts": "2026-10-27T16:28:55"
+  "ts": "2026-10-27T16:54:30"
  },
  "UNTR.JK": {
   "name": "PT United Tractors Tbk",
@@ -175,11 +187,12 @@
   "pb": 0.958513,
   "roe": 0.07437,
   "der": 0.27593,
-  "div_yield": 0.061,
+  "div_yield_raw": 6.1,
+  "v": 2,
   "eps_growth": -0.934,
   "rev_growth": -0.132,
   "shares": 3493093536.0,
-  "ts": "2026-10-27T16:28:55"
+  "ts": "2026-10-27T16:54:30"
  },
  "AADI.JK": {
   "name": "PT Adaro Andalan Indonesia Tbk",
@@ -189,11 +202,12 @@
   "pb": 25379.61,
   "roe": 0.23297,
   "der": 0.25672,
-  "div_yield": 0.0869,
+  "div_yield_raw": 8.69,
+  "v": 2,
   "eps_growth": 0.421,
   "rev_growth": 0.216,
   "shares": 7786891760.0,
-  "ts": "2026-10-27T16:28:56"
+  "ts": "2026-10-27T16:54:32"
  },
  "HMSP.JK": {
   "name": "PT Hanjaya Mandala Sampoerna Tbk",
@@ -203,11 +217,12 @@
   "pb": 3.015493,
   "roe": 0.34686,
   "der": 0.01286,
-  "div_yield": 0.088,
+  "div_yield_raw": 8.8,
+  "v": 2,
   "eps_growth": 9.175,
   "rev_growth": 0.128,
   "shares": 116318076900.0,
-  "ts": "2026-10-27T16:28:57"
+  "ts": "2026-10-27T16:54:32"
  },
  "PANI.JK": {
   "name": "PT Pantai Indah Kapuk Dua Tbk",
@@ -217,11 +232,12 @@
   "pb": 2.653676,
   "roe": 0.10487,
   "der": 0.01571,
-  "div_yield": 0.11,
+  "div_yield_raw": 0.11,
+  "v": 2,
   "eps_growth": 3.3,
   "rev_growth": 0.753,
   "shares": 18189502198.0,
-  "ts": "2026-10-27T16:28:57"
+  "ts": "2026-10-27T16:54:33"
  },
  "ADRO.JK": {
   "name": "PT Alamtri Resources Indonesia Tbk",
@@ -231,11 +247,12 @@
   "pb": 15375.0,
   "roe": 0.12338,
   "der": 0.37824,
-  "div_yield": 0.0965,
+  "div_yield_raw": 9.65,
+  "v": 2,
   "eps_growth": 0.891,
   "rev_growth": 0.11,
   "shares": 28800494200.0,
-  "ts": "2026-10-27T16:28:58"
+  "ts": "2026-10-27T16:54:34"
  },
  "ICBP.JK": {
   "name": "PT Indofood CBP Sukses Makmur Tbk",
@@ -245,11 +262,12 @@
   "pb": 1.270817,
   "roe": 0.12555,
   "der": 0.66653,
-  "div_yield": 0.0444,
+  "div_yield_raw": 4.44,
+  "v": 2,
   "eps_growth": -0.608,
   "rev_growth": 0.157,
   "shares": 11661908000.0,
-  "ts": "2026-10-27T16:28:59"
+  "ts": "2026-10-27T16:54:35"
  },
  "ANTM.JK": {
   "name": "PT Antam (Persero) Tbk",
@@ -259,11 +277,12 @@
   "pb": 1.786026,
   "roe": 0.26827,
   "der": 0.15598,
-  "div_yield": 0.0761,
+  "div_yield_raw": 7.61,
+  "v": 2,
   "eps_growth": 0.162,
   "rev_growth": 0.016,
   "shares": 24030764724.0,
-  "ts": "2026-10-27T16:28:59"
+  "ts": "2026-10-27T16:54:35"
  },
  "INDF.JK": {
   "name": "PT Indofood Sukses Makmur Tbk",
@@ -273,11 +292,12 @@
   "pb": 0.761658,
   "roe": 0.12137,
   "der": 0.63789,
-  "div_yield": 0.0434,
+  "div_yield_raw": 4.34,
+  "v": 2,
   "eps_growth": -0.433,
   "rev_growth": 0.118,
   "shares": 8780426500.0,
-  "ts": "2026-10-27T16:29:00"
+  "ts": "2026-10-27T16:54:36"
  },
  "BRMS.JK": {
   "name": "PT Bumi Resources Minerals Tbk",
@@ -287,11 +307,12 @@
   "pb": 44222.223,
   "roe": 0.0398,
   "der": 0.28081,
-  "div_yield": 0.0,
+  "div_yield_raw": 0.0,
+  "v": 2,
   "eps_growth": null,
   "rev_growth": -0.543,
   "shares": 25570150644.0,
-  "ts": "2026-10-27T16:29:01"
+  "ts": "2026-10-27T16:54:37"
  },
  "ISAT.JK": {
   "name": "PT Indosat Tbk",
@@ -301,11 +322,12 @@
   "pb": 1.466743,
   "roe": 0.20238,
   "der": 1.76375,
-  "div_yield": 0.0653,
+  "div_yield_raw": 6.53,
+  "v": 2,
   "eps_growth": 1.751,
   "rev_growth": 0.14,
   "shares": 32250810956.0,
-  "ts": "2026-10-27T16:29:01"
+  "ts": "2026-10-27T16:54:37"
  },
  "UNVR.JK": {
   "name": "PT Unilever Indonesia Tbk",
@@ -315,11 +337,12 @@
   "pb": 12.599463,
   "roe": 1.01963,
   "der": 0.13353,
-  "div_yield": 0.16,
+  "div_yield_raw": 16.0,
+  "v": 2,
   "eps_growth": 0.047,
   "rev_growth": 0.074,
   "shares": 37981233300.0,
-  "ts": "2026-10-27T16:29:02"
+  "ts": "2026-10-27T16:54:38"
  },
  "ADMR.JK": {
   "name": "PT Alamtri Minerals Indonesia Tbk",
@@ -329,11 +352,12 @@
   "pb": 31375.0,
   "roe": 0.17246,
   "der": 1.03461,
-  "div_yield": 0.0397,
+  "div_yield_raw": 3.97,
+  "v": 2,
   "eps_growth": 0.153,
   "rev_growth": 0.297,
   "shares": 40882331500.0,
-  "ts": "2026-10-27T16:29:03"
+  "ts": "2026-10-27T16:54:39"
  },
  "CUAN.JK": {
   "name": "PT Petrindo Jaya Kreasi Tbk",
@@ -343,11 +367,12 @@
   "pb": 152000.0,
   "roe": 0.26372,
   "der": 2.23595,
-  "div_yield": 0.0,
+  "div_yield_raw": 0.0,
+  "v": 2,
   "eps_growth": null,
   "rev_growth": null,
   "shares": 112399199400.0,
-  "ts": "2026-10-27T16:29:03"
+  "ts": "2026-10-27T16:54:39"
  },
  "CDIA.JK": {
   "name": "PT Chandra Daya Investasi TBK.",
@@ -357,11 +382,12 @@
   "pb": 49749.996,
   "roe": 0.06917,
   "der": 0.69366,
-  "div_yield": 0.0195,
+  "div_yield_raw": 1.95,
+  "v": 2,
   "eps_growth": -0.802,
   "rev_growth": 0.269,
   "shares": 124749839100.0,
-  "ts": "2026-10-27T16:29:04"
+  "ts": "2026-10-27T16:54:40"
  },
  "BDMN.JK": {
   "name": "PT Bank Danamon Indonesia Tbk",
@@ -371,11 +397,12 @@
   "pb": 0.899636,
   "roe": 0.08745,
   "der": null,
-  "div_yield": 0.0284,
+  "div_yield_raw": 2.84,
+  "v": 2,
   "eps_growth": 0.313,
   "rev_growth": 0.133,
   "shares": 22400000.0,
-  "ts": "2026-10-27T16:29:05"
+  "ts": "2026-10-27T16:54:41"
  },
  "MDKA.JK": {
   "name": "PT Merdeka Copper Gold Tbk",
@@ -385,11 +412,12 @@
   "pb": 55555.56,
   "roe": 0.07467,
   "der": 0.86028,
-  "div_yield": 0.006,
+  "div_yield_raw": 0.6,
+  "v": 2,
   "eps_growth": null,
   "rev_growth": 1.219,
   "shares": 24419642671.0,
-  "ts": "2026-10-27T16:29:05"
+  "ts": "2026-10-27T16:54:41"
  },
  "BRIS.JK": {
   "name": "PT Bank Syariah Indonesia Tbk",
@@ -399,11 +427,12 @@
   "pb": 0.948964,
   "roe": 0.16148,
   "der": null,
-  "div_yield": 0.0311,
+  "div_yield_raw": 3.11,
+  "v": 2,
   "eps_growth": 0.05,
   "rev_growth": 0.109,
   "shares": 46129260138.0,
-  "ts": "2026-10-27T16:29:06"
+  "ts": "2026-10-27T16:54:42"
  },
  "BUMI.JK": {
   "name": "PT Bumi Resources Tbk",
@@ -413,11 +442,12 @@
   "pb": 31999.998,
   "roe": 0.05421,
   "der": 0.2484,
-  "div_yield": 0.0,
+  "div_yield_raw": 0.0,
+  "v": 2,
   "eps_growth": 92.0,
   "rev_growth": 0.364,
   "shares": 371335392068.0,
-  "ts": "2026-10-27T16:29:07"
+  "ts": "2026-10-27T16:54:42"
  },
  "NCKL.JK": {
   "name": "PT Trimegah Bangun Persada Tbk",
@@ -427,11 +457,12 @@
   "pb": 1.055245,
   "roe": 0.26019,
   "der": 0.16872,
-  "div_yield": 0.055,
+  "div_yield_raw": 5.5,
+  "v": 2,
   "eps_growth": 0.27,
   "rev_growth": 0.477,
   "shares": 62987866700.0,
-  "ts": "2026-10-27T16:29:08"
+  "ts": "2026-10-27T16:54:43"
  },
  "IMPC.JK": {
   "name": "PT Impack Pratama Industri Tbk",
@@ -441,11 +472,12 @@
   "pb": 14.641923,
   "roe": 0.26489,
   "der": 0.31085,
-  "div_yield": 0.006,
+  "div_yield_raw": 0.6,
+  "v": 2,
   "eps_growth": 0.689,
   "rev_growth": 0.339,
   "shares": 54685279100.0,
-  "ts": "2026-10-27T16:29:08"
+  "ts": "2026-10-27T16:54:44"
  },
  "CPIN.JK": {
   "name": "PT Charoen Pokphand Indonesia Tbk",
@@ -455,11 +487,12 @@
   "pb": 1.306308,
   "roe": 0.22792,
   "der": 0.28211,
-  "div_yield": 0.0664,
+  "div_yield_raw": 6.64,
+  "v": 2,
   "eps_growth": 2.111,
   "rev_growth": 0.268,
   "shares": 16398000000.0,
-  "ts": "2026-10-27T16:29:09"
+  "ts": "2026-10-27T16:54:44"
  },
  "AMRT.JK": {
   "name": "PT Sumber Alfaria Trijaya Tbk",
@@ -469,11 +502,12 @@
   "pb": 2.400766,
   "roe": 0.20027,
   "der": 0.14109,
-  "div_yield": 0.0536,
+  "div_yield_raw": 5.36,
+  "v": 2,
   "eps_growth": 0.056,
   "rev_growth": 0.054,
   "shares": 41091832700.0,
-  "ts": "2026-10-27T16:29:10"
+  "ts": "2026-10-27T16:54:45"
  },
  "PGEO.JK": {
   "name": "PT Pertamina Geothermal Energy Tbk",
@@ -483,11 +517,12 @@
   "pb": 20416.666,
   "roe": 0.07514,
   "der": 0.36958,
-  "div_yield": 0.049,
+  "div_yield_raw": 4.9,
+  "v": 2,
   "eps_growth": 0.064,
   "rev_growth": 0.146,
   "shares": 41954253581.0,
-  "ts": "2026-10-27T16:29:10"
+  "ts": "2026-10-27T16:54:46"
  },
  "BNGA.JK": {
   "name": "PT Bank CIMB Niaga Tbk",
@@ -497,11 +532,12 @@
   "pb": 0.683312,
   "roe": 0.12457,
   "der": null,
-  "div_yield": 0.1005,
+  "div_yield_raw": 10.05,
+  "v": 2,
   "eps_growth": 0.013,
   "rev_growth": -0.001,
   "shares": 71853936.0,
-  "ts": "2026-10-27T16:29:11"
+  "ts": "2026-10-27T16:54:46"
  },
  "TAPG.JK": {
   "name": "PT Triputra Agro Persada Tbk",
@@ -511,11 +547,12 @@
   "pb": 3.322738,
   "roe": 0.35969,
   "der": 0.09035,
-  "div_yield": 0.1086,
+  "div_yield_raw": 10.86,
+  "v": 2,
   "eps_growth": 0.463,
   "rev_growth": 0.165,
   "shares": 19852540000.0,
-  "ts": "2026-10-27T16:29:12"
+  "ts": "2026-10-27T16:54:47"
  },
  "INKP.JK": {
   "name": "PT Indah Kiat Pulp & Paper Tbk",
@@ -525,11 +562,12 @@
   "pb": 5171.1025,
   "roe": 0.09631,
   "der": 0.7212,
-  "div_yield": 0.0108,
+  "div_yield_raw": 1.08,
+  "v": 2,
   "eps_growth": 8.165,
   "rev_growth": 0.132,
   "shares": 5470982941.0,
-  "ts": "2026-10-27T16:29:12"
+  "ts": "2026-10-27T16:54:48"
  },
  "INCO.JK": {
   "name": "PT Vale Indonesia Tbk",
@@ -539,11 +577,12 @@
   "pb": 13011.152,
   "roe": 0.05584,
   "der": 0.00056,
-  "div_yield": 0.0209,
+  "div_yield_raw": 2.09,
+  "v": 2,
   "eps_growth": 16.63,
   "rev_growth": 0.319,
   "shares": 10539784534.0,
-  "ts": "2026-10-27T16:29:13"
+  "ts": "2026-10-27T16:54:48"
  },
  "PTBA.JK": {
   "name": "PT Bukit Asam (Persero) Tbk",
@@ -553,11 +592,12 @@
   "pb": 1.446941,
   "roe": 0.21109,
   "der": 0.11782,
-  "div_yield": 0.0356,
+  "div_yield_raw": 3.56,
+  "v": 2,
   "eps_growth": 3.188,
   "rev_growth": 0.153,
   "shares": 11514357245.0,
-  "ts": "2026-10-27T16:29:14"
+  "ts": "2026-10-27T16:54:49"
  },
  "MBMA.JK": {
   "name": "PT Merdeka Battery Materials Tbk.",
@@ -567,11 +607,12 @@
   "pb": 22000.0,
   "roe": 0.09239,
   "der": 0.52775,
-  "div_yield": 0.0,
+  "div_yield_raw": 0.0,
+  "v": 2,
   "eps_growth": 1.738,
   "rev_growth": 1.266,
   "shares": 107392624700.0,
-  "ts": "2026-10-27T16:29:14"
+  "ts": "2026-10-27T16:54:50"
  },
  "MEDC.JK": {
   "name": "PT Medco Energi Internasional Tbk",
@@ -581,11 +622,12 @@
   "pb": 15000.001,
   "roe": 0.15089,
   "der": 1.71735,
-  "div_yield": 0.0445,
+  "div_yield_raw": 4.45,
+  "v": 2,
   "eps_growth": 14.915,
   "rev_growth": 0.273,
   "shares": 24726935674.0,
-  "ts": "2026-10-27T16:29:15"
+  "ts": "2026-10-27T16:54:50"
  },
  "GGRM.JK": {
   "name": "PT Gudang Garam Tbk",
@@ -595,11 +637,12 @@
   "pb": 0.515558,
   "roe": 0.0706,
   "der": null,
-  "div_yield": 0.0486,
+  "div_yield_raw": 4.86,
+  "v": 2,
   "eps_growth": 111.941,
   "rev_growth": -0.011,
   "shares": 1924088000.0,
-  "ts": "2026-10-27T16:29:16"
+  "ts": "2026-10-27T16:54:51"
  },
  "CMRY.JK": {
   "name": "PT Cisarua Mountain Dairy Tbk",
@@ -609,11 +652,12 @@
   "pb": 4.497603,
   "roe": 0.32229,
   "der": 6e-05,
-  "div_yield": 0.0483,
+  "div_yield_raw": 4.83,
+  "v": 2,
   "eps_growth": 0.2,
   "rev_growth": 0.234,
   "shares": 7934683000.0,
-  "ts": "2026-10-27T16:29:16"
+  "ts": "2026-10-27T16:54:52"
  },
  "KLBF.JK": {
   "name": "PT Kalbe Farma Tbk.",
@@ -623,11 +667,12 @@
   "pb": 1.320505,
   "roe": 0.14768,
   "der": 0.03208,
-  "div_yield": 0.0276,
+  "div_yield_raw": 2.76,
+  "v": 2,
   "eps_growth": -0.004,
   "rev_growth": 0.182,
   "shares": 45248860110.0,
-  "ts": "2026-10-27T16:29:17"
+  "ts": "2026-10-27T16:54:52"
  },
  "EXCL.JK": {
   "name": "PT XLSMART Telecom Sejahtera Tbk",
@@ -637,11 +682,12 @@
   "pb": 1.090383,
   "roe": -0.13436,
   "der": 2.04323,
-  "div_yield": 0.0886,
+  "div_yield_raw": 8.86,
+  "v": 2,
   "eps_growth": null,
   "rev_growth": 0.16,
   "shares": 18199862451.0,
-  "ts": "2026-10-27T16:29:18"
+  "ts": "2026-10-27T16:54:53"
  },
  "MYOR.JK": {
   "name": "PT Mayora Indah Tbk",
@@ -651,11 +697,12 @@
   "pb": 1.667224,
   "roe": 0.19617,
   "der": 0.24671,
-  "div_yield": 0.0443,
+  "div_yield_raw": 4.43,
+  "v": 2,
   "eps_growth": 0.594,
   "rev_growth": 0.075,
   "shares": 22026684225.0,
-  "ts": "2026-10-27T16:29:18"
+  "ts": "2026-10-27T16:54:54"
  },
  "PGAS.JK": {
   "name": "PT Perusahaan Gas Negara (Persero) Tbk",
@@ -665,11 +712,12 @@
   "pb": 10598.291,
   "roe": 0.10092,
   "der": 0.29053,
-  "div_yield": 0.0955,
+  "div_yield_raw": 9.55,
+  "v": 2,
   "eps_growth": 0.458,
   "rev_growth": -0.038,
   "shares": 24241508195.0,
-  "ts": "2026-10-27T16:29:19"
+  "ts": "2026-10-27T16:54:54"
  },
  "PTRO.JK": {
   "name": "PT Petrosea Tbk",
@@ -679,11 +727,12 @@
   "pb": 106296.3,
   "roe": 0.11533,
   "der": 2.58845,
-  "div_yield": 0.0,
+  "div_yield_raw": 0.0,
+  "v": 2,
   "eps_growth": null,
   "rev_growth": null,
   "shares": 10086050000.0,
-  "ts": "2026-10-27T16:29:20"
+  "ts": "2026-10-27T16:54:55"
  },
  "AKRA.JK": {
   "name": "PT AKR Corporindo Tbk",
@@ -693,11 +742,12 @@
   "pb": 2.261214,
   "roe": 0.22207,
   "der": 0.29874,
-  "div_yield": 0.0714,
+  "div_yield_raw": 7.14,
+  "v": 2,
   "eps_growth": 0.666,
   "rev_growth": 0.429,
   "shares": 19799769600.0,
-  "ts": "2026-10-27T16:29:20"
+  "ts": "2026-10-27T16:54:56"
  },
  "TINS.JK": {
   "name": "PT TIMAH Tbk",
@@ -707,11 +757,12 @@
   "pb": 2.633879,
   "roe": 0.41794,
   "der": 0.11568,
-  "div_yield": 0.0232,
+  "div_yield_raw": 2.32,
+  "v": 2,
   "eps_growth": 5.75,
   "rev_growth": 1.335,
   "shares": 7447753453.0,
-  "ts": "2026-10-27T16:29:21"
+  "ts": "2026-10-27T16:54:56"
  },
  "ITMG.JK": {
   "name": "PT Indo Tambangraya Megah Tbk",
@@ -721,11 +772,12 @@
   "pb": 14306.441,
   "roe": 0.11119,
   "der": 0.052,
-  "div_yield": 0.0687,
+  "div_yield_raw": 6.87,
+  "v": 2,
   "eps_growth": 1.004,
   "rev_growth": 0.151,
   "shares": 1102700300.0,
-  "ts": "2026-10-27T16:29:22"
+  "ts": "2026-10-27T16:54:57"
  },
  "NISP.JK": {
   "name": "PT Bank OCBC NISP Tbk",
@@ -735,11 +787,12 @@
   "pb": 0.602422,
   "roe": 0.1222,
   "der": null,
-  "div_yield": 0.0383,
+  "div_yield_raw": 3.83,
+  "v": 2,
   "eps_growth": 0.075,
   "rev_growth": -0.011,
   "shares": 22945296972.0,
-  "ts": "2026-10-27T16:29:22"
+  "ts": "2026-10-27T16:54:58"
  },
  "TOWR.JK": {
   "name": "PT Sarana Menara Nusantara Tbk.",
@@ -749,11 +802,12 @@
   "pb": 0.81444,
   "roe": 0.1614,
   "der": 1.56508,
-  "div_yield": 0.0341,
+  "div_yield_raw": 3.41,
+  "v": 2,
   "eps_growth": -0.073,
   "rev_growth": 0.146,
   "shares": 58211582377.0,
-  "ts": "2026-10-27T16:29:23"
+  "ts": "2026-10-27T16:54:59"
  },
  "ENRG.JK": {
   "name": "PT Energi Mega Persada Tbk",
@@ -763,11 +817,12 @@
   "pb": 21250.0,
   "roe": 0.1279,
   "der": 0.56576,
-  "div_yield": 0.0,
+  "div_yield_raw": 0.0,
+  "v": 2,
   "eps_growth": 0.424,
   "rev_growth": 0.2,
   "shares": 30331949667.0,
-  "ts": "2026-10-27T16:29:24"
+  "ts": "2026-10-27T16:54:59"
  },
  "MAPI.JK": {
   "name": "PT. Mitra Adiperkasa Tbk",
@@ -777,11 +832,12 @@
   "pb": 1.429843,
   "roe": 0.17613,
   "der": 0.47511,
-  "div_yield": 0.0075,
+  "div_yield_raw": 0.75,
+  "v": 2,
   "eps_growth": 0.197,
   "rev_growth": 0.155,
   "shares": 16600000000.0,
-  "ts": "2026-10-27T16:29:24"
+  "ts": "2026-10-27T16:55:00"
  },
  "ULTJ.JK": {
   "name": "PT Ultrajaya Milk Industry & Trading Company Tbk",
@@ -791,11 +847,12 @@
   "pb": 2.754814,
   "roe": 0.23414,
   "der": 0.00506,
-  "div_yield": 0.0622,
+  "div_yield_raw": 6.22,
+  "v": 2,
   "eps_growth": 1.314,
   "rev_growth": 0.508,
   "shares": 10398175200.0,
-  "ts": "2026-10-27T16:29:25"
+  "ts": "2026-10-27T16:55:01"
  },
  "JPFA.JK": {
   "name": "PT Japfa Comfeed Indonesia Tbk",
@@ -805,11 +862,12 @@
   "pb": 1.054004,
   "roe": 0.29183,
   "der": 0.76241,
-  "div_yield": 0.0784,
+  "div_yield_raw": 7.84,
+  "v": 2,
   "eps_growth": 0.17,
   "rev_growth": 0.342,
   "shares": 8716079901.0,
-  "ts": "2026-10-27T16:29:26"
+  "ts": "2026-10-27T16:55:02"
  },
  "TKIM.JK": {
   "name": "PT Pabrik Kertas Tjiwi Kimia Tbk",
@@ -819,11 +877,12 @@
   "pb": 6474.297,
   "roe": 0.14711,
   "der": 0.23331,
-  "div_yield": 0.0046,
+  "div_yield_raw": 0.46,
+  "v": 2,
   "eps_growth": null,
   "rev_growth": 0.136,
   "shares": 3113223570.0,
-  "ts": "2026-10-27T16:29:26"
+  "ts": "2026-10-27T16:55:03"
  },
  "JSMR.JK": {
   "name": "PT Jasa Marga (Persero) Tbk",
@@ -833,11 +892,12 @@
   "pb": 0.557023,
   "roe": 0.08245,
   "der": 1.23483,
-  "div_yield": 0.0579,
+  "div_yield_raw": 5.79,
+  "v": 2,
   "eps_growth": 0.202,
   "rev_growth": -0.038,
   "shares": 7257871199.0,
-  "ts": "2026-10-27T16:29:27"
+  "ts": "2026-10-27T16:55:03"
  },
  "INTP.JK": {
   "name": "PT Indocement Tunggal Prakarsa Tbk",
@@ -847,11 +907,12 @@
   "pb": 0.883733,
   "roe": 0.10689,
   "der": 0.12218,
-  "div_yield": 0.0832,
+  "div_yield_raw": 8.32,
+  "v": 2,
   "eps_growth": 0.345,
   "rev_growth": 0.136,
   "shares": 3431073399.0,
-  "ts": "2026-10-27T16:29:28"
+  "ts": "2026-10-27T16:55:05"
  },
  "EMTK.JK": {
   "name": "PT Elang Mahkota Teknologi Tbk",
@@ -861,11 +922,12 @@
   "pb": 0.5312,
   "roe": 0.07585,
   "der": 0.06298,
-  "div_yield": 0.0298,
+  "div_yield_raw": 2.98,
+  "v": 2,
   "eps_growth": -0.974,
   "rev_growth": 0.026,
   "shares": 61182504933.0,
-  "ts": "2026-10-27T16:29:28"
+  "ts": "2026-10-27T16:55:05"
  },
  "AALI.JK": {
   "name": "PT Astra Agro Lestari Tbk",
@@ -875,11 +937,12 @@
   "pb": 0.785977,
   "roe": 0.08105,
   "der": null,
-  "div_yield": 0.0598,
+  "div_yield_raw": 5.98,
+  "v": 2,
   "eps_growth": 0.707,
   "rev_growth": 0.045,
   "shares": 1924688333.0,
-  "ts": "2026-10-27T16:29:29"
+  "ts": "2026-10-27T16:55:06"
  },
  "MIKA.JK": {
   "name": "PT Mitra Keluarga Karyasehat Tbk",
@@ -889,11 +952,12 @@
   "pb": 2.566491,
   "roe": 0.18961,
   "der": 0.00112,
-  "div_yield": 0.0314,
+  "div_yield_raw": 3.14,
+  "v": 2,
   "eps_growth": 0.092,
   "rev_growth": 0.094,
   "shares": 13906650800.0,
-  "ts": "2026-10-27T16:29:30"
+  "ts": "2026-10-27T16:55:07"
  },
  "AVIA.JK": {
   "name": "PT Avia Avian Tbk",
@@ -903,11 +967,12 @@
   "pb": 1.881444,
   "roe": 0.19882,
   "der": 0.00242,
-  "div_yield": 0.0701,
+  "div_yield_raw": 7.01,
+  "v": 2,
   "eps_growth": 0.343,
   "rev_growth": 0.197,
   "shares": 59103555600.0,
-  "ts": "2026-10-27T16:29:30"
+  "ts": "2026-10-27T16:55:07"
  },
  "MAPA.JK": {
   "name": "PT Map Aktif Adiperkasa Tbk",
@@ -917,11 +982,12 @@
   "pb": 1.727785,
   "roe": 0.21906,
   "der": 0.26274,
-  "div_yield": 0.0067,
+  "div_yield_raw": 0.67,
+  "v": 2,
   "eps_growth": 0.221,
   "rev_growth": 0.155,
   "shares": 28504000000.0,
-  "ts": "2026-10-27T16:29:31"
+  "ts": "2026-10-27T16:55:09"
  },
  "AUTO.JK": {
   "name": "PT Astra Otoparts Tbk",
@@ -931,11 +997,12 @@
   "pb": 1.006703,
   "roe": 0.15295,
   "der": 0.03433,
-  "div_yield": 0.073,
+  "div_yield_raw": 7.3,
+  "v": 2,
   "eps_growth": 0.367,
   "rev_growth": 0.193,
   "shares": 4819733000.0,
-  "ts": "2026-10-27T16:29:32"
+  "ts": "2026-10-27T16:55:09"
  },
  "DSNG.JK": {
   "name": "PT Dharma Satya Nusantara Tbk",
@@ -945,11 +1012,12 @@
   "pb": 1.300205,
   "roe": 0.16749,
   "der": 0.28307,
-  "div_yield": 0.0336,
+  "div_yield_raw": 3.36,
+  "v": 2,
   "eps_growth": 0.043,
   "rev_growth": 0.001,
   "shares": 10599842400.0,
-  "ts": "2026-10-27T16:29:32"
+  "ts": "2026-10-27T16:55:11"
  },
  "PWON.JK": {
   "name": "PT Pakuwon Jati Tbk",
@@ -959,11 +1027,12 @@
   "pb": 0.619812,
   "roe": 0.10025,
   "der": 0.22075,
-  "div_yield": 0.0458,
+  "div_yield_raw": 4.58,
+  "v": 2,
   "eps_growth": -0.261,
   "rev_growth": -0.05,
   "shares": 48159602400.0,
-  "ts": "2026-10-27T16:29:33"
+  "ts": "2026-10-27T16:55:13"
  },
  "BSSR.JK": {
   "name": "PT Baramulti Suksessarana Tbk",
@@ -973,11 +1042,12 @@
   "pb": 50980.395,
   "roe": 0.34755,
   "der": null,
-  "div_yield": 0.2389,
+  "div_yield_raw": 23.89,
+  "v": 2,
   "eps_growth": 0.245,
   "rev_growth": 0.116,
   "shares": 2616500000.0,
-  "ts": "2026-10-27T16:29:34"
+  "ts": "2026-10-27T16:55:13"
  },
  "BBTN.JK": {
   "name": "PT Bank Tabungan Negara (Persero) Tbk",
@@ -987,11 +1057,12 @@
   "pb": 0.34565,
   "roe": 0.11742,
   "der": null,
-  "div_yield": 0.0,
+  "div_yield_raw": 0.0,
+  "v": 2,
   "eps_growth": 0.598,
   "rev_growth": 0.247,
   "shares": 14034444412.0,
-  "ts": "2026-10-27T16:29:35"
+  "ts": "2026-10-27T16:55:16"
  },
  "BFIN.JK": {
   "name": "PT BFI Finance Indonesia Tbk",
@@ -1001,11 +1072,12 @@
   "pb": 1.071339,
   "roe": 0.15359,
   "der": 1.18348,
-  "div_yield": 0.0903,
+  "div_yield_raw": 9.03,
+  "v": 2,
   "eps_growth": 0.35,
   "rev_growth": 0.157,
   "shares": 14749383620.0,
-  "ts": "2026-10-27T16:29:35"
+  "ts": "2026-10-27T16:55:18"
  },
  "PSAB.JK": {
   "name": "PT J Resources Asia Pasifik Tbk",
@@ -1015,11 +1087,12 @@
   "pb": 25874.998,
   "roe": 0.48457,
   "der": 0.15292,
-  "div_yield": 0.0698,
+  "div_yield_raw": 6.98,
+  "v": 2,
   "eps_growth": null,
   "rev_growth": 0.21,
   "shares": 26460000000.0,
-  "ts": "2026-10-27T16:29:36"
+  "ts": "2026-10-27T16:55:20"
  },
  "CTRA.JK": {
   "name": "PT Ciputra Development Tbk",
@@ -1029,11 +1102,12 @@
   "pb": 0.442614,
   "roe": 0.10043,
   "der": 0.29003,
-  "div_yield": 0.0626,
+  "div_yield_raw": 6.26,
+  "v": 2,
   "eps_growth": 0.007,
   "rev_growth": -0.163,
   "shares": 18535695255.0,
-  "ts": "2026-10-27T16:29:37"
+  "ts": "2026-10-27T16:55:22"
  },
  "INDY.JK": {
   "name": "PT. Indika Energy Tbk",
@@ -1043,11 +1117,12 @@
   "pb": 8744.589,
   "roe": 0.03069,
   "der": 0.94428,
-  "div_yield": 0.0049,
+  "div_yield_raw": 0.49,
+  "v": 2,
   "eps_growth": null,
   "rev_growth": 0.399,
   "shares": 5202692000.0,
-  "ts": "2026-10-27T16:29:37"
+  "ts": "2026-10-27T16:55:22"
  },
  "BSDE.JK": {
   "name": "PT Bumi Serpong Damai Tbk",
@@ -1057,11 +1132,12 @@
   "pb": 0.229575,
   "roe": 0.0415,
   "der": 0.35164,
-  "div_yield": 0.0,
+  "div_yield_raw": 0.0,
+  "v": 2,
   "eps_growth": -0.668,
   "rev_growth": -0.354,
   "shares": 20913395112.0,
-  "ts": "2026-10-27T16:29:38"
+  "ts": "2026-10-27T16:55:23"
  },
  "LSIP.JK": {
   "name": "PT Perusahaan Perkebunan London Sumatra Indonesia Tbk",
@@ -1071,11 +1147,12 @@
   "pb": 0.707101,
   "roe": 0.15198,
   "der": null,
-  "div_yield": 0.057,
+  "div_yield_raw": 5.7,
+  "v": 2,
   "eps_growth": 0.539,
   "rev_growth": 0.321,
   "shares": 6819963965.0,
-  "ts": "2026-10-27T16:29:39"
+  "ts": "2026-10-27T16:55:24"
  },
  "SMGR.JK": {
   "name": "PT Semen Indonesia (Persero) Tbk",
@@ -1085,11 +1162,12 @@
   "pb": 0.228976,
   "roe": 0.00731,
   "der": 0.16849,
-  "div_yield": 0.0193,
+  "div_yield_raw": 1.93,
+  "v": 2,
   "eps_growth": null,
   "rev_growth": 0.177,
   "shares": 6735544089.0,
-  "ts": "2026-10-27T16:29:39"
+  "ts": "2026-10-27T16:55:24"
  },
  "DMAS.JK": {
   "name": "PT Puradelta Lestari Tbk",
@@ -1099,11 +1177,12 @@
   "pb": 1.345877,
   "roe": 0.25895,
   "der": 0.00015,
-  "div_yield": 0.0786,
+  "div_yield_raw": 7.86,
+  "v": 2,
   "eps_growth": 2.243,
   "rev_growth": 4.079,
   "shares": 48198111100.0,
-  "ts": "2026-10-27T16:29:40"
+  "ts": "2026-10-27T16:55:25"
  },
  "RAJA.JK": {
   "name": "PT Rukun Raharja Tbk",
@@ -1113,11 +1192,12 @@
   "pb": 45200.0,
   "roe": 0.19903,
   "der": 1.12726,
-  "div_yield": 0.0169,
+  "div_yield_raw": 1.69,
+  "v": 2,
   "eps_growth": 2.083,
   "rev_growth": 0.234,
   "shares": 21135412500.0,
-  "ts": "2026-10-27T16:29:41"
+  "ts": "2026-10-27T16:55:26"
  },
  "DEWA.JK": {
   "name": "PT Darma Henwa Tbk",
@@ -1127,11 +1207,12 @@
   "pb": 1.144766,
   "roe": 0.70732,
   "der": 0.75857,
-  "div_yield": 0.0058,
+  "div_yield_raw": 0.58,
+  "v": 2,
   "eps_growth": 2.434,
   "rev_growth": 0.23,
   "shares": 39048640370.0,
-  "ts": "2026-10-27T16:29:42"
+  "ts": "2026-10-27T16:55:27"
  },
  "SCMA.JK": {
   "name": "PT Surya Citra Media Tbk",
@@ -1141,11 +1222,12 @@
   "pb": 1.488365,
   "roe": 0.13564,
   "der": 0.10278,
-  "div_yield": 0.1355,
+  "div_yield_raw": 13.55,
+  "v": 2,
   "eps_growth": 0.369,
   "rev_growth": 0.062,
   "shares": 63504703280.0,
-  "ts": "2026-10-27T16:29:42"
+  "ts": "2026-10-27T16:55:28"
  },
  "BUKA.JK": {
   "name": "PT Bukalapak.com Tbk.",
@@ -1155,11 +1237,12 @@
   "pb": 0.374806,
   "roe": 0.0782,
   "der": 0.00436,
-  "div_yield": 0.0,
+  "div_yield_raw": 0.0,
+  "v": 2,
   "eps_growth": null,
   "rev_growth": -0.005,
   "shares": 91833653260.0,
-  "ts": "2026-10-27T16:29:43"
+  "ts": "2026-10-27T16:55:28"
  },
  "SIDO.JK": {
   "name": "PT Industri Jamu dan Farmasi Sido Muncul Tbk",
@@ -1169,11 +1252,12 @@
   "pb": 3.105499,
   "roe": 0.30397,
   "der": 0.00053,
-  "div_yield": 0.0592,
+  "div_yield_raw": 5.92,
+  "v": 2,
   "eps_growth": -0.493,
   "rev_growth": -0.205,
   "shares": 29435200000.0,
-  "ts": "2026-10-27T16:29:43"
+  "ts": "2026-10-27T16:55:29"
  },
  "SMSM.JK": {
   "name": "PT Selamat Sempurna Tbk",
@@ -1183,11 +1267,12 @@
   "pb": 2.312853,
   "roe": 0.28834,
   "der": 0.0358,
-  "div_yield": 0.097,
+  "div_yield_raw": 9.7,
+  "v": 2,
   "eps_growth": 0.139,
   "rev_growth": 0.089,
   "shares": 5758675440.0,
-  "ts": "2026-10-27T16:29:44"
+  "ts": "2026-10-27T16:55:30"
  },
  "ESSA.JK": {
   "name": "PT ESSA Industries Indonesia Tbk.",
@@ -1197,11 +1282,12 @@
   "pb": 21400.0,
   "roe": 0.14062,
   "der": 0.00019,
-  "div_yield": 0.101,
+  "div_yield_raw": 10.1,
+  "v": 2,
   "eps_growth": 0.702,
   "rev_growth": 0.343,
   "shares": 17226975700.0,
-  "ts": "2026-10-27T16:29:45"
+  "ts": "2026-10-27T16:55:30"
  },
  "CLEO.JK": {
   "name": "PT Sariguna Primatirta Tbk",
@@ -1211,11 +1297,12 @@
   "pb": 3.679324,
   "roe": 0.18941,
   "der": 0.1878,
-  "div_yield": 0.0063,
+  "div_yield_raw": 0.63,
+  "v": 2,
   "eps_growth": 0.494,
   "rev_growth": 0.315,
   "shares": null,
-  "ts": "2026-10-27T16:29:46"
+  "ts": "2026-10-27T16:55:31"
  },
  "SSMS.JK": {
   "name": "PT Sawit Sumbermas Sarana Tbk.",
@@ -1225,11 +1312,12 @@
   "pb": 3.764543,
   "roe": 0.496,
   "der": 3.37487,
-  "div_yield": 0.0903,
+  "div_yield_raw": 9.03,
+  "v": 2,
   "eps_growth": 0.676,
   "rev_growth": 0.764,
   "shares": 9525000000.0,
-  "ts": "2026-10-27T16:29:46"
+  "ts": "2026-10-27T16:55:32"
  },
  "HRUM.JK": {
   "name": "PT Harum Energy Tbk",
@@ -1239,11 +1327,12 @@
   "pb": 9520.548,
   "roe": 0.07237,
   "der": 0.29561,
-  "div_yield": 0.0,
+  "div_yield_raw": 0.0,
+  "v": 2,
   "eps_growth": 0.145,
   "rev_growth": 1.12,
   "shares": 13148556400.0,
-  "ts": "2026-10-27T16:29:47"
+  "ts": "2026-10-27T16:55:32"
  },
  "ERAA.JK": {
   "name": "PT Erajaya Swasembada Tbk",
@@ -1253,11 +1342,12 @@
   "pb": 0.940521,
   "roe": 0.15506,
   "der": 0.7292,
-  "div_yield": 0.0446,
+  "div_yield_raw": 4.46,
+  "v": 2,
   "eps_growth": -0.079,
   "rev_growth": 0.069,
   "shares": 15558563078.0,
-  "ts": "2026-10-27T16:29:48"
+  "ts": "2026-10-27T16:55:33"
  },
  "TCPI.JK": {
   "name": "PT Transcoal Pacific Tbk",
@@ -1267,11 +1357,12 @@
   "pb": 4.025137,
   "roe": 0.06652,
   "der": 0.59254,
-  "div_yield": 0.0037,
+  "div_yield_raw": 0.37,
+  "v": 2,
   "eps_growth": 0.111,
   "rev_growth": 0.115,
   "shares": 5000000000.0,
-  "ts": "2026-10-27T16:29:48"
+  "ts": "2026-10-27T16:55:34"
  },
  "SIMP.JK": {
   "name": "PT Salim Ivomas Pratama Tbk",
@@ -1281,11 +1372,12 @@
   "pb": 0.385456,
   "roe": 0.11795,
   "der": 0.34035,
-  "div_yield": 0.0495,
+  "div_yield_raw": 4.95,
+  "v": 2,
   "eps_growth": 0.43,
   "rev_growth": 0.039,
   "shares": 15501310000.0,
-  "ts": "2026-10-27T16:29:49"
+  "ts": "2026-10-27T16:55:35"
  },
  "ARTO.JK": {
   "name": "PT Bank Jago Tbk",
@@ -1295,11 +1387,12 @@
   "pb": 0.882991,
   "roe": 0.03824,
   "der": null,
-  "div_yield": 0.0,
+  "div_yield_raw": 0.0,
+  "v": 2,
   "eps_growth": 0.555,
   "rev_growth": 0.279,
   "shares": 13861330900.0,
-  "ts": "2026-10-27T16:29:50"
+  "ts": "2026-10-27T16:55:36"
  },
  "BTPS.JK": {
   "name": "PT Bank BTPN Syariah Tbk",
@@ -1309,11 +1402,12 @@
   "pb": 0.728436,
   "roe": 0.12294,
   "der": null,
-  "div_yield": 0.0857,
+  "div_yield_raw": 8.57,
+  "v": 2,
   "eps_growth": 0.177,
   "rev_growth": 0.115,
   "shares": 7703700000.0,
-  "ts": "2026-10-27T16:29:50"
+  "ts": "2026-10-27T16:55:36"
  },
  "MSIN.JK": {
   "name": "PT MNC Digital Entertainment Tbk",
@@ -1323,11 +1417,12 @@
   "pb": 0.931041,
   "roe": 0.14473,
   "der": 0.03655,
-  "div_yield": 0.0,
+  "div_yield_raw": 0.0,
+  "v": 2,
   "eps_growth": -0.092,
   "rev_growth": 0.02,
   "shares": 60676178205.0,
-  "ts": "2026-10-27T16:29:51"
+  "ts": "2026-10-27T16:55:40"
  },
  "SMDR.JK": {
   "name": "PT Samudera Indonesia Tbk",
@@ -1337,11 +1432,12 @@
   "pb": 10823.529,
   "roe": 0.10326,
   "der": 0.67026,
-  "div_yield": 0.0313,
+  "div_yield_raw": 3.13,
+  "v": 2,
   "eps_growth": 0.624,
   "rev_growth": 0.2,
   "shares": 16375600000.0,
-  "ts": "2026-10-27T16:29:52"
+  "ts": "2026-10-27T16:55:41"
  },
  "SSIA.JK": {
   "name": "PT Surya Semesta Internusa Tbk",
@@ -1351,11 +1447,12 @@
   "pb": 0.980357,
   "roe": 0.05962,
   "der": 0.29171,
-  "div_yield": 0.0039,
+  "div_yield_raw": 0.39,
+  "v": 2,
   "eps_growth": null,
   "rev_growth": 0.823,
   "shares": 4705249440.0,
-  "ts": "2026-10-27T16:29:52"
+  "ts": "2026-10-27T16:55:42"
  },
  "ACES.JK": {
   "name": "PT Aspirasi Hidup Indonesia Tbk",
@@ -1365,11 +1462,12 @@
   "pb": 0.860851,
   "roe": 0.1212,
   "der": 0.15331,
-  "div_yield": 0.0953,
+  "div_yield_raw": 9.53,
+  "v": 2,
   "eps_growth": 0.499,
   "rev_growth": 0.025,
   "shares": 17120389700.0,
-  "ts": "2026-10-27T16:29:53"
+  "ts": "2026-10-27T16:55:43"
  },
  "PNLF.JK": {
   "name": "PT Panin Financial Tbk",
@@ -1379,11 +1477,12 @@
   "pb": 0.171472,
   "roe": 0.05233,
   "der": null,
-  "div_yield": 0.0,
+  "div_yield_raw": 0.0,
+  "v": 2,
   "eps_growth": -0.966,
   "rev_growth": -0.362,
   "shares": 32022073293.0,
-  "ts": "2026-10-27T16:29:54"
+  "ts": "2026-10-27T16:55:44"
  },
  "WIFI.JK": {
   "name": "PT Solusi Sinergi Digital Tbk",
@@ -1393,10 +1492,401 @@
   "pb": 0.67475,
   "roe": 0.16085,
   "der": 1.15824,
-  "div_yield": 0.19,
+  "div_yield_raw": 0.19,
+  "v": 2,
   "eps_growth": -0.296,
   "rev_growth": 1.793,
   "shares": 5308549015.0,
-  "ts": "2026-10-27T16:29:54"
+  "ts": "2026-10-27T16:55:46"
+ },
+ "EMAS.JK": {
+  "name": "PT Merdeka Gold Resources Tbk",
+  "sector": "Basic Materials",
+  "industry": "Gold",
+  "pe": null,
+  "pb": 248000.0,
+  "roe": -0.08508,
+  "der": 1.25871,
+  "div_yield_raw": 0.0,
+  "v": 2,
+  "eps_growth": null,
+  "rev_growth": 335.723,
+  "shares": 14731366060.0,
+  "ts": "2026-10-27T16:54:31"
+ },
+ "ARCI.JK": {
+  "name": "PT Archi Indonesia Tbk",
+  "sector": "Basic Materials",
+  "industry": "Gold",
+  "pe": 9.829619,
+  "pb": 60937.496,
+  "roe": 0.41328,
+  "der": 1.18826,
+  "div_yield_raw": 3.95,
+  "v": 2,
+  "eps_growth": 1.054,
+  "rev_growth": 0.824,
+  "shares": 25235000000.0,
+  "ts": "2026-10-27T16:54:58"
+ },
+ "JARR.JK": {
+  "name": "PT Jhonlin Agro Raya Tbk",
+  "sector": "Consumer Defensive",
+  "industry": "Farm Products",
+  "pe": 80.19357,
+  "pb": 10.622906,
+  "roe": 0.1396,
+  "der": 0.85673,
+  "div_yield_raw": 0.26,
+  "v": 2,
+  "eps_growth": 0.168,
+  "rev_growth": -0.172,
+  "shares": 9230665050.0,
+  "ts": "2026-10-27T16:55:01"
+ },
+ "MGLV.JK": {
+  "name": "PT NexAI Digital Infrastruktur Tbk",
+  "sector": "Consumer Cyclical",
+  "industry": "Furnishings, Fixtures & Appliances",
+  "pe": null,
+  "pb": 180.80597,
+  "roe": -0.2513,
+  "der": 0.21886,
+  "div_yield_raw": 0.0,
+  "v": 2,
+  "eps_growth": null,
+  "rev_growth": -0.746,
+  "shares": 1904883411.0,
+  "ts": "2026-10-27T16:55:04"
+ },
+ "CBDK.JK": {
+  "name": "PT Bangun Kosambi Sukses Tbk",
+  "sector": "Real Estate",
+  "industry": "Real Estate Services",
+  "pe": 7.039206,
+  "pb": 1.650282,
+  "roe": 0.20882,
+  "der": 0.01614,
+  "div_yield_raw": 0.15,
+  "v": 2,
+  "eps_growth": 1.917,
+  "rev_growth": 0.897,
+  "shares": 5657686900.0,
+  "ts": "2026-10-27T16:55:08"
+ },
+ "FORU.JK": {
+  "name": "PT Fortune Indonesia Tbk",
+  "sector": "Communication Services",
+  "industry": "Advertising Agencies",
+  "pe": null,
+  "pb": 2.733909,
+  "roe": -0.44469,
+  "der": 0.2928,
+  "div_yield_raw": 0.0,
+  "v": 2,
+  "eps_growth": null,
+  "rev_growth": -0.133,
+  "shares": 170075257380.0,
+  "ts": "2026-10-27T16:55:10"
+ },
+ "VKTR.JK": {
+  "name": "PT VKTR Teknologi Mobilitas Tbk",
+  "sector": "Consumer Cyclical",
+  "industry": "Recreational Vehicles",
+  "pe": null,
+  "pb": 14.525,
+  "roe": 0.00202,
+  "der": 0.15706,
+  "div_yield_raw": 0.0,
+  "v": 2,
+  "eps_growth": null,
+  "rev_growth": 0.539,
+  "shares": 43959715248.0,
+  "ts": "2026-10-27T16:55:11"
+ },
+ "POWR.JK": {
+  "name": "PT Cikarang Listrindo Tbk",
+  "sector": "Utilities",
+  "industry": "Utilities - Independent Power Producers",
+  "pe": 12.26158,
+  "pb": 20000.0,
+  "roe": 0.09866,
+  "der": 0.48847,
+  "div_yield_raw": 8.1,
+  "v": 2,
+  "eps_growth": -0.138,
+  "rev_growth": 0.079,
+  "shares": 15851499100.0,
+  "ts": "2026-10-27T16:55:12"
+ },
+ "PACK.JK": {
+  "name": "PT Abadi Nusantara Hijau Investama Tbk",
+  "sector": "Consumer Cyclical",
+  "industry": "Packaging & Containers",
+  "pe": 26.541555,
+  "pb": 3.7835,
+  "roe": 0.08349,
+  "der": 0.00016,
+  "div_yield_raw": 0.0,
+  "v": 2,
+  "eps_growth": null,
+  "rev_growth": 9.365,
+  "shares": 34122012671.0,
+  "ts": "2026-10-27T16:55:14"
+ },
+ "BNBR.JK": {
+  "name": "PT Bakrie & Brothers Tbk",
+  "sector": "Industrials",
+  "industry": "Conglomerates",
+  "pe": 38.46154,
+  "pb": 2.337104,
+  "roe": 0.05112,
+  "der": 3.80962,
+  "div_yield_raw": 0.0,
+  "v": 2,
+  "eps_growth": null,
+  "rev_growth": 0.769,
+  "shares": 19375200.0,
+  "ts": "2026-10-27T16:55:15"
+ },
+ "CMNT.JK": {
+  "name": "PT Cemindo Gemilang Tbk",
+  "sector": "Basic Materials",
+  "industry": "Building Materials",
+  "pe": null,
+  "pb": 5.614908,
+  "roe": -0.08055,
+  "der": 3.52729,
+  "div_yield_raw": 0.0,
+  "v": 2,
+  "eps_growth": null,
+  "rev_growth": 0.172,
+  "shares": 17125504000.0,
+  "ts": "2026-10-27T16:55:16"
+ },
+ "SINI.JK": {
+  "name": "PT Singaraja Putra Tbk",
+  "sector": "Basic Materials",
+  "industry": "Lumber & Wood Production",
+  "pe": 11.939899,
+  "pb": -39.45474,
+  "roe": null,
+  "der": null,
+  "div_yield_raw": 0.0,
+  "v": 2,
+  "eps_growth": null,
+  "rev_growth": 0.305,
+  "shares": 1202500000.0,
+  "ts": "2026-10-27T16:55:17"
+ },
+ "SGER.JK": {
+  "name": "PT Sumber Global Energy Tbk",
+  "sector": "Energy",
+  "industry": "Thermal Coal",
+  "pe": 54.86111,
+  "pb": 5.032135,
+  "roe": 0.09139,
+  "der": 0.95007,
+  "div_yield_raw": 0.0,
+  "v": 2,
+  "eps_growth": 0.278,
+  "rev_growth": 0.146,
+  "shares": 15586909438.0,
+  "ts": "2026-10-27T16:55:18"
+ },
+ "SUPA.JK": {
+  "name": "PT Super Bank Indonesia Tbk",
+  "sector": "Financial Services",
+  "industry": "Banks - Regional",
+  "pe": 40.0949,
+  "pb": 1.387845,
+  "roe": 0.03854,
+  "der": null,
+  "div_yield_raw": 0.0,
+  "v": 2,
+  "eps_growth": 3.485,
+  "rev_growth": 0.344,
+  "shares": 33897017650.0,
+  "ts": "2026-10-27T16:55:19"
+ },
+ "CARE.JK": {
+  "name": "PT Metro Healthcare Indonesia Tbk",
+  "sector": "Healthcare",
+  "industry": "Medical Care Facilities",
+  "pe": 1866.6666,
+  "pb": 3.694013,
+  "roe": 0.0021,
+  "der": 0.35088,
+  "div_yield_raw": 0.0,
+  "v": 2,
+  "eps_growth": -0.928,
+  "rev_growth": 0.126,
+  "shares": 33250000000.0,
+  "ts": "2026-10-27T16:55:20"
+ },
+ "STAA.JK": {
+  "name": "PT Sumber Tani Agung Resources Tbk",
+  "sector": "Consumer Defensive",
+  "industry": "Farm Products",
+  "pe": 6.410256,
+  "pb": 1.698306,
+  "roe": 0.29994,
+  "der": 0.2432,
+  "div_yield_raw": 7.01,
+  "v": 2,
+  "eps_growth": 0.318,
+  "rev_growth": 0.863,
+  "shares": 10896230200.0,
+  "ts": "2026-10-27T16:55:21"
+ },
+ "BUVA.JK": {
+  "name": "PT Bukit Uluwatu Villa Tbk",
+  "sector": "Consumer Cyclical",
+  "industry": "Lodging",
+  "pe": 419.04764,
+  "pb": 4.021295,
+  "roe": 0.01493,
+  "der": 0.21105,
+  "div_yield_raw": 0.0,
+  "v": 2,
+  "eps_growth": 0.096,
+  "rev_growth": 0.196,
+  "shares": 27823874020.0,
+  "ts": "2026-10-27T16:55:26"
+ },
+ "PKPK.JK": {
+  "name": "PT Paragon Karya Perkasa Tbk",
+  "sector": "Industrials",
+  "industry": "Engineering & Construction",
+  "pe": 89.40852,
+  "pb": 26.337795,
+  "roe": 0.40434,
+  "der": 0.62808,
+  "div_yield_raw": 0.0,
+  "v": 2,
+  "eps_growth": 4.268,
+  "rev_growth": 0.955,
+  "shares": 1200000000.0,
+  "ts": "2026-10-27T16:55:34"
+ },
+ "HRTA.JK": {
+  "name": "PT Hartadinata Abadi Tbk",
+  "sector": "Consumer Cyclical",
+  "industry": "Luxury Goods",
+  "pe": 5.405132,
+  "pb": 1.978572,
+  "roe": 0.41947,
+  "der": 1.11814,
+  "div_yield_raw": 2.41,
+  "v": 2,
+  "eps_growth": 0.341,
+  "rev_growth": 0.652,
+  "shares": 4605262400.0,
+  "ts": "2026-10-27T16:55:37"
+ },
+ "MBSS.JK": {
+  "name": "PT Mitrabahtera Segara Sejati Tbk",
+  "sector": "Industrials",
+  "industry": "Marine Shipping",
+  "pe": 19.481133,
+  "pb": 1.759729,
+  "roe": 0.09428,
+  "der": 0.13007,
+  "div_yield_raw": 0.0,
+  "v": 2,
+  "eps_growth": 3.029,
+  "rev_growth": -0.049,
+  "shares": 1750026639.0,
+  "ts": "2026-10-27T16:55:38"
+ },
+ "VICI.JK": {
+  "name": "PT Victoria Care Indonesia Tbk",
+  "sector": "Consumer Defensive",
+  "industry": "Household & Personal Products",
+  "pe": 67.06507,
+  "pb": 6.143328,
+  "roe": 0.09359,
+  "der": 0.06802,
+  "div_yield_raw": 0.81,
+  "v": 2,
+  "eps_growth": -0.559,
+  "rev_growth": 0.085,
+  "shares": 6708000000.0,
+  "ts": "2026-10-27T16:55:38"
+ },
+ "NATO.JK": {
+  "name": "PT Olympus Strategic Indonesia Tbk",
+  "sector": "Consumer Cyclical",
+  "industry": "Lodging",
+  "pe": null,
+  "pb": 3.058162,
+  "roe": -0.13017,
+  "der": 0.05866,
+  "div_yield_raw": 0.0,
+  "v": 2,
+  "eps_growth": null,
+  "rev_growth": 96.786,
+  "shares": 8001111504.0,
+  "ts": "2026-10-27T16:55:39"
+ },
+ "RATU.JK": {
+  "name": "PT Raharja Energi Cepu Tbk",
+  "sector": "Energy",
+  "industry": "Oil & Gas E&P",
+  "pe": 16.855566,
+  "pb": 110476.195,
+  "roe": 0.4316,
+  "der": 2.41875,
+  "div_yield_raw": 1.81,
+  "v": 2,
+  "eps_growth": 5.085,
+  "rev_growth": 0.229,
+  "shares": 2715053800.0,
+  "ts": "2026-10-27T16:55:40"
+ },
+ "BIPI.JK": {
+  "name": "PT Astrindo Nusantara Infrastruktur Tbk",
+  "sector": "Energy",
+  "industry": "Thermal Coal",
+  "pe": 19.239374,
+  "pb": 12285.714,
+  "roe": 0.02507,
+  "der": 0.83923,
+  "div_yield_raw": 0.0,
+  "v": 2,
+  "eps_growth": null,
+  "rev_growth": -0.319,
+  "shares": 60059379917.0,
+  "ts": "2026-10-27T16:55:42"
+ },
+ "COIN.JK": {
+  "name": "PT Indokripto Koin Semesta Tbk",
+  "sector": "Financial Services",
+  "industry": "Financial Data & Stock Exchanges",
+  "pe": null,
+  "pb": 3.483778,
+  "roe": -0.0111,
+  "der": 0.00336,
+  "div_yield_raw": 0.0,
+  "v": 2,
+  "eps_growth": null,
+  "rev_growth": -0.47,
+  "shares": 14705882400.0,
+  "ts": "2026-10-27T16:55:45"
+ },
+ "CYBR.JK": {
+  "name": "PT ITSEC Asia Tbk",
+  "sector": "Technology",
+  "industry": "Software - Infrastructure",
+  "pe": 87.78281,
+  "pb": 16.81765,
+  "roe": 0.24112,
+  "der": 0.15724,
+  "div_yield_raw": 0.0,
+  "v": 2,
+  "eps_growth": 26.915,
+  "rev_growth": 0.21,
+  "shares": 13488396659.0,
+  "ts": "2026-10-27T16:55:45"
  }
 }
