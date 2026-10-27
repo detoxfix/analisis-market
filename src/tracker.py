@@ -11,7 +11,7 @@ from .utils import ROOT, log
 PATH = ROOT / "docs" / "data" / "recommendations.csv"
 COLS = ["id", "date", "ticker", "code", "horizon", "signal", "score", "entry", "entry_low", "entry_high",
         "tp1", "tp2", "sl", "max_hold_days", "status", "outcome", "entry_date", "entry_px",
-        "exit_date", "exit_px", "ret", "days", "tp1_hit"]
+        "exit_date", "exit_px", "ret", "days", "tp1_hit", "entry_mode", "limit_days", "trail_ma"]
 
 
 def _load() -> pd.DataFrame:
@@ -62,6 +62,8 @@ def update(prices: dict[str, pd.DataFrame], new_recs: list[dict], fees: dict, as
                     "horizon": r["horizon"], "signal": r["signal"], "score": r["score"],
                     "entry": r["entry"], "entry_low": r["entry_low"], "entry_high": r["entry_high"],
                     "tp1": r["tp1"], "tp2": r["tp2"], "sl": r["sl"], "max_hold_days": r["max_hold_days"],
+                    "entry_mode": r.get("entry_mode", "open"), "limit_days": r.get("limit_days", 3),
+                    "trail_ma": r.get("trail_ma", 0),
                     "status": "OPEN", "outcome": "MENUNGGU"})
     if add:
         df = pd.concat([df, pd.DataFrame(add)], ignore_index=True) if len(df) else pd.DataFrame(add, columns=COLS)

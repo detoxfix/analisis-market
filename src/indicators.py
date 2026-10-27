@@ -95,9 +95,14 @@ def add_indicators(df: pd.DataFrame, bench: pd.Series | None = None) -> pd.DataF
         out["BENCH"] = b
         above = (b_full > b_ema20).astype(float).where(b_ema20.notna())
         out["BENCH_UP"] = above.reindex(out.index).ffill()
+        for name, ma in (("ema20", b_ema20), ("sma50", sma(b_full, 50)), ("sma200", sma(b_full, 200))):
+            ok = (b_full > ma).astype(float).where(ma.notna())
+            out[f"MKT_{name}"] = ok.reindex(out.index).ffill()
         out["RS_60"] = out["RET_60"] - b.pct_change(60)
     else:
         out["BENCH"] = np.nan
         out["BENCH_UP"] = np.nan
         out["RS_60"] = np.nan
+        for name in ("ema20", "sma50", "sma200"):
+            out[f"MKT_{name}"] = np.nan
     return out

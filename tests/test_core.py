@@ -48,6 +48,20 @@ def test_sim_sl_and_tp():
     assert simulate(gap, 0, plan, FEES)["outcome"] == "BATAL"
 
 
+def test_sim_limit_and_trail():
+    plan = {"entry": 980, "entry_high": 980, "sl": 940, "tp1": 1020, "tp2": 1200, "max_hold_days": 10,
+            "entry_mode": "limit", "limit_days": 3, "trail_ma": 0}
+    miss = _bars([[1000] * 4, [1000, 1010, 990, 1000], [1000, 1010, 985, 1000], [1000, 1010, 990, 1000]])
+    assert simulate(miss, 0, plan, FEES)["outcome"] == "BATAL"
+    fill = _bars([[1000] * 4, [1000, 1010, 975, 990], [990, 1030, 985, 1025]])
+    r = simulate(fill, 0, plan, FEES)
+    assert r["entry_px"] == 980 and r["tp1_hit"]
+    trail_plan = {**plan, "trail_ma": 2}
+    rows = [[1000] * 4, [1000, 1010, 975, 990], [990, 1030, 985, 1025], [1025, 1026, 990, 991]]
+    r2 = simulate(_bars(rows), 0, trail_plan, FEES)
+    assert r2["outcome"] == "TP1+TRAIL", r2["outcome"]
+
+
 def test_weights():
     w = _water_fill(np.array([10.0, 1, 1, 1]), 0.3)
     assert abs(w.sum() - 1) < 1e-9 and w.max() <= 0.3 + 1e-9

@@ -124,8 +124,9 @@ function buyCard(p){
 function renderBuy(h){
   const b=D.horizons[h];
   let html=`<p class="muted">${esc(b.label)} · alokasi ${pctp(b.allocation,0)} modal · ${b.buys.length} posisi · kas ${pctp(b.cash_weight,0)} dari bucket</p>`;
-  html+=b.buys.length?`<div class="grid">${b.buys.map(buyCard).join("")}</div>`:`<div class="empty">Belum ada sinyal beli yang lolos untuk horizon ini. Tetap di kas.</div>`;
-  if(b.watchlist.length){html+=`<h3>Watchlist (sinyal beli di luar kuota posisi)</h3><div class="tbl"><table><tr><th>Kode</th><th>Sinyal</th><th>Harga</th><th>Area beli</th><th>TP1</th><th>SL</th></tr>${b.watchlist.map(w=>`<tr><td><b>${w.code}</b></td><td>${badge(w.signal,w.score)}</td><td>${n(w.price)}</td><td>${n(w.entry_low)}–${n(w.entry_high)}</td><td>${n(w.tp1)}</td><td>${n(w.sl)}</td></tr>`).join("")}</table></div>`;}
+  html+=b.buys.length?`<div class="grid">${b.buys.map(buyCard).join("")}</div>`:`<div class="empty">Belum ada sinyal beli yang lolos syarat masuk untuk horizon ini. Tetap di kas.${b.n_held?" ("+b.n_held+" sinyal beli tertahan filter — lihat watchlist)":""}</div>`;
+  if(b.watchlist.length){html+=`<h3>Watchlist (sinyal beli yang belum dieksekusi)</h3><div class="tbl"><table><tr><th>Kode</th><th>Sinyal</th><th>Harga</th><th>Area beli</th><th>TP1</th><th>SL</th><th>Keterangan</th></tr>${b.watchlist.map(w=>`<tr><td><b>${w.code}</b></td><td>${badge(w.signal,w.score)}</td><td>${n(w.price)}</td><td>${n(w.entry_low)}–${n(w.entry_high)}</td><td>${n(w.tp1)}</td><td>${n(w.sl)}</td><td style="text-align:left">${esc(w.held||"")}</td></tr>`).join("")}</table></div>`;}
+  if(b.rules){const r=b.rules;html+=`<p class="muted">Aturan masuk: skor ≥ ${r.min_score??30}${r.market_filter&&r.market_filter!=="none"?" · IHSG di atas "+r.market_filter.toUpperCase():""}${r.trend_filter&&r.trend_filter!=="none"?" · harga di atas "+r.trend_filter.toUpperCase():""}${r.entry_mode==="limit"?" · antre di area bawah "+r.limit_days+" hari":" · beli di pembukaan T+1"}${r.trail_ma?" · trailing EMA"+r.trail_ma+" setelah TP1":""}</p>`;}
   $("buy-body").innerHTML=html;
 }
 function renderSell(h){
@@ -163,8 +164,9 @@ function renderBt(){
   if(!b||!b.results){$("p-bt").innerHTML='<div class="empty">Backtest belum dijalankan.</div>';return;}
   let h=`<h2>Backtest aturan sinyal</h2><p class="muted">Dijalankan ${esc(b.generated_at)}. Masuk saat skor menembus ambang BUY, keluar via TP/SL/time-stop, biaya termasuk. Universe memakai market cap saat ini (bias survivorship) — anggap sebagai batas atas, bukan janji hasil.</p>
   <div class="tbl"><table><tr><th>Horizon</th><th>Transaksi</th><th>Win rate</th><th>Rata-rata</th><th>Profit factor</th><th>Rata hari</th></tr>`;
-  for(const [k,s] of Object.entries(b.results)){h+=statRow(H[k]+" (semua BUY)",s);if(s.strong_only)h+=statRow(H[k]+" (STRONG BUY saja)",s.strong_only);}
+  for(const [k,s] of Object.entries(b.results)){h+=statRow(H[k]+" (semua)",s);if(s.in_sample)h+=statRow(H[k]+" · in-sample",s.in_sample);if(s.out_sample)h+=statRow(H[k]+" · out-of-sample",s.out_sample);if(s.strong_only)h+=statRow(H[k]+" (STRONG BUY saja)",s.strong_only);}
   h+=`</table></div>`;
+  for(const [k,s] of Object.entries(b.results)) if(s.by_year) h+=`<p class="muted">${H[k]} per tahun: ${Object.entries(s.by_year).map(([y,v])=>y+": "+(v.n?v.n+" trx, rata "+pct(v.avg_ret)+", PF "+dec(v.profit_factor,2):"-")).join(" · ")}</p>`;
   for(const [k,s] of Object.entries(b.results)) if(s.outcomes) h+=`<p class="muted">${H[k]}: periode ${s.period?s.period.join(" s/d "):"-"} · hasil keluar: ${Object.entries(s.outcomes).map(([a,c])=>a+" "+c).join(", ")}</p>`;
   $("p-bt").innerHTML=h;
 }

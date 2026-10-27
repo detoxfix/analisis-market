@@ -22,7 +22,7 @@ from src import notify, report, tracker
 from src.indicators import add_indicators
 from src.portfolio import allocate
 from src.risk import make_plan, sell_plan
-from src.signals import (BUY_SIGNALS, HORIZON_FUNCS, LONG_W, SELL_SIGNALS, compose, explain, label,
+from src.signals import (BUY_SIGNALS, HORIZON_FUNCS, LONG_W, SELL_SIGNALS, compose, entry_mask, explain, label,
                          long_components)
 from src.universe import candidate_list, filter_universe
 from src.utils import ROOT, dump_json, fnum, load_json, log, to_jsonable
@@ -91,7 +91,7 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
 
     # ------------------------------------------------------------ 3. indikator & skor
     th = cfg["thresholds"]
-    ind, rows_all, per_h = {}, [], {h: {"buys": [], "sells": []} for h in HORIZONS}
+    ind, rows_all, per_h = {}, [], {h: {"buys": [], "sells": [], "held": []} for h in HORIZONS}
     for _, u in uni.iterrows():
         t = u["ticker"]
         d = add_indicators(prices[t], bench)
@@ -126,7 +126,9 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
                     plan = make_plan(last, h, cfg["horizons"][h], cfg["fees"])
                     if plan:
                         item.update(plan)
-                        per_h[h]["buys"].append(item)
+                        ok, why = entry_mask(d.iloc[-1:], score_s.iloc[-1:], cfg["horizons"][h], th)
+                        item["held"] = None if bool(ok.iloc[-1]) else (why.iloc[-1] or "Tidak lolos syarat masuk")
+                        per_h[h]["buys" if item["held"] is None else "held"].append(item)
                 else:
                     item.update(sell_plan(last, sig))
                     per_h[h]["sells"].append(item)
@@ -139,8 +141,13 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
         picked, cash = allocate(per_h[h]["buys"], hcfg, cfg["capital"], cfg["risk_per_trade"])
         picked_codes = {p["code"] for p in picked}
         watch = [b for b in sorted(per_h[h]["buys"], key=lambda x: -x["score"]) if b["code"] not in picked_codes]
+        for b in watch:
+            b["held"] = "Di luar kuota posisi"
+        watch = watch + sorted(per_h[h]["held"], key=lambda x: -x["score"])
         per_h[h] = {"label": hcfg["label"], "allocation": hcfg["allocation"], "cash_weight": cash,
-                    "buys": picked, "watchlist": watch[:10],
+                    "buys": picked, "watchlist": watch[:15], "n_held": len(per_h[h]["held"]),
+                    "rules": {k: hcfg.get(k) for k in ("min_score", "market_filter", "trend_filter", "entry_mode",
+                                                       "limit_days", "trail_ma", "sl_atr", "max_sl_pct", "rr")},
                     "sells": sorted(per_h[h]["sells"], key=lambda x: x["score"])}
         new_recs += [p for p in picked if p["lots"] > 0]
 

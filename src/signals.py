@@ -226,6 +226,32 @@ def explain(comp_row: pd.Series, weights: dict, ind_row: pd.Series, fund: dict |
     return [txt(k, False) for k in neg[:n_main]], [txt(k, True) for k in pos[:n_risk]]
 
 
+MKT_TEXT = {"ema20": "EMA20", "sma50": "SMA50", "sma200": "SMA200"}
+
+
+def entry_mask(d: pd.DataFrame, score: pd.Series, hcfg: dict, th: dict) -> tuple[pd.Series, pd.Series]:
+    """Syarat tambahan sebelum sinyal BUY boleh dieksekusi.
+    Return (boleh_masuk, alasan_tertahan) per tanggal."""
+    min_score = hcfg.get("min_score", th["buy"])
+    ok = score >= min_score
+    why = pd.Series("", index=d.index, dtype=object)
+    mf = hcfg.get("market_filter", "none") or "none"
+    if mf != "none":
+        mkt = d[f"MKT_{mf}"]
+        bad = ~(mkt > 0.5)
+        why = why.mask(bad & ok, f"IHSG di bawah {MKT_TEXT[mf]} (filter pasar)")
+        ok &= ~bad
+    tf = hcfg.get("trend_filter", "none") or "none"
+    if tf != "none":
+        col = {"sma50": "SMA50", "sma200": "SMA200"}[tf]
+        bad = ~(d["Close"] > d[col])
+        why = why.mask(bad & ok & (why == ""), f"Harga di bawah {col} (filter tren)")
+        ok &= ~bad
+    low = score < min_score
+    why = why.mask(low & (score >= th["buy"]) & (why == ""), f"Skor di bawah minimum masuk {min_score:g}")
+    return ok.fillna(False), why
+
+
 HORIZON_FUNCS = {
     "short": (short_components, SHORT_W),
     "medium": (medium_components, MEDIUM_W),
