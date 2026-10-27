@@ -1,0 +1,44 @@
+name: Update sinyal IHSG harian
+
+on:
+  schedule:
+    - cron: "30 10 * * 1-5"      # 17:30 WIB, Senin-Jumat
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ihsg-signal
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependensi
+        run: pip install -r requirements.txt
+
+      - name: Jalankan scraper + mesin sinyal
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python main.py --backtest auto
+          touch docs/.nojekyll
+
+      - name: Simpan hasil ke repo
+        run: |
+          git config user.name "ihsg-signal-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs data/cache
+          git commit -m "Sinyal $(TZ=Asia/Jakarta date +%F)" || echo "Tidak ada perubahan"
+          git push
