@@ -157,12 +157,50 @@ def get_shares(tickers: list[str], max_age_days: int = 7) -> dict[str, float]:
     return {t: cache[t]["shares"] for t in tickers if t in cache}
 
 
-def _pct(v):
-    """Yahoo kadang memberi yield dalam persen (3.5) kadang pecahan (0.035)."""
-    v = fnum(v)
-    if v is None:
-        return None
-    return v / 100 if v > 0.3 else v
+FUND_VERSION = 2
+
+
+def _clean_fund(f: dict) -> dict:
+    """Saring nilai fundamental Yahoo yang tidak masuk akal.
+
+    - PBV: untuk emiten yang melapor dalam USD (batu bara, mineral, petrokimia) Yahoo membagi harga
+      Rupiah dengan nilai buku USD sehingga PBV bisa ribuan kali -> dianggap tidak tersedia.
+    - PER: di atas 500x atau negatif ekstrem -> tidak tersedia.
+    - Dividend yield: yfinance >= 0.2.54 memberi angka PERSEN (7,7 = 7,7%) -> selalu dibagi 100.
+    """
+    f = dict(f)
+    pb, pe = f.get("pb"), f.get("pe")
+    if pb is not None and (pb <= 0 or pb > 40):
+        f["pb"] = None
+    if pe is not None and (pe > 500 or pe < -500):
+        f["pe"] = None
+    dy = f.get("div_yield_raw")
+    f["div_yield"] = dy / 100 if dy is not None else None
+    if f["div_yield"] is not None and f["div_yield"] > 0.25:   # >25% hampir pasti data salah
+        f["div_yield"] = None
+    return f
+
+
+def discover_by_screener(min_mcap: float) -> list[str]:
+    """Daftar saham BEI dari screener Yahoo (cadangan bila situs IDX memblokir runner)."""
+    import yfinance as yf
+    from yfinance import EquityQuery
+
+    q = EquityQuery("and", [EquityQuery("eq", ["region", "id"]),
+                            EquityQuery("gte", ["intradaymarketcap", min_mcap * 0.7])])
+    found: list[str] = []
+    for offset in range(0, 1000, 250):
+        try:
+            r = yf.screen(q, offset=offset, size=250, sortField="intradaymarketcap", sortAsc=False)
+        except Exception as e:  # noqa: BLE001
+            log.warning("Screener Yahoo gagal (%s)", e.__class__.__name__)
+            break
+        quotes = (r or {}).get("quotes", [])
+        found += [x["symbol"] for x in quotes if str(x.get("symbol", "")).endswith(".JK")]
+        if len(quotes) < 250:
+            break
+    log.info("Screener Yahoo: %d saham BEI ditemukan", len(found))
+    return found
 
 
 def get_fundamentals(tickers: list[str], max_age_days: int = 7) -> dict[str, dict]:
@@ -170,7 +208,8 @@ def get_fundamentals(tickers: list[str], max_age_days: int = 7) -> dict[str, dic
 
     path = CACHE / "fundamentals.json"
     cache = load_json(path, {}) or {}
-    todo = [t for t in tickers if not _fresh(cache.get(t), max_age_days)]
+    todo = [t for t in tickers if not _fresh(cache.get(t), max_age_days)
+            or cache[t].get("v") != FUND_VERSION]
     if todo:
         log.info("Ambil fundamental %d ticker (cache %d)", len(todo), len(tickers) - len(todo))
     for n, t in enumerate(todo, 1):
@@ -188,7 +227,8 @@ def get_fundamentals(tickers: list[str], max_age_days: int = 7) -> dict[str, dic
             "pb": fnum(info.get("priceToBook")),
             "roe": fnum(info.get("returnOnEquity")),
             "der": der / 100 if der is not None else None,       # Yahoo: dalam persen
-            "div_yield": _pct(info.get("dividendYield")),
+            "div_yield_raw": fnum(info.get("dividendYield")),
+            "v": FUND_VERSION,
             "eps_growth": fnum(info.get("earningsGrowth")),
             "rev_growth": fnum(info.get("revenueGrowth")),
             "shares": fnum(info.get("sharesOutstanding")),
@@ -198,7 +238,7 @@ def get_fundamentals(tickers: list[str], max_age_days: int = 7) -> dict[str, dic
             dump_json(cache, path)
         time.sleep(0.4)
     dump_json(cache, path)
-    return {t: cache[t] for t in tickers if t in cache}
+    return {t: _clean_fund(cache[t]) for t in tickers if t in cache}
 
 
 # ------------------------------------------------------------------ mode demo (offline)

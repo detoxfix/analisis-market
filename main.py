@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import os
 from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 
 import numpy as np
 import pandas as pd
@@ -46,7 +47,7 @@ def sector_medians(funds: dict[str, dict]) -> dict[str, dict]:
 
 
 def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
-    now = datetime.now()
+    now = datetime.now(ZoneInfo("Asia/Jakarta")).replace(tzinfo=None)   # runner GitHub memakai UTC
     sources = []
     # ------------------------------------------------------------ 1. data
     if demo:
@@ -56,9 +57,10 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
         sources.append("DEMO — data sintetis")
     else:
         idx_df = D.fetch_idx_list() if cfg["universe"].get("use_idx_list", True) else None
-        tickers, shares, names = candidate_list(cfg, idx_df)
+        extra = D.discover_by_screener(cfg["universe"]["min_market_cap"]) if idx_df is None else []
+        tickers, shares, names = candidate_list(cfg, idx_df, extra)
         sources.append("Daftar emiten & jumlah saham: idx.co.id (publik)" if shares
-                       else "Daftar emiten: data/tickers_seed.csv")
+                       else "Daftar emiten: data/tickers_seed.csv" + (" + screener Yahoo Finance" if extra else ""))
         bench_px = D.download_prices([cfg["data"]["benchmark"]], period=cfg["data"]["history_period"])
         bench = bench_px[cfg["data"]["benchmark"]]["Close"] if bench_px else None
         prices = D.download_prices(tickers, period=cfg["data"]["history_period"])
