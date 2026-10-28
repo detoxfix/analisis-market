@@ -39,6 +39,6 @@ jobs:
         run: |
           git config user.name "ihsg-signal-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs data/cache
+          git add docs data
           git commit -m "Sinyal $(TZ=Asia/Jakarta date +%F)" || echo "Tidak ada perubahan"
           git push
