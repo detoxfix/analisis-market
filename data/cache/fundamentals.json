@@ -1888,5 +1888,35 @@
   "rev_growth": 0.21,
   "shares": 13488396659.0,
   "ts": "2026-10-27T16:55:45"
+ },
+ "HEAL.JK": {
+  "name": "PT Medikaloka Hermina Tbk",
+  "sector": "Healthcare",
+  "industry": "Medical Care Facilities",
+  "pe": 21.04247,
+  "pb": 1.506699,
+  "roe": 0.07281,
+  "der": 0.51262,
+  "div_yield_raw": 2.77,
+  "v": 2,
+  "eps_growth": -0.135,
+  "rev_growth": 0.077,
+  "shares": 15245698700.0,
+  "ts": "2026-10-28T11:09:02"
+ },
+ "RMKE.JK": {
+  "name": "PT RMK Energy Tbk",
+  "sector": "Energy",
+  "industry": "Thermal Coal",
+  "pe": 21.124828,
+  "pb": 3.475122,
+  "roe": 0.1714,
+  "der": 0.55154,
+  "div_yield_raw": 2.01,
+  "v": 2,
+  "eps_growth": 2.219,
+  "rev_growth": 2.254,
+  "shares": 21875000000.0,
+  "ts": "2026-10-28T11:09:02"
  }
 }
