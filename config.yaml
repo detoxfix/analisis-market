@@ -31,6 +31,7 @@ thresholds:                          # skor -100..+100 -> sinyal
   sell: -30
   strong_sell: -60
 
+# Parameter pendek & menengah hasil tuning data asli 28-10-2026 (lihat docs/data/tuning.json)
 horizons:
   short:
     label: "Jangka Pendek (Swing)"
@@ -39,16 +40,16 @@ horizons:
     max_weight: 0.30                 # bobot maks. satu saham di dalam bucket
     sector_cap: 0.50
     hold_min_days: 3
-    hold_max_days: 10                # time-stop (hari bursa)
+    hold_max_days: 15                # time-stop (hari bursa)
     entry_atr: 0.5                   # area beli: harga - 0,5 ATR
     chase_atr: 0.3                   # batas kejar: harga + 0,3 ATR (lewat ini, batal beli)
-    sl_atr: 1.5
-    max_sl_pct: 0.07
-    rr: [1.5, 2.5]                   # TP1 = 1,5R ; TP2 = 2,5R
-    min_score: 30                    # skor minimum untuk boleh beli
-    market_filter: none              # none | ema20 | sma50 | sma200 : beli hanya bila IHSG di atas MA ini
-    trend_filter: none               # none | sma50 | sma200 : beli hanya bila harga saham di atas MA ini
-    entry_mode: open                 # open = beli di pembukaan T+1 ; limit = antre di area bawah
+    sl_atr: 2.5
+    max_sl_pct: 0.10
+    rr: [2.0, 3.0]                   # TP1 = 2R ; TP2 = 3R
+    min_score: 60                    # skor minimum untuk boleh beli
+    market_filter: ema20             # none | ema20 | sma50 | sma200 : beli hanya bila IHSG di atas MA ini
+    trend_filter: sma200             # none | sma50 | sma200 : beli hanya bila harga saham di atas MA ini
+    entry_mode: limit                # open = beli di pembukaan T+1 ; limit = antre di area bawah
     limit_days: 3                    # masa berlaku antrean (mode limit)
     trail_ma: 0                      # 0 = mati ; n = setelah TP1, jual sisa bila close < EMA n
   medium:
@@ -58,15 +59,15 @@ horizons:
     max_weight: 0.20
     sector_cap: 0.40
     hold_min_days: 20
-    hold_max_days: 60
+    hold_max_days: 40
     entry_atr: 1.0
     chase_atr: 0.2
-    sl_atr: 2.5
-    max_sl_pct: 0.12
-    rr: [2.0, 3.5]
-    min_score: 30
-    market_filter: none
-    trend_filter: none
+    sl_atr: 3.5
+    max_sl_pct: 0.15
+    rr: [2.5, 4.0]
+    min_score: 60
+    market_filter: sma50
+    trend_filter: sma50
     entry_mode: open
     limit_days: 5
     trail_ma: 0

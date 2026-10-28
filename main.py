@@ -8,6 +8,8 @@ Pemakaian:
 from __future__ import annotations
 
 import argparse
+import hashlib
+import json
 import os
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
@@ -155,11 +157,15 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
     track = tracker.update(prices, new_recs, cfg["fees"], as_of, demo=demo)
     bt_path = ROOT / "docs" / "data" / "backtest.json"
     bt_res = load_json(bt_path) if not demo else None
-    stale = (bt_res is None or datetime.fromisoformat(bt_res.get("generated_at", "2000-01-01"))
+    cfg_hash = hashlib.md5(json.dumps({h: cfg["horizons"][h] for h in ("short", "medium")}, sort_keys=True)
+                           .encode()).hexdigest()[:10]
+    stale = (bt_res is None or bt_res.get("config_hash") != cfg_hash        # parameter berubah -> backtest ulang
+             or datetime.fromisoformat(bt_res.get("generated_at", "2000-01-01"))
              < now - timedelta(days=cfg.get("backtest", {}).get("refresh_days", 7)))
     if backtest_mode == "always" or (backtest_mode == "auto" and stale):
         log.info("Menjalankan backtest...")
-        bt_res = {"generated_at": now.isoformat(timespec="seconds"), "results": bt.run(ind, cfg)}
+        bt_res = {"generated_at": now.isoformat(timespec="seconds"), "config_hash": cfg_hash,
+                  "results": bt.run(ind, cfg)}
         if not demo:
             dump_json(bt_res, bt_path)
 
