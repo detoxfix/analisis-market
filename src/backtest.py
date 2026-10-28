@@ -31,7 +31,7 @@ def prepare(ind: dict[str, pd.DataFrame], horizons=("short", "medium")) -> dict:
     return prep
 
 
-def trades_for(prep: dict, h: str, hcfg: dict, cfg: dict) -> pd.DataFrame:
+def trades_for(prep: dict, h: str, hcfg: dict, cfg: dict, detail: bool = False) -> pd.DataFrame:
     th, fees = cfg["thresholds"], cfg["fees"]
     tm = int(hcfg.get("trail_ma") or 0)
     rows = []
@@ -65,12 +65,23 @@ def trades_for(prep: dict, h: str, hcfg: dict, cfg: dict) -> pd.DataFrame:
             res = simulate_arr(it["Open"], it["High"], it["Low"], it["Close"], int(pos), plan, fees, trail)
             next_free = res["exit_pos"] + 1
             if res["filled"] and "OPEN" not in res["outcome"]:
-                rows.append({"ticker": t, "date": it["dates"][pos], "score": sv[pos], "ret": res["ret"],
-                             "days": res["days"], "outcome": res["outcome"]})
+                row_ = {"ticker": t, "date": it["dates"][pos], "score": sv[pos], "ret": res["ret"],
+                        "days": res["days"], "outcome": res["outcome"]}
+                if detail:
+                    d_ = it["dates"]
+                    row_.update({"entry_date": d_[res["entry_pos"]], "exit_date": d_[res["exit_pos"]],
+                                 "tp1_date": d_[res["tp1_pos"]] if res["tp1_pos"] is not None else pd.NaT,
+                                 "entry_px": res["entry_px"], "exit_px": res["exit_px"],
+                                 "tp1_px": res["tp1_px"], "sl": plan["sl"],
+                                 "atr_pct": it["ATR14"][pos] / it["Close"][pos]})
+                rows.append(row_)
             elif not res["filled"] and res["outcome"] == "BATAL":
                 rows.append({"ticker": t, "date": it["dates"][pos], "score": sv[pos], "ret": np.nan,
                              "days": 0, "outcome": "BATAL"})
-    return pd.DataFrame(rows, columns=["ticker", "date", "score", "ret", "days", "outcome"])
+    cols = ["ticker", "date", "score", "ret", "days", "outcome"]
+    if detail:
+        cols += ["entry_date", "exit_date", "tp1_date", "entry_px", "exit_px", "tp1_px", "sl", "atr_pct"]
+    return pd.DataFrame(rows, columns=cols)
 
 
 def stats(tr: pd.DataFrame) -> dict:

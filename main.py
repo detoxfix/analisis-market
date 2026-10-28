@@ -20,7 +20,7 @@ import yaml
 
 from src import backtest as bt
 from src import data as D
-from src import notify, report, tracker
+from src import archive, notify, portsim, report, tracker
 from src.indicators import add_indicators
 from src.portfolio import allocate
 from src.risk import make_plan, sell_plan
@@ -67,6 +67,8 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
         bench = bench_px[cfg["data"]["benchmark"]]["Close"] if bench_px else None
         prices = D.download_prices(tickers, period=cfg["data"]["history_period"])
         sources.append("Harga OHLCV harian, jumlah saham & fundamental: Yahoo Finance via yfinance (open source, Apache-2.0)")
+        sources.append("Arsip fundamental harian & laporan keuangan (kuartalan/tahunan) disimpan di repo: "
+                       "data/fundamentals_history")
         missing = [t for t in prices if t not in shares]
         if missing:
             shares.update(D.get_shares(missing, cfg["data"]["shares_cache_days"]))
@@ -90,6 +92,13 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
     else:
         funds = D.get_fundamentals(tick_list, cfg["data"]["fundamentals_cache_days"])
     meds = sector_medians(funds)
+    if not demo:                                   # arsip fundamental (gagal di sini tidak boleh menghentikan sinyal)
+        try:
+            archive.snapshot_daily(as_of, uni, funds, shares)
+            archive.update_statements(tick_list, cfg.get("archive", {}).get("statements_days", 7),
+                                      cfg.get("archive", {}).get("statements_per_run", 60))
+        except Exception as e:  # noqa: BLE001
+            log.warning("Arsip fundamental gagal: %s", e)
 
     # ------------------------------------------------------------ 3. indikator & skor
     th = cfg["thresholds"]
@@ -167,7 +176,8 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
     track = tracker.update(prices, new_recs, cfg["fees"], as_of, demo=demo)
     bt_path = ROOT / "docs" / "data" / "backtest.json"
     bt_res = load_json(bt_path) if not demo else None
-    cfg_hash = hashlib.md5(json.dumps({h: cfg["horizons"][h] for h in ("short", "medium")}, sort_keys=True)
+    cfg_hash = hashlib.md5(json.dumps({"h": {h: cfg["horizons"][h] for h in ("short", "medium")}, "v": 2,
+                                       "cap": cfg["capital"], "risk": cfg["risk_per_trade"]}, sort_keys=True)
                            .encode()).hexdigest()[:10]
     stale = (bt_res is None or bt_res.get("config_hash") != cfg_hash        # parameter berubah -> backtest ulang
              or datetime.fromisoformat(bt_res.get("generated_at", "2000-01-01"))
@@ -176,6 +186,10 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
         log.info("Menjalankan backtest...")
         bt_res = {"generated_at": now.isoformat(timespec="seconds"), "config_hash": cfg_hash,
                   "results": bt.run(ind, cfg)}
+        try:
+            bt_res["portfolio"] = portsim.run(ind, cfg)
+        except Exception as e:  # noqa: BLE001  (simulasi portofolio tidak boleh menggagalkan sinyal harian)
+            log.warning("Simulasi portofolio gagal: %s", e)
         if not demo:
             dump_json(bt_res, bt_path)
 
@@ -189,6 +203,7 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
         "generated_at": now.strftime("%Y-%m-%d %H:%M"), "as_of": as_of.strftime("%Y-%m-%d"), "demo": demo,
         "params": {"min_market_cap": cfg["universe"]["min_market_cap"], "min_avg_value_20d": cfg["universe"]["min_avg_value_20d"],
                    "capital": cfg["capital"], "risk_per_trade": cfg["risk_per_trade"], "fees": cfg["fees"],
+                   "split_date": cfg.get("backtest", {}).get("split_date"),
                    "thresholds": th},
         "market": {"bench": b_last, "bench_chg": b_last / b_prev - 1, "regime": regime,
                    "universe": len(uni), "scanned": len(prices)},

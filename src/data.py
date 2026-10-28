@@ -157,7 +157,7 @@ def get_shares(tickers: list[str], max_age_days: int = 7) -> dict[str, float]:
     return {t: cache[t]["shares"] for t in tickers if t in cache}
 
 
-FUND_VERSION = 2
+FUND_VERSION = 3
 
 
 def _clean_fund(f: dict) -> dict:
@@ -228,6 +228,9 @@ def get_fundamentals(tickers: list[str], max_age_days: int = 7) -> dict[str, dic
             "roe": fnum(info.get("returnOnEquity")),
             "der": der / 100 if der is not None else None,       # Yahoo: dalam persen
             "div_yield_raw": fnum(info.get("dividendYield")),
+            "eps_ttm": fnum(info.get("trailingEps")),
+            "bvps": fnum(info.get("bookValue")),
+            "fin_currency": info.get("financialCurrency"),
             "v": FUND_VERSION,
             "eps_growth": fnum(info.get("earningsGrowth")),
             "rev_growth": fnum(info.get("revenueGrowth")),

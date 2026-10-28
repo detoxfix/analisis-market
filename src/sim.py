@@ -71,7 +71,7 @@ def simulate_arr(o, h, l, c, signal_pos: int, plan: dict, fees: dict, trail_line
         e, entry = first, o[first]
 
     # ---------------- kelola posisi
-    tp1_hit, part1 = False, None
+    tp1_hit, part1, tp1_pos = False, None, None
     exit_px, outcome, j = None, None, e
     for j in range(e, n):
         if l[j] <= sl:                         # termasuk hari masuk (asumsi terburuk)
@@ -79,7 +79,7 @@ def simulate_arr(o, h, l, c, signal_pos: int, plan: dict, fees: dict, trail_line
             outcome = "BE" if tp1_hit else "SL"
             break
         if not tp1_hit and h[j] >= tp1:
-            tp1_hit, part1, sl = True, tp1, max(sl, entry)
+            tp1_hit, part1, sl, tp1_pos = True, tp1, max(sl, entry), j
         if h[j] >= tp2:
             exit_px, outcome = tp2, "TP2"
             break
@@ -100,7 +100,7 @@ def simulate_arr(o, h, l, c, signal_pos: int, plan: dict, fees: dict, trail_line
         outcome = "TP1+" + outcome
     res.update({"filled": True, "outcome": outcome, "ret": float(ret), "days": j - e + 1,
                 "entry_pos": e, "entry_px": float(entry), "exit_pos": j, "exit_px": float(exit_px),
-                "tp1_hit": tp1_hit})
+                "tp1_hit": tp1_hit, "tp1_pos": tp1_pos, "tp1_px": part1})
     return res
 
 

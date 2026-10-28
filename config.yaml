@@ -97,5 +97,9 @@ backtest:
   refresh_days: 7
   split_date: "2025-05-01"           # sebelum = in-sample (untuk memilih), sesudah = out-of-sample (untuk menguji)
 
+archive:                             # arsip fundamental untuk backtest jangka panjang di masa depan
+  statements_days: 7                 # tiap saham diperbarui laporan keuangannya seminggu sekali
+  statements_per_run: 60             # maks. saham per hari (bergilir, agar tidak kena limit Yahoo)
+
 notify:
   telegram: true                     # aktif hanya bila env TELEGRAM_BOT_TOKEN & TELEGRAM_CHAT_ID ada

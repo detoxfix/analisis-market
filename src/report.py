@@ -22,6 +22,9 @@ h1{font-size:20px;margin:0 0 4px;letter-spacing:-.2px}.sub{color:var(--mute);fon
 .demo{background:var(--sell-bg);color:var(--sell);padding:8px 12px;border-radius:8px;margin:8px 0;font-weight:600}
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:12px 0}
 .kpi{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.chart{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:8px 0}
+.chart svg{width:100%;height:auto;display:block}.chart text{fill:var(--mute);font-size:11px}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--mute);margin:2px 0 6px}.legend i{display:inline-block;width:14px;height:3px;border-radius:2px;margin-right:5px;vertical-align:middle}
 .kpi b{display:block;font-size:18px}.kpi span{color:var(--mute);font-size:12px}
 .tabs,.seg{display:flex;gap:6px;overflow-x:auto;padding:4px 0;margin:6px 0}
 .tabs button,.seg button{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:7px 12px;border-radius:999px;cursor:pointer;white-space:nowrap;font:inherit}
@@ -160,10 +163,44 @@ function renderTrack(){
   h+=`<h3>Posisi terbuka</h3>`+tb(t.open,"Belum ada posisi terbuka.")+`<h3>Selesai terakhir</h3>`+tb(t.recent_closed,"Belum ada rekomendasi yang selesai. Track record terisi seiring waktu.");
   $("p-track").innerHTML=h;
 }
+function svgChart(series,o={}){
+  const W=640,Hh=o.h||220,L=46,R=10,T=10,B=22,dates=series[0].data.map(d=>d[0]),N=dates.length;
+  let lo=Infinity,hi=-Infinity;series.forEach(s=>s.data.forEach(d=>{lo=Math.min(lo,d[1]);hi=Math.max(hi,d[1]);}));
+  if(o.zeroTop){hi=Math.max(hi,0);} const pad=(hi-lo)*0.06||1;lo-=pad;hi+=o.zeroTop?0:pad;
+  const x=i=>L+(W-L-R)*i/Math.max(1,N-1),y=v=>T+(Hh-T-B)*(hi-v)/(hi-lo);
+  let g="";for(let k=0;k<=4;k++){const v=lo+(hi-lo)*k/4;g+=`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${L-6}" y="${y(v)+4}" text-anchor="end">${o.fmt?o.fmt(v,hi-lo):v.toFixed(0)}</text>`;}
+  if(o.base!=null&&o.base>lo&&o.base<hi)g+=`<line x1="${L}" x2="${W-R}" y1="${y(o.base)}" y2="${y(o.base)}" stroke="var(--mute)" stroke-dasharray="3 3" opacity=".6"/>`;
+  let yr="";dates.forEach((d,i)=>{const y0=d.slice(0,4);if(i===0||dates[i-1].slice(0,4)!==y0)yr+=`<text x="${x(i)}" y="${Hh-6}" text-anchor="${i===0?"start":"middle"}">${i===0?d.slice(0,7):y0}</text>`;});
+  const paths=series.map(s=>{const pts=s.data.map((d,i)=>`${x(i).toFixed(1)},${y(d[1]).toFixed(1)}`);
+    if(s.area)return `<path d="M${x(0)},${y(0)} L${pts.join(" L")} L${x(N-1)},${y(0)} Z" fill="${s.color}" opacity=".25" stroke="${s.color}" stroke-width="1.2"/>`;
+    return `<polyline points="${pts.join(" ")}" fill="none" stroke="${s.color}" stroke-width="${s.w||2}" ${s.dash?'stroke-dasharray="5 4"':""}/>`;}).join("");
+  return `<svg viewBox="0 0 ${W} ${Hh}" role="img" aria-label="${esc(o.label||"grafik")}">${g}${paths}${yr}</svg>`;
+}
+function legend(series){return `<div class="legend">${series.map(s=>`<span><i style="background:${s.color}"></i>${esc(s.name)}</span>`).join("")}</div>`;}
+function renderPortfolio(P){
+  if(!P||!P.combined||!P.combined.equity)return "";
+  const S=[{name:"Akun total (pendek+menengah, bucket panjang = kas)",data:P.combined.equity,color:"var(--accent)",w:2.5}];
+  if(P.buckets.short)S.push({name:"Bucket pendek",data:P.buckets.short.equity,color:"var(--buy)",w:1.5});
+  if(P.buckets.medium)S.push({name:"Bucket menengah",data:P.buckets.medium.equity,color:"var(--hold)",w:1.5});
+  if(P.ihsg)S.push({name:"IHSG (beli & tahan)",data:P.ihsg.equity,color:"var(--mute)",dash:1,w:1.5});
+  const rows=[["Akun total",P.combined],["Bucket pendek",P.buckets.short],["Bucket menengah",P.buckets.medium],["IHSG beli & tahan",P.ihsg]].filter(r=>r[1]);
+  const td=v=>`<td class="${v==null?"":v>=0?"pos":"neg"}">${pct(v)}</td>`;
+  let h=`<h2>Simulasi portofolio</h2><p class="muted">Sinyal pendek & menengah dijalankan sebagai akun sungguhan mulai ${esc(P.start)} dengan modal acuan Rp ${n(P.capital)}: kuota posisi, ukuran per posisi, batas risiko, pembulatan lot, TP1 jual separuh, biaya transaksi. Bucket jangka panjang tidak bisa disimulasikan (butuh fundamental historis) sehingga dihitung sebagai kas. Indeks awal = 100.</p>
+  <div class="chart">${legend(S)}${svgChart(S,{base:100,label:"Kurva modal vs IHSG"})}</div>
+  <div class="chart"><div class="legend"><span><i style="background:var(--sell)"></i>Drawdown akun total (% dari puncak)</span></div>${svgChart([{name:"dd",data:P.combined.drawdown,color:"var(--sell)",area:1}],{h:130,zeroTop:1,fmt:(v,r)=>v.toFixed(r<12?1:0).replace(".",",")+"%",label:"Drawdown"})}</div>
+  <div class="tbl"><table><tr><th></th><th>Total return</th><th>Per tahun (CAGR)</th><th>Max drawdown</th><th>Bulan terburuk</th><th>Sharpe</th><th>Rata-rata terinvestasi</th><th>Transaksi</th></tr>
+  ${rows.map(([l,s])=>`<tr><td>${l}</td>${td(s.total_return)}${td(s.cagr)}<td class="neg">${pct(s.max_drawdown)}<div class="name">${s.dd_peak||""} → ${s.dd_trough||""}${s.dd_recovered?"":" (belum pulih)"}</div></td>${td(s.worst_month)}<td>${dec(s.sharpe,2)}</td><td>${s.avg_exposure==null?"-":pctp(s.avg_exposure,0)}</td><td>${s.trades??"-"}</td></tr>`).join("")}</table></div>`;
+  const yrs=[...new Set(rows.flatMap(([,s])=>Object.keys(s.by_year||{})))].sort();
+  h+=`<h3>Return per tahun</h3><div class="tbl"><table><tr><th></th>${yrs.map(y=>`<th>${y}</th>`).join("")}</tr>${rows.map(([l,s])=>`<tr><td>${l}</td>${yrs.map(y=>td((s.by_year||{})[y])).join("")}</tr>`).join("")}</table></div>`;
+  if(P.split&&P.split.out_sample&&P.split.out_sample.total_return!=null)h+=`<p class="muted">Periode out-of-sample (sejak ${esc(D.params.split_date||"")}): akun total ${pct(P.split.out_sample.total_return)}, max drawdown ${pct(P.split.out_sample.max_drawdown)}; IHSG ${pct((P.split.ihsg_out_sample||{}).total_return)}.</p>`;
+  const sk=Object.entries(P.buckets).map(([k,b])=>`${H[k]}: ${b.skipped_full} sinyal dilewati karena kuota posisi penuh`).join(" · ");
+  h+=`<p class="muted">${sk}. Hasil simulasi bukan jaminan hasil ke depan; universe memakai market cap saat ini (bias survivorship).</p>`;
+  return h;
+}
 function renderBt(){
   const b=D.backtest;
   if(!b||!b.results){$("p-bt").innerHTML='<div class="empty">Backtest belum dijalankan.</div>';return;}
-  let h=`<h2>Backtest aturan sinyal</h2><p class="muted">Dijalankan ${esc(b.generated_at)}. Masuk saat skor menembus ambang BUY, keluar via TP/SL/time-stop, biaya termasuk. Universe memakai market cap saat ini (bias survivorship) — anggap sebagai batas atas, bukan janji hasil.</p>
+  let h=renderPortfolio(b.portfolio)+`<h2>Backtest per transaksi</h2><p class="muted">Dijalankan ${esc(b.generated_at)}. Masuk saat skor menembus ambang BUY, keluar via TP/SL/time-stop, biaya termasuk. Universe memakai market cap saat ini (bias survivorship) — anggap sebagai batas atas, bukan janji hasil.</p>
   <div class="tbl"><table><tr><th>Horizon</th><th>Transaksi</th><th>Win rate</th><th>Rata-rata</th><th>Profit factor</th><th>Rata hari</th></tr>`;
   for(const [k,s] of Object.entries(b.results)){h+=statRow(H[k]+" (semua)",s);if(s.in_sample)h+=statRow(H[k]+" · in-sample",s.in_sample);if(s.out_sample)h+=statRow(H[k]+" · out-of-sample",s.out_sample);if(s.strong_only)h+=statRow(H[k]+" (STRONG BUY saja)",s.strong_only);}
   h+=`</table></div>`;
