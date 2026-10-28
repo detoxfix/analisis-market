@@ -28,8 +28,10 @@ def _water_fill(raw: np.ndarray, cap: float) -> np.ndarray:
     return w
 
 
-def allocate(picks: list[dict], hcfg: dict, capital: float, risk_per_trade: float) -> tuple[list[dict], float]:
-    """picks: kandidat BUY (sudah ada score, atr_pct, sector, entry, sl). Return (picks berbobot, kas)."""
+def allocate(picks: list[dict], hcfg: dict, capital: float, risk_per_trade: float,
+             scale: float = 1.0) -> tuple[list[dict], float]:
+    """picks: kandidat BUY (sudah ada score, atr_pct, sector, entry, sl). Return (picks berbobot, kas).
+    scale < 1 memperkecil seluruh bobot (mis. saat IHSG bearish); sisanya menjadi kas."""
     picks = sorted(picks, key=lambda p: -p["score"])[: hcfg["max_positions"]]
     if not picks:
         return [], 1.0
@@ -45,6 +47,7 @@ def allocate(picks: list[dict], hcfg: dict, capital: float, risk_per_trade: floa
         if tot > hcfg["sector_cap"]:
             w[i] *= hcfg["sector_cap"] / tot
 
+    w = w * max(0.0, min(1.0, scale))
     bucket = capital * hcfg["allocation"]
     for p, wi in zip(picks, w):
         entry, sl = p["entry"], p["sl"]

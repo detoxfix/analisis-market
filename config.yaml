@@ -86,7 +86,11 @@ horizons:
     rr: [1.5, 3.0]
     min_score: 30
     market_filter: none
-    trend_filter: none
+    trend_filter: sma200             # cicil hanya saham yang harganya di atas SMA200 (tren primer naik)
+    regime_scale:                    # porsi bucket yang boleh dipakai menurut posisi IHSG
+      above_sma200: 1.0              # IHSG di atas SMA200: penuh
+      above_sma50: 0.6               # di bawah SMA200 tapi di atas SMA50: 60%
+      below: 0.3                     # di bawah keduanya (bearish): 30%, sisanya kas
 
 backtest:
   horizons: [short, medium]          # jangka panjang butuh fundamental historis, tidak di-backtest

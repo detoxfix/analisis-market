@@ -138,15 +138,25 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
 
     # ------------------------------------------------------------ 4. bobot portofolio
     new_recs = []
+    # posisi IHSG terhadap SMA50 & SMA200 -> pengali porsi (opsi `regime_scale` per horizon)
+    b_sma50 = bench.rolling(50).mean().iloc[-1]
+    b_sma200 = bench.rolling(200).mean().iloc[-1] if len(bench) >= 200 else np.nan
+    b_now = bench.iloc[-1]
+    level = ("above_sma200" if b_now > b_sma200 else "above_sma50" if b_now > b_sma50 else "below")
+    level_text = {"above_sma200": "IHSG di atas SMA200",
+                  "above_sma50": "IHSG di bawah SMA200 tetapi di atas SMA50",
+                  "below": "IHSG di bawah SMA50 dan SMA200"}[level]
     for h in HORIZONS:
         hcfg = cfg["horizons"][h]
-        picked, cash = allocate(per_h[h]["buys"], hcfg, cfg["capital"], cfg["risk_per_trade"])
+        scale = float((hcfg.get("regime_scale") or {}).get(level, 1.0))
+        picked, cash = allocate(per_h[h]["buys"], hcfg, cfg["capital"], cfg["risk_per_trade"], scale)
         picked_codes = {p["code"] for p in picked}
         watch = [b for b in sorted(per_h[h]["buys"], key=lambda x: -x["score"]) if b["code"] not in picked_codes]
         for b in watch:
             b["held"] = "Di luar kuota posisi"
         watch = watch + sorted(per_h[h]["held"], key=lambda x: -x["score"])
         per_h[h] = {"label": hcfg["label"], "allocation": hcfg["allocation"], "cash_weight": cash,
+                    "regime_scale": scale, "regime_text": level_text if scale < 1 else None,
                     "buys": picked, "watchlist": watch[:15], "n_held": len(per_h[h]["held"]),
                     "rules": {k: hcfg.get(k) for k in ("min_score", "market_filter", "trend_filter", "entry_mode",
                                                        "limit_days", "trail_ma", "sl_atr", "max_sl_pct", "rr")},
