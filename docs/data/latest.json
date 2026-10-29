@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-28 23:45",
+ "generated_at": "2026-10-30 00:01",
  "as_of": "2026-10-28",
  "demo": false,
  "params": {
@@ -24,7 +24,7 @@
   "bench_chg": 0.003073,
   "regime": "Bearish",
   "universe": 125,
-  "scanned": 269
+  "scanned": 265
  },
  "horizons": {
   "short": {
@@ -123,9 +123,9 @@
      "name": "PT Puradelta Lestari Tbk",
      "sector": "Real Estate",
      "horizon": "short",
-     "price": 210.0,
+     "price": 181.0,
      "chg_1d": 0.029412,
-     "mcap": 10121603331000.0,
+     "mcap": 8723858109100.0,
      "score": 59.5,
      "signal": "BUY",
      "confidence": 0.595,
@@ -138,23 +138,23 @@
      "risks": [
       "IHSG di bawah EMA20 (pasar lemah)"
      ],
-     "entry": 206.0,
-     "entry_low": 206.0,
-     "entry_high": 206.0,
-     "tp1": 248.0,
-     "tp2": 268.0,
-     "sl": 185.0,
-     "tp1_pct": 0.203883,
-     "tp2_pct": 0.300971,
-     "sl_pct": -0.101942,
-     "rr1": 1.886457,
-     "rr2": 2.802793,
+     "entry": 177.0,
+     "entry_low": 177.0,
+     "entry_high": 177.0,
+     "tp1": 212.0,
+     "tp2": 232.0,
+     "sl": 159.0,
+     "tp1_pct": 0.19774,
+     "tp2_pct": 0.310734,
+     "sl_pct": -0.101695,
+     "rr1": 1.832744,
+     "rr2": 2.901704,
      "max_hold_days": 15,
      "entry_mode": "limit",
      "limit_days": 3,
      "trail_ma": 0,
      "hold": "3-15 hari bursa",
-     "when_buy": "Pasang antrean beli di 206 (koreksi ke area support), berlaku 3 hari bursa. Tidak terisi = batal, jangan dikejar.",
+     "when_buy": "Pasang antrean beli di 177 (koreksi ke area support), berlaku 3 hari bursa. Tidak terisi = batal, jangan dikejar.",
      "when_sell": "Jual 50% di TP1 lalu naikkan cut loss ke harga beli; sisanya di TP2. Cut loss bila harga menyentuh SL. Time-stop: jual sisa posisi setelah 15 hari bursa.",
      "held": "Skor di bawah minimum masuk 60"
     },
@@ -211,7 +211,7 @@
      "score": 55.0,
      "signal": "BUY",
      "confidence": 0.55,
-     "atr_pct": 0.041687,
+     "atr_pct": 0.041982,
      "reasons": [
       "Harga di atas EMA20 (tren pendek naik)",
       "EMA9 di atas EMA20 (golden cross pendek)",
@@ -1089,6 +1089,34 @@
      "sell_zone_low": 2070.0,
      "sell_zone_high": 2120.0,
      "breakdown_level": 1770.0,
+     "when_sell": "Jual saat pantulan (rebound) ke area jual pada T+1/T+2; jangan menunggu. Jangan buka posisi beli baru selama sinyal SELL."
+    },
+    {
+     "ticker": "BUMI.JK",
+     "code": "BUMI",
+     "name": "PT Bumi Resources Tbk",
+     "sector": "Energy",
+     "horizon": "short",
+     "price": 127.0,
+     "chg_1d": -0.007812,
+     "mcap": 47159594792636.0,
+     "score": -61.5,
+     "signal": "STRONG SELL",
+     "confidence": 0.615,
+     "atr_pct": 0.083598,
+     "reasons": [
+      "Harga di bawah EMA20 (tren pendek turun)",
+      "EMA9 di bawah EMA20 (dead cross pendek)",
+      "Volume 2.1x rata-rata pada hari turun (distribusi)"
+     ],
+     "risks": [
+      "RSI 29 di zona momentum sehat"
+     ],
+     "action": "Jual seluruh posisi",
+     "sell_portion": 1.0,
+     "sell_zone_low": 127.0,
+     "sell_zone_high": 132.0,
+     "breakdown_level": 117.0,
      "when_sell": "Jual saat pantulan (rebound) ke area jual pada T+1/T+2; jangan menunggu. Jangan buka posisi beli baru selama sinyal SELL."
     },
     {
@@ -2457,34 +2485,6 @@
      "when_sell": "Kurangi saat pantulan ke area jual. Sisa posisi: cut loss bila close di bawah level breakdown. Jangan buka posisi beli baru selama sinyal SELL."
     },
     {
-     "ticker": "BUMI.JK",
-     "code": "BUMI",
-     "name": "PT Bumi Resources Tbk",
-     "sector": "Energy",
-     "horizon": "short",
-     "price": 127.0,
-     "chg_1d": -0.007812,
-     "mcap": 47159594792636.0,
-     "score": -46.5,
-     "signal": "SELL",
-     "confidence": 0.465,
-     "atr_pct": 0.083598,
-     "reasons": [
-      "Harga di bawah EMA20 (tren pendek turun)",
-      "EMA9 di bawah EMA20 (dead cross pendek)",
-      "IHSG di bawah EMA20 (pasar lemah)"
-     ],
-     "risks": [
-      "RSI 29 di zona momentum sehat"
-     ],
-     "action": "Kurangi 50% posisi",
-     "sell_portion": 0.5,
-     "sell_zone_low": 127.0,
-     "sell_zone_high": 132.0,
-     "breakdown_level": 117.0,
-     "when_sell": "Kurangi saat pantulan ke area jual. Sisa posisi: cut loss bila close di bawah level breakdown. Jangan buka posisi beli baru selama sinyal SELL."
-    },
-    {
      "ticker": "IMPC.JK",
      "code": "IMPC",
      "name": "PT Impack Pratama Industri Tbk",
@@ -2650,34 +2650,6 @@
      "sell_zone_low": 565.0,
      "sell_zone_high": 585.0,
      "breakdown_level": 550.0,
-     "when_sell": "Kurangi saat pantulan ke area jual. Sisa posisi: cut loss bila close di bawah level breakdown. Jangan buka posisi beli baru selama sinyal SELL."
-    },
-    {
-     "ticker": "MSIN.JK",
-     "code": "MSIN",
-     "name": "PT MNC Digital Entertainment Tbk",
-     "sector": "Communication Services",
-     "horizon": "short",
-     "price": 105.0,
-     "chg_1d": 0.0,
-     "mcap": 6370998711525.0,
-     "score": -46.5,
-     "signal": "SELL",
-     "confidence": 0.465,
-     "atr_pct": 0.128069,
-     "reasons": [
-      "Harga di bawah EMA20 (tren pendek turun)",
-      "EMA9 di bawah EMA20 (dead cross pendek)",
-      "IHSG di bawah EMA20 (pasar lemah)"
-     ],
-     "risks": [
-      "RSI 13 di zona momentum sehat"
-     ],
-     "action": "Kurangi 50% posisi",
-     "sell_portion": 0.5,
-     "sell_zone_low": 105.0,
-     "sell_zone_high": 111.0,
-     "breakdown_level": 91.0,
      "when_sell": "Kurangi saat pantulan ke area jual. Sisa posisi: cut loss bila close di bawah level breakdown. Jangan buka posisi beli baru selama sinyal SELL."
     },
     {
@@ -3469,9 +3441,9 @@
      "name": "PT Puradelta Lestari Tbk",
      "sector": "Real Estate",
      "horizon": "medium",
-     "price": 210.0,
+     "price": 181.0,
      "chg_1d": 0.029412,
-     "mcap": 10121603331000.0,
+     "mcap": 8723858109100.0,
      "score": 100.0,
      "signal": "STRONG BUY",
      "confidence": 1.0,
@@ -3482,23 +3454,23 @@
       "ADX 22: tren naik kuat"
      ],
      "risks": [],
-     "entry": 210.0,
-     "entry_low": 200.0,
-     "entry_high": 212.0,
-     "tp1": 290.0,
-     "tp2": 338.0,
-     "sl": 178.0,
-     "tp1_pct": 0.380952,
-     "tp2_pct": 0.609524,
-     "sl_pct": -0.152381,
-     "rr1": 2.410256,
-     "rr2": 3.871795,
+     "entry": 181.0,
+     "entry_low": 172.0,
+     "entry_high": 182.0,
+     "tp1": 252.0,
+     "tp2": 292.0,
+     "sl": 153.0,
+     "tp1_pct": 0.392265,
+     "tp2_pct": 0.61326,
+     "sl_pct": -0.154696,
+     "rr1": 2.446377,
+     "rr2": 3.838853,
      "max_hold_days": 40,
      "entry_mode": "open",
      "limit_days": 5,
      "trail_ma": 0,
      "hold": "20-40 hari bursa (~1-2 bulan)",
-     "when_buy": "Beli T+1 sesi 1 di harga pembukaan, maksimal 212. Batal bila dibuka di atas batas itu (gap up).",
+     "when_buy": "Beli T+1 sesi 1 di harga pembukaan, maksimal 182. Batal bila dibuka di atas batas itu (gap up).",
      "when_sell": "Jual 50% di TP1 lalu naikkan cut loss ke harga beli; sisanya di TP2. Cut loss bila harga menyentuh SL. Time-stop: jual sisa posisi setelah 40 hari bursa.",
      "held": "IHSG di bawah SMA50 (filter pasar)"
     },
@@ -3706,27 +3678,27 @@
      "price": 25600.0,
      "chg_1d": -0.033962,
      "mcap": 89423194521600.0,
-     "score": 79.4,
+     "score": 77.6,
      "signal": "STRONG BUY",
-     "confidence": 0.794,
-     "atr_pct": 0.041687,
+     "confidence": 0.776,
+     "atr_pct": 0.041982,
      "reasons": [
       "Harga di atas SMA50",
       "SMA50 > SMA100 & SMA50 menanjak (uptrend menengah)",
-      "Outperform IHSG +24.6% (3 bulan)"
+      "Outperform IHSG +22.8% (3 bulan)"
      ],
      "risks": [],
      "entry": 25600.0,
-     "entry_low": 24825.0,
+     "entry_low": 24925.0,
      "entry_high": 25800.0,
-     "tp1": 34975.0,
-     "tp2": 40600.0,
-     "sl": 21850.0,
-     "tp1_pct": 0.366211,
-     "tp2_pct": 0.585938,
-     "sl_pct": -0.146484,
-     "rr1": 2.40674,
-     "rr2": 3.866772,
+     "tp1": 35050.0,
+     "tp2": 40700.0,
+     "sl": 21825.0,
+     "tp1_pct": 0.369141,
+     "tp2_pct": 0.589844,
+     "sl_pct": -0.147461,
+     "rr1": 2.410565,
+     "rr2": 3.867631,
      "max_hold_days": 40,
      "entry_mode": "open",
      "limit_days": 5,
@@ -4256,32 +4228,6 @@
      "when_sell": "Jual saat pantulan (rebound) ke area jual pada T+1/T+2; jangan menunggu. Jangan buka posisi beli baru selama sinyal SELL."
     },
     {
-     "ticker": "MSIN.JK",
-     "code": "MSIN",
-     "name": "PT MNC Digital Entertainment Tbk",
-     "sector": "Communication Services",
-     "horizon": "medium",
-     "price": 105.0,
-     "chg_1d": 0.0,
-     "mcap": 6370998711525.0,
-     "score": -100.0,
-     "signal": "STRONG SELL",
-     "confidence": 1.0,
-     "atr_pct": 0.128069,
-     "reasons": [
-      "Harga di bawah SMA50",
-      "Struktur MA menengah melemah",
-      "ADX 52: tren turun kuat"
-     ],
-     "risks": [],
-     "action": "Jual seluruh posisi",
-     "sell_portion": 1.0,
-     "sell_zone_low": 105.0,
-     "sell_zone_high": 111.0,
-     "breakdown_level": 91.0,
-     "when_sell": "Jual saat pantulan (rebound) ke area jual pada T+1/T+2; jangan menunggu. Jangan buka posisi beli baru selama sinyal SELL."
-    },
-    {
      "ticker": "RATU.JK",
      "code": "RATU",
      "name": "PT Raharja Energi Cepu Tbk",
@@ -4747,6 +4693,32 @@
      "sell_zone_low": 322.0,
      "sell_zone_high": 348.0,
      "breakdown_level": 316.0,
+     "when_sell": "Jual saat pantulan (rebound) ke area jual pada T+1/T+2; jangan menunggu. Jangan buka posisi beli baru selama sinyal SELL."
+    },
+    {
+     "ticker": "MSIN.JK",
+     "code": "MSIN",
+     "name": "PT MNC Digital Entertainment Tbk",
+     "sector": "Communication Services",
+     "horizon": "medium",
+     "price": 105.0,
+     "chg_1d": 0.0,
+     "mcap": 6370998711525.0,
+     "score": -85.0,
+     "signal": "STRONG SELL",
+     "confidence": 0.85,
+     "atr_pct": 0.118921,
+     "reasons": [
+      "Harga di bawah SMA50",
+      "Struktur MA menengah melemah",
+      "ADX 52: tren turun kuat"
+     ],
+     "risks": [],
+     "action": "Jual seluruh posisi",
+     "sell_portion": 1.0,
+     "sell_zone_low": 105.0,
+     "sell_zone_high": 111.0,
+     "breakdown_level": 92.0,
      "when_sell": "Jual saat pantulan (rebound) ke area jual pada T+1/T+2; jangan menunggu. Jangan buka posisi beli baru selama sinyal SELL."
     },
     {
@@ -6436,9 +6408,9 @@
      "name": "PT Puradelta Lestari Tbk",
      "sector": "Real Estate",
      "horizon": "long",
-     "price": 210.0,
+     "price": 181.0,
      "chg_1d": 0.029412,
-     "mcap": 10121603331000.0,
+     "mcap": 8723858109100.0,
      "score": 74.0,
      "signal": "STRONG BUY",
      "confidence": 0.74,
@@ -6451,23 +6423,23 @@
      "risks": [
       "PBV 1.39x di atas median sektor"
      ],
-     "entry": 210.0,
-     "entry_low": 194.0,
-     "entry_high": 210.0,
-     "tp1": 272.0,
-     "tp2": 336.0,
-     "sl": 168.0,
-     "tp1_pct": 0.295238,
-     "tp2_pct": 0.6,
-     "sl_pct": -0.2,
-     "rr1": 1.427518,
-     "rr2": 2.921376,
+     "entry": 181.0,
+     "entry_low": 167.0,
+     "entry_high": 181.0,
+     "tp1": 236.0,
+     "tp2": 292.0,
+     "sl": 144.0,
+     "tp1_pct": 0.303867,
+     "tp2_pct": 0.61326,
+     "sl_pct": -0.20442,
+     "rr1": 1.438648,
+     "rr2": 2.923043,
      "max_hold_days": 500,
      "entry_mode": "open",
      "limit_days": 3,
      "trail_ma": 0,
      "hold": "6-24 bulan",
-     "when_buy": "Cicil 3 tahap (mis. 40/30/30) dalam 2-4 minggu di area beli; tambah saat koreksi ke SMA50. Jangan beli di atas 210.",
+     "when_buy": "Cicil 3 tahap (mis. 40/30/30) dalam 2-4 minggu di area beli; tambah saat koreksi ke SMA50. Jangan beli di atas 181.",
      "when_sell": "Ambil sebagian di TP1, sisanya dibiarkan berjalan selama fundamental & tren primer utuh. Keluar bila close mingguan di bawah SL / SMA200, atau sinyal berubah STRONG SELL. Review tiap rilis laporan keuangan kuartalan.",
      "held": "Di luar kuota posisi"
     },
@@ -8186,7 +8158,7 @@
    "price": 25600.0,
    "chg_1d": -0.033962,
    "mcap": 89423194521600.0,
-   "avg_value_20d": 93544153710.92773,
+   "avg_value_20d": 93815685625.0,
    "pe": 11.66287,
    "pb": 0.890698,
    "roe": 0.0741,
@@ -8196,11 +8168,11 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": 79.4,
+    "score": 77.6,
     "signal": "STRONG BUY"
    },
    "long": {
-    "score": 7.5,
+    "score": 7.1,
     "signal": "HOLD"
    }
   },
@@ -8628,14 +8600,14 @@
    "price": 127.0,
    "chg_1d": -0.007812,
    "mcap": 47159594792636.0,
-   "avg_value_20d": 341212764710.4,
+   "avg_value_20d": 368485807040.0,
    "pe": 22.965641,
    "pb": null,
    "roe": 0.05421,
    "div_yield": 0.0,
    "short": {
-    "score": -46.5,
-    "signal": "SELL"
+    "score": -61.5,
+    "signal": "STRONG SELL"
    },
    "medium": {
     "score": -83.7,
@@ -10181,32 +10153,6 @@
    }
   },
   {
-   "ticker": "DMAS.JK",
-   "code": "DMAS",
-   "name": "PT Puradelta Lestari Tbk",
-   "sector": "Real Estate",
-   "price": 210.0,
-   "chg_1d": 0.029412,
-   "mcap": 10121603331000.0,
-   "avg_value_20d": 48880983495.0,
-   "pe": 5.733005,
-   "pb": 1.385462,
-   "roe": 0.25895,
-   "div_yield": 0.0809,
-   "short": {
-    "score": 59.5,
-    "signal": "BUY"
-   },
-   "medium": {
-    "score": 100.0,
-    "signal": "STRONG BUY"
-   },
-   "long": {
-    "score": 74.0,
-    "signal": "STRONG BUY"
-   }
-  },
-  {
    "ticker": "LSIP.JK",
    "code": "LSIP",
    "name": "PT Perusahaan Perkebunan London Sumatra Indonesia Tbk",
@@ -10571,6 +10517,32 @@
    }
   },
   {
+   "ticker": "DMAS.JK",
+   "code": "DMAS",
+   "name": "PT Puradelta Lestari Tbk",
+   "sector": "Real Estate",
+   "price": 181.0,
+   "chg_1d": 0.029412,
+   "mcap": 8723858109100.0,
+   "avg_value_20d": 42130751218.84148,
+   "pe": 5.733005,
+   "pb": 1.385462,
+   "roe": 0.25895,
+   "div_yield": 0.0809,
+   "short": {
+    "score": 59.5,
+    "signal": "BUY"
+   },
+   "medium": {
+    "score": 100.0,
+    "signal": "STRONG BUY"
+   },
+   "long": {
+    "score": 74.0,
+    "signal": "STRONG BUY"
+   }
+  },
+  {
    "ticker": "PKPK.JK",
    "code": "PKPK",
    "name": "PT Paragon Karya Perkasa Tbk",
@@ -10838,17 +10810,17 @@
    "price": 105.0,
    "chg_1d": 0.0,
    "mcap": 6370998711525.0,
-   "avg_value_20d": 6673190280.0,
+   "avg_value_20d": 6048194940.0,
    "pe": 6.761107,
    "pb": 0.931041,
    "roe": 0.14473,
    "div_yield": 0.0,
    "short": {
-    "score": -46.5,
-    "signal": "SELL"
+    "score": -27.0,
+    "signal": "HOLD"
    },
    "medium": {
-    "score": -100.0,
+    "score": -85.0,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -11080,7 +11052,7 @@
   "all": {
    "n": 0
   },
-  "cancelled": 5,
+  "cancelled": 6,
   "open": [
    {
     "date": "2026-10-28",
@@ -11228,17 +11200,17 @@
    },
    {
     "date": "2026-10-27",
-    "code": "JSMR",
-    "horizon": "short",
+    "code": "ADRO",
+    "horizon": "long",
     "signal": "STRONG BUY",
-    "entry": 2850.0,
-    "tp1": 3140.0,
-    "tp2": 3320.0,
-    "sl": 2660.0,
+    "entry": 2460.0,
+    "tp1": 3120.0,
+    "tp2": 3780.0,
+    "sl": 2020.0,
     "outcome": "OPEN",
-    "entry_px": 2840.0,
-    "exit_px": 2880.0,
-    "ret": 0.010034,
+    "entry_px": 2460.0,
+    "exit_px": 2440.0,
+    "ret": -0.012092,
     "days": 1.0,
     "exit_date": "2026-10-28"
    },
@@ -11308,22 +11280,6 @@
    },
    {
     "date": "2026-10-27",
-    "code": "ADRO",
-    "horizon": "long",
-    "signal": "STRONG BUY",
-    "entry": 2460.0,
-    "tp1": 3120.0,
-    "tp2": 3780.0,
-    "sl": 2020.0,
-    "outcome": "OPEN",
-    "entry_px": 2460.0,
-    "exit_px": 2440.0,
-    "ret": -0.012092,
-    "days": 1.0,
-    "exit_date": "2026-10-28"
-   },
-   {
-    "date": "2026-10-27",
     "code": "HMSP",
     "horizon": "short",
     "signal": "STRONG BUY",
@@ -11335,6 +11291,22 @@
     "entry_px": 675.0,
     "exit_px": 660.0,
     "ret": -0.026127,
+    "days": 1.0,
+    "exit_date": "2026-10-28"
+   },
+   {
+    "date": "2026-10-27",
+    "code": "JSMR",
+    "horizon": "short",
+    "signal": "STRONG BUY",
+    "entry": 2850.0,
+    "tp1": 3140.0,
+    "tp2": 3320.0,
+    "sl": 2660.0,
+    "outcome": "OPEN",
+    "entry_px": 2840.0,
+    "exit_px": 2880.0,
+    "ret": 0.010034,
     "days": 1.0,
     "exit_date": "2026-10-28"
    },
@@ -11415,22 +11387,6 @@
     "entry_px": 3190.0,
     "exit_px": 3250.0,
     "ret": 0.01474,
-    "days": 1.0,
-    "exit_date": "2026-10-28"
-   },
-   {
-    "date": "2026-10-27",
-    "code": "DMAS",
-    "horizon": "medium",
-    "signal": "STRONG BUY",
-    "entry": 204.0,
-    "tp1": 254.0,
-    "tp2": 292.0,
-    "sl": 179.0,
-    "outcome": "OPEN",
-    "entry_px": 204.0,
-    "exit_px": 210.0,
-    "ret": 0.0253,
     "days": 1.0,
     "exit_date": "2026-10-28"
    },
@@ -11556,8 +11512,8 @@
     "tp2": 328.0,
     "sl": 163.0,
     "outcome": "OPEN",
-    "entry_px": 204.0,
-    "exit_px": 210.0,
+    "entry_px": 175.828571,
+    "exit_px": 181.0,
     "ret": 0.0253,
     "days": 1.0,
     "exit_date": "2026-10-28"
