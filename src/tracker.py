@@ -11,7 +11,8 @@ from .utils import ROOT, log
 PATH = ROOT / "docs" / "data" / "recommendations.csv"
 COLS = ["id", "date", "ticker", "code", "horizon", "signal", "score", "entry", "entry_low", "entry_high",
         "tp1", "tp2", "sl", "max_hold_days", "status", "outcome", "entry_date", "entry_px",
-        "exit_date", "exit_px", "ret", "days", "tp1_hit", "entry_mode", "limit_days", "trail_ma"]
+        "exit_date", "exit_px", "ret", "days", "tp1_hit", "entry_mode", "limit_days", "trail_ma",
+        "market_exit", "market_exit_ma", "market_exit_confirm"]
 
 
 def _load() -> pd.DataFrame:
@@ -25,10 +26,11 @@ def _load() -> pd.DataFrame:
 
 
 def update(prices: dict[str, pd.DataFrame], new_recs: list[dict], fees: dict, as_of: pd.Timestamp,
-           demo: bool = False) -> dict:
+           demo: bool = False, bench: pd.Series | None = None) -> dict:
     df = _load() if not demo else pd.DataFrame(columns=COLS)
     df = df.astype({"status": "object", "outcome": "object", "entry_date": "object",
-                    "exit_date": "object", "tp1_hit": "object"})
+                    "exit_date": "object", "tp1_hit": "object", "market_exit": "object", "market_exit_ma": "object",
+                    "entry_mode": "object"})
 
     # 1) evaluasi rekomendasi yang masih terbuka
     for i in df.index[df["status"] == "OPEN"]:
@@ -39,7 +41,7 @@ def update(prices: dict[str, pd.DataFrame], new_recs: list[dict], fees: dict, as
         pos = p.index.get_indexer([pd.Timestamp(row["date"])], method="pad")[0]
         if pos < 0:
             continue
-        res = simulate(p, int(pos), row.to_dict(), fees)
+        res = simulate(p, int(pos), row.to_dict(), fees, bench)
         if res["outcome"] == "MENUNGGU":
             continue
         open_ = res["outcome"] == "OPEN" or res["outcome"].endswith("OPEN")
@@ -63,7 +65,9 @@ def update(prices: dict[str, pd.DataFrame], new_recs: list[dict], fees: dict, as
                     "entry": r["entry"], "entry_low": r["entry_low"], "entry_high": r["entry_high"],
                     "tp1": r["tp1"], "tp2": r["tp2"], "sl": r["sl"], "max_hold_days": r["max_hold_days"],
                     "entry_mode": r.get("entry_mode", "open"), "limit_days": r.get("limit_days", 3),
-                    "trail_ma": r.get("trail_ma", 0),
+                    "trail_ma": r.get("trail_ma", 0), "market_exit": r.get("market_exit", "none"),
+                    "market_exit_ma": r.get("market_exit_ma", "sma50"),
+                    "market_exit_confirm": r.get("market_exit_confirm", 1),
                     "status": "OPEN", "outcome": "MENUNGGU"})
     if add:
         df = pd.concat([df, pd.DataFrame(add)], ignore_index=True) if len(df) else pd.DataFrame(add, columns=COLS)

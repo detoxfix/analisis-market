@@ -27,6 +27,13 @@ def _when_sell(h: str, hcfg: dict) -> str:
                 "Keluar bila close mingguan di bawah SL / SMA200, atau sinyal berubah STRONG SELL. "
                 "Review tiap rilis laporan keuangan kuartalan.")
     trail = f"sisanya di TP2 atau saat close < EMA{tm}" if tm else "sisanya di TP2"
+    mex = hcfg.get("market_exit") or "none"
+    if mex != "none":
+        ma = (hcfg.get("market_exit_ma") or "sma50").upper()
+        cf = int(hcfg.get("market_exit_confirm") or 1)
+        hari = f" {cf} hari berturut-turut" if cf > 1 else ""
+        trail += (f". Bila IHSG close di bawah {ma}{hari}, " +
+                  ("jual seluruh posisi" if mex == "all" else "jual 50% posisi (bila belum)"))
     return (f"Jual 50% di TP1 lalu naikkan cut loss ke harga beli; {trail}. "
             f"Cut loss bila harga menyentuh SL. Time-stop: jual sisa posisi setelah {mx} hari bursa.")
 
@@ -84,6 +91,9 @@ def make_plan(row, horizon: str, hcfg: dict, fees: dict, texts: bool = True) -> 
         "entry_mode": "limit" if limit else "open",
         "limit_days": hcfg.get("limit_days", 3),
         "trail_ma": int(hcfg.get("trail_ma") or 0),
+        "market_exit": hcfg.get("market_exit") or "none",
+        "market_exit_ma": hcfg.get("market_exit_ma") or "sma50",
+        "market_exit_confirm": int(hcfg.get("market_exit_confirm") or 1),
     }
     if texts:
         plan.update({"hold": hold_text(horizon, hcfg),

@@ -138,8 +138,8 @@ def run_bucket(cands: pd.DataFrame, closes: pd.DataFrame, calendar: pd.DatetimeI
     return {"stats": st, "equity": eq, "exposure": expo}
 
 
-def run(ind: dict[str, pd.DataFrame], cfg: dict, horizons=("short", "medium")) -> dict:
-    prep = bt.prepare(ind, horizons)
+def run(ind: dict[str, pd.DataFrame], cfg: dict, horizons=("short", "medium"), prep: dict | None = None) -> dict:
+    prep = prep or bt.prepare(ind, horizons)
     closes = pd.DataFrame({t: d["Close"] for t, d in ind.items()}).sort_index()
     calendar = closes.index
     closes = closes.ffill()

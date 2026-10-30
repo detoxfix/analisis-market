@@ -12,7 +12,7 @@ import pandas as pd
 
 from .risk import make_plan
 from .signals import HORIZON_FUNCS, compose, entry_mask
-from .sim import ema_np, simulate_arr
+from .sim import ema_np, market_flag, simulate_arr
 from .utils import log
 
 
@@ -22,7 +22,9 @@ def prepare(ind: dict[str, pd.DataFrame], horizons=("short", "medium")) -> dict:
     for t, d in ind.items():
         item = {"d": d, "dates": d.index,
                 **{k: d[k].to_numpy(dtype=float) for k in ("Open", "High", "Low", "Close", "ATR14", "EMA20", "SMA50")},
-                "ema": {}}
+                "ema": {}, "mflag": {},
+                "mkt": {m: d[f"MKT_{m}"].to_numpy(dtype=float) for m in ("ema20", "sma50", "sma200")
+                        if f"MKT_{m}" in d}}
         for h in horizons:
             fn, W = HORIZON_FUNCS[h]
             score, _ = compose(fn(d), W)
@@ -52,6 +54,12 @@ def trades_for(prep: dict, h: str, hcfg: dict, cfg: dict, detail: bool = False) 
             trail = it["ema"].get(tm)
             if trail is None:
                 trail = it["ema"][tm] = ema_np(it["Close"], tm)
+        mflag = None
+        if (hcfg.get("market_exit") or "none") != "none":
+            mk = (hcfg.get("market_exit_ma") or "sma50", int(hcfg.get("market_exit_confirm") or 1))
+            mflag = it["mflag"].get(mk)
+            if mflag is None and mk[0] in it["mkt"]:
+                mflag = it["mflag"][mk] = market_flag(it["mkt"][mk[0]], mk[1])
         sv = score.to_numpy()
         next_free = 0
         for pos in events:
@@ -62,7 +70,7 @@ def trades_for(prep: dict, h: str, hcfg: dict, cfg: dict, detail: bool = False) 
             plan = make_plan(row, h, hcfg, fees, texts=False)
             if plan is None:
                 continue
-            res = simulate_arr(it["Open"], it["High"], it["Low"], it["Close"], int(pos), plan, fees, trail)
+            res = simulate_arr(it["Open"], it["High"], it["Low"], it["Close"], int(pos), plan, fees, trail, mflag)
             next_free = res["exit_pos"] + 1
             if res["filled"] and "OPEN" not in res["outcome"]:
                 row_ = {"ticker": t, "date": it["dates"][pos], "score": sv[pos], "ret": res["ret"],

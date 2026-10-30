@@ -7,6 +7,10 @@ Aturan:
   Tidak terisi -> 'BATAL'.
 - Setiap hari: cek SL dulu (konservatif), lalu TP1 (jual 50%, SL naik ke harga beli), lalu TP2.
 - Trailing (opsional, `trail_ma` > 0): setelah TP1, sisa posisi dijual bila close < EMA(trail_ma).
+- Keluar saat pasar berbalik (opsional, `market_exit`): bila IHSG close di bawah MA `market_exit_ma`
+  selama `market_exit_confirm` hari berturut-turut saat posisi terbuka:
+    "half" -> jual 50% di close (sekali saja; tidak berlaku bila separuh sudah dijual di TP1)
+    "all"  -> jual seluruh sisa posisi di close
 - Time-stop: setelah `max_hold_days` hari bursa sejak masuk, sisa posisi dijual di close.
 """
 from __future__ import annotations
@@ -29,7 +33,28 @@ def ema_np(c: np.ndarray, n: int) -> np.ndarray:
     return pd.Series(c).ewm(span=n, adjust=False).mean().to_numpy()
 
 
-def simulate_arr(o, h, l, c, signal_pos: int, plan: dict, fees: dict, trail_line=None) -> dict:
+def market_flag(mkt_up, confirm: int = 1) -> np.ndarray:
+    """mkt_up: 1 bila IHSG di atas MA, 0 bila di bawah, NaN = belum diketahui.
+    Return True pada hari IHSG sudah `confirm` hari berturut-turut di bawah MA."""
+    up = np.asarray(mkt_up, dtype=float)
+    bad = up < 0.5                                   # NaN -> False
+    out = bad.copy()
+    for k in range(1, max(1, int(confirm))):
+        out[k:] &= bad[:-k]
+        out[:k] = False
+    return out
+
+
+def bench_up(bench: pd.Series, ma: str, index) -> np.ndarray:
+    """Posisi IHSG terhadap MA (ema20/sma50/sma200), diselaraskan ke tanggal `index`."""
+    b = bench.dropna().sort_index()
+    line = (b.ewm(span=20, adjust=False, min_periods=20).mean() if ma == "ema20"
+            else b.rolling(int(ma.replace("sma", "")), min_periods=int(ma.replace("sma", ""))).mean())
+    up = (b > line).astype(float).where(line.notna())
+    return up.reindex(pd.DatetimeIndex(index)).ffill().to_numpy()
+
+
+def simulate_arr(o, h, l, c, signal_pos: int, plan: dict, fees: dict, trail_line=None, mkt_exit=None) -> dict:
     n = len(c)
     fb, fs = fees["buy"], fees["sell"]
     res = {"filled": False, "outcome": "BATAL", "ret": 0.0, "days": 0, "entry_pos": None,
@@ -71,7 +96,11 @@ def simulate_arr(o, h, l, c, signal_pos: int, plan: dict, fees: dict, trail_line
         e, entry = first, o[first]
 
     # ---------------- kelola posisi
-    tp1_hit, part1, tp1_pos = False, None, None
+    tp1_hit, part1, tp1_pos = False, None, None      # part1/tp1_pos = penjualan separuh pertama (TP1 atau pasar)
+    mx = plan.get("market_exit") or "none"
+    if not isinstance(mx, str) or mkt_exit is None:
+        mx = "none"
+    mkt_half = False
     exit_px, outcome, j = None, None, e
     for j in range(e, n):
         if l[j] <= sl:                         # termasuk hari masuk (asumsi terburuk)
@@ -79,13 +108,21 @@ def simulate_arr(o, h, l, c, signal_pos: int, plan: dict, fees: dict, trail_line
             outcome = "BE" if tp1_hit else "SL"
             break
         if not tp1_hit and h[j] >= tp1:
-            tp1_hit, part1, sl, tp1_pos = True, tp1, max(sl, entry), j
+            if part1 is None:
+                part1, tp1_pos = tp1, j
+            tp1_hit, sl = True, max(sl, entry)
         if h[j] >= tp2:
             exit_px, outcome = tp2, "TP2"
             break
         if tp1_hit and trail_line is not None and c[j] < trail_line[j]:
             exit_px, outcome = c[j], "TRAIL"
             break
+        if mx != "none" and mkt_exit[j]:
+            if mx == "all":
+                exit_px, outcome = c[j], "MKT"
+                break
+            if part1 is None:                          # "half": jual separuh sekali
+                part1, tp1_pos, mkt_half = c[j], j, True
         if j - e + 1 >= max_hold:
             exit_px, outcome = c[j], "TIME"
             break
@@ -95,8 +132,10 @@ def simulate_arr(o, h, l, c, signal_pos: int, plan: dict, fees: dict, trail_line
     def net(px):
         return px * (1 - fs) / (entry * (1 + fb)) - 1
 
-    ret = 0.5 * net(part1) + 0.5 * net(exit_px) if tp1_hit else net(exit_px)
-    if tp1_hit and outcome in ("BE", "TIME", "OPEN", "TRAIL"):
+    ret = 0.5 * net(part1) + 0.5 * net(exit_px) if part1 is not None else net(exit_px)
+    if mkt_half:
+        outcome = "MKT½+" + outcome
+    elif tp1_hit and outcome in ("BE", "TIME", "OPEN", "TRAIL", "MKT"):
         outcome = "TP1+" + outcome
     res.update({"filled": True, "outcome": outcome, "ret": float(ret), "days": j - e + 1,
                 "entry_pos": e, "entry_px": float(entry), "exit_pos": j, "exit_px": float(exit_px),
@@ -104,12 +143,17 @@ def simulate_arr(o, h, l, c, signal_pos: int, plan: dict, fees: dict, trail_line
     return res
 
 
-def simulate(df: pd.DataFrame, signal_pos: int, plan: dict, fees: dict) -> dict:
-    """Versi DataFrame (untuk tracker)."""
+def simulate(df: pd.DataFrame, signal_pos: int, plan: dict, fees: dict, bench: pd.Series | None = None) -> dict:
+    """Versi DataFrame (untuk tracker). `bench` (IHSG) dibutuhkan untuk aturan keluar saat pasar berbalik."""
     o, h, l, c = (df[k].to_numpy(dtype=float) for k in ("Open", "High", "Low", "Close"))
     tm = int(_num(plan.get("trail_ma"), 0))
     trail = ema_np(c, tm) if tm > 0 else None
-    r = simulate_arr(o, h, l, c, signal_pos, plan, fees, trail)
+    mkt = None
+    mx = plan.get("market_exit")
+    if isinstance(mx, str) and mx != "none" and bench is not None and len(bench):
+        ma = plan.get("market_exit_ma") if isinstance(plan.get("market_exit_ma"), str) else "sma50"
+        mkt = market_flag(bench_up(bench, ma, df.index), int(_num(plan.get("market_exit_confirm"), 1)))
+    r = simulate_arr(o, h, l, c, signal_pos, plan, fees, trail, mkt)
     r["entry_date"] = df.index[r["entry_pos"]] if r["entry_pos"] is not None else None
     r["exit_date"] = df.index[r["exit_pos"]] if r["filled"] else None
     return r

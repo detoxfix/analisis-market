@@ -17,7 +17,7 @@ from .utils import log
 
 H_NAME = {"short": "PENDEK (swing)", "medium": "MENENGAH (1-3 bln)", "long": "PANJANG (6-24 bln)"}
 OUTCOME = {"TP2": "TP2 ✅", "SL": "Cut loss ❌", "BE": "impas", "TIME": "time-stop", "TRAIL": "trailing stop",
-           "BATAL": "Batal (tidak terisi)"}
+           "BATAL": "Batal (tidak terisi)", "MKT": "keluar karena IHSG berbalik"}
 LIMIT = 3900
 
 
@@ -26,6 +26,12 @@ def rp(x) -> str:
         return f"{float(x):,.0f}".replace(",", ".")
     except (TypeError, ValueError):
         return "-"
+
+
+def rpb(x) -> str:
+    """Rupiah ringkas bertanda: +Rp 12,3 M / −Rp 1,05 T."""
+    a, sg = abs(float(x)), ("+" if x >= 0 else "−")
+    return f"{sg}Rp {a / 1e12:.2f} T".replace(".", ",") if a >= 1e12 else f"{sg}Rp {a / 1e9:.1f} M".replace(".", ",")
 
 
 def pct(x, d=1, sign=True) -> str:
@@ -43,18 +49,52 @@ def e(s) -> str:
 def _outcome(o: str) -> str:
     if o and o.startswith("TP1+"):
         return "TP1 lalu " + OUTCOME.get(o[4:], o[4:])
+    if o and o.startswith("MKT½+"):
+        return "jual 50% (IHSG berbalik) lalu " + OUTCOME.get(o[5:], o[5:])
     return OUTCOME.get(o, o or "-")
 
 
-def build_messages(res: dict, dashboard_url: str | None = None, max_buys: int = 6, max_sells: int = 5) -> list[str]:
+H_SHORT = {"short": "pendek", "medium": "menengah", "long": "panjang"}
+POS_ICON = {"JUAL SEMUA": "🔴", "JUAL 50%": "🟠", "WASPADA": "🟡", "TAHAN": "⚪", "DATA": "❔"}
+
+
+def positions_block(items: list[dict] | None, errors: list[str] | None = None) -> str | None:
+    if not items and not errors:
+        return None
+    lines = ["<b>━ POSISI ANDA</b>"]
+    for x in items or []:
+        if x["status"] == "DATA":
+            lines.append(f"❔ <b>{e(x['code'])}</b>: {e(x['action'])}")
+            continue
+        val = f" · {'+' if (x.get('pnl_value') or 0) >= 0 else '−'}Rp {rp(abs(x['pnl_value']))}" if x.get("pnl_value") else ""
+        head = (f"{POS_ICON.get(x['status'], '•')} <b>{e(x['code'])}</b> ({H_SHORT.get(x['horizon'], '')}) "
+                f"{rp(x['price'])} · {pct(x['pnl_pct'])}{val} · hari {x['days']}/{x['max_days']}")
+        if x["status"] == "TAHAN":
+            lines.append(f"{head}\n   SL {rp(x['sl'])} ({pct(x['sl_dist'])})"
+                         + (f" · TP1 {rp(x['tp1'])} ({pct(x['tp1_dist'])})" if x.get("tp1") and not x.get("tp1_done") else
+                            f" · TP2 {rp(x['tp2'])} ({pct(x['tp2_dist'])})" if x.get("tp2") else ""))
+        else:
+            lines.append(f"{head}\n   <b>{e(x['status'])}</b>: {e(x['action'])}")
+    for err in errors or []:
+        lines.append(f"⚠️ {e(err)}")
+    return "\n".join(lines)
+
+
+def build_messages(res: dict, dashboard_url: str | None = None, max_buys: int = 6, max_sells: int = 5,
+                   positions: list[dict] | None = None) -> list[str]:
     m = res["market"]
     head = [f"📊 <b>Sinyal IHSG — {e(res['as_of'])}</b>",
             f"IHSG <b>{rp(m['bench'])}</b> ({pct(m['bench_chg'], 2)}) · Pasar <b>{e(m['regime'])}</b>",
             f"Dipantau {m['universe']} saham (market cap ≥ Rp 5 T)"]
     blocks = ["\n".join(head)]
+    pb = positions_block(positions, res.get("positions_errors"))
+    if pb:
+        blocks.append(pb)
 
     for h, blk in res["horizons"].items():
         lines = [f"<b>━ {H_NAME.get(h, h)}</b> · kas {pct(blk['cash_weight'], 0, False)} dari bucket"]
+        if blk.get("market_exit_active"):
+            lines.append(f"🚨 <b>Aturan keluar aktif</b>: {e(blk['market_exit_active'])}")
         if blk.get("regime_text"):
             lines.append(f"⚠️ Porsi dikurangi ke {pct(blk['regime_scale'], 0, False)} ({e(blk['regime_text'])})")
         if blk["buys"]:
@@ -65,7 +105,8 @@ def build_messages(res: dict, dashboard_url: str | None = None, max_buys: int = 
                 lines.append(
                     f"🟢 <b>{e(p['code'])}</b> {e(p['signal'])} ({p['score']:.0f}) · bobot {pct(p['weight_total'], 1, False)}{lot}\n"
                     f"   {buy} · TP {rp(p['tp1'])}/{rp(p['tp2'])} · "
-                    f"SL {rp(p['sl'])} ({pct(p['sl_pct'])}) · hold {e(p['hold'])}")
+                    f"SL {rp(p['sl'])} ({pct(p['sl_pct'])}) · hold {e(p['hold'])}"
+                    + (f"\n   Asing 20 hari: {rpb(p['foreign_20d'])}" if p.get("foreign_20d") is not None else ""))
             if len(blk["buys"]) > max_buys:
                 lines.append(f"   …dan {len(blk['buys']) - max_buys} lainnya di dashboard")
         else:
@@ -126,11 +167,12 @@ def send(token: str, chat_id: str, text: str) -> bool:
     return False
 
 
-def telegram(res: dict, token: str | None, chat_ids: str | None, dashboard_url: str | None = None):
+def telegram(res: dict, token: str | None, chat_ids: str | None, dashboard_url: str | None = None,
+             positions: list[dict] | None = None):
     if not token or not chat_ids:
         log.info("Telegram dilewati (TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID belum diisi)")
         return
-    msgs = build_messages(res, dashboard_url)
+    msgs = build_messages(res, dashboard_url, positions=positions)
     for cid in [c.strip() for c in str(chat_ids).split(",") if c.strip()]:
         ok = all(send(token, cid, m) for m in msgs)
         log.info("Telegram ke chat %s…: %s (%d pesan)", cid[:4], "terkirim" if ok else "GAGAL", len(msgs))

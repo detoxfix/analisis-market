@@ -32,20 +32,11 @@ def code_of(ticker: str) -> str:
 # ------------------------------------------------------------------ daftar emiten IDX
 def fetch_idx_list(timeout: int = 25) -> pd.DataFrame | None:
     """Daftar seluruh saham tercatat dari situs BEI (kode, nama, jumlah saham, papan)."""
-    url = "https://www.idx.co.id/primary/StockData/GetSecuritiesStock"
-    params = {"start": 0, "length": 9999, "code": "", "sector": "", "board": "", "language": "id-id"}
-    headers = {"User-Agent": UA, "Accept": "application/json, text/plain, */*",
-               "Referer": "https://www.idx.co.id/id/data-pasar/data-saham/daftar-saham/"}
-    try:
-        try:
-            import cloudscraper  # menembus proteksi Cloudflare dasar
-            sess = cloudscraper.create_scraper()
-        except ImportError:
-            import requests
-            sess = requests.Session()
-        r = sess.get(url, params=params, headers=headers, timeout=timeout)
-        r.raise_for_status()
-        js = r.json()
+    from . import idx
+    js = idx.get_json("/primary/StockData/GetSecuritiesStock",
+                      {"start": 0, "length": 9999, "code": "", "sector": "", "board": "", "language": "id-id"},
+                      "/id/data-pasar/data-saham/daftar-saham/", timeout)
+    if js is not None:
         rows = js.get("data") or js.get("Data") or []
         recs = []
         for row in rows:
@@ -59,16 +50,15 @@ def fetch_idx_list(timeout: int = 25) -> pd.DataFrame | None:
                 "board": (row.get("ListingBoard") or row.get("PapanPencatatan") or "").strip(),
             })
         df = pd.DataFrame(recs)
-        if len(df) < 300:          # respons tidak wajar
-            log.warning("Daftar IDX hanya %d baris, diabaikan", len(df))
-            return None
-        dump_json(df.to_dict("records"), CACHE / "idx_list.json")
-        log.info("Daftar emiten IDX: %d saham", len(df))
-        return df
-    except Exception as e:  # noqa: BLE001
-        log.warning("Gagal mengambil daftar IDX (%s). Pakai cache/seed.", e.__class__.__name__)
-        cached = load_json(CACHE / "idx_list.json")
-        return pd.DataFrame(cached) if cached else None
+        if len(df) >= 300:
+            dump_json(df.to_dict("records"), CACHE / "idx_list.json")
+            log.info("Daftar emiten IDX: %d saham", len(df))
+            return df
+        log.warning("Daftar IDX hanya %d baris, diabaikan", len(df))
+    cached = load_json(CACHE / "idx_list.json")
+    if cached:
+        log.info("Memakai daftar emiten IDX dari cache")
+    return pd.DataFrame(cached) if cached else None
 
 
 # ------------------------------------------------------------------ harga

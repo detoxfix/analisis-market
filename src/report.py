@@ -64,11 +64,13 @@ footer{color:var(--mute);font-size:12px;margin-top:24px}
   <div class="kpis" id="kpis"></div>
   <nav class="tabs" id="tabs">
     <button data-p="buy" class="on">Sinyal Beli</button><button data-p="sell">Sinyal Jual</button>
+    <button data-p="pos" id="tab-pos">Posisi Saya</button>
     <button data-p="all">Semua Saham</button><button data-p="track">Track Record</button>
     <button data-p="bt">Backtest</button><button data-p="method">Metodologi</button>
   </nav>
   <section class="panel on" id="p-buy"><div class="seg" id="seg-buy"></div><div id="buy-body"></div></section>
   <section class="panel" id="p-sell"><div class="seg" id="seg-sell"></div><div id="sell-body"></div></section>
+  <section class="panel" id="p-pos"></section>
   <section class="panel" id="p-all"><input type="search" id="q" placeholder="Cari kode / nama / sektor..."><div class="tbl"><table id="all-t"></table></div></section>
   <section class="panel" id="p-track"></section>
   <section class="panel" id="p-bt"></section>
@@ -84,6 +86,8 @@ const pct = (v,d=1) => v==null?"-":(v>0?"+":"")+(100*v).toFixed(d).replace(".","
 const dec = (v,d=1) => v==null?"-":v.toFixed(d).replace(".",",");
 const pctp = (v,d=1) => v==null?"-":(100*v).toFixed(d).replace(".",",")+"%";
 const tri = v => v==null?"-":"Rp "+(v/1e12).toFixed(1).replace(".",",")+" T";
+const rpM = v => {if(v==null)return "-";const a=Math.abs(v),s=v<0?"−":"+";return a>=1e12?s+"Rp "+(a/1e12).toFixed(2).replace(".",",")+" T":s+"Rp "+(a/1e9).toFixed(1).replace(".",",")+" M";};
+const fx = p => p.foreign_20d==null?"":`<div class="note"><strong>Transaksi asing</strong><span class="${p.foreign_5d>=0?"pos":"neg"}">5 hari ${rpM(p.foreign_5d)}</span> · <span class="${p.foreign_20d>=0?"pos":"neg"}">20 hari ${rpM(p.foreign_20d)}</span>${p.foreign_20d_pct!=null?` (${pct(p.foreign_20d_pct)} dari nilai transaksi)`:""}</div>`;
 const cls = s => ({"STRONG BUY":"b-sb","BUY":"b-buy","SELL":"b-sell","STRONG SELL":"b-ss","HOLD":"b-hold"}[s]||"b-na");
 const badge = (s,sc) => `<span class="badge ${cls(s)}">${s}${sc!=null?" · "+sc.toFixed(0):""}</span>`;
 const esc = s => String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -119,7 +123,7 @@ function buyCard(p){
   </div>
   <div class="note"><strong>Kapan beli</strong>${esc(p.when_buy)}</div>
   <div class="note"><strong>Kapan jual</strong>${esc(p.when_sell)}</div>
-  <div class="note"><strong>Alasan</strong><ul>${p.reasons.map(r=>`<li>${esc(r)}</li>`).join("")}</ul></div>
+  ${fx(p)}<div class="note"><strong>Alasan</strong><ul>${p.reasons.map(r=>`<li>${esc(r)}</li>`).join("")}</ul></div>
   ${p.risks.length?`<div class="note"><strong>Risiko</strong><ul>${p.risks.map(r=>`<li>${esc(r)}</li>`).join("")}</ul></div>`:""}
   ${p.lots_limited_by_risk?'<div class="note muted">Lot dibatasi aturan risiko '+pctp(D.params.risk_per_trade,0)+' modal per posisi.</div>':""}
   </div>`;
@@ -127,6 +131,7 @@ function buyCard(p){
 function renderBuy(h){
   const b=D.horizons[h];
   let html=`<p class="muted">${esc(b.label)} · alokasi ${pctp(b.allocation,0)} modal · ${b.buys.length} posisi · kas ${pctp(b.cash_weight,0)} dari bucket</p>`;
+  if(b.market_exit_active) html+=`<div class="demo">Aturan keluar aktif — ${esc(b.market_exit_active)}</div>`;
   if(b.regime_text) html+=`<p class="muted"><b>Porsi dikurangi menjadi ${pctp(b.regime_scale,0)}</b> karena ${esc(b.regime_text)}. Sisanya ditahan sebagai kas.</p>`;
   html+=b.buys.length?`<div class="grid">${b.buys.map(buyCard).join("")}</div>`:`<div class="empty">Belum ada sinyal beli yang lolos syarat masuk untuk horizon ini. Tetap di kas.${b.n_held?" ("+b.n_held+" sinyal beli tertahan filter — lihat watchlist)":""}</div>`;
   if(b.watchlist.length){html+=`<h3>Watchlist (sinyal beli yang belum dieksekusi)</h3><div class="tbl"><table><tr><th>Kode</th><th>Sinyal</th><th>Harga</th><th>Area beli</th><th>TP1</th><th>SL</th><th>Keterangan</th></tr>${b.watchlist.map(w=>`<tr><td><b>${w.code}</b></td><td>${badge(w.signal,w.score)}</td><td>${n(w.price)}</td><td>${n(w.entry_low)}–${n(w.entry_high)}</td><td>${n(w.tp1)}</td><td>${n(w.sl)}</td><td style="text-align:left">${esc(w.held||"")}</td></tr>`).join("")}</table></div>`;}
@@ -138,7 +143,7 @@ function renderSell(h){
   $("sell-body").innerHTML=s.length?`<p class="muted">Untuk pemegang saham. Tidak ada short selling — sinyal jual berarti keluar/kurangi posisi & hindari beli.</p><div class="grid">${s.map(p=>`<div class="card"><div class="top"><div><div class="code">${p.code}</div><div class="name">${esc(p.name)} · ${esc(p.sector)}</div></div>${badge(p.signal,p.score)}</div>${scorebar(p.score)}
   <div class="lv"><div><span>Harga</span><b>${n(p.price)}</b> <small class="${p.chg_1d>=0?"pos":"neg"}">${pct(p.chg_1d)}</small></div><div><span>Tindakan</span><b>${esc(p.action)}</b></div><div><span>Porsi jual</span><b>${pctp(p.sell_portion,0)}</b></div>
   <div><span>Area jual</span><b>${n(p.sell_zone_low)}–${n(p.sell_zone_high)}</b></div><div><span>Level breakdown</span><b class="neg">${n(p.breakdown_level)}</b></div><div><span>Mcap</span><b>${tri(p.mcap)}</b></div></div>
-  <div class="note"><strong>Kapan jual</strong>${esc(p.when_sell)}</div><div class="note"><strong>Alasan</strong><ul>${p.reasons.map(r=>`<li>${esc(r)}</li>`).join("")}</ul></div></div>`).join("")}</div>`:`<div class="empty">Tidak ada sinyal jual untuk horizon ini.</div>`;
+  <div class="note"><strong>Kapan jual</strong>${esc(p.when_sell)}</div>${fx(p)}<div class="note"><strong>Alasan</strong><ul>${p.reasons.map(r=>`<li>${esc(r)}</li>`).join("")}</ul></div></div>`).join("")}</div>`:`<div class="empty">Tidak ada sinyal jual untuk horizon ini.</div>`;
 }
 let sortK="mcap",sortD=-1;
 function renderAll(){
@@ -147,13 +152,29 @@ function renderAll(){
   const key=r=>["short","medium","long"].includes(sortK)?(r[sortK].score??-999):(r[sortK]??-1e18);
   rows.sort((a,b)=>sortK==="code"?sortD*a.code.localeCompare(b.code):sortD*(key(a)-key(b)));
   const th=[["code","Kode"],["price","Harga"],["chg_1d","Chg"],["mcap","Mcap"],["short","Pendek"],["medium","Menengah"],["long","Panjang"],["pe","PER"],["pb","PBV"],["roe","ROE"],["div_yield","Yield"]];
+  const hasF=D.all.some(r=>r.foreign_20d!=null); if(hasF)th.push(["foreign_20d","Asing 20h"]);
   $("all-t").innerHTML=`<tr>${th.map(([k,l])=>`<th data-k="${k}">${l}${k===sortK?(sortD>0?" ▲":" ▼"):""}</th>`).join("")}</tr>`+rows.map(r=>`<tr><td><b>${r.code}</b><div class="name">${esc(r.name)}</div></td><td>${n(r.price)}</td><td class="${r.chg_1d>=0?"pos":"neg"}">${pct(r.chg_1d)}</td><td>${tri(r.mcap)}</td>
   <td>${badge(r.short.signal,r.short.score)}</td><td>${badge(r.medium.signal,r.medium.score)}</td><td>${badge(r.long.signal,r.long.score)}</td>
-  <td>${dec(r.pe)}</td><td>${dec(r.pb,2)}</td><td>${pctp(r.roe)}</td><td>${pctp(r.div_yield)}</td></tr>`).join("");
+  <td>${dec(r.pe)}</td><td>${dec(r.pb,2)}</td><td>${pctp(r.roe)}</td><td>${pctp(r.div_yield)}</td>${hasF?`<td class="${(r.foreign_20d||0)>=0?"pos":"neg"}">${rpM(r.foreign_20d)}</td>`:""}</tr>`).join("");
   $("all-t").querySelectorAll("th").forEach(t=>t.onclick=()=>{const k=t.dataset.k;sortD=k===sortK?-sortD:-1;sortK=k;renderAll();});
 }
 function statRow(lbl,s){if(!s||!s.n)return `<tr><td>${lbl}</td><td colspan="5" class="muted">belum ada transaksi selesai</td></tr>`;
   return `<tr><td>${lbl}</td><td>${s.n}</td><td>${pctp(s.win_rate,0)}</td><td class="${s.avg_ret>=0?"pos":"neg"}">${pct(s.avg_ret)}</td><td>${dec(s.profit_factor,2)}</td><td>${s.avg_days==null?pct(s.median_ret):dec(s.avg_days)}</td></tr>`;}
+const PCLS={"JUAL SEMUA":"b-ss","JUAL 50%":"b-sell","WASPADA":"b-hold","TAHAN":"b-na","DATA":"b-na"};
+const HL={short:"Pendek",medium:"Menengah",long:"Panjang"};
+function renderPositions(){
+  const P=D.positions, E=D.positions_errors||[];
+  if(P==null){$("tab-pos").style.display="none";return;}
+  let h=`<h2>Posisi saya</h2><p class="muted">Diisi dari file <b>positions.csv</b> di repository (private). Instruksi dihitung dari harga sejak tanggal beli: cut loss, TP1/TP2, batas waktu hold, aturan keluar pasar, dan sinyal terbaru. Lot & nominal rupiah hanya dikirim lewat Telegram.</p>`;
+  if(E.length)h+=E.map(x=>`<div class="demo">${esc(x)}</div>`).join("");
+  if(!P.length){$("p-pos").innerHTML=h+'<div class="empty">Belum ada posisi. Tambahkan baris di positions.csv: kode, horizon (pendek/menengah/panjang), tanggal beli, harga beli, lot.</div>';return;}
+  const need=P.filter(x=>x.rank<3);
+  if(need.length)h+=`<div class="grid">${need.map(x=>`<div class="card"><div class="top"><div><div class="code">${esc(x.code)}</div><div class="name">${HL[x.horizon]||""} · beli ${esc(x.buy_date)} @ ${n(x.buy_price)}</div></div><span class="badge ${PCLS[x.status]||"b-na"}">${esc(x.status)}</span></div>
+   <div class="lv"><div><span>Harga</span><b>${n(x.price)}</b></div><div><span>Untung/rugi</span><b class="${(x.pnl_pct||0)>=0?"pos":"neg"}">${pct(x.pnl_pct)}</b></div><div><span>Hari ke</span><b>${x.days??"-"}/${x.max_days??"-"}</b></div></div>
+   <div class="note"><strong>Tindakan</strong>${esc(x.action)}</div></div>`).join("")}</div>`;
+  h+=`<h3>Semua posisi</h3><div class="tbl"><table><tr><th>Kode</th><th>Horizon</th><th>Beli</th><th>Harga</th><th>U/R</th><th>Cut loss</th><th>TP1</th><th>TP2</th><th>Hari</th><th>Sinyal kini</th><th>Status</th></tr>${P.map(x=>`<tr><td><b>${esc(x.code)}</b></td><td>${HL[x.horizon]||"-"}</td><td>${n(x.buy_price)}<div class="name">${esc(x.buy_date)}</div></td><td>${n(x.price)}</td><td class="${(x.pnl_pct||0)>=0?"pos":"neg"}">${pct(x.pnl_pct)}</td><td>${n(x.sl)}<div class="name">${pct(x.sl_dist)}</div></td><td>${x.tp1_done?"✓ terjual 50%":n(x.tp1)}</td><td>${n(x.tp2)}</td><td>${x.days??"-"}/${x.max_days??"-"}</td><td>${x.signal?badge(x.signal,x.score):"-"}</td><td><span class="badge ${PCLS[x.status]||"b-na"}">${esc(x.status)}</span></td></tr>`).join("")}</table></div>`;
+  $("p-pos").innerHTML=h;
+}
 function renderTrack(){
   const t=D.track||{by_horizon:{},open:[],recent_closed:[]};
   let h=`<h2>Kinerja rekomendasi riil</h2><p class="muted">Setiap rekomendasi beli dicatat lalu dievaluasi otomatis dengan harga berikutnya (masuk T+1 open, TP/SL/time-stop, termasuk biaya). ${t.cancelled||0} rekomendasi batal karena gap up melewati batas kejar.</p>
@@ -222,7 +243,7 @@ function renderMethod(){
   <h3>Disclaimer</h3><p>Aplikasi ini alat bantu analisis kuantitatif, bukan nasihat investasi dan bukan ajakan membeli/menjual efek. Data gratis dapat terlambat atau keliru — cek ulang harga di aplikasi sekuritas sebelum bertransaksi. Kinerja masa lalu tidak menjamin hasil di masa depan.</p>`;
 }
 $("tabs").onclick=e=>{const b=e.target.closest("button");if(!b)return;document.querySelectorAll("#tabs button").forEach(x=>x.classList.toggle("on",x===b));document.querySelectorAll(".panel").forEach(p=>p.classList.toggle("on",p.id==="p-"+b.dataset.p));};
-header();seg("seg-buy",renderBuy);seg("seg-sell",renderSell);$("q").oninput=renderAll;renderAll();renderTrack();renderBt();renderMethod();
+header();seg("seg-buy",renderBuy);seg("seg-sell",renderSell);$("q").oninput=renderAll;renderAll();renderPositions();renderTrack();renderBt();renderMethod();
 $("foot").textContent="IHSG Signal · alat bantu analisis, bukan nasihat investasi · "+D.generated_at;
 </script>
 </body>
