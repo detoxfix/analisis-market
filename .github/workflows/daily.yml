@@ -42,3 +42,15 @@ jobs:
           git add docs data
           git commit -m "Sinyal $(TZ=Asia/Jakarta date +%F)" || echo "Tidak ada perubahan"
           git push
+
+         - name: Kabari Telegram bila gagal
+           if: failure()
+           env:
+             TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+             CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
+           run: |
+             [ -z "$TOKEN" ] && exit 0
+             for c in ${CHAT//,/ }; do
+               curl -s -X POST "https://api.telegram.org/bot$TOKEN/sendMessage" -d chat_id="$c" \
+                 --data-urlencode text="⚠️ Update sinyal IHSG GAGAL ($(TZ=Asia/Jakarta date '+%F %H:%M') WIB). Lihat: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+             done
