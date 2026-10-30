@@ -20,9 +20,10 @@ import yaml
 
 from src import backtest as bt
 from src import data as D
-from src import archive, notify, portsim, report, tracker
+from src import archive, idx, notify, portsim, positions, report, tracker
 from src.indicators import add_indicators
 from src.portfolio import allocate
+from src.sim import bench_up, market_flag
 from src.risk import make_plan, sell_plan
 from src.signals import (BUY_SIGNALS, HORIZON_FUNCS, LONG_W, SELL_SIGNALS, compose, entry_mask, explain, label,
                          long_components)
@@ -48,6 +49,21 @@ def sector_medians(funds: dict[str, dict]) -> dict[str, dict]:
     return meds
 
 
+def mkt_exit_text(hcfg: dict, bench: pd.Series) -> str | None:
+    """Teks peringatan bila aturan keluar-saat-pasar-berbalik sedang aktif hari ini."""
+    mx = hcfg.get("market_exit") or "none"
+    if mx == "none" or bench is None or len(bench) < 60:
+        return None
+    ma = hcfg.get("market_exit_ma") or "sma50"
+    cf = int(hcfg.get("market_exit_confirm") or 1)
+    if not market_flag(bench_up(bench, ma, bench.index), cf)[-1]:
+        return None
+    hari = f" {cf} hari berturut-turut" if cf > 1 else ""
+    return (f"IHSG close di bawah {ma.upper()}{hari}: " +
+            ("jual seluruh posisi horizon ini yang masih terbuka." if mx == "all"
+             else "jual 50% posisi horizon ini yang masih terbuka (bila belum)."))
+
+
 def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
     now = datetime.now(ZoneInfo("Asia/Jakarta")).replace(tzinfo=None)   # runner GitHub memakai UTC
     sources = []
@@ -57,6 +73,13 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
         prices, bench, shares, funds_all = D.demo_dataset()
         names = {t: f["name"] for t, f in funds_all.items()}
         sources.append("DEMO — data sintetis")
+        _ts = sorted(prices)[:4]
+        _d0 = prices[_ts[0]].index[-8]
+        pos_df = pd.DataFrame([{"code": t.replace(".JK", ""), "horizon": hz, "buy_date": _d0,
+                                "buy_price": float(prices[t].loc[_d0, "Close"]), "lots": 10, "tp1_done": False,
+                                "sl_user": None, "tp1_user": None, "tp2_user": None, "note": "demo"}
+                               for t, hz in zip(_ts, ("short", "medium", "long", "short"))])
+        pos_errs = []
     else:
         idx_df = D.fetch_idx_list() if cfg["universe"].get("use_idx_list", True) else None
         extra = D.discover_by_screener(cfg["universe"]["min_market_cap"]) if idx_df is None else []
@@ -69,6 +92,10 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
         sources.append("Harga OHLCV harian, jumlah saham & fundamental: Yahoo Finance via yfinance (open source, Apache-2.0)")
         sources.append("Arsip fundamental harian & laporan keuangan (kuartalan/tahunan) disimpan di repo: "
                        "data/fundamentals_history")
+        pos_df, pos_errs = positions.load()
+        extra_pos = [t for t in positions.codes(pos_df) if t not in prices]
+        if extra_pos:
+            prices.update(D.download_prices(extra_pos, period=cfg["data"]["history_period"]))
         missing = [t for t in prices if t not in shares]
         if missing:
             shares.update(D.get_shares(missing, cfg["data"]["shares_cache_days"]))
@@ -100,6 +127,24 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
         except Exception as e:  # noqa: BLE001
             log.warning("Arsip fundamental gagal: %s", e)
 
+    # ------------------------------------------------------------ 2b. transaksi asing (idx.co.id, bila bisa diakses)
+    flows = {}
+    icfg = cfg.get("idx", {})
+    if demo:
+        rng = np.random.default_rng(3)
+        flows = {c: {"foreign_5d": float(rng.normal(0, 2e10)), "foreign_20d": float(rng.normal(0, 6e10)),
+                     "foreign_20d_pct": float(rng.normal(0, 0.05)), "foreign_days": 20,
+                     "foreign_last": as_of.strftime("%Y-%m-%d")} for c in uni["code"]}
+    elif icfg.get("foreign_flow", True):
+        try:
+            got = idx.update_summaries(bench.index, icfg.get("backfill_days", 260), icfg.get("max_per_run", 300))
+            flows = idx.foreign_flow(uni["code"].tolist())
+            if flows:
+                sources.append("Transaksi asing harian: idx.co.id (ringkasan perdagangan saham)")
+                log.info("Transaksi asing: %d saham (%d hari baru diunduh)", len(flows), got)
+        except Exception as e:  # noqa: BLE001
+            log.warning("Data transaksi asing gagal: %s", e)
+
     # ------------------------------------------------------------ 3. indikator & skor
     th = cfg["thresholds"]
     ind, rows_all, per_h = {}, [], {h: {"buys": [], "sells": [], "held": []} for h in HORIZONS}
@@ -113,7 +158,8 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
         last = d.iloc[-1]
         rec = {"ticker": t, "code": u["code"], "name": name, "sector": sector, "price": float(last["Close"]),
                "chg_1d": fnum(last["CHG_1D"]), "mcap": float(u["mcap"]), "avg_value_20d": float(u["avg_value_20d"]),
-               "pe": f.get("pe"), "pb": f.get("pb"), "roe": f.get("roe"), "div_yield": f.get("div_yield")}
+               "pe": f.get("pe"), "pb": f.get("pb"), "roe": f.get("roe"), "div_yield": f.get("div_yield"),
+               **flows.get(u["code"], {})}
         for h in HORIZONS:
             if h == "long":
                 comp = long_components(d, f, meds.get(sector, meds.get("_all", {})))
@@ -132,7 +178,8 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
                 item = {"ticker": t, "code": u["code"], "name": name, "sector": sector, "horizon": h,
                         "price": float(last["Close"]), "chg_1d": fnum(last["CHG_1D"]), "mcap": float(u["mcap"]),
                         "score": sc, "signal": sig, "confidence": round(min(1, abs(sc) / 100) * cov, 3),
-                        "atr_pct": fnum(last["ATR_pct"]), "reasons": reasons, "risks": risks}
+                        "atr_pct": fnum(last["ATR_pct"]), "reasons": reasons, "risks": risks,
+                        **flows.get(u["code"], {})}
                 if bull:
                     plan = make_plan(last, h, cfg["horizons"][h], cfg["fees"])
                     if plan:
@@ -168,12 +215,22 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
                     "regime_scale": scale, "regime_text": level_text if scale < 1 else None,
                     "buys": picked, "watchlist": watch[:15], "n_held": len(per_h[h]["held"]),
                     "rules": {k: hcfg.get(k) for k in ("min_score", "market_filter", "trend_filter", "entry_mode",
-                                                       "limit_days", "trail_ma", "sl_atr", "max_sl_pct", "rr")},
+                                                       "limit_days", "trail_ma", "sl_atr", "max_sl_pct", "rr",
+                                                       "market_exit", "market_exit_ma", "market_exit_confirm")},
+                    "market_exit_active": mkt_exit_text(hcfg, bench),
                     "sells": sorted(per_h[h]["sells"], key=lambda x: x["score"])}
         new_recs += [p for p in picked if p["lots"] > 0]
 
     # ------------------------------------------------------------ 5. track record & backtest
-    track = tracker.update(prices, new_recs, cfg["fees"], as_of, demo=demo)
+    track = tracker.update(prices, new_recs, cfg["fees"], as_of, demo=demo, bench=bench)
+
+    # ------------------------------------------------------------ 5b. posisi pribadi
+    signals = {r["code"]: {h: r[h] for h in HORIZONS} for r in rows_all}
+    try:
+        pos_items = positions.evaluate(pos_df, prices, bench, cfg, signals, as_of)
+    except Exception as e:  # noqa: BLE001
+        log.warning("Pemantau posisi gagal: %s", e)
+        pos_items, pos_errs = [], pos_errs + [f"Pemantau posisi gagal: {e}"]
     bt_path = ROOT / "docs" / "data" / "backtest.json"
     bt_res = load_json(bt_path) if not demo else None
     cfg_hash = hashlib.md5(json.dumps({"h": {h: cfg["horizons"][h] for h in ("short", "medium")}, "v": 2,
@@ -208,6 +265,9 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
         "market": {"bench": b_last, "bench_chg": b_last / b_prev - 1, "regime": regime,
                    "universe": len(uni), "scanned": len(prices)},
         "horizons": per_h,
+        "positions": positions.public_view(pos_items, cfg.get("positions", {}).get("dashboard", "percent")),
+        "positions_errors": pos_errs,
+        "_positions_full": pos_items,
         "all": sorted(rows_all, key=lambda r: -r["mcap"]),
         "track": track,
         "backtest": bt_res,
@@ -246,10 +306,11 @@ def main():
     with open(a.config, encoding="utf-8") as fh:
         cfg = yaml.safe_load(fh)
     res = run(cfg, demo=a.demo, backtest_mode=a.backtest)
+    pos_full = res.pop("_positions_full", None)        # lengkap (lot & nominal) hanya untuk Telegram
     write_outputs(res, a.demo)
     if not a.no_notify and not a.demo and cfg.get("notify", {}).get("telegram"):
         notify.telegram(res, os.environ.get("TELEGRAM_BOT_TOKEN"), os.environ.get("TELEGRAM_CHAT_ID"),
-                        cfg.get("notify", {}).get("dashboard_url"))
+                        cfg.get("notify", {}).get("dashboard_url"), pos_full)
 
 
 if __name__ == "__main__":

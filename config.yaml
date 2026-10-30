@@ -52,6 +52,9 @@ horizons:
     entry_mode: limit                # open = beli di pembukaan T+1 ; limit = antre di area bawah
     limit_days: 3                    # masa berlaku antrean (mode limit)
     trail_ma: 0                      # 0 = mati ; n = setelah TP1, jual sisa bila close < EMA n
+    market_exit: none                # none | half | all : jual saat IHSG berbalik turun (posisi terbuka)
+    market_exit_ma: sma50            # ema20 | sma50 : MA IHSG yang dipakai
+    market_exit_confirm: 1           # berapa hari close berturut-turut di bawah MA
   medium:
     label: "Jangka Menengah (1-3 bulan)"
     allocation: 0.30
@@ -71,6 +74,9 @@ horizons:
     entry_mode: open
     limit_days: 5
     trail_ma: 0
+    market_exit: none
+    market_exit_ma: sma50
+    market_exit_confirm: 1
   long:
     label: "Jangka Panjang (6-24 bulan)"
     allocation: 0.50
@@ -100,6 +106,14 @@ backtest:
 archive:                             # arsip fundamental untuk backtest jangka panjang di masa depan
   statements_days: 7                 # tiap saham diperbarui laporan keuangannya seminggu sekali
   statements_per_run: 60             # maks. saham per hari (bergilir, agar tidak kena limit Yahoo)
+
+idx:                                 # data idx.co.id (otomatis dilewati bila situs memblokir, mis. di GitHub)
+  foreign_flow: true                 # transaksi asing harian (ditampilkan; belum dipakai dalam skor)
+  backfill_days: 260                 # riwayat yang diisi sekali di awal (~1 tahun bursa)
+  max_per_run: 300
+
+positions:                           # pemantau posisi pribadi (isi file positions.csv di repo)
+  dashboard: percent                 # full | percent (tanpa lot & nominal Rp) | hidden ; Telegram selalu lengkap
 
 notify:
   telegram: true                     # aktif hanya bila secret TELEGRAM_BOT_TOKEN & TELEGRAM_CHAT_ID diisi

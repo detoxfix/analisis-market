@@ -1,0 +1,27 @@
+IHSG SIGNAL - APLIKASI LAPTOP (WINDOWS)
+=======================================
+
+1. Pindahkan seluruh folder ini ke tempat tetap, misalnya:  Documents\IHSG Signal
+   (jangan dijalankan dari dalam file .zip, dan jangan di folder Program Files)
+
+2. Klik dua kali "IHSG Signal.exe".
+   Bila muncul "Windows protected your PC": klik "More info" -> "Run anyway".
+   (Muncul karena aplikasi buatan sendiri tidak punya sertifikat tanda tangan berbayar.)
+
+3. Klik "Update sekarang".
+   Pertama kali sekitar 5-15 menit (mengunduh 3 tahun harga + 1 tahun data transaksi asing IDX).
+   Berikutnya 2-5 menit.
+
+4. Centang "Update otomatis ... 17:30" agar berjalan sendiri setiap hari bursa.
+   Bila laptop mati/tidur pada jam itu, update dijalankan begitu laptop menyala.
+
+Tombol lain:
+- Buka dashboard  : membuka dashboard di browser (file di laptop, tidak bisa dilihat orang lain)
+- Posisi saya     : catat saham yang Anda beli -> aplikasi memberi tahu kapan TP / cut loss / jual
+- Pengaturan      : modal acuan, token & chat ID Telegram (untuk notifikasi ke HP)
+- Folder data     : membuka folder tempat semua data tersimpan
+
+Semua data ada di folder ini: config.yaml, positions.csv, settings.json, docs\ (dashboard),
+data\ (cache & arsip), logs\ (catatan proses; kirim logs\ihsg.log bila ada masalah).
+
+Alat bantu analisis, bukan nasihat investasi. Cek ulang harga di aplikasi sekuritas sebelum bertransaksi.

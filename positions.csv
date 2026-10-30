@@ -1,0 +1,5 @@
+code,horizon,buy_date,buy_price,lots,tp1_done,sl,tp1,tp2,note
+# Contoh (hapus tanda # di depan untuk mengaktifkan, satu baris = satu posisi):
+# BBCA,pendek,2026-10-29,4900,10,,,,,beli dari sinyal swing
+# ASII,menengah,2026-10-29,4630,5,ya,,,,sudah jual separuh di TP1
+# PTBA,panjang,2026-10-29,3250,7,,2900,,,cut loss pakai level sendiri

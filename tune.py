@@ -8,7 +8,8 @@ Anti-overfitting: kombinasi dipilih HANYA dari periode in-sample (sebelum backte
 periode sesudahnya (out-of-sample) dipakai untuk menguji apakah keunggulannya bertahan.
 Hasil: docs/data/tuning.json (dibaca untuk menetapkan config.yaml).
 
-    python tune.py            # data asli
+    python tune.py            # mode "exits": uji aturan keluar saat pasar berbalik (pakai config sekarang)
+    python tune.py --full     # grid lengkap syarat masuk + cara keluar
     python tune.py --demo     # uji coba data sintetis
 """
 from __future__ import annotations
@@ -21,9 +22,12 @@ import time
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
+import pandas as pd
 import yaml
 
 from src import backtest as bt
+from src import portsim
+from src.utils import load_json
 from src import data as D
 from src.indicators import add_indicators
 from src.universe import candidate_list, filter_universe
@@ -94,9 +98,50 @@ def run_variant(prep, h, hcfg, cfg):
     return bt.full_stats(tr, cfg["backtest"]["split_date"])
 
 
+EXIT_GRID = [{"market_exit": "none"}] + [
+    {"market_exit": mx, "market_exit_ma": ma, "market_exit_confirm": cf}
+    for mx in ("half", "all") for ma in ("ema20", "sma50") for cf in (1, 2)]
+
+
+def pslim(st: dict) -> dict:
+    keep = ("total_return", "cagr", "max_drawdown", "dd_peak", "dd_trough", "worst_month", "sharpe",
+            "avg_exposure", "trades", "win_rate", "avg_trade", "by_year")
+    return {k: st.get(k) for k in keep}
+
+
+def run_exits(prep, ind, cfg, n_uni, demo, t0):
+    """Uji aturan keluar-saat-pasar-berbalik untuk horizon pendek & menengah (parameter lain tetap)."""
+    split = cfg["backtest"]["split_date"]
+    out = {"generated_at": datetime.now(ZoneInfo("Asia/Jakarta")).strftime("%Y-%m-%d %H:%M"),
+           "demo": demo, "universe": n_uni, "split_date": split, "horizons": {}}
+    for h in ("short", "medium"):
+        rows = []
+        for v in EXIT_GRID:
+            c2 = copy.deepcopy(cfg)
+            c2["horizons"][h].update(v)
+            st = run_variant(prep, h, c2["horizons"][h], c2)
+            ps = portsim.run(ind, c2, prep=prep)
+            b = ps.get("buckets", {}).get(h, {})
+            cut = pd.Timestamp(split)
+            eq = pd.Series({pd.Timestamp(d): val for d, val in b.get("equity", [])})
+            rows.append({"params": v, "trades": slim(st), "portfolio": pslim(b),
+                         "port_is": pslim(portsim.metrics(eq[eq.index < cut])) if len(eq) else {},
+                         "port_oos": pslim(portsim.metrics(eq[eq.index >= cut])) if len(eq) else {}})
+            log.info("exit %s %s: return %.1f%%, max DD %.1f%%", h, v,
+                     100 * (b.get("total_return") or 0), 100 * (b.get("max_drawdown") or 0))
+        out["horizons"][h] = rows
+    out["seconds"] = round(time.time() - t0)
+    path = ROOT / ("output/tuning_demo.json" if demo else "docs/data/tuning.json")
+    prev = load_json(path, {}) or {}
+    prev["exits"] = out                       # simpan berdampingan dengan hasil grid lengkap sebelumnya
+    dump_json(prev, path)
+    log.info("Tuning aturan keluar selesai dalam %d dtk -> %s", out["seconds"], path)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--demo", action="store_true")
+    ap.add_argument("--full", action="store_true", help="grid lengkap syarat masuk & cara keluar")
     ap.add_argument("--config", default=str(ROOT / "config.yaml"))
     a = ap.parse_args()
     cfg = yaml.safe_load(open(a.config, encoding="utf-8"))
@@ -104,6 +149,9 @@ def main():
     ind, n_uni = load_data(cfg, a.demo)
     prep = bt.prepare(ind, ("short", "medium"))
     log.info("Data siap: %d saham, %.0f dtk", n_uni, time.time() - t0)
+    if not a.full:
+        run_exits(prep, ind, cfg, n_uni, a.demo, t0)
+        return
 
     result = {"generated_at": datetime.now(ZoneInfo("Asia/Jakarta")).strftime("%Y-%m-%d %H:%M"),
               "demo": a.demo, "universe": n_uni, "split_date": cfg["backtest"]["split_date"], "horizons": {}}
@@ -144,6 +192,9 @@ def main():
 
     result["seconds"] = round(time.time() - t0)
     path = ROOT / ("output/tuning_demo.json" if a.demo else "docs/data/tuning.json")
+    prev = load_json(path, {}) or {}
+    if "exits" in prev:
+        result["exits"] = prev["exits"]
     dump_json(result, path)
     log.info("Selesai dalam %d dtk -> %s", result["seconds"], path)
 

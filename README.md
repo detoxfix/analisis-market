@@ -58,6 +58,40 @@ Hasil:
 
 **Notifikasi Telegram (opsional):** buat bot lewat @BotFather, lalu isi secret `TELEGRAM_BOT_TOKEN` dan `TELEGRAM_CHAT_ID` di repo (atau environment variable lokal).
 
+## Aplikasi laptop (Windows)
+
+Versi aplikasi berjalan mandiri di laptop: tombol **Update sekarang**, **Buka dashboard**, **Posisi saya**
+(formulir), **Pengaturan** (modal, Telegram), dan jadwal otomatis Senin–Jumat 17:30 lewat Windows Task Scheduler.
+Dari internet rumah, aplikasi juga mengambil data **idx.co.id** (daftar emiten & jumlah saham resmi,
+papan pemantauan khusus, transaksi asing harian) yang diblokir untuk server GitHub.
+
+Membuat `.exe`: jalankan workflow **Build aplikasi Windows** di tab Actions → unduh artifact
+`IHSG-Signal-Windows` → ekstrak → jalankan `IHSG Signal.exe` (lihat `CARA PAKAI.txt`).
+Menjalankan dari kode: `python app.py` (jendela) atau `python app.py --auto` (tanpa jendela).
+
+## Pemantau posisi pribadi
+
+Catat saham yang benar-benar Anda beli di **`positions.csv`** (root repo, bisa diedit langsung di GitHub):
+
+```
+code,horizon,buy_date,buy_price,lots,tp1_done,sl,tp1,tp2,note
+BBCA,pendek,2026-10-29,4900,10,,,,,
+```
+
+- `horizon`: pendek / menengah / panjang · `tp1_done`: isi `ya` setelah menjual separuh
+- `sl`, `tp1`, `tp2` opsional — kosongkan untuk memakai level hitungan aplikasi
+- Hapus barisnya setelah posisi dijual habis
+
+Setiap hari tab **Posisi Saya** dan Telegram memberi status: JUAL SEMUA (cut loss / TP2 / batas waktu / pasar berbalik),
+JUAL 50% (TP1), WASPADA (sinyal berbalik SELL), atau TAHAN. Dashboard (publik) tidak menampilkan lot & nominal Rp
+(`positions.dashboard: percent` di config.yaml); Telegram selalu lengkap.
+
+## Aturan keluar saat pasar berbalik
+
+Opsi per horizon di `config.yaml`: `market_exit` (none / half / all), `market_exit_ma` (ema20 / sma50),
+`market_exit_confirm` (1–2 hari). Uji pilihan terbaik dengan workflow **Tuning strategi (manual)**
+(`python tune.py` = uji aturan keluar; `python tune.py --full` = grid lengkap).
+
 ## Metodologi singkat
 
 Skor tiap horizon = rata-rata berbobot komponen bernilai −1…+1, dikali 100.
