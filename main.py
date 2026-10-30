@@ -12,7 +12,6 @@ import hashlib
 import json
 import os
 from datetime import datetime, timedelta
-from zoneinfo import ZoneInfo
 
 import numpy as np
 import pandas as pd
@@ -28,7 +27,7 @@ from src.risk import make_plan, sell_plan
 from src.signals import (BUY_SIGNALS, HORIZON_FUNCS, LONG_W, SELL_SIGNALS, compose, entry_mask, explain, label,
                          long_components)
 from src.universe import candidate_list, filter_universe
-from src.utils import ROOT, dump_json, fnum, load_json, log, to_jsonable
+from src.utils import ROOT, dump_json, fnum, load_json, log, now_wib, to_jsonable
 
 HORIZONS = ("short", "medium", "long")
 
@@ -65,7 +64,7 @@ def mkt_exit_text(hcfg: dict, bench: pd.Series) -> str | None:
 
 
 def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
-    now = datetime.now(ZoneInfo("Asia/Jakarta")).replace(tzinfo=None)   # runner GitHub memakai UTC
+    now = now_wib()   # runner GitHub memakai UTC
     sources = []
     # ------------------------------------------------------------ 1. data
     if demo:

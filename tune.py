@@ -19,8 +19,6 @@ import copy
 import itertools
 import math
 import time
-from datetime import datetime
-from zoneinfo import ZoneInfo
 
 import pandas as pd
 import yaml
@@ -31,7 +29,7 @@ from src.utils import load_json
 from src import data as D
 from src.indicators import add_indicators
 from src.universe import candidate_list, filter_universe
-from src.utils import ROOT, dump_json, log
+from src.utils import ROOT, dump_json, log, now_wib
 
 STAGE1 = {
     "min_score": [30, 45, 60],
@@ -112,7 +110,7 @@ def pslim(st: dict) -> dict:
 def run_exits(prep, ind, cfg, n_uni, demo, t0):
     """Uji aturan keluar-saat-pasar-berbalik untuk horizon pendek & menengah (parameter lain tetap)."""
     split = cfg["backtest"]["split_date"]
-    out = {"generated_at": datetime.now(ZoneInfo("Asia/Jakarta")).strftime("%Y-%m-%d %H:%M"),
+    out = {"generated_at": now_wib().strftime("%Y-%m-%d %H:%M"),
            "demo": demo, "universe": n_uni, "split_date": split, "horizons": {}}
     for h in ("short", "medium"):
         rows = []
@@ -153,7 +151,7 @@ def main():
         run_exits(prep, ind, cfg, n_uni, a.demo, t0)
         return
 
-    result = {"generated_at": datetime.now(ZoneInfo("Asia/Jakarta")).strftime("%Y-%m-%d %H:%M"),
+    result = {"generated_at": now_wib().strftime("%Y-%m-%d %H:%M"),
               "demo": a.demo, "universe": n_uni, "split_date": cfg["backtest"]["split_date"], "horizons": {}}
     for h in ("short", "medium"):
         base = cfg["horizons"][h]

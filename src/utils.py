@@ -4,18 +4,47 @@ from __future__ import annotations
 import json
 import logging
 import math
+import os
+import sys
 from datetime import date, datetime
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
-ROOT = Path(__file__).resolve().parent.parent
+def _home() -> Path:
+    """Folder kerja (data, dashboard, config, posisi).
+    - IHSG_HOME (env) bila diisi
+    - aplikasi .exe: folder tempat .exe berada (bila bisa ditulis), jika tidak %LOCALAPPDATA%\\IHSG Signal
+    - selain itu: folder proyek"""
+    env = os.environ.get("IHSG_HOME")
+    if env:
+        return Path(env)
+    if getattr(sys, "frozen", False):
+        base = Path(sys.executable).resolve().parent
+        try:
+            probe = base / ".write_test"
+            probe.write_text("x")
+            probe.unlink()
+            return base
+        except OSError:
+            return Path(os.environ.get("LOCALAPPDATA", str(Path.home()))) / "IHSG Signal"
+    return Path(__file__).resolve().parent.parent
+
+
+ROOT = _home()
+BUNDLE = Path(getattr(sys, "_MEIPASS", Path(__file__).resolve().parent.parent))   # file bawaan (read-only)
 
 log = logging.getLogger("ihsg")
 if not log.handlers:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)-7s | %(message)s",
                         datefmt="%H:%M:%S")
+
+
+def now_wib() -> datetime:
+    """Waktu WIB tanpa info zona. Tidak bergantung database zona waktu (Windows tidak punya bawaan)."""
+    from datetime import timedelta, timezone
+    return datetime.now(timezone(timedelta(hours=7))).replace(tzinfo=None)
 
 
 # ---------------------------------------------------------------- fraksi harga (tick size) BEI

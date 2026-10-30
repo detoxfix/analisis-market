@@ -38,22 +38,49 @@ def _bootstrap():
         dst, src = ROOT / rel, BUNDLE / rel
         if not dst.exists() and src.exists() and src.resolve() != dst.resolve():
             shutil.copy2(src, dst)
-    if sys.stdout is None or sys.stderr is None:                      # .exe tanpa konsol
-        f = open(ROOT / "logs" / "console.log", "a", encoding="utf-8", buffering=1)
-        sys.stdout = sys.stdout or f
-        sys.stderr = sys.stderr or f
     fh = RotatingFileHandler(ROOT / "logs" / "ihsg.log", maxBytes=2_000_000, backupCount=3, encoding="utf-8")
     fh.setFormatter(logging.Formatter("%(asctime)s | %(levelname)-7s | %(message)s"))
     logging.getLogger("ihsg").addHandler(fh)
     return ROOT
 
 
-ROOT = _bootstrap()
-from src.utils import load_json, log  # noqa: E402
+ROOT = SETTINGS = LOCK = LAST = None          # diisi oleh init()
+load_json = log = None
 
-SETTINGS = ROOT / "settings.json"
-LOCK = ROOT / ".update.lock"
-LAST = ROOT / "logs" / "last_run.json"
+
+def _exe_dir() -> Path:
+    return Path(sys.executable).resolve().parent if getattr(sys, "frozen", False) else Path(__file__).resolve().parent
+
+
+def init():
+    """Siapkan folder & log. Dipanggil di dalam try agar error saat start tidak memunculkan dialog yang menggantung."""
+    global ROOT, SETTINGS, LOCK, LAST, load_json, log
+    if sys.stdout is None or sys.stderr is None:                     # .exe tanpa konsol: jangan biarkan print gagal
+        f = open(_exe_dir() / "console.log", "a", encoding="utf-8", buffering=1)
+        sys.stdout = sys.stdout or f
+        sys.stderr = sys.stderr or f
+    ROOT = _bootstrap()
+    from src import utils
+    load_json, log = utils.load_json, utils.log
+    SETTINGS = ROOT / "settings.json"
+    LOCK = ROOT / ".update.lock"
+    LAST = ROOT / "logs" / "last_run.json"
+
+
+def _crash(mode: str):
+    """Tulis crash.log di folder aplikasi; di mode jendela tampilkan pesan (tanpa menggantung mode otomatis)."""
+    tb = traceback.format_exc()
+    try:
+        (_exe_dir() / "crash.log").write_text(f"{datetime.now():%Y-%m-%d %H:%M:%S} mode={mode}\n{tb}", encoding="utf-8")
+    except OSError:
+        pass
+    if mode == "gui" and sys.platform.startswith("win"):
+        try:
+            import ctypes
+            ctypes.windll.user32.MessageBoxW(0, "Aplikasi gagal dibuka. Detail di crash.log di folder aplikasi.\n\n"
+                                             + tb[-900:], APP_NAME, 0x10)
+        except Exception:  # noqa: BLE001
+            pass
 
 
 def settings() -> dict:
@@ -468,49 +495,86 @@ def gui():
 
 # ============================================================== uji kemasan
 def selftest() -> int:
-    out = ROOT / "logs" / "selftest.log"
-    lines = []
+    import faulthandler
+
+    logs = ROOT / "logs"
+    hang = open(logs / "selftest_hang.log", "w", encoding="utf-8")
+    faulthandler.dump_traceback_later(240, exit=True, file=hang)   # pengaman: bila macet, cetak posisi & keluar
+    out = open(logs / "selftest.log", "w", encoding="utf-8", buffering=1)
     ok = True
+
+    def say(x):
+        out.write(x + "\n")
+        print(x, flush=True)
+
+    say(f"python {sys.version.split()[0]} · frozen={getattr(sys, 'frozen', False)} · folder={ROOT}")
     for mod in ("pandas", "numpy", "yaml", "requests", "yfinance", "curl_cffi", "cloudscraper", "tkinter"):
         try:
             __import__(mod)
-            lines.append(f"import {mod}: OK")
+            say(f"import {mod}: OK")
         except Exception as e:  # noqa: BLE001
-            ok = False
-            lines.append(f"import {mod}: GAGAL {e!r}")
+            fatal = mod != "tkinter" or sys.platform.startswith("win")
+            ok &= not fatal
+            say(f"import {mod}: {'GAGAL' if fatal else 'gagal (abaikan di non-Windows)'} {e!r}")
     try:
         r = run_update(demo=True)
         exists = (ROOT / "output" / "demo" / "index.html").exists()
         ok &= exists
-        lines.append(f"demo pipeline: OK ({r['seconds']} dtk, dashboard {'ada' if exists else 'TIDAK ADA'})")
+        say(f"demo pipeline: OK ({r['seconds']} dtk, dashboard {'ada' if exists else 'TIDAK ADA'})")
     except Exception as e:  # noqa: BLE001
         ok = False
-        lines.append(f"demo pipeline: GAGAL {e!r}\n{traceback.format_exc()}")
-    try:                                                         # info saja (jaringan CI bisa dibatasi)
-        import yfinance as yf
-        df = yf.download("BBCA.JK", period="5d", progress=False, auto_adjust=True)
-        lines.append(f"unduh Yahoo BBCA.JK: {len(df)} baris")
-    except Exception as e:  # noqa: BLE001
-        lines.append(f"unduh Yahoo: gagal (info) {e!r}")
-    try:
-        from src import idx
-        js = idx.get_json("/primary/StockData/GetSecuritiesStock", {"start": 0, "length": 5}, "/")
-        lines.append(f"akses idx.co.id: {'OK' if js else 'diblokir (wajar di server cloud)'}")
-    except Exception as e:  # noqa: BLE001
-        lines.append(f"akses idx.co.id: gagal (info) {e!r}")
-    lines.append("HASIL: " + ("LULUS" if ok else "GAGAL"))
-    out.write_text("\n".join(lines), encoding="utf-8")
-    print("\n".join(lines))
+        say(f"demo pipeline: GAGAL {e!r}\n{traceback.format_exc()}")
+
+    def timed(label, fn, secs=60):                              # cek jaringan: info saja, dibatasi waktu
+        box = {}
+        th = threading.Thread(target=lambda: box.update(r=fn()), daemon=True)
+        th.start()
+        th.join(secs)
+        say(f"{label}: " + (box["r"] if "r" in box else f"tidak selesai dalam {secs} dtk (info)"))
+
+    def yahoo():
+        try:
+            import yfinance as yf
+            df = yf.download("BBCA.JK", period="5d", progress=False, auto_adjust=True, threads=False)
+            return f"{len(df)} baris"
+        except Exception as e:  # noqa: BLE001
+            return f"gagal (info) {e!r}"
+
+    def idx_check():
+        try:
+            from src import idx
+            js = idx.get_json("/primary/StockData/GetSecuritiesStock", {"start": 0, "length": 5}, "/", timeout=15)
+            return "OK" if js else "diblokir (wajar di server cloud)"
+        except Exception as e:  # noqa: BLE001
+            return f"gagal (info) {e!r}"
+
+    timed("unduh Yahoo BBCA.JK", yahoo)
+    timed("akses idx.co.id", idx_check)
+    say("HASIL: " + ("LULUS" if ok else "GAGAL"))
+    faulthandler.cancel_dump_traceback_later()
+    out.close()
     return 0 if ok else 1
 
 
 if __name__ == "__main__":
-    if "--selftest" in sys.argv:
-        sys.exit(selftest())
-    if "--auto" in sys.argv:
-        try:
-            run_update()
-            sys.exit(0)
-        except Exception:  # noqa: BLE001
-            sys.exit(1)
-    gui()
+    mode = "selftest" if "--selftest" in sys.argv else "auto" if "--auto" in sys.argv else "gui"
+    try:
+        init()
+        if mode == "selftest":
+            code = selftest()
+        elif mode == "auto":
+            try:
+                run_update()
+                code = 0
+            except Exception:  # noqa: BLE001
+                code = 1
+        else:
+            gui()
+            code = 0
+    except SystemExit:
+        raise
+    except BaseException:  # noqa: BLE001
+        _crash(mode)
+        code = 3
+    sys.stdout.flush() if sys.stdout else None
+    os._exit(code)                      # keluar tuntas (thread jaringan yang tersisa tidak menahan proses)
