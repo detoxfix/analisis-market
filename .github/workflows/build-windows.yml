@@ -17,21 +17,27 @@ jobs:
         run: pip install -r requirements.txt pyinstaller==6.22.3
       - name: Build IHSG Signal.exe
         run: pyinstaller --noconfirm ihsg_signal.spec
-      - name: Uji aplikasi hasil build
+      - name: Uji aplikasi hasil build (--selftest)
         shell: pwsh
-        timeout-minutes: 10
+        timeout-minutes: 12
         run: |
-          $p = Start-Process -FilePath "dist\IHSG Signal\IHSG Signal.exe" -ArgumentList "--selftest" -Wait -PassThru
-          Get-Content "dist\IHSG Signal\logs\selftest.log"
-          if ($p.ExitCode -ne 0) { Write-Error "Selftest gagal"; exit 1 }
+          $d = "dist\IHSG Signal"
+          $p = Start-Process -FilePath "$d\IHSG Signal.exe" -ArgumentList "--selftest" -PassThru
+          $null = $p.Handle
+          if (-not $p.WaitForExit(480000)) { Stop-Process -Id $p.Id -Force; Write-Host "TIMEOUT"; $code = 99 }
+          else { $code = $p.ExitCode }
+          foreach ($f in "logs\selftest.log","logs\selftest_hang.log","crash.log","console.log","logs\ihsg.log") {
+            if (Test-Path "$d\$f") { Write-Host "===== $f"; Get-Content "$d\$f" -Tail 80 }
+          }
+          if ($code -ne 0) { Write-Error "Selftest gagal (kode $code)"; exit 1 }
       - name: Bersihkan sisa uji
         shell: pwsh
         run: |
           $d = "dist\IHSG Signal"
-          foreach ($x in "logs","output","docs","data","settings.json","positions.csv",".update.lock") {
+          foreach ($x in "logs","output","docs","data","settings.json","positions.csv",".update.lock","crash.log","console.log") {
             if (Test-Path "$d\$x") { Remove-Item "$d\$x" -Recurse -Force }
           }
-          if (Test-Path "CARA PAKAI.txt") { Copy-Item "CARA PAKAI.txt" "$d\CARA PAKAI.txt" }
+          foreach ($c in "packaging\CARA PAKAI.txt","CARA PAKAI.txt") { if (Test-Path $c) { Copy-Item $c "$d\CARA PAKAI.txt"; break } }
       - uses: actions/upload-artifact@v4
         with:
           name: IHSG-Signal-Windows
