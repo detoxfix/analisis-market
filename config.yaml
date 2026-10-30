@@ -102,4 +102,5 @@ archive:                             # arsip fundamental untuk backtest jangka p
   statements_per_run: 60             # maks. saham per hari (bergilir, agar tidak kena limit Yahoo)
 
 notify:
-  telegram: true                     # aktif hanya bila env TELEGRAM_BOT_TOKEN & TELEGRAM_CHAT_ID ada
+  telegram: true                     # aktif hanya bila secret TELEGRAM_BOT_TOKEN & TELEGRAM_CHAT_ID diisi
+  dashboard_url: "https://detoxfix.github.io/analisis-market/"

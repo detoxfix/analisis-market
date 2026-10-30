@@ -248,7 +248,8 @@ def main():
     res = run(cfg, demo=a.demo, backtest_mode=a.backtest)
     write_outputs(res, a.demo)
     if not a.no_notify and not a.demo and cfg.get("notify", {}).get("telegram"):
-        notify.telegram(res, os.environ.get("TELEGRAM_BOT_TOKEN"), os.environ.get("TELEGRAM_CHAT_ID"))
+        notify.telegram(res, os.environ.get("TELEGRAM_BOT_TOKEN"), os.environ.get("TELEGRAM_CHAT_ID"),
+                        cfg.get("notify", {}).get("dashboard_url"))
 
 
 if __name__ == "__main__":
