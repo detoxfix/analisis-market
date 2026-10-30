@@ -316,6 +316,8 @@ def gui():
                 kind, val = q.get_nowait()
                 if kind == "log":
                     add_log(val)
+                elif kind == "call":
+                    val()
                 elif kind in ("done", "fail"):
                     prog.stop()
                     btn_update.configure(state="normal")
@@ -481,8 +483,34 @@ def gui():
             save_settings({**st, "telegram_token": tok.get().strip(), "telegram_chat_id": chat.get().strip(),
                            "open_dashboard": bool(od.get())})
             w.destroy()
+        def test_idx():
+            btn_idx.configure(state="disabled", text="Menguji… (± 1 menit)")
+
+            def finish(text):
+                try:
+                    btn_idx.configure(state="normal", text="Tes koneksi IDX")
+                except tk.TclError:                     # jendela pengaturan sudah ditutup
+                    pass
+                messagebox.showinfo(APP_NAME, text)
+
+            def work():
+                from src import idx
+                try:
+                    res = idx.diagnose()
+                    lines = [f"{'✓' if ok_ else '✗'} {m}: {why}" for m, ok_, why in res]
+                    good = [m for m, ok_, _ in res if ok_]
+                    head = (f"Berhasil dengan cara: {good[0]}. Data IDX dipakai mulai update berikutnya."
+                            if good else "Semua cara ditolak situs IDX dari jaringan ini.")
+                    text = head + "\n\n" + "\n".join(lines)
+                except Exception as e:  # noqa: BLE001
+                    text = f"Tes gagal: {e}"
+                q.put(("call", lambda: finish(text)))
+            threading.Thread(target=work, daemon=True).start()
+
         bf = ttk.Frame(w)
         bf.grid(row=5, column=0, columnspan=2, pady=10)
+        btn_idx = ttk.Button(bf, text="Tes koneksi IDX", command=test_idx)
+        btn_idx.pack(side="left", padx=4)
         ttk.Button(bf, text="Tes Telegram", command=test_tg).pack(side="left", padx=4)
         ttk.Button(bf, text="Simpan", command=ok).pack(side="left", padx=4)
         ttk.Button(bf, text="Batal", command=w.destroy).pack(side="left", padx=4)
