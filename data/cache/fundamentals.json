@@ -2283,15 +2283,18 @@
   "name": "PT RMK Energy Tbk",
   "sector": "Energy",
   "industry": "Thermal Coal",
-  "pe": 21.124828,
-  "pb": 3.475122,
+  "pe": 20.16461,
+  "pb": 3.317161,
   "roe": 0.1714,
   "der": 0.55154,
-  "div_yield_raw": 2.01,
-  "v": 2,
+  "div_yield_raw": 1.94,
+  "eps_ttm": 14.58,
+  "bvps": 88.63,
+  "fin_currency": "IDR",
+  "v": 3,
   "eps_growth": 2.219,
   "rev_growth": 2.254,
   "shares": 21875000000.0,
-  "ts": "2026-10-28T11:09:02"
+  "ts": "2026-10-30T16:46:46"
  }
 }
