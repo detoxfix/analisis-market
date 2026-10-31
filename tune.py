@@ -10,6 +10,7 @@ Hasil: docs/data/tuning.json (dibaca untuk menetapkan config.yaml).
 
     python tune.py            # mode "exits": uji aturan keluar saat pasar berbalik (pakai config sekarang)
     python tune.py --full     # grid lengkap syarat masuk + cara keluar
+    python tune.py --propose  # usulan parameter bulanan (walk-forward + uji 6 bulan terakhir), TIDAK diterapkan
     python tune.py --realism  # bandingkan backtest lama vs realistis (universe per tanggal, slippage, ARB)
     python tune.py --demo     # uji coba data sintetis
 """
@@ -17,6 +18,7 @@ from __future__ import annotations
 
 import argparse
 import copy
+import os
 import itertools
 import math
 import time
@@ -189,11 +191,153 @@ def run_exits(prep, ind, cfg, n_uni, demo, t0):
     log.info("Tuning aturan keluar selesai dalam %d dtk -> %s", out["seconds"], path)
 
 
+# ------------------------------------------------------------------ usulan parameter bulanan
+# Satu parameter diubah per usulan (mudah dipahami & tidak berlebihan menyesuaikan diri dengan masa lalu).
+PROPOSE_GRID = {
+    "short": {"min_score": [45, 60, 75], "market_filter": ["none", "ema20", "sma50"],
+              "trend_filter": ["none", "sma50", "sma200"], "entry_mode": ["open", "limit"],
+              "sl_atr": [1.5, 2.0, 2.5, 3.0], "rr": [[1.5, 2.5], [2.0, 3.0], [2.5, 4.0]],
+              "hold_max_days": [10, 15, 20], "market_exit": ["none", "half", "all"]},
+    "medium": {"min_score": [45, 60, 75], "market_filter": ["none", "ema20", "sma50", "sma200"],
+               "trend_filter": ["none", "sma50", "sma200"], "entry_mode": ["open", "limit"],
+               "sl_atr": [2.5, 3.0, 3.5, 4.0], "rr": [[2.0, 3.5], [2.5, 4.0], [3.0, 5.0]],
+               "hold_max_days": [30, 40, 60], "market_exit": ["none", "half", "all"]},
+}
+BULAN = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober",
+         "November", "Desember"]
+PROPOSE_RULES = {"holdout_months": 6, "block_months": 6, "min_n_select": {"short": 60, "medium": 30},
+                 "min_n_holdout": 10, "min_gain": 0.0015, "min_blocks_won": 0.6, "max_dd_worse": 0.03}
+
+
+def _seg(tr: pd.DataFrame, a=None, b=None) -> pd.DataFrame:
+    d = pd.to_datetime(tr["date"])
+    m = pd.Series(True, index=tr.index)
+    if a is not None:
+        m &= d >= a
+    if b is not None:
+        m &= d < b
+    return tr[m & (tr["outcome"] != "BATAL")]
+
+
+def _avg(tr: pd.DataFrame):
+    return float(tr["ret"].mean()) if len(tr) else None
+
+
+def propose_horizon(prep, ind, cfg, h, hold_start, rules) -> dict:
+    base = cfg["horizons"][h]
+    cur_tr = bt.trades_for(prep, h, base, cfg)
+    if cur_tr.empty:
+        return {"status": "data kurang", "reason": "Belum ada transaksi backtest untuk horizon ini."}
+    first = pd.to_datetime(cur_tr["date"]).min()
+    edges = list(pd.date_range(first, hold_start, freq=f"{rules['block_months']}MS")) + [hold_start]
+    blocks = [(a, b) for a, b in zip(edges[:-1], edges[1:]) if b > a]
+    sel_cur = _seg(cur_tr, None, hold_start)
+    min_n = rules["min_n_select"][h]
+    if len(sel_cur) < min_n:
+        return {"status": "data kurang", "reason": f"Transaksi backtest sebelum {hold_start:%d-%m-%Y} baru "
+                                                    f"{len(sel_cur)} (minimal {min_n})."}
+    cur_avg = _avg(sel_cur)
+    tried, cands = 0, []
+    for param, values in PROPOSE_GRID[h].items():
+        for v in values:
+            if base.get(param) == v:
+                continue
+            tried += 1
+            hc = {**copy.deepcopy(base), param: v}
+            tr = bt.trades_for(prep, h, hc, cfg)
+            sel = _seg(tr, None, hold_start)
+            if len(sel) < max(min_n, 0.6 * len(sel_cur)):
+                continue
+            gain = _avg(sel) - cur_avg
+            if gain < rules["min_gain"]:
+                continue
+            won = n_bl = 0
+            for a, b in blocks:
+                x, y = _seg(tr, a, b), _seg(cur_tr, a, b)
+                if len(x) >= 5 and len(y) >= 5:
+                    n_bl += 1
+                    won += _avg(x) > _avg(y)
+            if not n_bl or won / n_bl < rules["min_blocks_won"]:
+                continue
+            obj = _avg(sel) * math.sqrt(len(sel))
+            cands.append({"param": param, "new": v, "tr": tr, "sel_avg": _avg(sel), "sel_n": len(sel),
+                          "gain": gain, "blocks": [won, n_bl], "obj": obj})
+    out = {"tried": tried, "passed_selection": len(cands), "select_cur": cur_avg, "select_n": len(sel_cur),
+           "holdout_from": hold_start.strftime("%Y-%m-%d")}
+    if not cands:
+        out.update(status="tetap", reason=f"Dari {tried} perubahan yang diuji, tidak ada yang konsisten lebih baik "
+                                          "di semua periode. Parameter sekarang tetap dipakai.")
+        return out
+    best = max(cands, key=lambda c: c["obj"])           # dipilih TANPA melihat 6 bulan terakhir
+    ho_new, ho_cur = _seg(best["tr"], hold_start), _seg(cur_tr, hold_start)
+    c2 = copy.deepcopy(cfg)
+    c2["horizons"][h][best["param"]] = best["new"]
+    p_cur = portsim.run(ind, cfg, horizons=(h,), prep=prep).get("buckets", {}).get(h, {})
+    p_new = portsim.run(ind, c2, horizons=(h,), prep=prep).get("buckets", {}).get(h, {})
+    ev = {"select_cur": cur_avg, "select_new": best["sel_avg"], "select_n_new": best["sel_n"],
+          "blocks_won": best["blocks"], "holdout_cur": _avg(ho_cur), "holdout_new": _avg(ho_new),
+          "holdout_n_cur": len(ho_cur), "holdout_n_new": len(ho_new),
+          "port_ret_cur": p_cur.get("total_return"), "port_ret_new": p_new.get("total_return"),
+          "port_dd_cur": p_cur.get("max_drawdown"), "port_dd_new": p_new.get("max_drawdown")}
+    out["evidence"] = ev
+    out["change"] = {"param": best["param"], "old": base.get(best["param"]), "new": best["new"]}
+    fails = []
+    if len(ho_new) < rules["min_n_holdout"]:
+        fails.append(f"transaksi 6 bulan terakhir hanya {len(ho_new)}")
+    elif ev["holdout_cur"] is not None and ev["holdout_new"] < ev["holdout_cur"]:
+        fails.append("kalah di 6 bulan terakhir")
+    if (ev["port_dd_new"] or 0) < (ev["port_dd_cur"] or 0) - rules["max_dd_worse"]:
+        fails.append("drawdown portofolio lebih dalam")
+    if (ev["port_ret_new"] or 0) < (ev["port_ret_cur"] or 0):
+        fails.append("return portofolio lebih rendah")
+    pp = lambda x: f"{x * 100:+.2f}%".replace(".", ",")  # noqa: E731
+    if fails:
+        out.update(status="tetap", reason=(f"Kandidat terbaik ({best['param']} {base.get(best['param'])} → {best['new']}) "
+                                           f"gagal uji akhir: {', '.join(fails)}. Parameter sekarang tetap dipakai."))
+    else:
+        out.update(status="usulan", reason=(f"Rata-rata per transaksi {pp(cur_avg)} → {pp(best['sel_avg'])} sebelum "
+                                            f"{BULAN[hold_start.month - 1]} {hold_start.year}, menang di {best['blocks'][0]} dari {best['blocks'][1]} "
+                                            f"periode, dan tetap lebih baik di 6 bulan terakhir."))
+    return out
+
+
+def run_propose(prep, ind, cfg, n_uni, demo, t0, rules=None):
+    rules = {**PROPOSE_RULES, **(rules or {})}
+    last = max(d.index[-1] for d in ind.values())
+    hold_start = (last - pd.DateOffset(months=rules["holdout_months"])).normalize()
+    out = {"generated_at": now_wib().strftime("%Y-%m-%d %H:%M"), "demo": demo, "universe": n_uni,
+           "holdout_from": hold_start.strftime("%Y-%m-%d"), "rules": rules, "horizons": {}}
+    for h in ("short", "medium"):
+        out["horizons"][h] = propose_horizon(prep, ind, cfg, h, hold_start, rules)
+        v = out["horizons"][h]
+        log.info("Usulan %s: %s — %s", h, v["status"], v.get("reason"))
+    out["seconds"] = round(time.time() - t0)
+    path = ROOT / ("output/proposal_demo.json" if demo else "docs/data/proposal.json")
+    dump_json(out, path)
+    log.info("Usulan parameter selesai dalam %d dtk -> %s", out["seconds"], path)
+    token, chats = os.environ.get("TELEGRAM_BOT_TOKEN"), os.environ.get("TELEGRAM_CHAT_ID")
+    if token and chats and not demo:
+        from src.notify import proposal_message, send
+        msg = proposal_message(load_json(path), cfg.get("notify", {}).get("dashboard_url"))
+        for cid in [c.strip() for c in chats.split(",") if c.strip()]:
+            send(token, cid, msg)
+    return out
+
+
+def propose(cfg: dict, demo: bool = False) -> dict:
+    """Dipanggil aplikasi Windows: unduh data, cari usulan, simpan proposal.json."""
+    t0 = time.time()
+    ind, n_uni = load_data(cfg, demo)
+    prep = bt.prepare(ind, ("short", "medium"))
+    return run_propose(prep, ind, cfg, n_uni, demo, t0)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--demo", action="store_true")
     ap.add_argument("--full", action="store_true", help="grid lengkap syarat masuk & cara keluar")
     ap.add_argument("--realism", action="store_true", help="bandingkan backtest lama vs realistis")
+    ap.add_argument("--propose", action="store_true", help="usulan parameter bulanan (tidak diterapkan)")
     ap.add_argument("--config", default=str(ROOT / "config.yaml"))
     a = ap.parse_args()
     cfg = yaml.safe_load(open(a.config, encoding="utf-8"))
@@ -201,6 +345,9 @@ def main():
     ind, n_uni = load_data(cfg, a.demo)
     prep = bt.prepare(ind, ("short", "medium"))
     log.info("Data siap: %d saham, %.0f dtk", n_uni, time.time() - t0)
+    if a.propose:
+        run_propose(prep, ind, cfg, n_uni, a.demo, t0)
+        return
     if a.realism:
         run_realism(prep, ind, cfg, n_uni, a.demo, t0)
         return

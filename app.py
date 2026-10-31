@@ -1,10 +1,11 @@
-"""IHSG Signal — aplikasi desktop (Windows).
+"""PANDU — aplikasi desktop (Windows).
+PANDU = Portofolio · Analisis · Notifikasi · Disiplin risiko · Uji balik (sinyal saham IHSG).
 
-    IHSG Signal.exe              buka jendela aplikasi
-    IHSG Signal.exe --auto       update tanpa jendela (dipakai jadwal otomatis Windows)
-    IHSG Signal.exe --selftest   uji kemasan dengan data contoh (dipakai saat build)
+    PANDU.exe              buka jendela aplikasi
+    PANDU.exe --auto       update tanpa jendela (dipakai jadwal otomatis Windows)
+    PANDU.exe --selftest   uji kemasan dengan data contoh (dipakai saat build)
 
-Semua data tersimpan di folder aplikasi (atau %LOCALAPPDATA%\\IHSG Signal bila folder itu tidak bisa ditulis):
+Semua data tersimpan di folder aplikasi (atau %LOCALAPPDATA%\\PANDU bila folder itu tidak bisa ditulis):
 config.yaml, positions.csv, settings.json, docs\\index.html (dashboard), data\\, logs\\.
 """
 from __future__ import annotations
@@ -25,8 +26,9 @@ from datetime import datetime
 from logging.handlers import RotatingFileHandler
 from pathlib import Path
 
-APP_NAME = "IHSG Signal"
-TASK_NAME = "IHSG Signal - update harian"
+APP_NAME = "PANDU"
+TASK_NAME = "PANDU - update harian"
+OLD_TASK_NAMES = ("IHSG Signal - update harian",)      # nama lama: dipindahkan otomatis
 
 
 # ============================================================== persiapan folder & log
@@ -158,7 +160,7 @@ def schedule_exists() -> bool:
     if not sys.platform.startswith("win"):
         return False
     try:
-        return _schtasks("/Query", "/TN", TASK_NAME).returncode == 0
+        return any(_schtasks("/Query", "/TN", n).returncode == 0 for n in (TASK_NAME, *OLD_TASK_NAMES))
     except OSError:
         return False
 
@@ -166,14 +168,19 @@ def schedule_exists() -> bool:
 def schedule_set(enable: bool, hhmm: str = "17:30") -> str:
     if not sys.platform.startswith("win"):
         return "Jadwal otomatis hanya tersedia di Windows."
+    for old in OLD_TASK_NAMES:                         # bersihkan jadwal bernama lama (IHSG Signal)
+        if _schtasks("/Query", "/TN", old).returncode == 0:
+            _schtasks("/Delete", "/TN", old, "/F")
     if not enable:
+        if _schtasks("/Query", "/TN", TASK_NAME).returncode != 0:
+            return "Jadwal otomatis dimatikan."
         r = _schtasks("/Delete", "/TN", TASK_NAME, "/F")
         return "Jadwal otomatis dimatikan." if r.returncode == 0 else f"Gagal mematikan jadwal: {r.stderr.strip()}"
     cmd, args = _launch_cmd()
     esc = lambda x: x.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")  # noqa: E731
     xml = f"""<?xml version="1.0" encoding="UTF-16"?>
 <Task version="1.2" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
-  <RegistrationInfo><Description>IHSG Signal: update sinyal saham setiap hari bursa</Description></RegistrationInfo>
+  <RegistrationInfo><Description>PANDU: update sinyal saham IHSG setiap hari bursa</Description></RegistrationInfo>
   <Triggers><CalendarTrigger><StartBoundary>2026-01-01T{hhmm}:00</StartBoundary><Enabled>true</Enabled>
     <ScheduleByWeek><DaysOfWeek><Monday/><Tuesday/><Wednesday/><Thursday/><Friday/></DaysOfWeek>
     <WeeksInterval>1</WeeksInterval></ScheduleByWeek></CalendarTrigger></Triggers>
@@ -201,6 +208,7 @@ def gui():
     from tkinter import messagebox, scrolledtext, ttk
 
     import pandas as pd
+    import yaml
 
     from src import positions as POS
 
@@ -272,8 +280,8 @@ def gui():
     top.pack(fill="x", padx=18, pady=(14, 8))
     brand = tk.Frame(top, bg=C["bg"])
     brand.pack(side="left")
-    L(brand, "IHSG ", font=COND, size=20).pack(side="left")
-    L(brand, "Signal", fg=C["brass"], font=COND, size=20).pack(side="left")
+    L(brand, "PANDU", fg=C["brass"], font=COND, size=22).pack(side="left")
+    L(brand, "  sinyal saham IHSG", fg=C["mute"], size=10).pack(side="left", anchor="s", pady=(0, 5))
     status = tk.StringVar()
     tk.Label(top, textvariable=status, fg=C["mute"], bg=C["bg"], font=(UI, 9)).pack(side="right", anchor="s")
 
@@ -309,6 +317,8 @@ def gui():
     posbar.pack(fill="x", padx=18, pady=(8, 0))
     poslbl = L(posbar, "", fg=C["mute"], size=10, anchor="w", justify="left", wraplength=900)
     poslbl.pack(anchor="w")
+    monlbl = L(posbar, "", fg=C["mute"], size=10, anchor="w", justify="left", wraplength=900)
+    monlbl.pack(anchor="w", pady=(2, 0))
 
     # ---------- tombol
     bar = tk.Frame(root, bg=C["bg"])
@@ -316,7 +326,8 @@ def gui():
     btn_update = ttk.Button(bar, text="Update sekarang", style="Gold.TButton")
     btn_update.pack(side="left")
     for txt, fn in (("Buka dashboard", lambda: open_dash()), ("Posisi saya", lambda: positions_window()),
-                    ("Pengaturan", lambda: settings_window()), ("Folder data", lambda: open_path(ROOT))):
+                    ("Usulan", lambda: proposal_window()), ("Pengaturan", lambda: settings_window()),
+                    ("Folder data", lambda: open_path(ROOT))):
         ttk.Button(bar, text=txt, command=fn).pack(side="left", padx=(8, 0))
 
     sched = tk.BooleanVar(value=schedule_exists())
@@ -385,6 +396,23 @@ def gui():
                              fg=C["sell"] if need else C["mute"])
         else:
             poslbl.configure(text="Belum ada posisi tercatat. Tambahkan lewat “Posisi saya”.", fg=C["dim"])
+        mon = d.get("monitor") or {}
+        parts, worst = [], None
+        for h, v in (mon.get("horizons") or {}).items():
+            lv = v.get("level", "")
+            if lv == "BELUM CUKUP DATA":
+                lv = f"belum cukup data ({v.get('n', 0)}/{mon.get('min_trades', 10)})"
+            elif lv == "TANPA PEMBANDING":
+                continue
+            parts.append(f"{v.get('label', h)} {lv}")
+            if v.get("level") in ("BAHAYA", "WASPADA") and worst != "BAHAYA":
+                worst = v["level"]
+        prop = load_json(ROOT / "docs" / "data" / "proposal.json") or {}
+        pend = [h for h, v in (prop.get("horizons") or {}).items() if v.get("status") == "usulan" and not v.get("applied_at")]
+        txt = ("Kinerja sinyal vs backtest: " + " · ".join(parts)) if parts else ""
+        if pend:
+            txt += ("   ·   " if txt else "") + "Ada usulan parameter baru, buka “Usulan”."
+        monlbl.configure(text=txt, fg=C["sell"] if worst == "BAHAYA" else C["brass"] if (worst or pend) else C["mute"])
 
     def open_dash():
         p = dashboard_path()
@@ -548,6 +576,111 @@ def gui():
         ttk.Button(bf, text="Simpan", command=save, style="Gold.TButton").pack(side="right")
         tv.bind("<Double-1>", lambda e: edit())
 
+    # ---------- jendela usulan parameter
+    def proposal_window():
+        from src.configedit import set_horizon_param
+        w = tk.Toplevel(root)
+        w.title("Usulan parameter")
+        w.geometry("760x520")
+        w.transient(root)
+        body = tk.Frame(w, bg=C["bg"])
+        body.pack(fill="both", expand=True, padx=16, pady=14)
+        names = {"short": "Jangka pendek", "medium": "Jangka menengah"}
+        pp = lambda x: "-" if x is None else f"{x * 100:+.2f}%".replace(".", ",")  # noqa: E731
+
+        def draw():
+            for c in body.winfo_children():
+                c.destroy()
+            prop = load_json(ROOT / "docs" / "data" / "proposal.json") or {}
+            L(body, "Usulan parameter", font=COND, size=16).pack(anchor="w")
+            L(body, "Dicari dari data terbaru: dipilih tanpa melihat 6 bulan terakhir, lalu diuji di 6 bulan itu. "
+                    "Tidak ada yang diterapkan tanpa Anda klik “Terapkan”.", fg=C["mute"], size=9,
+              wraplength=700, justify="left").pack(anchor="w", pady=(2, 10))
+            if not prop:
+                L(body, "Belum ada usulan. Klik “Cari usulan baru”.", fg=C["dim"]).pack(anchor="w")
+            else:
+                L(body, f"Dibuat {prop.get('generated_at', '')}", fg=C["dim"], size=9).pack(anchor="w")
+                cfg_now = yaml.safe_load((ROOT / "config.yaml").read_text(encoding="utf-8"))
+                for h, v in (prop.get("horizons") or {}).items():
+                    card = tk.Frame(body, bg=C["panel"], highlightthickness=1, highlightbackground=C["line"])
+                    card.pack(fill="x", pady=6)
+                    inner = tk.Frame(card, bg=C["panel"])
+                    inner.pack(fill="x", padx=12, pady=10)
+                    st_ = v.get("status")
+                    ch = v.get("change")
+                    if st_ == "usulan" and ch:
+                        head = f"{names.get(h, h)}: ubah {ch['param']}  {ch['old']} → {ch['new']}"
+                        col = C["brass"]
+                    else:
+                        head, col = f"{names.get(h, h)}: tetap", C["buy"]
+                    L(inner, head, fg=col, font=COND, size=13).pack(anchor="w")
+                    L(inner, v.get("reason", ""), fg=C["ink"], size=9, wraplength=680, justify="left").pack(anchor="w")
+                    ev = v.get("evidence") or {}
+                    if ev and st_ == "usulan":
+                        L(inner, f"Per transaksi sebelum {prop.get('holdout_from', '')}: {pp(ev.get('select_cur'))} → "
+                                 f"{pp(ev.get('select_new'))}   ·   6 bulan terakhir: {pp(ev.get('holdout_cur'))} → "
+                                 f"{pp(ev.get('holdout_new'))}   ·   portofolio: return {pp(ev.get('port_ret_cur'))} → "
+                                 f"{pp(ev.get('port_ret_new'))}, drawdown {pp(ev.get('port_dd_cur'))} → {pp(ev.get('port_dd_new'))}",
+                          fg=C["mute"], size=9, wraplength=680, justify="left").pack(anchor="w", pady=(4, 0))
+                    if st_ == "usulan" and ch:
+                        now = (cfg_now.get("horizons", {}).get(h) or {}).get(ch["param"])
+                        if v.get("applied_at") or now == ch["new"]:
+                            L(inner, f"Sudah diterapkan {v.get('applied_at', '')}".strip(), fg=C["buy"], size=9).pack(anchor="w", pady=(6, 0))
+                        else:
+                            ttk.Button(inner, text="Terapkan", style="Gold.TButton",
+                                       command=lambda h=h, ch=ch: apply(h, ch)).pack(anchor="w", pady=(8, 0))
+            bf = tk.Frame(body, bg=C["bg"])
+            bf.pack(fill="x", pady=(12, 0))
+            btn = ttk.Button(bf, text="Cari usulan baru (± 5–15 menit)", command=lambda: search(btn))
+            btn.pack(side="left")
+            ttk.Button(bf, text="Tutup", command=w.destroy).pack(side="right")
+
+        def apply(h, ch):
+            if not messagebox.askyesno(APP_NAME, f"Ubah {ch['param']} ({h}) dari {ch['old']} menjadi {ch['new']}?\n\n"
+                                                 "Salinan config lama disimpan di folder backup.", parent=w):
+                return
+            path = ROOT / "config.yaml"
+            stamp = datetime.now().strftime("%Y%m%d-%H%M")
+            (ROOT / "backup").mkdir(exist_ok=True)
+            shutil.copy2(path, ROOT / "backup" / f"config-{stamp}.yaml")
+            text = set_horizon_param(path.read_text(encoding="utf-8"), h, ch["param"], ch["new"],
+                                     f"usulan {datetime.now():%Y-%m-%d}, sebelumnya {ch['old']}")
+            yaml.safe_load(text)                                   # pastikan tetap valid sebelum disimpan
+            path.write_text(text, encoding="utf-8")
+            pj = ROOT / "docs" / "data" / "proposal.json"
+            prop = load_json(pj) or {}
+            prop["horizons"][h]["applied_at"] = datetime.now().strftime("%Y-%m-%d %H:%M")
+            pj.write_text(json.dumps(prop, ensure_ascii=False, indent=1), encoding="utf-8")
+            q.put(("log", f"Usulan diterapkan: {h}.{ch['param']} = {ch['new']} (backup\\config-{stamp}.yaml)"))
+            draw()
+            refresh()
+
+        def search(btn):
+            btn.configure(state="disabled", text="Mencari… (jangan tutup aplikasi)")
+            add_log("— Mencari usulan parameter —")
+
+            def work():
+                try:
+                    import tune
+                    cfg = yaml.safe_load((ROOT / "config.yaml").read_text(encoding="utf-8"))
+                    tune.propose(cfg)
+                    msg = "Selesai mencari usulan."
+                except Exception as e:  # noqa: BLE001
+                    log.exception("Usulan gagal")
+                    msg = f"Gagal mencari usulan: {e}"
+
+                def fin():
+                    add_log(f"— {msg} —")
+                    try:
+                        draw()
+                    except tk.TclError:
+                        pass
+                    refresh()
+                q.put(("call", fin))
+            threading.Thread(target=work, daemon=True).start()
+
+        draw()
+
     # ---------- jendela pengaturan
     def settings_window():
         st = settings()
@@ -574,7 +707,7 @@ def gui():
 
         def test_tg():
             from src.notify import send
-            ok = send(tok.get().strip(), chat.get().strip(), "✅ Tes dari aplikasi IHSG Signal di laptop berhasil.")
+            ok = send(tok.get().strip(), chat.get().strip(), "✅ Tes dari aplikasi PANDU di laptop berhasil.")
             messagebox.showinfo(APP_NAME, "Pesan tes terkirim." if ok else "Gagal mengirim. Cek token & chat ID.",
                                 parent=w)
 
@@ -641,7 +774,8 @@ def selftest() -> int:
         print(x, flush=True)
 
     say(f"python {sys.version.split()[0]} · frozen={getattr(sys, 'frozen', False)} · folder={ROOT}")
-    for mod in ("pandas", "numpy", "yaml", "requests", "yfinance", "curl_cffi", "cloudscraper", "tkinter"):
+    for mod in ("pandas", "numpy", "yaml", "requests", "yfinance", "curl_cffi", "cloudscraper", "tkinter", "tune",
+                "src.monitor", "src.configedit"):
         try:
             __import__(mod)
             say(f"import {mod}: OK")

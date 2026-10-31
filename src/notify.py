@@ -80,13 +80,50 @@ def positions_block(items: list[dict] | None, errors: list[str] | None = None) -
     return "\n".join(lines)
 
 
+def monitor_block(mon: dict | None) -> str | None:
+    """Alarm penyimpangan; hanya dikirim bila ada horizon berstatus WASPADA/BAHAYA."""
+    if not mon:
+        return None
+    bad = [(h, v) for h, v in mon.get("horizons", {}).items() if v.get("level") in ("WASPADA", "BAHAYA")]
+    if not bad:
+        return None
+    lines = ["<b>━ Alarm kinerja sinyal</b>"]
+    for _, v in bad:
+        icon = "🚨" if v["level"] == "BAHAYA" else "⚠️"
+        lines.append(f"{icon} <b>{e(v['label'])}: {e(v['level'])}</b>\n   {e(v.get('text', ''))}")
+    return "\n".join(lines)
+
+
+def proposal_message(prop: dict, dashboard_url: str | None = None) -> str:
+    """Ringkasan usulan tuning bulanan (dikirim setelah tune.py --propose)."""
+    lines = [f"🧭 <b>PANDU · Usulan parameter bulanan</b> ({e(prop.get('generated_at', ''))})"]
+    for h, v in prop.get("horizons", {}).items():
+        name = H_NAME.get(h, h)
+        if v.get("status") == "usulan":
+            ch = v["change"]
+            ev = v.get("evidence", {})
+            lines.append(f"🔧 <b>{e(name)}</b>: ubah <code>{e(ch['param'])}</code> {e(str(ch['old']))} → "
+                         f"<b>{e(str(ch['new']))}</b>\n   {e(v.get('reason', ''))}"
+                         + (f"\n   Uji 6 bulan terakhir: {pct(ev.get('holdout_cur'))} → {pct(ev.get('holdout_new'))} per transaksi"
+                            if ev.get("holdout_new") is not None else ""))
+        else:
+            lines.append(f"✅ <b>{e(name)}</b>: {e(v.get('reason', 'parameter sekarang tetap dipakai'))}")
+    lines.append("Usulan TIDAK diterapkan otomatis. Terapkan lewat aplikasi (tombol Usulan) atau ubah config.yaml.")
+    if dashboard_url:
+        lines.append(f'🔗 <a href="{e(dashboard_url)}">Detail di dashboard</a>')
+    return "\n".join(lines)
+
+
 def build_messages(res: dict, dashboard_url: str | None = None, max_buys: int = 6, max_sells: int = 5,
                    positions: list[dict] | None = None) -> list[str]:
     m = res["market"]
-    head = [f"📊 <b>Sinyal IHSG — {e(res['as_of'])}</b>",
+    head = [f"🧭 <b>PANDU · Sinyal IHSG — {e(res['as_of'])}</b>",
             f"IHSG <b>{rp(m['bench'])}</b> ({pct(m['bench_chg'], 2)}) · Pasar <b>{e(m['regime'])}</b>",
             f"Dipantau {m['universe']} saham (market cap ≥ Rp 5 T)"]
     blocks = ["\n".join(head)]
+    mb = monitor_block(res.get("monitor"))
+    if mb:
+        blocks.append(mb)
     pb = positions_block(positions, res.get("positions_errors"))
     if pb:
         blocks.append(pb)

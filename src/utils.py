@@ -15,7 +15,8 @@ import pandas as pd
 def _home() -> Path:
     """Folder kerja (data, dashboard, config, posisi).
     - IHSG_HOME (env) bila diisi
-    - aplikasi .exe: folder tempat .exe berada (bila bisa ditulis), jika tidak %LOCALAPPDATA%\\IHSG Signal
+    - aplikasi .exe: folder tempat .exe berada (bila bisa ditulis), jika tidak %LOCALAPPDATA%\\PANDU
+      (atau %LOCALAPPDATA%\\IHSG Signal bila folder lama itu sudah ada)
     - selain itu: folder proyek"""
     env = os.environ.get("IHSG_HOME")
     if env:
@@ -28,7 +29,8 @@ def _home() -> Path:
             probe.unlink()
             return base
         except OSError:
-            return Path(os.environ.get("LOCALAPPDATA", str(Path.home()))) / "IHSG Signal"
+            base = Path(os.environ.get("LOCALAPPDATA", str(Path.home())))
+            return base / "IHSG Signal" if (base / "IHSG Signal").exists() else base / "PANDU"
     return Path(__file__).resolve().parent.parent
 
 

@@ -1,4 +1,4 @@
-# PyInstaller spec — membuat folder "IHSG Signal" berisi "IHSG Signal.exe"
+# PyInstaller spec — membuat folder "PANDU" berisi "PANDU.exe"
 #   pyinstaller --noconfirm ihsg_signal.spec
 from PyInstaller.utils.hooks import collect_all, collect_data_files
 
@@ -26,8 +26,8 @@ exe = EXE(
     a.scripts,
     [],
     exclude_binaries=True,
-    name="IHSG Signal",
+    name="PANDU",
     console=False,          # aplikasi berjendela (tanpa layar hitam)
     upx=False,
 )
-coll = COLLECT(exe, a.binaries, a.datas, strip=False, upx=False, name="IHSG Signal")
+coll = COLLECT(exe, a.binaries, a.datas, strip=False, upx=False, name="PANDU")

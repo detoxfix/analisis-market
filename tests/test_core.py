@@ -128,6 +128,36 @@ def test_point_in_time():
     assert not el.iloc[:14].any() and el.iloc[14:20].all() and not el.iloc[20:].any()
 
 
+def test_monitor():
+    from src.monitor import check, streak_prob
+    assert abs(streak_prob(3, 3, 0.5) - 0.125) < 1e-9 and streak_prob(5, 1, 0.0) == 0.0
+    bt = {"results": {"short": {"n": 300, "avg_ret": 0.01, "win_rate": 0.5, "std_ret": 0.05,
+                                "out_sample": {"n": 100, "avg_ret": 0.01, "win_rate": 0.5, "std_ret": 0.05}}}}
+    cfg = {"monitor": {"min_trades": 10}}
+    few = {"closed_rets": {"short": [["2026-10-01", 0.01]] * 5}}
+    assert check(few, bt, cfg)["horizons"]["short"]["level"] == "BELUM CUKUP DATA"
+    ok = {"closed_rets": {"short": [["d", r] for r in [0.05, -0.04, 0.03, -0.02, 0.06, -0.03, 0.02, 0.01, -0.01, 0.04] * 2]}}
+    assert check(ok, bt, cfg)["horizons"]["short"]["level"] in ("NORMAL", "LEBIH BAIK")
+    bad = {"closed_rets": {"short": [["d", -0.04]] * 12}}
+    r = check(bad, bt, cfg)
+    assert r["horizons"]["short"]["level"] == "BAHAYA" and r["level"] == "BAHAYA"
+    # memburuk baru-baru ini: 30 transaksi bagus lalu 20 buruk
+    late = {"closed_rets": {"short": [["d", 0.03]] * 30 + [["d", -0.03]] * 20}}
+    assert check(late, bt, cfg)["horizons"]["short"]["level"] == "BAHAYA"
+
+
+def test_config_edit():
+    import yaml
+    from src.configedit import set_horizon_param
+    t = "horizons:\n  short:\n    sl_atr: 2.5     # lama\n    rr: [2.0, 3.0]\n  medium:\n    sl_atr: 3.5\n\nfees:\n  buy: 0.1\n"
+    t2 = set_horizon_param(t, "medium", "sl_atr", 4.0, "usulan")
+    t2 = set_horizon_param(t2, "short", "rr", [2.5, 4.0])
+    t2 = set_horizon_param(t2, "medium", "trend_filter", "sma200")
+    y = yaml.safe_load(t2)
+    assert y["horizons"]["medium"] == {"sl_atr": 4.0, "trend_filter": "sma200"}
+    assert y["horizons"]["short"] == {"sl_atr": 2.5, "rr": [2.5, 4.0]} and y["fees"] == {"buy": 0.1}
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):

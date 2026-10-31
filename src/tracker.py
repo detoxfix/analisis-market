@@ -96,6 +96,9 @@ def summarize(df: pd.DataFrame) -> dict:
     opened = df[df["status"] == "OPEN"].sort_values("date", ascending=False)
     keep = ["date", "code", "horizon", "signal", "entry", "tp1", "tp2", "sl", "outcome", "entry_px",
             "exit_px", "ret", "days", "exit_date"]
-    return {"by_horizon": by_h, "all": _stats(closed["ret"]),
+    srt = closed.sort_values(["exit_date", "date"])
+    closed_rets = {h: [[str(d), float(r)] for d, r in zip(g["exit_date"], g["ret"])]
+                   for h, g in srt.groupby("horizon")}
+    return {"by_horizon": by_h, "all": _stats(closed["ret"]), "closed_rets": closed_rets,
             "cancelled": int((df["outcome"] == "BATAL").sum()),
             "open": opened[keep].to_dict("records"), "recent_closed": recent[keep].to_dict("records")}

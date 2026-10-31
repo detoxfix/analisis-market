@@ -1,0 +1,37 @@
+PANDU - APLIKASI LAPTOP (WINDOWS)
+=================================
+PANDU = Portofolio · Analisis · Notifikasi · Disiplin risiko · Uji balik
+Sinyal beli/jual saham IHSG berkapitalisasi pasar >= Rp 5 T.
+
+1. Pindahkan seluruh folder ini ke tempat tetap, misalnya:  Documents\PANDU
+   (jangan dijalankan dari dalam file .zip, dan jangan di folder Program Files)
+
+   Memperbarui dari versi lama "IHSG Signal": ekstrak isi folder ini ke folder aplikasi lama
+   (timpa file), lalu hapus "IHSG Signal.exe". Data, posisi, pengaturan & jadwal otomatis tetap terpakai.
+
+2. Klik dua kali "PANDU.exe".
+   Bila muncul "Windows protected your PC": klik "More info" -> "Run anyway".
+   (Muncul karena aplikasi buatan sendiri tidak punya sertifikat tanda tangan berbayar.)
+
+3. Klik "Update sekarang".
+   Pertama kali sekitar 5-15 menit (mengunduh 3 tahun harga + 1 tahun data transaksi asing IDX).
+   Berikutnya 2-5 menit.
+
+4. Centang "Update otomatis ... 17:30" agar berjalan sendiri setiap hari bursa.
+   Bila laptop mati/tidur pada jam itu, update dijalankan begitu laptop menyala.
+
+Tombol lain:
+- Buka dashboard  : membuka dashboard di browser (file di laptop, tidak bisa dilihat orang lain)
+- Posisi saya     : catat saham yang Anda beli -> aplikasi memberi tahu kapan TP / cut loss / jual
+- Usulan          : usulan perubahan parameter dari data terbaru; hanya berlaku bila Anda klik "Terapkan"
+                    (config lama disalin ke folder backup\)
+- Pengaturan      : modal acuan, token & chat ID Telegram (untuk notifikasi ke HP)
+- Folder data     : membuka folder tempat semua data tersimpan
+
+Baris "Kinerja sinyal vs backtest" di jendela utama adalah alarm: bila hasil rekomendasi sungguhan
+jauh lebih buruk dari perkiraan backtest, statusnya menjadi WASPADA atau BAHAYA (juga dikirim ke Telegram).
+
+Semua data ada di folder ini: config.yaml, positions.csv, settings.json, docs\ (dashboard),
+data\ (cache & arsip), logs\ (catatan proses; kirim logs\ihsg.log bila ada masalah).
+
+Alat bantu analisis, bukan nasihat investasi. Cek ulang harga di aplikasi sekuritas sebelum bertransaksi.

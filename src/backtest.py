@@ -129,6 +129,7 @@ def stats(tr: pd.DataFrame) -> dict:
     gains, losses = r[r > 0].sum(), -r[r < 0].sum()
     return {
         "n": int(len(r)), "win_rate": float((r > 0).mean()), "avg_ret": float(r.mean()),
+        "std_ret": float(r.std()) if len(r) > 1 else None,
         "median_ret": float(r.median()), "profit_factor": float(gains / losses) if losses > 0 else None,
         "avg_days": float(filled["days"].mean()), "worst": float(r.min()), "best": float(r.max()),
         "fill_rate": float(len(filled) / len(tr)),

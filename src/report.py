@@ -10,7 +10,7 @@ TEMPLATE = r"""<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
-<title>IHSG Signal</title>
+<title>PANDU · Sinyal Saham IHSG</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -33,7 +33,19 @@ a{color:var(--brass)}
 /* ---------- kepala */
 .top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;padding:18px 0 10px}
 .brand{font:700 26px/1 var(--cond);letter-spacing:.3px;margin:0}
-.brand span{color:var(--brass)}
+.brand{color:var(--brass);letter-spacing:1.5px}
+.brand small{font:500 14px var(--sans);color:var(--mute);letter-spacing:0;margin-left:10px}
+.brand abbr{text-decoration:none;cursor:help}
+.alarm{display:flex;gap:10px;align-items:baseline;margin:0 0 12px;padding:9px 12px;border-radius:7px;font-size:14px;background:var(--panel2);border-left:3px solid var(--brass)}
+.alarm.bad{border-left-color:var(--sell)}.alarm b{white-space:nowrap}
+.mon{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:14px 0 6px}
+.mon .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.mon .lv{font:700 18px/1.1 var(--cond);letter-spacing:.4px;margin:2px 0 6px}
+.lv.ok{color:var(--buy)}.lv.warn{color:var(--brass)}.lv.bad{color:var(--sell)}.lv.na{color:var(--mute)}
+.mon .card p{margin:0;font-size:14px;color:var(--mute)}
+.mon .card h4{margin:0;font:600 15px var(--cond);color:var(--ink)}
+.prop{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:10px 0}
+.prop code{background:var(--panel2);padding:1px 6px;border-radius:4px;color:var(--brass)}
 .stamp{color:var(--mute);font-size:13px}
 .stamp b{color:var(--ink);font-weight:500}
 .demo{border:1px solid var(--sell);color:var(--sell);background:var(--sell-dim);padding:9px 14px;border-radius:6px;margin:6px 0 10px;font-weight:600}
@@ -162,7 +174,7 @@ footer{color:var(--dim);font-size:13px;margin-top:36px;border-top:1px solid var(
 <body>
 <div class="wrap">
   <header class="top">
-    <h1 class="brand">IHSG <span>Signal</span></h1>
+    <h1 class="brand"><abbr title="Portofolio · Analisis · Notifikasi · Disiplin risiko · Uji balik">PANDU</abbr><small>sinyal saham IHSG</small></h1>
     <div class="stamp" id="stamp"></div>
   </header>
   <div id="demo"></div>
@@ -290,8 +302,46 @@ function hero(){
    <div class="idx"><span class="lbl">IHSG, penutupan ${tgl(D.as_of)}</span><b class="big">${n(m.bench)}</b><span class="chg ${m.bench_chg>=0?"pos":"neg"}">${pct(m.bench_chg,2)}</span>
      <div class="ma"><span>SMA50 <b>${n(last[2])}</b></span><span>SMA200 <b>${n(last[3])}</b></span><span>${m.universe} saham dipantau (≥ ${tri(D.params.min_market_cap)})</span></div></div>
    <div class="hchart">${heroChart(S)}<div class="legend"><span><i style="background:var(--brass)"></i>IHSG</span><span><i style="background:var(--hold)"></i>SMA50</span><span><i style="background:var(--dim)"></i>SMA200</span><span>6 bulan terakhir</span></div></div>
-   <div class="verdict"><p class="regime ${reg}">${esc(m.regime)}</p><p>${why}</p>
+   <div class="verdict"><p class="regime ${reg}">${esc(m.regime)}</p><p>${why}</p>${heroAlarm()}
      <ul class="plan">${["short","medium","long"].map(h=>{const [t,c]=verdictFor(h);return `<li><span class="h">${H[h]}</span><span class="act ${c}">${esc(t)}</span></li>`;}).join("")}</ul></div>`;
+}
+const LV={"NORMAL":"ok","LEBIH BAIK":"ok","WASPADA":"warn","BAHAYA":"bad"};
+function heroAlarm(){
+  const M=(D.monitor||{}).horizons||{},bad=Object.values(M).filter(v=>v.level==="WASPADA"||v.level==="BAHAYA");
+  const P=(D.proposal||{}).horizons||{},pend=Object.values(P).filter(v=>v.status==="usulan"&&!v.applied_at);
+  let h="";
+  if(bad.length)h+=`<div class="alarm ${bad.some(v=>v.level==="BAHAYA")?"bad":""}"><b>Alarm kinerja</b><span>${bad.map(v=>esc(v.label+" "+v.level.toLowerCase())).join(", ")}. Lihat tab Track record.</span></div>`;
+  if(pend.length)h+=`<div class="alarm"><b>Usulan baru</b><span>${pend.length} usulan parameter menunggu keputusan Anda (tab Track record).</span></div>`;
+  return h;
+}
+const pv=v=>Array.isArray(v)?"["+v.join(", ")+"]":String(v);
+function renderMonitor(){
+  const M=D.monitor,P=D.proposal;let h="";
+  if(M&&M.horizons&&Object.keys(M.horizons).length){
+    h+=`<h3>Kinerja sungguhan vs perkiraan backtest</h3><p class="muted">Alarm membandingkan hasil rekomendasi yang sudah selesai dengan sebaran hasil backtest. WASPADA = peluang hasil seburuk ini terjadi karena kebetulan di bawah ~5%; BAHAYA = di bawah ~1%. Alarm hanya memberi tahu, tidak mengubah apa pun.</p><div class="mon">`;
+    for(const [k,v] of Object.entries(M.horizons)){
+      const lv=LV[v.level]||"na",e=v.expected;
+      const sub=v.level==="BELUM CUKUP DATA"?`${v.n} dari ${M.min_trades} transaksi`:"";
+      h+=`<div class="card"><h4>${esc(v.label)}</h4><div class="lv ${lv}">${esc(v.level)}</div><p>${esc(v.text||sub)}</p>${e&&v.level==="BELUM CUKUP DATA"?`<p>Perkiraan backtest (${esc(e.basis)}): rata-rata ${pct(e.avg_ret)}, win rate ${pctp(e.win_rate,0)}.</p>`:""}</div>`;
+    }
+    h+=`</div>`;
+  }
+  if(P&&P.horizons){
+    h+=`<h3>Usulan parameter bulanan</h3><p class="muted">Dibuat ${esc(P.generated_at||"")}. Setiap bulan satu perubahan diuji: dipilih tanpa melihat periode sejak ${tgl(P.holdout_from)}, lalu harus tetap lebih baik di periode itu dan di simulasi portofolio. Tidak diterapkan otomatis.</p>`;
+    for(const [k,v] of Object.entries(P.horizons)){
+      const ev=v.evidence||{},ch=v.change;
+      if(v.status==="usulan"&&ch){
+        h+=`<div class="prop"><h4 style="margin:0 0 6px">${H[k]}: ubah <code>${esc(ch.param)}</code> ${esc(pv(ch.old))} → <b>${esc(pv(ch.new))}</b>${v.applied_at?` <span class="pos">· sudah diterapkan ${esc(v.applied_at)}</span>`:""}</h4><p class="muted" style="margin:0 0 8px">${esc(v.reason||"")}</p>
+        <div class="tbl"><table><tr><th></th><th>Sekarang</th><th>Usulan</th></tr>
+        <tr><td>Rata-rata per transaksi (periode pemilihan)</td><td>${pct(ev.select_cur,2)}</td><td>${pct(ev.select_new,2)}</td></tr>
+        <tr><td>Rata-rata per transaksi (6 bulan terakhir)</td><td>${pct(ev.holdout_cur,2)} <span class="name">${ev.holdout_n_cur??""} trx</span></td><td>${pct(ev.holdout_new,2)} <span class="name">${ev.holdout_n_new??""} trx</span></td></tr>
+        <tr><td>Simulasi portofolio: return</td><td>${pct(ev.port_ret_cur)}</td><td>${pct(ev.port_ret_new)}</td></tr>
+        <tr><td>Simulasi portofolio: max drawdown</td><td>${pct(ev.port_dd_cur)}</td><td>${pct(ev.port_dd_new)}</td></tr></table></div>
+        ${v.applied_at?"":`<p class="muted">Untuk menerapkan: di aplikasi laptop klik <b>Usulan → Terapkan</b>; untuk GitHub ubah baris <code>${esc(ch.param)}: ${esc(pv(ch.new))}</code> di blok <code>${k}:</code> config.yaml.</p>`}</div>`;
+      } else h+=`<div class="prop"><h4 style="margin:0 0 6px">${H[k]}: <span class="pos">tetap</span></h4><p class="muted" style="margin:0">${esc(v.reason||"")}</p></div>`;
+    }
+  }
+  return h;
 }
 function header(){
   $("stamp").innerHTML=`Data <b>${tgl(D.as_of)}</b>, diperbarui <b>${esc(D.generated_at.slice(11))} WIB</b>`;
@@ -367,7 +417,7 @@ function renderPositions(){
 }
 function renderTrack(){
   const t=D.track||{by_horizon:{},open:[],recent_closed:[]};
-  let h=`<p class="intro">Setiap rekomendasi beli dicatat lalu dinilai otomatis dengan harga sesudahnya: masuk T+1, keluar di TP, cut loss, atau batas waktu, biaya transaksi termasuk. ${t.cancelled||0} rekomendasi batal karena harga tidak sampai ke area beli.</p>
+  let h=`<p class="intro">Setiap rekomendasi beli dicatat lalu dinilai otomatis dengan harga sesudahnya: masuk T+1, keluar di TP, cut loss, atau batas waktu, biaya transaksi termasuk. ${t.cancelled||0} rekomendasi batal karena harga tidak sampai ke area beli.</p>${renderMonitor()}<h3>Hasil per horizon</h3>
   <div class="tbl"><table><tr><th>Horizon</th><th>Transaksi</th><th>Menang</th><th>Rata-rata</th><th>Profit factor</th><th>Median</th></tr>
   ${["short","medium","long"].map(k=>statRow(H[k],t.by_horizon[k])).join("")}${statRow("Total",t.all)}</table></div>`;
   const tb=(rows,cl)=>rows.length?`<div class="tbl"><table><tr><th>Tanggal sinyal</th><th>Kode</th><th>Horizon</th><th>Masuk</th><th>TP1</th><th>Cut loss</th><th>Status</th><th>Hasil</th><th>Hari</th></tr>${rows.map(r=>`<tr><td>${tgl(r.date)}</td><td><b>${r.code}</b></td><td>${H[r.horizon]}</td><td>${n(r.entry_px??r.entry)}</td><td>${n(r.tp1)}</td><td>${n(r.sl)}</td><td>${esc(r.outcome)}</td><td class="${(r.ret||0)>=0?"pos":"neg"}">${r.ret==null?"-":pct(r.ret)}</td><td>${r.days??"-"}</td></tr>`).join("")}</table></div>`:`<div class="empty">${cl}</div>`;
@@ -459,7 +509,7 @@ header();
 seg("seg-buy",renderBuy,h=>D.horizons[h].buys.length);
 seg("seg-sell",renderSell,h=>D.horizons[h].sells.length);
 $("q").oninput=renderAll;renderAll();renderPositions();renderTrack();renderBt();renderMethod();
-$("foot").textContent="IHSG Signal adalah alat bantu analisis, bukan nasihat investasi. Cek ulang harga di aplikasi sekuritas sebelum bertransaksi.";
+$("foot").textContent="PANDU (Portofolio · Analisis · Notifikasi · Disiplin risiko · Uji balik) adalah alat bantu analisis, bukan nasihat investasi. Cek ulang harga di aplikasi sekuritas sebelum bertransaksi.";
 </script>
 </body>
 </html>

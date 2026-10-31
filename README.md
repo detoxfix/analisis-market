@@ -1,4 +1,6 @@
-# IHSG Signal
+# PANDU — sinyal saham IHSG
+
+**PANDU** = **P**ortofolio · **A**nalisis · **N**otifikasi · **D**isiplin risiko · **U**ji balik.
 
 Aplikasi rekomendasi **beli / jual** saham Bursa Efek Indonesia untuk saham berkapitalisasi pasar **≥ Rp 5 triliun**, dengan tiga horizon (pendek, menengah, panjang). Setiap hari bursa aplikasi mengunduh data terbaru, menghitung skor, lalu menerbitkan dashboard berisi:
 
@@ -66,7 +68,7 @@ Dari internet rumah, aplikasi juga mengambil data **idx.co.id** (daftar emiten &
 papan pemantauan khusus, transaksi asing harian) yang diblokir untuk server GitHub.
 
 Membuat `.exe`: jalankan workflow **Build aplikasi Windows** di tab Actions → unduh artifact
-`IHSG-Signal-Windows` → ekstrak → jalankan `IHSG Signal.exe` (lihat `CARA PAKAI.txt`).
+`PANDU-Windows` → ekstrak → jalankan `PANDU.exe` (lihat `CARA PAKAI.txt`).
 Menjalankan dari kode: `python app.py` (jendela) atau `python app.py --auto` (tanpa jendela).
 
 ## Pemantau posisi pribadi
@@ -90,7 +92,7 @@ JUAL 50% (TP1), WASPADA (sinyal berbalik SELL), atau TAHAN. Dashboard (publik) t
 
 Opsi per horizon di `config.yaml`: `market_exit` (none / half / all), `market_exit_ma` (ema20 / sma50),
 `market_exit_confirm` (1–2 hari). Uji pilihan terbaik dengan workflow **Tuning strategi (manual)**
-(`python tune.py` = uji aturan keluar; `python tune.py --full` = grid lengkap).
+(`python tune.py --propose` = usulan bulanan; `--realism` = backtest lama vs realistis; tanpa argumen = uji aturan keluar; `--full` = grid lengkap).
 
 ## Metodologi singkat
 
@@ -147,3 +149,13 @@ tests/test_core.py      uji unit
 - Backtest memakai daftar saham besar saat ini → ada *survivorship bias*; perlakukan sebagai batas atas.
 - Sinyal dihitung dari harga penutupan; eksekusi T+1 bisa berbeda karena gap, ARB/ARA, atau antrean.
 - Tidak memperhitungkan berita, aksi korporasi mendadak, atau sentimen.
+
+## Belajar dari kesalahan (dengan persetujuan Anda)
+
+- **Alarm penyimpangan** (`src/monitor.py`): setiap hari hasil rekomendasi sungguhan dibandingkan dengan sebaran hasil
+  backtest. Status per horizon: BELUM CUKUP DATA · NORMAL · LEBIH BAIK · WASPADA (peluang kebetulan < ~5%) ·
+  BAHAYA (< ~1%). Tampil di dashboard (tab Track record), jendela aplikasi, dan Telegram. Tidak mengubah apa pun.
+- **Usulan parameter bulanan** (`python tune.py --propose`, otomatis tanggal 1 lewat workflow Tuning strategi):
+  satu perubahan parameter dipilih dari data sebelum 6 bulan terakhir, lalu harus tetap lebih baik di 6 bulan terakhir
+  dan di simulasi portofolio. Hasil di `docs/data/proposal.json` + Telegram. Diterapkan hanya lewat tombol
+  **Usulan → Terapkan** di aplikasi (config lama disalin ke `backup/`) atau dengan mengubah `config.yaml`.

@@ -1,4 +1,4 @@
-"""IHSG Signal — rekomendasi beli/jual harian saham BEI berkapitalisasi >= Rp 5 T.
+"""PANDU — rekomendasi beli/jual harian saham BEI berkapitalisasi >= Rp 5 T.
 
 Pemakaian:
     python main.py                # jalankan dengan data asli (butuh internet)
@@ -19,7 +19,7 @@ import yaml
 
 from src import backtest as bt
 from src import data as D
-from src import archive, idx, notify, portsim, positions, report, tracker
+from src import archive, idx, monitor, notify, portsim, positions, report, tracker
 from src.indicators import add_indicators
 from src.portfolio import allocate
 from src.sim import bench_up, market_flag
@@ -259,6 +259,20 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
             log.warning("Simulasi portofolio gagal: %s", e)
         if not demo:
             dump_json(bt_res, bt_path)
+    try:                                           # alarm penyimpangan: track record vs perkiraan backtest
+        mon = monitor.check(track, bt_res, cfg)
+        for h_, v_ in mon["horizons"].items():
+            if v_["level"] in ("WASPADA", "BAHAYA"):
+                log.warning("Alarm %s: %s — %s", v_["label"], v_["level"], v_.get("text", ""))
+    except Exception as e:  # noqa: BLE001
+        log.warning("Alarm penyimpangan gagal: %s", e)
+        mon = None
+    proposal = load_json(ROOT / ("output/proposal_demo.json" if demo else "docs/data/proposal.json"))
+    for h_, v_ in ((proposal or {}).get("horizons") or {}).items():   # usulan yang sudah ada di config = diterapkan
+        ch_ = v_.get("change") or {}
+        if v_.get("status") == "usulan" and not v_.get("applied_at") and ch_ and \
+                cfg["horizons"].get(h_, {}).get(ch_.get("param")) == ch_.get("new"):
+            v_["applied_at"] = "sudah sesuai config.yaml"
     if bt_res is not None:                         # perbandingan backtest lama vs realistis (hasil tune.py --realism)
         tun = load_json(ROOT / ("output/tuning_demo.json" if demo else "docs/data/tuning.json"), {}) or {}
         if tun.get("realism"):
@@ -302,6 +316,8 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
         "_positions_full": pos_items,
         "all": sorted(rows_all, key=lambda r: -r["mcap"]),
         "track": track,
+        "monitor": mon,
+        "proposal": proposal,
         "backtest": bt_res,
         "sources": sources,
     }
