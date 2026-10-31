@@ -70,3 +70,37 @@ def filter_universe(prices: dict[str, pd.DataFrame], shares: dict[str, float], c
     log.info("Universe akhir: %d saham lolos (dari %d) | market cap >= Rp %.1f T",
              len(kept), len(uni), u["min_market_cap"] / 1e12)
     return kept.reset_index(drop=True)
+
+
+def eligibility(df: pd.DataFrame, shares: float | None, cfg: dict) -> pd.Series:
+    """Lolos/tidaknya saham masuk universe PADA SETIAP TANGGAL (untuk backtest tanpa melihat masa depan):
+    market cap (jumlah saham x harga hari itu), likuiditas 20 hari, dan harga minimum.
+    Jumlah saham memakai data terkini (perubahan karena rights issue/buyback tidak terlacak)."""
+    u = cfg["universe"]
+    if not shares:
+        return pd.Series(False, index=df.index)
+    close = df["Close"]
+    val20 = (close * df["Volume"]).rolling(20, min_periods=15).mean()
+    ok = (close * shares >= u["min_market_cap"]) & (val20 >= u["min_avg_value_20d"]) & (close >= u["min_price"])
+    return ok.fillna(False)
+
+
+def backtest_set(prices: dict[str, pd.DataFrame], shares: dict[str, float], cfg: dict, current: list[str],
+                 build) -> dict[str, pd.DataFrame]:
+    """Saham untuk backtest: SEMUA saham yang pernah lolos syarat universe pada tanggal mana pun dalam
+    riwayat (bukan hanya yang lolos hari ini). Kolom ELIG menandai hari saham itu boleh dibeli.
+    `build(ticker)` mengembalikan DataFrame indikator (dipakai ulang bila sudah dihitung)."""
+    out = {}
+    for t, df in prices.items():
+        el = eligibility(df, shares.get(t), cfg)
+        if not el.any():
+            continue
+        d = build(t)
+        d["ELIG"] = el.reindex(d.index).fillna(False).astype(bool)
+        d.attrs["current"] = t in current           # lolos universe hari ini (untuk pembanding cara lama)
+        out[t] = d
+    extra = sorted(set(out) - set(current))
+    gone = sorted(set(current) - set(out))
+    log.info("Universe backtest per tanggal: %d saham (%d tidak lolos hari ini tapi pernah lolos%s)",
+             len(out), len(extra), f"; {len(gone)} tanpa data jumlah saham" if gone else "")
+    return out

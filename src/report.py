@@ -101,6 +101,7 @@ a{color:var(--brass)}
 .more{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px 26px;padding:12px 0 2px;font-size:14px}
 .more h4{margin:0 0 4px;font:600 15px var(--cond);color:var(--brass);letter-spacing:.3px}
 .more p{margin:0}.more ul{margin:0;padding-left:18px}.more li{margin:2px 0}
+.note{border-left:3px solid var(--brass);background:var(--panel);padding:10px 14px;border-radius:0 6px 6px 0;color:var(--ink);font-size:14px;margin:10px 0 14px}
 .kv{display:grid;grid-template-columns:auto auto;gap:2px 14px;justify-content:start}.kv span{color:var(--mute)}
 
 /* ---------- tangga harga */
@@ -404,18 +405,40 @@ function renderPortfolio(P){
   h+=`<h3>Return per tahun</h3><div class="tbl"><table><tr><th></th>${yrs.map(y=>`<th>${y}</th>`).join("")}</tr>${rows.map(([l,s])=>`<tr><td>${l}</td>${yrs.map(y=>td((s.by_year||{})[y])).join("")}</tr>`).join("")}</table></div>`;
   if(P.split&&P.split.out_sample&&P.split.out_sample.total_return!=null)h+=`<p class="muted">Periode out-of-sample (sejak ${esc(D.params.split_date||"")}): akun total ${pct(P.split.out_sample.total_return)}, max drawdown ${pct(P.split.out_sample.max_drawdown)}; IHSG ${pct((P.split.ihsg_out_sample||{}).total_return)}.</p>`;
   const sk=Object.entries(P.buckets).map(([k,b])=>`${H[k]}: ${b.skipped_full} sinyal dilewati karena kuota posisi penuh`).join(" · ");
-  h+=`<p class="muted">${sk}. Hasil simulasi bukan jaminan hasil ke depan; universe memakai market cap saat ini (bias survivorship).</p>`;
+  h+=`<p class="muted">${sk}. Hasil simulasi bukan jaminan hasil ke depan.</p>`;
   return h;
+}
+function assumeText(a){
+  if(!a)return "Universe memakai market cap saat ini (bias survivorship) dan eksekusi ideal — anggap sebagai batas atas, bukan janji hasil.";
+  const p=[];
+  p.push(a.point_in_time?`Universe per tanggal: saham hanya dibeli pada hari market cap & likuiditasnya lolos batas${a.n_not_current?` (${a.n_not_current} dari ${a.n_stocks} saham yang diuji kini sudah tidak lolos)`:""}`:"Universe memakai daftar saham yang lolos hari ini (bias survivorship)");
+  if(a.slippage_ticks||a.limit_through||a.arb){
+    if(a.slippage_ticks)p.push(`cut loss terisi ${a.slippage_ticks} fraksi harga lebih buruk`);
+    p.push(a.auction_slippage_ticks?`beli di open/jual di close ${a.auction_slippage_ticks} fraksi lebih buruk`:"beli di open/jual di close di harga lelang");
+    if(a.limit_through)p.push("antre beli dan TP baru terisi bila harga menembus 1 fraksi");
+    if(a.arb)p.push("saham terkunci ARB tidak bisa dijual hari itu");
+  } else p.push("eksekusi ideal tanpa slippage");
+  return p.join("; ")+". Saham yang sudah delisting tidak tersedia di data gratis, jadi hasil masih sedikit optimistis.";
+}
+function renderRealism(R){
+  if(!R||!R.steps||!R.steps.length)return "";
+  const td=v=>`<td class="${v==null?"":v>=0?"pos":"neg"}">${pct(v)}</td>`;
+  let h=`<h3>Seberapa optimistis backtest lama?</h3><p class="muted">Realisme ditambahkan selangkah demi selangkah (uji ${esc(R.generated_at)}${R.demo?", data demo":""}; ${R.universe_backtest} saham diuji, ${R.universe_today} lolos hari ini).</p>
+  <div class="tbl"><table><tr><th>Asumsi</th><th>Pendek: rata per trx</th><th>Menengah: rata per trx</th><th>Akun total: return</th><th>Max drawdown</th><th>Out-of-sample</th></tr>`;
+  for(const r of R.steps){const c=r.portfolio.combined||{},o=r.portfolio.combined_oos||{};
+    h+=`<tr><td>${esc(r.name)}</td>${td((r.trades.short||{}).avg_ret)}${td((r.trades.medium||{}).avg_ret)}${td(c.total_return)}<td class="neg">${pct(c.max_drawdown)}</td>${td(o.total_return)}</tr>`;}
+  return h+`</table></div>`;
 }
 function renderBt(){
   const b=D.backtest;
   if(!b||!b.results){$("p-bt").innerHTML='<div class="empty">Backtest belum dijalankan.</div>';return;}
-  let h=renderPortfolio(b.portfolio)+`<h2>Backtest per transaksi</h2><p class="muted">Dijalankan ${esc(b.generated_at)}. Masuk saat skor menembus ambang BUY, keluar via TP/SL/time-stop, biaya termasuk. Universe memakai market cap saat ini (bias survivorship) — anggap sebagai batas atas, bukan janji hasil.</p>
+  let h=renderPortfolio(b.portfolio)+`<h2>Backtest per transaksi</h2><p class="muted">Dijalankan ${esc(b.generated_at)}. Masuk saat skor menembus ambang BUY, keluar via TP/SL/time-stop, biaya termasuk.</p><p class="note">Asumsi: ${esc(assumeText(b.assumptions))}</p>
   <div class="tbl"><table><tr><th>Horizon</th><th>Transaksi</th><th>Win rate</th><th>Rata-rata</th><th>Profit factor</th><th>Rata hari</th></tr>`;
   for(const [k,s] of Object.entries(b.results)){h+=statRow(H[k]+" (semua)",s);if(s.in_sample)h+=statRow(H[k]+" · in-sample",s.in_sample);if(s.out_sample)h+=statRow(H[k]+" · out-of-sample",s.out_sample);if(s.strong_only)h+=statRow(H[k]+" (STRONG BUY saja)",s.strong_only);}
   h+=`</table></div>`;
   for(const [k,s] of Object.entries(b.results)) if(s.by_year) h+=`<p class="muted">${H[k]} per tahun: ${Object.entries(s.by_year).map(([y,v])=>y+": "+(v.n?v.n+" trx, rata "+pct(v.avg_ret)+", PF "+dec(v.profit_factor,2):"-")).join(" · ")}</p>`;
-  for(const [k,s] of Object.entries(b.results)) if(s.outcomes) h+=`<p class="muted">${H[k]}: periode ${s.period?s.period.join(" s/d "):"-"} · hasil keluar: ${Object.entries(s.outcomes).map(([a,c])=>a+" "+c).join(", ")}</p>`;
+  for(const [k,s] of Object.entries(b.results)) if(s.outcomes) h+=`<p class="muted">${H[k]}: periode ${s.period?s.period.join(" s/d "):"-"} · hasil keluar: ${Object.entries(s.outcomes).map(([a,c])=>a+" "+c).join(", ")}${s.arb_blocked?` · ${s.arb_blocked} transaksi tertahan ARB`:""}${s.not_current?` · ${s.not_current} transaksi pada saham yang kini sudah tidak lolos universe`:""}</p>`;
+  h+=renderRealism(b.realism);
   $("p-bt").innerHTML=h;
 }
 function renderMethod(){

@@ -26,7 +26,7 @@ def _load() -> pd.DataFrame:
 
 
 def update(prices: dict[str, pd.DataFrame], new_recs: list[dict], fees: dict, as_of: pd.Timestamp,
-           demo: bool = False, bench: pd.Series | None = None) -> dict:
+           demo: bool = False, bench: pd.Series | None = None, exec_cfg: dict | None = None) -> dict:
     df = _load() if not demo else pd.DataFrame(columns=COLS)
     df = df.astype({"status": "object", "outcome": "object", "entry_date": "object",
                     "exit_date": "object", "tp1_hit": "object", "market_exit": "object", "market_exit_ma": "object",
@@ -41,7 +41,7 @@ def update(prices: dict[str, pd.DataFrame], new_recs: list[dict], fees: dict, as
         pos = p.index.get_indexer([pd.Timestamp(row["date"])], method="pad")[0]
         if pos < 0:
             continue
-        res = simulate(p, int(pos), row.to_dict(), fees, bench)
+        res = simulate(p, int(pos), row.to_dict(), fees, bench, exec_cfg)
         if res["outcome"] == "MENUNGGU":
             continue
         open_ = res["outcome"] == "OPEN" or res["outcome"].endswith("OPEN")
