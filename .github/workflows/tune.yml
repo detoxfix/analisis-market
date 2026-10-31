@@ -1,13 +1,16 @@
-name: Tuning strategi (manual)
+name: Tuning strategi
 
 on:
+  schedule:
+    - cron: "17 1 1 * *"     # tanggal 1 setiap bulan, 08:17 WIB: usulan parameter bulanan
   workflow_dispatch:
     inputs:
       mode:
         description: "Jenis uji"
         type: choice
-        default: realism
+        default: propose
         options:
+          - propose   # usulan parameter bulanan (tidak diterapkan otomatis)
           - realism   # bandingkan backtest lama vs realistis
           - exits     # aturan keluar saat pasar berbalik
           - full      # grid lengkap (lama, ~30-60 menit)
@@ -35,19 +38,24 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Jalankan tuning
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          case "${{ inputs.mode }}" in
+          case "${{ inputs.mode || 'propose' }}" in
             full) python tune.py --full ;;
             exits) python tune.py ;;
-            *) python tune.py --realism ;;
+            realism) python tune.py --realism ;;
+            *) python tune.py --propose ;;
           esac
           touch docs/.nojekyll
 
-      - name: Simpan hasil (docs/data/tuning.json)
+      - name: Simpan hasil (docs/data/tuning.json & proposal.json)
         run: |
           git config user.name "ihsg-signal-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data/tuning.json docs/.nojekyll data/cache
+          git add docs/.nojekyll data/cache
+          for f in docs/data/tuning.json docs/data/proposal.json; do [ -f "$f" ] && git add "$f"; done
           git commit -m "Hasil tuning $(TZ=Asia/Jakarta date +%F)" || echo "Tidak ada perubahan"
           git pull --rebase
           git push
