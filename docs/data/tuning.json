@@ -13453,10 +13453,10 @@
   "seconds": 60
  },
  "realism": {
-  "generated_at": "2026-10-31 19:06",
+  "generated_at": "2026-10-31 20:40",
   "demo": false,
-  "universe_today": 122,
-  "universe_backtest": 195,
+  "universe_today": 123,
+  "universe_backtest": 196,
   "split_date": "2025-05-01",
   "steps": [
    {
@@ -13469,34 +13469,34 @@
     },
     "trades": {
      "short": {
-      "n": 974,
-      "win_rate": 0.464066,
-      "avg_ret": 0.013326,
-      "median_ret": -0.008502,
-      "profit_factor": 1.349046,
-      "avg_days": 11.417864,
-      "fill_rate": 0.725782,
+      "n": 982,
+      "win_rate": 0.467413,
+      "avg_ret": 0.014665,
+      "median_ret": -0.007614,
+      "profit_factor": 1.386432,
+      "avg_days": 11.406314,
+      "fill_rate": 0.727407,
       "worst": -0.366279,
       "best": 0.320791,
       "in_sample": {
        "n": 246,
        "win_rate": 0.45935,
-       "avg_ret": 0.011848,
+       "avg_ret": 0.011519,
        "median_ret": -0.005126,
-       "profit_factor": 1.362206,
+       "profit_factor": 1.352134,
        "avg_days": 12.252033,
        "fill_rate": 0.778481,
        "worst": -0.116019,
        "best": 0.260432
       },
       "out_sample": {
-       "n": 728,
-       "win_rate": 0.465659,
-       "avg_ret": 0.013825,
-       "median_ret": -0.01037,
-       "profit_factor": 1.345412,
-       "avg_days": 11.135989,
-       "fill_rate": 0.709552,
+       "n": 736,
+       "win_rate": 0.470109,
+       "avg_ret": 0.015717,
+       "median_ret": -0.009984,
+       "profit_factor": 1.395878,
+       "avg_days": 11.123641,
+       "fill_rate": 0.711799,
        "worst": -0.366279,
        "best": 0.320791
       },
@@ -13504,74 +13504,74 @@
        "2024": {
         "n": 169,
         "win_rate": 0.467456,
-        "avg_ret": 0.009816,
-        "profit_factor": 1.299825
+        "avg_ret": 0.009336,
+        "profit_factor": 1.285177
        },
        "2025": {
-        "n": 530,
-        "win_rate": 0.488679,
-        "avg_ret": 0.023934,
-        "profit_factor": 1.69643
+        "n": 537,
+        "win_rate": 0.495345,
+        "avg_ret": 0.026574,
+        "profit_factor": 1.783471
        },
        "2026": {
-        "n": 275,
-        "win_rate": 0.414545,
-        "avg_ret": -0.004963,
-        "profit_factor": 0.898437
+        "n": 276,
+        "win_rate": 0.413043,
+        "avg_ret": -0.005243,
+        "profit_factor": 0.892965
        }
       },
       "outcomes": {
-       "TIME": 441,
+       "TIME": 442,
        "SL": 328,
-       "TP2": 119,
+       "TP2": 126,
        "TP1+TIME": 64,
        "TP1+BE": 22
       }
      },
      "medium": {
-      "n": 633,
-      "win_rate": 0.442338,
-      "avg_ret": 0.030791,
-      "median_ret": -0.028894,
-      "profit_factor": 1.509182,
-      "avg_days": 29.011058,
-      "fill_rate": 0.670551,
+      "n": 634,
+      "win_rate": 0.444795,
+      "avg_ret": 0.032065,
+      "median_ret": -0.027769,
+      "profit_factor": 1.532677,
+      "avg_days": 28.993691,
+      "fill_rate": 0.670899,
       "worst": -0.920848,
       "best": 0.621334,
       "in_sample": {
        "n": 315,
-       "win_rate": 0.457143,
-       "avg_ret": 0.023183,
-       "median_ret": -0.022906,
-       "profit_factor": 1.408872,
-       "avg_days": 29.695238,
-       "fill_rate": 0.690789,
+       "win_rate": 0.460317,
+       "avg_ret": 0.023356,
+       "median_ret": -0.019994,
+       "profit_factor": 1.412986,
+       "avg_days": 29.669841,
+       "fill_rate": 0.687773,
        "worst": -0.288921,
        "best": 0.621334
       },
       "out_sample": {
-       "n": 318,
-       "win_rate": 0.427673,
-       "avg_ret": 0.038327,
-       "median_ret": -0.036366,
-       "profit_factor": 1.596927,
-       "avg_days": 28.333333,
-       "fill_rate": 0.651639,
+       "n": 319,
+       "win_rate": 0.429467,
+       "avg_ret": 0.040664,
+       "median_ret": -0.036123,
+       "profit_factor": 1.637458,
+       "avg_days": 28.326019,
+       "fill_rate": 0.655031,
        "worst": -0.920848,
        "best": 0.604977
       },
       "by_year": {
        "2024": {
         "n": 292,
-        "win_rate": 0.445205,
-        "avg_ret": 0.016527,
-        "profit_factor": 1.281408
+        "win_rate": 0.44863,
+        "avg_ret": 0.016714,
+        "profit_factor": 1.285352
        },
        "2025": {
-        "n": 243,
-        "win_rate": 0.493827,
-        "avg_ret": 0.072016,
-        "profit_factor": 2.353244
+        "n": 244,
+        "win_rate": 0.495902,
+        "avg_ret": 0.074933,
+        "profit_factor": 2.421394
        },
        "2026": {
         "n": 98,
@@ -13582,16 +13582,16 @@
       },
       "outcomes": {
        "TIME": 267,
-       "SL": 243,
-       "TP2": 79,
-       "TP1+TIME": 37,
+       "SL": 242,
+       "TP2": 80,
+       "TP1+TIME": 38,
        "TP1+BE": 7
       }
      }
     },
     "portfolio": {
      "short": {
-      "total_return": 0.78894,
+      "total_return": 0.788939,
       "cagr": 0.234348,
       "max_drawdown": -0.20803,
       "dd_peak": "2026-01-20",
@@ -13609,56 +13609,56 @@
       }
      },
      "medium": {
-      "total_return": 0.254343,
-      "cagr": 0.08549,
-      "max_drawdown": -0.221907,
+      "total_return": 0.247954,
+      "cagr": 0.083486,
+      "max_drawdown": -0.22279,
       "dd_peak": "2026-09-07",
       "dd_trough": "2026-10-12",
-      "worst_month": -0.161309,
-      "sharpe": 0.568742,
-      "avg_exposure": 0.559586,
-      "trades": 120,
-      "win_rate": 0.366667,
-      "avg_trade": 0.017462,
+      "worst_month": -0.161994,
+      "sharpe": 0.555774,
+      "avg_exposure": 0.557149,
+      "trades": 122,
+      "win_rate": 0.368852,
+      "avg_trade": 0.017208,
       "by_year": {
-       "2024": -0.083686,
-       "2025": 0.454476,
-       "2026": -0.058836
+       "2024": -0.086369,
+       "2025": 0.465064,
+       "2026": -0.067667
       }
      },
      "combined": {
-      "total_return": 0.234091,
-      "cagr": 0.079113,
-      "max_drawdown": -0.092097,
+      "total_return": 0.232174,
+      "cagr": 0.078506,
+      "max_drawdown": -0.096363,
       "dd_peak": "2026-01-20",
       "dd_trough": "2026-06-30",
-      "worst_month": -0.047651,
-      "sharpe": 1.032983,
-      "avg_exposure": 0.278918,
+      "worst_month": -0.047721,
+      "sharpe": 1.019792,
+      "avg_exposure": 0.277877,
       "trades": null,
       "win_rate": null,
       "avg_trade": null,
       "by_year": {
-       "2024": 0.00216,
-       "2025": 0.230044,
-       "2026": 0.001128
+       "2024": 0.001355,
+       "2025": 0.232762,
+       "2026": -0.001829
       }
      },
      "combined_oos": {
-      "total_return": 0.218263,
-      "cagr": 0.141187,
-      "max_drawdown": -0.087781,
+      "total_return": 0.218311,
+      "cagr": 0.141218,
+      "max_drawdown": -0.089714,
       "dd_peak": "2026-01-09",
       "dd_trough": "2026-06-26",
-      "worst_month": -0.023948,
-      "sharpe": 2.753381,
+      "worst_month": -0.023798,
+      "sharpe": 2.706671,
       "avg_exposure": null,
       "trades": null,
       "win_rate": null,
       "avg_trade": null,
       "by_year": {
-       "2025": 0.204344,
-       "2026": 0.011557
+       "2025": 0.210105,
+       "2026": 0.006782
       }
      }
     }
@@ -13673,109 +13673,109 @@
     },
     "trades": {
      "short": {
-      "n": 1033,
-      "win_rate": 0.422072,
-      "avg_ret": 0.005082,
-      "median_ret": -0.022728,
-      "profit_factor": 1.116588,
-      "avg_days": 11.055179,
-      "fill_rate": 0.733665,
+      "n": 1036,
+      "win_rate": 0.42278,
+      "avg_ret": 0.005619,
+      "median_ret": -0.022549,
+      "profit_factor": 1.129058,
+      "avg_days": 11.054054,
+      "fill_rate": 0.733192,
       "worst": -0.366279,
       "best": 0.316221,
       "in_sample": {
-       "n": 233,
-       "win_rate": 0.416309,
-       "avg_ret": -0.000622,
-       "median_ret": -0.015876,
-       "profit_factor": 0.98412,
-       "avg_days": 11.918455,
-       "fill_rate": 0.779264,
+       "n": 232,
+       "win_rate": 0.413793,
+       "avg_ret": -0.001029,
+       "median_ret": -0.016113,
+       "profit_factor": 0.97385,
+       "avg_days": 11.905172,
+       "fill_rate": 0.778523,
        "worst": -0.126958,
        "best": 0.2693
       },
       "out_sample": {
-       "n": 800,
-       "win_rate": 0.42375,
-       "avg_ret": 0.006743,
-       "median_ret": -0.026497,
-       "profit_factor": 1.150296,
-       "avg_days": 10.80375,
-       "fill_rate": 0.721371,
+       "n": 804,
+       "win_rate": 0.425373,
+       "avg_ret": 0.007537,
+       "median_ret": -0.02519,
+       "profit_factor": 1.168461,
+       "avg_days": 10.808458,
+       "fill_rate": 0.721076,
        "worst": -0.366279,
        "best": 0.316221
       },
       "by_year": {
        "2024": {
-        "n": 157,
-        "win_rate": 0.43949,
-        "avg_ret": -2.2e-05,
-        "profit_factor": 0.999424
+        "n": 156,
+        "win_rate": 0.435897,
+        "avg_ret": -0.000623,
+        "profit_factor": 0.983471
        },
        "2025": {
-        "n": 575,
-        "win_rate": 0.455652,
-        "avg_ret": 0.019037,
-        "profit_factor": 1.496344
+        "n": 578,
+        "win_rate": 0.458478,
+        "avg_ret": 0.020233,
+        "profit_factor": 1.530269
        },
        "2026": {
-        "n": 301,
-        "win_rate": 0.348837,
-        "avg_ret": -0.018916,
-        "profit_factor": 0.666854
+        "n": 302,
+        "win_rate": 0.347682,
+        "avg_ret": -0.019126,
+        "profit_factor": 0.663657
        }
       },
       "outcomes": {
        "TIME": 425,
        "SL": 403,
-       "TP2": 113,
+       "TP2": 116,
        "TP1+TIME": 64,
        "TP1+BE": 28
       }
      },
      "medium": {
-      "n": 696,
-      "win_rate": 0.395115,
-      "avg_ret": 0.012882,
-      "median_ret": -0.05151,
-      "profit_factor": 1.191423,
-      "avg_days": 27.908046,
-      "fill_rate": 0.679688,
+      "n": 697,
+      "win_rate": 0.395983,
+      "avg_ret": 0.013817,
+      "median_ret": -0.051423,
+      "profit_factor": 1.205901,
+      "avg_days": 27.898135,
+      "fill_rate": 0.679337,
       "worst": -0.288921,
-      "best": 0.539919,
+      "best": 0.599564,
       "in_sample": {
        "n": 313,
        "win_rate": 0.42492,
-       "avg_ret": 0.008617,
+       "avg_ret": 0.008606,
        "median_ret": -0.038681,
-       "profit_factor": 1.138578,
-       "avg_days": 29.348243,
-       "fill_rate": 0.724537,
+       "profit_factor": 1.138378,
+       "avg_days": 29.332268,
+       "fill_rate": 0.722864,
        "worst": -0.288921,
        "best": 0.506155
       },
       "out_sample": {
-       "n": 383,
-       "win_rate": 0.370757,
-       "avg_ret": 0.016368,
-       "median_ret": -0.054782,
-       "profit_factor": 1.228995,
-       "avg_days": 26.73107,
-       "fill_rate": 0.646959,
+       "n": 384,
+       "win_rate": 0.372396,
+       "avg_ret": 0.018065,
+       "median_ret": -0.054288,
+       "profit_factor": 1.254037,
+       "avg_days": 26.729167,
+       "fill_rate": 0.647555,
        "worst": -0.247612,
-       "best": 0.539919
+       "best": 0.599564
       },
       "by_year": {
        "2024": {
         "n": 288,
         "win_rate": 0.416667,
-        "avg_ret": 0.002777,
-        "profit_factor": 1.043845
+        "avg_ret": 0.002766,
+        "profit_factor": 1.043649
        },
        "2025": {
-        "n": 289,
-        "win_rate": 0.453287,
-        "avg_ret": 0.054393,
-        "profit_factor": 1.898806
+        "n": 290,
+        "win_rate": 0.455172,
+        "avg_ret": 0.056509,
+        "profit_factor": 1.940694
        },
        "2026": {
         "n": 119,
@@ -13785,9 +13785,9 @@
        }
       },
       "outcomes": {
-       "SL": 303,
-       "TIME": 277,
-       "TP2": 69,
+       "SL": 302,
+       "TIME": 278,
+       "TP2": 70,
        "TP1+TIME": 41,
        "TP1+BE": 6
       }
@@ -13813,56 +13813,56 @@
       }
      },
      "medium": {
-      "total_return": 0.16728,
-      "cagr": 0.057589,
-      "max_drawdown": -0.225277,
+      "total_return": 0.165282,
+      "cagr": 0.056933,
+      "max_drawdown": -0.226379,
       "dd_peak": "2024-03-01",
       "dd_trough": "2025-04-24",
-      "worst_month": -0.141158,
-      "sharpe": 0.433948,
-      "avg_exposure": 0.579396,
+      "worst_month": -0.141243,
+      "sharpe": 0.430132,
+      "avg_exposure": 0.578099,
       "trades": 133,
       "win_rate": 0.360902,
-      "avg_trade": 0.013353,
+      "avg_trade": 0.013049,
       "by_year": {
-       "2024": -0.001734,
-       "2025": 0.370672,
-       "2026": -0.14691
+       "2024": -0.002973,
+       "2025": 0.370109,
+       "2026": -0.146961
       }
      },
      "combined": {
-      "total_return": 0.055614,
-      "cagr": 0.019785,
-      "max_drawdown": -0.115967,
+      "total_return": 0.055015,
+      "cagr": 0.019576,
+      "max_drawdown": -0.115983,
       "dd_peak": "2024-12-10",
       "dd_trough": "2025-04-24",
-      "worst_month": -0.061936,
-      "sharpe": 0.326733,
-      "avg_exposure": 0.269054,
+      "worst_month": -0.061919,
+      "sharpe": 0.323891,
+      "avg_exposure": 0.268594,
       "trades": null,
       "win_rate": null,
       "avg_trade": null,
       "by_year": {
-       "2024": 0.005979,
-       "2025": 0.130184,
-       "2026": -0.071532
+       "2024": 0.005607,
+       "2025": 0.129928,
+       "2026": -0.071505
       }
      },
      "combined_oos": {
-      "total_return": 0.094567,
-      "cagr": 0.06231,
-      "max_drawdown": -0.097671,
+      "total_return": 0.094398,
+      "cagr": 0.062201,
+      "max_drawdown": -0.097644,
       "dd_peak": "2026-01-02",
       "dd_trough": "2026-06-26",
-      "worst_month": -0.053178,
-      "sharpe": 1.536986,
+      "worst_month": -0.053123,
+      "sharpe": 1.536786,
       "avg_exposure": null,
       "trades": null,
       "win_rate": null,
       "avg_trade": null,
       "by_year": {
-       "2025": 0.16798,
-       "2026": -0.062855
+       "2025": 0.167739,
+       "2026": -0.062805
       }
      }
     }
@@ -13880,109 +13880,109 @@
     },
     "trades": {
      "short": {
-      "n": 953,
-      "win_rate": 0.407135,
-      "avg_ret": -0.000669,
-      "median_ret": -0.029553,
-      "profit_factor": 0.985843,
-      "avg_days": 10.910808,
-      "fill_rate": 0.662265,
+      "n": 956,
+      "win_rate": 0.40795,
+      "avg_ret": -6.3e-05,
+      "median_ret": -0.02907,
+      "profit_factor": 0.998674,
+      "avg_days": 10.910042,
+      "fill_rate": 0.66205,
       "worst": -0.366279,
       "best": 0.316221,
       "in_sample": {
-       "n": 213,
-       "win_rate": 0.380282,
-       "avg_ret": -0.011764,
-       "median_ret": -0.022728,
-       "profit_factor": 0.734247,
-       "avg_days": 11.71831,
-       "fill_rate": 0.705298,
+       "n": 212,
+       "win_rate": 0.377358,
+       "avg_ret": -0.012234,
+       "median_ret": -0.024142,
+       "profit_factor": 0.72492,
+       "avg_days": 11.70283,
+       "fill_rate": 0.704319,
        "worst": -0.126958,
        "best": 0.260432
       },
       "out_sample": {
-       "n": 740,
-       "win_rate": 0.414865,
-       "avg_ret": 0.002524,
-       "median_ret": -0.030616,
-       "profit_factor": 1.052447,
-       "avg_days": 10.678378,
-       "fill_rate": 0.650836,
+       "n": 744,
+       "win_rate": 0.416667,
+       "avg_ret": 0.003406,
+       "median_ret": -0.030309,
+       "profit_factor": 1.070978,
+       "avg_days": 10.68414,
+       "fill_rate": 0.650919,
        "worst": -0.366279,
        "best": 0.316221
       },
       "by_year": {
        "2024": {
-        "n": 146,
-        "win_rate": 0.40411,
-        "avg_ret": -0.010723,
-        "profit_factor": 0.747467
+        "n": 145,
+        "win_rate": 0.4,
+        "avg_ret": -0.011403,
+        "profit_factor": 0.733281
        },
        "2025": {
-        "n": 533,
-        "win_rate": 0.442777,
-        "avg_ret": 0.013998,
-        "profit_factor": 1.333899
+        "n": 536,
+        "win_rate": 0.445896,
+        "avg_ret": 0.015316,
+        "profit_factor": 1.367381
        },
        "2026": {
-        "n": 274,
-        "win_rate": 0.339416,
-        "avg_ret": -0.023844,
-        "profit_factor": 0.60407
+        "n": 275,
+        "win_rate": 0.338182,
+        "avg_ret": -0.024057,
+        "profit_factor": 0.601071
        }
       },
       "outcomes": {
        "TIME": 391,
        "SL": 388,
-       "TP2": 94,
+       "TP2": 97,
        "TP1+TIME": 60,
        "TP1+BE": 20
       }
      },
      "medium": {
-      "n": 696,
-      "win_rate": 0.395115,
-      "avg_ret": 0.010344,
-      "median_ret": -0.051598,
-      "profit_factor": 1.149592,
-      "avg_days": 27.962644,
-      "fill_rate": 0.679688,
+      "n": 697,
+      "win_rate": 0.395983,
+      "avg_ret": 0.011292,
+      "median_ret": -0.051597,
+      "profit_factor": 1.163775,
+      "avg_days": 27.952654,
+      "fill_rate": 0.679337,
       "worst": -0.288921,
-      "best": 0.539919,
+      "best": 0.599564,
       "in_sample": {
        "n": 313,
        "win_rate": 0.42492,
-       "avg_ret": 0.006277,
+       "avg_ret": 0.006267,
        "median_ret": -0.038681,
-       "profit_factor": 1.098177,
-       "avg_days": 29.370607,
-       "fill_rate": 0.724537,
+       "profit_factor": 1.097998,
+       "avg_days": 29.354633,
+       "fill_rate": 0.722864,
        "worst": -0.288921,
        "best": 0.506155
       },
       "out_sample": {
-       "n": 383,
-       "win_rate": 0.370757,
-       "avg_ret": 0.013667,
-       "median_ret": -0.057603,
-       "profit_factor": 1.186192,
-       "avg_days": 26.81201,
-       "fill_rate": 0.646959,
+       "n": 384,
+       "win_rate": 0.372396,
+       "avg_ret": 0.015387,
+       "median_ret": -0.056288,
+       "profit_factor": 1.21073,
+       "avg_days": 26.809896,
+       "fill_rate": 0.647555,
        "worst": -0.247612,
-       "best": 0.539919
+       "best": 0.599564
       },
       "by_year": {
        "2024": {
         "n": 288,
         "win_rate": 0.416667,
-        "avg_ret": 0.000346,
-        "profit_factor": 1.005309
+        "avg_ret": 0.000335,
+        "profit_factor": 1.005134
        },
        "2025": {
-        "n": 289,
-        "win_rate": 0.453287,
-        "avg_ret": 0.051855,
-        "profit_factor": 1.836029
+        "n": 290,
+        "win_rate": 0.455172,
+        "avg_ret": 0.054001,
+        "profit_factor": 1.877289
        },
        "2026": {
         "n": 119,
@@ -13992,9 +13992,9 @@
        }
       },
       "outcomes": {
-       "SL": 303,
-       "TIME": 279,
-       "TP2": 67,
+       "SL": 302,
+       "TIME": 280,
+       "TP2": 68,
        "TP1+TIME": 41,
        "TP1+BE": 6
       }
@@ -14002,74 +14002,74 @@
     },
     "portfolio": {
      "short": {
-      "total_return": 0.079775,
-      "cagr": 0.028174,
-      "max_drawdown": -0.28578,
-      "dd_peak": "2024-10-22",
+      "total_return": 0.076335,
+      "cagr": 0.026986,
+      "max_drawdown": -0.278965,
+      "dd_peak": "2024-12-09",
       "dd_trough": "2025-06-25",
-      "worst_month": -0.085767,
-      "sharpe": 0.252576,
-      "avg_exposure": 0.449065,
-      "trades": 151,
-      "win_rate": 0.437086,
-      "avg_trade": 0.004767,
+      "worst_month": -0.085921,
+      "sharpe": 0.245974,
+      "avg_exposure": 0.444534,
+      "trades": 150,
+      "win_rate": 0.433333,
+      "avg_trade": 0.0047,
       "by_year": {
-       "2024": -0.090091,
-       "2025": 0.210589,
-       "2026": -0.019746
+       "2024": -0.091801,
+       "2025": 0.210573,
+       "2026": -0.021017
       }
      },
      "medium": {
-      "total_return": 0.104803,
-      "cagr": 0.036737,
-      "max_drawdown": -0.238677,
+      "total_return": 0.099742,
+      "cagr": 0.035016,
+      "max_drawdown": -0.241262,
       "dd_peak": "2024-03-01",
       "dd_trough": "2025-04-24",
-      "worst_month": -0.162404,
-      "sharpe": 0.307137,
-      "avg_exposure": 0.57507,
+      "worst_month": -0.163565,
+      "sharpe": 0.296797,
+      "avg_exposure": 0.573557,
       "trades": 133,
       "win_rate": 0.360902,
-      "avg_trade": 0.010656,
+      "avg_trade": 0.010323,
       "by_year": {
-       "2024": -0.017426,
-       "2025": 0.361143,
-       "2026": -0.173932
+       "2024": -0.021475,
+       "2025": 0.363213,
+       "2026": -0.175567
       }
      },
      "combined": {
-      "total_return": 0.047396,
-      "cagr": 0.016904,
-      "max_drawdown": -0.12075,
+      "total_return": 0.04519,
+      "cagr": 0.016128,
+      "max_drawdown": -0.121908,
       "dd_peak": "2024-03-01",
       "dd_trough": "2025-04-24",
-      "worst_month": -0.072121,
-      "sharpe": 0.277999,
-      "avg_exposure": 0.263545,
+      "worst_month": -0.072431,
+      "sharpe": 0.266779,
+      "avg_exposure": 0.261845,
       "trades": null,
       "win_rate": null,
       "avg_trade": null,
       "by_year": {
-       "2024": -0.023246,
-       "2025": 0.148224,
-       "2026": -0.066103
+       "2024": -0.024803,
+       "2025": 0.148557,
+       "2026": -0.066853
       }
      },
      "combined_oos": {
-      "total_return": 0.1139,
-      "cagr": 0.074826,
-      "max_drawdown": -0.112037,
+      "total_return": 0.113099,
+      "cagr": 0.074309,
+      "max_drawdown": -0.112273,
       "dd_peak": "2026-01-02",
       "dd_trough": "2026-06-26",
-      "worst_month": -0.061169,
-      "sharpe": 1.717692,
+      "worst_month": -0.061348,
+      "sharpe": 1.708517,
       "avg_exposure": null,
       "trades": null,
       "win_rate": null,
       "avg_trade": null,
       "by_year": {
-       "2025": 0.178773,
-       "2026": -0.055034
+       "2025": 0.178701,
+       "2026": -0.055656
       }
      }
     }
@@ -14087,109 +14087,109 @@
     },
     "trades": {
      "short": {
-      "n": 953,
-      "win_rate": 0.407135,
-      "avg_ret": -0.0008,
-      "median_ret": -0.029553,
-      "profit_factor": 0.983125,
-      "avg_days": 10.913956,
-      "fill_rate": 0.662265,
+      "n": 956,
+      "win_rate": 0.40795,
+      "avg_ret": -0.000193,
+      "median_ret": -0.02907,
+      "profit_factor": 0.995926,
+      "avg_days": 10.91318,
+      "fill_rate": 0.66205,
       "worst": -0.366279,
       "best": 0.316221,
       "in_sample": {
-       "n": 213,
-       "win_rate": 0.380282,
-       "avg_ret": -0.011879,
-       "median_ret": -0.022728,
-       "profit_factor": 0.732337,
-       "avg_days": 11.723005,
-       "fill_rate": 0.705298,
+       "n": 212,
+       "win_rate": 0.377358,
+       "avg_ret": -0.01235,
+       "median_ret": -0.024142,
+       "profit_factor": 0.723034,
+       "avg_days": 11.707547,
+       "fill_rate": 0.704319,
        "worst": -0.15155,
        "best": 0.260432
       },
       "out_sample": {
-       "n": 740,
-       "win_rate": 0.414865,
-       "avg_ret": 0.002389,
-       "median_ret": -0.030616,
-       "profit_factor": 1.049503,
-       "avg_days": 10.681081,
-       "fill_rate": 0.650836,
+       "n": 744,
+       "win_rate": 0.416667,
+       "avg_ret": 0.003271,
+       "median_ret": -0.030309,
+       "profit_factor": 1.067989,
+       "avg_days": 10.686828,
+       "fill_rate": 0.650919,
        "worst": -0.366279,
        "best": 0.316221
       },
       "by_year": {
        "2024": {
-        "n": 146,
-        "win_rate": 0.40411,
-        "avg_ret": -0.010723,
-        "profit_factor": 0.747467
+        "n": 145,
+        "win_rate": 0.4,
+        "avg_ret": -0.011403,
+        "profit_factor": 0.733281
        },
        "2025": {
-        "n": 533,
-        "win_rate": 0.442777,
-        "avg_ret": 0.013952,
-        "profit_factor": 1.332432
+        "n": 536,
+        "win_rate": 0.445896,
+        "avg_ret": 0.01527,
+        "profit_factor": 1.365878
        },
        "2026": {
-        "n": 274,
-        "win_rate": 0.339416,
-        "avg_ret": -0.024209,
-        "profit_factor": 0.600435
+        "n": 275,
+        "win_rate": 0.338182,
+        "avg_ret": -0.02442,
+        "profit_factor": 0.597471
        }
       },
       "outcomes": {
        "TIME": 391,
        "SL": 388,
-       "TP2": 94,
+       "TP2": 97,
        "TP1+TIME": 60,
        "TP1+BE": 20
       }
      },
      "medium": {
-      "n": 696,
-      "win_rate": 0.395115,
-      "avg_ret": 0.00954,
-      "median_ret": -0.051598,
-      "profit_factor": 1.136563,
-      "avg_days": 27.978448,
-      "fill_rate": 0.679688,
+      "n": 697,
+      "win_rate": 0.395983,
+      "avg_ret": 0.010489,
+      "median_ret": -0.051597,
+      "profit_factor": 1.150582,
+      "avg_days": 27.968436,
+      "fill_rate": 0.679337,
       "worst": -0.3902,
-      "best": 0.539919,
+      "best": 0.599564,
       "in_sample": {
        "n": 313,
        "win_rate": 0.42492,
-       "avg_ret": 0.005928,
+       "avg_ret": 0.005918,
        "median_ret": -0.038681,
-       "profit_factor": 1.092215,
-       "avg_days": 29.373802,
-       "fill_rate": 0.724537,
+       "profit_factor": 1.092037,
+       "avg_days": 29.357827,
+       "fill_rate": 0.722864,
        "worst": -0.3902,
        "best": 0.506155
       },
       "out_sample": {
-       "n": 383,
-       "win_rate": 0.370757,
-       "avg_ret": 0.012492,
-       "median_ret": -0.057603,
-       "profit_factor": 1.167875,
-       "avg_days": 26.83812,
-       "fill_rate": 0.646959,
+       "n": 384,
+       "win_rate": 0.372396,
+       "avg_ret": 0.014215,
+       "median_ret": -0.056288,
+       "profit_factor": 1.192032,
+       "avg_days": 26.835938,
+       "fill_rate": 0.647555,
        "worst": -0.388953,
-       "best": 0.539919
+       "best": 0.599564
       },
       "by_year": {
        "2024": {
         "n": 288,
         "win_rate": 0.416667,
-        "avg_ret": -3.3e-05,
-        "profit_factor": 0.99949
+        "avg_ret": -4.5e-05,
+        "profit_factor": 0.999317
        },
        "2025": {
-        "n": 289,
-        "win_rate": 0.453287,
-        "avg_ret": 0.051348,
-        "profit_factor": 1.82113
+        "n": 290,
+        "win_rate": 0.455172,
+        "avg_ret": 0.053495,
+        "profit_factor": 1.861992
        },
        "2026": {
         "n": 119,
@@ -14199,9 +14199,9 @@
        }
       },
       "outcomes": {
-       "SL": 303,
-       "TIME": 279,
-       "TP2": 67,
+       "SL": 302,
+       "TIME": 280,
+       "TP2": 68,
        "TP1+TIME": 41,
        "TP1+BE": 6
       }
@@ -14209,74 +14209,74 @@
     },
     "portfolio": {
      "short": {
-      "total_return": 0.079775,
-      "cagr": 0.028174,
-      "max_drawdown": -0.28578,
-      "dd_peak": "2024-10-22",
+      "total_return": 0.076335,
+      "cagr": 0.026986,
+      "max_drawdown": -0.278965,
+      "dd_peak": "2024-12-09",
       "dd_trough": "2025-06-25",
-      "worst_month": -0.085767,
-      "sharpe": 0.252576,
-      "avg_exposure": 0.449065,
-      "trades": 151,
-      "win_rate": 0.437086,
-      "avg_trade": 0.004767,
+      "worst_month": -0.085921,
+      "sharpe": 0.245974,
+      "avg_exposure": 0.444534,
+      "trades": 150,
+      "win_rate": 0.433333,
+      "avg_trade": 0.0047,
       "by_year": {
-       "2024": -0.090091,
-       "2025": 0.210589,
-       "2026": -0.019746
+       "2024": -0.091801,
+       "2025": 0.210573,
+       "2026": -0.021017
       }
      },
      "medium": {
-      "total_return": 0.072931,
-      "cagr": 0.02581,
-      "max_drawdown": -0.246567,
+      "total_return": 0.060197,
+      "cagr": 0.021386,
+      "max_drawdown": -0.250404,
       "dd_peak": "2024-03-01",
       "dd_trough": "2025-04-24",
-      "worst_month": -0.163934,
-      "sharpe": 0.242773,
-      "avg_exposure": 0.573989,
+      "worst_month": -0.163301,
+      "sharpe": 0.216446,
+      "avg_exposure": 0.572727,
       "trades": 133,
       "win_rate": 0.360902,
-      "avg_trade": 0.008708,
+      "avg_trade": 0.008341,
       "by_year": {
-       "2024": -0.031819,
-       "2025": 0.344486,
-       "2026": -0.17575
+       "2024": -0.03664,
+       "2025": 0.334763,
+       "2026": -0.175494
       }
      },
      "combined": {
-      "total_return": 0.037834,
-      "cagr": 0.013534,
-      "max_drawdown": -0.123291,
+      "total_return": 0.033326,
+      "cagr": 0.011938,
+      "max_drawdown": -0.124852,
       "dd_peak": "2024-03-01",
       "dd_trough": "2025-04-24",
-      "worst_month": -0.071788,
-      "sharpe": 0.231337,
-      "avg_exposure": 0.262031,
+      "worst_month": -0.07115,
+      "sharpe": 0.20873,
+      "avg_exposure": 0.260216,
       "trades": null,
       "win_rate": null,
       "avg_trade": null,
       "by_year": {
-       "2024": -0.027564,
-       "2025": 0.142303,
-       "2026": -0.065702
+       "2024": -0.029352,
+       "2025": 0.13908,
+       "2026": -0.065409
       }
      },
      "combined_oos": {
-      "total_return": 0.108524,
-      "cagr": 0.071353,
-      "max_drawdown": -0.111948,
+      "total_return": 0.105725,
+      "cagr": 0.069542,
+      "max_drawdown": -0.111566,
       "dd_peak": "2026-01-02",
       "dd_trough": "2026-06-26",
-      "worst_month": -0.060672,
-      "sharpe": 1.634837,
+      "worst_month": -0.059868,
+      "sharpe": 1.60808,
       "avg_exposure": null,
       "trades": null,
       "win_rate": null,
       "avg_trade": null,
       "by_year": {
-       "2025": 0.172506,
-       "2026": -0.054569
+       "2025": 0.168967,
+       "2026": -0.054101
       }
      }
     }
@@ -14295,109 +14295,109 @@
     },
     "trades": {
      "short": {
-      "n": 953,
-      "win_rate": 0.391396,
-      "avg_ret": -0.003052,
-      "median_ret": -0.033661,
-      "profit_factor": 0.937077,
-      "avg_days": 10.913956,
-      "fill_rate": 0.662265,
+      "n": 956,
+      "win_rate": 0.392259,
+      "avg_ret": -0.002438,
+      "median_ret": -0.033613,
+      "profit_factor": 0.94969,
+      "avg_days": 10.91318,
+      "fill_rate": 0.66205,
       "worst": -0.366574,
       "best": 0.316221,
       "in_sample": {
-       "n": 213,
-       "win_rate": 0.356808,
-       "avg_ret": -0.014598,
-       "median_ret": -0.027617,
-       "profit_factor": 0.680748,
-       "avg_days": 11.723005,
-       "fill_rate": 0.705298,
+       "n": 212,
+       "win_rate": 0.353774,
+       "avg_ret": -0.015044,
+       "median_ret": -0.029779,
+       "profit_factor": 0.672543,
+       "avg_days": 11.707547,
+       "fill_rate": 0.704319,
        "worst": -0.163847,
        "best": 0.260432
       },
       "out_sample": {
-       "n": 740,
-       "win_rate": 0.401351,
-       "avg_ret": 0.000271,
-       "median_ret": -0.034462,
-       "profit_factor": 1.005496,
-       "avg_days": 10.681081,
-       "fill_rate": 0.650836,
+       "n": 744,
+       "win_rate": 0.403226,
+       "avg_ret": 0.001155,
+       "median_ret": -0.03405,
+       "profit_factor": 1.023484,
+       "avg_days": 10.686828,
+       "fill_rate": 0.650919,
        "worst": -0.366574,
        "best": 0.316221
       },
       "by_year": {
        "2024": {
-        "n": 146,
-        "win_rate": 0.383562,
-        "avg_ret": -0.013252,
-        "profit_factor": 0.696702
+        "n": 145,
+        "win_rate": 0.37931,
+        "avg_ret": -0.013895,
+        "profit_factor": 0.684175
        },
        "2025": {
-        "n": 533,
-        "win_rate": 0.424015,
-        "avg_ret": 0.011502,
-        "profit_factor": 1.266021
+        "n": 536,
+        "win_rate": 0.427239,
+        "avg_ret": 0.012834,
+        "profit_factor": 1.298485
        },
        "2026": {
-        "n": 274,
-        "win_rate": 0.332117,
-        "avg_ret": -0.02593,
-        "profit_factor": 0.577201
+        "n": 275,
+        "win_rate": 0.330909,
+        "avg_ret": -0.026162,
+        "profit_factor": 0.574138
        }
       },
       "outcomes": {
        "TIME": 391,
        "SL": 388,
-       "TP2": 94,
+       "TP2": 97,
        "TP1+TIME": 60,
        "TP1+BE": 20
       }
      },
      "medium": {
-      "n": 696,
-      "win_rate": 0.37931,
-      "avg_ret": 0.002406,
-      "median_ret": -0.058566,
-      "profit_factor": 1.032723,
-      "avg_days": 27.978448,
-      "fill_rate": 0.679688,
+      "n": 697,
+      "win_rate": 0.380201,
+      "avg_ret": 0.003345,
+      "median_ret": -0.058459,
+      "profit_factor": 1.045613,
+      "avg_days": 27.968436,
+      "fill_rate": 0.679337,
       "worst": -0.398752,
-      "best": 0.535121,
+      "best": 0.591668,
       "in_sample": {
        "n": 313,
        "win_rate": 0.415335,
-       "avg_ret": -0.001668,
+       "avg_ret": -0.001678,
        "median_ret": -0.050077,
-       "profit_factor": 0.975452,
-       "avg_days": 29.373802,
-       "fill_rate": 0.724537,
+       "profit_factor": 0.975308,
+       "avg_days": 29.357827,
+       "fill_rate": 0.722864,
        "worst": -0.394293,
        "best": 0.492341
       },
       "out_sample": {
-       "n": 383,
-       "win_rate": 0.349869,
-       "avg_ret": 0.005736,
-       "median_ret": -0.062319,
-       "profit_factor": 1.073427,
-       "avg_days": 26.83812,
-       "fill_rate": 0.646959,
+       "n": 384,
+       "win_rate": 0.351562,
+       "avg_ret": 0.007439,
+       "median_ret": -0.06211,
+       "profit_factor": 1.095702,
+       "avg_days": 26.835938,
+       "fill_rate": 0.647555,
        "worst": -0.398752,
-       "best": 0.535121
+       "best": 0.591668
       },
       "by_year": {
        "2024": {
         "n": 288,
         "win_rate": 0.40625,
-        "avg_ret": -0.007512,
-        "profit_factor": 0.891369
+        "avg_ret": -0.007523,
+        "profit_factor": 0.891229
        },
        "2025": {
-        "n": 289,
-        "win_rate": 0.432526,
-        "avg_ret": 0.04405,
-        "profit_factor": 1.668098
+        "n": 290,
+        "win_rate": 0.434483,
+        "avg_ret": 0.046174,
+        "profit_factor": 1.705254
        },
        "2026": {
         "n": 119,
@@ -14407,9 +14407,9 @@
        }
       },
       "outcomes": {
-       "SL": 303,
-       "TIME": 279,
-       "TP2": 67,
+       "SL": 302,
+       "TIME": 280,
+       "TP2": 68,
        "TP1+TIME": 41,
        "TP1+BE": 6
       }
@@ -14417,79 +14417,79 @@
     },
     "portfolio": {
      "short": {
-      "total_return": -0.013154,
-      "cagr": -0.004782,
-      "max_drawdown": -0.304632,
-      "dd_peak": "2024-10-22",
+      "total_return": -0.011835,
+      "cagr": -0.0043,
+      "max_drawdown": -0.293629,
+      "dd_peak": "2024-12-09",
       "dd_trough": "2025-06-25",
-      "worst_month": -0.08833,
-      "sharpe": 0.066443,
-      "avg_exposure": 0.447441,
-      "trades": 151,
-      "win_rate": 0.403974,
-      "avg_trade": 0.002197,
+      "worst_month": -0.088408,
+      "sharpe": 0.069185,
+      "avg_exposure": 0.44306,
+      "trades": 150,
+      "win_rate": 0.4,
+      "avg_trade": 0.002239,
       "by_year": {
-       "2024": -0.104016,
-       "2025": 0.18054,
-       "2026": -0.067029
+       "2024": -0.10267,
+       "2025": 0.179977,
+       "2026": -0.066738
       }
      },
      "medium": {
-      "total_return": -0.047476,
-      "cagr": -0.017453,
-      "max_drawdown": -0.289167,
+      "total_return": -0.056137,
+      "cagr": -0.020697,
+      "max_drawdown": -0.293605,
       "dd_peak": "2024-03-01",
       "dd_trough": "2025-04-24",
-      "worst_month": -0.166467,
-      "sharpe": -0.018986,
-      "avg_exposure": 0.576606,
+      "worst_month": -0.166587,
+      "sharpe": -0.039103,
+      "avg_exposure": 0.575001,
       "trades": 133,
       "win_rate": 0.353383,
-      "avg_trade": 0.001599,
+      "avg_trade": 0.001231,
       "by_year": {
-       "2024": -0.079269,
-       "2025": 0.268181,
-       "2026": -0.184241
+       "2024": -0.084313,
+       "2025": 0.26483,
+       "2026": -0.185052
       }
      },
      "combined": {
-      "total_return": -0.016874,
-      "cagr": -0.006141,
-      "max_drawdown": -0.140106,
+      "total_return": -0.019208,
+      "cagr": -0.006996,
+      "max_drawdown": -0.141271,
       "dd_peak": "2024-03-01",
       "dd_trough": "2025-04-24",
-      "worst_month": -0.069695,
-      "sharpe": -0.056182,
-      "avg_exposure": 0.255326,
+      "worst_month": -0.069406,
+      "sharpe": -0.069115,
+      "avg_exposure": 0.253588,
       "trades": null,
       "win_rate": null,
       "avg_trade": null,
       "by_year": {
-       "2024": -0.044584,
-       "2025": 0.111395,
-       "2026": -0.074134
+       "2024": -0.045828,
+       "2025": 0.110096,
+       "2026": -0.074045
       }
      },
      "combined_oos": {
-      "total_return": 0.074779,
-      "cagr": 0.049424,
-      "max_drawdown": -0.113038,
+      "total_return": 0.07379,
+      "cagr": 0.048778,
+      "max_drawdown": -0.112929,
       "dd_peak": "2026-01-02",
       "dd_trough": "2026-06-26",
-      "worst_month": -0.059148,
-      "sharpe": 1.233147,
+      "worst_month": -0.058818,
+      "sharpe": 1.221347,
       "avg_exposure": null,
       "trades": null,
       "win_rate": null,
       "avg_trade": null,
       "by_year": {
-       "2025": 0.147808,
-       "2026": -0.063625
+       "2025": 0.146595,
+       "2026": -0.063497
       }
      }
     }
    }
   ],
-  "seconds": 44
+  "seconds": 38
  }
 }
