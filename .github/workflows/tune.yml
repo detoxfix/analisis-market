@@ -1,31 +1,53 @@
-   name: Tuning strategi (manual)
-   on:
-     workflow_dispatch:
-   permissions:
-     contents: write
-   concurrency:
-     group: ihsg-signal
-     cancel-in-progress: false
-   jobs:
-     tune:
-       runs-on: ubuntu-latest
-       timeout-minutes: 60
-       steps:
-         - uses: actions/checkout@v5
-         - uses: actions/setup-python@v6
-           with:
-             python-version: "3.12"
-             cache: pip
-         - run: pip install -r requirements.txt
-         - name: Jalankan tuning
-           run: |
-             python tune.py
-             touch docs/.nojekyll
-         - name: Simpan hasil
-           run: |
-             git config user.name "ihsg-signal-bot"
-             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-             git add docs/data/tuning.json docs/.nojekyll data/cache
-             git commit -m "Hasil tuning" || echo "Tidak ada perubahan"
-             git pull --rebase
-             git push
+name: Tuning strategi (manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Jenis uji"
+        type: choice
+        default: realism
+        options:
+          - realism   # bandingkan backtest lama vs realistis
+          - exits     # aturan keluar saat pasar berbalik
+          - full      # grid lengkap (lama, ~30-60 menit)
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ihsg-signal
+  cancel-in-progress: false
+
+jobs:
+  tune:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependensi
+        run: pip install -r requirements.txt
+
+      - name: Jalankan tuning
+        run: |
+          case "${{ inputs.mode }}" in
+            full) python tune.py --full ;;
+            exits) python tune.py ;;
+            *) python tune.py --realism ;;
+          esac
+          touch docs/.nojekyll
+
+      - name: Simpan hasil (docs/data/tuning.json)
+        run: |
+          git config user.name "ihsg-signal-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/tuning.json docs/.nojekyll data/cache
+          git commit -m "Hasil tuning $(TZ=Asia/Jakarta date +%F)" || echo "Tidak ada perubahan"
+          git pull --rebase
+          git push
