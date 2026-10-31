@@ -10,6 +10,7 @@ Hasil: docs/data/tuning.json (dibaca untuk menetapkan config.yaml).
 
     python tune.py            # mode "exits": uji aturan keluar saat pasar berbalik (pakai config sekarang)
     python tune.py --full     # grid lengkap syarat masuk + cara keluar
+    python tune.py --realism  # bandingkan backtest lama vs realistis (universe per tanggal, slippage, ARB)
     python tune.py --demo     # uji coba data sintetis
 """
 from __future__ import annotations
@@ -28,7 +29,7 @@ from src import portsim
 from src.utils import load_json
 from src import data as D
 from src.indicators import add_indicators
-from src.universe import candidate_list, filter_universe
+from src.universe import backtest_set, candidate_list, filter_universe
 from src.utils import ROOT, dump_json, log, now_wib
 
 STAGE1 = {
@@ -63,7 +64,59 @@ def load_data(cfg: dict, demo: bool):
     as_of = max(df.index[-1] for df in prices.values())
     uni = filter_universe(prices, shares, cfg, as_of)
     ind = {t: add_indicators(prices[t], bench) for t in uni["ticker"]}
+    if cfg.get("backtest", {}).get("point_in_time", True):
+        ind = backtest_set(prices, shares, cfg, list(ind),
+                           lambda t: ind[t] if t in ind else add_indicators(prices[t], bench))
     return ind, len(uni)
+
+
+REALISM = [
+    ("Cara lama (universe hari ini, eksekusi ideal)", {"point_in_time": False, "execution": {"enabled": False}}),
+    ("+ universe per tanggal", {"point_in_time": True, "execution": {"enabled": False}}),
+    ("+ slippage cut loss & antrean limit", {"point_in_time": True,
+                                           "execution": {"enabled": True, "slippage_ticks": 1,
+                                                         "limit_through": True, "arb": False}}),
+    ("+ ARB (realistis, dipakai dashboard)", {"point_in_time": True,
+                                              "execution": {"enabled": True, "slippage_ticks": 1,
+                                                            "limit_through": True, "arb": True}}),
+    ("Uji ketahanan: + 1 tick di setiap lelang", {"point_in_time": True,
+                                                  "execution": {"enabled": True, "slippage_ticks": 1,
+                                                                "auction_slippage_ticks": 1,
+                                                                "limit_through": True, "arb": True}}),
+]
+
+
+def run_realism(prep, ind, cfg, n_uni, demo, t0):
+    """Seberapa besar hasil backtest lama terlalu optimistis: tambahkan realisme selangkah demi selangkah."""
+    split = cfg["backtest"]["split_date"]
+    cut = pd.Timestamp(split)
+    out = {"generated_at": now_wib().strftime("%Y-%m-%d %H:%M"), "demo": demo, "universe_today": n_uni,
+           "universe_backtest": len(ind), "split_date": split, "steps": []}
+    for name, b in REALISM:
+        c2 = copy.deepcopy(cfg)
+        c2["backtest"].update(copy.deepcopy(b))
+        row = {"name": name, "settings": b, "trades": {}, "portfolio": {}}
+        for h in ("short", "medium"):
+            row["trades"][h] = slim(run_variant(prep, h, c2["horizons"][h], c2))
+        ps = portsim.run(ind, c2, prep=prep)
+        for h, bk in ps.get("buckets", {}).items():
+            row["portfolio"][h] = pslim(bk)
+        comb = ps.get("combined", {})
+        row["portfolio"]["combined"] = pslim(comb)
+        eq = pd.Series({pd.Timestamp(d): v for d, v in comb.get("equity", [])})
+        if len(eq):
+            row["portfolio"]["combined_oos"] = pslim(portsim.metrics(eq[eq.index >= cut]))
+        out["steps"].append(row)
+        log.info("%s: pendek %s trx avg %.2f%% | menengah %s trx avg %.2f%% | gabungan return %.1f%% DD %.1f%%",
+                 name, row["trades"]["short"].get("n"), 100 * (row["trades"]["short"].get("avg_ret") or 0),
+                 row["trades"]["medium"].get("n"), 100 * (row["trades"]["medium"].get("avg_ret") or 0),
+                 100 * (comb.get("total_return") or 0), 100 * (comb.get("max_drawdown") or 0))
+    out["seconds"] = round(time.time() - t0)
+    path = ROOT / ("output/tuning_demo.json" if demo else "docs/data/tuning.json")
+    prev = load_json(path, {}) or {}
+    prev["realism"] = out
+    dump_json(prev, path)
+    log.info("Perbandingan realisme selesai dalam %d dtk -> %s", out["seconds"], path)
 
 
 def objective(st: dict, min_n: int) -> float:
@@ -140,6 +193,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--demo", action="store_true")
     ap.add_argument("--full", action="store_true", help="grid lengkap syarat masuk & cara keluar")
+    ap.add_argument("--realism", action="store_true", help="bandingkan backtest lama vs realistis")
     ap.add_argument("--config", default=str(ROOT / "config.yaml"))
     a = ap.parse_args()
     cfg = yaml.safe_load(open(a.config, encoding="utf-8"))
@@ -147,6 +201,9 @@ def main():
     ind, n_uni = load_data(cfg, a.demo)
     prep = bt.prepare(ind, ("short", "medium"))
     log.info("Data siap: %d saham, %.0f dtk", n_uni, time.time() - t0)
+    if a.realism:
+        run_realism(prep, ind, cfg, n_uni, a.demo, t0)
+        return
     if not a.full:
         run_exits(prep, ind, cfg, n_uni, a.demo, t0)
         return
@@ -191,8 +248,9 @@ def main():
     result["seconds"] = round(time.time() - t0)
     path = ROOT / ("output/tuning_demo.json" if a.demo else "docs/data/tuning.json")
     prev = load_json(path, {}) or {}
-    if "exits" in prev:
-        result["exits"] = prev["exits"]
+    for k in ("exits", "realism"):
+        if k in prev:
+            result[k] = prev[k]
     dump_json(result, path)
     log.info("Selesai dalam %d dtk -> %s", result["seconds"], path)
 

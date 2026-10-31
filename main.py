@@ -26,7 +26,7 @@ from src.sim import bench_up, market_flag
 from src.risk import make_plan, sell_plan
 from src.signals import (BUY_SIGNALS, HORIZON_FUNCS, LONG_W, SELL_SIGNALS, compose, entry_mask, explain, label,
                          long_components)
-from src.universe import candidate_list, filter_universe
+from src.universe import backtest_set, candidate_list, filter_universe
 from src.utils import ROOT, dump_json, fnum, load_json, log, now_wib, to_jsonable
 
 HORIZONS = ("short", "medium", "long")
@@ -221,7 +221,8 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
         new_recs += [p for p in picked if p["lots"] > 0]
 
     # ------------------------------------------------------------ 5. track record & backtest
-    track = tracker.update(prices, new_recs, cfg["fees"], as_of, demo=demo, bench=bench)
+    track = tracker.update(prices, new_recs, cfg["fees"], as_of, demo=demo, bench=bench,
+                           exec_cfg=cfg.get("backtest", {}).get("execution"))
 
     # ------------------------------------------------------------ 5b. posisi pribadi
     signals = {r["code"]: {h: r[h] for h in HORIZONS} for r in rows_all}
@@ -232,22 +233,36 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
         pos_items, pos_errs = [], pos_errs + [f"Pemantau posisi gagal: {e}"]
     bt_path = ROOT / "docs" / "data" / "backtest.json"
     bt_res = load_json(bt_path) if not demo else None
-    cfg_hash = hashlib.md5(json.dumps({"h": {h: cfg["horizons"][h] for h in ("short", "medium")}, "v": 2,
-                                       "cap": cfg["capital"], "risk": cfg["risk_per_trade"]}, sort_keys=True)
+    cfg_hash = hashlib.md5(json.dumps({"h": {h: cfg["horizons"][h] for h in ("short", "medium")}, "v": 3,
+                                       "cap": cfg["capital"], "risk": cfg["risk_per_trade"],
+                                       "bt": {k: v for k, v in cfg.get("backtest", {}).items()
+                                              if k in ("point_in_time", "execution", "split_date")}},
+                                      sort_keys=True, default=str)
                            .encode()).hexdigest()[:10]
     stale = (bt_res is None or bt_res.get("config_hash") != cfg_hash        # parameter berubah -> backtest ulang
              or datetime.fromisoformat(bt_res.get("generated_at", "2000-01-01"))
              < now - timedelta(days=cfg.get("backtest", {}).get("refresh_days", 7)))
     if backtest_mode == "always" or (backtest_mode == "auto" and stale):
         log.info("Menjalankan backtest...")
+        ind_bt = ind
+        if cfg.get("backtest", {}).get("point_in_time", True):
+            try:                                   # universe per tanggal: termasuk saham yang dulu lolos
+                ind_bt = backtest_set(prices, shares, cfg, list(ind),
+                                      lambda t: ind[t] if t in ind else add_indicators(prices[t], bench))
+            except Exception as e:  # noqa: BLE001
+                log.warning("Universe backtest per tanggal gagal, memakai universe hari ini: %s", e)
         bt_res = {"generated_at": now.isoformat(timespec="seconds"), "config_hash": cfg_hash,
-                  "results": bt.run(ind, cfg)}
+                  "assumptions": bt.assumptions(cfg, ind_bt), "results": bt.run(ind_bt, cfg)}
         try:
-            bt_res["portfolio"] = portsim.run(ind, cfg)
+            bt_res["portfolio"] = portsim.run(ind_bt, cfg)
         except Exception as e:  # noqa: BLE001  (simulasi portofolio tidak boleh menggagalkan sinyal harian)
             log.warning("Simulasi portofolio gagal: %s", e)
         if not demo:
             dump_json(bt_res, bt_path)
+    if bt_res is not None:                         # perbandingan backtest lama vs realistis (hasil tune.py --realism)
+        tun = load_json(ROOT / ("output/tuning_demo.json" if demo else "docs/data/tuning.json"), {}) or {}
+        if tun.get("realism"):
+            bt_res = {**bt_res, "realism": tun["realism"]}
 
     # ------------------------------------------------------------ 6. ringkasan pasar & output
     # data grafik untuk dashboard: garis IHSG 6 bulan + SMA50/SMA200, dan harga 60 hari per saham bersinyal
