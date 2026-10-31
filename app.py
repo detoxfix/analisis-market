@@ -204,14 +204,55 @@ def gui():
 
     from src import positions as POS
 
+    # ---------- tema gelap (selaras dengan dashboard)
+    C = {"bg": "#0F1B24", "panel": "#15232E", "panel2": "#1A2B38", "line": "#243848", "ink": "#E4ECF1",
+         "mute": "#8299AA", "dim": "#5D7383", "brass": "#E8B04B", "buy": "#3CCB9B", "sell": "#F0656B",
+         "hold": "#9FB3C2"}
     root = tk.Tk()
     root.title(APP_NAME)
-    root.geometry("900x640")
-    root.minsize(760, 520)
+    root.geometry("980x700")
+    root.minsize(820, 560)
+    root.configure(bg=C["bg"])
+    from tkinter import font as tkfont
+    fams = set(tkfont.families())
+    pick = lambda *xs: next((x for x in xs if x in fams), "TkDefaultFont")  # noqa: E731
+    COND = pick("Bahnschrift SemiBold SemiConden", "Bahnschrift SemiCondensed", "Bahnschrift",
+                "Barlow Condensed", "Segoe UI Semibold", "DejaVu Sans Condensed", "DejaVu Sans")
+    UI = pick("Segoe UI", "Barlow", "DejaVu Sans")
+    MONO = pick("Cascadia Mono", "Consolas", "DejaVu Sans Mono")
+    st = ttk.Style()
     try:
-        ttk.Style().theme_use("vista" if sys.platform.startswith("win") else "clam")
+        st.theme_use("clam")
     except tk.TclError:
         pass
+    st.configure(".", background=C["bg"], foreground=C["ink"], fieldbackground=C["panel"], font=(UI, 10),
+                 bordercolor=C["line"], lightcolor=C["line"], darkcolor=C["line"], troughcolor=C["panel"],
+                 selectbackground=C["brass"], selectforeground=C["bg"], insertcolor=C["ink"])
+    st.configure("TFrame", background=C["bg"])
+    st.configure("TLabel", background=C["bg"], foreground=C["ink"])
+    st.configure("TCheckbutton", background=C["bg"], foreground=C["ink"], indicatorbackground=C["panel"],
+                 indicatorforeground=C["brass"])
+    st.map("TCheckbutton", background=[("active", C["bg"])], indicatorbackground=[("selected", C["panel2"])])
+    st.configure("TButton", background=C["panel2"], foreground=C["ink"], padding=(12, 6), relief="flat")
+    st.map("TButton", background=[("active", C["line"]), ("disabled", C["panel"])],
+           foreground=[("disabled", C["dim"])])
+    st.configure("Gold.TButton", background=C["brass"], foreground="#1B1405", font=(UI, 10, "bold"))
+    st.map("Gold.TButton", background=[("active", "#F2C26A"), ("disabled", "#6B5A35")])
+    st.configure("TEntry", fieldbackground=C["panel"], foreground=C["ink"], insertcolor=C["ink"])
+    st.configure("TCombobox", fieldbackground=C["panel"], foreground=C["ink"], background=C["panel2"],
+                 arrowcolor=C["ink"])
+    st.map("TCombobox", fieldbackground=[("readonly", C["panel"])], foreground=[("readonly", C["ink"])])
+    root.option_add("*TCombobox*Listbox.background", C["panel"])
+    root.option_add("*TCombobox*Listbox.foreground", C["ink"])
+    st.configure("Treeview", background=C["panel"], fieldbackground=C["panel"], foreground=C["ink"], rowheight=26,
+                 bordercolor=C["line"])
+    st.map("Treeview", background=[("selected", C["line"])], foreground=[("selected", C["ink"])])
+    st.configure("Treeview.Heading", background=C["panel2"], foreground=C["mute"], font=(UI, 9, "bold"),
+                 relief="flat")
+    st.configure("Gold.Horizontal.TProgressbar", background=C["brass"], troughcolor=C["panel"],
+                 bordercolor=C["bg"], lightcolor=C["brass"], darkcolor=C["brass"], thickness=4)
+    st.configure("Vertical.TScrollbar", background=C["panel2"], troughcolor=C["panel"], arrowcolor=C["mute"])
+    root.option_add("*Toplevel.background", C["bg"])
     q: queue.Queue = queue.Queue()
 
     class QH(logging.Handler):
@@ -222,43 +263,87 @@ def gui():
     qh.setFormatter(logging.Formatter("%(asctime)s  %(message)s", "%H:%M:%S"))
     logging.getLogger("ihsg").addHandler(qh)
 
-    # ---------- header
-    top = ttk.Frame(root, padding=(14, 12, 14, 4))
-    top.pack(fill="x")
-    ttk.Label(top, text=APP_NAME, font=("Segoe UI", 16, "bold")).pack(anchor="w")
-    status = tk.StringVar()
-    ttk.Label(top, textvariable=status, foreground="#555").pack(anchor="w")
+    def L(parent, text="", fg=None, size=10, bold=False, font=None, bg=None, **kw):
+        return tk.Label(parent, text=text, fg=fg or C["ink"], bg=bg or parent["bg"],
+                        font=(font or UI, size, "bold" if bold else "normal"), **kw)
 
-    # ---------- ringkasan
-    box = ttk.LabelFrame(root, text="Ringkasan terakhir", padding=10)
-    box.pack(fill="x", padx=14, pady=6)
-    summary = tk.StringVar()
-    ttk.Label(box, textvariable=summary, justify="left", font=("Segoe UI", 10)).pack(anchor="w")
+    # ---------- kepala
+    top = tk.Frame(root, bg=C["bg"])
+    top.pack(fill="x", padx=18, pady=(14, 8))
+    brand = tk.Frame(top, bg=C["bg"])
+    brand.pack(side="left")
+    L(brand, "IHSG ", font=COND, size=20).pack(side="left")
+    L(brand, "Signal", fg=C["brass"], font=COND, size=20).pack(side="left")
+    status = tk.StringVar()
+    tk.Label(top, textvariable=status, fg=C["mute"], bg=C["bg"], font=(UI, 9)).pack(side="right", anchor="s")
+
+    # ---------- status pasar + keputusan per horizon
+    hero = tk.Frame(root, bg=C["panel"], highlightthickness=1, highlightbackground=C["line"])
+    hero.pack(fill="x", padx=18)
+    left = tk.Frame(hero, bg=C["panel"])
+    left.pack(side="left", fill="y", padx=18, pady=14)
+    lbl_ihsg = L(left, "IHSG", fg=C["mute"], size=9)
+    lbl_ihsg.pack(anchor="w")
+    big = L(left, "–", font=COND, size=30)
+    big.pack(anchor="w")
+    chg = L(left, "", font=COND, size=13)
+    chg.pack(anchor="w")
+    regime = L(left, "", font=COND, size=16)
+    regime.pack(anchor="w", pady=(8, 0))
+    tk.Frame(hero, bg=C["line"], width=1).pack(side="left", fill="y")
+    cards = tk.Frame(hero, bg=C["panel"])
+    cards.pack(side="left", fill="both", expand=True)
+    hcards = {}
+    for i, (h, nm) in enumerate((("short", "Pendek"), ("medium", "Menengah"), ("long", "Panjang"))):
+        if i:
+            tk.Frame(cards, bg=C["line"], width=1).pack(side="left", fill="y")
+        f = tk.Frame(cards, bg=C["panel"])
+        f.pack(side="left", fill="both", expand=True, padx=16, pady=14)
+        L(f, nm, font=COND, size=14).pack(anchor="w")
+        act = L(f, "–", size=10, wraplength=200, justify="left", bold=True)
+        act.pack(anchor="w", pady=(4, 2))
+        meta = L(f, "", fg=C["mute"], size=9, wraplength=200, justify="left")
+        meta.pack(anchor="w")
+        hcards[h] = (act, meta)
+    posbar = tk.Frame(root, bg=C["bg"])
+    posbar.pack(fill="x", padx=18, pady=(8, 0))
+    poslbl = L(posbar, "", fg=C["mute"], size=10, anchor="w", justify="left", wraplength=900)
+    poslbl.pack(anchor="w")
 
     # ---------- tombol
-    bar = ttk.Frame(root, padding=(14, 4))
-    bar.pack(fill="x")
-    btn_update = ttk.Button(bar, text="▶  Update sekarang")
+    bar = tk.Frame(root, bg=C["bg"])
+    bar.pack(fill="x", padx=18, pady=(12, 4))
+    btn_update = ttk.Button(bar, text="Update sekarang", style="Gold.TButton")
     btn_update.pack(side="left")
-    ttk.Button(bar, text="Buka dashboard", command=lambda: open_dash()).pack(side="left", padx=6)
-    ttk.Button(bar, text="Posisi saya", command=lambda: positions_window()).pack(side="left")
-    ttk.Button(bar, text="Pengaturan", command=lambda: settings_window()).pack(side="left", padx=6)
-    ttk.Button(bar, text="Folder data", command=lambda: open_path(ROOT)).pack(side="left")
+    for txt, fn in (("Buka dashboard", lambda: open_dash()), ("Posisi saya", lambda: positions_window()),
+                    ("Pengaturan", lambda: settings_window()), ("Folder data", lambda: open_path(ROOT))):
+        ttk.Button(bar, text=txt, command=fn).pack(side="left", padx=(8, 0))
 
     sched = tk.BooleanVar(value=schedule_exists())
-    srow = ttk.Frame(root, padding=(14, 6))
-    srow.pack(fill="x")
+    if sched.get():                                   # folder aplikasi bisa saja dipindah: perbarui lokasi di jadwal
+        threading.Thread(target=lambda: schedule_set(True), daemon=True).start()
+    srow = tk.Frame(root, bg=C["bg"])
+    srow.pack(fill="x", padx=18, pady=(6, 0))
     ttk.Checkbutton(srow, text="Update otomatis setiap hari bursa (Senin–Jumat) pukul 17:30", variable=sched,
                     command=lambda: toggle_schedule()).pack(side="left")
 
-    prog = ttk.Progressbar(root, mode="indeterminate")
-    prog.pack(fill="x", padx=14, pady=(4, 0))
-    logbox = scrolledtext.ScrolledText(root, height=14, font=("Consolas", 9), state="disabled", wrap="word")
-    logbox.pack(fill="both", expand=True, padx=14, pady=(6, 14))
+    prog = ttk.Progressbar(root, mode="determinate", value=0, style="Gold.Horizontal.TProgressbar")
+    PROG_PACK = dict(fill="x", padx=18, pady=(10, 0))         # hanya tampil saat update berjalan
+    logbox = scrolledtext.ScrolledText(root, height=12, font=(MONO, 9), state="disabled", wrap="word",
+                                       bg=C["panel"], fg=C["mute"], insertbackground=C["ink"], relief="flat",
+                                       highlightthickness=1, highlightbackground=C["line"], padx=10, pady=8)
+    logbox.pack(fill="both", expand=True, padx=18, pady=(12, 16))
+    logbox.vbar.configure(bg=C["panel2"], troughcolor=C["panel"], activebackground=C["line"], relief="flat",
+                          bd=0, highlightthickness=0, elementborderwidth=0, width=10)
+    logbox.tag_configure("ok", foreground=C["buy"])
+    logbox.tag_configure("err", foreground=C["sell"])
+    logbox.tag_configure("head", foreground=C["brass"])
 
     def add_log(line: str):
+        tag = ("err" if ("GAGAL" in line or "ERROR" in line or "gagal" in line) else
+               "head" if line.startswith("—") else "ok" if ("Selesai" in line or "berhasil" in line) else None)
         logbox.configure(state="normal")
-        logbox.insert("end", line + "\n")
+        logbox.insert("end", line + "\n", tag or ())
         logbox.see("end")
         logbox.configure(state="disabled")
 
@@ -266,27 +351,40 @@ def gui():
         d = load_json(ROOT / "docs" / "data" / "latest.json")
         last = load_json(LAST, {}) or {}
         if not d:
-            status.set("Belum ada data. Klik “Update sekarang” (pertama kali sekitar 5–15 menit).")
-            summary.set("—")
+            status.set("Belum ada data. Klik “Update sekarang”; pertama kali sekitar 5–15 menit.")
             return
         auto = ""
         if last:
-            auto = f" · update terakhir {last.get('when')} " + ("✓" if last.get("ok") else f"✗ ({last.get('error', '')[:60]})")
-        status.set(f"Data per {d['as_of']} · diperbarui {d['generated_at']}{auto}")
+            auto = f"   ·   update terakhir {last.get('when')} " + ("✓" if last.get("ok") else "✗ gagal")
+        status.set(f"Data {d['as_of']}, diperbarui {d['generated_at'][11:]} WIB{auto}")
         m = d["market"]
-        lines = [f"IHSG {m['bench']:,.0f} ({m['bench_chg'] * 100:+.2f}%) · Pasar {m['regime']} · "
-                 f"{m['universe']} saham ≥ Rp 5 T".replace(",", ".")]
-        for h, nm in (("short", "Pendek"), ("medium", "Menengah"), ("long", "Panjang")):
+        lbl_ihsg.configure(text=f"IHSG, penutupan {d['as_of']}")
+        big.configure(text=f"{m['bench']:,.0f}".replace(",", "."))
+        up = m["bench_chg"] >= 0
+        chg.configure(text=f"{m['bench_chg'] * 100:+.2f}%".replace(".", ","), fg=C["buy"] if up else C["sell"])
+        rc = {"Bearish": C["sell"], "Bullish": C["buy"]}.get(m["regime"], C["brass"])
+        regime.configure(text=m["regime"], fg=rc)
+        for h, (act, meta) in hcards.items():
             b = d["horizons"][h]
-            buys = ", ".join(p["code"] for p in b["buys"][:6]) or "tidak ada"
-            extra = f" · {b['n_held']} tertahan filter" if b.get("n_held") else ""
-            alert = " · ⚠ aturan keluar aktif" if b.get("market_exit_active") else ""
-            lines.append(f"{nm}: beli {buys}{extra}{alert}")
+            if b["buys"]:
+                codes = ", ".join(p["code"] for p in b["buys"][:5]) + (" …" if len(b["buys"]) > 5 else "")
+                act.configure(text=f"Beli {len(b['buys'])} saham", fg=C["buy"])
+                txt = codes + (f"\nPorsi {b['regime_scale'] * 100:.0f}% karena pasar lemah" if b.get("regime_text") else "")
+            elif b.get("market_exit_active"):
+                act.configure(text="Tidak beli · jual posisi", fg=C["sell"])
+                txt = "IHSG di bawah batas aturan keluar"
+            else:
+                act.configure(text="Tidak beli", fg=C["ink"])
+                txt = f"{b['n_held']} sinyal tertahan filter" if b.get("n_held") else "Belum ada sinyal beli"
+            meta.configure(text=txt)
         pos = d.get("positions") or []
         if pos:
             need = [f"{p['code']} {p['status']}" for p in pos if p.get("rank", 3) < 3]
-            lines.append(f"Posisi Anda: {len(pos)} · " + (", ".join(need) if need else "semua TAHAN"))
-        summary.set("\n".join(lines))
+            poslbl.configure(text=f"Posisi Anda: {len(pos)} saham.  " + ("Perlu tindakan: " + ", ".join(need)
+                                                                         if need else "Semua masih ditahan."),
+                             fg=C["sell"] if need else C["mute"])
+        else:
+            poslbl.configure(text="Belum ada posisi tercatat. Tambahkan lewat “Posisi saya”.", fg=C["dim"])
 
     def open_dash():
         p = dashboard_path()
@@ -297,6 +395,8 @@ def gui():
 
     def do_update():
         btn_update.configure(state="disabled")
+        prog.configure(mode="indeterminate")
+        prog.pack(before=logbox, **PROG_PACK)
         prog.start(12)
         add_log("— Mulai update —")
 
@@ -320,6 +420,7 @@ def gui():
                     val()
                 elif kind in ("done", "fail"):
                     prog.stop()
+                    prog.pack_forget()
                     btn_update.configure(state="normal")
                     refresh()
                     if kind == "done":
@@ -345,12 +446,15 @@ def gui():
         w.geometry("980x420")
         w.transient(root)
         cols = ("code", "horizon", "buy_date", "buy_price", "lots", "tp1_done", "sl", "tp1", "tp2", "note", "status")
-        heads = ("Kode", "Horizon", "Tgl beli", "Harga beli", "Lot", "Sdh jual 50%", "SL sendiri", "TP1 sendiri",
-                 "TP2 sendiri", "Catatan", "Status terakhir")
+        heads = ("Kode", "Horizon", "Tgl beli", "Harga beli", "Lot", "Jual 50%", "SL", "TP1",
+                 "TP2", "Catatan", "Status")
         tv = ttk.Treeview(w, columns=cols, show="headings", height=12)
         for c, h_ in zip(cols, heads):
             tv.heading(c, text=h_)
-            tv.column(c, width=150 if c in ("note", "status") else 95, anchor="w")
+            tv.column(c, width={"code": 70, "buy_date": 95, "lots": 50, "tp1_done": 70, "sl": 65, "tp1": 65, "tp2": 65, "note": 120,
+                                    "status": 150}.get(c, 85), anchor="w")
+        tv.tag_configure("sell", foreground=C["sell"])
+        tv.tag_configure("warn", foreground=C["brass"])
         tv.pack(fill="both", expand=True, padx=10, pady=10)
         hl = {"short": "pendek", "medium": "menengah", "long": "panjang"}
         latest = {(p["code"], p["horizon"]): p for p in ((load_json(ROOT / "docs" / "data" / "latest.json") or {})
@@ -361,7 +465,8 @@ def gui():
             fmt = lambda v: "" if v is None or pd.isna(v) else f"{v:.0f}"  # noqa: E731
             tv.insert("", "end", values=(r.code, hl[r.horizon], r.buy_date.strftime("%Y-%m-%d"), f"{r.buy_price:.0f}",
                                          r.lots, "ya" if r.tp1_done else "", fmt(r.sl_user), fmt(r.tp1_user),
-                                         fmt(r.tp2_user), r.note, st.get("status", "")))
+                                         fmt(r.tp2_user), r.note, st.get("status", "")),
+                      tags=("sell",) if "JUAL" in st.get("status", "") else ("warn",) if st.get("status") == "WASPADA" else ())
         if errs:
             messagebox.showwarning(APP_NAME, "\n".join(errs), parent=w)
 
@@ -414,7 +519,7 @@ def gui():
                 f.destroy()
             bf = ttk.Frame(f)
             bf.grid(row=len(labels), column=0, columnspan=2, pady=10)
-            ttk.Button(bf, text="OK", command=ok).pack(side="left", padx=4)
+            ttk.Button(bf, text="OK", command=ok, style="Gold.TButton").pack(side="left", padx=4)
             ttk.Button(bf, text="Batal", command=f.destroy).pack(side="left", padx=4)
 
         def edit():
@@ -440,7 +545,7 @@ def gui():
         ttk.Button(bf, text="Tambah", command=form).pack(side="left")
         ttk.Button(bf, text="Ubah", command=edit).pack(side="left", padx=6)
         ttk.Button(bf, text="Hapus (sudah dijual habis)", command=delete).pack(side="left")
-        ttk.Button(bf, text="Simpan", command=save).pack(side="right")
+        ttk.Button(bf, text="Simpan", command=save, style="Gold.TButton").pack(side="right")
         tv.bind("<Double-1>", lambda e: edit())
 
     # ---------- jendela pengaturan
@@ -465,7 +570,7 @@ def gui():
         ttk.Checkbutton(w, text="Buka dashboard otomatis setelah update", variable=od).grid(
             row=3, column=0, columnspan=2, sticky="w", padx=10, pady=5)
         ttk.Label(w, text="Token & chat ID disimpan di settings.json di folder aplikasi (laptop Anda).",
-                  foreground="#666").grid(row=4, column=0, columnspan=2, sticky="w", padx=10)
+                  foreground=C["dim"]).grid(row=4, column=0, columnspan=2, sticky="w", padx=10)
 
         def test_tg():
             from src.notify import send
@@ -512,7 +617,7 @@ def gui():
         btn_idx = ttk.Button(bf, text="Tes koneksi IDX", command=test_idx)
         btn_idx.pack(side="left", padx=4)
         ttk.Button(bf, text="Tes Telegram", command=test_tg).pack(side="left", padx=4)
-        ttk.Button(bf, text="Simpan", command=ok).pack(side="left", padx=4)
+        ttk.Button(bf, text="Simpan", command=ok, style="Gold.TButton").pack(side="left", padx=4)
         ttk.Button(bf, text="Batal", command=w.destroy).pack(side="left", padx=4)
 
     refresh()

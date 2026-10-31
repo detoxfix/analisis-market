@@ -250,6 +250,22 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
             dump_json(bt_res, bt_path)
 
     # ------------------------------------------------------------ 6. ringkasan pasar & output
+    # data grafik untuk dashboard: garis IHSG 6 bulan + SMA50/SMA200, dan harga 60 hari per saham bersinyal
+    bs = bench.dropna()
+    tail = pd.DataFrame({"c": bs, "m50": bs.rolling(50).mean(), "m200": bs.rolling(200).mean()}).tail(130)
+    series = [[d.strftime("%Y-%m-%d"), round(float(r.c), 2),
+               None if pd.isna(r.m50) else round(float(r.m50), 2),
+               None if pd.isna(r.m200) else round(float(r.m200), 2)] for d, r in tail.iterrows()]
+
+    def spark(t):
+        px = prices.get(t)
+        return [round(float(v), 2) for v in px["Close"].tail(60)] if px is not None else None
+    for blk in per_h.values():
+        for kind in ("buys", "watchlist", "sells"):
+            for it in blk[kind]:
+                it["spark"] = spark(it["ticker"])
+    for it in pos_items:
+        it["spark"] = spark(D.jk(it["code"]))
     b_last, b_prev = float(bench.iloc[-1]), float(bench.iloc[-2])
     b_ema20 = float(bench.ewm(span=20, adjust=False).mean().iloc[-1])
     b_sma200 = float(bench.rolling(200).mean().iloc[-1]) if len(bench) >= 200 else None
@@ -262,7 +278,9 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
                    "split_date": cfg.get("backtest", {}).get("split_date"),
                    "thresholds": th},
         "market": {"bench": b_last, "bench_chg": b_last / b_prev - 1, "regime": regime,
-                   "universe": len(uni), "scanned": len(prices)},
+                   "universe": len(uni), "scanned": len(prices), "series": series,
+                   "above_sma50": bool(series and series[-1][2] and series[-1][1] > series[-1][2]),
+                   "above_sma200": bool(series and series[-1][3] and series[-1][1] > series[-1][3])},
         "horizons": per_h,
         "positions": positions.public_view(pos_items, cfg.get("positions", {}).get("dashboard", "percent")),
         "positions_errors": pos_errs,
