@@ -62,6 +62,22 @@ def test_sim_limit_and_trail():
     assert r2["outcome"] == "TP1+TRAIL", r2["outcome"]
 
 
+def test_market_exit():
+    from src.sim import market_flag
+    assert market_flag([1, 0, 0, 1, 0], 1).tolist() == [False, True, True, False, True]
+    assert market_flag([1, 0, 0, 1, 0], 2).tolist() == [False, False, True, False, False]
+    plan = {"entry_high": 1010, "sl": 900, "tp1": 1100, "tp2": 1200, "max_hold_days": 20, "market_exit": "all"}
+    rows = [[1000] * 4, [1000, 1010, 990, 1000], [1000, 1005, 980, 990], [990, 995, 950, 960]]
+    import numpy as np
+    from src.sim import simulate_arr
+    o, h, l, c = (np.array([r[k] for r in rows], float) for k in range(4))
+    flag = np.array([False, False, True, True])
+    r = simulate_arr(o, h, l, c, 0, plan, FEES, None, flag)
+    assert r["outcome"] == "MKT" and r["exit_px"] == 990
+    r2 = simulate_arr(o, h, l, c, 0, {**plan, "market_exit": "half"}, FEES, None, flag)
+    assert r2["outcome"].startswith("MKT½+") and r2["tp1_px"] == 990
+
+
 def test_weights():
     w = _water_fill(np.array([10.0, 1, 1, 1]), 0.3)
     assert abs(w.sum() - 1) < 1e-9 and w.max() <= 0.3 + 1e-9
@@ -71,6 +87,45 @@ def test_weights():
     out, cash = allocate(picks, h, 100_000_000, 0.01)
     assert abs(sum(p["weight_bucket"] for p in out) - 0.5) < 1e-9 and abs(cash - 0.5) < 1e-9
     assert all(p["max_loss_value"] <= 1_000_000 + 1 for p in out)
+
+
+def test_execution_realism():
+    from src.sim import arb_lock, simulate_arr
+    # beli di lelang pembukaan = harga open; SL di tengah sesi: 1 tick lebih murah (harga 900 -> tick 5)
+    plan = {"entry_high": 1010, "sl": 900, "tp1": 1100, "tp2": 1200, "max_hold_days": 20}
+    rows = [[1000] * 4, [1000, 1010, 990, 1000], [990, 995, 880, 890]]
+    o, h, l, c = (np.array([r[k] for r in rows], float) for k in range(4))
+    r = simulate_arr(o, h, l, c, 0, plan, FEES, ex={"slip": 1, "through": True})
+    assert r["entry_px"] == 1000 and r["exit_px"] == 895 and r["outcome"] == "SL"
+    r = simulate_arr(o, h, l, c, 0, plan, FEES, ex={"slip": 1, "slip_auction": 1, "through": True})
+    assert r["entry_px"] == 1005
+    # TP yang hanya disentuh tidak terisi bila limit_through aktif
+    rows = [[1000] * 4, [1000, 1010, 990, 1000], [1000, 1100, 1000, 1050], [1050, 1110, 1040, 1100]]
+    o, h, l, c = (np.array([r[k] for r in rows], float) for k in range(4))
+    r = simulate_arr(o, h, l, c, 0, plan, FEES, ex={"slip": 0, "through": True})
+    assert r["tp1_pos"] == 3
+    r = simulate_arr(o, h, l, c, 0, plan, FEES)
+    assert r["tp1_pos"] == 2
+    # ARB: hari ke-3 dibuka & ditutup di batas bawah 15% (aturan 2025) -> jual baru bisa hari ke-4
+    dates = pd.to_datetime(["2025-06-02", "2025-06-03", "2025-06-04", "2025-06-05"])
+    rows = [[1000] * 4, [1000, 1010, 990, 1000], [850, 850, 850, 850], [840, 900, 830, 880]]
+    o, h, l, c = (np.array([r[k] for r in rows], float) for k in range(4))
+    lc, lo = arb_lock(dates, o, h, l, c)
+    assert lo.tolist() == [False, False, True, False]
+    r = simulate_arr(o, h, l, c, 0, plan, FEES, ex={"slip": 0, "through": True, "lock_close": lc, "lock_open": lo})
+    assert r["outcome"] == "SL" and r["exit_pos"] == 3 and r["exit_px"] == 840 and r["arb_blocked"] == 1
+    # tanpa ARB: dianggap terjual di open hari ke-3
+    r = simulate_arr(o, h, l, c, 0, plan, FEES)
+    assert r["exit_pos"] == 2 and r["exit_px"] == 850
+
+
+def test_point_in_time():
+    from src.universe import eligibility
+    idx_ = pd.date_range("2025-01-01", periods=40, freq="B")
+    df = pd.DataFrame({"Close": np.r_[np.full(20, 1000.0), np.full(20, 400.0)], "Volume": 1e7}, index=idx_)
+    cfg = {"universe": {"min_market_cap": 5e12, "min_avg_value_20d": 5e9, "min_price": 50}}
+    el = eligibility(df, 6e9, cfg)        # 6 miliar lembar: Rp 6 T lalu Rp 2,4 T
+    assert not el.iloc[:14].any() and el.iloc[14:20].all() and not el.iloc[20:].any()
 
 
 if __name__ == "__main__":
