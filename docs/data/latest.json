@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31 20:44",
+ "generated_at": "2026-11-03 03:28",
  "as_of": "2026-10-30",
  "demo": false,
  "params": {
@@ -28851,7 +28851,7 @@
   "level": "BELUM CUKUP DATA"
  },
  "proposal": {
-  "generated_at": "2026-10-31 20:42",
+  "generated_at": "2026-11-01 14:36",
   "demo": false,
   "universe": 122,
   "holdout_from": "2026-04-30",
@@ -28902,12 +28902,12 @@
    "medium": {
     "tried": 17,
     "passed_selection": 5,
-    "select_cur": 0.020158,
-    "select_n": 602,
+    "select_cur": 0.020126,
+    "select_n": 603,
     "holdout_from": "2026-04-30",
     "evidence": {
-     "select_cur": 0.020158,
-     "select_new": 0.033582,
+     "select_cur": 0.020126,
+     "select_new": 0.033755,
      "select_n_new": 542,
      "blocks_won": [
       3,
@@ -28917,9 +28917,9 @@
      "holdout_new": -0.100643,
      "holdout_n_cur": 94,
      "holdout_n_new": 91,
-     "port_ret_cur": 0.05236,
+     "port_ret_cur": 0.057714,
      "port_ret_new": 0.328291,
-     "port_dd_cur": -0.252656,
+     "port_dd_cur": -0.249127,
      "port_dd_new": -0.221186
     },
     "change": {
@@ -28931,7 +28931,7 @@
     "reason": "Kandidat terbaik (hold_max_days 40 → 60) gagal uji akhir: kalah di 6 bulan terakhir. Parameter sekarang tetap dipakai."
    }
   },
-  "seconds": 54
+  "seconds": 59
  },
  "backtest": {
   "generated_at": "2026-10-31T19:14:08",
