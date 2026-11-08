@@ -73,13 +73,31 @@ def _name_alias(name: str | None) -> str | None:
     return " ".join(core).lower()
 
 
-def mentions(text: str, code: str, alias: str | None) -> bool:
+def mentions(text: str, code: str, alias: str | None, others: dict | None = None) -> bool:
+    """Apakah teks menyebut saham ini? `others` = alias saham lain, supaya "Bumi Resources" tidak
+    dianggap BUMI bila yang tertulis "Bumi Resources Minerals" (BRMS)."""
     t = text
-    if re.search(rf"\(\s*{code}\s*\)|(saham|emiten|kode)\s+{code}\b", t, re.I):
+    if re.search(rf"\(\s*{code}\s*\)|(?i:saham|emiten|kode)\s+{code}\b", t):      # kode huruf besar
         return True
     if code not in COMMON_WORDS and re.search(rf"\b{code}\b", t):          # huruf besar persis
         return True
-    return bool(alias and alias in t.lower())
+    if not alias:
+        return False
+    low = t.lower()
+    for m in re.finditer(rf"\b{re.escape(alias)}\b", low):
+        longer = [a for c, a in (others or {}).items() if a and c != code and len(a) > len(alias) and alias in a]
+        if any(low.find(a, max(0, m.start() - len(a)), m.end() + len(a)) != -1 for a in longer):
+            continue
+        after = re.match(r"\s*\(\s*([a-z]{4})\s*\)", low[m.end():])        # "nama (KODE)" milik saham lain
+        if after and after.group(1).upper() != code:
+            continue
+        return True
+    return False
+
+
+def clauses(text: str) -> list[str]:
+    """Pecah judul/ringkasan menjadi klausa, supaya kata kunci hanya berlaku untuk saham di klausa yang sama."""
+    return [c.strip() for c in re.split(r"[:;,|.!?]\s+|\s[-–—]\s", text) if c.strip()]
 
 
 def _clean(s: str | None) -> str:
@@ -137,6 +155,8 @@ def collect(stocks: list[dict], cfg: dict, now: datetime | None = None) -> dict:
     budget = float(ncfg.get("time_budget_sec", 240))
     delay = float(ncfg.get("delay_sec", 0.4))
     now = now or datetime.now(timezone.utc)
+    if now.tzinfo is None:                                  # now_wib() tanpa zona = WIB
+        now = now.replace(tzinfo=timezone(timedelta(hours=7)))
     since = now - timedelta(days=days)
     aliases = {s["code"]: _name_alias(s.get("name")) for s in stocks}
     t0, sess = time.time(), requests.Session()
@@ -176,9 +196,13 @@ def collect(stocks: list[dict], cfg: dict, now: datetime | None = None) -> dict:
         if not cats:
             continue
         cands = [hint] if hint else list(aliases)
+        parts = clauses(it["title"] if hint else text)
         for code in cands:
-            if not mentions(it["title"] if hint else text, code, aliases.get(code)):
+            hit = [c for c in parts if mentions(c, code, aliases.get(code), aliases) and classify(c)]
+            if not hit:
                 continue
+            cats = [x for c in hit for x in classify(c)]
+            cats = list(dict.fromkeys(cats))
             key = (code, re.sub(r"\W+", "", it["title"].lower())[:80])
             if key in seen:
                 continue

@@ -33,13 +33,13 @@ jobs:
       - name: Uji unit
         run: python -m pytest -q tests
 
-      - name: Uji sumber berita
-        run: python -m src.news --probe
+      - name: Uji penuh dengan data asli (tanpa Telegram, tanpa backtest)
+        run: python main.py --no-notify --backtest never
 
       - name: Simpan hasil ke branch ini
         run: |
           git config user.name "ihsg-signal-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f docs/data/news_probe.json
+          git add -f docs/data/latest.json data/news
           git commit -m "Hasil uji berita $(TZ=Asia/Jakarta date '+%F %H:%M')" || echo "Tidak ada perubahan"
           git push

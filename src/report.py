@@ -85,6 +85,13 @@ a{color:var(--brass)}
 .seg .n{color:inherit;opacity:.7;margin-left:4px}
 .panel{display:none}.panel.on{display:block}
 .intro{color:var(--mute);font-size:14px;margin:12px 0 12px;max-width:78ch}
+.nflag{display:inline-block;margin-top:6px;padding:2px 8px;border-radius:4px;font:600 12px var(--sans);background:var(--sell-dim);color:var(--sell);border:1px solid var(--sell)}
+.nflag.mid{background:transparent;color:var(--brass);border-color:var(--brass)}
+.news{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.news li{font-size:14px;line-height:1.4}.news .cat{color:var(--brass);font-weight:600}.news .cat.hi{color:var(--sell)}
+.news a{color:var(--ink)}.news small{color:var(--dim);display:block}
+.ncard{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:10px 0}
+.ncard h4{margin:0 0 8px;font:600 17px var(--cond)}.ncard h4 span{color:var(--mute);font:400 13px var(--sans);margin-left:8px}
 .alert{border-left:3px solid var(--sell);background:var(--sell-dim);padding:10px 14px;border-radius:0 6px 6px 0;margin:10px 0;font-size:14px}
 .alert b{color:var(--sell)}
 .note-cut{border-left:3px solid var(--brass);background:var(--brass-dim);padding:10px 14px;border-radius:0 6px 6px 0;margin:10px 0;font-size:14px}
@@ -184,6 +191,7 @@ footer{color:var(--dim);font-size:13px;margin-top:36px;border-top:1px solid var(
     <button data-p="sell">Sinyal jual<span class="n" id="n-sell"></span></button>
     <button data-p="pos" id="tab-pos">Posisi saya<span class="n" id="n-pos"></span></button>
     <button data-p="all">Semua saham<span class="n" id="n-all"></span></button>
+    <button data-p="news" id="tab-news">Berita<span class="n" id="n-news"></span></button>
     <button data-p="track">Track record</button>
     <button data-p="bt">Backtest</button>
     <button data-p="method">Cara kerja</button>
@@ -192,6 +200,7 @@ footer{color:var(--dim);font-size:13px;margin-top:36px;border-top:1px solid var(
   <section class="panel" id="p-sell"><div class="seg" id="seg-sell"></div><div id="sell-body"></div></section>
   <section class="panel" id="p-pos"></section>
   <section class="panel" id="p-all"><input type="search" id="q" placeholder="Cari kode, nama, atau sektor"><div class="tbl"><table id="all-t"></table></div></section>
+  <section class="panel" id="p-news"></section>
   <section class="panel" id="p-track"></section>
   <section class="panel" id="p-bt"></section>
   <section class="panel method" id="p-method"></section>
@@ -253,11 +262,16 @@ const meter = s => `<div class="meter"><i style="width:${Math.min(100,Math.abs(s
 const idCell = p => `<div class="id"><span class="tk">${esc(p.code)}</span><span class="nm" title="${esc(p.name)}">${esc(p.name)}</span><span class="nm">${esc(p.sector)}</span></div>`;
 const pxCell = p => `<div class="sp">${spark(p.spark,trendCol(p.spark))}<div class="px">${n(p.price)}<em class="${(p.chg_1d||0)>=0?"pos":"neg"}">${pct(p.chg_1d)}</em></div></div>`;
 
+const NEWS_DAYS=()=>((D.news||{}).days||7);
+function newsChip(x){if(!x.news||!x.news.length)return "";const hi=x.news.some(w=>w.severity==="tinggi");
+  return `<span class="nflag ${hi?"":"mid"}" title="${esc(x.news[0].title)}">⚠ Berita: ${esc(x.news[0].categories[0])}${x.news.length>1?` +${x.news.length-1}`:""}</span>`;}
+function newsList(items){return `<ul class="news">${items.map(w=>`<li><span class="cat ${w.severity==="tinggi"?"hi":""}">${esc(w.categories.join(", "))}</span> — ${w.link?`<a href="${esc(w.link)}" target="_blank" rel="noopener">${esc(w.title)}</a>`:esc(w.title)}<small>${[w.source,w.date?tgl(w.date):""].filter(Boolean).map(esc).join(" · ")}</small></li>`).join("")}</ul>`;}
+const newsBlock = x => x.news&&x.news.length?`<div><h4>Berita negatif ${NEWS_DAYS()} hari</h4>${newsList(x.news)}<p class="muted" style="margin-top:6px">Peringatan otomatis dari judul berita; baca beritanya sebelum memutuskan.</p></div>`:"";
 function buyRow(p){
   return `<article class="sig">${idCell(p)}${pxCell(p)}${ladder(p)}
    <div class="alloc"><b>${pctp(p.weight_total)}</b><span>dari modal</span><b style="margin-top:6px">${n(p.lots)} lot</b><span>modal acuan</span></div>
-   <div class="tag">${badge(p.signal,p.score)}${meter(p.score)}</div>
-   <details><summary>Rencana, alasan & risiko</summary><div class="more">
+   <div class="tag">${badge(p.signal,p.score)}${meter(p.score)}${newsChip(p)}</div>
+   <details><summary>Rencana, alasan & risiko</summary><div class="more">${newsBlock(p)}
      <div><h4>Kapan beli</h4><p>${esc(p.when_buy)}</p></div>
      <div><h4>Kapan jual</h4><p>${esc(p.when_sell)}</p></div>
      <div><h4>Angka kunci</h4><div class="kv"><span>Cut loss</span><b class="neg">${n(p.sl)} (${pct(p.sl_pct)})</b><span>TP1 / TP2</span><b class="pos">${pct(p.tp1_pct)} / ${pct(p.tp2_pct)}</b><span>R:R bersih</span><b>${dec(p.rr1)} / ${dec(p.rr2)}</b><span>Lama hold</span><b>${esc(p.hold)}</b><span>Kapitalisasi</span><b>${tri(p.mcap)}</b></div>${p.lots_limited_by_risk?`<p class="muted" style="margin-top:6px">Lot dibatasi agar rugi maks. ${pctp(D.params.risk_per_trade,0)} modal per posisi.</p>`:""}</div>
@@ -270,8 +284,8 @@ function sellRow(p){
   return `<article class="sig">${idCell(p)}${pxCell(p)}
    <div class="kv" style="font-size:14px"><span>Tindakan</span><b>${esc(p.action)}</b><span>Area jual</span><b>${n(p.sell_zone_low)}–${n(p.sell_zone_high)}</b><span>Batas breakdown</span><b class="neg">${n(p.breakdown_level)}</b></div>
    <div class="alloc"><b>${pctp(p.sell_portion,0)}</b><span>porsi dijual</span></div>
-   <div class="tag">${badge(p.signal,p.score)}${meter(p.score)}</div>
-   <details><summary>Alasan</summary><div class="more"><div><h4>Kapan jual</h4><p>${esc(p.when_sell)}</p></div><div><h4>Alasan</h4><ul>${p.reasons.map(r=>`<li>${esc(r)}</li>`).join("")}</ul></div>${fxLine(p)}</div></details></article>`;
+   <div class="tag">${badge(p.signal,p.score)}${meter(p.score)}${newsChip(p)}</div>
+   <details><summary>Alasan</summary><div class="more">${newsBlock(p)}<div><h4>Kapan jual</h4><p>${esc(p.when_sell)}</p></div><div><h4>Alasan</h4><ul>${p.reasons.map(r=>`<li>${esc(r)}</li>`).join("")}</ul></div>${fxLine(p)}</div></details></article>`;
 }
 
 /* ---------- pembuka: IHSG + keputusan hari ini */
@@ -391,7 +405,7 @@ function renderAll(){
   rows.sort((a,b)=>sortK==="code"?sortD*a.code.localeCompare(b.code):sortD*(key(a)-key(b)));
   const th=[["code","Kode"],["price","Harga"],["chg_1d","Hari ini"],["mcap","Kapitalisasi"],["short","Pendek"],["medium","Menengah"],["long","Panjang"],["pe","PER"],["pb","PBV"],["roe","ROE"],["div_yield","Dividen"]];
   const hasF=D.all.some(r=>r.foreign_20d!=null); if(hasF)th.push(["foreign_20d","Asing 20 hari"]);
-  $("all-t").innerHTML=`<tr>${th.map(([k,l])=>`<th data-k="${k}" aria-sort="${k===sortK?(sortD>0?"ascending":"descending"):"none"}">${l}${k===sortK?(sortD>0?" ▲":" ▼"):""}</th>`).join("")}</tr>`+rows.map(r=>`<tr><td><b>${r.code}</b><div class="name">${esc(r.name)}</div></td><td>${n(r.price)}</td><td class="${r.chg_1d>=0?"pos":"neg"}">${pct(r.chg_1d)}</td><td>${tri(r.mcap)}</td>
+  $("all-t").innerHTML=`<tr>${th.map(([k,l])=>`<th data-k="${k}" aria-sort="${k===sortK?(sortD>0?"ascending":"descending"):"none"}">${l}${k===sortK?(sortD>0?" ▲":" ▼"):""}</th>`).join("")}</tr>`+rows.map(r=>`<tr><td><b>${r.code}</b>${r.news&&r.news.length?` <span class="neg" title="${esc(r.news[0].categories[0]+": "+r.news[0].title)}">⚠</span>`:""}<div class="name">${esc(r.name)}</div></td><td>${n(r.price)}</td><td class="${r.chg_1d>=0?"pos":"neg"}">${pct(r.chg_1d)}</td><td>${tri(r.mcap)}</td>
   <td>${badge(r.short.signal,r.short.score)}</td><td>${badge(r.medium.signal,r.medium.score)}</td><td>${badge(r.long.signal,r.long.score)}</td>
   <td>${dec(r.pe)}</td><td>${dec(r.pb,2)}</td><td>${pctp(r.roe)}</td><td>${pctp(r.div_yield)}</td>${hasF?`<td class="${(r.foreign_20d||0)>=0?"pos":"neg"}">${rpM(r.foreign_20d)}</td>`:""}</tr>`).join("");
   $("all-t").querySelectorAll("th").forEach(t=>t.onclick=()=>{const k=t.dataset.k;sortD=k===sortK?-sortD:-1;sortK=k;renderAll();});
@@ -404,8 +418,21 @@ function posRow(x){
    <div class="sp">${spark(x.spark,trendCol(x.spark))}<div class="px">${n(x.price)}<em class="${(x.pnl_pct||0)>=0?"pos":"neg"}">${pct(x.pnl_pct)}</em></div></div>
    ${x.tp1&&x.sl?ladder(lvl).replace(/area beli|antre beli/g,"harga beli"):"<div></div>"}
    <div class="alloc">${x.lots!=null?`<b>${n(x.lots)} lot</b><span>${x.pnl_value!=null?(x.pnl_value>=0?"+":"−")+"Rp "+n(Math.abs(x.pnl_value)):""}</span>`:`<b class="${(x.pnl_pct||0)>=0?"pos":"neg"}">${pct(x.pnl_pct)}</b><span>untung/rugi</span>`}</div>
-   <div class="tag"><span class="pill ${PCLS[x.status]||"p-x"}">${esc(x.status)}</span>${x.signal?`<div style="margin-top:6px">${badge(x.signal,x.score)}</div>`:""}</div>
-   <details ${x.rank<3?"open":""}><summary>Tindakan</summary><div class="more"><div><p>${esc(x.action)}</p></div></div></details></article>`;
+   <div class="tag"><span class="pill ${PCLS[x.status]||"p-x"}">${esc(x.status)}</span>${x.signal?`<div style="margin-top:6px">${badge(x.signal,x.score)}</div>`:""}${newsChip(x)}</div>
+   <details ${x.rank<3||(x.news&&x.news.length)?"open":""}><summary>Tindakan</summary><div class="more"><div><p>${esc(x.action)}</p></div>${newsBlock(x)}</div></details></article>`;
+}
+function renderNews(){
+  const N=D.news||{},I=N.items||{},codes=Object.keys(I);
+  const byCode=Object.fromEntries(D.all.map(r=>[r.code,r]));
+  $("n-news").textContent=codes.length||"";
+  let h=`<p class="intro">Berita ${NEWS_DAYS()} hari terakhir yang judulnya menyebut saham dalam pantauan dan mengandung kata risiko: right issue / private placement (dilusi), PKPU, gagal bayar, suspensi, kasus hukum, gugatan, sanksi, kinerja memburuk, peringkat turun, pengendali menjual saham. Hanya peringatan: skor dan sinyal tidak diubah. Sumber: Google News & RSS portal berita.</p>`;
+  if(!N.stats&&!codes.length){$("p-news").innerHTML=h+'<div class="empty"><b>Data berita belum tersedia.</b></div>';return;}
+  if(!codes.length){$("p-news").innerHTML=h+'<div class="empty"><b>Tidak ada berita negatif untuk saham dalam pantauan.</b></div>';return;}
+  codes.sort((a,b)=>{const s=c=>I[c].some(w=>w.severity==="tinggi")?0:1;return s(a)-s(b)||(I[b][0].date||"").localeCompare(I[a][0].date||"");});
+  h+=codes.map(c=>{const r=byCode[c]||{};const sig=r.short?["short","medium","long"].map(k=>`${H[k]} ${badge(r[k].signal,r[k].score)}`).join(" "):"";
+    return `<div class="ncard"><h4>${esc(c)}<span>${esc(r.name||"")}</span></h4>${sig?`<div style="margin-bottom:8px;font-size:13px">${sig}</div>`:""}${newsList(I[c])}</div>`;}).join("");
+  const st=N.stats;if(st)h+=`<p class="muted" style="font-size:13px">Diperiksa ${st.recent_items} judul berita ${NEWS_DAYS()} hari terakhir dari ${st.google?st.google.ok:0} pencarian Google News dan ${Object.values(st.feeds||{}).filter(f=>f.status==="OK").length} RSS portal.</p>`;
+  $("p-news").innerHTML=h;
 }
 function renderPositions(){
   const P=D.positions, E=D.positions_errors||[];
@@ -509,6 +536,7 @@ function renderMethod(){
   <li><b>Panjang (6–24 bulan):</b> 40% teknikal (SMA200, kemiringan SMA200, momentum 12-1 bulan) + 60% fundamental (ROE, PER & PBV relatif sektor, DER, dividend yield, pertumbuhan laba).</li></ul>
   <p><b>Rencana trading.</b> Area beli = harga penutupan s/d koreksi ke support (EMA20/SMA50 atau sebagian ATR). Cut loss berbasis ATR dengan batas persentase maksimum per horizon. TP1/TP2 = kelipatan risiko (R). Semua harga dibulatkan ke fraksi harga BEI. R:R dihitung bersih biaya beli ${pctp(p.fees.buy,2)} & jual ${pctp(p.fees.sell,2)}.</p>
   <p><b>Bobot.</b> Di tiap horizon, bobot ∝ skor ÷ volatilitas (ATR%), dibatasi bobot maksimum per saham dan per sektor; sisanya kas. Jumlah lot dihitung dari modal acuan Rp ${n(p.capital)} dan dibatasi agar rugi maksimal per posisi ≤ ${pctp(p.risk_per_trade,0)} modal.</p>
+  <p><b>Peringatan berita.</b> Setiap hari judul berita 7 hari terakhir (Google News per saham + RSS portal berita) dicocokkan ke kode atau nama saham, lalu diperiksa kata risikonya: right issue / private placement, PKPU / pailit, gagal bayar, suspensi / delisting, UMA, kasus hukum, gugatan, sanksi, kinerja memburuk, peringkat turun, pengendali menjual saham, gangguan operasi. Hanya peringatan; skor dan sinyal tidak diubah. Berita yang cocok diarsip agar kelak bisa diuji.</p>
   <h3>Sumber data</h3><ul>${D.sources.map(s=>`<li>${esc(s)}</li>`).join("")}</ul>
   <h3>Disclaimer</h3><p>Aplikasi ini alat bantu analisis kuantitatif, bukan nasihat investasi dan bukan ajakan membeli/menjual efek. Data gratis dapat terlambat atau keliru — cek ulang harga di aplikasi sekuritas sebelum bertransaksi. Kinerja masa lalu tidak menjamin hasil di masa depan.</p>`;
 }
@@ -516,7 +544,7 @@ $("tabs").onclick=e=>{const b=e.target.closest("button");if(!b)return;document.q
 header();
 seg("seg-buy",renderBuy,h=>D.horizons[h].buys.length);
 seg("seg-sell",renderSell,h=>D.horizons[h].sells.length);
-$("q").oninput=renderAll;renderAll();renderPositions();renderTrack();renderBt();renderMethod();
+$("q").oninput=renderAll;renderAll();renderPositions();renderNews();renderTrack();renderBt();renderMethod();
 $("foot").textContent="PANDU (Portofolio · Analisis · Notifikasi · Disiplin risiko · Uji balik) adalah alat bantu analisis, bukan nasihat investasi. Cek ulang harga di aplikasi sekuritas sebelum bertransaksi.";
 </script>
 </body>

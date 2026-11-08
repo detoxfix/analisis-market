@@ -58,6 +58,17 @@ H_SHORT = {"short": "pendek", "medium": "menengah", "long": "panjang"}
 POS_ICON = {"JUAL SEMUA": "🔴", "JUAL 50%": "🟠", "WASPADA": "🟡", "TAHAN": "⚪", "DATA": "❔"}
 
 
+def news_line(x: dict) -> str:
+    """Baris peringatan berita (judul pertama + jumlah lainnya)."""
+    ns = x.get("news") or []
+    if not ns:
+        return ""
+    w = ns[0]
+    more = f" (+{len(ns) - 1} berita lain)" if len(ns) > 1 else ""
+    link = f' <a href="{e(w["link"])}">baca</a>' if w.get("link") else ""
+    return f"\n   ⚠️ Berita {e(w['categories'][0])}: {e(w['title'][:110])}{more}{link}"
+
+
 def positions_block(items: list[dict] | None, errors: list[str] | None = None) -> str | None:
     if not items and not errors:
         return None
@@ -72,9 +83,9 @@ def positions_block(items: list[dict] | None, errors: list[str] | None = None) -
         if x["status"] == "TAHAN":
             lines.append(f"{head}\n   SL {rp(x['sl'])} ({pct(x['sl_dist'])})"
                          + (f" · TP1 {rp(x['tp1'])} ({pct(x['tp1_dist'])})" if x.get("tp1") and not x.get("tp1_done") else
-                            f" · TP2 {rp(x['tp2'])} ({pct(x['tp2_dist'])})" if x.get("tp2") else ""))
+                            f" · TP2 {rp(x['tp2'])} ({pct(x['tp2_dist'])})" if x.get("tp2") else "") + news_line(x))
         else:
-            lines.append(f"{head}\n   <b>{e(x['status'])}</b>: {e(x['action'])}")
+            lines.append(f"{head}\n   <b>{e(x['status'])}</b>: {e(x['action'])}" + news_line(x))
     for err in errors or []:
         lines.append(f"⚠️ {e(err)}")
     return "\n".join(lines)
@@ -147,7 +158,8 @@ def build_messages(res: dict, dashboard_url: str | None = None, max_buys: int = 
                     f"🟢 <b>{e(p['code'])}</b> {e(p['signal'])} ({p['score']:.0f}) · bobot {pct(p['weight_total'], 1, False)}{lot}\n"
                     f"   {buy} · TP {rp(p['tp1'])}/{rp(p['tp2'])} · "
                     f"SL {rp(p['sl'])} ({pct(p['sl_pct'])}) · hold {e(p['hold'])}"
-                    + (f"\n   Asing 20 hari: {rpb(p['foreign_20d'])}" if p.get("foreign_20d") is not None else ""))
+                    + (f"\n   Asing 20 hari: {rpb(p['foreign_20d'])}" if p.get("foreign_20d") is not None else "")
+                    + news_line(p))
             if len(blk["buys"]) > max_buys:
                 lines.append(f"   …dan {len(blk['buys']) - max_buys} lainnya di dashboard")
         else:

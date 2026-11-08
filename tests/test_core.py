@@ -226,6 +226,12 @@ def test_news_rules():
     assert N.mentions("Emiten tambang (CUAN) right issue", "CUAN", None)
     assert not N.mentions("Strategi cari cuan saat rights issue", "CUAN", None)
     assert not N.mentions("CUAN besar dari right issue", "CUAN", None)
+    al = {"BUMI": "bumi resources", "BRMS": "bumi resources minerals", "MBMA": None, "MEDC": None}
+    t = "Saham Bumi Resources Minerals (BRMS) Kena Downgrade"
+    assert N.mentions(t, "BRMS", al["BRMS"], al) and not N.mentions(t, "BUMI", al["BUMI"], al)
+    t = "IHSG Rebound 0,75%: MEDC & TAPG Bagikan Dividen Interim, MBMA Siapkan Private Placement"
+    hit = lambda c: [x for x in N.clauses(t) if N.mentions(x, c, None) and N.classify(x)]  # noqa: E731
+    assert hit("MBMA") and not hit("MEDC")
     xml = ("<rss><channel><item><title>BBRI digugat Rp 1 T - Kontan</title><link>http://x</link>"
            "<pubDate>Fri, 06 Nov 2026 03:00:00 GMT</pubDate><source url='k'>Kontan</source></item></channel></rss>")
     it = N.parse_rss(xml)[0]
