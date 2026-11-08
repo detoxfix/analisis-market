@@ -247,6 +247,13 @@ def entry_mask(d: pd.DataFrame, score: pd.Series, hcfg: dict, th: dict) -> tuple
         bad = ~(d["Close"] > d[col])
         why = why.mask(bad & ok & (why == ""), f"Harga di bawah {col} (filter tren)")
         ok &= ~bad
+    sm = hcfg.get("sentiment_min")
+    if sm is not None and "SENT" in d:
+        sent = d["SENT"]
+        bad = ~(sent >= float(sm))                   # NaN (belum dihitung) -> tertahan
+        txt = sent.map(lambda v: f"{v:+.0f}" if pd.notna(v) else "?")
+        why = why.mask(bad & ok & (why == ""), "Sentimen pasar " + txt + f" di bawah batas {float(sm):+.0f}")
+        ok &= ~bad
     low = score < min_score
     why = why.mask(low & (score >= th["buy"]) & (why == ""), f"Skor di bawah minimum masuk {min_score:g}")
     return ok.fillna(False), why

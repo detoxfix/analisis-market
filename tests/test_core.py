@@ -214,6 +214,29 @@ def test_data_freshness():
     assert not data_freshness("2026-12-24", datetime(2026, 12, 26, 9, 0), ["2026-12-25"])["stale"]
 
 
+def test_sentiment():
+    from src import data as D
+    from src import sentiment as S
+    from src.indicators import add_indicators
+    from src.signals import entry_mask
+    prices, bench, _, _ = D.demo_dataset()
+    ind = {t: add_indicators(p, bench) for t, p in list(prices.items())[:25]}
+    sent = S.compute(ind)
+    s = sent["SENT"].dropna()
+    assert len(s) > 300 and s.between(-100, 100).all()
+    assert S.label(-60) == "Sangat pesimis" and S.label(-20) == "Pesimis" and S.label(0) == "Netral" \
+        and S.label(35) == "Optimis" and S.label(80) == "Sangat optimis"
+    S.attach(ind, sent)
+    d = next(iter(ind.values()))
+    score = pd.Series(80.0, index=d.index)
+    ok, why = entry_mask(d, score, {"sentiment_min": 0}, {"buy": 30})
+    low = d["SENT"] < 0
+    assert not ok[low].any() and ok[d["SENT"] >= 0].all()
+    assert why[low].str.contains("Sentimen pasar").all()
+    summ = S.summary(sent, {"A": {"foreign_5d": 1e9, "foreign_20d": 2e9}})
+    assert summ["label"] == S.label(summ["score"]) and len(summ["components"]) == 6 and summ["foreign"]["n"] == 1
+
+
 def test_config_edit():
     import yaml
     from src.configedit import set_horizon_param

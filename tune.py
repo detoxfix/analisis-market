@@ -30,6 +30,7 @@ from src import backtest as bt
 from src import portsim
 from src.utils import load_json
 from src import data as D
+from src import sentiment as SENT
 from src.indicators import add_indicators
 from src.universe import backtest_set, candidate_list, filter_universe
 from src.utils import ROOT, dump_json, log, now_wib
@@ -69,6 +70,7 @@ def load_data(cfg: dict, demo: bool):
     if cfg.get("backtest", {}).get("point_in_time", True):
         ind = backtest_set(prices, shares, cfg, list(ind),
                            lambda t: ind[t] if t in ind else add_indicators(prices[t], bench))
+    SENT.attach(ind, SENT.compute(ind))           # sentimen pasar per tanggal (universe per tanggal bila aktif)
     return ind, len(uni)
 
 
@@ -189,6 +191,125 @@ def run_exits(prep, ind, cfg, n_uni, demo, t0):
     prev["exits"] = out                       # simpan berdampingan dengan hasil grid lengkap sebelumnya
     dump_json(prev, path)
     log.info("Tuning aturan keluar selesai dalam %d dtk -> %s", out["seconds"], path)
+
+
+# ------------------------------------------------------------------ riset sentimen pasar
+SENT_GRID = [
+    ("Sekarang", {}),
+    ("Masuk bila sentimen ≥ −40", {"sentiment_min": -40}),
+    ("Masuk bila sentimen ≥ −20", {"sentiment_min": -20}),
+    ("Masuk bila sentimen ≥ 0", {"sentiment_min": 0}),
+    ("Masuk bila sentimen ≥ +20", {"sentiment_min": 20}),
+    ("Ganti filter IHSG: sentimen ≥ −20", {"market_filter": "none", "sentiment_min": -20}),
+    ("Ganti filter IHSG: sentimen ≥ 0", {"market_filter": "none", "sentiment_min": 0}),
+    ("Keluar semua bila IHSG < SMA50", {"market_exit": "all", "market_exit_ma": "sma50", "market_exit_confirm": 1}),
+    ("Keluar semua bila sentimen < −40", {"market_exit": "all", "market_exit_ma": "sent:-40", "market_exit_confirm": 1}),
+    ("Keluar semua bila sentimen < −20 (2 hari)", {"market_exit": "all", "market_exit_ma": "sent:-20",
+                                                  "market_exit_confirm": 2}),
+    ("Keluar semua bila sentimen < 0 (2 hari)", {"market_exit": "all", "market_exit_ma": "sent:0",
+                                                "market_exit_confirm": 2}),
+    ("Sentimen ≥ −20 + keluar bila IHSG < SMA50", {"sentiment_min": -20, "market_exit": "all",
+                                                   "market_exit_ma": "sma50", "market_exit_confirm": 1}),
+    ("Sentimen ≥ 0 + keluar bila IHSG < SMA50", {"sentiment_min": 0, "market_exit": "all",
+                                                 "market_exit_ma": "sma50", "market_exit_confirm": 1}),
+]
+SENT_BUCKETS = [(-101, -50, "Sangat pesimis"), (-50, -20, "Pesimis"), (-20, 20, "Netral"), (20, 50, "Optimis"),
+                (50, 101, "Sangat optimis")]
+
+
+def sentiment_forward(ind: dict, cfg: dict) -> dict:
+    """Rata-rata return ke depan (20 & 60 hari) menurut sentimen hari itu: saham universe (sama bobot) & IHSG."""
+    closes = pd.DataFrame({t: d["Close"] for t, d in ind.items()}).sort_index().ffill()
+    elig = pd.DataFrame({t: d["ELIG"] if "ELIG" in d else d["Close"].notna() for t, d in ind.items()}) \
+        .reindex(closes.index).fillna(False).astype(bool)
+    above200 = pd.DataFrame({t: d["Close"] > d["SMA200"] for t, d in ind.items()}).reindex(closes.index) \
+        .fillna(False).astype(bool)
+    sent = pd.concat([d["SENT"] for d in ind.values()], axis=1).bfill(axis=1).iloc[:, 0].reindex(closes.index)
+    bench = pd.concat([d["BENCH"] for d in ind.values()], axis=1).bfill(axis=1).iloc[:, 0].reindex(closes.index)
+    split = pd.Timestamp(cfg["backtest"]["split_date"])
+    out = {}
+    for hz in (20, 60):
+        fwd = closes.shift(-hz) / closes - 1
+        stock = fwd.where(elig).mean(axis=1)
+        trend = fwd.where(elig & above200).mean(axis=1)            # saham di atas SMA200 (mirip jangka panjang)
+        ihsg = bench.shift(-hz) / bench - 1
+        df = pd.DataFrame({"sent": sent, "stock": stock, "trend": trend, "ihsg": ihsg}).dropna(subset=["sent", "stock"])
+        rows = []
+        for lo, hi, name in SENT_BUCKETS:
+            g = df[(df["sent"] > lo) & (df["sent"] <= hi)]
+            row = {"bucket": name, "days": int(len(g))}
+            for part, gg in (("all", g), ("is", g[g.index < split]), ("oos", g[g.index >= split])):
+                row[part] = {"days": int(len(gg)),
+                             **{k: (None if gg[k].dropna().empty else round(float(gg[k].mean()), 4))
+                                for k in ("stock", "trend", "ihsg")}}
+            rows.append(row)
+        out[f"{hz}d"] = {"buckets": rows, "corr": None if len(df) < 30 else round(float(df["sent"].corr(df["stock"])), 3)}
+    s = sent.dropna()
+    out["distribution"] = {"days": int(len(s)), "mean": round(float(s.mean()), 1),
+                           "share": {name: round(float(((s > lo) & (s <= hi)).mean()), 3) for lo, hi, name in SENT_BUCKETS}}
+    return out
+
+
+def run_sentiment(prep, ind, cfg, n_uni, demo, t0):
+    """Uji sentimen pasar sebagai filter masuk dan aturan keluar (pendek & menengah), plus daya prediksinya."""
+    split = cfg["backtest"]["split_date"]
+    cut = pd.Timestamp(split)
+    out = {"generated_at": now_wib().strftime("%Y-%m-%d %H:%M"), "demo": demo, "universe": n_uni,
+           "split_date": split, "forward": sentiment_forward(ind, cfg), "horizons": {}}
+    for h in ("short", "medium"):
+        rows = []
+        for name, v in SENT_GRID:
+            c2 = copy.deepcopy(cfg)
+            c2["horizons"][h].update(v)
+            st = run_variant(prep, h, c2["horizons"][h], c2)
+            ps = portsim.run(ind, c2, horizons=(h,), prep=prep)
+            b = ps.get("buckets", {}).get(h, {})
+            eq = pd.Series({pd.Timestamp(d): val for d, val in b.get("equity", [])})
+            rows.append({"name": name, "params": v, "trades": slim(st), "portfolio": pslim(b),
+                         "port_is": pslim(portsim.metrics(eq[eq.index < cut])) if len(eq) > 2 else {},
+                         "port_oos": pslim(portsim.metrics(eq[eq.index >= cut])) if len(eq) > 2 else {}})
+            log.info("sentimen %s | %s: %d trx, return %.1f%%, DD %.1f%%", h, name, st.get("n", 0),
+                     100 * (b.get("total_return") or 0), 100 * (b.get("max_drawdown") or 0))
+        out["horizons"][h] = rows
+    out["seconds"] = round(time.time() - t0)
+    path = ROOT / ("output/sentiment_research_demo.json" if demo else "docs/data/sentiment_research.json")
+    dump_json(out, path)
+    path.with_suffix(".md").write_text(sentiment_markdown(out), encoding="utf-8")
+    log.info("Riset sentimen selesai dalam %d dtk -> %s", out["seconds"], path)
+    return out
+
+
+def _pc(x, d=1):
+    return "–" if x is None else f"{x * 100:+.{d}f}%"
+
+
+def sentiment_markdown(o: dict) -> str:
+    L = [f"# Riset sentimen pasar — {o['generated_at']}", "",
+         f"Universe {o['universe']} saham, split in-sample / out-of-sample {o['split_date']}.", ""]
+    dist = o["forward"]["distribution"]
+    L += ["## Sebaran sentimen", "", " · ".join(f"{k} {v * 100:.0f}%" for k, v in dist["share"].items()), ""]
+    for hz in ("20d", "60d"):
+        f = o["forward"][hz]
+        L += [f"## Return {hz[:-1]} hari ke depan menurut sentimen (korelasi {f['corr']})", "",
+              "| Sentimen | Hari | Saham (IS) | Saham (OOS) | Saham > SMA200 (semua) | IHSG (semua) |",
+              "|---|---|---|---|---|---|"]
+        for r in f["buckets"]:
+            L.append(f"| {r['bucket']} | {r['days']} | {_pc(r['is']['stock'])} | {_pc(r['oos']['stock'])} | "
+                     f"{_pc(r['all']['trend'])} | {_pc(r['all']['ihsg'])} |")
+        L.append("")
+    for h, rows in o["horizons"].items():
+        L += [f"## {'Pendek' if h == 'short' else 'Menengah'}", "",
+              "| Varian | Trx IS | Rata IS | PF IS | Trx OOS | Rata OOS | PF OOS | Return porto | Max DD | Return OOS | DD OOS |",
+              "|---|---|---|---|---|---|---|---|---|---|---|"]
+        for r in rows:
+            i, oo = r["trades"].get("in_sample", {}), r["trades"].get("out_sample", {})
+            p, po = r["portfolio"], r["port_oos"]
+            L.append(f"| {r['name']} | {i.get('n')} | {_pc(i.get('avg_ret'), 2)} | {i.get('profit_factor') or 0:.2f} | "
+                     f"{oo.get('n')} | {_pc(oo.get('avg_ret'), 2)} | {oo.get('profit_factor') or 0:.2f} | "
+                     f"{_pc(p.get('total_return'))} | {_pc(p.get('max_drawdown'))} | {_pc(po.get('total_return'))} | "
+                     f"{_pc(po.get('max_drawdown'))} |")
+        L.append("")
+    return "\n".join(L)
 
 
 # ------------------------------------------------------------------ usulan parameter bulanan
@@ -338,6 +459,7 @@ def main():
     ap.add_argument("--full", action="store_true", help="grid lengkap syarat masuk & cara keluar")
     ap.add_argument("--realism", action="store_true", help="bandingkan backtest lama vs realistis")
     ap.add_argument("--propose", action="store_true", help="usulan parameter bulanan (tidak diterapkan)")
+    ap.add_argument("--sentiment", action="store_true", help="riset sentimen pasar sebagai filter/aturan keluar")
     ap.add_argument("--config", default=str(ROOT / "config.yaml"))
     a = ap.parse_args()
     cfg = yaml.safe_load(open(a.config, encoding="utf-8"))
@@ -350,6 +472,9 @@ def main():
         return
     if a.realism:
         run_realism(prep, ind, cfg, n_uni, a.demo, t0)
+        return
+    if a.sentiment:
+        run_sentiment(prep, ind, cfg, n_uni, a.demo, t0)
         return
     if not a.full:
         run_exits(prep, ind, cfg, n_uni, a.demo, t0)

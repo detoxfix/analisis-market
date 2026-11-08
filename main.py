@@ -20,6 +20,7 @@ import yaml
 from src import backtest as bt
 from src import data as D
 from src import archive, idx, monitor, notify, portsim, positions, report, tracker
+from src import sentiment as SENT
 from src import versions as V
 from src.indicators import add_indicators
 from src.portfolio import allocate
@@ -152,11 +153,17 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
 
     # ------------------------------------------------------------ 3. indikator & skor
     th = cfg["thresholds"]
-    ind, rows_all, per_h = {}, [], {h: {"buys": [], "sells": [], "held": []} for h in HORIZONS}
+    ind = {t: add_indicators(prices[t], bench) for t in uni["ticker"]}
+    sent_df = SENT.compute(ind)                    # sentimen pasar (breadth, ARB, arus volume) per tanggal
+    SENT.attach(ind, sent_df)
+    sent_sum = SENT.summary(sent_df, flows)
+    if sent_sum:
+        log.info("Sentimen pasar: %+.0f (%s), 5 hari %+.0f", sent_sum["score"], sent_sum["label"],
+                 sent_sum["chg_5d"] or 0)
+    rows_all, per_h = [], {h: {"buys": [], "sells": [], "held": []} for h in HORIZONS}
     for _, u in uni.iterrows():
         t = u["ticker"]
-        d = add_indicators(prices[t], bench)
-        ind[t] = d
+        d = ind[t]
         f = funds.get(t, {}) or {}
         sector = f.get("sector") or "Lainnya"
         name = f.get("name") or names.get(t) or u["code"]
@@ -257,7 +264,8 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
         if cfg.get("backtest", {}).get("point_in_time", True):
             try:                                   # universe per tanggal: termasuk saham yang dulu lolos
                 ind_bt = backtest_set(prices, shares, cfg, list(ind),
-                                      lambda t: ind[t] if t in ind else add_indicators(prices[t], bench))
+                                      lambda t: ind[t].copy() if t in ind else add_indicators(prices[t], bench))
+                SENT.attach(ind_bt, SENT.compute(ind_bt))   # sentimen dari universe per tanggal
             except Exception as e:  # noqa: BLE001
                 log.warning("Universe backtest per tanggal gagal, memakai universe hari ini: %s", e)
         bt_res = {"generated_at": now.isoformat(timespec="seconds"), "config_hash": cfg_hash,
@@ -319,7 +327,8 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
         "market": {"bench": b_last, "bench_chg": b_last / b_prev - 1, "regime": regime,
                    "universe": len(uni), "scanned": len(prices), "series": series,
                    "above_sma50": bool(series and series[-1][2] and series[-1][1] > series[-1][2]),
-                   "above_sma200": bool(series and series[-1][3] and series[-1][1] > series[-1][3])},
+                   "above_sma200": bool(series and series[-1][3] and series[-1][1] > series[-1][3]),
+                   "sentiment": sent_sum},
         "horizons": per_h,
         "positions": positions.public_view(pos_items, cfg.get("positions", {}).get("dashboard", "percent")),
         "positions_errors": pos_errs,

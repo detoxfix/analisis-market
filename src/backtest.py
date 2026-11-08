@@ -65,7 +65,8 @@ def trades_for(prep: dict, h: str, hcfg: dict, cfg: dict, detail: bool = False) 
             if exe["arb"]:
                 ex["lock_close"], ex["lock_open"] = it["lock_c"], it["lock_o"]
         score = it[f"score_{h}"]
-        key = (h, hcfg.get("min_score", th["buy"]), hcfg.get("market_filter"), hcfg.get("trend_filter"))
+        key = (h, hcfg.get("min_score", th["buy"]), hcfg.get("market_filter"), hcfg.get("trend_filter"),
+               hcfg.get("sentiment_min"))
         cache = it.setdefault("mask", {})
         if key not in cache:
             ok, _ = entry_mask(it["d"], score, hcfg, th)
@@ -86,7 +87,12 @@ def trades_for(prep: dict, h: str, hcfg: dict, cfg: dict, detail: bool = False) 
         if (hcfg.get("market_exit") or "none") != "none":
             mk = (hcfg.get("market_exit_ma") or "sma50", int(hcfg.get("market_exit_confirm") or 1))
             mflag = it["mflag"].get(mk)
-            if mflag is None and mk[0] in it["mkt"]:
+            if mflag is None and str(mk[0]).startswith("sent:") and "SENT" in it["d"]:
+                # riset: keluar bila sentimen pasar < batas (belum didukung tracker/posisi pribadi)
+                sv_ = it["d"]["SENT"].to_numpy(dtype=float)
+                up = np.where(np.isnan(sv_), np.nan, (sv_ >= float(mk[0][5:])).astype(float))
+                mflag = it["mflag"][mk] = market_flag(up, mk[1])
+            elif mflag is None and mk[0] in it["mkt"]:
                 mflag = it["mflag"][mk] = market_flag(it["mkt"][mk[0]], mk[1])
         sv = score.to_numpy()
         next_free = 0
