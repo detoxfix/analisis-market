@@ -1,0 +1,263 @@
+{
+ "stats": {
+  "feeds": {
+   "https://www.cnbcindonesia.com/market/rss": {
+    "status": "OK",
+    "items": 100
+   },
+   "https://www.kabarbursa.com/feed/insight-emiten.xml": {
+    "status": "HTTP 415",
+    "items": 0
+   },
+   "https://www.antaranews.com/rss/ekonomi-bursa.xml": {
+    "status": "OK",
+    "items": 20
+   },
+   "https://rss.tempo.co/bisnis": {
+    "status": "OK",
+    "items": 50
+   },
+   "https://investasi.kontan.co.id/rss": {
+    "status": "HTTP 403",
+    "items": 0
+   },
+   "https://market.bisnis.com/rss": {
+    "status": "HTTP 403",
+    "items": 0
+   },
+   "https://www.idxchannel.com/rss": {
+    "status": "OK",
+    "items": 10
+   }
+  },
+  "google": {
+   "ok": 121,
+   "fail": 0,
+   "items": 5883
+  },
+  "skipped_budget": 0,
+  "recent_items": 1267,
+  "stocks_flagged": 12,
+  "seconds": 88
+ },
+ "flagged": {
+  "BRIS": 3,
+  "BBCA": 1,
+  "DSSA": 12,
+  "EMAS": 1,
+  "BRMS": 1,
+  "BUMI": 1,
+  "IMPC": 1,
+  "TAPG": 1,
+  "MBMA": 1,
+  "MEDC": 1,
+  "ULTJ": 9,
+  "FORU": 1
+ },
+ "sample": {
+  "BRIS": [
+   {
+    "date": "2026-11-07",
+    "title": "Pemegang Saham Setujui Rights Issue BSI (BRIS), Perkuat Permodalan dan Dorong Peningkatan Free Float",
+    "source": "Media Asuransi News",
+    "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPWGcyaC1OZzY2UlVxXzc4Z1FfQzA2TWFkLXBZZ0cwdmZ1RllvVmxWM1JDWmJ4OC1kc25vR2Y3WFVScjRZaHZva3o2eHJfU3ZBajY5ejFtektZNTYzTGFxNjNUVUxscUFUWl93X1ByX0ZmM2xia05Nc19EVk55NFFzLTNONnVBNGVrdVRQdzBONGdGSmRfYUF6SXV3OUZDM3A0OUFLbnBBaFNBLVdmT0F2VUZlenlWcnRkS0J3YVZ2WmFYWHFpNjNUVXlPM1NEMnJfRzVKU081QQ?oc=5",
+    "categories": [
+     "Right issue (dilusi)"
+    ],
+    "severity": "sedang"
+   },
+   {
+    "date": "2026-11-06",
+    "title": "Tingkatkan Free Float Lewat Rights Issue, BRIS Bidik Investor Asing",
+    "source": "",
+    "link": "https://www.cnbcindonesia.com/market/20261106131015-17-782972/tingkatkan-free-float-lewat-rights-issue-bris-bidik-investor-asing",
+    "categories": [
+     "Right issue (dilusi)"
+    ],
+    "severity": "sedang"
+   },
+   {
+    "date": "2026-11-06",
+    "title": "RUPSLB BSI restui rights issue 6,8 miliar saham Seri B",
+    "source": "",
+    "link": "https://www.antaranews.com/berita/5837379/rupslb-bsi-restui-rights-issue-68-miliar-saham-seri-b",
+    "categories": [
+     "Right issue (dilusi)"
+    ],
+    "severity": "sedang"
+   }
+  ],
+  "BBCA": [
+   {
+    "date": "2026-11-05",
+    "title": "KPK Telusuri Cukai Djarum Sejak 2010: Dampaknya ke Saham BBCA?",
+    "source": "Warta Ekonomi",
+    "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPMTQtWWtRY3hXclBFS0NwZmtvdzE1dEE1VDlqMXduZnltemFFUm9NS1JyVnk2WWlYV3JTNi1VRy1MYmpxNlV4Q1JZeFBqUnkxMWJVZXNIVnotQ19lZGtuYmxOX3dxbDY4R1VvVmlLZV9KTW9oSUtjWTZZRXhGRlRBRW4zVjNWVHB6ZXg4RVV0ZjkwQlBHSXVibmFuYTZyc1HSAaQBQVVfeXFMT01lWGdabV9DbVBOcU9fUEJHRF9DMlh0OHBEUTNHX3ZjZWNIT2xCUnFrb3RkMGZ1dV81a1BQcFNMYXY5UjVHdzFxbHRTcHIybDhsYnlpbTBvbEFrVjlmLU5Tb0Zua3doOFhJU3ZVQ2UyN0JSUFFTeHVIbmRFclRnMjk1MmlSV251MWFqbWc0X1NYTE1hNWVjcm1UaVVDNDhBbVFWcDc?oc=5",
+    "categories": [
+     "Kasus hukum"
+    ],
+    "severity": "tinggi"
+   }
+  ],
+  "DSSA": [
+   {
+    "date": "2026-11-04",
+    "title": "Pandu Sjahrir Lepas Saham Supra Sekuritas Sejak Juni Sebelum Sanksi OJK Perkara DSSA",
+    "source": "gadget.qoo10.co.id",
+    "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPZG5ZMU9fcWY4eE9USFJ6ekxjVGRoN3IwUUpPdXZMdXJqOUFSSUZEWTEzTzdPMHItc3czWUFMTHYxNHpXeklET0pvVXhJRTRiLVJlMTVwNHhIVmprNjNNdDlIVS03S2x2OENDNDRZMEc1U1g5UHlVTE5GbVgtMzkwcDNn?oc=5",
+    "categories": [
+     "Sanksi / denda"
+    ],
+    "severity": "sedang"
+   },
+   {
+    "date": "2026-11-03",
+    "title": "Daftar Nama 11 Sekuritas Terseret Kasus DSSA dan CUAN, Didenda OJK Rp15,3 Miliar",
+    "source": "Katadata.co.id",
+    "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPbU1WbXpXN1lKbDJSamo1Si1vcWpPX09HVzR6V0ZodV9xMlMzaGhjMVllR3QyNzFIcGtQZWU3MTM0Nm9EOUNNREg4aS0zeG1GSGJ2S0Q0VWJhVTdSaTAyME1YU3Jvb0xkTnBCaWxYNXdNOFJoa24tVFFmeS0zQ0MyTzdnMlZuUVk5Z0U4TTV5dlZpUDFKMC1yeVFrX182eklQbGlsLWZENVpoX2pPVEJBQ25lbXUxVl9PV1dYSFhRQ2ZvSXdaNHNJemRzWTPSAdIBQVVfeXFMUDgwSmlJLU8wZVFpYjFsa1ZWT3dOaGhuS19sYUNRU2xmbmlaMDk4OVJtaXNtV3Q5d01JRmFKaTZjMDhPM3gtUnpWb3hKVjJ4aXVReFFKR2ZTbVlmNUlwdzdOS1Y5akpLNHZhTWFKMjR3MEZ3LTVXUXZsOUZ4ZU8tSEZ3dGw1ZGRoWlhoMG1GWkhTYmhlNUE0ZWowWUhneGI2cmdKSlVpd0ZlZHBRU1JyX1FjbTRzQ0t5OTM3RnE1STB2djVWX1NjSzJuVUsyVnlxSVJ3?oc=5",
+    "categories": [
+     "Sanksi / denda"
+    ],
+    "severity": "sedang"
+   },
+   {
+    "date": "2026-11-03",
+    "title": "Daftar 25 Pihak Didenda OJK Rp 2,14 T di Kasus 'Main Saham' DSSA, IMPC dan FILM",
+    "source": "Katadata.co.id",
+    "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQdHhoakg5SHJDZEkyN2Etc20yeWtzbXhXci1JQVFlTGg5WGhJdG5aMldHTE1sVmUxWTNBNWZFN2N5eDhwS0tsZEd6VEw3c2p2VVB6VkNyWERoQnJTd0RvSUJPbzNCREIzUk5YX3k3cjZrNjEwSmNjZ0c0aWtoeGlRdEhONmp3QVI4SGprT0NFT0NnVFFSSFJHYUJmQ2hzMFlNbkF3QnFpTkViZ0tkYVI4aVo5S0NWRTBncGxIeExVdDFIQy1UdFpKUtIBzgFBVV95cUxQdU5FMHJZNWYtSnFvaXlKLVBWRmZIQzhHRXBoWVJmNmRlTkxYcU5JbVJ6TUQ0TV9vcWF3ZkJQUFU2WUI5ZzZsTTVQM3VsOS1pYkRIOHNzenJPOEFsV0NVd1V0MXB2TXJjSnBwdElsT0N3SVUyaWlhWGhrc0tJbDd6dXRHZERfTTZ6MUV1X19fZXk1ckJ5WlZUclF4ZEZNc055YTAzVi1DUkNkUW53bEp5Slo3T0RDWEVYcWJFNTNZVDQ5UjFzaEVCaFFPNHV6UQ?oc=5",
+    "categories": [
+     "Sanksi / denda"
+    ],
+    "severity": "sedang"
+   }
+  ],
+  "EMAS": [
+   {
+    "date": "2026-11-07",
+    "title": "Merdeka Gold (EMAS) Private Placement 1,47 Miliar Saham Baru, Potensi Dilusi 9,09%",
+    "source": "kontan.co.id",
+    "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOdFowb1pNZjJGT3lwSlgxNmgwOW5GU2JpdzNBOUxKOXVxdklRc1FzMS0yUlpJNHczM2Nod3had1hwTlMwVXl1S3RJalQwQjczWi1CbFQ1dF8tQzJiNGlQTThyVXp5bG1ZY3lMRmQ2a29QaDltY0JvenpyX1dpT3ZWS3FNXzhUaVZ5S2NQQkVoUFUzYTZFQXVsYjFBZjF3Qzlkd2hSa1lNNjJFLVVlcGtzOEdB0gGqAUFVX3lxTE1fTlZGdF9Nam5TaEY4S2N2cjF4Z3NLaGFEajFMVVRhVXNUX3NyQjZVSE1FREJIWlZEWHpDM2MyRVhNRmZrSk4yV1ZrWnExeUhVSkJxbnBJQl8yWjFpOG9KYmZQWEhFS1lvSk5oUGVkZXF5eUowUTdmZGZLMDJzOHZESXpSRkdkTURZM3NDOVRpWnhnczRDbGM2SlBncloyYTJ0VzVzNHZ3VDJR?oc=5",
+    "categories": [
+     "Private placement (dilusi)"
+    ],
+    "severity": "sedang"
+   }
+  ],
+  "BRMS": [
+   {
+    "date": "2026-11-07",
+    "title": "Saham Bumi Resources Minerals (BRMS) Kena Downgrade",
+    "source": "investor.id",
+    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNbk1jYUVYSVk2NE9CaXAwZ25xMndyZFFQLWdZZnV6QWJhM0hwNk84OEF6T0cwQ2VsV0gyWktXVVJBQ0tqWk1td0E2QlZOSjYzNUk5YXBEcGNKSXlIaXNEYzdhbENaWmxKeDFyVHBIbENqSkZ5aFh3NGROOTlBSnpSai1aY0tUekhUVm9V?oc=5",
+    "categories": [
+     "Peringkat turun"
+    ],
+    "severity": "sedang"
+   }
+  ],
+  "BUMI": [
+   {
+    "date": "2026-11-07",
+    "title": "Saham Bumi Resources Minerals (BRMS) Kena Downgrade",
+    "source": "investor.id",
+    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNbk1jYUVYSVk2NE9CaXAwZ25xMndyZFFQLWdZZnV6QWJhM0hwNk84OEF6T0cwQ2VsV0gyWktXVVJBQ0tqWk1td0E2QlZOSjYzNUk5YXBEcGNKSXlIaXNEYzdhbENaWmxKeDFyVHBIbENqSkZ5aFh3NGROOTlBSnpSai1aY0tUekhUVm9V?oc=5",
+    "categories": [
+     "Peringkat turun"
+    ],
+    "severity": "sedang"
+   }
+  ],
+  "IMPC": [
+   {
+    "date": "2026-11-03",
+    "title": "Daftar 25 Pihak Didenda OJK Rp 2,14 T di Kasus 'Main Saham' DSSA, IMPC dan FILM",
+    "source": "Katadata.co.id",
+    "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQdHhoakg5SHJDZEkyN2Etc20yeWtzbXhXci1JQVFlTGg5WGhJdG5aMldHTE1sVmUxWTNBNWZFN2N5eDhwS0tsZEd6VEw3c2p2VVB6VkNyWERoQnJTd0RvSUJPbzNCREIzUk5YX3k3cjZrNjEwSmNjZ0c0aWtoeGlRdEhONmp3QVI4SGprT0NFT0NnVFFSSFJHYUJmQ2hzMFlNbkF3QnFpTkViZ0tkYVI4aVo5S0NWRTBncGxIeExVdDFIQy1UdFpKUtIBzgFBVV95cUxQdU5FMHJZNWYtSnFvaXlKLVBWRmZIQzhHRXBoWVJmNmRlTkxYcU5JbVJ6TUQ0TV9vcWF3ZkJQUFU2WUI5ZzZsTTVQM3VsOS1pYkRIOHNzenJPOEFsV0NVd1V0MXB2TXJjSnBwdElsT0N3SVUyaWlhWGhrc0tJbDd6dXRHZERfTTZ6MUV1X19fZXk1ckJ5WlZUclF4ZEZNc055YTAzVi1DUkNkUW53bEp5Slo3T0RDWEVYcWJFNTNZVDQ5UjFzaEVCaFFPNHV6UQ?oc=5",
+    "categories": [
+     "Sanksi / denda"
+    ],
+    "severity": "sedang"
+   }
+  ],
+  "TAPG": [
+   {
+    "date": "2026-11-02",
+    "title": "IHSG Hari Ini Rebound 0,75%: MEDC & TAPG Bagikan Dividen Interim, MBMA Siapkan Private Placement",
+    "source": "Ajaib",
+    "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQdHRoT1V4RW9aSHpLdEJwYTcwYlJxQ24xSFhaUTQ0bHlyWDhONi01T0FzVzRqajR2N09rZlRLNFFoRTJKb0JyeHJRTjZyMU9pelgyN0JxdUtHVnNiZWVibmVJdmFmQnpQOFdqQVdnRGpTM0YxcnRIemYxUXFPdm1LQVFVcTB2VFliMmptdnYtSXJiRy1xLXFqY0ZrZUVxLVpUb1ZoeEYtaw?oc=5",
+    "categories": [
+     "Private placement (dilusi)"
+    ],
+    "severity": "sedang"
+   }
+  ],
+  "MBMA": [
+   {
+    "date": "2026-11-02",
+    "title": "IHSG Hari Ini Rebound 0,75%: MEDC & TAPG Bagikan Dividen Interim, MBMA Siapkan Private Placement",
+    "source": "Ajaib",
+    "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQdHRoT1V4RW9aSHpLdEJwYTcwYlJxQ24xSFhaUTQ0bHlyWDhONi01T0FzVzRqajR2N09rZlRLNFFoRTJKb0JyeHJRTjZyMU9pelgyN0JxdUtHVnNiZWVibmVJdmFmQnpQOFdqQVdnRGpTM0YxcnRIemYxUXFPdm1LQVFVcTB2VFliMmptdnYtSXJiRy1xLXFqY0ZrZUVxLVpUb1ZoeEYtaw?oc=5",
+    "categories": [
+     "Private placement (dilusi)"
+    ],
+    "severity": "sedang"
+   }
+  ],
+  "MEDC": [
+   {
+    "date": "2026-11-02",
+    "title": "IHSG Hari Ini Rebound 0,75%: MEDC & TAPG Bagikan Dividen Interim, MBMA Siapkan Private Placement",
+    "source": "Ajaib",
+    "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQdHRoT1V4RW9aSHpLdEJwYTcwYlJxQ24xSFhaUTQ0bHlyWDhONi01T0FzVzRqajR2N09rZlRLNFFoRTJKb0JyeHJRTjZyMU9pelgyN0JxdUtHVnNiZWVibmVJdmFmQnpQOFdqQVdnRGpTM0YxcnRIemYxUXFPdm1LQVFVcTB2VFliMmptdnYtSXJiRy1xLXFqY0ZrZUVxLVpUb1ZoeEYtaw?oc=5",
+    "categories": [
+     "Private placement (dilusi)"
+    ],
+    "severity": "sedang"
+   }
+  ],
+  "ULTJ": [
+   {
+    "date": "2026-11-06",
+    "title": "Ultra Jaya (ULTJ) dan Garuda Indonesia (GIAA) Gelar Rights Issue, Simak Prospeknya",
+    "source": "kontan.co.id",
+    "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNbnRFMEpicnRSSnJ0cUFlOGtFMnVhN1hkWUhKdXp1U3Bna1BKendEVGltR0syRk5PdXh4bE1QY0VkeU9FVVhWVU9sRGpzUWtLM2hzLUVrZDhEcUxBVXNEemtYTmcxZHlYQ2RiNkdJZEZfamxiVVdmSFNzTmxveTVnb1V2NF9wemNxaW5TTHM1ZjJDdHotQnUwR0RvT19iN3JWQUVadFNkZWU0UjJ4REJYdTgyRdIBqwFBVV95cUxPTUwtMlVCWkw4bnpDb3RhYVVwOXRrdW1TXzlOY040RF95VldLSDBXWDBMMHd4cWt4Q3NLY1JNOG1pMjJDRUs2OGNRQ0s3dTM2cklCTm1yRjVDRXZqdll0THQxMHhJQ0RNUGllTXVHOVdVOHpBbHNhMVRUaVE1cW1NOGRFZjVxUWVoSTk0Z0doa3ZTZzFVN19Zdng2NlRkZzdsOWZRdzR0VWs3MlE?oc=5",
+    "categories": [
+     "Right issue (dilusi)"
+    ],
+    "severity": "sedang"
+   },
+   {
+    "date": "2026-11-06",
+    "title": "ULTJ dan GIAA Siapkan Rights Issue untuk Akuisisi dan Restrukturisasi",
+    "source": "Cirebon Times",
+    "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPZlNCV1BxcVdVOFVRaDhQRG1JN3pVbEFQSDI3RHJQQlYyOGxQOXRQa3d5ZFFxMFhXNXhDZm5aX05WNDlJdTVKdHpjUjhmSG9ncXBVNVlZdHhWakhwR0FWaFBKeXNpUXM1a2drOVRQZVBEbXo4X1ROVHYzZmkxeUxGbll3?oc=5",
+    "categories": [
+     "Right issue (dilusi)"
+    ],
+    "severity": "sedang"
+   },
+   {
+    "date": "2026-11-05",
+    "title": "ULTJ siapkan rights issue Rp16,94 triliun untuk akuisisi FFI",
+    "source": "IDNFinancials",
+    "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNZVcteVNwN2hScWJRaWw0UHBxMzRnck5EX2MwaHpta2F2SE8zbHR1WUJQMVF3Tl8wR3JNcXZaWnBxNy1pLUgxdGVGSkp0QmpES2pWbXMzdXVUY0I4UUExYVVJUHJKX25ONlJLdWx4VjkzbEVIakZqNEZGcHlDcmsyeld1ZnNEakVQZnllSEI4ZUNsa0VuYm96TXJIemNQNHZaeXk5YzREVQ?oc=5",
+    "categories": [
+     "Right issue (dilusi)"
+    ],
+    "severity": "sedang"
+   }
+  ],
+  "FORU": [
+   {
+    "date": "2026-11-04",
+    "title": "FORU Rights Issue Rp27,1T, Ekuitas Rp23 Miliar Bakal Dikerek 1.178x?",
+    "source": "Emitennews.com",
+    "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPMm5IWGF4cTR2dzFDT1FFNDExYWNJUDJZalVhODhWdThrZzR2WmdET3RrWF9zamFkR09Sbl8welJxN2F0ZlROa3Ytd1NuelFrTWItSlM2U04yLVhrY2NiUnZkQjM3cHBqN2pkMDA1Y05lNXo3OVh1M3Jib1ljeEctbnlfZFVFbVdiUFhiUlhyblZNVGdPb21z?oc=5",
+    "categories": [
+     "Right issue (dilusi)"
+    ],
+    "severity": "sedang"
+   }
+  ]
+ }
+}
