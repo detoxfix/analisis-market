@@ -1,0 +1,45 @@
+name: Riset strategi (branch riset-*)
+
+# Dijalankan otomatis setiap ada push ke branch berawalan "riset-", atau manual dari tab Actions.
+# Hasil riset di-commit kembali ke branch yang sama (tidak menyentuh main / dashboard).
+on:
+  push:
+    branches: ["riset-**"]
+    paths-ignore: ["docs/data/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: riset-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  riset:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependensi
+        run: pip install -r requirements.txt pytest
+
+      - name: Uji unit
+        run: python -m pytest -q tests
+
+      - name: Uji sumber berita
+        run: python -m src.news --probe
+
+      - name: Simpan hasil ke branch ini
+        run: |
+          git config user.name "ihsg-signal-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f docs/data/news_probe.json
+          git commit -m "Hasil uji berita $(TZ=Asia/Jakarta date '+%F %H:%M')" || echo "Tidak ada perubahan"
+          git push
