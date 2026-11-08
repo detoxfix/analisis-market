@@ -120,6 +120,9 @@ def build_messages(res: dict, dashboard_url: str | None = None, max_buys: int = 
     head = [f"🧭 <b>PANDU · Sinyal IHSG — {e(res['as_of'])}</b>",
             f"IHSG <b>{rp(m['bench'])}</b> ({pct(m['bench_chg'], 2)}) · Pasar <b>{e(m['regime'])}</b>",
             f"Dipantau {m['universe']} saham (market cap ≥ Rp 5 T)"]
+    ds = res.get("data_status") or {}
+    if ds.get("stale"):
+        head.insert(1, f"⚠️ <b>DATA BASI</b>: {e(ds.get('text', ''))}")
     blocks = ["\n".join(head)]
     mb = monitor_block(res.get("monitor"))
     if mb:
@@ -129,7 +132,8 @@ def build_messages(res: dict, dashboard_url: str | None = None, max_buys: int = 
         blocks.append(pb)
 
     for h, blk in res["horizons"].items():
-        lines = [f"<b>━ {H_NAME.get(h, h)}</b> · kas {pct(blk['cash_weight'], 0, False)} dari bucket"]
+        ver = f" · strategi {e(blk['version'].split(' ·')[0])}" if blk.get("version") else ""
+        lines = [f"<b>━ {H_NAME.get(h, h)}</b> · kas {pct(blk['cash_weight'], 0, False)} dari bucket{ver}"]
         if blk.get("market_exit_active"):
             lines.append(f"🚨 <b>Aturan keluar aktif</b>: {e(blk['market_exit_active'])}")
         if blk.get("regime_text"):

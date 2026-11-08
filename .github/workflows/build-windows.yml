@@ -19,7 +19,10 @@ jobs:
           cache: pip
 
       - name: Install dependensi
-        run: pip install -r requirements.txt pyinstaller==6.22.3
+        run: pip install -r requirements.txt pyinstaller==6.22.3 pytest
+
+      - name: Uji unit
+        run: python -m pytest -q tests
 
       - name: Build PANDU.exe
         run: pyinstaller --noconfirm ihsg_signal.spec

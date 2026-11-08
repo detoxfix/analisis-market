@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Build PyInstaller
+build/
+dist/
+*.zip
+
+# Hasil lokal (dashboard publik ada di docs/)
+output/
+logs/
+backup/
+*.log
+
+# Profil browser untuk akses idx.co.id (berisi cookie) — jangan pernah di-commit
+data/cache/browser_profile/
+
+# Pengaturan pribadi aplikasi laptop (token Telegram dll.)
+settings.json

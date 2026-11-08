@@ -25,7 +25,10 @@ jobs:
           cache: pip
 
       - name: Install dependensi
-        run: pip install -r requirements.txt
+        run: pip install -r requirements.txt pytest
+
+      - name: Uji unit (dashboard tidak diterbitkan bila gagal)
+        run: python -m pytest -q tests
 
       - name: Jalankan scraper + mesin sinyal
         env:

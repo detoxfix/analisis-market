@@ -367,7 +367,8 @@ def gui():
         auto = ""
         if last:
             auto = f"   ·   update terakhir {last.get('when')} " + ("✓" if last.get("ok") else "✗ gagal")
-        status.set(f"Data {d['as_of']}, diperbarui {d['generated_at'][11:]} WIB{auto}")
+        stale = "   ·   ⚠ DATA BASI" if (d.get("data_status") or {}).get("stale") else ""
+        status.set(f"Data {d['as_of']}, diperbarui {d['generated_at'][11:]} WIB{auto}{stale}")
         m = d["market"]
         lbl_ihsg.configure(text=f"IHSG, penutupan {d['as_of']}")
         big.configure(text=f"{m['bench']:,.0f}".replace(",", "."))
@@ -775,7 +776,7 @@ def selftest() -> int:
 
     say(f"python {sys.version.split()[0]} · frozen={getattr(sys, 'frozen', False)} · folder={ROOT}")
     for mod in ("pandas", "numpy", "yaml", "requests", "yfinance", "curl_cffi", "cloudscraper", "tkinter", "tune",
-                "src.monitor", "src.configedit"):
+                "src.monitor", "src.configedit", "src.versions"):
         try:
             __import__(mod)
             say(f"import {mod}: OK")

@@ -318,11 +318,11 @@ const pv=v=>Array.isArray(v)?"["+v.join(", ")+"]":String(v);
 function renderMonitor(){
   const M=D.monitor,P=D.proposal;let h="";
   if(M&&M.horizons&&Object.keys(M.horizons).length){
-    h+=`<h3>Kinerja sungguhan vs perkiraan backtest</h3><p class="muted">Alarm membandingkan hasil rekomendasi yang sudah selesai dengan sebaran hasil backtest. WASPADA = peluang hasil seburuk ini terjadi karena kebetulan di bawah ~5%; BAHAYA = di bawah ~1%. Alarm hanya memberi tahu, tidak mengubah apa pun.</p><div class="mon">`;
+    h+=`<h3>Kinerja sungguhan vs perkiraan backtest</h3><p class="muted">Alarm membandingkan hasil rekomendasi yang sudah selesai dengan sebaran hasil backtest. Alarm dini (rentetan rugi, win rate terlalu rendah) sudah aktif mulai ${M.early_trades||5} transaksi. WASPADA = peluang hasil seburuk ini terjadi karena kebetulan di bawah ~5%; BAHAYA = di bawah ~1%. Alarm hanya memberi tahu, tidak mengubah apa pun.</p><div class="mon">`;
     for(const [k,v] of Object.entries(M.horizons)){
       const lv=LV[v.level]||"na",e=v.expected;
       const sub=v.level==="BELUM CUKUP DATA"?`${v.n} dari ${M.min_trades} transaksi`:"";
-      h+=`<div class="card"><h4>${esc(v.label)}</h4><div class="lv ${lv}">${esc(v.level)}</div><p>${esc(v.text||sub)}</p>${e&&v.level==="BELUM CUKUP DATA"?`<p>Perkiraan backtest (${esc(e.basis)}): rata-rata ${pct(e.avg_ret)}, win rate ${pctp(e.win_rate,0)}.</p>`:""}</div>`;
+      h+=`<div class="card"><h4>${esc(v.label)}</h4><div class="lv ${lv}">${esc(v.level)}</div><p>${esc(v.text||sub)}</p>${e&&e.avg_ret!=null&&v.level==="BELUM CUKUP DATA"&&!v.all?`<p>Perkiraan backtest (${esc(e.basis)}): rata-rata ${pct(e.avg_ret)}, win rate ${pctp(e.win_rate,0)}.</p>`:""}</div>`;
     }
     h+=`</div>`;
   }
@@ -346,6 +346,8 @@ function renderMonitor(){
 function header(){
   $("stamp").innerHTML=`Data <b>${tgl(D.as_of)}</b>, diperbarui <b>${esc(D.generated_at.slice(11))} WIB</b>`;
   if(D.demo)$("demo").innerHTML='<div class="demo">Mode demo: data sintetis untuk uji coba, bukan data pasar.</div>';
+  const DS=D.data_status||{};
+  if(DS.stale)$("demo").innerHTML+=`<div class="demo">Data basi: ${esc(DS.text||"")}</div>`;
   const nb=["short","medium","long"].reduce((a,h)=>a+D.horizons[h].buys.length,0);
   const ns=["short","medium","long"].reduce((a,h)=>a+D.horizons[h].sells.length,0);
   $("n-buy").textContent=nb;$("n-sell").textContent=ns;$("n-all").textContent=D.all.length;
@@ -368,7 +370,7 @@ function rulesText(r){
 }
 function renderBuy(h){
   const b=D.horizons[h];
-  let html=`<p class="intro">${esc(b.label)}. Alokasi ${pctp(b.allocation,0)} modal, ${b.buys.length} posisi, kas ${pctp(b.cash_weight,0)} dari porsi ini. ${rulesText(b.rules)}</p>`;
+  let html=`<p class="intro">${esc(b.label)}. Alokasi ${pctp(b.allocation,0)} modal, ${b.buys.length} posisi, kas ${pctp(b.cash_weight,0)} dari porsi ini. ${rulesText(b.rules)}${b.version?` <span class="muted">Strategi ${esc(b.version)}.</span>`:""}</p>`;
   if(b.market_exit_active)html+=`<div class="alert"><b>Aturan keluar aktif.</b> ${esc(b.market_exit_active)}</div>`;
   if(b.regime_text)html+=`<div class="note-cut">Porsi dikurangi menjadi <b>${pctp(b.regime_scale,0)}</b> karena ${esc(b.regime_text)}. Sisanya ditahan sebagai kas.</div>`;
   html+=b.buys.length?`<div class="list">${b.buys.map(buyRow).join("")}</div>`
@@ -420,7 +422,13 @@ function renderTrack(){
   let h=`<p class="intro">Setiap rekomendasi beli dicatat lalu dinilai otomatis dengan harga sesudahnya: masuk T+1, keluar di TP, cut loss, atau batas waktu, biaya transaksi termasuk. ${t.cancelled||0} rekomendasi batal karena harga tidak sampai ke area beli.</p>${renderMonitor()}<h3>Hasil per horizon</h3>
   <div class="tbl"><table><tr><th>Horizon</th><th>Transaksi</th><th>Menang</th><th>Rata-rata</th><th>Profit factor</th><th>Median</th></tr>
   ${["short","medium","long"].map(k=>statRow(H[k],t.by_horizon[k])).join("")}${statRow("Total",t.all)}</table></div>`;
-  const tb=(rows,cl)=>rows.length?`<div class="tbl"><table><tr><th>Tanggal sinyal</th><th>Kode</th><th>Horizon</th><th>Masuk</th><th>TP1</th><th>Cut loss</th><th>Status</th><th>Hasil</th><th>Hari</th></tr>${rows.map(r=>`<tr><td>${tgl(r.date)}</td><td><b>${r.code}</b></td><td>${H[r.horizon]}</td><td>${n(r.entry_px??r.entry)}</td><td>${n(r.tp1)}</td><td>${n(r.sl)}</td><td>${esc(r.outcome)}</td><td class="${(r.ret||0)>=0?"pos":"neg"}">${r.ret==null?"-":pct(r.ret)}</td><td>${r.days??"-"}</td></tr>`).join("")}</table></div>`:`<div class="empty">${cl}</div>`;
+  const BV=t.by_version||{};
+  if(Object.values(BV).some(v=>v&&v.length)){
+    h+=`<h3>Hasil per versi strategi</h3><p class="muted">Setiap perubahan parameter atau rumus membuat versi baru, supaya hasil strategi lama tidak tercampur dengan yang sekarang. v0 = rekomendasi sebelum pelabelan versi.</p>
+    <div class="tbl"><table><tr><th>Horizon · versi</th><th>Transaksi</th><th>Menang</th><th>Rata-rata</th><th>Profit factor</th><th>Median</th></tr>
+    ${["short","medium","long"].flatMap(k=>(BV[k]||[]).map(v=>statRow(`${H[k]} · ${esc(v.version)}${v.current?' <span class="pos">(aktif)</span>':""}<div class="name">${v.n_recs} rekomendasi, ${v.n_open} berjalan</div>`,v))).join("")}</table></div>`;
+  }
+  const tb=(rows,cl)=>rows.length?`<div class="tbl"><table><tr><th>Tanggal sinyal</th><th>Kode</th><th>Horizon</th><th>Masuk</th><th>TP1</th><th>Cut loss</th><th>Status</th><th>Hasil</th><th>Hari</th></tr>${rows.map(r=>`<tr><td>${tgl(r.date)}</td><td><b>${r.code}</b></td><td>${H[r.horizon]}<div class="name">${esc((r.version||"").split(" ·")[0])}</div></td><td>${n(r.entry_px??r.entry)}</td><td>${n(r.tp1)}</td><td>${n(r.sl)}</td><td>${esc(r.outcome)}</td><td class="${(r.ret||0)>=0?"pos":"neg"}">${r.ret==null?"-":pct(r.ret)}</td><td>${r.days??"-"}</td></tr>`).join("")}</table></div>`:`<div class="empty">${cl}</div>`;
   h+=`<h3>Masih berjalan</h3>`+tb(t.open,"Tidak ada rekomendasi yang sedang berjalan.")+`<h3>Selesai terakhir</h3>`+tb(t.recent_closed,"Belum ada rekomendasi yang selesai. Bagian ini terisi seiring waktu.");
   $("p-track").innerHTML=h;
 }

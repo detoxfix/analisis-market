@@ -20,6 +20,7 @@ import yaml
 from src import backtest as bt
 from src import data as D
 from src import archive, idx, monitor, notify, portsim, positions, report, tracker
+from src import versions as V
 from src.indicators import add_indicators
 from src.portfolio import allocate
 from src.sim import bench_up, market_flag
@@ -27,7 +28,7 @@ from src.risk import make_plan, sell_plan
 from src.signals import (BUY_SIGNALS, HORIZON_FUNCS, LONG_W, SELL_SIGNALS, compose, entry_mask, explain, label,
                          long_components)
 from src.universe import backtest_set, candidate_list, filter_universe
-from src.utils import ROOT, dump_json, fnum, load_json, log, now_wib, to_jsonable
+from src.utils import ROOT, data_freshness, dump_json, fnum, load_json, log, now_wib, to_jsonable
 
 HORIZONS = ("short", "medium", "long")
 
@@ -103,6 +104,11 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
     if not prices:
         raise SystemExit("Tidak ada data harga yang berhasil diunduh.")
     as_of = max(df.index[-1] for df in prices.values())
+    dcfg = cfg.get("data", {}) or {}
+    fresh = data_freshness(as_of, now, dcfg.get("holidays") or [], str(dcfg.get("ready_after", "17:00")))
+    if fresh["stale"] and not demo:
+        log.warning("DATA BASI: %s", fresh["text"])
+    vers = V.register(cfg, as_of.strftime("%Y-%m-%d"), save=not demo)
     if bench is None or len(bench) == 0:     # proxy IHSG: rata-rata return universe
         rets = pd.DataFrame({t: df["Close"].pct_change() for t, df in prices.items()}).mean(axis=1)
         bench = 1000 * (1 + rets.fillna(0)).cumprod()
@@ -217,12 +223,13 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
                                                        "limit_days", "trail_ma", "sl_atr", "max_sl_pct", "rr",
                                                        "market_exit", "market_exit_ma", "market_exit_confirm")},
                     "market_exit_active": mkt_exit_text(hcfg, bench),
+                    "version": vers[h]["label"], "strategy": vers[h]["id"],
                     "sells": sorted(per_h[h]["sells"], key=lambda x: x["score"])}
         new_recs += [p for p in picked if p["lots"] > 0]
 
     # ------------------------------------------------------------ 5. track record & backtest
     track = tracker.update(prices, new_recs, cfg["fees"], as_of, demo=demo, bench=bench,
-                           exec_cfg=cfg.get("backtest", {}).get("execution"))
+                           exec_cfg=cfg.get("backtest", {}).get("execution"), versions=vers)
 
     # ------------------------------------------------------------ 5b. posisi pribadi
     signals = {r["code"]: {h: r[h] for h in HORIZONS} for r in rows_all}
@@ -239,7 +246,9 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
                                               if k in ("point_in_time", "execution", "split_date")}},
                                       sort_keys=True, default=str)
                            .encode()).hexdigest()[:10]
-    stale = (bt_res is None or bt_res.get("config_hash") != cfg_hash        # parameter berubah -> backtest ulang
+    no_std = any((r or {}).get("n") and (r or {}).get("std_ret") is None      # backtest lama tanpa sebaran (alarm)
+                 for r in ((bt_res or {}).get("results") or {}).values())
+    stale = (bt_res is None or no_std or bt_res.get("config_hash") != cfg_hash  # parameter berubah -> backtest ulang
              or datetime.fromisoformat(bt_res.get("generated_at", "2000-01-01"))
              < now - timedelta(days=cfg.get("backtest", {}).get("refresh_days", 7)))
     if backtest_mode == "always" or (backtest_mode == "auto" and stale):
@@ -260,7 +269,7 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
         if not demo:
             dump_json(bt_res, bt_path)
     try:                                           # alarm penyimpangan: track record vs perkiraan backtest
-        mon = monitor.check(track, bt_res, cfg)
+        mon = monitor.check(track, bt_res, cfg, vers)
         for h_, v_ in mon["horizons"].items():
             if v_["level"] in ("WASPADA", "BAHAYA"):
                 log.warning("Alarm %s: %s — %s", v_["label"], v_["level"], v_.get("text", ""))
@@ -302,6 +311,7 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
               else "Bearish" if b_last < b_ema20 and (b_sma200 is not None and b_last < b_sma200) else "Sideways")
     result = {
         "generated_at": now.strftime("%Y-%m-%d %H:%M"), "as_of": as_of.strftime("%Y-%m-%d"), "demo": demo,
+        "data_status": fresh if not demo else {**fresh, "stale": False, "text": None},
         "params": {"min_market_cap": cfg["universe"]["min_market_cap"], "min_avg_value_20d": cfg["universe"]["min_avg_value_20d"],
                    "capital": cfg["capital"], "risk_per_trade": cfg["risk_per_trade"], "fees": cfg["fees"],
                    "split_date": cfg.get("backtest", {}).get("split_date"),
