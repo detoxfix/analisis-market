@@ -146,6 +146,74 @@ def test_monitor():
     assert check(late, bt, cfg)["horizons"]["short"]["level"] == "BAHAYA"
 
 
+def test_monitor_early_alarm():
+    """Rugi beruntun harus memicu alarm walau < 10 transaksi, tanpa std_ret, dan tanpa backtest."""
+    from src.monitor import check
+    cfg = {"monitor": {"min_trades": 10, "early_trades": 5}}
+    bt_nostd = {"results": {"short": {"n": 900, "avg_ret": 0.0, "win_rate": 0.41,
+                                      "out_sample": {"n": 700, "avg_ret": 0.002, "win_rate": 0.415}}}}
+    seven = {"closed_rets": {"short": [["d", -0.06, "v0"]] * 7}}
+    r = check(seven, bt_nostd, cfg)["horizons"]["short"]
+    assert r["level"] == "WASPADA" and r.get("early") and "berturut-turut" in r["text"]
+    # tanpa backtest (jangka panjang): pembanding win rate 50%
+    longs = {"closed_rets": {"long": [["d", -0.05]] * 8}}
+    assert check(longs, None, cfg)["horizons"]["long"]["level"] == "BAHAYA"
+    # sedikit transaksi & hasil wajar: tetap BELUM CUKUP DATA, bukan NORMAL
+    mix = {"closed_rets": {"short": [["d", r_] for r_ in (0.03, -0.02, 0.04, -0.01, 0.02, -0.03)]}}
+    assert check(mix, bt_nostd, cfg)["horizons"]["short"]["level"] == "BELUM CUKUP DATA"
+    # versi aktif dinilai sendiri setelah punya >= min_trades; rugi versi lama tidak ikut
+    hist = [["d", -0.05, "old"]] * 12 + [["d", r_, "new"] for r_ in (0.03, -0.02, 0.04, -0.01, 0.02) * 2]
+    bt = {"results": {"short": {"n": 300, "avg_ret": 0.005, "win_rate": 0.5, "std_ret": 0.05}}}
+    r = check({"closed_rets": {"short": hist}}, bt, cfg, {"short": {"id": "new"}})["horizons"]["short"]
+    assert r["scope"] == "versi aktif" and r["n"] == 10 and r["level"] in ("NORMAL", "LEBIH BAIK")
+    r = check({"closed_rets": {"short": hist[:15]}}, bt, cfg, {"short": {"id": "new"}})["horizons"]["short"]
+    assert r["scope"] == "semua versi" and r["level"] == "BAHAYA" and "versi lama" in r["text"]
+
+
+def test_versions(tmp_path):
+    from src import versions as V
+    cfg = {"horizons": {"short": {"label": "A", "sl_atr": 2.5}, "medium": {"sl_atr": 3.5}, "long": {"sl_atr": 4}},
+           "thresholds": {"buy": 30}, "fees": {"buy": 0.0015}}
+    path = tmp_path / "v.json"
+    a = V.register(cfg, "2026-11-09", path=path)
+    assert a["short"]["v"] == 1 and a["short"]["since"] == "2026-11-09"
+    cfg["horizons"]["short"]["label"] = "B"                       # kosmetik: versi tetap
+    assert V.register(cfg, "2026-11-10", path=path)["short"]["id"] == a["short"]["id"]
+    cfg["horizons"]["short"]["sl_atr"] = 3.0                      # parameter berubah: versi baru
+    b = V.register(cfg, "2026-11-11", path=path)
+    assert b["short"]["v"] == 2 and b["short"]["since"] == "2026-11-11" and b["medium"]["v"] == 1
+    assert V.label_of(b, "short", a["short"]["id"]).startswith("v1") and V.label_of(b, "short", None).startswith("v0")
+
+
+def test_tracker_versions():
+    from src.tracker import COLS, summarize
+    rows = [dict.fromkeys(COLS) for _ in range(3)]
+    for r_, (sid, ret) in zip(rows, ((None, -0.05), ("abc", 0.04), ("abc", None))):
+        r_.update(id=f"x{ret}", date="2026-11-03", ticker="A.JK", code="A", horizon="short", status="CLOSED",
+                  outcome="SL" if ret else "BATAL", ret=ret if ret else 0.0, exit_date="2026-11-05", strategy=sid)
+    df = pd.DataFrame(rows, columns=COLS)
+    vers = {"short": {"id": "abc", "v": 1, "since": "2026-11-03", "label": "v1 · sejak 2026-11-03"},
+            "_all": {"short": {"abc": "v1 · sejak 2026-11-03"}}}
+    s = summarize(df, vers)
+    bv = {v["strategy"]: v for v in s["by_version"]["short"]}
+    assert bv["abc"]["current"] and bv["abc"]["n"] == 1 and bv["v0"]["n"] == 1 and s["by_version"]["short"][0]["current"]
+    assert sorted(c[2] for c in s["closed_rets"]["short"]) == ["abc", "v0"]
+
+
+def test_data_freshness():
+    from datetime import datetime
+    from src.utils import data_freshness
+    # Sabtu dini hari, data terakhir Kamis -> Jumat terlewat
+    f = data_freshness("2026-11-05", datetime(2026, 11, 7, 0, 37))
+    assert f["stale"] and f["lag"] == 1 and f["expected"] == "2026-11-06"
+    # Jumat sore setelah jam siap, data Jumat ada -> segar
+    assert not data_freshness("2026-11-06", datetime(2026, 11, 6, 17, 40))["stale"]
+    # Jumat 16:00 (sebelum jam siap): data Kamis masih wajar
+    assert not data_freshness("2026-11-05", datetime(2026, 11, 6, 16, 0))["stale"]
+    # libur bursa dilewati
+    assert not data_freshness("2026-12-24", datetime(2026, 12, 26, 9, 0), ["2026-12-25"])["stale"]
+
+
 def test_config_edit():
     import yaml
     from src.configedit import set_horizon_param
@@ -161,5 +229,11 @@ def test_config_edit():
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):
-            fn()
+            import inspect
+            import tempfile
+            if "tmp_path" in inspect.signature(fn).parameters:
+                with tempfile.TemporaryDirectory() as td:
+                    fn(Path(td))
+            else:
+                fn()
             print("OK", name)

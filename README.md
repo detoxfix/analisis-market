@@ -135,12 +135,14 @@ src/signals.py          skor & sinyal 3 horizon + alasan
 src/risk.py             area beli, TP, SL, lama hold
 src/portfolio.py        bobot & lot
 src/sim.py              simulasi transaksi (track record & backtest)
-src/tracker.py          catatan kinerja rekomendasi riil
+src/tracker.py          catatan kinerja rekomendasi riil (per versi strategi)
+src/versions.py         versi strategi per horizon (docs/data/strategy_versions.json)
+src/monitor.py          alarm penyimpangan (termasuk alarm dini rugi beruntun)
 src/backtest.py         backtest aturan pendek & menengah
 src/report.py           dashboard HTML
 src/notify.py           Telegram
 .github/workflows/daily.yml   jadwal harian
-tests/test_core.py      uji unit
+tests/test_core.py      uji unit (dijalankan otomatis sebelum dashboard harian diterbitkan)
 ```
 
 ## Keterbatasan
@@ -155,6 +157,15 @@ tests/test_core.py      uji unit
 - **Alarm penyimpangan** (`src/monitor.py`): setiap hari hasil rekomendasi sungguhan dibandingkan dengan sebaran hasil
   backtest. Status per horizon: BELUM CUKUP DATA · NORMAL · LEBIH BAIK · WASPADA (peluang kebetulan < ~5%) ·
   BAHAYA (< ~1%). Tampil di dashboard (tab Track record), jendela aplikasi, dan Telegram. Tidak mengubah apa pun.
+  Sejak 8-11-2026: win rate diuji dengan uji binomial eksak; **alarm dini** (rentetan rugi / win rate terlalu rendah)
+  aktif mulai 5 transaksi; tetap jalan walau backtest belum punya data sebaran; jangka panjang (tanpa backtest)
+  dibandingkan dengan win rate 50%. Pengaturan di `monitor:` config.yaml.
+- **Versi strategi** (`src/versions.py`): setiap perubahan parameter horizon, ambang, biaya, atau `LOGIC_VERSION`
+  (naikkan bila rumus di kode berubah) membuat versi baru (v1, v2, ...). Setiap rekomendasi menyimpan versinya
+  (kolom `strategy`); rekomendasi sebelum 9-11-2026 = v0. Track record menampilkan hasil per versi; alarm menilai
+  versi aktif saja begitu versi itu punya ≥ 10 transaksi (sebelumnya digabung dengan versi lama).
+- **Peringatan data basi**: bila data harga belum sampai hari bursa terakhir (lewat `data.ready_after`, bawaan 17:00
+  WIB), dashboard, Telegram, dan aplikasi menampilkan peringatan. Isi `data.holidays` dengan libur bursa.
 - **Usulan parameter bulanan** (`python tune.py --propose`, otomatis tanggal 1 lewat workflow Tuning strategi):
   satu perubahan parameter dipilih dari data sebelum 6 bulan terakhir, lalu harus tetap lebih baik di 6 bulan terakhir
   dan di simulasi portofolio. Hasil di `docs/data/proposal.json` + Telegram. Diterapkan hanya lewat tombol

@@ -17,6 +17,11 @@ data:
   benchmark: "^JKSE"                 # IHSG
   fundamentals_cache_days: 7         # fundamental di-refresh mingguan (berubah per kuartal)
   shares_cache_days: 7
+  ready_after: "17:00"               # jam WIB saat data penutupan hari itu biasanya sudah ada di Yahoo
+  holidays:                          # libur bursa BEI (Sabtu/Minggu otomatis) agar peringatan "data basi" tidak salah
+    - "2026-12-25"                   # Natal
+    - "2026-12-31"                   # libur khusus bursa akhir tahun
+    # tambahkan cuti bersama / libur lain dari kalender idx.co.id, mis. - "2026-12-24"
 
 capital: 100000000                   # modal acuan untuk menghitung lot (Rp 100 jt)
 risk_per_trade: 0.01                 # maks. rugi per posisi = 1% modal (batas jumlah lot)
@@ -106,6 +111,13 @@ backtest:
 archive:                             # arsip fundamental untuk backtest jangka panjang di masa depan
   statements_days: 7                 # tiap saham diperbarui laporan keuangannya seminggu sekali
   statements_per_run: 60             # maks. saham per hari (bergilir, agar tidak kena limit Yahoo)
+
+monitor:                             # alarm: track record sungguhan vs perkiraan backtest
+  min_trades: 10                     # penilaian penuh mulai 10 transaksi selesai
+  early_trades: 5                    # alarm dini (rentetan rugi / win rate terlalu rendah) mulai 5 transaksi
+  recent_trades: 20                  # cek juga 20 transaksi terakhir
+  streak_min: 3                      # rentetan rugi mulai diuji dari 3 kali berturut-turut
+  assumed_win_rate: 0.5              # pembanding untuk horizon yang tidak di-backtest (jangka panjang)
 
 idx:                                 # data idx.co.id (otomatis dilewati bila situs memblokir, mis. di GitHub)
   foreign_flow: true                 # transaksi asing harian (ditampilkan; belum dipakai dalam skor)

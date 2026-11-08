@@ -1,18 +1,22 @@
 """Track record: setiap rekomendasi BUY yang masuk portofolio dicatat lalu dievaluasi tiap hari
-(kena TP / SL / time-stop) memakai harga riil berikutnya. Ini cara jujur mengukur akurasi sinyal."""
+(kena TP / SL / time-stop) memakai harga riil berikutnya. Ini cara jujur mengukur akurasi sinyal.
+
+Kolom `strategy` menyimpan sidik jari versi strategi (lihat versions.py) saat rekomendasi dibuat;
+baris lama tanpa label diberi "v0"."""
 from __future__ import annotations
 
 import numpy as np
 import pandas as pd
 
 from .sim import simulate
+from .versions import LEGACY, label_of
 from .utils import ROOT, log
 
 PATH = ROOT / "docs" / "data" / "recommendations.csv"
 COLS = ["id", "date", "ticker", "code", "horizon", "signal", "score", "entry", "entry_low", "entry_high",
         "tp1", "tp2", "sl", "max_hold_days", "status", "outcome", "entry_date", "entry_px",
         "exit_date", "exit_px", "ret", "days", "tp1_hit", "entry_mode", "limit_days", "trail_ma",
-        "market_exit", "market_exit_ma", "market_exit_confirm"]
+        "market_exit", "market_exit_ma", "market_exit_confirm", "strategy"]
 
 
 def _load() -> pd.DataFrame:
@@ -21,16 +25,18 @@ def _load() -> pd.DataFrame:
         for c in COLS:
             if c not in df.columns:
                 df[c] = np.nan
+        df["strategy"] = df["strategy"].astype("object").where(df["strategy"].notna(), LEGACY)
         return df[COLS]
     return pd.DataFrame(columns=COLS)
 
 
 def update(prices: dict[str, pd.DataFrame], new_recs: list[dict], fees: dict, as_of: pd.Timestamp,
-           demo: bool = False, bench: pd.Series | None = None, exec_cfg: dict | None = None) -> dict:
+           demo: bool = False, bench: pd.Series | None = None, exec_cfg: dict | None = None,
+           versions: dict | None = None) -> dict:
     df = _load() if not demo else pd.DataFrame(columns=COLS)
     df = df.astype({"status": "object", "outcome": "object", "entry_date": "object",
                     "exit_date": "object", "tp1_hit": "object", "market_exit": "object", "market_exit_ma": "object",
-                    "entry_mode": "object"})
+                    "entry_mode": "object", "strategy": "object"})
 
     # 1) evaluasi rekomendasi yang masih terbuka
     for i in df.index[df["status"] == "OPEN"]:
@@ -68,6 +74,7 @@ def update(prices: dict[str, pd.DataFrame], new_recs: list[dict], fees: dict, as
                     "trail_ma": r.get("trail_ma", 0), "market_exit": r.get("market_exit", "none"),
                     "market_exit_ma": r.get("market_exit_ma", "sma50"),
                     "market_exit_confirm": r.get("market_exit_confirm", 1),
+                    "strategy": ((versions or {}).get(r["horizon"]) or {}).get("id", LEGACY),
                     "status": "OPEN", "outcome": "MENUNGGU"})
     if add:
         df = pd.concat([df, pd.DataFrame(add)], ignore_index=True) if len(df) else pd.DataFrame(add, columns=COLS)
@@ -76,7 +83,7 @@ def update(prices: dict[str, pd.DataFrame], new_recs: list[dict], fees: dict, as
         PATH.parent.mkdir(parents=True, exist_ok=True)
         df.to_csv(PATH, index=False)
     log.info("Track record: %d rekomendasi (%d terbuka, %d baru)", len(df), int((df["status"] == "OPEN").sum()), len(add))
-    return summarize(df)
+    return summarize(df, versions)
 
 
 def _stats(rets: pd.Series) -> dict:
@@ -89,16 +96,35 @@ def _stats(rets: pd.Series) -> dict:
             "profit_factor": float(gains / losses) if losses > 0 else None}
 
 
-def summarize(df: pd.DataFrame) -> dict:
+def summarize(df: pd.DataFrame, versions: dict | None = None) -> dict:
+    df = df.copy()
+    if "strategy" not in df:
+        df["strategy"] = LEGACY
+    df["strategy"] = df["strategy"].astype("object").where(df["strategy"].notna(), LEGACY)
+    df["version"] = [label_of(versions, h, s) for h, s in zip(df["horizon"], df["strategy"])]
     closed = df[(df["status"] == "CLOSED") & (df["outcome"] != "BATAL")]
     by_h = {h: _stats(closed.loc[closed["horizon"] == h, "ret"]) for h in ("short", "medium", "long")}
     recent = closed.sort_values("exit_date", ascending=False).head(30)
     opened = df[df["status"] == "OPEN"].sort_values("date", ascending=False)
     keep = ["date", "code", "horizon", "signal", "entry", "tp1", "tp2", "sl", "outcome", "entry_px",
-            "exit_px", "ret", "days", "exit_date"]
+            "exit_px", "ret", "days", "exit_date", "strategy", "version"]
     srt = closed.sort_values(["exit_date", "date"])
-    closed_rets = {h: [[str(d), float(r)] for d, r in zip(g["exit_date"], g["ret"])]
+    closed_rets = {h: [[str(d), float(r), str(s)] for d, r, s in zip(g["exit_date"], g["ret"], g["strategy"])]
                    for h, g in srt.groupby("horizon")}
+    by_version = {}                     # hasil per versi strategi, versi terbaru di atas
+    for h in ("short", "medium", "long"):
+        rows = []
+        for sid, g in df[df["horizon"] == h].groupby("strategy"):
+            c = closed[(closed["horizon"] == h) & (closed["strategy"] == sid)]
+            cur = ((versions or {}).get(h) or {}).get("id") == sid
+            rows.append({"strategy": sid, "version": label_of(versions, h, sid), "current": cur,
+                         "first": str(g["date"].min()), "n_recs": int(len(g)),
+                         "n_open": int((g["status"] == "OPEN").sum()), **_stats(c["ret"])})
+        rows.sort(key=lambda r: r["first"], reverse=True)
+        by_version[h] = sorted(rows, key=lambda r: not r["current"])     # versi aktif di atas
+    current = {h: {k: v for k, v in (versions or {}).get(h, {}).items()} for h in ("short", "medium", "long")
+               if (versions or {}).get(h)}
     return {"by_horizon": by_h, "all": _stats(closed["ret"]), "closed_rets": closed_rets,
+            "by_version": by_version, "versions": current,
             "cancelled": int((df["outcome"] == "BATAL").sum()),
             "open": opened[keep].to_dict("records"), "recent_closed": recent[keep].to_dict("records")}

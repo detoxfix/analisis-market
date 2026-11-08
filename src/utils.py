@@ -123,3 +123,34 @@ def fnum(x, default=None):
         return f if math.isfinite(f) else default
     except (TypeError, ValueError):
         return default
+
+
+def data_freshness(as_of, now: datetime, holidays=(), ready_after: str = "17:00") -> dict:
+    """Apakah data harga sudah sampai hari bursa terakhir?
+
+    Hari bursa yang seharusnya sudah ada datanya = hari ini (bila sudah lewat `ready_after` WIB, saat data
+    penutupan biasanya sudah tersedia di Yahoo) atau hari kerja sebelumnya; Sabtu/Minggu dan tanggal di
+    `holidays` (libur bursa) dilewati. `lag` = jumlah hari bursa yang terlewat."""
+    from datetime import timedelta
+    hol = {pd.Timestamp(h).date() for h in (holidays or [])}
+    a = pd.Timestamp(as_of).date()
+
+    def trading(d) -> bool:
+        return d.weekday() < 5 and d not in hol
+
+    exp = now.date()
+    if now.strftime("%H:%M") < ready_after:
+        exp -= timedelta(days=1)
+    while not trading(exp):
+        exp -= timedelta(days=1)
+    lag, d = 0, a + timedelta(days=1)
+    while d <= exp:
+        lag += trading(d)
+        d += timedelta(days=1)
+    out = {"as_of": a.isoformat(), "expected": exp.isoformat(), "lag": int(lag), "stale": lag > 0, "text": None}
+    if lag:
+        out["text"] = (f"Data harga terakhir {a:%d-%m-%Y}, padahal seharusnya sudah ada data {exp:%d-%m-%Y} "
+                       f"({lag} hari bursa terlewat). Sinyal hari ini memakai harga lama — cek ulang di aplikasi "
+                       "sekuritas sebelum transaksi. Abaikan bila hari itu libur bursa (tambahkan ke "
+                       "data.holidays di config.yaml).")
+    return out
