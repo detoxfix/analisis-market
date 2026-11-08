@@ -20,6 +20,7 @@ import yaml
 from src import backtest as bt
 from src import data as D
 from src import archive, idx, monitor, notify, portsim, positions, report, tracker
+from src import news as NEWS
 from src import versions as V
 from src.indicators import add_indicators
 from src.portfolio import allocate
@@ -150,6 +151,32 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
         except Exception as e:  # noqa: BLE001
             log.warning("Data transaksi asing gagal: %s", e)
 
+    # ------------------------------------------------------------ 2c. peringatan berita negatif (info saja)
+    news_res = {"items": {}, "stats": None, "days": (cfg.get("news", {}) or {}).get("days", 7)}
+    if (cfg.get("news", {}) or {}).get("enabled", True):
+        if demo:
+            c0 = uni["code"].tolist()[:2]
+            news_res["items"] = {c: [{"date": as_of.strftime("%Y-%m-%d"), "title": f"{c} siapkan rights issue (contoh demo)",
+                                      "source": "Demo", "link": "", "categories": ["Right issue (dilusi)"],
+                                      "severity": "sedang"}] for c in c0}
+        else:
+            try:
+                pos_codes = [c for c in positions.codes(pos_df)] if len(pos_df) else []
+                stocks = [{"code": u["code"], "name": (funds.get(u["ticker"]) or {}).get("name") or names.get(u["ticker"])}
+                          for _, u in uni.iterrows()]
+                have = {x["code"] for x in stocks}
+                stocks += [{"code": D.jk(c).replace(".JK", ""), "name": names.get(D.jk(c))} for c in pos_codes
+                           if D.jk(c).replace(".JK", "") not in have]
+                news_res = NEWS.collect(stocks, cfg, now)
+                n_new = NEWS.archive(news_res, as_of.strftime("%Y-%m-%d"))
+                sources.append("Peringatan berita: Google News RSS & RSS portal berita (judul + kata kunci risiko)")
+                log.info("Berita negatif %d hari: %d saham ditandai (%d baru diarsip, %d dtk)", news_res["days"],
+                         len(news_res["items"]), n_new, news_res["stats"]["seconds"])
+            except Exception as e:  # noqa: BLE001  (berita tidak boleh menggagalkan sinyal harian)
+                log.warning("Peringatan berita gagal: %s", e)
+    keep = int((cfg.get("news", {}) or {}).get("max_per_stock", 5))
+    news_items = {c: v[:keep] for c, v in news_res["items"].items()}     # tampilkan maks. 5 per saham
+
     # ------------------------------------------------------------ 3. indikator & skor
     th = cfg["thresholds"]
     ind, rows_all, per_h = {}, [], {h: {"buys": [], "sells": [], "held": []} for h in HORIZONS}
@@ -164,7 +191,7 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
         rec = {"ticker": t, "code": u["code"], "name": name, "sector": sector, "price": float(last["Close"]),
                "chg_1d": fnum(last["CHG_1D"]), "mcap": float(u["mcap"]), "avg_value_20d": float(u["avg_value_20d"]),
                "pe": f.get("pe"), "pb": f.get("pb"), "roe": f.get("roe"), "div_yield": f.get("div_yield"),
-               **flows.get(u["code"], {})}
+               "news": news_items.get(u["code"]), **flows.get(u["code"], {})}
         for h in HORIZONS:
             if h == "long":
                 comp = long_components(d, f, meds.get(sector, meds.get("_all", {})))
@@ -184,7 +211,7 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
                         "price": float(last["Close"]), "chg_1d": fnum(last["CHG_1D"]), "mcap": float(u["mcap"]),
                         "score": sc, "signal": sig, "confidence": round(min(1, abs(sc) / 100) * cov, 3),
                         "atr_pct": fnum(last["ATR_pct"]), "reasons": reasons, "risks": risks,
-                        **flows.get(u["code"], {})}
+                        "news": news_items.get(u["code"]), **flows.get(u["code"], {})}
                 if bull:
                     plan = make_plan(last, h, cfg["horizons"][h], cfg["fees"])
                     if plan:
@@ -304,6 +331,7 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
                 it["spark"] = spark(it["ticker"])
     for it in pos_items:
         it["spark"] = spark(D.jk(it["code"]))
+        it["news"] = news_items.get(it["code"])
     b_last, b_prev = float(bench.iloc[-1]), float(bench.iloc[-2])
     b_ema20 = float(bench.ewm(span=20, adjust=False).mean().iloc[-1])
     b_sma200 = float(bench.rolling(200).mean().iloc[-1]) if len(bench) >= 200 else None
@@ -326,6 +354,7 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
         "_positions_full": pos_items,
         "all": sorted(rows_all, key=lambda r: -r["mcap"]),
         "track": track,
+        "news": {"days": news_res.get("days"), "stats": news_res.get("stats"), "items": news_items},
         "monitor": mon,
         "proposal": proposal,
         "backtest": bt_res,
