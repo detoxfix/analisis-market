@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-08 20:59",
+ "generated_at": "2026-11-08 21:01",
  "demo": false,
  "universe": 120,
  "split_date": "2025-05-01",
@@ -30,18 +30,18 @@
     },
     {
      "bucket": "Pesimis",
-     "days": 131,
+     "days": 130,
      "all": {
-      "days": 131,
-      "stock": -0.0001,
+      "days": 130,
+      "stock": -0.0002,
       "trend": -0.0065,
-      "ihsg": -0.0038
+      "ihsg": -0.004
      },
      "is": {
-      "days": 82,
-      "stock": 0.0009,
+      "days": 81,
+      "stock": 0.0007,
       "trend": -0.0214,
-      "ihsg": 0.0051
+      "ihsg": 0.0049
      },
      "oos": {
       "days": 49,
@@ -52,18 +52,18 @@
     },
     {
      "bucket": "Netral",
-     "days": 185,
+     "days": 186,
      "all": {
-      "days": 185,
+      "days": 186,
       "stock": 0.0004,
       "trend": 0.0015,
-      "ihsg": -0.0114
+      "ihsg": -0.0112
      },
      "is": {
-      "days": 119,
-      "stock": -0.0023,
+      "days": 120,
+      "stock": -0.0022,
       "trend": -0.0302,
-      "ihsg": -0.0077
+      "ihsg": -0.0075
      },
      "oos": {
       "days": 66,
@@ -74,18 +74,18 @@
     },
     {
      "bucket": "Optimis",
-     "days": 256,
+     "days": 257,
      "all": {
-      "days": 256,
-      "stock": 0.0146,
-      "trend": 0.0247,
+      "days": 257,
+      "stock": 0.0147,
+      "trend": 0.0248,
       "ihsg": -0.0052
      },
      "is": {
-      "days": 87,
-      "stock": 0.0079,
-      "trend": 0.0028,
-      "ihsg": -0.0069
+      "days": 88,
+      "stock": 0.0083,
+      "trend": 0.0044,
+      "ihsg": -0.0067
      },
      "oos": {
       "days": 169,
@@ -96,18 +96,18 @@
     },
     {
      "bucket": "Sangat optimis",
-     "days": 43,
+     "days": 42,
      "all": {
-      "days": 43,
-      "stock": 0.0117,
-      "trend": 0.0171,
-      "ihsg": -0.0081
+      "days": 42,
+      "stock": 0.0109,
+      "trend": 0.0159,
+      "ihsg": -0.0084
      },
      "is": {
-      "days": 22,
-      "stock": 0.0241,
-      "trend": 0.035,
-      "ihsg": 0.0114
+      "days": 21,
+      "stock": 0.0232,
+      "trend": 0.0327,
+      "ihsg": 0.0116
      },
      "oos": {
       "days": 21,
@@ -145,18 +145,18 @@
     },
     {
      "bucket": "Pesimis",
-     "days": 122,
+     "days": 121,
      "all": {
-      "days": 122,
-      "stock": 0.0096,
+      "days": 121,
+      "stock": 0.0094,
       "trend": -0.0034,
       "ihsg": -0.009
      },
      "is": {
-      "days": 82,
-      "stock": 0.0109,
+      "days": 81,
+      "stock": 0.0106,
       "trend": -0.0203,
-      "ihsg": 0.0009
+      "ihsg": 0.001
      },
      "oos": {
       "days": 40,
@@ -167,18 +167,18 @@
     },
     {
      "bucket": "Netral",
-     "days": 181,
+     "days": 182,
      "all": {
-      "days": 181,
-      "stock": 0.0092,
+      "days": 182,
+      "stock": 0.0093,
       "trend": 0.0098,
       "ihsg": -0.0171
      },
      "is": {
-      "days": 119,
-      "stock": 0.0088,
+      "days": 120,
+      "stock": 0.0091,
       "trend": -0.036,
-      "ihsg": -0.0007
+      "ihsg": -0.0008
      },
      "oos": {
       "days": 62,
@@ -189,18 +189,18 @@
     },
     {
      "bucket": "Optimis",
-     "days": 236,
+     "days": 237,
      "all": {
-      "days": 236,
-      "stock": 0.0399,
-      "trend": 0.0682,
-      "ihsg": -0.0204
+      "days": 237,
+      "stock": 0.0395,
+      "trend": 0.0673,
+      "ihsg": -0.0207
      },
      "is": {
-      "days": 87,
-      "stock": 0.0146,
-      "trend": -0.014,
-      "ihsg": -0.0208
+      "days": 88,
+      "stock": 0.0137,
+      "trend": -0.0161,
+      "ihsg": -0.0217
      },
      "oos": {
       "days": 149,
@@ -211,18 +211,18 @@
     },
     {
      "bucket": "Sangat optimis",
-     "days": 42,
+     "days": 41,
      "all": {
-      "days": 42,
-      "stock": 0.064,
-      "trend": 0.069,
-      "ihsg": 0.0072
+      "days": 41,
+      "stock": 0.0673,
+      "trend": 0.0745,
+      "ihsg": 0.0098
      },
      "is": {
-      "days": 22,
-      "stock": 0.0403,
-      "trend": -0.0091,
-      "ihsg": -0.0154
+      "days": 21,
+      "stock": 0.0456,
+      "trend": 0.0011,
+      "ihsg": -0.0114
      },
      "oos": {
       "days": 20,
@@ -236,13 +236,13 @@
   },
   "distribution": {
    "days": 696,
-   "mean": 2.2,
+   "mean": 2.1,
    "share": {
     "Sangat pesimis": 0.111,
-    "Pesimis": 0.194,
-    "Netral": 0.266,
-    "Optimis": 0.368,
-    "Sangat optimis": 0.062
+    "Pesimis": 0.193,
+    "Netral": 0.267,
+    "Optimis": 0.369,
+    "Sangat optimis": 0.06
    }
   }
  },
@@ -370,24 +370,24 @@
      "sentiment_min": -40
     },
     "trades": {
-     "n": 912,
-     "win_rate": 0.404605,
-     "avg_ret": -0.000254,
-     "median_ret": -0.02907,
-     "profit_factor": 0.994606,
-     "avg_days": 11.006579,
-     "fill_rate": 0.652361,
+     "n": 918,
+     "win_rate": 0.40305,
+     "avg_ret": -0.000796,
+     "median_ret": -0.030309,
+     "profit_factor": 0.983166,
+     "avg_days": 10.992375,
+     "fill_rate": 0.654312,
      "worst": -0.366279,
      "best": 0.316221,
      "in_sample": {
-      "n": 188,
-      "win_rate": 0.351064,
-      "avg_ret": -0.013986,
-      "median_ret": -0.028596,
-      "profit_factor": 0.688257,
-      "avg_days": 11.776596,
-      "fill_rate": 0.664311,
-      "worst": -0.121942,
+      "n": 194,
+      "win_rate": 0.345361,
+      "avg_ret": -0.016129,
+      "median_ret": -0.03315,
+      "profit_factor": 0.651868,
+      "avg_days": 11.685567,
+      "fill_rate": 0.673611,
+      "worst": -0.15155,
       "best": 0.260432
      },
      "out_sample": {
@@ -409,10 +409,10 @@
        "profit_factor": 0.582402
       },
       "2025": {
-       "n": 519,
-       "win_rate": 0.44894,
-       "avg_ret": 0.015684,
-       "profit_factor": 1.381099
+       "n": 525,
+       "win_rate": 0.445714,
+       "avg_ret": 0.014553,
+       "profit_factor": 1.348664
       },
       "2026": {
        "n": 259,
@@ -422,63 +422,63 @@
       }
      },
      "outcomes": {
-      "TIME": 382,
-      "SL": 364,
+      "TIME": 383,
+      "SL": 369,
       "TP2": 89,
       "TP1+TIME": 57,
       "TP1+BE": 20
      }
     },
     "portfolio": {
-     "total_return": 0.302477,
-     "cagr": 0.130486,
-     "max_drawdown": -0.193746,
-     "dd_peak": "2026-01-26",
-     "dd_trough": "2026-07-08",
+     "total_return": 0.177235,
+     "cagr": 0.078668,
+     "max_drawdown": -0.270066,
+     "dd_peak": "2024-12-09",
+     "dd_trough": "2025-06-25",
      "worst_month": -0.08705,
-     "sharpe": 0.781327,
-     "avg_exposure": 0.515252,
-     "trades": 134,
-     "win_rate": 0.470149,
-     "avg_trade": 0.012826,
+     "sharpe": 0.503728,
+     "avg_exposure": 0.531327,
+     "trades": 139,
+     "win_rate": 0.453237,
+     "avg_trade": 0.008459,
      "by_year": {
       "2024": -0.073816,
-      "2025": 0.382579,
-      "2026": 0.017145
+      "2025": 0.24053,
+      "2026": 0.024609
      }
     },
     "port_is": {
-     "total_return": -0.106645,
-     "cagr": -0.167967,
-     "max_drawdown": -0.152235,
+     "total_return": -0.20417,
+     "cagr": -0.310904,
+     "max_drawdown": -0.243942,
      "dd_peak": "2024-11-01",
-     "dd_trough": "2025-02-07",
+     "dd_trough": "2025-04-11",
      "worst_month": -0.087038,
-     "sharpe": -3.273038,
+     "sharpe": -4.556965,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
       "2024": -0.071665,
-      "2025": -0.037681
+      "2025": -0.142734
      }
     },
     "port_oos": {
-     "total_return": 0.455633,
-     "cagr": 0.281427,
-     "max_drawdown": -0.178981,
+     "total_return": 0.477039,
+     "cagr": 0.293842,
+     "max_drawdown": -0.172229,
      "dd_peak": "2026-01-16",
      "dd_trough": "2026-05-22",
-     "worst_month": -0.069619,
-     "sharpe": 2.731412,
+     "worst_month": -0.070067,
+     "sharpe": 2.80258,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2025": 0.362316,
-      "2026": 0.068499
+      "2025": 0.368005,
+      "2026": 0.079703
      }
     }
    },
@@ -844,22 +844,22 @@
     },
     "trades": {
      "n": 943,
-     "win_rate": 0.395546,
-     "avg_ret": -0.002376,
-     "median_ret": -0.033138,
-     "profit_factor": 0.950586,
-     "avg_days": 10.95228,
-     "fill_rate": 0.657143,
+     "win_rate": 0.394486,
+     "avg_ret": -0.002439,
+     "median_ret": -0.034176,
+     "profit_factor": 0.949347,
+     "avg_days": 10.943796,
+     "fill_rate": 0.657601,
      "worst": -0.366279,
      "best": 0.316221,
      "in_sample": {
       "n": 194,
-      "win_rate": 0.360825,
-      "avg_ret": -0.013891,
-      "median_ret": -0.025229,
-      "profit_factor": 0.688655,
-      "avg_days": 11.752577,
-      "fill_rate": 0.67128,
+      "win_rate": 0.35567,
+      "avg_ret": -0.014196,
+      "median_ret": -0.028187,
+      "profit_factor": 0.683917,
+      "avg_days": 11.71134,
+      "fill_rate": 0.673611,
       "worst": -0.121942,
       "best": 0.260432
      },
@@ -876,16 +876,16 @@
      },
      "by_year": {
       "2024": {
-       "n": 140,
-       "win_rate": 0.35,
-       "avg_ret": -0.018259,
-       "profit_factor": 0.596085
+       "n": 141,
+       "win_rate": 0.347518,
+       "avg_ret": -0.018534,
+       "profit_factor": 0.590761
       },
       "2025": {
-       "n": 521,
-       "win_rate": 0.451056,
-       "avg_ret": 0.015703,
-       "profit_factor": 1.381211
+       "n": 520,
+       "win_rate": 0.45,
+       "avg_ret": 0.01573,
+       "profit_factor": 1.381118
       },
       "2026": {
        "n": 282,
@@ -895,63 +895,63 @@
       }
      },
      "outcomes": {
-      "SL": 391,
-      "TIME": 382,
+      "SL": 392,
+      "TIME": 381,
       "TP2": 91,
       "TP1+TIME": 59,
       "TP1+BE": 20
      }
     },
     "portfolio": {
-     "total_return": 0.120308,
-     "cagr": 0.054139,
-     "max_drawdown": -0.240877,
+     "total_return": 0.119928,
+     "cagr": 0.053973,
+     "max_drawdown": -0.240941,
      "dd_peak": "2026-01-02",
      "dd_trough": "2026-06-03",
-     "worst_month": -0.125925,
-     "sharpe": 0.383315,
-     "avg_exposure": 0.575948,
-     "trades": 144,
-     "win_rate": 0.423611,
-     "avg_trade": 0.005428,
+     "worst_month": -0.12596,
+     "sharpe": 0.383231,
+     "avg_exposure": 0.570386,
+     "trades": 143,
+     "win_rate": 0.41958,
+     "avg_trade": 0.005452,
      "by_year": {
       "2024": 0.000948,
-      "2025": 0.290979,
-      "2026": -0.133025
+      "2025": 0.290625,
+      "2026": -0.133081
      }
     },
     "port_is": {
-     "total_return": -0.10454,
-     "cagr": -0.164768,
-     "max_drawdown": -0.181388,
+     "total_return": -0.104941,
+     "cagr": -0.165378,
+     "max_drawdown": -0.179164,
      "dd_peak": "2024-11-01",
      "dd_trough": "2025-02-28",
-     "worst_month": -0.108329,
-     "sharpe": -2.546753,
+     "worst_month": -0.105906,
+     "sharpe": -2.617889,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
       "2024": 0.003207,
-      "2025": -0.107403
+      "2025": -0.107803
      }
     },
     "port_oos": {
-     "total_return": 0.264019,
-     "cagr": 0.167366,
-     "max_drawdown": -0.240874,
+     "total_return": 0.263995,
+     "cagr": 0.167352,
+     "max_drawdown": -0.240929,
      "dd_peak": "2026-01-02",
      "dd_trough": "2026-06-05",
-     "worst_month": -0.128743,
-     "sharpe": 1.739819,
+     "worst_month": -0.128861,
+     "sharpe": 1.739024,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2025": 0.393546,
-      "2026": -0.092948
+      "2025": 0.393567,
+      "2026": -0.092978
      }
     }
    },
@@ -962,23 +962,23 @@
      "sentiment_min": 0
     },
     "trades": {
-     "n": 894,
-     "win_rate": 0.409396,
-     "avg_ret": 0.000502,
+     "n": 895,
+     "win_rate": 0.408939,
+     "avg_ret": 0.000437,
      "median_ret": -0.028287,
-     "profit_factor": 1.01064,
-     "avg_days": 10.995526,
-     "fill_rate": 0.650182,
+     "profit_factor": 1.009274,
+     "avg_days": 10.991061,
+     "fill_rate": 0.650909,
      "worst": -0.366279,
      "best": 0.316221,
      "in_sample": {
-      "n": 161,
-      "win_rate": 0.397516,
-      "avg_ret": -0.007213,
-      "median_ret": -0.017879,
-      "profit_factor": 0.823709,
-      "avg_days": 12.111801,
-      "fill_rate": 0.638889,
+      "n": 162,
+      "win_rate": 0.395062,
+      "avg_ret": -0.007521,
+      "median_ret": -0.018341,
+      "profit_factor": 0.816638,
+      "avg_days": 12.080247,
+      "fill_rate": 0.642857,
       "worst": -0.121942,
       "best": 0.260432
      },
@@ -995,10 +995,10 @@
      },
      "by_year": {
       "2024": {
-       "n": 136,
-       "win_rate": 0.352941,
-       "avg_ret": -0.017737,
-       "profit_factor": 0.607986
+       "n": 137,
+       "win_rate": 0.350365,
+       "avg_ret": -0.018024,
+       "profit_factor": 0.602402
       },
       "2025": {
        "n": 491,
@@ -1015,7 +1015,7 @@
      },
      "outcomes": {
       "TIME": 366,
-      "SL": 360,
+      "SL": 361,
       "TP2": 89,
       "TP1+TIME": 59,
       "TP1+BE": 20
@@ -1028,7 +1028,7 @@
      "dd_peak": "2026-01-02",
      "dd_trough": "2026-05-19",
      "worst_month": -0.12683,
-     "sharpe": 0.891828,
+     "sharpe": 0.891827,
      "avg_exposure": 0.510117,
      "trades": 132,
      "win_rate": 0.44697,
@@ -1118,7 +1118,7 @@
        "n": 138,
        "win_rate": 0.405797,
        "avg_ret": -0.002124,
-       "profit_factor": 0.91052
+       "profit_factor": 0.910521
       },
       "2025": {
        "n": 560,
@@ -1144,21 +1144,21 @@
      }
     },
     "portfolio": {
-     "total_return": 0.389256,
-     "cagr": 0.164839,
+     "total_return": 0.44109,
+     "cagr": 0.184811,
      "max_drawdown": -0.167111,
      "dd_peak": "2024-10-24",
      "dd_trough": "2025-04-24",
      "worst_month": -0.098479,
-     "sharpe": 0.961366,
-     "avg_exposure": 0.385796,
+     "sharpe": 1.057513,
+     "avg_exposure": 0.389143,
      "trades": 259,
-     "win_rate": 0.447876,
-     "avg_trade": 0.007606,
+     "win_rate": 0.451737,
+     "avg_trade": 0.008401,
      "by_year": {
       "2024": 0.006241,
-      "2025": 0.365931,
-      "2026": 0.010768
+      "2025": 0.41822,
+      "2026": 0.009824
      }
     },
     "port_is": {
@@ -1179,20 +1179,20 @@
      }
     },
     "port_oos": {
-     "total_return": 0.550558,
-     "cagr": 0.336027,
-     "max_drawdown": -0.148347,
+     "total_return": 0.608371,
+     "cagr": 0.368723,
+     "max_drawdown": -0.148848,
      "dd_peak": "2026-01-09",
      "dd_trough": "2026-07-31",
-     "worst_month": -0.03584,
-     "sharpe": 3.340511,
+     "worst_month": -0.035091,
+     "sharpe": 3.623459,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2025": 0.461496,
-      "2026": 0.060939
+      "2025": 0.518638,
+      "2026": 0.059087
      }
     }
    },
@@ -1205,21 +1205,21 @@
     },
     "trades": {
      "n": 938,
-     "win_rate": 0.404051,
-     "avg_ret": -0.000766,
-     "median_ret": -0.026814,
-     "profit_factor": 0.983253,
-     "avg_days": 10.411514,
+     "win_rate": 0.402985,
+     "avg_ret": -0.000863,
+     "median_ret": -0.027967,
+     "profit_factor": 0.98118,
+     "avg_days": 10.421109,
      "fill_rate": 0.656863,
      "worst": -0.366279,
      "best": 0.316221,
      "in_sample": {
       "n": 205,
-      "win_rate": 0.365854,
-      "avg_ret": -0.01348,
-      "median_ret": -0.023302,
-      "profit_factor": 0.668402,
-      "avg_days": 10.063415,
+      "win_rate": 0.360976,
+      "avg_ret": -0.014282,
+      "median_ret": -0.026376,
+      "profit_factor": 0.654843,
+      "avg_days": 10.121951,
       "fill_rate": 0.678808,
       "worst": -0.121942,
       "best": 0.260432
@@ -1227,10 +1227,10 @@
      "out_sample": {
       "n": 733,
       "win_rate": 0.414734,
-      "avg_ret": 0.002789,
+      "avg_ret": 0.00289,
       "median_ret": -0.028586,
-      "profit_factor": 1.059117,
-      "avg_days": 10.508868,
+      "profit_factor": 1.061389,
+      "avg_days": 10.504775,
       "fill_rate": 0.650977,
       "worst": -0.366279,
       "best": 0.316221
@@ -1244,77 +1244,77 @@
       },
       "2025": {
        "n": 536,
-       "win_rate": 0.445896,
-       "avg_ret": 0.014752,
-       "profit_factor": 1.366729
+       "win_rate": 0.44403,
+       "avg_ret": 0.014445,
+       "profit_factor": 1.356643
       },
       "2026": {
        "n": 268,
        "win_rate": 0.343284,
-       "avg_ret": -0.022959,
-       "profit_factor": 0.603111
+       "avg_ret": -0.022683,
+       "profit_factor": 0.606004
       }
      },
      "outcomes": {
-      "SL": 358,
+      "SL": 357,
       "TIME": 329,
+      "MKT": 88,
       "TP2": 87,
-      "MKT": 87,
       "TP1+TIME": 52,
       "TP1+BE": 20,
       "TP1+MKT": 5
      }
     },
     "portfolio": {
-     "total_return": 0.209506,
-     "cagr": 0.092292,
-     "max_drawdown": -0.237598,
+     "total_return": 0.183391,
+     "cagr": 0.081282,
+     "max_drawdown": -0.24347,
      "dd_peak": "2026-01-26",
      "dd_trough": "2026-07-08",
      "worst_month": -0.079207,
-     "sharpe": 0.580612,
-     "avg_exposure": 0.507386,
-     "trades": 158,
-     "win_rate": 0.443038,
-     "avg_trade": 0.007927,
+     "sharpe": 0.523705,
+     "avg_exposure": 0.509276,
+     "trades": 155,
+     "win_rate": 0.43871,
+     "avg_trade": 0.007497,
      "by_year": {
       "2024": -0.065859,
-      "2025": 0.327604,
-      "2026": -0.024724
+      "2025": 0.307659,
+      "2026": -0.031228
      }
     },
     "port_is": {
-     "total_return": -0.145234,
-     "cagr": -0.225767,
-     "max_drawdown": -0.187856,
+     "total_return": -0.156259,
+     "cagr": -0.241985,
+     "max_drawdown": -0.198475,
      "dd_peak": "2024-11-01",
      "dd_trough": "2025-04-11",
      "worst_month": -0.079251,
-     "sharpe": -4.288474,
+     "sharpe": -4.52062,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
       "2024": -0.063747,
-      "2025": -0.087036
+      "2025": -0.098812
      }
     },
     "port_oos": {
-     "total_return": 0.413132,
-     "cagr": 0.256591,
-     "max_drawdown": -0.222644,
+     "total_return": 0.400308,
+     "cagr": 0.249047,
+     "max_drawdown": -0.228328,
      "dd_peak": "2026-01-16",
      "dd_trough": "2026-07-03",
-     "worst_month": -0.073932,
-     "sharpe": 2.472021,
+     "worst_month": -0.073503,
+     "sharpe": 2.40558,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2025": 0.378666,
-      "2026": 0.025
+      "2025": 0.374394,
+      "2026": 0.018855
      }
     }
    },
@@ -1607,7 +1607,7 @@
        "n": 138,
        "win_rate": 0.405797,
        "avg_ret": -0.002124,
-       "profit_factor": 0.91052
+       "profit_factor": 0.910521
       },
       "2025": {
        "n": 536,
@@ -1633,21 +1633,21 @@
      }
     },
     "portfolio": {
-     "total_return": 0.534921,
-     "cagr": 0.22001,
+     "total_return": 0.608352,
+     "cagr": 0.246759,
      "max_drawdown": -0.131028,
      "dd_peak": "2024-10-24",
      "dd_trough": "2025-01-30",
      "worst_month": -0.091788,
-     "sharpe": 1.242761,
-     "avg_exposure": 0.388399,
+     "sharpe": 1.363919,
+     "avg_exposure": 0.388409,
      "trades": 224,
-     "win_rate": 0.450893,
-     "avg_trade": 0.011044,
+     "win_rate": 0.455357,
+     "avg_trade": 0.011968,
      "by_year": {
       "2024": 0.006241,
-      "2025": 0.435856,
-      "2026": 0.062363
+      "2025": 0.511881,
+      "2026": 0.057211
      }
     },
     "port_is": {
@@ -1668,20 +1668,20 @@
      }
     },
     "port_oos": {
-     "total_return": 0.63131,
-     "cagr": 0.381586,
-     "max_drawdown": -0.109751,
+     "total_return": 0.709427,
+     "cagr": 0.424935,
+     "max_drawdown": -0.112175,
      "dd_peak": "2026-01-09",
      "dd_trough": "2026-02-27",
-     "worst_month": -0.02818,
-     "sharpe": 3.776107,
+     "worst_month": -0.021156,
+     "sharpe": 4.142843,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2025": 0.464874,
-      "2026": 0.113618
+      "2025": 0.544479,
+      "2026": 0.106799
      }
     }
    },
@@ -1756,21 +1756,21 @@
      }
     },
     "portfolio": {
-     "total_return": 0.682018,
-     "cagr": 0.272943,
-     "max_drawdown": -0.128576,
+     "total_return": 0.75704,
+     "cagr": 0.298985,
+     "max_drawdown": -0.124671,
      "dd_peak": "2026-01-09",
      "dd_trough": "2026-04-15",
-     "worst_month": -0.032436,
-     "sharpe": 1.506991,
-     "avg_exposure": 0.387109,
+     "worst_month": -0.029571,
+     "sharpe": 1.624235,
+     "avg_exposure": 0.390094,
      "trades": 196,
-     "win_rate": 0.479592,
-     "avg_trade": 0.014813,
+     "win_rate": 0.484694,
+     "avg_trade": 0.015846,
      "by_year": {
       "2024": 0.012025,
-      "2025": 0.576591,
-      "2026": 0.054193
+      "2025": 0.635566,
+      "2026": 0.061505
      }
     },
     "port_is": {
@@ -1791,20 +1791,881 @@
      }
     },
     "port_oos": {
-     "total_return": 0.640655,
-     "cagr": 0.386808,
-     "max_drawdown": -0.113094,
+     "total_return": 0.713812,
+     "cagr": 0.427348,
+     "max_drawdown": -0.112232,
      "dd_peak": "2026-01-09",
-     "dd_trough": "2026-07-31",
-     "worst_month": -0.032503,
-     "sharpe": 3.734158,
+     "dd_trough": "2026-02-27",
+     "worst_month": -0.023512,
+     "sharpe": 4.068677,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2025": 0.478248,
-      "2026": 0.109865
+      "2025": 0.536773,
+      "2026": 0.115202
+     }
+    }
+   },
+   {
+    "name": "Ketahanan: sentimen ≥ -30 + keluar bila IHSG < SMA50",
+    "params": {
+     "sentiment_min": -30,
+     "market_exit": "all",
+     "market_exit_ma": "sma50",
+     "market_exit_confirm": 1
+    },
+    "trades": {
+     "n": 949,
+     "win_rate": 0.420443,
+     "avg_ret": 0.007389,
+     "median_ret": -0.008949,
+     "profit_factor": 1.215548,
+     "avg_days": 8.533193,
+     "fill_rate": 0.653581,
+     "worst": -0.366279,
+     "best": 0.304209,
+     "in_sample": {
+      "n": 203,
+      "win_rate": 0.418719,
+      "avg_ret": 0.002433,
+      "median_ret": -0.007396,
+      "profit_factor": 1.111884,
+      "avg_days": 6.241379,
+      "fill_rate": 0.683502,
+      "worst": -0.121171,
+      "best": 0.260432
+     },
+     "out_sample": {
+      "n": 746,
+      "win_rate": 0.420912,
+      "avg_ret": 0.008738,
+      "median_ret": -0.010206,
+      "profit_factor": 1.231821,
+      "avg_days": 9.156836,
+      "fill_rate": 0.645887,
+      "worst": -0.366279,
+      "best": 0.304209
+     },
+     "by_year": {
+      "2024": {
+       "n": 138,
+       "win_rate": 0.405797,
+       "avg_ret": -0.002124,
+       "profit_factor": 0.910521
+      },
+      "2025": {
+       "n": 545,
+       "win_rate": 0.451376,
+       "avg_ret": 0.018113,
+       "profit_factor": 1.500031
+      },
+      "2026": {
+       "n": 266,
+       "win_rate": 0.364662,
+       "avg_ret": -0.009647,
+       "profit_factor": 0.730313
+      }
+     },
+     "outcomes": {
+      "MKT": 315,
+      "TIME": 255,
+      "SL": 233,
+      "TP2": 80,
+      "TP1+TIME": 43,
+      "TP1+MKT": 12,
+      "TP1+BE": 11
+     }
+    },
+    "portfolio": {
+     "total_return": 0.594003,
+     "cagr": 0.241584,
+     "max_drawdown": -0.13743,
+     "dd_peak": "2024-10-24",
+     "dd_trough": "2025-01-30",
+     "worst_month": -0.098479,
+     "sharpe": 1.335101,
+     "avg_exposure": 0.389358,
+     "trades": 231,
+     "win_rate": 0.458874,
+     "avg_trade": 0.011412,
+     "by_year": {
+      "2024": 0.006241,
+      "2025": 0.494365,
+      "2026": 0.060061
+     }
+    },
+    "port_is": {
+     "total_return": -0.071264,
+     "cagr": -0.113567,
+     "max_drawdown": -0.121027,
+     "dd_peak": "2024-10-25",
+     "dd_trough": "2025-01-31",
+     "worst_month": -0.098489,
+     "sharpe": -2.105011,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": 0.00852,
+      "2025": -0.07911
+     }
+    },
+    "port_oos": {
+     "total_return": 0.706455,
+     "cagr": 0.423298,
+     "max_drawdown": -0.110995,
+     "dd_peak": "2026-01-09",
+     "dd_trough": "2026-02-27",
+     "worst_month": -0.020683,
+     "sharpe": 4.135241,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.536987,
+      "2026": 0.11026
+     }
+    }
+   },
+   {
+    "name": "Ketahanan: sentimen ≥ -10 + keluar bila IHSG < SMA50",
+    "params": {
+     "sentiment_min": -10,
+     "market_exit": "all",
+     "market_exit_ma": "sma50",
+     "market_exit_confirm": 1
+    },
+    "trades": {
+     "n": 930,
+     "win_rate": 0.421505,
+     "avg_ret": 0.008051,
+     "median_ret": -0.009035,
+     "profit_factor": 1.233822,
+     "avg_days": 8.68172,
+     "fill_rate": 0.651261,
+     "worst": -0.366279,
+     "best": 0.304209,
+     "in_sample": {
+      "n": 182,
+      "win_rate": 0.417582,
+      "avg_ret": 0.005366,
+      "median_ret": -0.007037,
+      "profit_factor": 1.250832,
+      "avg_days": 6.818681,
+      "fill_rate": 0.664234,
+      "worst": -0.121171,
+      "best": 0.260432
+     },
+     "out_sample": {
+      "n": 748,
+      "win_rate": 0.42246,
+      "avg_ret": 0.008704,
+      "median_ret": -0.010038,
+      "profit_factor": 1.231468,
+      "avg_days": 9.135027,
+      "fill_rate": 0.64818,
+      "worst": -0.366279,
+      "best": 0.304209
+     },
+     "by_year": {
+      "2024": {
+       "n": 138,
+       "win_rate": 0.405797,
+       "avg_ret": -0.002124,
+       "profit_factor": 0.910521
+      },
+      "2025": {
+       "n": 524,
+       "win_rate": 0.45229,
+       "avg_ret": 0.01976,
+       "profit_factor": 1.538693
+      },
+      "2026": {
+       "n": 268,
+       "win_rate": 0.369403,
+       "avg_ret": -0.009603,
+       "profit_factor": 0.729822
+      }
+     },
+     "outcomes": {
+      "MKT": 298,
+      "TIME": 255,
+      "SL": 231,
+      "TP2": 80,
+      "TP1+TIME": 43,
+      "TP1+MKT": 12,
+      "TP1+BE": 11
+     }
+    },
+    "portfolio": {
+     "total_return": 0.757558,
+     "cagr": 0.299163,
+     "max_drawdown": -0.124698,
+     "dd_peak": "2026-01-09",
+     "dd_trough": "2026-04-15",
+     "worst_month": -0.029557,
+     "sharpe": 1.621234,
+     "avg_exposure": 0.39107,
+     "trades": 214,
+     "win_rate": 0.46729,
+     "avg_trade": 0.014585,
+     "by_year": {
+      "2024": 0.006241,
+      "2025": 0.645538,
+      "2026": 0.061451
+     }
+    },
+    "port_is": {
+     "total_return": 0.020146,
+     "cagr": 0.033058,
+     "max_drawdown": -0.033527,
+     "dd_peak": "2024-10-25",
+     "dd_trough": "2025-01-24",
+     "worst_month": -0.024054,
+     "sharpe": 1.210177,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": 0.00852,
+      "2025": 0.011529
+     }
+    },
+    "port_oos": {
+     "total_return": 0.712059,
+     "cagr": 0.426384,
+     "max_drawdown": -0.11225,
+     "dd_peak": "2026-01-09",
+     "dd_trough": "2026-02-27",
+     "worst_month": -0.023423,
+     "sharpe": 4.064196,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.535262,
+      "2026": 0.115158
+     }
+    }
+   },
+   {
+    "name": "Ketahanan: sentimen ≥ +10 + keluar bila IHSG < SMA50",
+    "params": {
+     "sentiment_min": 10,
+     "market_exit": "all",
+     "market_exit_ma": "sma50",
+     "market_exit_confirm": 1
+    },
+    "trades": {
+     "n": 887,
+     "win_rate": 0.416009,
+     "avg_ret": 0.006674,
+     "median_ret": -0.010824,
+     "profit_factor": 1.186176,
+     "avg_days": 8.985344,
+     "fill_rate": 0.639971,
+     "worst": -0.366279,
+     "best": 0.304209,
+     "in_sample": {
+      "n": 156,
+      "win_rate": 0.429487,
+      "avg_ret": 0.00379,
+      "median_ret": -0.008542,
+      "profit_factor": 1.154513,
+      "avg_days": 7.935897,
+      "fill_rate": 0.658228,
+      "worst": -0.121171,
+      "best": 0.260432
+     },
+     "out_sample": {
+      "n": 731,
+      "win_rate": 0.413133,
+      "avg_ret": 0.007289,
+      "median_ret": -0.011093,
+      "profit_factor": 1.190508,
+      "avg_days": 9.209302,
+      "fill_rate": 0.636205,
+      "worst": -0.366279,
+      "best": 0.304209
+     },
+     "by_year": {
+      "2024": {
+       "n": 135,
+       "win_rate": 0.4,
+       "avg_ret": -0.001771,
+       "profit_factor": 0.927862
+      },
+      "2025": {
+       "n": 493,
+       "win_rate": 0.452333,
+       "avg_ret": 0.01762,
+       "profit_factor": 1.45264
+      },
+      "2026": {
+       "n": 259,
+       "win_rate": 0.355212,
+       "avg_ret": -0.00976,
+       "profit_factor": 0.727924
+      }
+     },
+     "outcomes": {
+      "MKT": 263,
+      "TIME": 252,
+      "SL": 232,
+      "TP2": 76,
+      "TP1+TIME": 41,
+      "TP1+MKT": 13,
+      "TP1+BE": 10
+     }
+    },
+    "portfolio": {
+     "total_return": 0.439427,
+     "cagr": 0.184176,
+     "max_drawdown": -0.147118,
+     "dd_peak": "2026-01-09",
+     "dd_trough": "2026-08-03",
+     "worst_month": -0.055331,
+     "sharpe": 1.110653,
+     "avg_exposure": 0.386465,
+     "trades": 174,
+     "win_rate": 0.448276,
+     "avg_trade": 0.011894,
+     "by_year": {
+      "2024": 0.012125,
+      "2025": 0.400137,
+      "2026": 0.015745
+     }
+    },
+    "port_is": {
+     "total_return": 0.026862,
+     "cagr": 0.04417,
+     "max_drawdown": -0.021849,
+     "dd_peak": "2024-09-20",
+     "dd_trough": "2024-10-04",
+     "worst_month": -0.018332,
+     "sharpe": 1.667977,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": 0.014433,
+      "2025": 0.012252
+     }
+    },
+    "port_oos": {
+     "total_return": 0.39965,
+     "cagr": 0.24866,
+     "max_drawdown": -0.140381,
+     "dd_peak": "2026-01-09",
+     "dd_trough": "2026-07-31",
+     "worst_month": -0.055974,
+     "sharpe": 2.763909,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.313399,
+      "2026": 0.06567
+     }
+    }
+   },
+   {
+    "name": "Ketahanan: sentimen ≥ +20 + keluar bila IHSG < SMA50",
+    "params": {
+     "sentiment_min": 20,
+     "market_exit": "all",
+     "market_exit_ma": "sma50",
+     "market_exit_confirm": 1
+    },
+    "trades": {
+     "n": 843,
+     "win_rate": 0.41637,
+     "avg_ret": 0.006075,
+     "median_ret": -0.01115,
+     "profit_factor": 1.167352,
+     "avg_days": 9.11032,
+     "fill_rate": 0.63767,
+     "worst": -0.366279,
+     "best": 0.304209,
+     "in_sample": {
+      "n": 130,
+      "win_rate": 0.469231,
+      "avg_ret": 0.006537,
+      "median_ret": -0.004422,
+      "profit_factor": 1.24804,
+      "avg_days": 9.069231,
+      "fill_rate": 0.643564,
+      "worst": -0.121171,
+      "best": 0.260432
+     },
+     "out_sample": {
+      "n": 713,
+      "win_rate": 0.406732,
+      "avg_ret": 0.005991,
+      "median_ret": -0.011899,
+      "profit_factor": 1.157179,
+      "avg_days": 9.117812,
+      "fill_rate": 0.636607,
+      "worst": -0.366279,
+      "best": 0.304209
+     },
+     "by_year": {
+      "2024": {
+       "n": 109,
+       "win_rate": 0.440367,
+       "avg_ret": 0.000178,
+       "profit_factor": 1.006662
+      },
+      "2025": {
+       "n": 461,
+       "win_rate": 0.451193,
+       "avg_ret": 0.016581,
+       "profit_factor": 1.430029
+      },
+      "2026": {
+       "n": 273,
+       "win_rate": 0.347985,
+       "avg_ret": -0.009312,
+       "profit_factor": 0.743556
+      }
+     },
+     "outcomes": {
+      "TIME": 243,
+      "MKT": 240,
+      "SL": 228,
+      "TP2": 73,
+      "TP1+TIME": 36,
+      "TP1+MKT": 13,
+      "TP1+BE": 10
+     }
+    },
+    "portfolio": {
+     "total_return": 0.089351,
+     "cagr": 0.040518,
+     "max_drawdown": -0.15141,
+     "dd_peak": "2025-12-08",
+     "dd_trough": "2026-04-15",
+     "worst_month": -0.116541,
+     "sharpe": 0.344032,
+     "avg_exposure": 0.377546,
+     "trades": 157,
+     "win_rate": 0.433121,
+     "avg_trade": 0.003775,
+     "by_year": {
+      "2024": 0.031045,
+      "2025": 0.122287,
+      "2026": -0.058575
+     }
+    },
+    "port_is": {
+     "total_return": 0.046006,
+     "cagr": 0.076098,
+     "max_drawdown": -0.021849,
+     "dd_peak": "2024-09-20",
+     "dd_trough": "2024-10-04",
+     "worst_month": -0.000969,
+     "sharpe": 2.974626,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": 0.033377,
+      "2025": 0.012221
+     }
+    },
+    "port_oos": {
+     "total_return": 0.040298,
+     "cagr": 0.026437,
+     "max_drawdown": -0.132788,
+     "dd_peak": "2025-09-26",
+     "dd_trough": "2026-02-27",
+     "worst_month": -0.130195,
+     "sharpe": 0.522861,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.105615,
+      "2026": -0.059078
+     }
+    }
+   },
+   {
+    "name": "Ketahanan: sentimen ≥ +30 + keluar bila IHSG < SMA50",
+    "params": {
+     "sentiment_min": 30,
+     "market_exit": "all",
+     "market_exit_ma": "sma50",
+     "market_exit_confirm": 1
+    },
+    "trades": {
+     "n": 767,
+     "win_rate": 0.421121,
+     "avg_ret": 0.005684,
+     "median_ret": -0.012847,
+     "profit_factor": 1.154318,
+     "avg_days": 9.196871,
+     "fill_rate": 0.637573,
+     "worst": -0.366279,
+     "best": 0.304209,
+     "in_sample": {
+      "n": 131,
+      "win_rate": 0.48855,
+      "avg_ret": 0.009716,
+      "median_ret": -0.003535,
+      "profit_factor": 1.385355,
+      "avg_days": 8.931298,
+      "fill_rate": 0.658291,
+      "worst": -0.121171,
+      "best": 0.258113
+     },
+     "out_sample": {
+      "n": 636,
+      "win_rate": 0.407233,
+      "avg_ret": 0.004853,
+      "median_ret": -0.014938,
+      "profit_factor": 1.12373,
+      "avg_days": 9.251572,
+      "fill_rate": 0.633466,
+      "worst": -0.366279,
+      "best": 0.304209
+     },
+     "by_year": {
+      "2024": {
+       "n": 110,
+       "win_rate": 0.463636,
+       "avg_ret": 0.004022,
+       "profit_factor": 1.158542
+      },
+      "2025": {
+       "n": 386,
+       "win_rate": 0.455959,
+       "avg_ret": 0.016525,
+       "profit_factor": 1.42205
+      },
+      "2026": {
+       "n": 271,
+       "win_rate": 0.354244,
+       "avg_ret": -0.009083,
+       "profit_factor": 0.762115
+      }
+     },
+     "outcomes": {
+      "MKT": 223,
+      "TIME": 217,
+      "SL": 210,
+      "TP2": 72,
+      "TP1+TIME": 26,
+      "TP1+MKT": 11,
+      "TP1+BE": 8
+     }
+    },
+    "portfolio": {
+     "total_return": 0.217372,
+     "cagr": 0.095583,
+     "max_drawdown": -0.12853,
+     "dd_peak": "2025-07-29",
+     "dd_trough": "2025-09-01",
+     "worst_month": -0.068635,
+     "sharpe": 0.714516,
+     "avg_exposure": 0.335479,
+     "trades": 138,
+     "win_rate": 0.471014,
+     "avg_trade": 0.007848,
+     "by_year": {
+      "2024": 0.008177,
+      "2025": 0.212429,
+      "2026": -0.004068
+     }
+    },
+    "port_is": {
+     "total_return": 0.022953,
+     "cagr": 0.037696,
+     "max_drawdown": -0.022346,
+     "dd_peak": "2024-09-20",
+     "dd_trough": "2024-10-18",
+     "worst_month": 0.0,
+     "sharpe": 2.232734,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": 0.010524,
+      "2025": 0.012299
+     }
+    },
+    "port_oos": {
+     "total_return": 0.188403,
+     "cagr": 0.12076,
+     "max_drawdown": -0.079964,
+     "dd_peak": "2025-07-25",
+     "dd_trough": "2025-08-29",
+     "worst_month": -0.079964,
+     "sharpe": 1.908106,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.193186,
+      "2026": -0.004009
+     }
+    }
+   },
+   {
+    "name": "Ketahanan: sentimen ≥ 0 + keluar bila IHSG < SMA50 (2 hari)",
+    "params": {
+     "sentiment_min": 0,
+     "market_exit": "all",
+     "market_exit_ma": "sma50",
+     "market_exit_confirm": 2
+    },
+    "trades": {
+     "n": 892,
+     "win_rate": 0.41704,
+     "avg_ret": 0.006144,
+     "median_ret": -0.010498,
+     "profit_factor": 1.163553,
+     "avg_days": 9.30157,
+     "fill_rate": 0.643579,
+     "worst": -0.366279,
+     "best": 0.294808,
+     "in_sample": {
+      "n": 158,
+      "win_rate": 0.398734,
+      "avg_ret": 0.004822,
+      "median_ret": -0.008137,
+      "profit_factor": 1.200727,
+      "avg_days": 8.139241,
+      "fill_rate": 0.626984,
+      "worst": -0.121171,
+      "best": 0.260432
+     },
+     "out_sample": {
+      "n": 734,
+      "win_rate": 0.420981,
+      "avg_ret": 0.006428,
+      "median_ret": -0.012589,
+      "profit_factor": 1.158804,
+      "avg_days": 9.551771,
+      "fill_rate": 0.647266,
+      "worst": -0.366279,
+      "best": 0.294808
+     },
+     "by_year": {
+      "2024": {
+       "n": 130,
+       "win_rate": 0.361538,
+       "avg_ret": -0.001762,
+       "profit_factor": 0.93202
+      },
+      "2025": {
+       "n": 494,
+       "win_rate": 0.465587,
+       "avg_ret": 0.019433,
+       "profit_factor": 1.495584
+      },
+      "2026": {
+       "n": 268,
+       "win_rate": 0.354478,
+       "avg_ret": -0.014518,
+       "profit_factor": 0.638618
+      }
+     },
+     "outcomes": {
+      "TIME": 280,
+      "SL": 263,
+      "MKT": 202,
+      "TP2": 79,
+      "TP1+TIME": 45,
+      "TP1+BE": 16,
+      "TP1+MKT": 7
+     }
+    },
+    "portfolio": {
+     "total_return": 0.525997,
+     "cagr": 0.216713,
+     "max_drawdown": -0.157416,
+     "dd_peak": "2026-01-26",
+     "dd_trough": "2026-04-15",
+     "worst_month": -0.079143,
+     "sharpe": 1.219792,
+     "avg_exposure": 0.400277,
+     "trades": 188,
+     "win_rate": 0.462766,
+     "avg_trade": 0.012491,
+     "by_year": {
+      "2024": 0.020449,
+      "2025": 0.500384,
+      "2026": -0.00331
+     }
+    },
+    "port_is": {
+     "total_return": 0.027263,
+     "cagr": 0.044835,
+     "max_drawdown": -0.021452,
+     "dd_peak": "2024-09-20",
+     "dd_trough": "2024-10-04",
+     "worst_month": -0.015438,
+     "sharpe": 1.729788,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": 0.022752,
+      "2025": 0.00441
+     }
+    },
+    "port_oos": {
+     "total_return": 0.47625,
+     "cagr": 0.293386,
+     "max_drawdown": -0.131673,
+     "dd_peak": "2026-01-16",
+     "dd_trough": "2026-02-27",
+     "worst_month": -0.063054,
+     "sharpe": 3.019794,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.40592,
+      "2026": 0.050024
+     }
+    }
+   },
+   {
+    "name": "Ketahanan: sentimen ≥ 0 + keluar bila IHSG < EMA20",
+    "params": {
+     "sentiment_min": 0,
+     "market_exit": "all",
+     "market_exit_ma": "ema20",
+     "market_exit_confirm": 1
+    },
+    "trades": {
+     "n": 935,
+     "win_rate": 0.411765,
+     "avg_ret": 0.006689,
+     "median_ret": -0.011654,
+     "profit_factor": 1.199367,
+     "avg_days": 7.915508,
+     "fill_rate": 0.64217,
+     "worst": -0.366279,
+     "best": 0.316221,
+     "in_sample": {
+      "n": 155,
+      "win_rate": 0.451613,
+      "avg_ret": 0.010418,
+      "median_ret": -0.003994,
+      "profit_factor": 1.518206,
+      "avg_days": 6.993548,
+      "fill_rate": 0.630081,
+      "worst": -0.119602,
+      "best": 0.260432
+     },
+     "out_sample": {
+      "n": 780,
+      "win_rate": 0.403846,
+      "avg_ret": 0.005948,
+      "median_ret": -0.013918,
+      "profit_factor": 1.164201,
+      "avg_days": 8.098718,
+      "fill_rate": 0.644628,
+      "worst": -0.366279,
+      "best": 0.316221
+     },
+     "by_year": {
+      "2024": {
+       "n": 130,
+       "win_rate": 0.415385,
+       "avg_ret": 0.002799,
+       "profit_factor": 1.135673
+      },
+      "2025": {
+       "n": 540,
+       "win_rate": 0.437037,
+       "avg_ret": 0.015606,
+       "profit_factor": 1.46276
+      },
+      "2026": {
+       "n": 265,
+       "win_rate": 0.358491,
+       "avg_ret": -0.009575,
+       "profit_factor": 0.757795
+      }
+     },
+     "outcomes": {
+      "MKT": 429,
+      "SL": 202,
+      "TIME": 173,
+      "TP2": 71,
+      "TP1+TIME": 30,
+      "TP1+MKT": 21,
+      "TP1+BE": 9
+     }
+    },
+    "portfolio": {
+     "total_return": 0.61569,
+     "cagr": 0.249395,
+     "max_drawdown": -0.141875,
+     "dd_peak": "2026-01-27",
+     "dd_trough": "2026-02-26",
+     "worst_month": -0.032728,
+     "sharpe": 1.424676,
+     "avg_exposure": 0.380806,
+     "trades": 155,
+     "win_rate": 0.451613,
+     "avg_trade": 0.017363,
+     "by_year": {
+      "2024": 0.017046,
+      "2025": 0.424232,
+      "2026": 0.115415
+     }
+    },
+    "port_is": {
+     "total_return": 0.011326,
+     "cagr": 0.018534,
+     "max_drawdown": -0.028874,
+     "dd_peak": "2024-10-25",
+     "dd_trough": "2025-04-25",
+     "worst_month": -0.020231,
+     "sharpe": 0.736283,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": 0.019344,
+      "2025": -0.007866
+     }
+    },
+    "port_oos": {
+     "total_return": 0.555951,
+     "cagr": 0.339094,
+     "max_drawdown": -0.131533,
+     "dd_peak": "2026-01-16",
+     "dd_trough": "2026-02-27",
+     "worst_month": -0.028359,
+     "sharpe": 3.400867,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.356606,
+      "2026": 0.146944
      }
     }
    }
@@ -1814,49 +2675,49 @@
     "name": "Sekarang",
     "params": {},
     "trades": {
-     "n": 682,
-     "win_rate": 0.392962,
-     "avg_ret": 0.007275,
-     "median_ret": -0.053149,
-     "profit_factor": 1.103674,
-     "avg_days": 27.954545,
-     "fill_rate": 0.669284,
+     "n": 683,
+     "win_rate": 0.395315,
+     "avg_ret": 0.007622,
+     "median_ret": -0.052315,
+     "profit_factor": 1.109033,
+     "avg_days": 27.979502,
+     "fill_rate": 0.671583,
      "worst": -0.451755,
      "best": 0.533533,
      "in_sample": {
       "n": 303,
-      "win_rate": 0.425743,
-      "avg_ret": 0.002895,
-      "median_ret": -0.048476,
-      "profit_factor": 1.044628,
-      "avg_days": 29.326733,
-      "fill_rate": 0.709602,
+      "win_rate": 0.429043,
+      "avg_ret": 0.003114,
+      "median_ret": -0.042009,
+      "profit_factor": 1.048111,
+      "avg_days": 29.343234,
+      "fill_rate": 0.707944,
       "worst": -0.3902,
       "best": 0.506155
      },
      "out_sample": {
-      "n": 379,
-      "win_rate": 0.366755,
-      "avg_ret": 0.010778,
-      "median_ret": -0.054973,
-      "profit_factor": 1.144813,
-      "avg_days": 26.85752,
-      "fill_rate": 0.640203,
+      "n": 380,
+      "win_rate": 0.368421,
+      "avg_ret": 0.011216,
+      "median_ret": -0.054877,
+      "profit_factor": 1.151501,
+      "avg_days": 26.892105,
+      "fill_rate": 0.645161,
       "worst": -0.451755,
       "best": 0.533533
      },
      "by_year": {
       "2024": {
        "n": 278,
-       "win_rate": 0.417266,
-       "avg_ret": -0.003555,
-       "profit_factor": 0.946311
+       "win_rate": 0.420863,
+       "avg_ret": -0.003315,
+       "profit_factor": 0.949809
       },
       "2025": {
-       "n": 287,
-       "win_rate": 0.445993,
-       "avg_ret": 0.047958,
-       "profit_factor": 1.75812
+       "n": 288,
+       "win_rate": 0.447917,
+       "avg_ret": 0.048407,
+       "profit_factor": 1.771057
       },
       "2026": {
        "n": 117,
@@ -1866,63 +2727,63 @@
       }
      },
      "outcomes": {
-      "SL": 299,
-      "TIME": 274,
+      "SL": 298,
+      "TIME": 276,
       "TP2": 64,
       "TP1+TIME": 38,
       "TP1+BE": 7
      }
     },
     "portfolio": {
-     "total_return": -0.17787,
-     "cagr": -0.068443,
-     "max_drawdown": -0.209192,
+     "total_return": -0.146314,
+     "cagr": -0.055655,
+     "max_drawdown": -0.208671,
      "dd_peak": "2024-10-22",
      "dd_trough": "2025-04-24",
-     "worst_month": -0.122794,
-     "sharpe": -0.367292,
-     "avg_exposure": 0.577196,
+     "worst_month": -0.121071,
+     "sharpe": -0.284267,
+     "avg_exposure": 0.581527,
      "trades": 131,
-     "win_rate": 0.351145,
-     "avg_trade": -0.007944,
+     "win_rate": 0.358779,
+     "avg_trade": -0.005993,
      "by_year": {
-      "2024": -0.078217,
-      "2025": 0.02902,
-      "2026": -0.133261
+      "2024": -0.050038,
+      "2025": 0.03383,
+      "2026": -0.130753
      }
     },
     "port_is": {
-     "total_return": -0.172264,
-     "cagr": -0.142847,
-     "max_drawdown": -0.192739,
+     "total_return": -0.142799,
+     "cagr": -0.118052,
+     "max_drawdown": -0.192342,
      "dd_peak": "2024-12-13",
      "dd_trough": "2025-02-28",
-     "worst_month": -0.116729,
-     "sharpe": -2.052113,
+     "worst_month": -0.114654,
+     "sharpe": -1.625419,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2024": -0.067773,
-      "2025": -0.112088
+      "2024": -0.037499,
+      "2025": -0.109403
      }
     },
     "port_oos": {
-     "total_return": -0.066644,
-     "cagr": -0.044531,
-     "max_drawdown": -0.197474,
+     "total_return": -0.062074,
+     "cagr": -0.041444,
+     "max_drawdown": -0.194463,
      "dd_peak": "2025-10-03",
      "dd_trough": "2026-07-24",
-     "worst_month": -0.144106,
-     "sharpe": -0.386918,
+     "worst_month": -0.142019,
+     "sharpe": -0.347932,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2025": 0.103769,
-      "2026": -0.154392
+      "2025": 0.105471,
+      "2026": -0.15156
      }
     }
    },
@@ -1932,49 +2793,49 @@
      "sentiment_min": -40
     },
     "trades": {
-     "n": 682,
-     "win_rate": 0.392962,
-     "avg_ret": 0.007275,
-     "median_ret": -0.053149,
-     "profit_factor": 1.103674,
-     "avg_days": 27.954545,
-     "fill_rate": 0.669284,
+     "n": 683,
+     "win_rate": 0.395315,
+     "avg_ret": 0.007622,
+     "median_ret": -0.052315,
+     "profit_factor": 1.109033,
+     "avg_days": 27.979502,
+     "fill_rate": 0.671583,
      "worst": -0.451755,
      "best": 0.533533,
      "in_sample": {
       "n": 303,
-      "win_rate": 0.425743,
-      "avg_ret": 0.002895,
-      "median_ret": -0.048476,
-      "profit_factor": 1.044628,
-      "avg_days": 29.326733,
-      "fill_rate": 0.709602,
+      "win_rate": 0.429043,
+      "avg_ret": 0.003114,
+      "median_ret": -0.042009,
+      "profit_factor": 1.048111,
+      "avg_days": 29.343234,
+      "fill_rate": 0.707944,
       "worst": -0.3902,
       "best": 0.506155
      },
      "out_sample": {
-      "n": 379,
-      "win_rate": 0.366755,
-      "avg_ret": 0.010778,
-      "median_ret": -0.054973,
-      "profit_factor": 1.144813,
-      "avg_days": 26.85752,
-      "fill_rate": 0.640203,
+      "n": 380,
+      "win_rate": 0.368421,
+      "avg_ret": 0.011216,
+      "median_ret": -0.054877,
+      "profit_factor": 1.151501,
+      "avg_days": 26.892105,
+      "fill_rate": 0.645161,
       "worst": -0.451755,
       "best": 0.533533
      },
      "by_year": {
       "2024": {
        "n": 278,
-       "win_rate": 0.417266,
-       "avg_ret": -0.003555,
-       "profit_factor": 0.946311
+       "win_rate": 0.420863,
+       "avg_ret": -0.003315,
+       "profit_factor": 0.949809
       },
       "2025": {
-       "n": 287,
-       "win_rate": 0.445993,
-       "avg_ret": 0.047958,
-       "profit_factor": 1.75812
+       "n": 288,
+       "win_rate": 0.447917,
+       "avg_ret": 0.048407,
+       "profit_factor": 1.771057
       },
       "2026": {
        "n": 117,
@@ -1984,63 +2845,63 @@
       }
      },
      "outcomes": {
-      "SL": 299,
-      "TIME": 274,
+      "SL": 298,
+      "TIME": 276,
       "TP2": 64,
       "TP1+TIME": 38,
       "TP1+BE": 7
      }
     },
     "portfolio": {
-     "total_return": -0.17787,
-     "cagr": -0.068443,
-     "max_drawdown": -0.209192,
+     "total_return": -0.146314,
+     "cagr": -0.055655,
+     "max_drawdown": -0.208671,
      "dd_peak": "2024-10-22",
      "dd_trough": "2025-04-24",
-     "worst_month": -0.122794,
-     "sharpe": -0.367292,
-     "avg_exposure": 0.577196,
+     "worst_month": -0.121071,
+     "sharpe": -0.284267,
+     "avg_exposure": 0.581527,
      "trades": 131,
-     "win_rate": 0.351145,
-     "avg_trade": -0.007944,
+     "win_rate": 0.358779,
+     "avg_trade": -0.005993,
      "by_year": {
-      "2024": -0.078217,
-      "2025": 0.02902,
-      "2026": -0.133261
+      "2024": -0.050038,
+      "2025": 0.03383,
+      "2026": -0.130753
      }
     },
     "port_is": {
-     "total_return": -0.172264,
-     "cagr": -0.142847,
-     "max_drawdown": -0.192739,
+     "total_return": -0.142799,
+     "cagr": -0.118052,
+     "max_drawdown": -0.192342,
      "dd_peak": "2024-12-13",
      "dd_trough": "2025-02-28",
-     "worst_month": -0.116729,
-     "sharpe": -2.052113,
+     "worst_month": -0.114654,
+     "sharpe": -1.625419,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2024": -0.067773,
-      "2025": -0.112088
+      "2024": -0.037499,
+      "2025": -0.109403
      }
     },
     "port_oos": {
-     "total_return": -0.066644,
-     "cagr": -0.044531,
-     "max_drawdown": -0.197474,
+     "total_return": -0.062074,
+     "cagr": -0.041444,
+     "max_drawdown": -0.194463,
      "dd_peak": "2025-10-03",
      "dd_trough": "2026-07-24",
-     "worst_month": -0.144106,
-     "sharpe": -0.386918,
+     "worst_month": -0.142019,
+     "sharpe": -0.347932,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2025": 0.103769,
-      "2026": -0.154392
+      "2025": 0.105471,
+      "2026": -0.15156
      }
     }
    },
@@ -2050,49 +2911,49 @@
      "sentiment_min": -20
     },
     "trades": {
-     "n": 672,
-     "win_rate": 0.394345,
-     "avg_ret": 0.007441,
+     "n": 682,
+     "win_rate": 0.392962,
+     "avg_ret": 0.007143,
      "median_ret": -0.051598,
-     "profit_factor": 1.106357,
-     "avg_days": 28.126488,
-     "fill_rate": 0.672,
+     "profit_factor": 1.102176,
+     "avg_days": 28.06305,
+     "fill_rate": 0.677932,
      "worst": -0.451755,
      "best": 0.533533,
      "in_sample": {
-      "n": 296,
-      "win_rate": 0.435811,
-      "avg_ret": 0.004824,
-      "median_ret": -0.033844,
-      "profit_factor": 1.076244,
-      "avg_days": 29.787162,
-      "fill_rate": 0.716707,
+      "n": 305,
+      "win_rate": 0.429508,
+      "avg_ret": 0.003677,
+      "median_ret": -0.038681,
+      "profit_factor": 1.057621,
+      "avg_days": 29.557377,
+      "fill_rate": 0.722749,
       "worst": -0.3902,
       "best": 0.506155
      },
      "out_sample": {
-      "n": 376,
-      "win_rate": 0.361702,
-      "avg_ret": 0.009502,
-      "median_ret": -0.059638,
-      "profit_factor": 1.12629,
-      "avg_days": 26.819149,
-      "fill_rate": 0.640545,
+      "n": 377,
+      "win_rate": 0.363395,
+      "avg_ret": 0.009947,
+      "median_ret": -0.057603,
+      "profit_factor": 1.13291,
+      "avg_days": 26.854111,
+      "fill_rate": 0.645548,
       "worst": -0.451755,
       "best": 0.533533
      },
      "by_year": {
       "2024": {
-       "n": 271,
-       "win_rate": 0.428044,
-       "avg_ret": -0.001614,
-       "profit_factor": 0.974974
+       "n": 280,
+       "win_rate": 0.421429,
+       "avg_ret": -0.002656,
+       "profit_factor": 0.959167
       },
       "2025": {
-       "n": 285,
-       "win_rate": 0.438596,
-       "avg_ret": 0.046157,
-       "profit_factor": 1.71746
+       "n": 286,
+       "win_rate": 0.440559,
+       "avg_ret": 0.046615,
+       "profit_factor": 1.730104
       },
       "2026": {
        "n": 116,
@@ -2102,63 +2963,63 @@
       }
      },
      "outcomes": {
-      "SL": 293,
-      "TIME": 273,
-      "TP2": 63,
-      "TP1+TIME": 36,
+      "SL": 295,
+      "TIME": 279,
+      "TP2": 64,
+      "TP1+TIME": 37,
       "TP1+BE": 7
      }
     },
     "portfolio": {
-     "total_return": -0.179258,
-     "cagr": -0.069747,
-     "max_drawdown": -0.229707,
-     "dd_peak": "2024-03-27",
-     "dd_trough": "2026-07-24",
-     "worst_month": -0.139105,
-     "sharpe": -0.360809,
-     "avg_exposure": 0.560635,
-     "trades": 129,
-     "win_rate": 0.317829,
-     "avg_trade": -0.009175,
+     "total_return": -0.130541,
+     "cagr": -0.049616,
+     "max_drawdown": -0.211252,
+     "dd_peak": "2024-10-22",
+     "dd_trough": "2025-04-24",
+     "worst_month": -0.139055,
+     "sharpe": -0.241865,
+     "avg_exposure": 0.555946,
+     "trades": 127,
+     "win_rate": 0.330709,
+     "avg_trade": -0.005684,
      "by_year": {
-      "2024": -0.06522,
-      "2025": 0.017836,
-      "2026": -0.13738
+      "2024": -0.032828,
+      "2025": 0.042965,
+      "2026": -0.138062
      }
     },
     "port_is": {
-     "total_return": -0.129715,
-     "cagr": -0.110349,
-     "max_drawdown": -0.218373,
-     "dd_peak": "2024-03-29",
+     "total_return": -0.131876,
+     "cagr": -0.11053,
+     "max_drawdown": -0.191612,
+     "dd_peak": "2024-12-13",
      "dd_trough": "2025-02-28",
-     "worst_month": -0.116203,
-     "sharpe": -1.438142,
+     "worst_month": -0.113783,
+     "sharpe": -1.530266,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2024": -0.020746,
-      "2025": -0.111278
+      "2024": -0.025892,
+      "2025": -0.108801
      }
     },
     "port_oos": {
-     "total_return": -0.082094,
-     "cagr": -0.055007,
-     "max_drawdown": -0.189999,
+     "total_return": -0.061927,
+     "cagr": -0.041344,
+     "max_drawdown": -0.188933,
      "dd_peak": "2025-12-05",
      "dd_trough": "2026-07-24",
-     "worst_month": -0.154608,
-     "sharpe": -0.473663,
+     "worst_month": -0.154745,
+     "sharpe": -0.301168,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2025": 0.08366,
-      "2026": -0.152957
+      "2025": 0.108534,
+      "2026": -0.153771
      }
     }
    },
@@ -2168,49 +3029,49 @@
      "sentiment_min": 0
     },
     "trades": {
-     "n": 661,
-     "win_rate": 0.400908,
-     "avg_ret": 0.010175,
-     "median_ret": -0.050591,
-     "profit_factor": 1.147503,
-     "avg_days": 28.231467,
-     "fill_rate": 0.669706,
+     "n": 662,
+     "win_rate": 0.403323,
+     "avg_ret": 0.010535,
+     "median_ret": -0.049893,
+     "profit_factor": 1.153357,
+     "avg_days": 28.246224,
+     "fill_rate": 0.672081,
      "worst": -0.451755,
      "best": 0.533533,
      "in_sample": {
       "n": 291,
-      "win_rate": 0.443299,
-      "avg_ret": 0.006958,
-      "median_ret": -0.032519,
-      "profit_factor": 1.112774,
-      "avg_days": 30.0,
-      "fill_rate": 0.711491,
+      "win_rate": 0.446735,
+      "avg_ret": 0.007202,
+      "median_ret": -0.032451,
+      "profit_factor": 1.117033,
+      "avg_days": 29.993127,
+      "fill_rate": 0.709756,
       "worst": -0.3902,
       "best": 0.506155
      },
      "out_sample": {
-      "n": 370,
-      "win_rate": 0.367568,
-      "avg_ret": 0.012706,
-      "median_ret": -0.056288,
-      "profit_factor": 1.170059,
-      "avg_days": 26.840541,
-      "fill_rate": 0.640138,
+      "n": 371,
+      "win_rate": 0.369272,
+      "avg_ret": 0.01315,
+      "median_ret": -0.054973,
+      "profit_factor": 1.176952,
+      "avg_days": 26.876011,
+      "fill_rate": 0.645217,
       "worst": -0.451755,
       "best": 0.533533
      },
      "by_year": {
       "2024": {
        "n": 274,
-       "win_rate": 0.430657,
-       "avg_ret": -0.000427,
-       "profit_factor": 0.993371
+       "win_rate": 0.434307,
+       "avg_ret": -0.000168,
+       "profit_factor": 0.997392
       },
       "2025": {
-       "n": 274,
-       "win_rate": 0.448905,
-       "avg_ret": 0.051924,
-       "profit_factor": 1.833002
+       "n": 275,
+       "win_rate": 0.450909,
+       "avg_ret": 0.05238,
+       "profit_factor": 1.847086
       },
       "2026": {
        "n": 113,
@@ -2220,63 +3081,63 @@
       }
      },
      "outcomes": {
-      "SL": 286,
-      "TIME": 270,
+      "SL": 285,
+      "TIME": 272,
       "TP2": 64,
       "TP1+TIME": 36,
       "TP1+BE": 5
      }
     },
     "portfolio": {
-     "total_return": 0.116138,
-     "cagr": 0.041158,
-     "max_drawdown": -0.196554,
+     "total_return": 0.101064,
+     "cagr": 0.035974,
+     "max_drawdown": -0.196607,
      "dd_peak": "2025-12-17",
      "dd_trough": "2026-07-24",
-     "worst_month": -0.137458,
-     "sharpe": 0.34045,
-     "avg_exposure": 0.548708,
-     "trades": 122,
-     "win_rate": 0.368852,
-     "avg_trade": 0.011654,
+     "worst_month": -0.137647,
+     "sharpe": 0.309822,
+     "avg_exposure": 0.547639,
+     "trades": 121,
+     "win_rate": 0.371901,
+     "avg_trade": 0.01018,
      "by_year": {
-      "2024": -0.014019,
-      "2025": 0.259156,
-      "2026": -0.100978
+      "2024": -0.035202,
+      "2025": 0.269337,
+      "2026": -0.100919
      }
     },
     "port_is": {
-     "total_return": -0.001743,
-     "cagr": -0.001467,
-     "max_drawdown": -0.09743,
-     "dd_peak": "2024-03-22",
+     "total_return": -0.023075,
+     "cagr": -0.019455,
+     "max_drawdown": -0.115699,
+     "dd_peak": "2024-03-01",
      "dd_trough": "2024-07-26",
-     "worst_month": -0.056814,
-     "sharpe": 0.156732,
+     "worst_month": -0.064246,
+     "sharpe": -0.11067,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2024": 0.010973,
-      "2025": -0.012579
+      "2024": -0.010768,
+      "2025": -0.01244
      }
     },
     "port_oos": {
-     "total_return": 0.063966,
-     "cagr": 0.041802,
-     "max_drawdown": -0.186927,
+     "total_return": 0.072256,
+     "cagr": 0.047157,
+     "max_drawdown": -0.18682,
      "dd_peak": "2025-12-05",
      "dd_trough": "2026-07-24",
-     "worst_month": -0.153652,
-     "sharpe": 0.698433,
+     "worst_month": -0.153495,
+     "sharpe": 0.760299,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2025": 0.206101,
-      "2026": -0.117847
+      "2025": 0.214919,
+      "2026": -0.117425
      }
     }
    },
@@ -2286,49 +3147,49 @@
      "sentiment_min": 20
     },
     "trades": {
-     "n": 675,
-     "win_rate": 0.402963,
-     "avg_ret": 0.017489,
-     "median_ret": -0.047299,
-     "profit_factor": 1.254392,
+     "n": 678,
+     "win_rate": 0.40413,
+     "avg_ret": 0.01748,
+     "median_ret": -0.046834,
+     "profit_factor": 1.25551,
      "avg_days": 28.333333,
-     "fill_rate": 0.676353,
+     "fill_rate": 0.679359,
      "worst": -0.3902,
      "best": 0.542426,
      "in_sample": {
-      "n": 251,
-      "win_rate": 0.454183,
-      "avg_ret": 0.014226,
-      "median_ret": -0.027628,
-      "profit_factor": 1.245907,
-      "avg_days": 31.043825,
-      "fill_rate": 0.697222,
+      "n": 254,
+      "win_rate": 0.452756,
+      "avg_ret": 0.013748,
+      "median_ret": -0.028004,
+      "profit_factor": 1.239058,
+      "avg_days": 30.96063,
+      "fill_rate": 0.701657,
       "worst": -0.3902,
       "best": 0.506155
      },
      "out_sample": {
       "n": 424,
-      "win_rate": 0.372642,
-      "avg_ret": 0.01942,
-      "median_ret": -0.056222,
-      "profit_factor": 1.258255,
-      "avg_days": 26.728774,
-      "fill_rate": 0.664577,
+      "win_rate": 0.375,
+      "avg_ret": 0.019716,
+      "median_ret": -0.054826,
+      "profit_factor": 1.263072,
+      "avg_days": 26.759434,
+      "fill_rate": 0.666667,
       "worst": -0.383866,
       "best": 0.542426
      },
      "by_year": {
       "2024": {
-       "n": 234,
-       "win_rate": 0.440171,
-       "avg_ret": 0.006106,
-       "profit_factor": 1.100519
+       "n": 237,
+       "win_rate": 0.438819,
+       "avg_ret": 0.005697,
+       "profit_factor": 1.094401
       },
       "2025": {
        "n": 312,
-       "win_rate": 0.451923,
-       "avg_ret": 0.059498,
-       "profit_factor": 1.948581
+       "win_rate": 0.455128,
+       "avg_ret": 0.0599,
+       "profit_factor": 1.960225
       },
       "2026": {
        "n": 129,
@@ -2339,62 +3200,62 @@
      },
      "outcomes": {
       "SL": 290,
-      "TIME": 262,
+      "TIME": 266,
       "TP2": 74,
-      "TP1+TIME": 40,
+      "TP1+TIME": 39,
       "TP1+BE": 9
      }
     },
     "portfolio": {
-     "total_return": 0.620825,
-     "cagr": 0.195464,
-     "max_drawdown": -0.225602,
+     "total_return": 0.625282,
+     "cagr": 0.196678,
+     "max_drawdown": -0.233195,
      "dd_peak": "2024-03-26",
      "dd_trough": "2024-08-05",
-     "worst_month": -0.088364,
-     "sharpe": 1.190694,
-     "avg_exposure": 0.490811,
-     "trades": 101,
-     "win_rate": 0.445545,
-     "avg_trade": 0.043422,
+     "worst_month": -0.077644,
+     "sharpe": 1.170247,
+     "avg_exposure": 0.488923,
+     "trades": 102,
+     "win_rate": 0.45098,
+     "avg_trade": 0.042563,
      "by_year": {
-      "2024": -0.059867,
-      "2025": 0.511516,
-      "2026": 0.140601
+      "2024": -0.060377,
+      "2025": 0.516058,
+      "2026": 0.140931
      }
     },
     "port_is": {
-     "total_return": -0.040843,
-     "cagr": -0.035041,
-     "max_drawdown": -0.214091,
+     "total_return": -0.041345,
+     "cagr": -0.035473,
+     "max_drawdown": -0.218334,
      "dd_peak": "2024-03-29",
      "dd_trough": "2024-08-09",
-     "worst_month": -0.088505,
-     "sharpe": -0.579475,
+     "worst_month": -0.086059,
+     "sharpe": -0.500185,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2024": -0.056598,
-      "2025": 0.0167
+      "2024": -0.0571,
+      "2025": 0.016709
      }
     },
     "port_oos": {
-     "total_return": 0.572981,
-     "cagr": 0.348757,
-     "max_drawdown": -0.102232,
+     "total_return": 0.578574,
+     "cagr": 0.351922,
+     "max_drawdown": -0.102011,
      "dd_peak": "2026-01-23",
      "dd_trough": "2026-02-13",
-     "worst_month": -0.01463,
-     "sharpe": 3.639108,
+     "worst_month": -0.014452,
+     "sharpe": 3.662538,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2025": 0.315994,
-      "2026": 0.19528
+      "2025": 0.320416,
+      "2026": 0.195513
      }
     }
    },
@@ -2405,49 +3266,49 @@
      "sentiment_min": -20
     },
     "trades": {
-     "n": 774,
-     "win_rate": 0.365633,
-     "avg_ret": -0.002842,
+     "n": 786,
+     "win_rate": 0.368957,
+     "avg_ret": -0.002419,
      "median_ret": -0.074639,
-     "profit_factor": 0.962295,
-     "avg_days": 27.169251,
-     "fill_rate": 0.683142,
+     "profit_factor": 0.967711,
+     "avg_days": 27.1743,
+     "fill_rate": 0.687063,
      "worst": -0.451755,
      "best": 0.522597,
      "in_sample": {
-      "n": 324,
-      "win_rate": 0.407407,
-      "avg_ret": -0.002149,
-      "median_ret": -0.056997,
-      "profit_factor": 0.968675,
-      "avg_days": 28.944444,
-      "fill_rate": 0.731377,
+      "n": 335,
+      "win_rate": 0.41194,
+      "avg_ret": -0.001717,
+      "median_ret": -0.054885,
+      "profit_factor": 0.974824,
+      "avg_days": 28.859701,
+      "fill_rate": 0.734649,
       "worst": -0.3902,
       "best": 0.522597
      },
      "out_sample": {
-      "n": 450,
-      "win_rate": 0.335556,
-      "avg_ret": -0.003341,
-      "median_ret": -0.082308,
-      "profit_factor": 0.958368,
-      "avg_days": 25.891111,
-      "fill_rate": 0.652174,
+      "n": 451,
+      "win_rate": 0.337029,
+      "avg_ret": -0.00294,
+      "median_ret": -0.082287,
+      "profit_factor": 0.963203,
+      "avg_days": 25.922395,
+      "fill_rate": 0.655523,
       "worst": -0.451755,
       "best": 0.521676
      },
      "by_year": {
       "2024": {
-       "n": 271,
-       "win_rate": 0.409594,
-       "avg_ret": -0.003858,
-       "profit_factor": 0.941086
+       "n": 282,
+       "win_rate": 0.414894,
+       "avg_ret": -0.003494,
+       "profit_factor": 0.946317
       },
       "2025": {
-       "n": 296,
-       "win_rate": 0.429054,
-       "avg_ret": 0.040543,
-       "profit_factor": 1.603125
+       "n": 297,
+       "win_rate": 0.430976,
+       "avg_ret": 0.04121,
+       "profit_factor": 1.617371
       },
       "2026": {
        "n": 207,
@@ -2457,63 +3318,63 @@
       }
      },
      "outcomes": {
-      "SL": 369,
-      "TIME": 286,
-      "TP2": 62,
-      "TP1+TIME": 46,
-      "TP1+BE": 11
+      "SL": 371,
+      "TIME": 294,
+      "TP2": 63,
+      "TP1+TIME": 48,
+      "TP1+BE": 10
      }
     },
     "portfolio": {
-     "total_return": -0.241392,
-     "cagr": -0.096166,
-     "max_drawdown": -0.346073,
+     "total_return": -0.135701,
+     "cagr": -0.051672,
+     "max_drawdown": -0.33877,
      "dd_peak": "2025-12-17",
      "dd_trough": "2026-10-19",
-     "worst_month": -0.14905,
-     "sharpe": -0.439333,
-     "avg_exposure": 0.731724,
-     "trades": 166,
-     "win_rate": 0.36747,
-     "avg_trade": -0.010334,
+     "worst_month": -0.149086,
+     "sharpe": -0.186316,
+     "avg_exposure": 0.735502,
+     "trades": 161,
+     "win_rate": 0.391304,
+     "avg_trade": -0.002824,
      "by_year": {
-      "2024": -0.093518,
-      "2025": 0.218383,
-      "2026": -0.31313
+      "2024": 0.029541,
+      "2025": 0.208316,
+      "2026": -0.305231
      }
     },
     "port_is": {
-     "total_return": -0.050608,
-     "cagr": -0.042765,
-     "max_drawdown": -0.170703,
-     "dd_peak": "2024-03-29",
+     "total_return": 0.032742,
+     "cagr": 0.027043,
+     "max_drawdown": -0.100776,
+     "dd_peak": "2025-01-31",
      "dd_trough": "2025-02-28",
-     "worst_month": -0.093359,
-     "sharpe": -0.375597,
+     "worst_month": -0.100776,
+     "sharpe": 0.548376,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2024": -0.043902,
-      "2025": -0.007014
+      "2024": 0.034656,
+      "2025": -0.00185
      }
     },
     "port_oos": {
-     "total_return": -0.191086,
-     "cagr": -0.130698,
-     "max_drawdown": -0.343317,
+     "total_return": -0.185161,
+     "cagr": -0.126498,
+     "max_drawdown": -0.336073,
      "dd_peak": "2025-12-19",
      "dd_trough": "2026-10-23",
-     "worst_month": -0.167582,
-     "sharpe": -1.311588,
+     "worst_month": -0.167584,
+     "sharpe": -1.235878,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2025": 0.203881,
-      "2026": -0.328078
+      "2025": 0.198831,
+      "2026": -0.320305
      }
     }
    },
@@ -2524,49 +3385,49 @@
      "sentiment_min": 0
     },
     "trades": {
-     "n": 718,
-     "win_rate": 0.373259,
-     "avg_ret": 0.002916,
+     "n": 720,
+     "win_rate": 0.375,
+     "avg_ret": 0.003091,
      "median_ret": -0.068184,
-     "profit_factor": 1.039657,
-     "avg_days": 27.649025,
-     "fill_rate": 0.677358,
+     "profit_factor": 1.042156,
+     "avg_days": 27.618056,
+     "fill_rate": 0.678605,
      "worst": -0.451755,
      "best": 0.522597,
      "in_sample": {
-      "n": 283,
-      "win_rate": 0.420495,
-      "avg_ret": 0.009445,
-      "median_ret": -0.038681,
-      "profit_factor": 1.149263,
-      "avg_days": 29.929329,
-      "fill_rate": 0.718274,
+      "n": 284,
+      "win_rate": 0.422535,
+      "avg_ret": 0.009251,
+      "median_ret": -0.037461,
+      "profit_factor": 1.14614,
+      "avg_days": 29.799296,
+      "fill_rate": 0.715365,
       "worst": -0.3902,
       "best": 0.522597
      },
      "out_sample": {
-      "n": 435,
-      "win_rate": 0.342529,
-      "avg_ret": -0.001332,
-      "median_ret": -0.084866,
-      "profit_factor": 0.983398,
-      "avg_days": 26.165517,
-      "fill_rate": 0.653153,
+      "n": 436,
+      "win_rate": 0.344037,
+      "avg_ret": -0.000922,
+      "median_ret": -0.083598,
+      "profit_factor": 0.988457,
+      "avg_days": 26.197248,
+      "fill_rate": 0.656627,
       "worst": -0.451755,
       "best": 0.521676
      },
      "by_year": {
       "2024": {
-       "n": 262,
-       "win_rate": 0.400763,
-       "avg_ret": -0.001678,
-       "profit_factor": 0.974914
+       "n": 263,
+       "win_rate": 0.403042,
+       "avg_ret": -0.001845,
+       "profit_factor": 0.972423
       },
       "2025": {
-       "n": 263,
-       "win_rate": 0.467681,
-       "avg_ret": 0.060112,
-       "profit_factor": 2.017097
+       "n": 264,
+       "win_rate": 0.469697,
+       "avg_ret": 0.060556,
+       "profit_factor": 2.033466
       },
       "2026": {
        "n": 193,
@@ -2577,62 +3438,62 @@
      },
      "outcomes": {
       "SL": 334,
-      "TIME": 270,
+      "TIME": 272,
       "TP2": 62,
       "TP1+TIME": 44,
       "TP1+BE": 8
      }
     },
     "portfolio": {
-     "total_return": -0.243687,
-     "cagr": -0.097446,
-     "max_drawdown": -0.356629,
+     "total_return": -0.19709,
+     "cagr": -0.077419,
+     "max_drawdown": -0.358483,
      "dd_peak": "2025-12-17",
      "dd_trough": "2026-07-17",
-     "worst_month": -0.147769,
-     "sharpe": -0.514205,
-     "avg_exposure": 0.633856,
-     "trades": 143,
-     "win_rate": 0.34965,
-     "avg_trade": -0.013105,
+     "worst_month": -0.148423,
+     "sharpe": -0.390175,
+     "avg_exposure": 0.638534,
+     "trades": 139,
+     "win_rate": 0.374101,
+     "avg_trade": -0.008318,
      "by_year": {
-      "2024": -0.224218,
-      "2025": 0.358686,
-      "2026": -0.282466
+      "2024": -0.174422,
+      "2025": 0.356139,
+      "2026": -0.282859
      }
     },
     "port_is": {
-     "total_return": -0.158035,
-     "cagr": -0.134777,
-     "max_drawdown": -0.277012,
-     "dd_peak": "2024-03-22",
+     "total_return": -0.103579,
+     "cagr": -0.087917,
+     "max_drawdown": -0.226112,
+     "dd_peak": "2024-03-01",
      "dd_trough": "2024-11-22",
-     "worst_month": -0.08347,
-     "sharpe": -1.637798,
+     "worst_month": -0.077252,
+     "sharpe": -1.043324,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2024": -0.213106,
-      "2025": 0.069986
+      "2024": -0.16265,
+      "2025": 0.070545
      }
     },
     "port_oos": {
-     "total_return": -0.127782,
-     "cagr": -0.086342,
-     "max_drawdown": -0.35417,
+     "total_return": -0.132937,
+     "cagr": -0.089913,
+     "max_drawdown": -0.355599,
      "dd_peak": "2025-12-19",
      "dd_trough": "2026-07-17",
-     "worst_month": -0.165924,
-     "sharpe": -0.702882,
+     "worst_month": -0.167045,
+     "sharpe": -0.751804,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2025": 0.242071,
-      "2026": -0.297772
+      "2025": 0.236069,
+      "2026": -0.298532
      }
     }
    },
@@ -2644,49 +3505,49 @@
      "market_exit_confirm": 1
     },
     "trades": {
-     "n": 899,
-     "win_rate": 0.399333,
-     "avg_ret": 0.011084,
-     "median_ret": -0.016278,
-     "profit_factor": 1.244307,
-     "avg_days": 15.539488,
-     "fill_rate": 0.689946,
+     "n": 900,
+     "win_rate": 0.4,
+     "avg_ret": 0.011263,
+     "median_ret": -0.016583,
+     "profit_factor": 1.248488,
+     "avg_days": 15.593333,
+     "fill_rate": 0.692308,
      "worst": -0.451755,
      "best": 0.533533,
      "in_sample": {
-      "n": 452,
-      "win_rate": 0.424779,
-      "avg_ret": 0.006707,
-      "median_ret": -0.009222,
-      "profit_factor": 1.215493,
-      "avg_days": 11.188053,
-      "fill_rate": 0.740984,
+      "n": 451,
+      "win_rate": 0.425721,
+      "avg_ret": 0.006687,
+      "median_ret": -0.009209,
+      "profit_factor": 1.21414,
+      "avg_days": 11.230599,
+      "fill_rate": 0.739344,
       "worst": -0.3902,
       "best": 0.506155
      },
      "out_sample": {
-      "n": 447,
-      "win_rate": 0.373602,
-      "avg_ret": 0.015511,
+      "n": 449,
+      "win_rate": 0.374165,
+      "avg_ret": 0.015859,
       "median_ret": -0.033505,
-      "profit_factor": 1.259477,
-      "avg_days": 19.939597,
-      "fill_rate": 0.645022,
+      "profit_factor": 1.266599,
+      "avg_days": 19.975501,
+      "fill_rate": 0.650725,
       "worst": -0.451755,
       "best": 0.533533
      },
      "by_year": {
       "2024": {
-       "n": 424,
-       "win_rate": 0.415094,
-       "avg_ret": 0.002807,
-       "profit_factor": 1.088037
+       "n": 423,
+       "win_rate": 0.416076,
+       "avg_ret": 0.002776,
+       "profit_factor": 1.086776
       },
       "2025": {
-       "n": 356,
-       "win_rate": 0.424157,
-       "avg_ret": 0.034435,
-       "profit_factor": 1.631244
+       "n": 358,
+       "win_rate": 0.424581,
+       "avg_ret": 0.034765,
+       "profit_factor": 1.641263
       },
       "2026": {
        "n": 119,
@@ -2697,64 +3558,64 @@
      },
      "outcomes": {
       "MKT": 558,
-      "SL": 169,
-      "TIME": 81,
+      "SL": 168,
+      "TIME": 82,
       "TP2": 56,
       "TP1+MKT": 19,
-      "TP1+TIME": 14,
+      "TP1+TIME": 15,
       "TP1+BE": 2
      }
     },
     "portfolio": {
-     "total_return": 0.354275,
-     "cagr": 0.116032,
-     "max_drawdown": -0.163578,
+     "total_return": 0.375512,
+     "cagr": 0.122336,
+     "max_drawdown": -0.147392,
      "dd_peak": "2024-02-01",
      "dd_trough": "2024-08-05",
-     "worst_month": -0.077238,
-     "sharpe": 0.813599,
-     "avg_exposure": 0.443502,
-     "trades": 185,
-     "win_rate": 0.459459,
-     "avg_trade": 0.015444,
+     "worst_month": -0.07654,
+     "sharpe": 0.854103,
+     "avg_exposure": 0.442363,
+     "trades": 184,
+     "win_rate": 0.461957,
+     "avg_trade": 0.016352,
      "by_year": {
-      "2024": 0.028675,
-      "2025": 0.23472,
-      "2026": 0.066253
+      "2024": 0.049085,
+      "2025": 0.230426,
+      "2026": 0.065609
      }
     },
     "port_is": {
-     "total_return": 0.059175,
-     "cagr": 0.047987,
-     "max_drawdown": -0.137063,
+     "total_return": 0.082497,
+     "cagr": 0.066763,
+     "max_drawdown": -0.118172,
      "dd_peak": "2024-02-02",
      "dd_trough": "2024-08-16",
-     "worst_month": -0.027721,
-     "sharpe": 1.123882,
+     "worst_month": -0.027222,
+     "sharpe": 1.523813,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2024": 0.040562,
-      "2025": 0.017887
+      "2024": 0.063241,
+      "2025": 0.018111
      }
     },
     "port_oos": {
-     "total_return": 0.20094,
-     "cagr": 0.128555,
-     "max_drawdown": -0.098294,
+     "total_return": 0.195983,
+     "cagr": 0.125477,
+     "max_drawdown": -0.098686,
      "dd_peak": "2025-06-13",
      "dd_trough": "2025-06-27",
-     "worst_month": -0.071318,
-     "sharpe": 1.744293,
+     "worst_month": -0.071945,
+     "sharpe": 1.713182,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2025": 0.174603,
-      "2026": 0.022422
+      "2025": 0.170942,
+      "2026": 0.021386
      }
     }
    },
@@ -2766,49 +3627,49 @@
      "market_exit_confirm": 1
     },
     "trades": {
-     "n": 693,
-     "win_rate": 0.395382,
-     "avg_ret": 0.012419,
-     "median_ret": -0.038447,
-     "profit_factor": 1.197875,
-     "avg_days": 24.988456,
-     "fill_rate": 0.671512,
+     "n": 694,
+     "win_rate": 0.399135,
+     "avg_ret": 0.01339,
+     "median_ret": -0.038339,
+     "profit_factor": 1.215814,
+     "avg_days": 24.975504,
+     "fill_rate": 0.673786,
      "worst": -0.451755,
      "best": 0.533533,
      "in_sample": {
       "n": 314,
-      "win_rate": 0.410828,
-      "avg_ret": 0.003878,
-      "median_ret": -0.036086,
-      "profit_factor": 1.066753,
-      "avg_days": 25.16242,
-      "fill_rate": 0.713636,
+      "win_rate": 0.417197,
+      "avg_ret": 0.005499,
+      "median_ret": -0.033147,
+      "profit_factor": 1.096566,
+      "avg_days": 25.085987,
+      "fill_rate": 0.712018,
       "worst": -0.3902,
       "best": 0.506155
      },
      "out_sample": {
-      "n": 379,
-      "win_rate": 0.382586,
-      "avg_ret": 0.019496,
-      "median_ret": -0.038725,
-      "profit_factor": 1.292582,
-      "avg_days": 24.844327,
-      "fill_rate": 0.640203,
+      "n": 380,
+      "win_rate": 0.384211,
+      "avg_ret": 0.019911,
+      "median_ret": -0.038581,
+      "profit_factor": 1.300492,
+      "avg_days": 24.884211,
+      "fill_rate": 0.645161,
       "worst": -0.451755,
       "best": 0.533533
      },
      "by_year": {
       "2024": {
        "n": 286,
-       "win_rate": 0.402098,
-       "avg_ret": -0.003607,
-       "profit_factor": 0.940736
+       "win_rate": 0.409091,
+       "avg_ret": -0.001828,
+       "profit_factor": 0.969339
       },
       "2025": {
-       "n": 290,
-       "win_rate": 0.444828,
-       "avg_ret": 0.047488,
-       "profit_factor": 1.776309
+       "n": 291,
+       "win_rate": 0.446735,
+       "avg_ret": 0.047934,
+       "profit_factor": 1.789627
       },
       "2026": {
        "n": 117,
@@ -2818,9 +3679,9 @@
       }
      },
      "outcomes": {
-      "SL": 249,
-      "TIME": 200,
-      "MKT": 140,
+      "SL": 244,
+      "TIME": 202,
+      "MKT": 144,
       "TP2": 63,
       "TP1+TIME": 32,
       "TP1+MKT": 6,
@@ -2828,55 +3689,55 @@
      }
     },
     "portfolio": {
-     "total_return": -0.086596,
-     "cagr": -0.032257,
-     "max_drawdown": -0.212819,
-     "dd_peak": "2024-02-01",
-     "dd_trough": "2025-01-23",
-     "worst_month": -0.122046,
-     "sharpe": -0.140376,
-     "avg_exposure": 0.531523,
+     "total_return": -0.040761,
+     "cagr": -0.014951,
+     "max_drawdown": -0.192607,
+     "dd_peak": "2025-10-02",
+     "dd_trough": "2026-07-24",
+     "worst_month": -0.121999,
+     "sharpe": -0.02022,
+     "avg_exposure": 0.531857,
      "trades": 136,
-     "win_rate": 0.338235,
-     "avg_trade": -0.002882,
+     "win_rate": 0.345588,
+     "avg_trade": -0.000718,
      "by_year": {
-      "2024": -0.201399,
-      "2025": 0.230809,
-      "2026": -0.070729
+      "2024": -0.169726,
+      "2025": 0.243104,
+      "2026": -0.07061
      }
     },
     "port_is": {
-     "total_return": -0.143941,
-     "cagr": -0.11901,
-     "max_drawdown": -0.192191,
+     "total_return": -0.10824,
+     "cagr": -0.089169,
+     "max_drawdown": -0.158508,
      "dd_peak": "2024-02-02",
      "dd_trough": "2024-12-20",
-     "worst_month": -0.085747,
-     "sharpe": -1.904945,
+     "worst_month": -0.085673,
+     "sharpe": -1.343833,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2024": -0.192191,
-      "2025": 0.05973
+      "2024": -0.158508,
+      "2025": 0.059737
      }
     },
     "port_oos": {
-     "total_return": 0.002965,
-     "cagr": 0.001957,
-     "max_drawdown": -0.189336,
+     "total_return": 0.010216,
+     "cagr": 0.006736,
+     "max_drawdown": -0.184319,
      "dd_peak": "2025-10-03",
      "dd_trough": "2026-07-24",
-     "worst_month": -0.142999,
-     "sharpe": 0.208554,
+     "worst_month": -0.143478,
+     "sharpe": 0.272268,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2025": 0.105743,
-      "2026": -0.092949
+      "2025": 0.114271,
+      "2026": -0.093384
      }
     }
    },
@@ -2888,49 +3749,49 @@
      "market_exit_confirm": 2
     },
     "trades": {
-     "n": 736,
-     "win_rate": 0.384511,
-     "avg_ret": 0.012091,
-     "median_ret": -0.032409,
-     "profit_factor": 1.207115,
-     "avg_days": 22.057065,
-     "fill_rate": 0.673993,
+     "n": 735,
+     "win_rate": 0.391837,
+     "avg_ret": 0.012809,
+     "median_ret": -0.032568,
+     "profit_factor": 1.21841,
+     "avg_days": 22.311565,
+     "fill_rate": 0.679298,
      "worst": -0.451755,
      "best": 0.533533,
      "in_sample": {
-      "n": 332,
-      "win_rate": 0.418675,
-      "avg_ret": 0.007528,
-      "median_ret": -0.018392,
-      "profit_factor": 1.152486,
-      "avg_days": 21.605422,
-      "fill_rate": 0.713978,
+      "n": 329,
+      "win_rate": 0.43465,
+      "avg_ret": 0.008582,
+      "median_ret": -0.017924,
+      "profit_factor": 1.170655,
+      "avg_days": 22.12462,
+      "fill_rate": 0.718341,
       "worst": -0.3902,
       "best": 0.506155
      },
      "out_sample": {
-      "n": 404,
-      "win_rate": 0.356436,
-      "avg_ret": 0.015841,
+      "n": 406,
+      "win_rate": 0.357143,
+      "avg_ret": 0.016234,
       "median_ret": -0.044661,
-      "profit_factor": 1.240806,
-      "avg_days": 22.428218,
-      "fill_rate": 0.644338,
+      "profit_factor": 1.248157,
+      "avg_days": 22.463054,
+      "fill_rate": 0.650641,
       "worst": -0.451755,
       "best": 0.533533
      },
      "by_year": {
       "2024": {
-       "n": 304,
-       "win_rate": 0.401316,
-       "avg_ret": 0.000817,
-       "profit_factor": 1.015795
+       "n": 301,
+       "win_rate": 0.418605,
+       "avg_ret": 0.001902,
+       "profit_factor": 1.036068
       },
       "2025": {
-       "n": 315,
-       "win_rate": 0.415873,
-       "avg_ret": 0.040583,
-       "profit_factor": 1.676242
+       "n": 317,
+       "win_rate": 0.416404,
+       "avg_ret": 0.040931,
+       "profit_factor": 1.68694
       },
       "2026": {
        "n": 117,
@@ -2940,65 +3801,65 @@
       }
      },
      "outcomes": {
-      "MKT": 266,
-      "SL": 229,
-      "TIME": 139,
-      "TP2": 60,
-      "TP1+TIME": 23,
+      "MKT": 257,
+      "SL": 230,
+      "TIME": 143,
+      "TP2": 61,
+      "TP1+TIME": 25,
       "TP1+MKT": 16,
       "TP1+BE": 3
      }
     },
     "portfolio": {
-     "total_return": 0.336603,
-     "cagr": 0.110739,
-     "max_drawdown": -0.192733,
+     "total_return": 0.247896,
+     "cagr": 0.083467,
+     "max_drawdown": -0.193551,
      "dd_peak": "2025-12-17",
      "dd_trough": "2026-07-24",
-     "worst_month": -0.144814,
-     "sharpe": 0.79454,
-     "avg_exposure": 0.491338,
-     "trades": 150,
-     "win_rate": 0.386667,
-     "avg_trade": 0.01778,
+     "worst_month": -0.14546,
+     "sharpe": 0.625527,
+     "avg_exposure": 0.49876,
+     "trades": 146,
+     "win_rate": 0.39726,
+     "avg_trade": 0.015095,
      "by_year": {
-      "2024": -0.054016,
-      "2025": 0.558544,
-      "2026": -0.093434
+      "2024": -0.110209,
+      "2025": 0.550461,
+      "2026": -0.095456
      }
     },
     "port_is": {
-     "total_return": 0.030825,
-     "cagr": 0.025061,
-     "max_drawdown": -0.117537,
-     "dd_peak": "2024-09-06",
+     "total_return": -0.030171,
+     "cagr": -0.024667,
+     "max_drawdown": -0.143352,
+     "dd_peak": "2024-03-29",
      "dd_trough": "2024-12-20",
-     "worst_month": -0.086079,
-     "sharpe": 0.553935,
+     "worst_month": -0.085133,
+     "sharpe": -0.270151,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2024": -0.040763,
-      "2025": 0.07463
+      "2024": -0.096099,
+      "2025": 0.072938
      }
     },
     "port_oos": {
-     "total_return": 0.220305,
-     "cagr": 0.140542,
-     "max_drawdown": -0.186947,
+     "total_return": 0.212731,
+     "cagr": 0.135862,
+     "max_drawdown": -0.187679,
      "dd_peak": "2025-12-19",
      "dd_trough": "2026-07-24",
-     "worst_month": -0.16552,
-     "sharpe": 1.734865,
+     "worst_month": -0.166325,
+     "sharpe": 1.684653,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2025": 0.379531,
-      "2026": -0.11542
+      "2025": 0.374247,
+      "2026": -0.117531
      }
     }
    },
@@ -3010,34 +3871,34 @@
      "market_exit_confirm": 2
     },
     "trades": {
-     "n": 771,
-     "win_rate": 0.392996,
-     "avg_ret": 0.010988,
+     "n": 773,
+     "win_rate": 0.393273,
+     "avg_ret": 0.011214,
      "median_ret": -0.02219,
-     "profit_factor": 1.207214,
-     "avg_days": 19.287938,
-     "fill_rate": 0.671018,
+     "profit_factor": 1.211246,
+     "avg_days": 19.366106,
+     "fill_rate": 0.673932,
      "worst": -0.451755,
      "best": 0.533533,
      "in_sample": {
       "n": 348,
       "win_rate": 0.402299,
-      "avg_ret": 0.001441,
-      "median_ret": -0.013889,
-      "profit_factor": 1.033212,
-      "avg_days": 17.172414,
-      "fill_rate": 0.705882,
+      "avg_ret": 0.001443,
+      "median_ret": -0.013306,
+      "profit_factor": 1.032885,
+      "avg_days": 17.293103,
+      "fill_rate": 0.704453,
       "worst": -0.3902,
       "best": 0.506155
      },
      "out_sample": {
-      "n": 423,
-      "win_rate": 0.385343,
-      "avg_ret": 0.018843,
+      "n": 425,
+      "win_rate": 0.385882,
+      "avg_ret": 0.019215,
       "median_ret": -0.035976,
-      "profit_factor": 1.309073,
-      "avg_days": 21.028369,
-      "fill_rate": 0.644817,
+      "profit_factor": 1.316906,
+      "avg_days": 21.063529,
+      "fill_rate": 0.650842,
       "worst": -0.451755,
       "best": 0.533533
      },
@@ -3045,14 +3906,14 @@
       "2024": {
        "n": 320,
        "win_rate": 0.390625,
-       "avg_ret": -0.004059,
-       "profit_factor": 0.911029
+       "avg_ret": -0.004057,
+       "profit_factor": 0.912088
       },
       "2025": {
-       "n": 333,
-       "win_rate": 0.42042,
-       "avg_ret": 0.036578,
-       "profit_factor": 1.640204
+       "n": 335,
+       "win_rate": 0.420896,
+       "avg_ret": 0.036944,
+       "profit_factor": 1.651171
       },
       "2026": {
        "n": 118,
@@ -3062,65 +3923,65 @@
       }
      },
      "outcomes": {
-      "MKT": 366,
-      "SL": 202,
-      "TIME": 108,
+      "MKT": 367,
+      "SL": 200,
+      "TIME": 110,
       "TP2": 56,
+      "TP1+TIME": 19,
       "TP1+MKT": 18,
-      "TP1+TIME": 18,
       "TP1+BE": 3
      }
     },
     "portfolio": {
-     "total_return": 0.358572,
-     "cagr": 0.117313,
-     "max_drawdown": -0.192904,
+     "total_return": 0.348365,
+     "cagr": 0.114267,
+     "max_drawdown": -0.192676,
      "dd_peak": "2025-12-17",
      "dd_trough": "2026-07-24",
-     "worst_month": -0.145242,
-     "sharpe": 0.856391,
-     "avg_exposure": 0.469851,
+     "worst_month": -0.145542,
+     "sharpe": 0.836309,
+     "avg_exposure": 0.47099,
      "trades": 171,
      "win_rate": 0.374269,
-     "avg_trade": 0.017115,
+     "avg_trade": 0.016807,
      "by_year": {
-      "2024": 0.056825,
-      "2025": 0.381854,
-      "2026": -0.069712
+      "2024": 0.051606,
+      "2025": 0.379921,
+      "2026": -0.070819
      }
     },
     "port_is": {
-     "total_return": 0.069966,
-     "cagr": 0.056683,
-     "max_drawdown": -0.083878,
+     "total_return": 0.06664,
+     "cagr": 0.054005,
+     "max_drawdown": -0.084102,
      "dd_peak": "2024-10-25",
      "dd_trough": "2025-01-24",
-     "worst_month": -0.05626,
-     "sharpe": 1.17987,
+     "worst_month": -0.056353,
+     "sharpe": 1.130358,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2024": 0.071588,
-      "2025": -0.001514
+      "2024": 0.068265,
+      "2025": -0.001521
      }
     },
     "port_oos": {
-     "total_return": 0.195951,
-     "cagr": 0.125456,
-     "max_drawdown": -0.187273,
+     "total_return": 0.192536,
+     "cagr": 0.123333,
+     "max_drawdown": -0.18688,
      "dd_peak": "2025-12-19",
      "dd_trough": "2026-07-24",
-     "worst_month": -0.166077,
-     "sharpe": 1.552206,
+     "worst_month": -0.166061,
+     "sharpe": 1.530644,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2025": 0.317694,
-      "2026": -0.092391
+      "2025": 0.314938,
+      "2026": -0.093086
      }
     }
    },
@@ -3133,49 +3994,49 @@
      "market_exit_confirm": 1
     },
     "trades": {
-     "n": 871,
-     "win_rate": 0.399541,
-     "avg_ret": 0.011907,
-     "median_ret": -0.016887,
-     "profit_factor": 1.260773,
-     "avg_days": 15.870264,
-     "fill_rate": 0.696243,
+     "n": 882,
+     "win_rate": 0.401361,
+     "avg_ret": 0.011521,
+     "median_ret": -0.017004,
+     "profit_factor": 1.251069,
+     "avg_days": 15.909297,
+     "fill_rate": 0.701113,
      "worst": -0.451755,
      "best": 0.533533,
      "in_sample": {
-      "n": 449,
-      "win_rate": 0.432071,
-      "avg_ret": 0.007688,
+      "n": 458,
+      "win_rate": 0.434498,
+      "avg_ret": 0.006671,
       "median_ret": -0.008737,
-      "profit_factor": 1.257187,
-      "avg_days": 11.082405,
-      "fill_rate": 0.74461,
+      "profit_factor": 1.216129,
+      "avg_days": 11.19869,
+      "fill_rate": 0.747145,
       "worst": -0.3902,
       "best": 0.506155
      },
      "out_sample": {
-      "n": 422,
-      "win_rate": 0.364929,
-      "avg_ret": 0.016396,
+      "n": 424,
+      "win_rate": 0.365566,
+      "avg_ret": 0.01676,
       "median_ret": -0.039254,
-      "profit_factor": 1.2626,
-      "avg_days": 20.964455,
-      "fill_rate": 0.651235,
+      "profit_factor": 1.269824,
+      "avg_days": 20.997642,
+      "fill_rate": 0.657364,
       "worst": -0.451755,
       "best": 0.533533
      },
      "by_year": {
       "2024": {
-       "n": 421,
-       "win_rate": 0.422803,
-       "avg_ret": 0.003825,
-       "profit_factor": 1.125112
+       "n": 430,
+       "win_rate": 0.425581,
+       "avg_ret": 0.002823,
+       "profit_factor": 1.089349
       },
       "2025": {
-       "n": 332,
-       "win_rate": 0.415663,
-       "avg_ret": 0.036869,
-       "profit_factor": 1.642486
+       "n": 334,
+       "win_rate": 0.416168,
+       "avg_ret": 0.037209,
+       "profit_factor": 1.652705
       },
       "2026": {
        "n": 118,
@@ -3185,65 +4046,65 @@
       }
      },
      "outcomes": {
-      "MKT": 535,
-      "SL": 165,
-      "TIME": 81,
+      "MKT": 540,
+      "SL": 168,
+      "TIME": 82,
       "TP2": 56,
-      "TP1+MKT": 18,
-      "TP1+TIME": 14,
+      "TP1+MKT": 19,
+      "TP1+TIME": 15,
       "TP1+BE": 2
      }
     },
     "portfolio": {
-     "total_return": 0.381888,
-     "cagr": 0.125669,
-     "max_drawdown": -0.139363,
-     "dd_peak": "2024-02-12",
+     "total_return": 0.432853,
+     "cagr": 0.139791,
+     "max_drawdown": -0.13049,
+     "dd_peak": "2024-02-15",
      "dd_trough": "2024-08-05",
-     "worst_month": -0.077306,
-     "sharpe": 0.866223,
-     "avg_exposure": 0.435488,
-     "trades": 174,
-     "win_rate": 0.465517,
-     "avg_trade": 0.017617,
+     "worst_month": -0.080121,
+     "sharpe": 0.948784,
+     "avg_exposure": 0.441066,
+     "trades": 173,
+     "win_rate": 0.479769,
+     "avg_trade": 0.019524,
      "by_year": {
-      "2024": 0.057492,
-      "2025": 0.22785,
-      "2026": 0.064267
+      "2024": 0.09656,
+      "2025": 0.227184,
+      "2026": 0.064779
      }
     },
     "port_is": {
-     "total_return": 0.127829,
-     "cagr": 0.106541,
-     "max_drawdown": -0.100492,
+     "total_return": 0.123715,
+     "cagr": 0.101426,
+     "max_drawdown": -0.0991,
      "dd_peak": "2024-03-01",
      "dd_trough": "2024-08-16",
-     "worst_month": -0.026857,
-     "sharpe": 2.360737,
+     "worst_month": -0.029346,
+     "sharpe": 2.311289,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2024": 0.108026,
-      "2025": 0.017872
+      "2024": 0.104775,
+      "2025": 0.017144
      }
     },
     "port_oos": {
-     "total_return": 0.192321,
-     "cagr": 0.123199,
-     "max_drawdown": -0.098614,
+     "total_return": 0.190809,
+     "cagr": 0.122258,
+     "max_drawdown": -0.099743,
      "dd_peak": "2025-06-13",
      "dd_trough": "2025-06-27",
-     "worst_month": -0.071995,
-     "sharpe": 1.687045,
+     "worst_month": -0.071721,
+     "sharpe": 1.671717,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2025": 0.168076,
-      "2026": 0.020756
+      "2025": 0.16621,
+      "2026": 0.021093
      }
     }
    },
@@ -3256,49 +4117,49 @@
      "market_exit_confirm": 1
     },
     "trades": {
-     "n": 831,
-     "win_rate": 0.403129,
-     "avg_ret": 0.013554,
-     "median_ret": -0.016887,
-     "profit_factor": 1.294199,
-     "avg_days": 16.476534,
-     "fill_rate": 0.6925,
+     "n": 832,
+     "win_rate": 0.403846,
+     "avg_ret": 0.013744,
+     "median_ret": -0.016898,
+     "profit_factor": 1.298647,
+     "avg_days": 16.533654,
+     "fill_rate": 0.695071,
      "worst": -0.451755,
      "best": 0.533533,
      "in_sample": {
-      "n": 436,
-      "win_rate": 0.426606,
-      "avg_ret": 0.00736,
-      "median_ret": -0.008973,
-      "profit_factor": 1.243543,
-      "avg_days": 11.183486,
-      "fill_rate": 0.740238,
+      "n": 435,
+      "win_rate": 0.427586,
+      "avg_ret": 0.007341,
+      "median_ret": -0.008737,
+      "profit_factor": 1.242065,
+      "avg_days": 11.227586,
+      "fill_rate": 0.73854,
       "worst": -0.3902,
       "best": 0.506155
      },
      "out_sample": {
-      "n": 395,
-      "win_rate": 0.377215,
-      "avg_ret": 0.02039,
+      "n": 397,
+      "win_rate": 0.377834,
+      "avg_ret": 0.020759,
       "median_ret": -0.038942,
-      "profit_factor": 1.320783,
-      "avg_days": 22.318987,
-      "fill_rate": 0.646481,
+      "profit_factor": 1.328391,
+      "avg_days": 22.347607,
+      "fill_rate": 0.652961,
       "worst": -0.451755,
       "best": 0.533533
      },
      "by_year": {
       "2024": {
-       "n": 419,
-       "win_rate": 0.415274,
-       "avg_ret": 0.003252,
-       "profit_factor": 1.106373
+       "n": 418,
+       "win_rate": 0.416268,
+       "avg_ret": 0.003223,
+       "profit_factor": 1.105021
       },
       "2025": {
-       "n": 297,
-       "win_rate": 0.434343,
-       "avg_ret": 0.044408,
-       "profit_factor": 1.740224
+       "n": 299,
+       "win_rate": 0.434783,
+       "avg_ret": 0.044737,
+       "profit_factor": 1.751214
       },
       "2026": {
        "n": 115,
@@ -3309,68 +4170,927 @@
      },
      "outcomes": {
       "MKT": 507,
-      "SL": 164,
-      "TIME": 70,
+      "SL": 163,
+      "TIME": 71,
       "TP2": 56,
       "TP1+MKT": 19,
-      "TP1+TIME": 13,
+      "TP1+TIME": 14,
       "TP1+BE": 2
      }
     },
     "portfolio": {
-     "total_return": 0.436502,
-     "cagr": 0.142207,
-     "max_drawdown": -0.135397,
+     "total_return": 0.439318,
+     "cagr": 0.143028,
+     "max_drawdown": -0.13207,
      "dd_peak": "2024-02-29",
      "dd_trough": "2024-08-05",
-     "worst_month": -0.068596,
-     "sharpe": 1.003772,
-     "avg_exposure": 0.43155,
+     "worst_month": -0.069631,
+     "sharpe": 1.009239,
+     "avg_exposure": 0.431781,
      "trades": 153,
-     "win_rate": 0.48366,
-     "avg_trade": 0.021928,
+     "win_rate": 0.490196,
+     "avg_trade": 0.022199,
      "by_year": {
-      "2024": 0.011335,
-      "2025": 0.307659,
-      "2026": 0.086217
+      "2024": 0.015661,
+      "2025": 0.305195,
+      "2026": 0.085756
      }
     },
     "port_is": {
-     "total_return": 0.054661,
-     "cagr": 0.045807,
-     "max_drawdown": -0.126683,
+     "total_return": 0.059173,
+     "cagr": 0.049572,
+     "max_drawdown": -0.122681,
      "dd_peak": "2024-03-01",
      "dd_trough": "2024-08-09",
-     "worst_month": -0.029455,
-     "sharpe": 0.961518,
+     "worst_month": -0.029432,
+     "sharpe": 1.035496,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2024": 0.037124,
-      "2025": 0.016909
+      "2024": 0.041637,
+      "2025": 0.016836
      }
     },
     "port_oos": {
-     "total_return": 0.297183,
-     "cagr": 0.187506,
-     "max_drawdown": -0.093286,
+     "total_return": 0.294102,
+     "cagr": 0.185643,
+     "max_drawdown": -0.093426,
      "dd_peak": "2025-12-05",
      "dd_trough": "2026-07-24",
-     "worst_month": -0.059363,
-     "sharpe": 2.599495,
+     "worst_month": -0.060389,
+     "sharpe": 2.582535,
      "avg_exposure": null,
      "trades": null,
      "win_rate": null,
      "avg_trade": null,
      "by_year": {
-      "2025": 0.245259,
-      "2026": 0.041697
+      "2025": 0.242852,
+      "2026": 0.041236
+     }
+    }
+   },
+   {
+    "name": "Ketahanan: sentimen ≥ -30 + keluar bila IHSG < SMA50",
+    "params": {
+     "sentiment_min": -30,
+     "market_exit": "all",
+     "market_exit_ma": "sma50",
+     "market_exit_confirm": 1
+    },
+    "trades": {
+     "n": 902,
+     "win_rate": 0.39357,
+     "avg_ret": 0.010599,
+     "median_ret": -0.017157,
+     "profit_factor": 1.232848,
+     "avg_days": 15.543237,
+     "fill_rate": 0.69438,
+     "worst": -0.451755,
+     "best": 0.533533,
+     "in_sample": {
+      "n": 451,
+      "win_rate": 0.425721,
+      "avg_ret": 0.006687,
+      "median_ret": -0.009209,
+      "profit_factor": 1.21414,
+      "avg_days": 11.230599,
+      "fill_rate": 0.739344,
+      "worst": -0.3902,
+      "best": 0.506155
+     },
+     "out_sample": {
+      "n": 451,
+      "win_rate": 0.361419,
+      "avg_ret": 0.014511,
+      "median_ret": -0.036126,
+      "profit_factor": 1.242616,
+      "avg_days": 19.855876,
+      "fill_rate": 0.654572,
+      "worst": -0.451755,
+      "best": 0.533533
+     },
+     "by_year": {
+      "2024": {
+       "n": 423,
+       "win_rate": 0.416076,
+       "avg_ret": 0.002776,
+       "profit_factor": 1.086776
+      },
+      "2025": {
+       "n": 360,
+       "win_rate": 0.408333,
+       "avg_ret": 0.032971,
+       "profit_factor": 1.603342
+      },
+      "2026": {
+       "n": 119,
+       "win_rate": 0.268908,
+       "avg_ret": -0.029276,
+       "profit_factor": 0.556267
+      }
+     },
+     "outcomes": {
+      "MKT": 560,
+      "SL": 168,
+      "TIME": 82,
+      "TP2": 56,
+      "TP1+MKT": 19,
+      "TP1+TIME": 15,
+      "TP1+BE": 2
+     }
+    },
+    "portfolio": {
+     "total_return": 0.337931,
+     "cagr": 0.111138,
+     "max_drawdown": -0.147392,
+     "dd_peak": "2024-02-01",
+     "dd_trough": "2024-08-05",
+     "worst_month": -0.077359,
+     "sharpe": 0.785689,
+     "avg_exposure": 0.440375,
+     "trades": 184,
+     "win_rate": 0.451087,
+     "avg_trade": 0.015061,
+     "by_year": {
+      "2024": 0.049085,
+      "2025": 0.195774,
+      "2026": 0.066532
+     }
+    },
+    "port_is": {
+     "total_return": 0.082497,
+     "cagr": 0.066763,
+     "max_drawdown": -0.118172,
+     "dd_peak": "2024-02-02",
+     "dd_trough": "2024-08-16",
+     "worst_month": -0.027222,
+     "sharpe": 1.523813,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": 0.063241,
+      "2025": 0.018111
+     }
+    },
+    "port_oos": {
+     "total_return": 0.16329,
+     "cagr": 0.105061,
+     "max_drawdown": -0.123337,
+     "dd_peak": "2025-06-13",
+     "dd_trough": "2025-07-04",
+     "worst_month": -0.071945,
+     "sharpe": 1.462314,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.137205,
+      "2026": 0.022938
+     }
+    }
+   },
+   {
+    "name": "Ketahanan: sentimen ≥ -10 + keluar bila IHSG < SMA50",
+    "params": {
+     "sentiment_min": -10,
+     "market_exit": "all",
+     "market_exit_ma": "sma50",
+     "market_exit_confirm": 1
+    },
+    "trades": {
+     "n": 849,
+     "win_rate": 0.409894,
+     "avg_ret": 0.014436,
+     "median_ret": -0.015312,
+     "profit_factor": 1.318109,
+     "avg_days": 16.524146,
+     "fill_rate": 0.701653,
+     "worst": -0.451755,
+     "best": 0.533533,
+     "in_sample": {
+      "n": 451,
+      "win_rate": 0.439024,
+      "avg_ret": 0.008966,
+      "median_ret": -0.007885,
+      "profit_factor": 1.301668,
+      "avg_days": 11.427938,
+      "fill_rate": 0.750416,
+      "worst": -0.3902,
+      "best": 0.506155
+     },
+     "out_sample": {
+      "n": 398,
+      "win_rate": 0.376884,
+      "avg_ret": 0.020635,
+      "median_ret": -0.038833,
+      "profit_factor": 1.326879,
+      "avg_days": 22.298995,
+      "fill_rate": 0.65353,
+      "worst": -0.451755,
+      "best": 0.533533
+     },
+     "by_year": {
+      "2024": {
+       "n": 423,
+       "win_rate": 0.43026,
+       "avg_ret": 0.005206,
+       "profit_factor": 1.171316
+      },
+      "2025": {
+       "n": 310,
+       "win_rate": 0.432258,
+       "avg_ret": 0.043134,
+       "profit_factor": 1.743254
+      },
+      "2026": {
+       "n": 116,
+       "win_rate": 0.275862,
+       "avg_ret": -0.028597,
+       "profit_factor": 0.568323
+      }
+     },
+     "outcomes": {
+      "MKT": 508,
+      "SL": 165,
+      "TIME": 84,
+      "TP2": 56,
+      "TP1+MKT": 18,
+      "TP1+TIME": 16,
+      "TP1+BE": 2
+     }
+    },
+    "portfolio": {
+     "total_return": 0.383406,
+     "cagr": 0.126121,
+     "max_drawdown": -0.135236,
+     "dd_peak": "2024-02-12",
+     "dd_trough": "2024-08-05",
+     "worst_month": -0.068839,
+     "sharpe": 0.906756,
+     "avg_exposure": 0.436604,
+     "trades": 162,
+     "win_rate": 0.481481,
+     "avg_trade": 0.018551,
+     "by_year": {
+      "2024": -0.027123,
+      "2025": 0.311484,
+      "2026": 0.084248
+     }
+    },
+    "port_is": {
+     "total_return": 0.037615,
+     "cagr": 0.031564,
+     "max_drawdown": -0.107128,
+     "dd_peak": "2024-03-01",
+     "dd_trough": "2024-08-09",
+     "worst_month": -0.028531,
+     "sharpe": 0.866728,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": 0.019384,
+      "2025": 0.017885
+     }
+    },
+    "port_oos": {
+     "total_return": 0.296411,
+     "cagr": 0.18704,
+     "max_drawdown": -0.091739,
+     "dd_peak": "2025-12-05",
+     "dd_trough": "2026-07-24",
+     "worst_month": -0.060014,
+     "sharpe": 2.585897,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.246837,
+      "2026": 0.039759
+     }
+    }
+   },
+   {
+    "name": "Ketahanan: sentimen ≥ +10 + keluar bila IHSG < SMA50",
+    "params": {
+     "sentiment_min": 10,
+     "market_exit": "all",
+     "market_exit_ma": "sma50",
+     "market_exit_confirm": 1
+    },
+    "trades": {
+     "n": 864,
+     "win_rate": 0.405093,
+     "avg_ret": 0.016182,
+     "median_ret": -0.016112,
+     "profit_factor": 1.349676,
+     "avg_days": 16.809028,
+     "fill_rate": 0.695093,
+     "worst": -0.3902,
+     "best": 0.533533,
+     "in_sample": {
+      "n": 439,
+      "win_rate": 0.42369,
+      "avg_ret": 0.005119,
+      "median_ret": -0.009209,
+      "profit_factor": 1.170363,
+      "avg_days": 11.1959,
+      "fill_rate": 0.731667,
+      "worst": -0.3902,
+      "best": 0.506155
+     },
+     "out_sample": {
+      "n": 425,
+      "win_rate": 0.385882,
+      "avg_ret": 0.027609,
+      "median_ret": -0.036126,
+      "profit_factor": 1.437955,
+      "avg_days": 22.607059,
+      "fill_rate": 0.660964,
+      "worst": -0.305488,
+      "best": 0.533533
+     },
+     "by_year": {
+      "2024": {
+       "n": 422,
+       "win_rate": 0.412322,
+       "avg_ret": 0.00095,
+       "profit_factor": 1.03125
+      },
+      "2025": {
+       "n": 330,
+       "win_rate": 0.436364,
+       "avg_ret": 0.050471,
+       "profit_factor": 1.844768
+      },
+      "2026": {
+       "n": 112,
+       "win_rate": 0.285714,
+       "avg_ret": -0.027458,
+       "profit_factor": 0.586805
+      }
+     },
+     "outcomes": {
+      "MKT": 519,
+      "SL": 175,
+      "TIME": 71,
+      "TP2": 63,
+      "TP1+MKT": 20,
+      "TP1+TIME": 14,
+      "TP1+BE": 2
+     }
+    },
+    "portfolio": {
+     "total_return": 0.495408,
+     "cagr": 0.159182,
+     "max_drawdown": -0.134068,
+     "dd_peak": "2024-02-29",
+     "dd_trough": "2024-08-05",
+     "worst_month": -0.044823,
+     "sharpe": 1.044472,
+     "avg_exposure": 0.430159,
+     "trades": 145,
+     "win_rate": 0.489655,
+     "avg_trade": 0.024359,
+     "by_year": {
+      "2024": -0.069398,
+      "2025": 0.395603,
+      "2026": 0.151421
+     }
+    },
+    "port_is": {
+     "total_return": -0.029638,
+     "cagr": -0.025002,
+     "max_drawdown": -0.128093,
+     "dd_peak": "2024-03-01",
+     "dd_trough": "2024-08-09",
+     "worst_month": -0.030912,
+     "sharpe": -0.445346,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": -0.045636,
+      "2025": 0.016763
+     }
+    },
+    "port_oos": {
+     "total_return": 0.465647,
+     "cagr": 0.287243,
+     "max_drawdown": -0.06,
+     "dd_peak": "2025-08-22",
+     "dd_trough": "2025-09-19",
+     "worst_month": -0.012119,
+     "sharpe": 3.771012,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.2808,
+      "2026": 0.144322
+     }
+    }
+   },
+   {
+    "name": "Ketahanan: sentimen ≥ +20 + keluar bila IHSG < SMA50",
+    "params": {
+     "sentiment_min": 20,
+     "market_exit": "all",
+     "market_exit_ma": "sma50",
+     "market_exit_confirm": 1
+    },
+    "trades": {
+     "n": 856,
+     "win_rate": 0.382009,
+     "avg_ret": 0.013006,
+     "median_ret": -0.020136,
+     "profit_factor": 1.26124,
+     "avg_days": 16.990654,
+     "fill_rate": 0.699918,
+     "worst": -0.3902,
+     "best": 0.533533,
+     "in_sample": {
+      "n": 386,
+      "win_rate": 0.406736,
+      "avg_ret": 0.003484,
+      "median_ret": -0.010373,
+      "profit_factor": 1.110092,
+      "avg_days": 11.549223,
+      "fill_rate": 0.725564,
+      "worst": -0.3902,
+      "best": 0.506155
+     },
+     "out_sample": {
+      "n": 470,
+      "win_rate": 0.361702,
+      "avg_ret": 0.020826,
+      "median_ret": -0.044519,
+      "profit_factor": 1.321973,
+      "avg_days": 21.459574,
+      "fill_rate": 0.680174,
+      "worst": -0.383866,
+      "best": 0.533533
+     },
+     "by_year": {
+      "2024": {
+       "n": 369,
+       "win_rate": 0.392954,
+       "avg_ret": -0.00136,
+       "profit_factor": 0.957661
+      },
+      "2025": {
+       "n": 352,
+       "win_rate": 0.411932,
+       "avg_ret": 0.044381,
+       "profit_factor": 1.720919
+      },
+      "2026": {
+       "n": 135,
+       "win_rate": 0.274074,
+       "avg_ret": -0.029538,
+       "profit_factor": 0.56165
+      }
+     },
+     "outcomes": {
+      "MKT": 496,
+      "SL": 184,
+      "TIME": 75,
+      "TP2": 60,
+      "TP1+MKT": 21,
+      "TP1+TIME": 17,
+      "TP1+BE": 3
+     }
+    },
+    "portfolio": {
+     "total_return": 0.387173,
+     "cagr": 0.12861,
+     "max_drawdown": -0.168195,
+     "dd_peak": "2025-10-03",
+     "dd_trough": "2025-11-24",
+     "worst_month": -0.062701,
+     "sharpe": 0.861511,
+     "avg_exposure": 0.411799,
+     "trades": 137,
+     "win_rate": 0.467153,
+     "avg_trade": 0.023894,
+     "by_year": {
+      "2024": 0.007919,
+      "2025": 0.323866,
+      "2026": 0.039588
+     }
+    },
+    "port_is": {
+     "total_return": 0.0286,
+     "cagr": 0.024414,
+     "max_drawdown": -0.155243,
+     "dd_peak": "2024-02-23",
+     "dd_trough": "2024-08-09",
+     "worst_month": -0.043323,
+     "sharpe": 0.603731,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": 0.01144,
+      "2025": 0.016966
+     }
+    },
+    "port_oos": {
+     "total_return": 0.256408,
+     "cagr": 0.162719,
+     "max_drawdown": -0.157857,
+     "dd_peak": "2025-10-03",
+     "dd_trough": "2025-11-21",
+     "worst_month": -0.07091,
+     "sharpe": 1.857106,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.169097,
+      "2026": 0.074682
+     }
+    }
+   },
+   {
+    "name": "Ketahanan: sentimen ≥ +30 + keluar bila IHSG < SMA50",
+    "params": {
+     "sentiment_min": 30,
+     "market_exit": "all",
+     "market_exit_ma": "sma50",
+     "market_exit_confirm": 1
+    },
+    "trades": {
+     "n": 649,
+     "win_rate": 0.402157,
+     "avg_ret": 0.012975,
+     "median_ret": -0.031282,
+     "profit_factor": 1.220792,
+     "avg_days": 20.608629,
+     "fill_rate": 0.693376,
+     "worst": -0.3902,
+     "best": 0.54459,
+     "in_sample": {
+      "n": 207,
+      "win_rate": 0.492754,
+      "avg_ret": 0.015027,
+      "median_ret": -0.003994,
+      "profit_factor": 1.371798,
+      "avg_days": 18.574879,
+      "fill_rate": 0.744604,
+      "worst": -0.3902,
+      "best": 0.506155
+     },
+     "out_sample": {
+      "n": 442,
+      "win_rate": 0.359729,
+      "avg_ret": 0.012014,
+      "median_ret": -0.044059,
+      "profit_factor": 1.178358,
+      "avg_days": 21.561086,
+      "fill_rate": 0.671733,
+      "worst": -0.35777,
+      "best": 0.54459
+     },
+     "by_year": {
+      "2024": {
+       "n": 190,
+       "win_rate": 0.473684,
+       "avg_ret": 0.006654,
+       "profit_factor": 1.158022
+      },
+      "2025": {
+       "n": 304,
+       "win_rate": 0.421053,
+       "avg_ret": 0.040318,
+       "profit_factor": 1.648308
+      },
+      "2026": {
+       "n": 155,
+       "win_rate": 0.277419,
+       "avg_ret": -0.032904,
+       "profit_factor": 0.545973
+      }
+     },
+     "outcomes": {
+      "MKT": 310,
+      "SL": 185,
+      "TIME": 65,
+      "TP2": 46,
+      "TP1+MKT": 24,
+      "TP1+TIME": 17,
+      "TP1+BE": 2
+     }
+    },
+    "portfolio": {
+     "total_return": 0.284193,
+     "cagr": 0.112633,
+     "max_drawdown": -0.135283,
+     "dd_peak": "2024-07-04",
+     "dd_trough": "2024-08-22",
+     "worst_month": -0.048953,
+     "sharpe": 0.832054,
+     "avg_exposure": 0.412447,
+     "trades": 92,
+     "win_rate": 0.467391,
+     "avg_trade": 0.026388,
+     "by_year": {
+      "2024": -0.007737,
+      "2025": 0.253036,
+      "2026": 0.032856
+     }
+    },
+    "port_is": {
+     "total_return": 0.013359,
+     "cagr": 0.016623,
+     "max_drawdown": -0.124347,
+     "dd_peak": "2024-07-05",
+     "dd_trough": "2024-08-09",
+     "worst_month": -0.007135,
+     "sharpe": 0.42718,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": -0.003315,
+      "2025": 0.016729
+     }
+    },
+    "port_oos": {
+     "total_return": 0.181525,
+     "cagr": 0.116472,
+     "max_drawdown": -0.086746,
+     "dd_peak": "2026-01-23",
+     "dd_trough": "2026-07-24",
+     "worst_month": -0.034799,
+     "sharpe": 1.969482,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.14776,
+      "2026": 0.029419
+     }
+    }
+   },
+   {
+    "name": "Ketahanan: sentimen ≥ 0 + keluar bila IHSG < SMA50 (2 hari)",
+    "params": {
+     "sentiment_min": 0,
+     "market_exit": "all",
+     "market_exit_ma": "sma50",
+     "market_exit_confirm": 2
+    },
+    "trades": {
+     "n": 781,
+     "win_rate": 0.422535,
+     "avg_ret": 0.018562,
+     "median_ret": -0.013617,
+     "profit_factor": 1.386173,
+     "avg_days": 19.201024,
+     "fill_rate": 0.694222,
+     "worst": -0.451755,
+     "best": 0.533533,
+     "in_sample": {
+      "n": 397,
+      "win_rate": 0.460957,
+      "avg_ret": 0.015197,
+      "median_ret": -0.003994,
+      "profit_factor": 1.488258,
+      "avg_days": 14.465995,
+      "fill_rate": 0.739292,
+      "worst": -0.3902,
+      "best": 0.506155
+     },
+     "out_sample": {
+      "n": 384,
+      "win_rate": 0.382812,
+      "avg_ret": 0.022041,
+      "median_ret": -0.038952,
+      "profit_factor": 1.336081,
+      "avg_days": 24.096354,
+      "fill_rate": 0.653061,
+      "worst": -0.451755,
+      "best": 0.533533
+     },
+     "by_year": {
+      "2024": {
+       "n": 380,
+       "win_rate": 0.452632,
+       "avg_ret": 0.010123,
+       "profit_factor": 1.319037
+      },
+      "2025": {
+       "n": 288,
+       "win_rate": 0.423611,
+       "avg_ret": 0.047836,
+       "profit_factor": 1.772928
+      },
+      "2026": {
+       "n": 113,
+       "win_rate": 0.318584,
+       "avg_ret": -0.027665,
+       "profit_factor": 0.591853
+      }
+     },
+     "outcomes": {
+      "MKT": 371,
+      "SL": 189,
+      "TIME": 129,
+      "TP2": 58,
+      "TP1+TIME": 23,
+      "TP1+MKT": 8,
+      "TP1+BE": 3
+     }
+    },
+    "portfolio": {
+     "total_return": 0.140437,
+     "cagr": 0.049422,
+     "max_drawdown": -0.208269,
+     "dd_peak": "2024-02-29",
+     "dd_trough": "2024-10-16",
+     "worst_month": -0.144439,
+     "sharpe": 0.41589,
+     "avg_exposure": 0.450315,
+     "trades": 148,
+     "win_rate": 0.412162,
+     "avg_trade": 0.009945,
+     "by_year": {
+      "2024": -0.165005,
+      "2025": 0.476317,
+      "2026": -0.074858
+     }
+    },
+    "port_is": {
+     "total_return": -0.128807,
+     "cagr": -0.109568,
+     "max_drawdown": -0.191901,
+     "dd_peak": "2024-03-01",
+     "dd_trough": "2024-10-11",
+     "worst_month": -0.099057,
+     "sharpe": -2.168815,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": -0.143678,
+      "2025": 0.017365
+     }
+    },
+    "port_oos": {
+     "total_return": 0.247702,
+     "cagr": 0.157391,
+     "max_drawdown": -0.186824,
+     "dd_peak": "2025-12-19",
+     "dd_trough": "2026-07-24",
+     "worst_month": -0.165453,
+     "sharpe": 1.934574,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.382713,
+      "2026": -0.097642
+     }
+    }
+   },
+   {
+    "name": "Ketahanan: sentimen ≥ 0 + keluar bila IHSG < EMA20",
+    "params": {
+     "sentiment_min": 0,
+     "market_exit": "all",
+     "market_exit_ma": "ema20",
+     "market_exit_confirm": 1
+    },
+    "trades": {
+     "n": 894,
+     "win_rate": 0.400447,
+     "avg_ret": 0.008611,
+     "median_ret": -0.013641,
+     "profit_factor": 1.214187,
+     "avg_days": 12.310962,
+     "fill_rate": 0.696262,
+     "worst": -0.3902,
+     "best": 0.506155,
+     "in_sample": {
+      "n": 446,
+      "win_rate": 0.439462,
+      "avg_ret": 0.010365,
+      "median_ret": -0.007314,
+      "profit_factor": 1.368687,
+      "avg_days": 9.724215,
+      "fill_rate": 0.740864,
+      "worst": -0.3902,
+      "best": 0.506155
+     },
+     "out_sample": {
+      "n": 448,
+      "win_rate": 0.361607,
+      "avg_ret": 0.006866,
+      "median_ret": -0.030407,
+      "profit_factor": 1.131419,
+      "avg_days": 14.886161,
+      "fill_rate": 0.656891,
+      "worst": -0.247612,
+      "best": 0.490141
+     },
+     "by_year": {
+      "2024": {
+       "n": 429,
+       "win_rate": 0.426573,
+       "avg_ret": 0.005702,
+       "profit_factor": 1.20052
+      },
+      "2025": {
+       "n": 332,
+       "win_rate": 0.388554,
+       "avg_ret": 0.025752,
+       "profit_factor": 1.519175
+      },
+      "2026": {
+       "n": 133,
+       "win_rate": 0.345865,
+       "avg_ret": -0.02479,
+       "profit_factor": 0.546902
+      }
+     },
+     "outcomes": {
+      "MKT": 703,
+      "SL": 120,
+      "TP2": 36,
+      "TP1+MKT": 34,
+      "TP1+BE": 1
+     }
+    },
+    "portfolio": {
+     "total_return": 0.102566,
+     "cagr": 0.036493,
+     "max_drawdown": -0.253482,
+     "dd_peak": "2025-09-24",
+     "dd_trough": "2026-09-16",
+     "worst_month": -0.095515,
+     "sharpe": 0.333,
+     "avg_exposure": 0.400821,
+     "trades": 217,
+     "win_rate": 0.43318,
+     "avg_trade": 0.005254,
+     "by_year": {
+      "2024": 0.087341,
+      "2025": 0.210755,
+      "2026": -0.162504
+     }
+    },
+    "port_is": {
+     "total_return": 0.133217,
+     "cagr": 0.110988,
+     "max_drawdown": -0.093956,
+     "dd_peak": "2024-03-01",
+     "dd_trough": "2024-08-09",
+     "worst_month": -0.029025,
+     "sharpe": 2.295797,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": 0.115065,
+      "2025": 0.016279
+     }
+    },
+    "port_oos": {
+     "total_return": -0.075,
+     "cagr": -0.050189,
+     "max_drawdown": -0.246395,
+     "dd_peak": "2025-09-26",
+     "dd_trough": "2026-09-18",
+     "worst_month": -0.097054,
+     "sharpe": -0.498923,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.084899,
+      "2026": -0.147386
      }
     }
    }
   ]
  },
- "seconds": 37
+ "seconds": 31
 }
