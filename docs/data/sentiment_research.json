@@ -1,0 +1,3376 @@
+{
+ "generated_at": "2026-11-08 20:59",
+ "demo": false,
+ "universe": 120,
+ "split_date": "2025-05-01",
+ "forward": {
+  "20d": {
+   "buckets": [
+    {
+     "bucket": "Sangat pesimis",
+     "days": 61,
+     "all": {
+      "days": 61,
+      "stock": 0.0074,
+      "trend": -0.0068,
+      "ihsg": -0.0046
+     },
+     "is": {
+      "days": 21,
+      "stock": 0.0505,
+      "trend": 0.0266,
+      "ihsg": 0.0393
+     },
+     "oos": {
+      "days": 40,
+      "stock": -0.0152,
+      "trend": -0.0235,
+      "ihsg": -0.0277
+     }
+    },
+    {
+     "bucket": "Pesimis",
+     "days": 131,
+     "all": {
+      "days": 131,
+      "stock": -0.0001,
+      "trend": -0.0065,
+      "ihsg": -0.0038
+     },
+     "is": {
+      "days": 82,
+      "stock": 0.0009,
+      "trend": -0.0214,
+      "ihsg": 0.0051
+     },
+     "oos": {
+      "days": 49,
+      "stock": -0.0017,
+      "trend": 0.0103,
+      "ihsg": -0.0187
+     }
+    },
+    {
+     "bucket": "Netral",
+     "days": 185,
+     "all": {
+      "days": 185,
+      "stock": 0.0004,
+      "trend": 0.0015,
+      "ihsg": -0.0114
+     },
+     "is": {
+      "days": 119,
+      "stock": -0.0023,
+      "trend": -0.0302,
+      "ihsg": -0.0077
+     },
+     "oos": {
+      "days": 66,
+      "stock": 0.0052,
+      "trend": 0.0193,
+      "ihsg": -0.018
+     }
+    },
+    {
+     "bucket": "Optimis",
+     "days": 256,
+     "all": {
+      "days": 256,
+      "stock": 0.0146,
+      "trend": 0.0247,
+      "ihsg": -0.0052
+     },
+     "is": {
+      "days": 87,
+      "stock": 0.0079,
+      "trend": 0.0028,
+      "ihsg": -0.0069
+     },
+     "oos": {
+      "days": 169,
+      "stock": 0.018,
+      "trend": 0.0286,
+      "ihsg": -0.0043
+     }
+    },
+    {
+     "bucket": "Sangat optimis",
+     "days": 43,
+     "all": {
+      "days": 43,
+      "stock": 0.0117,
+      "trend": 0.0171,
+      "ihsg": -0.0081
+     },
+     "is": {
+      "days": 22,
+      "stock": 0.0241,
+      "trend": 0.035,
+      "ihsg": 0.0114
+     },
+     "oos": {
+      "days": 21,
+      "stock": -0.0014,
+      "trend": 0.0103,
+      "ihsg": -0.0285
+     }
+    }
+   ],
+   "corr": 0.07
+  },
+  "60d": {
+   "buckets": [
+    {
+     "bucket": "Sangat pesimis",
+     "days": 55,
+     "all": {
+      "days": 55,
+      "stock": 0.078,
+      "trend": 0.046,
+      "ihsg": 0.0299
+     },
+     "is": {
+      "days": 21,
+      "stock": 0.1631,
+      "trend": 0.1402,
+      "ihsg": 0.1023
+     },
+     "oos": {
+      "days": 34,
+      "stock": 0.0255,
+      "trend": -0.0093,
+      "ihsg": -0.0148
+     }
+    },
+    {
+     "bucket": "Pesimis",
+     "days": 122,
+     "all": {
+      "days": 122,
+      "stock": 0.0096,
+      "trend": -0.0034,
+      "ihsg": -0.009
+     },
+     "is": {
+      "days": 82,
+      "stock": 0.0109,
+      "trend": -0.0203,
+      "ihsg": 0.0009
+     },
+     "oos": {
+      "days": 40,
+      "stock": 0.0069,
+      "trend": 0.0199,
+      "ihsg": -0.0295
+     }
+    },
+    {
+     "bucket": "Netral",
+     "days": 181,
+     "all": {
+      "days": 181,
+      "stock": 0.0092,
+      "trend": 0.0098,
+      "ihsg": -0.0171
+     },
+     "is": {
+      "days": 119,
+      "stock": 0.0088,
+      "trend": -0.036,
+      "ihsg": -0.0007
+     },
+     "oos": {
+      "days": 62,
+      "stock": 0.0098,
+      "trend": 0.0372,
+      "ihsg": -0.0486
+     }
+    },
+    {
+     "bucket": "Optimis",
+     "days": 236,
+     "all": {
+      "days": 236,
+      "stock": 0.0399,
+      "trend": 0.0682,
+      "ihsg": -0.0204
+     },
+     "is": {
+      "days": 87,
+      "stock": 0.0146,
+      "trend": -0.014,
+      "ihsg": -0.0208
+     },
+     "oos": {
+      "days": 149,
+      "stock": 0.0547,
+      "trend": 0.0847,
+      "ihsg": -0.0201
+     }
+    },
+    {
+     "bucket": "Sangat optimis",
+     "days": 42,
+     "all": {
+      "days": 42,
+      "stock": 0.064,
+      "trend": 0.069,
+      "ihsg": 0.0072
+     },
+     "is": {
+      "days": 22,
+      "stock": 0.0403,
+      "trend": -0.0091,
+      "ihsg": -0.0154
+     },
+     "oos": {
+      "days": 20,
+      "stock": 0.0901,
+      "trend": 0.1002,
+      "ihsg": 0.032
+     }
+    }
+   ],
+   "corr": 0.016
+  },
+  "distribution": {
+   "days": 696,
+   "mean": 2.2,
+   "share": {
+    "Sangat pesimis": 0.111,
+    "Pesimis": 0.194,
+    "Netral": 0.266,
+    "Optimis": 0.368,
+    "Sangat optimis": 0.062
+   }
+  }
+ },
+ "horizons": {
+  "short": [
+   {
+    "name": "Sekarang",
+    "params": {},
+    "trades": {
+     "n": 933,
+     "win_rate": 0.39657,
+     "avg_ret": -0.002053,
+     "median_ret": -0.030817,
+     "profit_factor": 0.95701,
+     "avg_days": 10.926045,
+     "fill_rate": 0.657042,
+     "worst": -0.366279,
+     "best": 0.316221,
+     "in_sample": {
+      "n": 201,
+      "win_rate": 0.333333,
+      "avg_ret": -0.017594,
+      "median_ret": -0.035941,
+      "profit_factor": 0.62429,
+      "avg_days": 11.487562,
+      "fill_rate": 0.681356,
+      "worst": -0.15155,
+      "best": 0.260432
+     },
+     "out_sample": {
+      "n": 732,
+      "win_rate": 0.413934,
+      "avg_ret": 0.002215,
+      "median_ret": -0.030309,
+      "profit_factor": 1.046146,
+      "avg_days": 10.771858,
+      "fill_rate": 0.650667,
+      "worst": -0.366279,
+      "best": 0.316221
+     },
+     "by_year": {
+      "2024": {
+       "n": 134,
+       "win_rate": 0.335821,
+       "avg_ret": -0.019192,
+       "profit_factor": 0.582402
+      },
+      "2025": {
+       "n": 532,
+       "win_rate": 0.43985,
+       "avg_ret": 0.013596,
+       "profit_factor": 1.323804
+      },
+      "2026": {
+       "n": 267,
+       "win_rate": 0.340824,
+       "avg_ret": -0.02463,
+       "profit_factor": 0.590312
+      }
+     },
+     "outcomes": {
+      "TIME": 385,
+      "SL": 382,
+      "TP2": 89,
+      "TP1+TIME": 57,
+      "TP1+BE": 20
+     }
+    },
+    "portfolio": {
+     "total_return": 0.130367,
+     "cagr": 0.058521,
+     "max_drawdown": -0.279984,
+     "dd_peak": "2024-12-09",
+     "dd_trough": "2025-06-25",
+     "worst_month": -0.08705,
+     "sharpe": 0.395422,
+     "avg_exposure": 0.553039,
+     "trades": 145,
+     "win_rate": 0.434483,
+     "avg_trade": 0.006444,
+     "by_year": {
+      "2024": -0.073816,
+      "2025": 0.227892,
+      "2026": -0.006056
+     }
+    },
+    "port_is": {
+     "total_return": -0.203969,
+     "cagr": -0.310621,
+     "max_drawdown": -0.233324,
+     "dd_peak": "2024-11-01",
+     "dd_trough": "2025-04-25",
+     "worst_month": -0.091512,
+     "sharpe": -4.743222,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": -0.071665,
+      "2025": -0.142518
+     }
+    },
+    "port_oos": {
+     "total_return": 0.408423,
+     "cagr": 0.253823,
+     "max_drawdown": -0.223922,
+     "dd_peak": "2026-01-16",
+     "dd_trough": "2026-07-03",
+     "worst_month": -0.070051,
+     "sharpe": 2.440855,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.344007,
+      "2026": 0.047928
+     }
+    }
+   },
+   {
+    "name": "Masuk bila sentimen ≥ −40",
+    "params": {
+     "sentiment_min": -40
+    },
+    "trades": {
+     "n": 912,
+     "win_rate": 0.404605,
+     "avg_ret": -0.000254,
+     "median_ret": -0.02907,
+     "profit_factor": 0.994606,
+     "avg_days": 11.006579,
+     "fill_rate": 0.652361,
+     "worst": -0.366279,
+     "best": 0.316221,
+     "in_sample": {
+      "n": 188,
+      "win_rate": 0.351064,
+      "avg_ret": -0.013986,
+      "median_ret": -0.028596,
+      "profit_factor": 0.688257,
+      "avg_days": 11.776596,
+      "fill_rate": 0.664311,
+      "worst": -0.121942,
+      "best": 0.260432
+     },
+     "out_sample": {
+      "n": 724,
+      "win_rate": 0.418508,
+      "avg_ret": 0.003312,
+      "median_ret": -0.02907,
+      "profit_factor": 1.069647,
+      "avg_days": 10.80663,
+      "fill_rate": 0.649327,
+      "worst": -0.366279,
+      "best": 0.316221
+     },
+     "by_year": {
+      "2024": {
+       "n": 134,
+       "win_rate": 0.335821,
+       "avg_ret": -0.019192,
+       "profit_factor": 0.582402
+      },
+      "2025": {
+       "n": 519,
+       "win_rate": 0.44894,
+       "avg_ret": 0.015684,
+       "profit_factor": 1.381099
+      },
+      "2026": {
+       "n": 259,
+       "win_rate": 0.351351,
+       "avg_ret": -0.022392,
+       "profit_factor": 0.6222
+      }
+     },
+     "outcomes": {
+      "TIME": 382,
+      "SL": 364,
+      "TP2": 89,
+      "TP1+TIME": 57,
+      "TP1+BE": 20
+     }
+    },
+    "portfolio": {
+     "total_return": 0.302477,
+     "cagr": 0.130486,
+     "max_drawdown": -0.193746,
+     "dd_peak": "2026-01-26",
+     "dd_trough": "2026-07-08",
+     "worst_month": -0.08705,
+     "sharpe": 0.781327,
+     "avg_exposure": 0.515252,
+     "trades": 134,
+     "win_rate": 0.470149,
+     "avg_trade": 0.012826,
+     "by_year": {
+      "2024": -0.073816,
+      "2025": 0.382579,
+      "2026": 0.017145
+     }
+    },
+    "port_is": {
+     "total_return": -0.106645,
+     "cagr": -0.167967,
+     "max_drawdown": -0.152235,
+     "dd_peak": "2024-11-01",
+     "dd_trough": "2025-02-07",
+     "worst_month": -0.087038,
+     "sharpe": -3.273038,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": -0.071665,
+      "2025": -0.037681
+     }
+    },
+    "port_oos": {
+     "total_return": 0.455633,
+     "cagr": 0.281427,
+     "max_drawdown": -0.178981,
+     "dd_peak": "2026-01-16",
+     "dd_trough": "2026-05-22",
+     "worst_month": -0.069619,
+     "sharpe": 2.731412,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.362316,
+      "2026": 0.068499
+     }
+    }
+   },
+   {
+    "name": "Masuk bila sentimen ≥ −20",
+    "params": {
+     "sentiment_min": -20
+    },
+    "trades": {
+     "n": 902,
+     "win_rate": 0.403548,
+     "avg_ret": 0.000118,
+     "median_ret": -0.02907,
+     "profit_factor": 1.002495,
+     "avg_days": 10.977827,
+     "fill_rate": 0.650324,
+     "worst": -0.366279,
+     "best": 0.316221,
+     "in_sample": {
+      "n": 181,
+      "win_rate": 0.348066,
+      "avg_ret": -0.013097,
+      "median_ret": -0.030817,
+      "profit_factor": 0.707121,
+      "avg_days": 11.734807,
+      "fill_rate": 0.665441,
+      "worst": -0.121942,
+      "best": 0.260432
+     },
+     "out_sample": {
+      "n": 721,
+      "win_rate": 0.417476,
+      "avg_ret": 0.003435,
+      "median_ret": -0.028587,
+      "profit_factor": 1.071994,
+      "avg_days": 10.787795,
+      "fill_rate": 0.646637,
+      "worst": -0.366279,
+      "best": 0.316221
+     },
+     "by_year": {
+      "2024": {
+       "n": 134,
+       "win_rate": 0.335821,
+       "avg_ret": -0.019192,
+       "profit_factor": 0.582402
+      },
+      "2025": {
+       "n": 512,
+       "win_rate": 0.451172,
+       "avg_ret": 0.016914,
+       "profit_factor": 1.412896
+      },
+      "2026": {
+       "n": 256,
+       "win_rate": 0.34375,
+       "avg_ret": -0.023369,
+       "profit_factor": 0.610553
+      }
+     },
+     "outcomes": {
+      "TIME": 371,
+      "SL": 362,
+      "TP2": 91,
+      "TP1+TIME": 58,
+      "TP1+BE": 20
+     }
+    },
+    "portfolio": {
+     "total_return": 0.197563,
+     "cagr": 0.087273,
+     "max_drawdown": -0.193637,
+     "dd_peak": "2024-12-09",
+     "dd_trough": "2025-06-25",
+     "worst_month": -0.08705,
+     "sharpe": 0.562271,
+     "avg_exposure": 0.503808,
+     "trades": 132,
+     "win_rate": 0.44697,
+     "avg_trade": 0.009252,
+     "by_year": {
+      "2024": -0.073816,
+      "2025": 0.364137,
+      "2026": -0.052143
+     }
+    },
+    "port_is": {
+     "total_return": -0.118873,
+     "cagr": -0.186457,
+     "max_drawdown": -0.155517,
+     "dd_peak": "2024-11-01",
+     "dd_trough": "2025-04-18",
+     "worst_month": -0.087038,
+     "sharpe": -3.796513,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": -0.071665,
+      "2025": -0.050853
+     }
+    },
+    "port_oos": {
+     "total_return": 0.373237,
+     "cagr": 0.233046,
+     "max_drawdown": -0.179226,
+     "dd_peak": "2026-01-16",
+     "dd_trough": "2026-05-22",
+     "worst_month": -0.070517,
+     "sharpe": 2.440843,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.378282,
+      "2026": -0.003661
+     }
+    }
+   },
+   {
+    "name": "Masuk bila sentimen ≥ 0",
+    "params": {
+     "sentiment_min": 0
+    },
+    "trades": {
+     "n": 875,
+     "win_rate": 0.411429,
+     "avg_ret": 0.00117,
+     "median_ret": -0.027429,
+     "profit_factor": 1.02511,
+     "avg_days": 11.008,
+     "fill_rate": 0.646711,
+     "worst": -0.366279,
+     "best": 0.316221,
+     "in_sample": {
+      "n": 154,
+      "win_rate": 0.38961,
+      "avg_ret": -0.008715,
+      "median_ret": -0.018341,
+      "profit_factor": 0.789046,
+      "avg_days": 12.064935,
+      "fill_rate": 0.631148,
+      "worst": -0.121942,
+      "best": 0.260432
+     },
+     "out_sample": {
+      "n": 721,
+      "win_rate": 0.416089,
+      "avg_ret": 0.003282,
+      "median_ret": -0.028587,
+      "profit_factor": 1.068754,
+      "avg_days": 10.782247,
+      "fill_rate": 0.650135,
+      "worst": -0.366279,
+      "best": 0.316221
+     },
+     "by_year": {
+      "2024": {
+       "n": 129,
+       "win_rate": 0.341085,
+       "avg_ret": -0.020101,
+       "profit_factor": 0.562586
+      },
+      "2025": {
+       "n": 489,
+       "win_rate": 0.464213,
+       "avg_ret": 0.019151,
+       "profit_factor": 1.479822
+      },
+      "2026": {
+       "n": 257,
+       "win_rate": 0.346304,
+       "avg_ret": -0.022365,
+       "profit_factor": 0.625055
+      }
+     },
+     "outcomes": {
+      "TIME": 363,
+      "SL": 347,
+      "TP2": 87,
+      "TP1+TIME": 58,
+      "TP1+BE": 20
+     }
+    },
+    "portfolio": {
+     "total_return": 0.432792,
+     "cagr": 0.18164,
+     "max_drawdown": -0.187285,
+     "dd_peak": "2026-01-26",
+     "dd_trough": "2026-05-19",
+     "worst_month": -0.080549,
+     "sharpe": 1.01678,
+     "avg_exposure": 0.475953,
+     "trades": 127,
+     "win_rate": 0.472441,
+     "avg_trade": 0.015915,
+     "by_year": {
+      "2024": -0.012572,
+      "2025": 0.485391,
+      "2026": -0.02313
+     }
+    },
+    "port_is": {
+     "total_return": -0.016939,
+     "cagr": -0.027473,
+     "max_drawdown": -0.05319,
+     "dd_peak": "2024-11-01",
+     "dd_trough": "2025-04-25",
+     "worst_month": -0.028191,
+     "sharpe": -0.935172,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": -0.011827,
+      "2025": -0.005173
+     }
+    },
+    "port_oos": {
+     "total_return": 0.419316,
+     "cagr": 0.260221,
+     "max_drawdown": -0.17554,
+     "dd_peak": "2026-01-16",
+     "dd_trough": "2026-05-22",
+     "worst_month": -0.070306,
+     "sharpe": 2.621822,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.376226,
+      "2026": 0.031311
+     }
+    }
+   },
+   {
+    "name": "Masuk bila sentimen ≥ +20",
+    "params": {
+     "sentiment_min": 20
+    },
+    "trades": {
+     "n": 824,
+     "win_rate": 0.40534,
+     "avg_ret": -0.001624,
+     "median_ret": -0.032795,
+     "profit_factor": 0.965671,
+     "avg_days": 10.981796,
+     "fill_rate": 0.63876,
+     "worst": -0.366279,
+     "best": 0.294808,
+     "in_sample": {
+      "n": 129,
+      "win_rate": 0.410853,
+      "avg_ret": -0.004931,
+      "median_ret": -0.016351,
+      "profit_factor": 0.87305,
+      "avg_days": 12.27907,
+      "fill_rate": 0.645,
+      "worst": -0.121171,
+      "best": 0.260432
+     },
+     "out_sample": {
+      "n": 695,
+      "win_rate": 0.404317,
+      "avg_ret": -0.00101,
+      "median_ret": -0.035959,
+      "profit_factor": 0.979333,
+      "avg_days": 10.741007,
+      "fill_rate": 0.637615,
+      "worst": -0.366279,
+      "best": 0.294808
+     },
+     "by_year": {
+      "2024": {
+       "n": 108,
+       "win_rate": 0.37037,
+       "avg_ret": -0.013579,
+       "profit_factor": 0.673993
+      },
+      "2025": {
+       "n": 449,
+       "win_rate": 0.458797,
+       "avg_ret": 0.017317,
+       "profit_factor": 1.430725
+      },
+      "2026": {
+       "n": 267,
+       "win_rate": 0.329588,
+       "avg_ret": -0.02864,
+       "profit_factor": 0.534646
+      }
+     },
+     "outcomes": {
+      "TIME": 338,
+      "SL": 334,
+      "TP2": 81,
+      "TP1+TIME": 51,
+      "TP1+BE": 20
+     }
+    },
+    "portfolio": {
+     "total_return": -0.1942,
+     "cagr": -0.095352,
+     "max_drawdown": -0.336157,
+     "dd_peak": "2025-12-12",
+     "dd_trough": "2026-10-02",
+     "worst_month": -0.164402,
+     "sharpe": -0.468339,
+     "avg_exposure": 0.441363,
+     "trades": 122,
+     "win_rate": 0.401639,
+     "avg_trade": -0.007698,
+     "by_year": {
+      "2024": 0.014496,
+      "2025": 0.177556,
+      "2026": -0.325479
+     }
+    },
+    "port_is": {
+     "total_return": 0.029267,
+     "cagr": 0.048162,
+     "max_drawdown": -0.021452,
+     "dd_peak": "2024-09-20",
+     "dd_trough": "2024-10-04",
+     "worst_month": -0.013324,
+     "sharpe": 1.932112,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": 0.016839,
+      "2025": 0.012223
+     }
+    },
+    "port_oos": {
+     "total_return": -0.218201,
+     "cagr": -0.150056,
+     "max_drawdown": -0.336134,
+     "dd_peak": "2025-12-12",
+     "dd_trough": "2026-10-02",
+     "worst_month": -0.164896,
+     "sharpe": -1.496852,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.159697,
+      "2026": -0.32586
+     }
+    }
+   },
+   {
+    "name": "Ganti filter IHSG: sentimen ≥ −20",
+    "params": {
+     "market_filter": "none",
+     "sentiment_min": -20
+    },
+    "trades": {
+     "n": 943,
+     "win_rate": 0.395546,
+     "avg_ret": -0.002376,
+     "median_ret": -0.033138,
+     "profit_factor": 0.950586,
+     "avg_days": 10.95228,
+     "fill_rate": 0.657143,
+     "worst": -0.366279,
+     "best": 0.316221,
+     "in_sample": {
+      "n": 194,
+      "win_rate": 0.360825,
+      "avg_ret": -0.013891,
+      "median_ret": -0.025229,
+      "profit_factor": 0.688655,
+      "avg_days": 11.752577,
+      "fill_rate": 0.67128,
+      "worst": -0.121942,
+      "best": 0.260432
+     },
+     "out_sample": {
+      "n": 749,
+      "win_rate": 0.404539,
+      "avg_ret": 0.000607,
+      "median_ret": -0.035261,
+      "profit_factor": 1.012387,
+      "avg_days": 10.744993,
+      "fill_rate": 0.653578,
+      "worst": -0.366279,
+      "best": 0.316221
+     },
+     "by_year": {
+      "2024": {
+       "n": 140,
+       "win_rate": 0.35,
+       "avg_ret": -0.018259,
+       "profit_factor": 0.596085
+      },
+      "2025": {
+       "n": 521,
+       "win_rate": 0.451056,
+       "avg_ret": 0.015703,
+       "profit_factor": 1.381211
+      },
+      "2026": {
+       "n": 282,
+       "win_rate": 0.315603,
+       "avg_ret": -0.027892,
+       "profit_factor": 0.551831
+      }
+     },
+     "outcomes": {
+      "SL": 391,
+      "TIME": 382,
+      "TP2": 91,
+      "TP1+TIME": 59,
+      "TP1+BE": 20
+     }
+    },
+    "portfolio": {
+     "total_return": 0.120308,
+     "cagr": 0.054139,
+     "max_drawdown": -0.240877,
+     "dd_peak": "2026-01-02",
+     "dd_trough": "2026-06-03",
+     "worst_month": -0.125925,
+     "sharpe": 0.383315,
+     "avg_exposure": 0.575948,
+     "trades": 144,
+     "win_rate": 0.423611,
+     "avg_trade": 0.005428,
+     "by_year": {
+      "2024": 0.000948,
+      "2025": 0.290979,
+      "2026": -0.133025
+     }
+    },
+    "port_is": {
+     "total_return": -0.10454,
+     "cagr": -0.164768,
+     "max_drawdown": -0.181388,
+     "dd_peak": "2024-11-01",
+     "dd_trough": "2025-02-28",
+     "worst_month": -0.108329,
+     "sharpe": -2.546753,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": 0.003207,
+      "2025": -0.107403
+     }
+    },
+    "port_oos": {
+     "total_return": 0.264019,
+     "cagr": 0.167366,
+     "max_drawdown": -0.240874,
+     "dd_peak": "2026-01-02",
+     "dd_trough": "2026-06-05",
+     "worst_month": -0.128743,
+     "sharpe": 1.739819,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.393546,
+      "2026": -0.092948
+     }
+    }
+   },
+   {
+    "name": "Ganti filter IHSG: sentimen ≥ 0",
+    "params": {
+     "market_filter": "none",
+     "sentiment_min": 0
+    },
+    "trades": {
+     "n": 894,
+     "win_rate": 0.409396,
+     "avg_ret": 0.000502,
+     "median_ret": -0.028287,
+     "profit_factor": 1.01064,
+     "avg_days": 10.995526,
+     "fill_rate": 0.650182,
+     "worst": -0.366279,
+     "best": 0.316221,
+     "in_sample": {
+      "n": 161,
+      "win_rate": 0.397516,
+      "avg_ret": -0.007213,
+      "median_ret": -0.017879,
+      "profit_factor": 0.823709,
+      "avg_days": 12.111801,
+      "fill_rate": 0.638889,
+      "worst": -0.121942,
+      "best": 0.260432
+     },
+     "out_sample": {
+      "n": 733,
+      "win_rate": 0.412005,
+      "avg_ret": 0.002196,
+      "median_ret": -0.030705,
+      "profit_factor": 1.045268,
+      "avg_days": 10.750341,
+      "fill_rate": 0.652716,
+      "worst": -0.366279,
+      "best": 0.316221
+     },
+     "by_year": {
+      "2024": {
+       "n": 136,
+       "win_rate": 0.352941,
+       "avg_ret": -0.017737,
+       "profit_factor": 0.607986
+      },
+      "2025": {
+       "n": 491,
+       "win_rate": 0.464358,
+       "avg_ret": 0.018907,
+       "profit_factor": 1.471611
+      },
+      "2026": {
+       "n": 267,
+       "win_rate": 0.337079,
+       "avg_ret": -0.024055,
+       "profit_factor": 0.606231
+      }
+     },
+     "outcomes": {
+      "TIME": 366,
+      "SL": 360,
+      "TP2": 89,
+      "TP1+TIME": 59,
+      "TP1+BE": 20
+     }
+    },
+    "portfolio": {
+     "total_return": 0.355821,
+     "cagr": 0.151743,
+     "max_drawdown": -0.189158,
+     "dd_peak": "2026-01-02",
+     "dd_trough": "2026-05-19",
+     "worst_month": -0.12683,
+     "sharpe": 0.891828,
+     "avg_exposure": 0.510117,
+     "trades": 132,
+     "win_rate": 0.44697,
+     "avg_trade": 0.01277,
+     "by_year": {
+      "2024": 0.021078,
+      "2025": 0.415183,
+      "2026": -0.061723
+     }
+    },
+    "port_is": {
+     "total_return": 0.01754,
+     "cagr": 0.028759,
+     "max_drawdown": -0.059042,
+     "dd_peak": "2024-11-01",
+     "dd_trough": "2025-04-25",
+     "worst_month": -0.023848,
+     "sharpe": 0.814328,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": 0.02155,
+      "2025": -0.003925
+     }
+    },
+    "port_oos": {
+     "total_return": 0.297789,
+     "cagr": 0.187873,
+     "max_drawdown": -0.189174,
+     "dd_peak": "2026-01-02",
+     "dd_trough": "2026-05-22",
+     "worst_month": -0.126776,
+     "sharpe": 2.035669,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.322676,
+      "2026": -0.018816
+     }
+    }
+   },
+   {
+    "name": "Keluar semua bila IHSG < SMA50",
+    "params": {
+     "market_exit": "all",
+     "market_exit_ma": "sma50",
+     "market_exit_confirm": 1
+    },
+    "trades": {
+     "n": 981,
+     "win_rate": 0.41896,
+     "avg_ret": 0.00663,
+     "median_ret": -0.009206,
+     "profit_factor": 1.196227,
+     "avg_days": 8.287462,
+     "fill_rate": 0.657507,
+     "worst": -0.366279,
+     "best": 0.304209,
+     "in_sample": {
+      "n": 218,
+      "win_rate": 0.422018,
+      "avg_ret": 0.001221,
+      "median_ret": -0.007434,
+      "profit_factor": 1.056668,
+      "avg_days": 5.880734,
+      "fill_rate": 0.687697,
+      "worst": -0.121171,
+      "best": 0.260432
+     },
+     "out_sample": {
+      "n": 763,
+      "win_rate": 0.418087,
+      "avg_ret": 0.008175,
+      "median_ret": -0.010298,
+      "profit_factor": 1.219261,
+      "avg_days": 8.975098,
+      "fill_rate": 0.649362,
+      "worst": -0.366279,
+      "best": 0.304209
+     },
+     "by_year": {
+      "2024": {
+       "n": 138,
+       "win_rate": 0.405797,
+       "avg_ret": -0.002124,
+       "profit_factor": 0.91052
+      },
+      "2025": {
+       "n": 560,
+       "win_rate": 0.451786,
+       "avg_ret": 0.017221,
+       "profit_factor": 1.481624
+      },
+      "2026": {
+       "n": 283,
+       "win_rate": 0.360424,
+       "avg_ret": -0.010059,
+       "profit_factor": 0.710886
+      }
+     },
+     "outcomes": {
+      "MKT": 342,
+      "TIME": 255,
+      "SL": 238,
+      "TP2": 80,
+      "TP1+TIME": 43,
+      "TP1+MKT": 12,
+      "TP1+BE": 11
+     }
+    },
+    "portfolio": {
+     "total_return": 0.389256,
+     "cagr": 0.164839,
+     "max_drawdown": -0.167111,
+     "dd_peak": "2024-10-24",
+     "dd_trough": "2025-04-24",
+     "worst_month": -0.098479,
+     "sharpe": 0.961366,
+     "avg_exposure": 0.385796,
+     "trades": 259,
+     "win_rate": 0.447876,
+     "avg_trade": 0.007606,
+     "by_year": {
+      "2024": 0.006241,
+      "2025": 0.365931,
+      "2026": 0.010768
+     }
+    },
+    "port_is": {
+     "total_return": -0.109452,
+     "cagr": -0.172225,
+     "max_drawdown": -0.142926,
+     "dd_peak": "2024-10-25",
+     "dd_trough": "2025-04-18",
+     "worst_month": -0.098489,
+     "sharpe": -3.29538,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": 0.00852,
+      "2025": -0.116975
+     }
+    },
+    "port_oos": {
+     "total_return": 0.550558,
+     "cagr": 0.336027,
+     "max_drawdown": -0.148347,
+     "dd_peak": "2026-01-09",
+     "dd_trough": "2026-07-31",
+     "worst_month": -0.03584,
+     "sharpe": 3.340511,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.461496,
+      "2026": 0.060939
+     }
+    }
+   },
+   {
+    "name": "Keluar semua bila sentimen < −40",
+    "params": {
+     "market_exit": "all",
+     "market_exit_ma": "sent:-40",
+     "market_exit_confirm": 1
+    },
+    "trades": {
+     "n": 938,
+     "win_rate": 0.404051,
+     "avg_ret": -0.000766,
+     "median_ret": -0.026814,
+     "profit_factor": 0.983253,
+     "avg_days": 10.411514,
+     "fill_rate": 0.656863,
+     "worst": -0.366279,
+     "best": 0.316221,
+     "in_sample": {
+      "n": 205,
+      "win_rate": 0.365854,
+      "avg_ret": -0.01348,
+      "median_ret": -0.023302,
+      "profit_factor": 0.668402,
+      "avg_days": 10.063415,
+      "fill_rate": 0.678808,
+      "worst": -0.121942,
+      "best": 0.260432
+     },
+     "out_sample": {
+      "n": 733,
+      "win_rate": 0.414734,
+      "avg_ret": 0.002789,
+      "median_ret": -0.028586,
+      "profit_factor": 1.059117,
+      "avg_days": 10.508868,
+      "fill_rate": 0.650977,
+      "worst": -0.366279,
+      "best": 0.316221
+     },
+     "by_year": {
+      "2024": {
+       "n": 134,
+       "win_rate": 0.358209,
+       "avg_ret": -0.018453,
+       "profit_factor": 0.577749
+      },
+      "2025": {
+       "n": 536,
+       "win_rate": 0.445896,
+       "avg_ret": 0.014752,
+       "profit_factor": 1.366729
+      },
+      "2026": {
+       "n": 268,
+       "win_rate": 0.343284,
+       "avg_ret": -0.022959,
+       "profit_factor": 0.603111
+      }
+     },
+     "outcomes": {
+      "SL": 358,
+      "TIME": 329,
+      "TP2": 87,
+      "MKT": 87,
+      "TP1+TIME": 52,
+      "TP1+BE": 20,
+      "TP1+MKT": 5
+     }
+    },
+    "portfolio": {
+     "total_return": 0.209506,
+     "cagr": 0.092292,
+     "max_drawdown": -0.237598,
+     "dd_peak": "2026-01-26",
+     "dd_trough": "2026-07-08",
+     "worst_month": -0.079207,
+     "sharpe": 0.580612,
+     "avg_exposure": 0.507386,
+     "trades": 158,
+     "win_rate": 0.443038,
+     "avg_trade": 0.007927,
+     "by_year": {
+      "2024": -0.065859,
+      "2025": 0.327604,
+      "2026": -0.024724
+     }
+    },
+    "port_is": {
+     "total_return": -0.145234,
+     "cagr": -0.225767,
+     "max_drawdown": -0.187856,
+     "dd_peak": "2024-11-01",
+     "dd_trough": "2025-04-11",
+     "worst_month": -0.079251,
+     "sharpe": -4.288474,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": -0.063747,
+      "2025": -0.087036
+     }
+    },
+    "port_oos": {
+     "total_return": 0.413132,
+     "cagr": 0.256591,
+     "max_drawdown": -0.222644,
+     "dd_peak": "2026-01-16",
+     "dd_trough": "2026-07-03",
+     "worst_month": -0.073932,
+     "sharpe": 2.472021,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.378666,
+      "2026": 0.025
+     }
+    }
+   },
+   {
+    "name": "Keluar semua bila sentimen < −20 (2 hari)",
+    "params": {
+     "market_exit": "all",
+     "market_exit_ma": "sent:-20",
+     "market_exit_confirm": 2
+    },
+    "trades": {
+     "n": 946,
+     "win_rate": 0.409091,
+     "avg_ret": 0.001106,
+     "median_ret": -0.02117,
+     "profit_factor": 1.025421,
+     "avg_days": 10.053911,
+     "fill_rate": 0.656033,
+     "worst": -0.366279,
+     "best": 0.316221,
+     "in_sample": {
+      "n": 208,
+      "win_rate": 0.389423,
+      "avg_ret": -0.009043,
+      "median_ret": -0.016101,
+      "profit_factor": 0.746125,
+      "avg_days": 9.225962,
+      "fill_rate": 0.679739,
+      "worst": -0.121942,
+      "best": 0.260432
+     },
+     "out_sample": {
+      "n": 738,
+      "win_rate": 0.414634,
+      "avg_ret": 0.003966,
+      "median_ret": -0.024259,
+      "profit_factor": 1.086741,
+      "avg_days": 10.287263,
+      "fill_rate": 0.649648,
+      "worst": -0.366279,
+      "best": 0.316221
+     },
+     "by_year": {
+      "2024": {
+       "n": 134,
+       "win_rate": 0.358209,
+       "avg_ret": -0.015343,
+       "profit_factor": 0.621352
+      },
+      "2025": {
+       "n": 539,
+       "win_rate": 0.45269,
+       "avg_ret": 0.015581,
+       "profit_factor": 1.399525
+      },
+      "2026": {
+       "n": 273,
+       "win_rate": 0.347985,
+       "avg_ret": -0.019399,
+       "profit_factor": 0.63988
+      }
+     },
+     "outcomes": {
+      "SL": 340,
+      "TIME": 312,
+      "MKT": 130,
+      "TP2": 88,
+      "TP1+TIME": 50,
+      "TP1+BE": 20,
+      "TP1+MKT": 6
+     }
+    },
+    "portfolio": {
+     "total_return": 0.192399,
+     "cagr": 0.085094,
+     "max_drawdown": -0.206503,
+     "dd_peak": "2024-12-09",
+     "dd_trough": "2025-06-25",
+     "worst_month": -0.079263,
+     "sharpe": 0.548792,
+     "avg_exposure": 0.480819,
+     "trades": 168,
+     "win_rate": 0.440476,
+     "avg_trade": 0.006761,
+     "by_year": {
+      "2024": -0.057401,
+      "2025": 0.320278,
+      "2026": -0.041859
+     }
+    },
+    "port_is": {
+     "total_return": -0.126892,
+     "cagr": -0.198494,
+     "max_drawdown": -0.173018,
+     "dd_peak": "2024-12-06",
+     "dd_trough": "2025-04-11",
+     "worst_month": -0.079222,
+     "sharpe": -3.750221,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": -0.055227,
+      "2025": -0.075854
+     }
+    },
+    "port_oos": {
+     "total_return": 0.363678,
+     "cagr": 0.22737,
+     "max_drawdown": -0.182043,
+     "dd_peak": "2026-01-16",
+     "dd_trough": "2026-07-10",
+     "worst_month": -0.067517,
+     "sharpe": 2.37918,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.354414,
+      "2026": 0.006839
+     }
+    }
+   },
+   {
+    "name": "Keluar semua bila sentimen < 0 (2 hari)",
+    "params": {
+     "market_exit": "all",
+     "market_exit_ma": "sent:0",
+     "market_exit_confirm": 2
+    },
+    "trades": {
+     "n": 952,
+     "win_rate": 0.413866,
+     "avg_ret": 0.003589,
+     "median_ret": -0.014222,
+     "profit_factor": 1.088235,
+     "avg_days": 9.619748,
+     "fill_rate": 0.657913,
+     "worst": -0.366279,
+     "best": 0.316221,
+     "in_sample": {
+      "n": 214,
+      "win_rate": 0.397196,
+      "avg_ret": -0.004407,
+      "median_ret": -0.010885,
+      "profit_factor": 0.846498,
+      "avg_days": 7.957944,
+      "fill_rate": 0.685897,
+      "worst": -0.121171,
+      "best": 0.260432
+     },
+     "out_sample": {
+      "n": 738,
+      "win_rate": 0.418699,
+      "avg_ret": 0.005908,
+      "median_ret": -0.020942,
+      "profit_factor": 1.133821,
+      "avg_days": 10.101626,
+      "fill_rate": 0.65022,
+      "worst": -0.366279,
+      "best": 0.316221
+     },
+     "by_year": {
+      "2024": {
+       "n": 136,
+       "win_rate": 0.367647,
+       "avg_ret": -0.012042,
+       "profit_factor": 0.661237
+      },
+      "2025": {
+       "n": 543,
+       "win_rate": 0.45488,
+       "avg_ret": 0.017389,
+       "profit_factor": 1.47197
+      },
+      "2026": {
+       "n": 273,
+       "win_rate": 0.355311,
+       "avg_ret": -0.016073,
+       "profit_factor": 0.683932
+      }
+     },
+     "outcomes": {
+      "SL": 310,
+      "TIME": 296,
+      "MKT": 182,
+      "TP2": 88,
+      "TP1+TIME": 48,
+      "TP1+BE": 19,
+      "TP1+MKT": 9
+     }
+    },
+    "portfolio": {
+     "total_return": 0.323537,
+     "cagr": 0.138933,
+     "max_drawdown": -0.180228,
+     "dd_peak": "2026-01-26",
+     "dd_trough": "2026-07-09",
+     "worst_month": -0.076828,
+     "sharpe": 0.827985,
+     "avg_exposure": 0.450187,
+     "trades": 193,
+     "win_rate": 0.46114,
+     "avg_trade": 0.008741,
+     "by_year": {
+      "2024": 0.022954,
+      "2025": 0.34738,
+      "2026": -0.039737
+     }
+    },
+    "port_is": {
+     "total_return": -0.055027,
+     "cagr": -0.088158,
+     "max_drawdown": -0.104145,
+     "dd_peak": "2024-12-13",
+     "dd_trough": "2025-04-18",
+     "worst_month": -0.07175,
+     "sharpe": -2.028925,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": 0.025358,
+      "2025": -0.078397
+     }
+    },
+    "port_oos": {
+     "total_return": 0.363309,
+     "cagr": 0.227151,
+     "max_drawdown": -0.167468,
+     "dd_peak": "2026-01-16",
+     "dd_trough": "2026-07-10",
+     "worst_month": -0.057497,
+     "sharpe": 2.379139,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.343428,
+      "2026": 0.014798
+     }
+    }
+   },
+   {
+    "name": "Sentimen ≥ −20 + keluar bila IHSG < SMA50",
+    "params": {
+     "sentiment_min": -20,
+     "market_exit": "all",
+     "market_exit_ma": "sma50",
+     "market_exit_confirm": 1
+    },
+    "trades": {
+     "n": 940,
+     "win_rate": 0.418085,
+     "avg_ret": 0.007447,
+     "median_ret": -0.009477,
+     "profit_factor": 1.215728,
+     "avg_days": 8.606383,
+     "fill_rate": 0.65097,
+     "worst": -0.366279,
+     "best": 0.304209,
+     "in_sample": {
+      "n": 194,
+      "win_rate": 0.407216,
+      "avg_ret": 0.002484,
+      "median_ret": -0.007434,
+      "profit_factor": 1.111251,
+      "avg_days": 6.489691,
+      "fill_rate": 0.67128,
+      "worst": -0.121171,
+      "best": 0.260432
+     },
+     "out_sample": {
+      "n": 746,
+      "win_rate": 0.420912,
+      "avg_ret": 0.008738,
+      "median_ret": -0.010206,
+      "profit_factor": 1.231821,
+      "avg_days": 9.156836,
+      "fill_rate": 0.645887,
+      "worst": -0.366279,
+      "best": 0.304209
+     },
+     "by_year": {
+      "2024": {
+       "n": 138,
+       "win_rate": 0.405797,
+       "avg_ret": -0.002124,
+       "profit_factor": 0.91052
+      },
+      "2025": {
+       "n": 536,
+       "win_rate": 0.447761,
+       "avg_ret": 0.018394,
+       "profit_factor": 1.501525
+      },
+      "2026": {
+       "n": 266,
+       "win_rate": 0.364662,
+       "avg_ret": -0.009647,
+       "profit_factor": 0.730313
+      }
+     },
+     "outcomes": {
+      "MKT": 306,
+      "TIME": 255,
+      "SL": 233,
+      "TP2": 80,
+      "TP1+TIME": 43,
+      "TP1+MKT": 12,
+      "TP1+BE": 11
+     }
+    },
+    "portfolio": {
+     "total_return": 0.534921,
+     "cagr": 0.22001,
+     "max_drawdown": -0.131028,
+     "dd_peak": "2024-10-24",
+     "dd_trough": "2025-01-30",
+     "worst_month": -0.091788,
+     "sharpe": 1.242761,
+     "avg_exposure": 0.388399,
+     "trades": 224,
+     "win_rate": 0.450893,
+     "avg_trade": 0.011044,
+     "by_year": {
+      "2024": 0.006241,
+      "2025": 0.435856,
+      "2026": 0.062363
+     }
+    },
+    "port_is": {
+     "total_return": -0.064548,
+     "cagr": -0.103092,
+     "max_drawdown": -0.114438,
+     "dd_peak": "2024-10-25",
+     "dd_trough": "2025-01-31",
+     "worst_month": -0.091731,
+     "sharpe": -1.697221,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": 0.00852,
+      "2025": -0.072451
+     }
+    },
+    "port_oos": {
+     "total_return": 0.63131,
+     "cagr": 0.381586,
+     "max_drawdown": -0.109751,
+     "dd_peak": "2026-01-09",
+     "dd_trough": "2026-02-27",
+     "worst_month": -0.02818,
+     "sharpe": 3.776107,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.464874,
+      "2026": 0.113618
+     }
+    }
+   },
+   {
+    "name": "Sentimen ≥ 0 + keluar bila IHSG < SMA50",
+    "params": {
+     "sentiment_min": 0,
+     "market_exit": "all",
+     "market_exit_ma": "sma50",
+     "market_exit_confirm": 1
+    },
+    "trades": {
+     "n": 906,
+     "win_rate": 0.424945,
+     "avg_ret": 0.007984,
+     "median_ret": -0.008701,
+     "profit_factor": 1.227648,
+     "avg_days": 8.875276,
+     "fill_rate": 0.644381,
+     "worst": -0.366279,
+     "best": 0.304209,
+     "in_sample": {
+      "n": 158,
+      "win_rate": 0.436709,
+      "avg_ret": 0.004572,
+      "median_ret": -0.003994,
+      "profit_factor": 1.198175,
+      "avg_days": 7.64557,
+      "fill_rate": 0.626984,
+      "worst": -0.121171,
+      "best": 0.260432
+     },
+     "out_sample": {
+      "n": 748,
+      "win_rate": 0.42246,
+      "avg_ret": 0.008704,
+      "median_ret": -0.010038,
+      "profit_factor": 1.231468,
+      "avg_days": 9.135027,
+      "fill_rate": 0.64818,
+      "worst": -0.366279,
+      "best": 0.304209
+     },
+     "by_year": {
+      "2024": {
+       "n": 130,
+       "win_rate": 0.407692,
+       "avg_ret": -0.002065,
+       "profit_factor": 0.916604
+      },
+      "2025": {
+       "n": 508,
+       "win_rate": 0.458661,
+       "avg_ret": 0.019834,
+       "profit_factor": 1.529488
+      },
+      "2026": {
+       "n": 268,
+       "win_rate": 0.369403,
+       "avg_ret": -0.009603,
+       "profit_factor": 0.729822
+      }
+     },
+     "outcomes": {
+      "MKT": 275,
+      "TIME": 255,
+      "SL": 231,
+      "TP2": 79,
+      "TP1+TIME": 43,
+      "TP1+MKT": 12,
+      "TP1+BE": 11
+     }
+    },
+    "portfolio": {
+     "total_return": 0.682018,
+     "cagr": 0.272943,
+     "max_drawdown": -0.128576,
+     "dd_peak": "2026-01-09",
+     "dd_trough": "2026-04-15",
+     "worst_month": -0.032436,
+     "sharpe": 1.506991,
+     "avg_exposure": 0.387109,
+     "trades": 196,
+     "win_rate": 0.479592,
+     "avg_trade": 0.014813,
+     "by_year": {
+      "2024": 0.012025,
+      "2025": 0.576591,
+      "2026": 0.054193
+     }
+    },
+    "port_is": {
+     "total_return": 0.018743,
+     "cagr": 0.030742,
+     "max_drawdown": -0.022093,
+     "dd_peak": "2024-10-25",
+     "dd_trough": "2025-04-18",
+     "worst_month": -0.018429,
+     "sharpe": 1.197541,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": 0.014333,
+      "2025": 0.004348
+     }
+    },
+    "port_oos": {
+     "total_return": 0.640655,
+     "cagr": 0.386808,
+     "max_drawdown": -0.113094,
+     "dd_peak": "2026-01-09",
+     "dd_trough": "2026-07-31",
+     "worst_month": -0.032503,
+     "sharpe": 3.734158,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.478248,
+      "2026": 0.109865
+     }
+    }
+   }
+  ],
+  "medium": [
+   {
+    "name": "Sekarang",
+    "params": {},
+    "trades": {
+     "n": 682,
+     "win_rate": 0.392962,
+     "avg_ret": 0.007275,
+     "median_ret": -0.053149,
+     "profit_factor": 1.103674,
+     "avg_days": 27.954545,
+     "fill_rate": 0.669284,
+     "worst": -0.451755,
+     "best": 0.533533,
+     "in_sample": {
+      "n": 303,
+      "win_rate": 0.425743,
+      "avg_ret": 0.002895,
+      "median_ret": -0.048476,
+      "profit_factor": 1.044628,
+      "avg_days": 29.326733,
+      "fill_rate": 0.709602,
+      "worst": -0.3902,
+      "best": 0.506155
+     },
+     "out_sample": {
+      "n": 379,
+      "win_rate": 0.366755,
+      "avg_ret": 0.010778,
+      "median_ret": -0.054973,
+      "profit_factor": 1.144813,
+      "avg_days": 26.85752,
+      "fill_rate": 0.640203,
+      "worst": -0.451755,
+      "best": 0.533533
+     },
+     "by_year": {
+      "2024": {
+       "n": 278,
+       "win_rate": 0.417266,
+       "avg_ret": -0.003555,
+       "profit_factor": 0.946311
+      },
+      "2025": {
+       "n": 287,
+       "win_rate": 0.445993,
+       "avg_ret": 0.047958,
+       "profit_factor": 1.75812
+      },
+      "2026": {
+       "n": 117,
+       "win_rate": 0.205128,
+       "avg_ret": -0.066785,
+       "profit_factor": 0.30847
+      }
+     },
+     "outcomes": {
+      "SL": 299,
+      "TIME": 274,
+      "TP2": 64,
+      "TP1+TIME": 38,
+      "TP1+BE": 7
+     }
+    },
+    "portfolio": {
+     "total_return": -0.17787,
+     "cagr": -0.068443,
+     "max_drawdown": -0.209192,
+     "dd_peak": "2024-10-22",
+     "dd_trough": "2025-04-24",
+     "worst_month": -0.122794,
+     "sharpe": -0.367292,
+     "avg_exposure": 0.577196,
+     "trades": 131,
+     "win_rate": 0.351145,
+     "avg_trade": -0.007944,
+     "by_year": {
+      "2024": -0.078217,
+      "2025": 0.02902,
+      "2026": -0.133261
+     }
+    },
+    "port_is": {
+     "total_return": -0.172264,
+     "cagr": -0.142847,
+     "max_drawdown": -0.192739,
+     "dd_peak": "2024-12-13",
+     "dd_trough": "2025-02-28",
+     "worst_month": -0.116729,
+     "sharpe": -2.052113,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": -0.067773,
+      "2025": -0.112088
+     }
+    },
+    "port_oos": {
+     "total_return": -0.066644,
+     "cagr": -0.044531,
+     "max_drawdown": -0.197474,
+     "dd_peak": "2025-10-03",
+     "dd_trough": "2026-07-24",
+     "worst_month": -0.144106,
+     "sharpe": -0.386918,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.103769,
+      "2026": -0.154392
+     }
+    }
+   },
+   {
+    "name": "Masuk bila sentimen ≥ −40",
+    "params": {
+     "sentiment_min": -40
+    },
+    "trades": {
+     "n": 682,
+     "win_rate": 0.392962,
+     "avg_ret": 0.007275,
+     "median_ret": -0.053149,
+     "profit_factor": 1.103674,
+     "avg_days": 27.954545,
+     "fill_rate": 0.669284,
+     "worst": -0.451755,
+     "best": 0.533533,
+     "in_sample": {
+      "n": 303,
+      "win_rate": 0.425743,
+      "avg_ret": 0.002895,
+      "median_ret": -0.048476,
+      "profit_factor": 1.044628,
+      "avg_days": 29.326733,
+      "fill_rate": 0.709602,
+      "worst": -0.3902,
+      "best": 0.506155
+     },
+     "out_sample": {
+      "n": 379,
+      "win_rate": 0.366755,
+      "avg_ret": 0.010778,
+      "median_ret": -0.054973,
+      "profit_factor": 1.144813,
+      "avg_days": 26.85752,
+      "fill_rate": 0.640203,
+      "worst": -0.451755,
+      "best": 0.533533
+     },
+     "by_year": {
+      "2024": {
+       "n": 278,
+       "win_rate": 0.417266,
+       "avg_ret": -0.003555,
+       "profit_factor": 0.946311
+      },
+      "2025": {
+       "n": 287,
+       "win_rate": 0.445993,
+       "avg_ret": 0.047958,
+       "profit_factor": 1.75812
+      },
+      "2026": {
+       "n": 117,
+       "win_rate": 0.205128,
+       "avg_ret": -0.066785,
+       "profit_factor": 0.30847
+      }
+     },
+     "outcomes": {
+      "SL": 299,
+      "TIME": 274,
+      "TP2": 64,
+      "TP1+TIME": 38,
+      "TP1+BE": 7
+     }
+    },
+    "portfolio": {
+     "total_return": -0.17787,
+     "cagr": -0.068443,
+     "max_drawdown": -0.209192,
+     "dd_peak": "2024-10-22",
+     "dd_trough": "2025-04-24",
+     "worst_month": -0.122794,
+     "sharpe": -0.367292,
+     "avg_exposure": 0.577196,
+     "trades": 131,
+     "win_rate": 0.351145,
+     "avg_trade": -0.007944,
+     "by_year": {
+      "2024": -0.078217,
+      "2025": 0.02902,
+      "2026": -0.133261
+     }
+    },
+    "port_is": {
+     "total_return": -0.172264,
+     "cagr": -0.142847,
+     "max_drawdown": -0.192739,
+     "dd_peak": "2024-12-13",
+     "dd_trough": "2025-02-28",
+     "worst_month": -0.116729,
+     "sharpe": -2.052113,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": -0.067773,
+      "2025": -0.112088
+     }
+    },
+    "port_oos": {
+     "total_return": -0.066644,
+     "cagr": -0.044531,
+     "max_drawdown": -0.197474,
+     "dd_peak": "2025-10-03",
+     "dd_trough": "2026-07-24",
+     "worst_month": -0.144106,
+     "sharpe": -0.386918,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.103769,
+      "2026": -0.154392
+     }
+    }
+   },
+   {
+    "name": "Masuk bila sentimen ≥ −20",
+    "params": {
+     "sentiment_min": -20
+    },
+    "trades": {
+     "n": 672,
+     "win_rate": 0.394345,
+     "avg_ret": 0.007441,
+     "median_ret": -0.051598,
+     "profit_factor": 1.106357,
+     "avg_days": 28.126488,
+     "fill_rate": 0.672,
+     "worst": -0.451755,
+     "best": 0.533533,
+     "in_sample": {
+      "n": 296,
+      "win_rate": 0.435811,
+      "avg_ret": 0.004824,
+      "median_ret": -0.033844,
+      "profit_factor": 1.076244,
+      "avg_days": 29.787162,
+      "fill_rate": 0.716707,
+      "worst": -0.3902,
+      "best": 0.506155
+     },
+     "out_sample": {
+      "n": 376,
+      "win_rate": 0.361702,
+      "avg_ret": 0.009502,
+      "median_ret": -0.059638,
+      "profit_factor": 1.12629,
+      "avg_days": 26.819149,
+      "fill_rate": 0.640545,
+      "worst": -0.451755,
+      "best": 0.533533
+     },
+     "by_year": {
+      "2024": {
+       "n": 271,
+       "win_rate": 0.428044,
+       "avg_ret": -0.001614,
+       "profit_factor": 0.974974
+      },
+      "2025": {
+       "n": 285,
+       "win_rate": 0.438596,
+       "avg_ret": 0.046157,
+       "profit_factor": 1.71746
+      },
+      "2026": {
+       "n": 116,
+       "win_rate": 0.206897,
+       "avg_ret": -0.066523,
+       "profit_factor": 0.311144
+      }
+     },
+     "outcomes": {
+      "SL": 293,
+      "TIME": 273,
+      "TP2": 63,
+      "TP1+TIME": 36,
+      "TP1+BE": 7
+     }
+    },
+    "portfolio": {
+     "total_return": -0.179258,
+     "cagr": -0.069747,
+     "max_drawdown": -0.229707,
+     "dd_peak": "2024-03-27",
+     "dd_trough": "2026-07-24",
+     "worst_month": -0.139105,
+     "sharpe": -0.360809,
+     "avg_exposure": 0.560635,
+     "trades": 129,
+     "win_rate": 0.317829,
+     "avg_trade": -0.009175,
+     "by_year": {
+      "2024": -0.06522,
+      "2025": 0.017836,
+      "2026": -0.13738
+     }
+    },
+    "port_is": {
+     "total_return": -0.129715,
+     "cagr": -0.110349,
+     "max_drawdown": -0.218373,
+     "dd_peak": "2024-03-29",
+     "dd_trough": "2025-02-28",
+     "worst_month": -0.116203,
+     "sharpe": -1.438142,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": -0.020746,
+      "2025": -0.111278
+     }
+    },
+    "port_oos": {
+     "total_return": -0.082094,
+     "cagr": -0.055007,
+     "max_drawdown": -0.189999,
+     "dd_peak": "2025-12-05",
+     "dd_trough": "2026-07-24",
+     "worst_month": -0.154608,
+     "sharpe": -0.473663,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.08366,
+      "2026": -0.152957
+     }
+    }
+   },
+   {
+    "name": "Masuk bila sentimen ≥ 0",
+    "params": {
+     "sentiment_min": 0
+    },
+    "trades": {
+     "n": 661,
+     "win_rate": 0.400908,
+     "avg_ret": 0.010175,
+     "median_ret": -0.050591,
+     "profit_factor": 1.147503,
+     "avg_days": 28.231467,
+     "fill_rate": 0.669706,
+     "worst": -0.451755,
+     "best": 0.533533,
+     "in_sample": {
+      "n": 291,
+      "win_rate": 0.443299,
+      "avg_ret": 0.006958,
+      "median_ret": -0.032519,
+      "profit_factor": 1.112774,
+      "avg_days": 30.0,
+      "fill_rate": 0.711491,
+      "worst": -0.3902,
+      "best": 0.506155
+     },
+     "out_sample": {
+      "n": 370,
+      "win_rate": 0.367568,
+      "avg_ret": 0.012706,
+      "median_ret": -0.056288,
+      "profit_factor": 1.170059,
+      "avg_days": 26.840541,
+      "fill_rate": 0.640138,
+      "worst": -0.451755,
+      "best": 0.533533
+     },
+     "by_year": {
+      "2024": {
+       "n": 274,
+       "win_rate": 0.430657,
+       "avg_ret": -0.000427,
+       "profit_factor": 0.993371
+      },
+      "2025": {
+       "n": 274,
+       "win_rate": 0.448905,
+       "avg_ret": 0.051924,
+       "profit_factor": 1.833002
+      },
+      "2026": {
+       "n": 113,
+       "win_rate": 0.212389,
+       "avg_ret": -0.065348,
+       "profit_factor": 0.320659
+      }
+     },
+     "outcomes": {
+      "SL": 286,
+      "TIME": 270,
+      "TP2": 64,
+      "TP1+TIME": 36,
+      "TP1+BE": 5
+     }
+    },
+    "portfolio": {
+     "total_return": 0.116138,
+     "cagr": 0.041158,
+     "max_drawdown": -0.196554,
+     "dd_peak": "2025-12-17",
+     "dd_trough": "2026-07-24",
+     "worst_month": -0.137458,
+     "sharpe": 0.34045,
+     "avg_exposure": 0.548708,
+     "trades": 122,
+     "win_rate": 0.368852,
+     "avg_trade": 0.011654,
+     "by_year": {
+      "2024": -0.014019,
+      "2025": 0.259156,
+      "2026": -0.100978
+     }
+    },
+    "port_is": {
+     "total_return": -0.001743,
+     "cagr": -0.001467,
+     "max_drawdown": -0.09743,
+     "dd_peak": "2024-03-22",
+     "dd_trough": "2024-07-26",
+     "worst_month": -0.056814,
+     "sharpe": 0.156732,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": 0.010973,
+      "2025": -0.012579
+     }
+    },
+    "port_oos": {
+     "total_return": 0.063966,
+     "cagr": 0.041802,
+     "max_drawdown": -0.186927,
+     "dd_peak": "2025-12-05",
+     "dd_trough": "2026-07-24",
+     "worst_month": -0.153652,
+     "sharpe": 0.698433,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.206101,
+      "2026": -0.117847
+     }
+    }
+   },
+   {
+    "name": "Masuk bila sentimen ≥ +20",
+    "params": {
+     "sentiment_min": 20
+    },
+    "trades": {
+     "n": 675,
+     "win_rate": 0.402963,
+     "avg_ret": 0.017489,
+     "median_ret": -0.047299,
+     "profit_factor": 1.254392,
+     "avg_days": 28.333333,
+     "fill_rate": 0.676353,
+     "worst": -0.3902,
+     "best": 0.542426,
+     "in_sample": {
+      "n": 251,
+      "win_rate": 0.454183,
+      "avg_ret": 0.014226,
+      "median_ret": -0.027628,
+      "profit_factor": 1.245907,
+      "avg_days": 31.043825,
+      "fill_rate": 0.697222,
+      "worst": -0.3902,
+      "best": 0.506155
+     },
+     "out_sample": {
+      "n": 424,
+      "win_rate": 0.372642,
+      "avg_ret": 0.01942,
+      "median_ret": -0.056222,
+      "profit_factor": 1.258255,
+      "avg_days": 26.728774,
+      "fill_rate": 0.664577,
+      "worst": -0.383866,
+      "best": 0.542426
+     },
+     "by_year": {
+      "2024": {
+       "n": 234,
+       "win_rate": 0.440171,
+       "avg_ret": 0.006106,
+       "profit_factor": 1.100519
+      },
+      "2025": {
+       "n": 312,
+       "win_rate": 0.451923,
+       "avg_ret": 0.059498,
+       "profit_factor": 1.948581
+      },
+      "2026": {
+       "n": 129,
+       "win_rate": 0.217054,
+       "avg_ret": -0.063468,
+       "profit_factor": 0.35123
+      }
+     },
+     "outcomes": {
+      "SL": 290,
+      "TIME": 262,
+      "TP2": 74,
+      "TP1+TIME": 40,
+      "TP1+BE": 9
+     }
+    },
+    "portfolio": {
+     "total_return": 0.620825,
+     "cagr": 0.195464,
+     "max_drawdown": -0.225602,
+     "dd_peak": "2024-03-26",
+     "dd_trough": "2024-08-05",
+     "worst_month": -0.088364,
+     "sharpe": 1.190694,
+     "avg_exposure": 0.490811,
+     "trades": 101,
+     "win_rate": 0.445545,
+     "avg_trade": 0.043422,
+     "by_year": {
+      "2024": -0.059867,
+      "2025": 0.511516,
+      "2026": 0.140601
+     }
+    },
+    "port_is": {
+     "total_return": -0.040843,
+     "cagr": -0.035041,
+     "max_drawdown": -0.214091,
+     "dd_peak": "2024-03-29",
+     "dd_trough": "2024-08-09",
+     "worst_month": -0.088505,
+     "sharpe": -0.579475,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": -0.056598,
+      "2025": 0.0167
+     }
+    },
+    "port_oos": {
+     "total_return": 0.572981,
+     "cagr": 0.348757,
+     "max_drawdown": -0.102232,
+     "dd_peak": "2026-01-23",
+     "dd_trough": "2026-02-13",
+     "worst_month": -0.01463,
+     "sharpe": 3.639108,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.315994,
+      "2026": 0.19528
+     }
+    }
+   },
+   {
+    "name": "Ganti filter IHSG: sentimen ≥ −20",
+    "params": {
+     "market_filter": "none",
+     "sentiment_min": -20
+    },
+    "trades": {
+     "n": 774,
+     "win_rate": 0.365633,
+     "avg_ret": -0.002842,
+     "median_ret": -0.074639,
+     "profit_factor": 0.962295,
+     "avg_days": 27.169251,
+     "fill_rate": 0.683142,
+     "worst": -0.451755,
+     "best": 0.522597,
+     "in_sample": {
+      "n": 324,
+      "win_rate": 0.407407,
+      "avg_ret": -0.002149,
+      "median_ret": -0.056997,
+      "profit_factor": 0.968675,
+      "avg_days": 28.944444,
+      "fill_rate": 0.731377,
+      "worst": -0.3902,
+      "best": 0.522597
+     },
+     "out_sample": {
+      "n": 450,
+      "win_rate": 0.335556,
+      "avg_ret": -0.003341,
+      "median_ret": -0.082308,
+      "profit_factor": 0.958368,
+      "avg_days": 25.891111,
+      "fill_rate": 0.652174,
+      "worst": -0.451755,
+      "best": 0.521676
+     },
+     "by_year": {
+      "2024": {
+       "n": 271,
+       "win_rate": 0.409594,
+       "avg_ret": -0.003858,
+       "profit_factor": 0.941086
+      },
+      "2025": {
+       "n": 296,
+       "win_rate": 0.429054,
+       "avg_ret": 0.040543,
+       "profit_factor": 1.603125
+      },
+      "2026": {
+       "n": 207,
+       "win_rate": 0.217391,
+       "avg_ret": -0.063551,
+       "profit_factor": 0.364497
+      }
+     },
+     "outcomes": {
+      "SL": 369,
+      "TIME": 286,
+      "TP2": 62,
+      "TP1+TIME": 46,
+      "TP1+BE": 11
+     }
+    },
+    "portfolio": {
+     "total_return": -0.241392,
+     "cagr": -0.096166,
+     "max_drawdown": -0.346073,
+     "dd_peak": "2025-12-17",
+     "dd_trough": "2026-10-19",
+     "worst_month": -0.14905,
+     "sharpe": -0.439333,
+     "avg_exposure": 0.731724,
+     "trades": 166,
+     "win_rate": 0.36747,
+     "avg_trade": -0.010334,
+     "by_year": {
+      "2024": -0.093518,
+      "2025": 0.218383,
+      "2026": -0.31313
+     }
+    },
+    "port_is": {
+     "total_return": -0.050608,
+     "cagr": -0.042765,
+     "max_drawdown": -0.170703,
+     "dd_peak": "2024-03-29",
+     "dd_trough": "2025-02-28",
+     "worst_month": -0.093359,
+     "sharpe": -0.375597,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": -0.043902,
+      "2025": -0.007014
+     }
+    },
+    "port_oos": {
+     "total_return": -0.191086,
+     "cagr": -0.130698,
+     "max_drawdown": -0.343317,
+     "dd_peak": "2025-12-19",
+     "dd_trough": "2026-10-23",
+     "worst_month": -0.167582,
+     "sharpe": -1.311588,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.203881,
+      "2026": -0.328078
+     }
+    }
+   },
+   {
+    "name": "Ganti filter IHSG: sentimen ≥ 0",
+    "params": {
+     "market_filter": "none",
+     "sentiment_min": 0
+    },
+    "trades": {
+     "n": 718,
+     "win_rate": 0.373259,
+     "avg_ret": 0.002916,
+     "median_ret": -0.068184,
+     "profit_factor": 1.039657,
+     "avg_days": 27.649025,
+     "fill_rate": 0.677358,
+     "worst": -0.451755,
+     "best": 0.522597,
+     "in_sample": {
+      "n": 283,
+      "win_rate": 0.420495,
+      "avg_ret": 0.009445,
+      "median_ret": -0.038681,
+      "profit_factor": 1.149263,
+      "avg_days": 29.929329,
+      "fill_rate": 0.718274,
+      "worst": -0.3902,
+      "best": 0.522597
+     },
+     "out_sample": {
+      "n": 435,
+      "win_rate": 0.342529,
+      "avg_ret": -0.001332,
+      "median_ret": -0.084866,
+      "profit_factor": 0.983398,
+      "avg_days": 26.165517,
+      "fill_rate": 0.653153,
+      "worst": -0.451755,
+      "best": 0.521676
+     },
+     "by_year": {
+      "2024": {
+       "n": 262,
+       "win_rate": 0.400763,
+       "avg_ret": -0.001678,
+       "profit_factor": 0.974914
+      },
+      "2025": {
+       "n": 263,
+       "win_rate": 0.467681,
+       "avg_ret": 0.060112,
+       "profit_factor": 2.017097
+      },
+      "2026": {
+       "n": 193,
+       "win_rate": 0.207254,
+       "avg_ret": -0.068789,
+       "profit_factor": 0.327082
+      }
+     },
+     "outcomes": {
+      "SL": 334,
+      "TIME": 270,
+      "TP2": 62,
+      "TP1+TIME": 44,
+      "TP1+BE": 8
+     }
+    },
+    "portfolio": {
+     "total_return": -0.243687,
+     "cagr": -0.097446,
+     "max_drawdown": -0.356629,
+     "dd_peak": "2025-12-17",
+     "dd_trough": "2026-07-17",
+     "worst_month": -0.147769,
+     "sharpe": -0.514205,
+     "avg_exposure": 0.633856,
+     "trades": 143,
+     "win_rate": 0.34965,
+     "avg_trade": -0.013105,
+     "by_year": {
+      "2024": -0.224218,
+      "2025": 0.358686,
+      "2026": -0.282466
+     }
+    },
+    "port_is": {
+     "total_return": -0.158035,
+     "cagr": -0.134777,
+     "max_drawdown": -0.277012,
+     "dd_peak": "2024-03-22",
+     "dd_trough": "2024-11-22",
+     "worst_month": -0.08347,
+     "sharpe": -1.637798,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": -0.213106,
+      "2025": 0.069986
+     }
+    },
+    "port_oos": {
+     "total_return": -0.127782,
+     "cagr": -0.086342,
+     "max_drawdown": -0.35417,
+     "dd_peak": "2025-12-19",
+     "dd_trough": "2026-07-17",
+     "worst_month": -0.165924,
+     "sharpe": -0.702882,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.242071,
+      "2026": -0.297772
+     }
+    }
+   },
+   {
+    "name": "Keluar semua bila IHSG < SMA50",
+    "params": {
+     "market_exit": "all",
+     "market_exit_ma": "sma50",
+     "market_exit_confirm": 1
+    },
+    "trades": {
+     "n": 899,
+     "win_rate": 0.399333,
+     "avg_ret": 0.011084,
+     "median_ret": -0.016278,
+     "profit_factor": 1.244307,
+     "avg_days": 15.539488,
+     "fill_rate": 0.689946,
+     "worst": -0.451755,
+     "best": 0.533533,
+     "in_sample": {
+      "n": 452,
+      "win_rate": 0.424779,
+      "avg_ret": 0.006707,
+      "median_ret": -0.009222,
+      "profit_factor": 1.215493,
+      "avg_days": 11.188053,
+      "fill_rate": 0.740984,
+      "worst": -0.3902,
+      "best": 0.506155
+     },
+     "out_sample": {
+      "n": 447,
+      "win_rate": 0.373602,
+      "avg_ret": 0.015511,
+      "median_ret": -0.033505,
+      "profit_factor": 1.259477,
+      "avg_days": 19.939597,
+      "fill_rate": 0.645022,
+      "worst": -0.451755,
+      "best": 0.533533
+     },
+     "by_year": {
+      "2024": {
+       "n": 424,
+       "win_rate": 0.415094,
+       "avg_ret": 0.002807,
+       "profit_factor": 1.088037
+      },
+      "2025": {
+       "n": 356,
+       "win_rate": 0.424157,
+       "avg_ret": 0.034435,
+       "profit_factor": 1.631244
+      },
+      "2026": {
+       "n": 119,
+       "win_rate": 0.268908,
+       "avg_ret": -0.029276,
+       "profit_factor": 0.556267
+      }
+     },
+     "outcomes": {
+      "MKT": 558,
+      "SL": 169,
+      "TIME": 81,
+      "TP2": 56,
+      "TP1+MKT": 19,
+      "TP1+TIME": 14,
+      "TP1+BE": 2
+     }
+    },
+    "portfolio": {
+     "total_return": 0.354275,
+     "cagr": 0.116032,
+     "max_drawdown": -0.163578,
+     "dd_peak": "2024-02-01",
+     "dd_trough": "2024-08-05",
+     "worst_month": -0.077238,
+     "sharpe": 0.813599,
+     "avg_exposure": 0.443502,
+     "trades": 185,
+     "win_rate": 0.459459,
+     "avg_trade": 0.015444,
+     "by_year": {
+      "2024": 0.028675,
+      "2025": 0.23472,
+      "2026": 0.066253
+     }
+    },
+    "port_is": {
+     "total_return": 0.059175,
+     "cagr": 0.047987,
+     "max_drawdown": -0.137063,
+     "dd_peak": "2024-02-02",
+     "dd_trough": "2024-08-16",
+     "worst_month": -0.027721,
+     "sharpe": 1.123882,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": 0.040562,
+      "2025": 0.017887
+     }
+    },
+    "port_oos": {
+     "total_return": 0.20094,
+     "cagr": 0.128555,
+     "max_drawdown": -0.098294,
+     "dd_peak": "2025-06-13",
+     "dd_trough": "2025-06-27",
+     "worst_month": -0.071318,
+     "sharpe": 1.744293,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.174603,
+      "2026": 0.022422
+     }
+    }
+   },
+   {
+    "name": "Keluar semua bila sentimen < −40",
+    "params": {
+     "market_exit": "all",
+     "market_exit_ma": "sent:-40",
+     "market_exit_confirm": 1
+    },
+    "trades": {
+     "n": 693,
+     "win_rate": 0.395382,
+     "avg_ret": 0.012419,
+     "median_ret": -0.038447,
+     "profit_factor": 1.197875,
+     "avg_days": 24.988456,
+     "fill_rate": 0.671512,
+     "worst": -0.451755,
+     "best": 0.533533,
+     "in_sample": {
+      "n": 314,
+      "win_rate": 0.410828,
+      "avg_ret": 0.003878,
+      "median_ret": -0.036086,
+      "profit_factor": 1.066753,
+      "avg_days": 25.16242,
+      "fill_rate": 0.713636,
+      "worst": -0.3902,
+      "best": 0.506155
+     },
+     "out_sample": {
+      "n": 379,
+      "win_rate": 0.382586,
+      "avg_ret": 0.019496,
+      "median_ret": -0.038725,
+      "profit_factor": 1.292582,
+      "avg_days": 24.844327,
+      "fill_rate": 0.640203,
+      "worst": -0.451755,
+      "best": 0.533533
+     },
+     "by_year": {
+      "2024": {
+       "n": 286,
+       "win_rate": 0.402098,
+       "avg_ret": -0.003607,
+       "profit_factor": 0.940736
+      },
+      "2025": {
+       "n": 290,
+       "win_rate": 0.444828,
+       "avg_ret": 0.047488,
+       "profit_factor": 1.776309
+      },
+      "2026": {
+       "n": 117,
+       "win_rate": 0.25641,
+       "avg_ret": -0.035325,
+       "profit_factor": 0.504831
+      }
+     },
+     "outcomes": {
+      "SL": 249,
+      "TIME": 200,
+      "MKT": 140,
+      "TP2": 63,
+      "TP1+TIME": 32,
+      "TP1+MKT": 6,
+      "TP1+BE": 3
+     }
+    },
+    "portfolio": {
+     "total_return": -0.086596,
+     "cagr": -0.032257,
+     "max_drawdown": -0.212819,
+     "dd_peak": "2024-02-01",
+     "dd_trough": "2025-01-23",
+     "worst_month": -0.122046,
+     "sharpe": -0.140376,
+     "avg_exposure": 0.531523,
+     "trades": 136,
+     "win_rate": 0.338235,
+     "avg_trade": -0.002882,
+     "by_year": {
+      "2024": -0.201399,
+      "2025": 0.230809,
+      "2026": -0.070729
+     }
+    },
+    "port_is": {
+     "total_return": -0.143941,
+     "cagr": -0.11901,
+     "max_drawdown": -0.192191,
+     "dd_peak": "2024-02-02",
+     "dd_trough": "2024-12-20",
+     "worst_month": -0.085747,
+     "sharpe": -1.904945,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": -0.192191,
+      "2025": 0.05973
+     }
+    },
+    "port_oos": {
+     "total_return": 0.002965,
+     "cagr": 0.001957,
+     "max_drawdown": -0.189336,
+     "dd_peak": "2025-10-03",
+     "dd_trough": "2026-07-24",
+     "worst_month": -0.142999,
+     "sharpe": 0.208554,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.105743,
+      "2026": -0.092949
+     }
+    }
+   },
+   {
+    "name": "Keluar semua bila sentimen < −20 (2 hari)",
+    "params": {
+     "market_exit": "all",
+     "market_exit_ma": "sent:-20",
+     "market_exit_confirm": 2
+    },
+    "trades": {
+     "n": 736,
+     "win_rate": 0.384511,
+     "avg_ret": 0.012091,
+     "median_ret": -0.032409,
+     "profit_factor": 1.207115,
+     "avg_days": 22.057065,
+     "fill_rate": 0.673993,
+     "worst": -0.451755,
+     "best": 0.533533,
+     "in_sample": {
+      "n": 332,
+      "win_rate": 0.418675,
+      "avg_ret": 0.007528,
+      "median_ret": -0.018392,
+      "profit_factor": 1.152486,
+      "avg_days": 21.605422,
+      "fill_rate": 0.713978,
+      "worst": -0.3902,
+      "best": 0.506155
+     },
+     "out_sample": {
+      "n": 404,
+      "win_rate": 0.356436,
+      "avg_ret": 0.015841,
+      "median_ret": -0.044661,
+      "profit_factor": 1.240806,
+      "avg_days": 22.428218,
+      "fill_rate": 0.644338,
+      "worst": -0.451755,
+      "best": 0.533533
+     },
+     "by_year": {
+      "2024": {
+       "n": 304,
+       "win_rate": 0.401316,
+       "avg_ret": 0.000817,
+       "profit_factor": 1.015795
+      },
+      "2025": {
+       "n": 315,
+       "win_rate": 0.415873,
+       "avg_ret": 0.040583,
+       "profit_factor": 1.676242
+      },
+      "2026": {
+       "n": 117,
+       "win_rate": 0.25641,
+       "avg_ret": -0.035325,
+       "profit_factor": 0.504831
+      }
+     },
+     "outcomes": {
+      "MKT": 266,
+      "SL": 229,
+      "TIME": 139,
+      "TP2": 60,
+      "TP1+TIME": 23,
+      "TP1+MKT": 16,
+      "TP1+BE": 3
+     }
+    },
+    "portfolio": {
+     "total_return": 0.336603,
+     "cagr": 0.110739,
+     "max_drawdown": -0.192733,
+     "dd_peak": "2025-12-17",
+     "dd_trough": "2026-07-24",
+     "worst_month": -0.144814,
+     "sharpe": 0.79454,
+     "avg_exposure": 0.491338,
+     "trades": 150,
+     "win_rate": 0.386667,
+     "avg_trade": 0.01778,
+     "by_year": {
+      "2024": -0.054016,
+      "2025": 0.558544,
+      "2026": -0.093434
+     }
+    },
+    "port_is": {
+     "total_return": 0.030825,
+     "cagr": 0.025061,
+     "max_drawdown": -0.117537,
+     "dd_peak": "2024-09-06",
+     "dd_trough": "2024-12-20",
+     "worst_month": -0.086079,
+     "sharpe": 0.553935,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": -0.040763,
+      "2025": 0.07463
+     }
+    },
+    "port_oos": {
+     "total_return": 0.220305,
+     "cagr": 0.140542,
+     "max_drawdown": -0.186947,
+     "dd_peak": "2025-12-19",
+     "dd_trough": "2026-07-24",
+     "worst_month": -0.16552,
+     "sharpe": 1.734865,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.379531,
+      "2026": -0.11542
+     }
+    }
+   },
+   {
+    "name": "Keluar semua bila sentimen < 0 (2 hari)",
+    "params": {
+     "market_exit": "all",
+     "market_exit_ma": "sent:0",
+     "market_exit_confirm": 2
+    },
+    "trades": {
+     "n": 771,
+     "win_rate": 0.392996,
+     "avg_ret": 0.010988,
+     "median_ret": -0.02219,
+     "profit_factor": 1.207214,
+     "avg_days": 19.287938,
+     "fill_rate": 0.671018,
+     "worst": -0.451755,
+     "best": 0.533533,
+     "in_sample": {
+      "n": 348,
+      "win_rate": 0.402299,
+      "avg_ret": 0.001441,
+      "median_ret": -0.013889,
+      "profit_factor": 1.033212,
+      "avg_days": 17.172414,
+      "fill_rate": 0.705882,
+      "worst": -0.3902,
+      "best": 0.506155
+     },
+     "out_sample": {
+      "n": 423,
+      "win_rate": 0.385343,
+      "avg_ret": 0.018843,
+      "median_ret": -0.035976,
+      "profit_factor": 1.309073,
+      "avg_days": 21.028369,
+      "fill_rate": 0.644817,
+      "worst": -0.451755,
+      "best": 0.533533
+     },
+     "by_year": {
+      "2024": {
+       "n": 320,
+       "win_rate": 0.390625,
+       "avg_ret": -0.004059,
+       "profit_factor": 0.911029
+      },
+      "2025": {
+       "n": 333,
+       "win_rate": 0.42042,
+       "avg_ret": 0.036578,
+       "profit_factor": 1.640204
+      },
+      "2026": {
+       "n": 118,
+       "win_rate": 0.322034,
+       "avg_ret": -0.020418,
+       "profit_factor": 0.66812
+      }
+     },
+     "outcomes": {
+      "MKT": 366,
+      "SL": 202,
+      "TIME": 108,
+      "TP2": 56,
+      "TP1+MKT": 18,
+      "TP1+TIME": 18,
+      "TP1+BE": 3
+     }
+    },
+    "portfolio": {
+     "total_return": 0.358572,
+     "cagr": 0.117313,
+     "max_drawdown": -0.192904,
+     "dd_peak": "2025-12-17",
+     "dd_trough": "2026-07-24",
+     "worst_month": -0.145242,
+     "sharpe": 0.856391,
+     "avg_exposure": 0.469851,
+     "trades": 171,
+     "win_rate": 0.374269,
+     "avg_trade": 0.017115,
+     "by_year": {
+      "2024": 0.056825,
+      "2025": 0.381854,
+      "2026": -0.069712
+     }
+    },
+    "port_is": {
+     "total_return": 0.069966,
+     "cagr": 0.056683,
+     "max_drawdown": -0.083878,
+     "dd_peak": "2024-10-25",
+     "dd_trough": "2025-01-24",
+     "worst_month": -0.05626,
+     "sharpe": 1.17987,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": 0.071588,
+      "2025": -0.001514
+     }
+    },
+    "port_oos": {
+     "total_return": 0.195951,
+     "cagr": 0.125456,
+     "max_drawdown": -0.187273,
+     "dd_peak": "2025-12-19",
+     "dd_trough": "2026-07-24",
+     "worst_month": -0.166077,
+     "sharpe": 1.552206,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.317694,
+      "2026": -0.092391
+     }
+    }
+   },
+   {
+    "name": "Sentimen ≥ −20 + keluar bila IHSG < SMA50",
+    "params": {
+     "sentiment_min": -20,
+     "market_exit": "all",
+     "market_exit_ma": "sma50",
+     "market_exit_confirm": 1
+    },
+    "trades": {
+     "n": 871,
+     "win_rate": 0.399541,
+     "avg_ret": 0.011907,
+     "median_ret": -0.016887,
+     "profit_factor": 1.260773,
+     "avg_days": 15.870264,
+     "fill_rate": 0.696243,
+     "worst": -0.451755,
+     "best": 0.533533,
+     "in_sample": {
+      "n": 449,
+      "win_rate": 0.432071,
+      "avg_ret": 0.007688,
+      "median_ret": -0.008737,
+      "profit_factor": 1.257187,
+      "avg_days": 11.082405,
+      "fill_rate": 0.74461,
+      "worst": -0.3902,
+      "best": 0.506155
+     },
+     "out_sample": {
+      "n": 422,
+      "win_rate": 0.364929,
+      "avg_ret": 0.016396,
+      "median_ret": -0.039254,
+      "profit_factor": 1.2626,
+      "avg_days": 20.964455,
+      "fill_rate": 0.651235,
+      "worst": -0.451755,
+      "best": 0.533533
+     },
+     "by_year": {
+      "2024": {
+       "n": 421,
+       "win_rate": 0.422803,
+       "avg_ret": 0.003825,
+       "profit_factor": 1.125112
+      },
+      "2025": {
+       "n": 332,
+       "win_rate": 0.415663,
+       "avg_ret": 0.036869,
+       "profit_factor": 1.642486
+      },
+      "2026": {
+       "n": 118,
+       "win_rate": 0.271186,
+       "avg_ret": -0.02949,
+       "profit_factor": 0.556551
+      }
+     },
+     "outcomes": {
+      "MKT": 535,
+      "SL": 165,
+      "TIME": 81,
+      "TP2": 56,
+      "TP1+MKT": 18,
+      "TP1+TIME": 14,
+      "TP1+BE": 2
+     }
+    },
+    "portfolio": {
+     "total_return": 0.381888,
+     "cagr": 0.125669,
+     "max_drawdown": -0.139363,
+     "dd_peak": "2024-02-12",
+     "dd_trough": "2024-08-05",
+     "worst_month": -0.077306,
+     "sharpe": 0.866223,
+     "avg_exposure": 0.435488,
+     "trades": 174,
+     "win_rate": 0.465517,
+     "avg_trade": 0.017617,
+     "by_year": {
+      "2024": 0.057492,
+      "2025": 0.22785,
+      "2026": 0.064267
+     }
+    },
+    "port_is": {
+     "total_return": 0.127829,
+     "cagr": 0.106541,
+     "max_drawdown": -0.100492,
+     "dd_peak": "2024-03-01",
+     "dd_trough": "2024-08-16",
+     "worst_month": -0.026857,
+     "sharpe": 2.360737,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": 0.108026,
+      "2025": 0.017872
+     }
+    },
+    "port_oos": {
+     "total_return": 0.192321,
+     "cagr": 0.123199,
+     "max_drawdown": -0.098614,
+     "dd_peak": "2025-06-13",
+     "dd_trough": "2025-06-27",
+     "worst_month": -0.071995,
+     "sharpe": 1.687045,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.168076,
+      "2026": 0.020756
+     }
+    }
+   },
+   {
+    "name": "Sentimen ≥ 0 + keluar bila IHSG < SMA50",
+    "params": {
+     "sentiment_min": 0,
+     "market_exit": "all",
+     "market_exit_ma": "sma50",
+     "market_exit_confirm": 1
+    },
+    "trades": {
+     "n": 831,
+     "win_rate": 0.403129,
+     "avg_ret": 0.013554,
+     "median_ret": -0.016887,
+     "profit_factor": 1.294199,
+     "avg_days": 16.476534,
+     "fill_rate": 0.6925,
+     "worst": -0.451755,
+     "best": 0.533533,
+     "in_sample": {
+      "n": 436,
+      "win_rate": 0.426606,
+      "avg_ret": 0.00736,
+      "median_ret": -0.008973,
+      "profit_factor": 1.243543,
+      "avg_days": 11.183486,
+      "fill_rate": 0.740238,
+      "worst": -0.3902,
+      "best": 0.506155
+     },
+     "out_sample": {
+      "n": 395,
+      "win_rate": 0.377215,
+      "avg_ret": 0.02039,
+      "median_ret": -0.038942,
+      "profit_factor": 1.320783,
+      "avg_days": 22.318987,
+      "fill_rate": 0.646481,
+      "worst": -0.451755,
+      "best": 0.533533
+     },
+     "by_year": {
+      "2024": {
+       "n": 419,
+       "win_rate": 0.415274,
+       "avg_ret": 0.003252,
+       "profit_factor": 1.106373
+      },
+      "2025": {
+       "n": 297,
+       "win_rate": 0.434343,
+       "avg_ret": 0.044408,
+       "profit_factor": 1.740224
+      },
+      "2026": {
+       "n": 115,
+       "win_rate": 0.278261,
+       "avg_ret": -0.028597,
+       "profit_factor": 0.570445
+      }
+     },
+     "outcomes": {
+      "MKT": 507,
+      "SL": 164,
+      "TIME": 70,
+      "TP2": 56,
+      "TP1+MKT": 19,
+      "TP1+TIME": 13,
+      "TP1+BE": 2
+     }
+    },
+    "portfolio": {
+     "total_return": 0.436502,
+     "cagr": 0.142207,
+     "max_drawdown": -0.135397,
+     "dd_peak": "2024-02-29",
+     "dd_trough": "2024-08-05",
+     "worst_month": -0.068596,
+     "sharpe": 1.003772,
+     "avg_exposure": 0.43155,
+     "trades": 153,
+     "win_rate": 0.48366,
+     "avg_trade": 0.021928,
+     "by_year": {
+      "2024": 0.011335,
+      "2025": 0.307659,
+      "2026": 0.086217
+     }
+    },
+    "port_is": {
+     "total_return": 0.054661,
+     "cagr": 0.045807,
+     "max_drawdown": -0.126683,
+     "dd_peak": "2024-03-01",
+     "dd_trough": "2024-08-09",
+     "worst_month": -0.029455,
+     "sharpe": 0.961518,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2024": 0.037124,
+      "2025": 0.016909
+     }
+    },
+    "port_oos": {
+     "total_return": 0.297183,
+     "cagr": 0.187506,
+     "max_drawdown": -0.093286,
+     "dd_peak": "2025-12-05",
+     "dd_trough": "2026-07-24",
+     "worst_month": -0.059363,
+     "sharpe": 2.599495,
+     "avg_exposure": null,
+     "trades": null,
+     "win_rate": null,
+     "avg_trade": null,
+     "by_year": {
+      "2025": 0.245259,
+      "2026": 0.041697
+     }
+    }
+   }
+  ]
+ },
+ "seconds": 37
+}
