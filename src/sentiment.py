@@ -122,7 +122,8 @@ def summary(sent: pd.DataFrame, flows: dict | None = None, history_days: int = 1
         comps.append({"key": k, "name": NAMES[k], "weight": wgt,
                       "raw": None if rv is None or pd.isna(rv) else float(rv),
                       "score": None if pd.isna(row.get(k)) else round(float(row[k]), 3)})
-    out = {"date": last_d.strftime("%Y-%m-%d"), "score": round(score, 1), "label": label(score),
+    score = float(round(score))
+    out = {"date": last_d.strftime("%Y-%m-%d"), "score": score, "label": label(score),
            "chg_5d": None if prev5 is None else round(score - prev5, 1), "n": int(row.get("n") or 0),
            "components": comps,
            "history": [[d.strftime("%Y-%m-%d"), round(float(v), 1)] for d, v in s.iloc[-history_days:].items()],

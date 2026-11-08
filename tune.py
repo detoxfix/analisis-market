@@ -212,6 +212,15 @@ SENT_GRID = [
                                                    "market_exit_ma": "sma50", "market_exit_confirm": 1}),
     ("Sentimen ≥ 0 + keluar bila IHSG < SMA50", {"sentiment_min": 0, "market_exit": "all",
                                                  "market_exit_ma": "sma50", "market_exit_confirm": 1}),
+] + [  # uji ketahanan: apakah hasil stabil di sekitar batas 0 (bukan kebetulan satu angka)?
+    (f"Ketahanan: sentimen ≥ {v:+d} + keluar bila IHSG < SMA50",
+     {"sentiment_min": v, "market_exit": "all", "market_exit_ma": "sma50", "market_exit_confirm": 1})
+    for v in (-30, -10, 10, 20, 30)
+] + [
+    ("Ketahanan: sentimen ≥ 0 + keluar bila IHSG < SMA50 (2 hari)",
+     {"sentiment_min": 0, "market_exit": "all", "market_exit_ma": "sma50", "market_exit_confirm": 2}),
+    ("Ketahanan: sentimen ≥ 0 + keluar bila IHSG < EMA20",
+     {"sentiment_min": 0, "market_exit": "all", "market_exit_ma": "ema20", "market_exit_confirm": 1}),
 ]
 SENT_BUCKETS = [(-101, -50, "Sangat pesimis"), (-50, -20, "Pesimis"), (-20, 20, "Netral"), (20, 50, "Optimis"),
                 (50, 101, "Sangat optimis")]

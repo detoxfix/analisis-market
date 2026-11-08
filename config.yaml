@@ -53,6 +53,7 @@ horizons:
     rr: [2.0, 3.0]                   # TP1 = 2R ; TP2 = 3R
     min_score: 60                    # skor minimum untuk boleh beli
     market_filter: ema20             # none | ema20 | sma50 | sma200 : beli hanya bila IHSG di atas MA ini
+    # sentiment_min: -20            # opsional: beli hanya bila sentimen pasar >= nilai ini (lihat riset sentimen)
     trend_filter: sma200             # none | sma50 | sma200 : beli hanya bila harga saham di atas MA ini
     entry_mode: limit                # open = beli di pembukaan T+1 ; limit = antre di area bawah
     limit_days: 3                    # masa berlaku antrean (mode limit)

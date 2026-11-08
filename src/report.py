@@ -149,8 +149,25 @@ h3{font:600 18px var(--cond);margin:22px 0 8px;color:var(--ink)}
 .kpi{background:var(--panel);padding:12px 16px}.kpi b{display:block;font:600 24px/1.1 var(--cond)}.kpi span{color:var(--mute);font-size:13px}
 .method p,.method li{max-width:80ch}
 footer{color:var(--dim);font-size:13px;margin-top:36px;border-top:1px solid var(--line);padding-top:14px}
+/* ---------- sentimen pasar */
+.sent{display:grid;grid-template-columns:minmax(200px,250px) minmax(0,1fr) minmax(260px,360px);border:1px solid var(--line);border-radius:10px;background:var(--panel);margin-top:12px}
+.sent>div{padding:14px 20px}
+.sent .lbl{color:var(--mute);font-size:13px}
+.sent .sc{display:flex;align-items:baseline;gap:10px;margin:2px 0 8px}
+.sent .sc b{font:600 34px/1 var(--cond)}.sent .sc span{font:600 18px var(--cond)}
+.gauge{position:relative;height:8px;border-radius:4px;background:linear-gradient(90deg,var(--sell),var(--brass) 50%,var(--buy))}
+.gauge i{position:absolute;top:-4px;width:3px;height:16px;background:var(--ink);border-radius:2px;transform:translateX(-1px)}
+.gauge+small{display:flex;justify-content:space-between;color:var(--dim);font-size:11px;margin-top:4px}
+.sent .hist svg{width:100%;height:70px;display:block}
+.sent .comp{display:grid;gap:5px;font-size:13px;color:var(--mute);border-left:1px solid var(--line)}
+.sent .comp div{display:grid;grid-template-columns:1fr 64px 84px;gap:8px;align-items:center}
+.sent .comp em{font-style:normal;text-align:right;color:var(--ink)}
+.cbar{height:6px;background:var(--panel2);border-radius:3px;position:relative;overflow:hidden}
+.cbar i{position:absolute;top:0;bottom:0}
+.s-neg{color:var(--sell)}.s-pos{color:var(--buy)}.s-neu{color:var(--brass)}
 
 @media (max-width:980px){
+  .sent{grid-template-columns:1fr 1fr}.sent .comp{grid-column:1/-1;border-left:0;border-top:1px solid var(--line)}
   .hero{grid-template-columns:1fr 1fr}.hero .hchart{grid-column:1/-1;order:3;border-top:1px solid var(--line)}
   .verdict{border-left:1px solid var(--line)}
   .sig{grid-template-columns:150px 1fr 100px;gap:12px 16px}
@@ -159,6 +176,7 @@ footer{color:var(--dim);font-size:13px;margin-top:36px;border-top:1px solid var(
 @media (max-width:620px){
   .wrap{padding:0 16px 48px}
   .hero{grid-template-columns:1fr}.hero .idx,.verdict{border:0;border-bottom:1px solid var(--line)}
+  .sent{grid-template-columns:1fr}
   .idx .big{font-size:40px}
   .sig{grid-template-columns:1fr auto;padding:14px;gap:10px 12px}
   .sig .id{order:1}.sig .tag{order:2}
@@ -179,6 +197,7 @@ footer{color:var(--dim);font-size:13px;margin-top:36px;border-top:1px solid var(
   </header>
   <div id="demo"></div>
   <section class="hero" id="hero"></section>
+  <section class="sent" id="sent" hidden></section>
   <nav class="tabs" id="tabs">
     <button data-p="buy" class="on">Sinyal beli<span class="n" id="n-buy"></span></button>
     <button data-p="sell">Sinyal jual<span class="n" id="n-sell"></span></button>
@@ -351,7 +370,33 @@ function header(){
   const nb=["short","medium","long"].reduce((a,h)=>a+D.horizons[h].buys.length,0);
   const ns=["short","medium","long"].reduce((a,h)=>a+D.horizons[h].sells.length,0);
   $("n-buy").textContent=nb;$("n-sell").textContent=ns;$("n-all").textContent=D.all.length;
-  hero();
+  hero();sentPanel();
+}
+const sCls=v=>v==null?"":v<=-20?"s-neg":v>=20?"s-pos":"s-neu";
+function sentChart(hist){
+  if(!hist||hist.length<2)return "";
+  const W=600,Hh=70,v=hist.map(x=>x[1]),y=x=>(Hh-4-(x+100)/200*(Hh-8)).toFixed(1);
+  const xs=i=>(i*(W-4)/(v.length-1)+2).toFixed(1);
+  const pts=v.map((x,i)=>`${xs(i)},${y(x)}`).join(" ");
+  const g=[-50,0,50].map(l=>`<line x1="0" x2="${W}" y1="${y(l)}" y2="${y(l)}" stroke="var(--line)" stroke-dasharray="${l?"3 4":""}"/>`).join("");
+  return `<svg viewBox="0 0 ${W} ${Hh}" preserveAspectRatio="none" role="img" aria-label="Riwayat sentimen pasar">${g}<polyline points="${pts}" fill="none" stroke="var(--brass)" stroke-width="1.6" vector-effect="non-scaling-stroke"/></svg>`;
+}
+function sentPanel(){
+  const S=(D.market||{}).sentiment;if(!S)return;
+  const el=$("sent");el.hidden=false;
+  const pos=Math.max(0,Math.min(100,(S.score+100)/2));
+  const comp=(S.components||[]).map(c=>{const v=c.score;const w=v==null?0:Math.abs(v)*50;
+    const bar=v==null?"":`<i style="left:${v<0?50-w:50}%;width:${w}%;background:${v<0?"var(--sell)":"var(--buy)"}"></i>`;
+    const raw=c.raw==null?"–":(c.key.startsWith("breadth")||c.key==="arb")?pctp(c.raw,0):(c.raw>=0?"+":"")+(c.raw*100).toFixed(1)+"%";
+    return `<div><span>${esc(c.name)}</span><span class="cbar">${bar}</span><em>${raw}</em></div>`;}).join("");
+  const F=S.foreign;
+  const fx=F?`<div><span>Asing bersih 5 hari (${F.buy_5d}/${F.n} saham net beli, info saja)</span><span></span><em class="${F.net_5d>=0?"pos":"neg"}">${rpM(F.net_5d)}</em></div>`:"";
+  el.innerHTML=`<div><span class="lbl">Sentimen pasar (${S.n} saham)</span>
+     <div class="sc"><b class="${sCls(S.score)}">${S.score>0?"+":""}${S.score.toFixed(0)}</b><span class="${sCls(S.score)}">${esc(S.label)}</span></div>
+     <div class="gauge"><i style="left:${pos}%"></i></div><small><span>−100</span><span>0</span><span>+100</span></small>
+     <p class="muted" style="margin:8px 0 0;font-size:13px">${S.chg_5d==null?"":`5 hari: ${S.chg_5d>0?"+":""}${S.chg_5d.toFixed(0)}. `}Lebih tinggi dari ${Math.round(S.pct_rank_1y*100)}% hari dalam setahun terakhir.</p></div>
+   <div class="hist">${sentChart(S.history)}<div class="legend"><span>Riwayat 6 bulan · garis putus −50 / +50</span></div></div>
+   <div class="comp">${comp}${fx}</div>`;
 }
 function seg(id,cb,count){
   const el=$(id);el.innerHTML=["short","medium","long"].map((h,i)=>`<button data-h="${h}" class="${i?"":"on"}">${H[h]}<span class="n">${count(h)}</span></button>`).join("");
@@ -363,6 +408,7 @@ function rulesText(r){
   if(!r)return "";
   const out=[`skor ≥ ${r.min_score??30}`];
   if(r.market_filter&&r.market_filter!=="none")out.push(`IHSG di atas ${r.market_filter.toUpperCase()}`);
+  if(r.sentiment_min!=null)out.push(`sentimen pasar ≥ ${r.sentiment_min>0?"+":""}${r.sentiment_min}`);
   if(r.trend_filter&&r.trend_filter!=="none")out.push(`harga di atas ${r.trend_filter.toUpperCase()}`);
   if(r.entry_mode)out.push(r.entry_mode==="limit"?`antre di area bawah ${r.limit_days} hari`:"beli di pembukaan T+1");
   if(r.market_exit&&r.market_exit!=="none")out.push(`keluar bila IHSG di bawah ${String(r.market_exit_ma).toUpperCase()}`);
@@ -509,6 +555,7 @@ function renderMethod(){
   <li><b>Panjang (6–24 bulan):</b> 40% teknikal (SMA200, kemiringan SMA200, momentum 12-1 bulan) + 60% fundamental (ROE, PER & PBV relatif sektor, DER, dividend yield, pertumbuhan laba).</li></ul>
   <p><b>Rencana trading.</b> Area beli = harga penutupan s/d koreksi ke support (EMA20/SMA50 atau sebagian ATR). Cut loss berbasis ATR dengan batas persentase maksimum per horizon. TP1/TP2 = kelipatan risiko (R). Semua harga dibulatkan ke fraksi harga BEI. R:R dihitung bersih biaya beli ${pctp(p.fees.buy,2)} & jual ${pctp(p.fees.sell,2)}.</p>
   <p><b>Bobot.</b> Di tiap horizon, bobot ∝ skor ÷ volatilitas (ATR%), dibatasi bobot maksimum per saham dan per sektor; sisanya kas. Jumlah lot dihitung dari modal acuan Rp ${n(p.capital)} dan dibatasi agar rugi maksimal per posisi ≤ ${pctp(p.risk_per_trade,0)} modal.</p>
+  <p><b>Sentimen pasar (−100…+100).</b> Dihitung dari angka, bukan berita: % saham universe di atas SMA50 (bobot 20) dan SMA200 (15), saham naik vs turun 10 hari (15), saham yang menembus puncak vs dasar 20 hari (15), naik vs turun dengan volume ≥ 1,5× rata-rata (15), dan saham yang ditutup terkunci ARB 5 hari terakhir (20, hanya mengurangi). ≤ −50 Sangat pesimis, ≤ −20 Pesimis, di bawah +20 Netral, di bawah +50 Optimis, selebihnya Sangat optimis. Transaksi asing ditampilkan sebagai info dan tidak masuk skor karena tidak bisa diuji ke belakang. Sentimen baru dipakai sebagai syarat beli bila backtest membuktikan manfaatnya (opsi <code>sentiment_min</code> per horizon).</p>
   <h3>Sumber data</h3><ul>${D.sources.map(s=>`<li>${esc(s)}</li>`).join("")}</ul>
   <h3>Disclaimer</h3><p>Aplikasi ini alat bantu analisis kuantitatif, bukan nasihat investasi dan bukan ajakan membeli/menjual efek. Data gratis dapat terlambat atau keliru — cek ulang harga di aplikasi sekuritas sebelum bertransaksi. Kinerja masa lalu tidak menjamin hasil di masa depan.</p>`;
 }

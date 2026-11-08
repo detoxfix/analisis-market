@@ -226,7 +226,7 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
         per_h[h] = {"label": hcfg["label"], "allocation": hcfg["allocation"], "cash_weight": cash,
                     "regime_scale": scale, "regime_text": level_text if scale < 1 else None,
                     "buys": picked, "watchlist": watch[:15], "n_held": len(per_h[h]["held"]),
-                    "rules": {k: hcfg.get(k) for k in ("min_score", "market_filter", "trend_filter", "entry_mode",
+                    "rules": {k: hcfg.get(k) for k in ("min_score", "market_filter", "sentiment_min", "trend_filter", "entry_mode",
                                                        "limit_days", "trail_ma", "sl_atr", "max_sl_pct", "rr",
                                                        "market_exit", "market_exit_ma", "market_exit_confirm")},
                     "market_exit_active": mkt_exit_text(hcfg, bench),

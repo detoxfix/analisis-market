@@ -120,6 +120,10 @@ def build_messages(res: dict, dashboard_url: str | None = None, max_buys: int = 
     head = [f"🧭 <b>PANDU · Sinyal IHSG — {e(res['as_of'])}</b>",
             f"IHSG <b>{rp(m['bench'])}</b> ({pct(m['bench_chg'], 2)}) · Pasar <b>{e(m['regime'])}</b>",
             f"Dipantau {m['universe']} saham (market cap ≥ Rp 5 T)"]
+    sn = m.get("sentiment")
+    if sn:
+        chg = f", 5 hari {sn['chg_5d']:+.0f}" if sn.get("chg_5d") is not None else ""
+        head.insert(2, f"Sentimen pasar <b>{sn['score']:+.0f}</b> ({e(sn['label'])}{chg})")
     ds = res.get("data_status") or {}
     if ds.get("stale"):
         head.insert(1, f"⚠️ <b>DATA BASI</b>: {e(ds.get('text', ''))}")
