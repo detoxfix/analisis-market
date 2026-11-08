@@ -1,0 +1,136 @@
+{
+ "short": [
+  {
+   "id": "4a5885d1",
+   "v": 1,
+   "since": "2026-11-06",
+   "params": {
+    "horizon": {
+     "allocation": 0.2,
+     "max_positions": 5,
+     "max_weight": 0.3,
+     "sector_cap": 0.5,
+     "hold_min_days": 3,
+     "hold_max_days": 15,
+     "entry_atr": 0.5,
+     "chase_atr": 0.3,
+     "sl_atr": 2.5,
+     "max_sl_pct": 0.1,
+     "rr": [
+      2.0,
+      3.0
+     ],
+     "min_score": 60,
+     "market_filter": "ema20",
+     "trend_filter": "sma200",
+     "entry_mode": "limit",
+     "limit_days": 3,
+     "trail_ma": 0,
+     "market_exit": "none",
+     "market_exit_ma": "sma50",
+     "market_exit_confirm": 1
+    },
+    "thresholds": {
+     "strong_buy": 60,
+     "buy": 30,
+     "sell": -30,
+     "strong_sell": -60
+    },
+    "fees": {
+     "buy": 0.0015,
+     "sell": 0.0025
+    },
+    "logic": 1
+   }
+  }
+ ],
+ "medium": [
+  {
+   "id": "d7626176",
+   "v": 1,
+   "since": "2026-11-06",
+   "params": {
+    "horizon": {
+     "allocation": 0.3,
+     "max_positions": 8,
+     "max_weight": 0.2,
+     "sector_cap": 0.4,
+     "hold_min_days": 20,
+     "hold_max_days": 40,
+     "entry_atr": 1.0,
+     "chase_atr": 0.2,
+     "sl_atr": 3.5,
+     "max_sl_pct": 0.15,
+     "rr": [
+      2.5,
+      4.0
+     ],
+     "min_score": 60,
+     "market_filter": "sma50",
+     "trend_filter": "sma50",
+     "entry_mode": "open",
+     "limit_days": 5,
+     "trail_ma": 0,
+     "market_exit": "none",
+     "market_exit_ma": "sma50",
+     "market_exit_confirm": 1
+    },
+    "thresholds": {
+     "strong_buy": 60,
+     "buy": 30,
+     "sell": -30,
+     "strong_sell": -60
+    },
+    "fees": {
+     "buy": 0.0015,
+     "sell": 0.0025
+    },
+    "logic": 1
+   }
+  }
+ ],
+ "long": [
+  {
+   "id": "979a5884",
+   "v": 1,
+   "since": "2026-11-06",
+   "params": {
+    "horizon": {
+     "allocation": 0.5,
+     "max_positions": 10,
+     "max_weight": 0.15,
+     "sector_cap": 0.35,
+     "hold_min_days": 120,
+     "hold_max_days": 500,
+     "entry_atr": 1.5,
+     "chase_atr": 0.0,
+     "sl_atr": 4.0,
+     "max_sl_pct": 0.2,
+     "rr": [
+      1.5,
+      3.0
+     ],
+     "min_score": 30,
+     "market_filter": "none",
+     "trend_filter": "sma200",
+     "regime_scale": {
+      "above_sma200": 1.0,
+      "above_sma50": 0.6,
+      "below": 0.3
+     }
+    },
+    "thresholds": {
+     "strong_buy": 60,
+     "buy": 30,
+     "sell": -30,
+     "strong_sell": -60
+    },
+    "fees": {
+     "buy": 0.0015,
+     "sell": 0.0025
+    },
+    "logic": 1
+   }
+  }
+ ]
+}
