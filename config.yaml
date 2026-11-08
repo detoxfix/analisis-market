@@ -112,6 +112,20 @@ archive:                             # arsip fundamental untuk backtest jangka p
   statements_days: 7                 # tiap saham diperbarui laporan keuangannya seminggu sekali
   statements_per_run: 60             # maks. saham per hari (bergilir, agar tidak kena limit Yahoo)
 
+news:                                # peringatan berita negatif (hanya info, tidak mengubah sinyal)
+  enabled: true
+  days: 7                            # berita 7 hari terakhir
+  google_news: true                  # Google News RSS, satu pencarian per saham universe
+  delay_sec: 0.4
+  time_budget_sec: 240               # batas waktu total pengambilan berita
+  max_per_stock: 5                   # berita yang ditampilkan per saham (arsip menyimpan semua)
+  feeds:                             # RSS portal berita pasar modal (yang gagal diabaikan; Kontan & Bisnis menolak akses otomatis, tetapi beritanya masuk lewat Google News)
+    - https://www.cnbcindonesia.com/market/rss
+    - https://www.kabarbursa.com/feed/insight-emiten.xml
+    - https://www.antaranews.com/rss/ekonomi-bursa.xml
+    - https://rss.tempo.co/bisnis
+    - https://www.idxchannel.com/rss
+
 monitor:                             # alarm: track record sungguhan vs perkiraan backtest
   min_trades: 10                     # penilaian penuh mulai 10 transaksi selesai
   early_trades: 5                    # alarm dini (rentetan rugi / win rate terlalu rendah) mulai 5 transaksi

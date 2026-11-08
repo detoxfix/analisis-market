@@ -214,6 +214,30 @@ def test_data_freshness():
     assert not data_freshness("2026-12-24", datetime(2026, 12, 26, 9, 0), ["2026-12-25"])["stale"]
 
 
+def test_news_rules():
+    from src import news as N
+    assert [c for c, _ in N.classify("BBRI Umumkan Rights Issue Rp 40 Triliun")] == ["Right issue (dilusi)"]
+    assert N.classify("Laba bersih ADRO anjlok 40% di kuartal III")[0][0] == "Kinerja memburuk"
+    assert N.classify("Kreditur ajukan PKPU terhadap emiten konstruksi")[0][1] == "tinggi"
+    assert N.classify("Saham BBCA naik 2%, asing borong") == []
+    alias = N._name_alias("PT Bank Rakyat Indonesia (Persero) Tbk")
+    assert alias == "bank rakyat indonesia" and N._name_alias("PT Indonesia Tbk") is None
+    assert N.mentions("Bank Rakyat Indonesia digugat nasabah", "BBRI", alias)
+    assert N.mentions("Emiten tambang (CUAN) right issue", "CUAN", None)
+    assert not N.mentions("Strategi cari cuan saat rights issue", "CUAN", None)
+    assert not N.mentions("CUAN besar dari right issue", "CUAN", None)
+    al = {"BUMI": "bumi resources", "BRMS": "bumi resources minerals", "MBMA": None, "MEDC": None}
+    t = "Saham Bumi Resources Minerals (BRMS) Kena Downgrade"
+    assert N.mentions(t, "BRMS", al["BRMS"], al) and not N.mentions(t, "BUMI", al["BUMI"], al)
+    t = "IHSG Rebound 0,75%: MEDC & TAPG Bagikan Dividen Interim, MBMA Siapkan Private Placement"
+    hit = lambda c: [x for x in N.clauses(t) if N.mentions(x, c, None) and N.classify(x)]  # noqa: E731
+    assert hit("MBMA") and not hit("MEDC")
+    xml = ("<rss><channel><item><title>BBRI digugat Rp 1 T - Kontan</title><link>http://x</link>"
+           "<pubDate>Fri, 06 Nov 2026 03:00:00 GMT</pubDate><source url='k'>Kontan</source></item></channel></rss>")
+    it = N.parse_rss(xml)[0]
+    assert it["title"] == "BBRI digugat Rp 1 T" and it["source"] == "Kontan" and it["published"].day == 6
+
+
 def test_config_edit():
     import yaml
     from src.configedit import set_horizon_param
