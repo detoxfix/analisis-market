@@ -1,13 +1,13 @@
 {
- "generated_at": "2026-11-08 21:50",
+ "generated_at": "2026-11-10 03:55",
  "as_of": "2026-11-06",
  "demo": false,
  "data_status": {
   "as_of": "2026-11-06",
-  "expected": "2026-11-06",
-  "lag": 0,
-  "stale": false,
-  "text": null
+  "expected": "2026-11-09",
+  "lag": 1,
+  "stale": true,
+  "text": "Data harga terakhir 06-11-2026, padahal seharusnya sudah ada data 09-11-2026 (1 hari bursa terlewat). Sinyal hari ini memakai harga lama — cek ulang di aplikasi sekuritas sebelum transaksi. Abaikan bila hari itu libur bursa (tambahkan ke data.holidays di config.yaml)."
  },
  "params": {
   "min_market_cap": 5000000000000,
@@ -30,8 +30,8 @@
   "bench": 5050.429199,
   "bench_chg": 0.004009,
   "regime": "Bearish",
-  "universe": 121,
-  "scanned": 261,
+  "universe": 120,
+  "scanned": 259,
   "series": [
    [
     "2026-04-28",
@@ -2707,58 +2707,7 @@
      "risks": [
       "RSI 28 di zona momentum sehat"
      ],
-     "news": [
-      {
-       "date": "2026-11-04",
-       "title": "Pandu Sjahrir Lepas Saham Supra Sekuritas Sejak Juni Sebelum Sanksi OJK Perkara DSSA",
-       "source": "gadget.qoo10.co.id",
-       "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPZG5ZMU9fcWY4eE9USFJ6ekxjVGRoN3IwUUpPdXZMdXJqOUFSSUZEWTEzTzdPMHItc3czWUFMTHYxNHpXeklET0pvVXhJRTRiLVJlMTVwNHhIVmprNjNNdDlIVS03S2x2OENDNDRZMEc1U1g5UHlVTE5GbVgtMzkwcDNn?oc=5",
-       "categories": [
-        "Sanksi / denda"
-       ],
-       "severity": "sedang"
-      },
-      {
-       "date": "2026-11-03",
-       "title": "Daftar 25 Pihak Didenda OJK Rp 2,14 T di Kasus 'Main Saham' DSSA, IMPC dan FILM",
-       "source": "Katadata.co.id",
-       "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQdHhoakg5SHJDZEkyN2Etc20yeWtzbXhXci1JQVFlTGg5WGhJdG5aMldHTE1sVmUxWTNBNWZFN2N5eDhwS0tsZEd6VEw3c2p2VVB6VkNyWERoQnJTd0RvSUJPbzNCREIzUk5YX3k3cjZrNjEwSmNjZ0c0aWtoeGlRdEhONmp3QVI4SGprT0NFT0NnVFFSSFJHYUJmQ2hzMFlNbkF3QnFpTkViZ0tkYVI4aVo5S0NWRTBncGxIeExVdDFIQy1UdFpKUtIBzgFBVV95cUxQdU5FMHJZNWYtSnFvaXlKLVBWRmZIQzhHRXBoWVJmNmRlTkxYcU5JbVJ6TUQ0TV9vcWF3ZkJQUFU2WUI5ZzZsTTVQM3VsOS1pYkRIOHNzenJPOEFsV0NVd1V0MXB2TXJjSnBwdElsT0N3SVUyaWlhWGhrc0tJbDd6dXRHZERfTTZ6MUV1X19fZXk1ckJ5WlZUclF4ZEZNc055YTAzVi1DUkNkUW53bEp5Slo3T0RDWEVYcWJFNTNZVDQ5UjFzaEVCaFFPNHV6UQ?oc=5",
-       "categories": [
-        "Sanksi / denda"
-       ],
-       "severity": "sedang"
-      },
-      {
-       "date": "2026-11-02",
-       "title": "OJK Jatuhkan Sanksi Rp1,5119 Triliun dalam Kasus Saham DSSA",
-       "source": "bsinews.id",
-       "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9kNmNlV0dObERBUjBMQUhCamppOGxITUFqeF9PdmpCNXB5ZkJZMUdFMEZfQmN0YW9YT2tBZ0pmZVRTVDVvR2J6X3E1MkdwdEF0UkZSTGo0NmJibmk1bW1mV0Vn?oc=5",
-       "categories": [
-        "Sanksi / denda"
-       ],
-       "severity": "sedang"
-      },
-      {
-       "date": "2026-11-02",
-       "title": "Ini Daftar Pihak yang Disanksi OJK dalam Kasus DSSA, BREN, CUAN hingga Belvin Tannadi",
-       "source": "tutur.co.id",
-       "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxORnY3ZXlVdUJQUWZBMGxGWUNPandPamJhbnlmOEdMQWlULXNUWGY1d21SdE8xOGQ3VF84UC1pTW40dTQtai1MaXQ1LThPS2pHT3BKUHJLblotQlRwYXZXRVhYSkJWSHNEVEJ1cW05MUF6YUpPWGE3MmRHUC1BWEQzbEJVOEZrSVNfNkFFbV9heUR3SDBaNU9FYzl0NXlSSlI1azRkUG80MA?oc=5",
-       "categories": [
-        "Sanksi / denda"
-       ],
-       "severity": "sedang"
-      },
-      {
-       "date": "2026-11-02",
-       "title": "OJK Jatuhkan Denda Rp 1,5 Triliun dalam Kasus DSSA",
-       "source": "Demokratis.co.id",
-       "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBkWnR0YlIxa3A4cnFYcHF6LUxNZzVNOFpVdlNKSlRkTEJHa2JXd0VmbUhjLU1WRkgwdEhNWDgtSFhLTzZuUWVCOHJ1M0xjMFBVRXBkSk40TVdJam5IUFNsWWhDN2xHc2VVOUdn?oc=5",
-       "categories": [
-        "Sanksi / denda"
-       ],
-       "severity": "sedang"
-      }
-     ],
+     "news": null,
      "action": "Jual seluruh posisi",
      "sell_portion": 1.0,
      "sell_zone_low": 600.0,
@@ -6692,8 +6641,8 @@
       {
        "date": "2026-11-07",
        "title": "Merdeka Gold (EMAS) Private Placement 1,47 Miliar Saham Baru, Potensi Dilusi 9,09%",
-       "source": "kontan.co.id",
-       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOdFowb1pNZjJGT3lwSlgxNmgwOW5GU2JpdzNBOUxKOXVxdklRc1FzMS0yUlpJNHczM2Nod3had1hwTlMwVXl1S3RJalQwQjczWi1CbFQ1dF8tQzJiNGlQTThyVXp5bG1ZY3lMRmQ2a29QaDltY0JvenpyX1dpT3ZWS3FNXzhUaVZ5S2NQQkVoUFUzYTZFQXVsYjFBZjF3Qzlkd2hSa1lNNjJFLVVlcGtzOEdB0gGqAUFVX3lxTE1fTlZGdF9Nam5TaEY4S2N2cjF4Z3NLaGFEajFMVVRhVXNUX3NyQjZVSE1FREJIWlZEWHpDM2MyRVhNRmZrSk4yV1ZrWnExeUhVSkJxbnBJQl8yWjFpOG9KYmZQWEhFS1lvSk5oUGVkZXF5eUowUTdmZGZLMDJzOHZESXpSRkdkTURZM3NDOVRpWnhnczRDbGM2SlBncloyYTJ0VzVzNHZ3VDJR?oc=5",
+       "source": "TradingView",
+       "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9WMEdBeHVBOXloOFo0a0xxY3NzY040cXRZQmRwVmxyS1lWRkludWRMVTVxS0FCNlB1QnJJeWtFaTB1X2NsbkExOHo3S0pYQ2NDZWFLWVg1UEYwX21sT0prckcyb3l1UQ?oc=5",
        "categories": [
         "Private placement (dilusi)"
        ],
@@ -7256,18 +7205,7 @@
      "risks": [
       "RSI 30 di zona momentum sehat"
      ],
-     "news": [
-      {
-       "date": "2026-11-02",
-       "title": "IHSG Hari Ini Rebound 0,75%: MEDC & TAPG Bagikan Dividen Interim, MBMA Siapkan Private Placement",
-       "source": "Ajaib",
-       "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQdHRoT1V4RW9aSHpLdEJwYTcwYlJxQ24xSFhaUTQ0bHlyWDhONi01T0FzVzRqajR2N09rZlRLNFFoRTJKb0JyeHJRTjZyMU9pelgyN0JxdUtHVnNiZWVibmVJdmFmQnpQOFdqQVdnRGpTM0YxcnRIemYxUXFPdm1LQVFVcTB2VFliMmptdnYtSXJiRy1xLXFqY0ZrZUVxLVpUb1ZoeEYtaw?oc=5",
-       "categories": [
-        "Private placement (dilusi)"
-       ],
-       "severity": "sedang"
-      }
-     ],
+     "news": null,
      "action": "Kurangi 50% posisi",
      "sell_portion": 0.5,
      "sell_zone_low": 302.0,
@@ -10938,6 +10876,16 @@
      ],
      "news": [
       {
+       "date": "2026-11-09",
+       "title": "RUPSLB Ultrajaya (ULTJ) Setujui Rights Issue hingga Pembagian Dividen Spesial Rp1,04 Triliun",
+       "source": "",
+       "link": "https://www.idxchannel.com/market-news/rupslb-ultrajaya-ultj-setujui-rights-issue-hingga-pembagian-dividen-spesial-rp104-triliun",
+       "categories": [
+        "Right issue (dilusi)"
+       ],
+       "severity": "sedang"
+      },
+      {
        "date": "2026-11-06",
        "title": "Ultra Jaya (ULTJ) dan Garuda Indonesia (GIAA) Gelar Rights Issue, Simak Prospeknya",
        "source": "kontan.co.id",
@@ -10952,16 +10900,6 @@
        "title": "ULTJ dan GIAA Siapkan Rights Issue untuk Akuisisi dan Restrukturisasi",
        "source": "Cirebon Times",
        "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPZlNCV1BxcVdVOFVRaDhQRG1JN3pVbEFQSDI3RHJQQlYyOGxQOXRQa3d5ZFFxMFhXNXhDZm5aX05WNDlJdTVKdHpjUjhmSG9ncXBVNVlZdHhWakhwR0FWaFBKeXNpUXM1a2drOVRQZVBEbXo4X1ROVHYzZmkxeUxGbll3?oc=5",
-       "categories": [
-        "Right issue (dilusi)"
-       ],
-       "severity": "sedang"
-      },
-      {
-       "date": "2026-11-05",
-       "title": "ULTJ siapkan rights issue Rp16,94 triliun untuk akuisisi FFI",
-       "source": "IDNFinancials",
-       "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNZVcteVNwN2hScWJRaWw0UHBxMzRnck5EX2MwaHpta2F2SE8zbHR1WUJQMVF3Tl8wR3JNcXZaWnBxNy1pLUgxdGVGSkp0QmpES2pWbXMzdXVUY0I4UUExYVVJUHJKX25ONlJLdWx4VjkzbEVIakZqNEZGcHlDcmsyeld1ZnNEakVQZnllSEI4ZUNsa0VuYm96TXJIemNQNHZaeXk5YzREVQ?oc=5",
        "categories": [
         "Right issue (dilusi)"
        ],
@@ -12106,18 +12044,7 @@
       "ADX 43: tren turun kuat"
      ],
      "risks": [],
-     "news": [
-      {
-       "date": "2026-11-02",
-       "title": "IHSG Hari Ini Rebound 0,75%: MEDC & TAPG Bagikan Dividen Interim, MBMA Siapkan Private Placement",
-       "source": "Ajaib",
-       "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQdHRoT1V4RW9aSHpLdEJwYTcwYlJxQ24xSFhaUTQ0bHlyWDhONi01T0FzVzRqajR2N09rZlRLNFFoRTJKb0JyeHJRTjZyMU9pelgyN0JxdUtHVnNiZWVibmVJdmFmQnpQOFdqQVdnRGpTM0YxcnRIemYxUXFPdm1LQVFVcTB2VFliMmptdnYtSXJiRy1xLXFqY0ZrZUVxLVpUb1ZoeEYtaw?oc=5",
-       "categories": [
-        "Private placement (dilusi)"
-       ],
-       "severity": "sedang"
-      }
-     ],
+     "news": null,
      "action": "Jual seluruh posisi",
      "sell_portion": 1.0,
      "sell_zone_low": 302.0,
@@ -13452,58 +13379,7 @@
       "Momentum 3 bulan -40.0%"
      ],
      "risks": [],
-     "news": [
-      {
-       "date": "2026-11-04",
-       "title": "Pandu Sjahrir Lepas Saham Supra Sekuritas Sejak Juni Sebelum Sanksi OJK Perkara DSSA",
-       "source": "gadget.qoo10.co.id",
-       "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPZG5ZMU9fcWY4eE9USFJ6ekxjVGRoN3IwUUpPdXZMdXJqOUFSSUZEWTEzTzdPMHItc3czWUFMTHYxNHpXeklET0pvVXhJRTRiLVJlMTVwNHhIVmprNjNNdDlIVS03S2x2OENDNDRZMEc1U1g5UHlVTE5GbVgtMzkwcDNn?oc=5",
-       "categories": [
-        "Sanksi / denda"
-       ],
-       "severity": "sedang"
-      },
-      {
-       "date": "2026-11-03",
-       "title": "Daftar 25 Pihak Didenda OJK Rp 2,14 T di Kasus 'Main Saham' DSSA, IMPC dan FILM",
-       "source": "Katadata.co.id",
-       "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQdHhoakg5SHJDZEkyN2Etc20yeWtzbXhXci1JQVFlTGg5WGhJdG5aMldHTE1sVmUxWTNBNWZFN2N5eDhwS0tsZEd6VEw3c2p2VVB6VkNyWERoQnJTd0RvSUJPbzNCREIzUk5YX3k3cjZrNjEwSmNjZ0c0aWtoeGlRdEhONmp3QVI4SGprT0NFT0NnVFFSSFJHYUJmQ2hzMFlNbkF3QnFpTkViZ0tkYVI4aVo5S0NWRTBncGxIeExVdDFIQy1UdFpKUtIBzgFBVV95cUxQdU5FMHJZNWYtSnFvaXlKLVBWRmZIQzhHRXBoWVJmNmRlTkxYcU5JbVJ6TUQ0TV9vcWF3ZkJQUFU2WUI5ZzZsTTVQM3VsOS1pYkRIOHNzenJPOEFsV0NVd1V0MXB2TXJjSnBwdElsT0N3SVUyaWlhWGhrc0tJbDd6dXRHZERfTTZ6MUV1X19fZXk1ckJ5WlZUclF4ZEZNc055YTAzVi1DUkNkUW53bEp5Slo3T0RDWEVYcWJFNTNZVDQ5UjFzaEVCaFFPNHV6UQ?oc=5",
-       "categories": [
-        "Sanksi / denda"
-       ],
-       "severity": "sedang"
-      },
-      {
-       "date": "2026-11-02",
-       "title": "OJK Jatuhkan Sanksi Rp1,5119 Triliun dalam Kasus Saham DSSA",
-       "source": "bsinews.id",
-       "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9kNmNlV0dObERBUjBMQUhCamppOGxITUFqeF9PdmpCNXB5ZkJZMUdFMEZfQmN0YW9YT2tBZ0pmZVRTVDVvR2J6X3E1MkdwdEF0UkZSTGo0NmJibmk1bW1mV0Vn?oc=5",
-       "categories": [
-        "Sanksi / denda"
-       ],
-       "severity": "sedang"
-      },
-      {
-       "date": "2026-11-02",
-       "title": "Ini Daftar Pihak yang Disanksi OJK dalam Kasus DSSA, BREN, CUAN hingga Belvin Tannadi",
-       "source": "tutur.co.id",
-       "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxORnY3ZXlVdUJQUWZBMGxGWUNPandPamJhbnlmOEdMQWlULXNUWGY1d21SdE8xOGQ3VF84UC1pTW40dTQtai1MaXQ1LThPS2pHT3BKUHJLblotQlRwYXZXRVhYSkJWSHNEVEJ1cW05MUF6YUpPWGE3MmRHUC1BWEQzbEJVOEZrSVNfNkFFbV9heUR3SDBaNU9FYzl0NXlSSlI1azRkUG80MA?oc=5",
-       "categories": [
-        "Sanksi / denda"
-       ],
-       "severity": "sedang"
-      },
-      {
-       "date": "2026-11-02",
-       "title": "OJK Jatuhkan Denda Rp 1,5 Triliun dalam Kasus DSSA",
-       "source": "Demokratis.co.id",
-       "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBkWnR0YlIxa3A4cnFYcHF6LUxNZzVNOFpVdlNKSlRkTEJHa2JXd0VmbUhjLU1WRkgwdEhNWDgtSFhLTzZuUWVCOHJ1M0xjMFBVRXBkSk40TVdJam5IUFNsWWhDN2xHc2VVOUdn?oc=5",
-       "categories": [
-        "Sanksi / denda"
-       ],
-       "severity": "sedang"
-      }
-     ],
+     "news": null,
      "action": "Jual seluruh posisi",
      "sell_portion": 1.0,
      "sell_zone_low": 600.0,
@@ -13596,8 +13472,8 @@
       {
        "date": "2026-11-07",
        "title": "Merdeka Gold (EMAS) Private Placement 1,47 Miliar Saham Baru, Potensi Dilusi 9,09%",
-       "source": "kontan.co.id",
-       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOdFowb1pNZjJGT3lwSlgxNmgwOW5GU2JpdzNBOUxKOXVxdklRc1FzMS0yUlpJNHczM2Nod3had1hwTlMwVXl1S3RJalQwQjczWi1CbFQ1dF8tQzJiNGlQTThyVXp5bG1ZY3lMRmQ2a29QaDltY0JvenpyX1dpT3ZWS3FNXzhUaVZ5S2NQQkVoUFUzYTZFQXVsYjFBZjF3Qzlkd2hSa1lNNjJFLVVlcGtzOEdB0gGqAUFVX3lxTE1fTlZGdF9Nam5TaEY4S2N2cjF4Z3NLaGFEajFMVVRhVXNUX3NyQjZVSE1FREJIWlZEWHpDM2MyRVhNRmZrSk4yV1ZrWnExeUhVSkJxbnBJQl8yWjFpOG9KYmZQWEhFS1lvSk5oUGVkZXF5eUowUTdmZGZLMDJzOHZESXpSRkdkTURZM3NDOVRpWnhnczRDbGM2SlBncloyYTJ0VzVzNHZ3VDJR?oc=5",
+       "source": "TradingView",
+       "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9WMEdBeHVBOXloOFo0a0xxY3NzY040cXRZQmRwVmxyS1lWRkludWRMVTVxS0FCNlB1QnJJeWtFaTB1X2NsbkExOHo3S0pYQ2NDZWFLWVg1UEYwX21sT0prckcyb3l1UQ?oc=5",
        "categories": [
         "Private placement (dilusi)"
        ],
@@ -15307,20 +15183,20 @@
      "risks": [],
      "news": [
       {
-       "date": "2026-11-07",
-       "title": "Pemegang Saham Setujui Rights Issue BSI (BRIS), Perkuat Permodalan dan Dorong Peningkatan Free Float",
-       "source": "Media Asuransi News",
-       "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPWGcyaC1OZzY2UlVxXzc4Z1FfQzA2TWFkLXBZZ0cwdmZ1RllvVmxWM1JDWmJ4OC1kc25vR2Y3WFVScjRZaHZva3o2eHJfU3ZBajY5ejFtektZNTYzTGFxNjNUVUxscUFUWl93X1ByX0ZmM2xia05Nc19EVk55NFFzLTNONnVBNGVrdVRQdzBONGdGSmRfYUF6SXV3OUZDM3A0OUFLbnBBaFNBLVdmT0F2VUZlenlWcnRkS0J3YVZ2WmFYWHFpNjNUVXlPM1NEMnJfRzVKU081QQ?oc=5",
+       "date": "2026-11-09",
+       "title": "BSI (BRIS) Kantongi Restu Rights Issue 6,8 Miliar Saham, Ini Rencana Penggunaannya",
+       "source": "kontan.co.id",
+       "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOZV9yZzA2b01CclljX1ZWRWFTVFM5SXBoRnJ5SW1IUmNXclU0bFhZQllkR0dyLWhHUmdNMGhxNzBkcHd6SmVxZDVWaGkwLWNmb0tOVW5kOENKeEgyWEdHV3RWdUVZSk0wc25SdGM4QzYtaW5KY1g0WmNHbjZ1QTNXS1o0djM4OEdVX3EwZXBqdzh6LTQxc0RfTDRZSXhYME85bkVlUWM2MUpLOTZBbUtCUFdPVdIBrAFBVV95cUxOUEVKR2U4SEtVLW9GQlVUcDJWZThDNmJXYWVSSTRSYVA1QVhuODV5NHRQNHZyRjRYSFdsNF9KSy1NTWhNeFpXNnNpNW5hVHZJWGU3TDhLX3Q2UUZPenVIUXZFaEhQeXVady1KdHB1Mkl2LXhZdEhfbF9VTUZjX2JiOVVHcEhNOU0wR1h5V29FRW9DRTdSOU0tYWdfNWVGVXpKXzg2dTJ4aTJzWlhM?oc=5",
        "categories": [
         "Right issue (dilusi)"
        ],
        "severity": "sedang"
       },
       {
-       "date": "2026-11-06",
-       "title": "Tingkatkan Free Float Lewat Rights Issue, BRIS Bidik Investor Asing",
-       "source": "",
-       "link": "https://www.cnbcindonesia.com/market/20261106131015-17-782972/tingkatkan-free-float-lewat-rights-issue-bris-bidik-investor-asing",
+       "date": "2026-11-07",
+       "title": "Pemegang Saham Setujui Rights Issue BSI (BRIS), Perkuat Permodalan dan Dorong Peningkatan Free Float",
+       "source": "Media Asuransi News",
+       "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPWGcyaC1OZzY2UlVxXzc4Z1FfQzA2TWFkLXBZZ0cwdmZ1RllvVmxWM1JDWmJ4OC1kc25vR2Y3WFVScjRZaHZva3o2eHJfU3ZBajY5ejFtektZNTYzTGFxNjNUVUxscUFUWl93X1ByX0ZmM2xia05Nc19EVk55NFFzLTNONnVBNGVrdVRQdzBONGdGSmRfYUF6SXV3OUZDM3A0OUFLbnBBaFNBLVdmT0F2VUZlenlWcnRkS0J3YVZ2WmFYWHFpNjNUVXlPM1NEMnJfRzVKU081QQ?oc=5",
        "categories": [
         "Right issue (dilusi)"
        ],
@@ -16288,95 +16164,6 @@
       850.0,
       915.0,
       920.0
-     ]
-    },
-    {
-     "ticker": "RMKE.JK",
-     "code": "RMKE",
-     "name": "PT RMK Energy Tbk",
-     "sector": "Energy",
-     "horizon": "medium",
-     "price": 314.0,
-     "chg_1d": 0.00641,
-     "mcap": 6868750000000.0,
-     "score": -61.7,
-     "signal": "STRONG SELL",
-     "confidence": 0.617,
-     "atr_pct": 0.058368,
-     "reasons": [
-      "Harga di bawah SMA50",
-      "Struktur MA menengah melemah",
-      "ADX 31: tren turun kuat"
-     ],
-     "risks": [],
-     "news": null,
-     "action": "Jual seluruh posisi",
-     "sell_portion": 1.0,
-     "sell_zone_low": 314.0,
-     "sell_zone_high": 322.0,
-     "breakdown_level": 258.0,
-     "when_sell": "Jual saat pantulan (rebound) ke area jual pada T+1/T+2; jangan menunggu. Jangan buka posisi beli baru selama sinyal SELL.",
-     "spark": [
-      394.0,
-      396.0,
-      414.0,
-      438.0,
-      430.0,
-      424.0,
-      416.0,
-      408.0,
-      416.0,
-      418.0,
-      420.0,
-      434.0,
-      438.0,
-      434.0,
-      422.0,
-      418.0,
-      434.0,
-      434.0,
-      418.0,
-      408.0,
-      412.0,
-      408.0,
-      400.0,
-      396.0,
-      394.0,
-      400.0,
-      410.0,
-      406.0,
-      402.0,
-      380.0,
-      362.0,
-      364.0,
-      344.0,
-      338.0,
-      328.0,
-      332.0,
-      348.0,
-      340.0,
-      332.0,
-      332.0,
-      326.0,
-      326.0,
-      324.0,
-      314.0,
-      276.0,
-      282.0,
-      298.0,
-      306.0,
-      306.0,
-      304.0,
-      300.0,
-      298.0,
-      308.0,
-      310.0,
-      294.0,
-      312.0,
-      296.0,
-      304.0,
-      312.0,
-      314.0
      ]
     },
     {
@@ -19024,7 +18811,7 @@
   "long": {
    "label": "Jangka Panjang (6-24 bulan)",
    "allocation": 0.5,
-   "cash_weight": 0.725852,
+   "cash_weight": 0.72443,
    "regime_scale": 0.3,
    "regime_text": "IHSG di bawah SMA50 dan SMA200",
    "buys": [
@@ -19070,8 +18857,8 @@
      "when_buy": "Cicil 3 tahap (mis. 40/30/30) dalam 2-4 minggu di area beli; tambah saat koreksi ke SMA50. Jangan beli di atas 10.150.",
      "when_sell": "Ambil sebagian di TP1, sisanya dibiarkan berjalan selama fundamental & tren primer utuh. Keluar bila close mingguan di bawah SL / SMA200, atau sinyal berubah STRONG SELL. Review tiap rilis laporan keuangan kuartalan.",
      "held": null,
-     "weight_bucket": 0.024073,
-     "weight_total": 0.012036,
+     "weight_bucket": 0.024542,
+     "weight_total": 0.012271,
      "lots": 1,
      "position_value": 1015000.0,
      "max_loss_value": 205000.0,
@@ -19181,8 +18968,8 @@
      "when_buy": "Cicil 3 tahap (mis. 40/30/30) dalam 2-4 minggu di area beli; tambah saat koreksi ke SMA50. Jangan beli di atas 2.980.",
      "when_sell": "Ambil sebagian di TP1, sisanya dibiarkan berjalan selama fundamental & tren primer utuh. Keluar bila close mingguan di bawah SL / SMA200, atau sinyal berubah STRONG SELL. Review tiap rilis laporan keuangan kuartalan.",
      "held": null,
-     "weight_bucket": 0.022437,
-     "weight_total": 0.011218,
+     "weight_bucket": 0.022874,
+     "weight_total": 0.011437,
      "lots": 3,
      "position_value": 894000.0,
      "max_loss_value": 180000.0,
@@ -19292,8 +19079,8 @@
      "when_buy": "Cicil 3 tahap (mis. 40/30/30) dalam 2-4 minggu di area beli; tambah saat koreksi ke SMA50. Jangan beli di atas 492.",
      "when_sell": "Ambil sebagian di TP1, sisanya dibiarkan berjalan selama fundamental & tren primer utuh. Keluar bila close mingguan di bawah SL / SMA200, atau sinyal berubah STRONG SELL. Review tiap rilis laporan keuangan kuartalan.",
      "held": null,
-     "weight_bucket": 0.021045,
-     "weight_total": 0.010522,
+     "weight_bucket": 0.021222,
+     "weight_total": 0.010611,
      "lots": 21,
      "position_value": 1033200.0,
      "max_loss_value": 210000.0,
@@ -19403,8 +19190,8 @@
      "when_buy": "Cicil 3 tahap (mis. 40/30/30) dalam 2-4 minggu di area beli; tambah saat koreksi ke SMA50. Jangan beli di atas 4.990.",
      "when_sell": "Ambil sebagian di TP1, sisanya dibiarkan berjalan selama fundamental & tren primer utuh. Keluar bila close mingguan di bawah SL / SMA200, atau sinyal berubah STRONG SELL. Review tiap rilis laporan keuangan kuartalan.",
      "held": null,
-     "weight_bucket": 0.03611,
-     "weight_total": 0.018055,
+     "weight_bucket": 0.036506,
+     "weight_total": 0.018253,
      "lots": 3,
      "position_value": 1497000.0,
      "max_loss_value": 192000.0,
@@ -19514,8 +19301,8 @@
      "when_buy": "Cicil 3 tahap (mis. 40/30/30) dalam 2-4 minggu di area beli; tambah saat koreksi ke SMA50. Jangan beli di atas 1.505.",
      "when_sell": "Ambil sebagian di TP1, sisanya dibiarkan berjalan selama fundamental & tren primer utuh. Keluar bila close mingguan di bawah SL / SMA200, atau sinyal berubah STRONG SELL. Review tiap rilis laporan keuangan kuartalan.",
      "held": null,
-     "weight_bucket": 0.033985,
-     "weight_total": 0.016993,
+     "weight_bucket": 0.034271,
+     "weight_total": 0.017136,
      "lots": 11,
      "position_value": 1655500.0,
      "max_loss_value": 280500.0,
@@ -19625,8 +19412,8 @@
      "when_buy": "Cicil 3 tahap (mis. 40/30/30) dalam 2-4 minggu di area beli; tambah saat koreksi ke SMA50. Jangan beli di atas 965.",
      "when_sell": "Ambil sebagian di TP1, sisanya dibiarkan berjalan selama fundamental & tren primer utuh. Keluar bila close mingguan di bawah SL / SMA200, atau sinyal berubah STRONG SELL. Review tiap rilis laporan keuangan kuartalan.",
      "held": null,
-     "weight_bucket": 0.031002,
-     "weight_total": 0.015501,
+     "weight_bucket": 0.031262,
+     "weight_total": 0.015631,
      "lots": 16,
      "position_value": 1544000.0,
      "max_loss_value": 288000.0,
@@ -19695,117 +19482,6 @@
      ]
     },
     {
-     "ticker": "AKRA.JK",
-     "code": "AKRA",
-     "name": "PT AKR Corporindo Tbk",
-     "sector": "Energy",
-     "horizon": "long",
-     "price": 1370.0,
-     "chg_1d": 0.045802,
-     "mcap": 27125684352000.0,
-     "score": 78.7,
-     "signal": "STRONG BUY",
-     "confidence": 0.787,
-     "atr_pct": 0.045475,
-     "reasons": [
-      "Harga di atas SMA200 (uptrend primer)",
-      "Momentum 12 bulan +42%",
-      "ROE 22.2% (profitabilitas tinggi)"
-     ],
-     "risks": [],
-     "news": null,
-     "entry": 1370.0,
-     "entry_low": 1280.0,
-     "entry_high": 1370.0,
-     "tp1": 1745.0,
-     "tp2": 2120.0,
-     "sl": 1120.0,
-     "tp1_pct": 0.273723,
-     "tp2_pct": 0.547445,
-     "sl_pct": -0.182482,
-     "rr1": 1.446244,
-     "rr2": 2.91399,
-     "max_hold_days": 500,
-     "entry_mode": "open",
-     "limit_days": 3,
-     "trail_ma": 0,
-     "market_exit": "none",
-     "market_exit_ma": "sma50",
-     "market_exit_confirm": 1,
-     "hold": "6-24 bulan",
-     "when_buy": "Cicil 3 tahap (mis. 40/30/30) dalam 2-4 minggu di area beli; tambah saat koreksi ke SMA50. Jangan beli di atas 1.370.",
-     "when_sell": "Ambil sebagian di TP1, sisanya dibiarkan berjalan selama fundamental & tren primer utuh. Keluar bila close mingguan di bawah SL / SMA200, atau sinyal berubah STRONG SELL. Review tiap rilis laporan keuangan kuartalan.",
-     "held": null,
-     "weight_bucket": 0.022381,
-     "weight_total": 0.01119,
-     "lots": 8,
-     "position_value": 1096000.0,
-     "max_loss_value": 200000.0,
-     "lots_limited_by_risk": false,
-     "spark": [
-      1400.0,
-      1400.0,
-      1415.0,
-      1390.0,
-      1395.0,
-      1380.0,
-      1390.0,
-      1365.0,
-      1385.0,
-      1365.0,
-      1455.0,
-      1400.0,
-      1395.0,
-      1400.0,
-      1385.0,
-      1450.0,
-      1525.0,
-      1550.0,
-      1520.0,
-      1520.0,
-      1510.0,
-      1490.0,
-      1475.0,
-      1470.0,
-      1470.0,
-      1455.0,
-      1450.0,
-      1460.0,
-      1490.0,
-      1465.0,
-      1460.0,
-      1435.0,
-      1450.0,
-      1450.0,
-      1460.0,
-      1500.0,
-      1520.0,
-      1500.0,
-      1450.0,
-      1485.0,
-      1470.0,
-      1475.0,
-      1480.0,
-      1470.0,
-      1250.0,
-      1165.0,
-      1210.0,
-      1295.0,
-      1320.0,
-      1390.0,
-      1400.0,
-      1435.0,
-      1405.0,
-      1400.0,
-      1375.0,
-      1355.0,
-      1320.0,
-      1300.0,
-      1310.0,
-      1370.0
-     ]
-    },
-    {
      "ticker": "DMAS.JK",
      "code": "DMAS",
      "name": "PT Puradelta Lestari Tbk",
@@ -19849,8 +19525,8 @@
      "when_buy": "Cicil 3 tahap (mis. 40/30/30) dalam 2-4 minggu di area beli; tambah saat koreksi ke SMA50. Jangan beli di atas 162.",
      "when_sell": "Ambil sebagian di TP1, sisanya dibiarkan berjalan selama fundamental & tren primer utuh. Keluar bila close mingguan di bawah SL / SMA200, atau sinyal berubah STRONG SELL. Review tiap rilis laporan keuangan kuartalan.",
      "held": null,
-     "weight_bucket": 0.019912,
-     "weight_total": 0.009956,
+     "weight_bucket": 0.02008,
+     "weight_total": 0.01004,
      "lots": 61,
      "position_value": 988200.0,
      "max_loss_value": 201300.0,
@@ -19960,8 +19636,8 @@
      "when_buy": "Cicil 3 tahap (mis. 40/30/30) dalam 2-4 minggu di area beli; tambah saat koreksi ke SMA50. Jangan beli di atas 3.220.",
      "when_sell": "Ambil sebagian di TP1, sisanya dibiarkan berjalan selama fundamental & tren primer utuh. Keluar bila close mingguan di bawah SL / SMA200, atau sinyal berubah STRONG SELL. Review tiap rilis laporan keuangan kuartalan.",
      "held": null,
-     "weight_bucket": 0.037325,
-     "weight_total": 0.018663,
+     "weight_bucket": 0.037639,
+     "weight_total": 0.01882,
      "lots": 5,
      "position_value": 1610000.0,
      "max_loss_value": 210000.0,
@@ -20030,6 +19706,119 @@
      ]
     },
     {
+     "ticker": "AKRA.JK",
+     "code": "AKRA",
+     "name": "PT AKR Corporindo Tbk",
+     "sector": "Energy",
+     "horizon": "long",
+     "price": 1370.0,
+     "chg_1d": 0.045802,
+     "mcap": 27125684352000.0,
+     "score": 72.7,
+     "signal": "STRONG BUY",
+     "confidence": 0.727,
+     "atr_pct": 0.045475,
+     "reasons": [
+      "Harga di atas SMA200 (uptrend primer)",
+      "Momentum 12 bulan +42%",
+      "ROE 22.2% (profitabilitas tinggi)"
+     ],
+     "risks": [
+      "PBV 2.05x di atas median sektor"
+     ],
+     "news": null,
+     "entry": 1370.0,
+     "entry_low": 1280.0,
+     "entry_high": 1370.0,
+     "tp1": 1745.0,
+     "tp2": 2120.0,
+     "sl": 1120.0,
+     "tp1_pct": 0.273723,
+     "tp2_pct": 0.547445,
+     "sl_pct": -0.182482,
+     "rr1": 1.446244,
+     "rr2": 2.91399,
+     "max_hold_days": 500,
+     "entry_mode": "open",
+     "limit_days": 3,
+     "trail_ma": 0,
+     "market_exit": "none",
+     "market_exit_ma": "sma50",
+     "market_exit_confirm": 1,
+     "hold": "6-24 bulan",
+     "when_buy": "Cicil 3 tahap (mis. 40/30/30) dalam 2-4 minggu di area beli; tambah saat koreksi ke SMA50. Jangan beli di atas 1.370.",
+     "when_sell": "Ambil sebagian di TP1, sisanya dibiarkan berjalan selama fundamental & tren primer utuh. Keluar bila close mingguan di bawah SL / SMA200, atau sinyal berubah STRONG SELL. Review tiap rilis laporan keuangan kuartalan.",
+     "held": null,
+     "weight_bucket": 0.021078,
+     "weight_total": 0.010539,
+     "lots": 7,
+     "position_value": 959000.0,
+     "max_loss_value": 175000.0,
+     "lots_limited_by_risk": false,
+     "spark": [
+      1400.0,
+      1400.0,
+      1415.0,
+      1390.0,
+      1395.0,
+      1380.0,
+      1390.0,
+      1365.0,
+      1385.0,
+      1365.0,
+      1455.0,
+      1400.0,
+      1395.0,
+      1400.0,
+      1385.0,
+      1450.0,
+      1525.0,
+      1550.0,
+      1520.0,
+      1520.0,
+      1510.0,
+      1490.0,
+      1475.0,
+      1470.0,
+      1470.0,
+      1455.0,
+      1450.0,
+      1460.0,
+      1490.0,
+      1465.0,
+      1460.0,
+      1435.0,
+      1450.0,
+      1450.0,
+      1460.0,
+      1500.0,
+      1520.0,
+      1500.0,
+      1450.0,
+      1485.0,
+      1470.0,
+      1475.0,
+      1480.0,
+      1470.0,
+      1250.0,
+      1165.0,
+      1210.0,
+      1295.0,
+      1320.0,
+      1390.0,
+      1400.0,
+      1435.0,
+      1405.0,
+      1400.0,
+      1375.0,
+      1355.0,
+      1320.0,
+      1300.0,
+      1310.0,
+      1370.0
+     ]
+    },
+    {
      "ticker": "TAPG.JK",
      "code": "TAPG",
      "name": "PT Triputra Agro Persada Tbk",
@@ -20073,8 +19862,8 @@
      "when_buy": "Cicil 3 tahap (mis. 40/30/30) dalam 2-4 minggu di area beli; tambah saat koreksi ke SMA50. Jangan beli di atas 1.910.",
      "when_sell": "Ambil sebagian di TP1, sisanya dibiarkan berjalan selama fundamental & tren primer utuh. Keluar bila close mingguan di bawah SL / SMA200, atau sinyal berubah STRONG SELL. Review tiap rilis laporan keuangan kuartalan.",
      "held": null,
-     "weight_bucket": 0.025879,
-     "weight_total": 0.012939,
+     "weight_bucket": 0.026096,
+     "weight_total": 0.013048,
      "lots": 6,
      "position_value": 1146000.0,
      "max_loss_value": 201000.0,
@@ -20273,6 +20062,16 @@
      ],
      "news": [
       {
+       "date": "2026-11-09",
+       "title": "RUPSLB Ultrajaya (ULTJ) Setujui Rights Issue hingga Pembagian Dividen Spesial Rp1,04 Triliun",
+       "source": "",
+       "link": "https://www.idxchannel.com/market-news/rupslb-ultrajaya-ultj-setujui-rights-issue-hingga-pembagian-dividen-spesial-rp104-triliun",
+       "categories": [
+        "Right issue (dilusi)"
+       ],
+       "severity": "sedang"
+      },
+      {
        "date": "2026-11-06",
        "title": "Ultra Jaya (ULTJ) dan Garuda Indonesia (GIAA) Gelar Rights Issue, Simak Prospeknya",
        "source": "kontan.co.id",
@@ -20287,16 +20086,6 @@
        "title": "ULTJ dan GIAA Siapkan Rights Issue untuk Akuisisi dan Restrukturisasi",
        "source": "Cirebon Times",
        "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPZlNCV1BxcVdVOFVRaDhQRG1JN3pVbEFQSDI3RHJQQlYyOGxQOXRQa3d5ZFFxMFhXNXhDZm5aX05WNDlJdTVKdHpjUjhmSG9ncXBVNVlZdHhWakhwR0FWaFBKeXNpUXM1a2drOVRQZVBEbXo4X1ROVHYzZmkxeUxGbll3?oc=5",
-       "categories": [
-        "Right issue (dilusi)"
-       ],
-       "severity": "sedang"
-      },
-      {
-       "date": "2026-11-05",
-       "title": "ULTJ siapkan rights issue Rp16,94 triliun untuk akuisisi FFI",
-       "source": "IDNFinancials",
-       "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNZVcteVNwN2hScWJRaWw0UHBxMzRnck5EX2MwaHpta2F2SE8zbHR1WUJQMVF3Tl8wR3JNcXZaWnBxNy1pLUgxdGVGSkp0QmpES2pWbXMzdXVUY0I4UUExYVVJUHJKX25ONlJLdWx4VjkzbEVIakZqNEZGcHlDcmsyeld1ZnNEakVQZnllSEI4ZUNsa0VuYm96TXJIemNQNHZaeXk5YzREVQ?oc=5",
        "categories": [
         "Right issue (dilusi)"
        ],
@@ -23791,18 +23580,7 @@
       "Laba tumbuh +174% YoY",
       "DER 0.53x (utang rendah)"
      ],
-     "news": [
-      {
-       "date": "2026-11-02",
-       "title": "IHSG Hari Ini Rebound 0,75%: MEDC & TAPG Bagikan Dividen Interim, MBMA Siapkan Private Placement",
-       "source": "Ajaib",
-       "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQdHRoT1V4RW9aSHpLdEJwYTcwYlJxQ24xSFhaUTQ0bHlyWDhONi01T0FzVzRqajR2N09rZlRLNFFoRTJKb0JyeHJRTjZyMU9pelgyN0JxdUtHVnNiZWVibmVJdmFmQnpQOFdqQVdnRGpTM0YxcnRIemYxUXFPdm1LQVFVcTB2VFliMmptdnYtSXJiRy1xLXFqY0ZrZUVxLVpUb1ZoeEYtaw?oc=5",
-       "categories": [
-        "Private placement (dilusi)"
-       ],
-       "severity": "sedang"
-      }
-     ],
+     "news": null,
      "action": "Kurangi 50% posisi",
      "sell_portion": 0.5,
      "sell_zone_low": 302.0,
@@ -24621,58 +24399,7 @@
    "pb": null,
    "roe": 0.18789,
    "div_yield": 0.0,
-   "news": [
-    {
-     "date": "2026-11-04",
-     "title": "Pandu Sjahrir Lepas Saham Supra Sekuritas Sejak Juni Sebelum Sanksi OJK Perkara DSSA",
-     "source": "gadget.qoo10.co.id",
-     "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPZG5ZMU9fcWY4eE9USFJ6ekxjVGRoN3IwUUpPdXZMdXJqOUFSSUZEWTEzTzdPMHItc3czWUFMTHYxNHpXeklET0pvVXhJRTRiLVJlMTVwNHhIVmprNjNNdDlIVS03S2x2OENDNDRZMEc1U1g5UHlVTE5GbVgtMzkwcDNn?oc=5",
-     "categories": [
-      "Sanksi / denda"
-     ],
-     "severity": "sedang"
-    },
-    {
-     "date": "2026-11-03",
-     "title": "Daftar 25 Pihak Didenda OJK Rp 2,14 T di Kasus 'Main Saham' DSSA, IMPC dan FILM",
-     "source": "Katadata.co.id",
-     "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQdHhoakg5SHJDZEkyN2Etc20yeWtzbXhXci1JQVFlTGg5WGhJdG5aMldHTE1sVmUxWTNBNWZFN2N5eDhwS0tsZEd6VEw3c2p2VVB6VkNyWERoQnJTd0RvSUJPbzNCREIzUk5YX3k3cjZrNjEwSmNjZ0c0aWtoeGlRdEhONmp3QVI4SGprT0NFT0NnVFFSSFJHYUJmQ2hzMFlNbkF3QnFpTkViZ0tkYVI4aVo5S0NWRTBncGxIeExVdDFIQy1UdFpKUtIBzgFBVV95cUxQdU5FMHJZNWYtSnFvaXlKLVBWRmZIQzhHRXBoWVJmNmRlTkxYcU5JbVJ6TUQ0TV9vcWF3ZkJQUFU2WUI5ZzZsTTVQM3VsOS1pYkRIOHNzenJPOEFsV0NVd1V0MXB2TXJjSnBwdElsT0N3SVUyaWlhWGhrc0tJbDd6dXRHZERfTTZ6MUV1X19fZXk1ckJ5WlZUclF4ZEZNc055YTAzVi1DUkNkUW53bEp5Slo3T0RDWEVYcWJFNTNZVDQ5UjFzaEVCaFFPNHV6UQ?oc=5",
-     "categories": [
-      "Sanksi / denda"
-     ],
-     "severity": "sedang"
-    },
-    {
-     "date": "2026-11-02",
-     "title": "OJK Jatuhkan Sanksi Rp1,5119 Triliun dalam Kasus Saham DSSA",
-     "source": "bsinews.id",
-     "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9kNmNlV0dObERBUjBMQUhCamppOGxITUFqeF9PdmpCNXB5ZkJZMUdFMEZfQmN0YW9YT2tBZ0pmZVRTVDVvR2J6X3E1MkdwdEF0UkZSTGo0NmJibmk1bW1mV0Vn?oc=5",
-     "categories": [
-      "Sanksi / denda"
-     ],
-     "severity": "sedang"
-    },
-    {
-     "date": "2026-11-02",
-     "title": "Ini Daftar Pihak yang Disanksi OJK dalam Kasus DSSA, BREN, CUAN hingga Belvin Tannadi",
-     "source": "tutur.co.id",
-     "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxORnY3ZXlVdUJQUWZBMGxGWUNPandPamJhbnlmOEdMQWlULXNUWGY1d21SdE8xOGQ3VF84UC1pTW40dTQtai1MaXQ1LThPS2pHT3BKUHJLblotQlRwYXZXRVhYSkJWSHNEVEJ1cW05MUF6YUpPWGE3MmRHUC1BWEQzbEJVOEZrSVNfNkFFbV9heUR3SDBaNU9FYzl0NXlSSlI1azRkUG80MA?oc=5",
-     "categories": [
-      "Sanksi / denda"
-     ],
-     "severity": "sedang"
-    },
-    {
-     "date": "2026-11-02",
-     "title": "OJK Jatuhkan Denda Rp 1,5 Triliun dalam Kasus DSSA",
-     "source": "Demokratis.co.id",
-     "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBkWnR0YlIxa3A4cnFYcHF6LUxNZzVNOFpVdlNKSlRkTEJHa2JXd0VmbUhjLU1WRkgwdEhNWDgtSFhLTzZuUWVCOHJ1M0xjMFBVRXBkSk40TVdJam5IUFNsWWhDN2xHc2VVOUdn?oc=5",
-     "categories": [
-      "Sanksi / denda"
-     ],
-     "severity": "sedang"
-    }
-   ],
+   "news": null,
    "short": {
     "score": -67.0,
     "signal": "STRONG SELL"
@@ -24784,8 +24511,8 @@
     {
      "date": "2026-11-07",
      "title": "Merdeka Gold (EMAS) Private Placement 1,47 Miliar Saham Baru, Potensi Dilusi 9,09%",
-     "source": "kontan.co.id",
-     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOdFowb1pNZjJGT3lwSlgxNmgwOW5GU2JpdzNBOUxKOXVxdklRc1FzMS0yUlpJNHczM2Nod3had1hwTlMwVXl1S3RJalQwQjczWi1CbFQ1dF8tQzJiNGlQTThyVXp5bG1ZY3lMRmQ2a29QaDltY0JvenpyX1dpT3ZWS3FNXzhUaVZ5S2NQQkVoUFUzYTZFQXVsYjFBZjF3Qzlkd2hSa1lNNjJFLVVlcGtzOEdB0gGqAUFVX3lxTE1fTlZGdF9Nam5TaEY4S2N2cjF4Z3NLaGFEajFMVVRhVXNUX3NyQjZVSE1FREJIWlZEWHpDM2MyRVhNRmZrSk4yV1ZrWnExeUhVSkJxbnBJQl8yWjFpOG9KYmZQWEhFS1lvSk5oUGVkZXF5eUowUTdmZGZLMDJzOHZESXpSRkdkTURZM3NDOVRpWnhnczRDbGM2SlBncloyYTJ0VzVzNHZ3VDJR?oc=5",
+     "source": "TradingView",
+     "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9WMEdBeHVBOXloOFo0a0xxY3NzY040cXRZQmRwVmxyS1lWRkludWRMVTVxS0FCNlB1QnJJeWtFaTB1X2NsbkExOHo3S0pYQ2NDZWFLWVg1UEYwX21sT0prckcyb3l1UQ?oc=5",
      "categories": [
       "Private placement (dilusi)"
      ],
@@ -25036,20 +24763,20 @@
    "div_yield": 0.0325,
    "news": [
     {
-     "date": "2026-11-07",
-     "title": "Pemegang Saham Setujui Rights Issue BSI (BRIS), Perkuat Permodalan dan Dorong Peningkatan Free Float",
-     "source": "Media Asuransi News",
-     "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPWGcyaC1OZzY2UlVxXzc4Z1FfQzA2TWFkLXBZZ0cwdmZ1RllvVmxWM1JDWmJ4OC1kc25vR2Y3WFVScjRZaHZva3o2eHJfU3ZBajY5ejFtektZNTYzTGFxNjNUVUxscUFUWl93X1ByX0ZmM2xia05Nc19EVk55NFFzLTNONnVBNGVrdVRQdzBONGdGSmRfYUF6SXV3OUZDM3A0OUFLbnBBaFNBLVdmT0F2VUZlenlWcnRkS0J3YVZ2WmFYWHFpNjNUVXlPM1NEMnJfRzVKU081QQ?oc=5",
+     "date": "2026-11-09",
+     "title": "BSI (BRIS) Kantongi Restu Rights Issue 6,8 Miliar Saham, Ini Rencana Penggunaannya",
+     "source": "kontan.co.id",
+     "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOZV9yZzA2b01CclljX1ZWRWFTVFM5SXBoRnJ5SW1IUmNXclU0bFhZQllkR0dyLWhHUmdNMGhxNzBkcHd6SmVxZDVWaGkwLWNmb0tOVW5kOENKeEgyWEdHV3RWdUVZSk0wc25SdGM4QzYtaW5KY1g0WmNHbjZ1QTNXS1o0djM4OEdVX3EwZXBqdzh6LTQxc0RfTDRZSXhYME85bkVlUWM2MUpLOTZBbUtCUFdPVdIBrAFBVV95cUxOUEVKR2U4SEtVLW9GQlVUcDJWZThDNmJXYWVSSTRSYVA1QVhuODV5NHRQNHZyRjRYSFdsNF9KSy1NTWhNeFpXNnNpNW5hVHZJWGU3TDhLX3Q2UUZPenVIUXZFaEhQeXVady1KdHB1Mkl2LXhZdEhfbF9VTUZjX2JiOVVHcEhNOU0wR1h5V29FRW9DRTdSOU0tYWdfNWVGVXpKXzg2dTJ4aTJzWlhM?oc=5",
      "categories": [
       "Right issue (dilusi)"
      ],
      "severity": "sedang"
     },
     {
-     "date": "2026-11-06",
-     "title": "Tingkatkan Free Float Lewat Rights Issue, BRIS Bidik Investor Asing",
-     "source": "",
-     "link": "https://www.cnbcindonesia.com/market/20261106131015-17-782972/tingkatkan-free-float-lewat-rights-issue-bris-bidik-investor-asing",
+     "date": "2026-11-07",
+     "title": "Pemegang Saham Setujui Rights Issue BSI (BRIS), Perkuat Permodalan dan Dorong Peningkatan Free Float",
+     "source": "Media Asuransi News",
+     "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPWGcyaC1OZzY2UlVxXzc4Z1FfQzA2TWFkLXBZZ0cwdmZ1RllvVmxWM1JDWmJ4OC1kc25vR2Y3WFVScjRZaHZva3o2eHJfU3ZBajY5ejFtektZNTYzTGFxNjNUVUxscUFUWl93X1ByX0ZmM2xia05Nc19EVk55NFFzLTNONnVBNGVrdVRQdzBONGdGSmRfYUF6SXV3OUZDM3A0OUFLbnBBaFNBLVdmT0F2VUZlenlWcnRkS0J3YVZ2WmFYWHFpNjNUVXlPM1NEMnJfRzVKU081QQ?oc=5",
      "categories": [
       "Right issue (dilusi)"
      ],
@@ -25633,18 +25360,7 @@
    "pb": null,
    "roe": 0.09239,
    "div_yield": 0.0,
-   "news": [
-    {
-     "date": "2026-11-02",
-     "title": "IHSG Hari Ini Rebound 0,75%: MEDC & TAPG Bagikan Dividen Interim, MBMA Siapkan Private Placement",
-     "source": "Ajaib",
-     "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQdHRoT1V4RW9aSHpLdEJwYTcwYlJxQ24xSFhaUTQ0bHlyWDhONi01T0FzVzRqajR2N09rZlRLNFFoRTJKb0JyeHJRTjZyMU9pelgyN0JxdUtHVnNiZWVibmVJdmFmQnpQOFdqQVdnRGpTM0YxcnRIemYxUXFPdm1LQVFVcTB2VFliMmptdnYtSXJiRy1xLXFqY0ZrZUVxLVpUb1ZoeEYtaw?oc=5",
-     "categories": [
-      "Private placement (dilusi)"
-     ],
-     "severity": "sedang"
-    }
-   ],
+   "news": null,
    "short": {
     "score": -46.5,
     "signal": "SELL"
@@ -25816,7 +25532,7 @@
     "signal": "HOLD"
    },
    "long": {
-    "score": 78.7,
+    "score": 72.7,
     "signal": "STRONG BUY"
    }
   },
@@ -25943,6 +25659,16 @@
    "div_yield": 0.0625,
    "news": [
     {
+     "date": "2026-11-09",
+     "title": "RUPSLB Ultrajaya (ULTJ) Setujui Rights Issue hingga Pembagian Dividen Spesial Rp1,04 Triliun",
+     "source": "",
+     "link": "https://www.idxchannel.com/market-news/rupslb-ultrajaya-ultj-setujui-rights-issue-hingga-pembagian-dividen-spesial-rp104-triliun",
+     "categories": [
+      "Right issue (dilusi)"
+     ],
+     "severity": "sedang"
+    },
+    {
      "date": "2026-11-06",
      "title": "Ultra Jaya (ULTJ) dan Garuda Indonesia (GIAA) Gelar Rights Issue, Simak Prospeknya",
      "source": "kontan.co.id",
@@ -25957,16 +25683,6 @@
      "title": "ULTJ dan GIAA Siapkan Rights Issue untuk Akuisisi dan Restrukturisasi",
      "source": "Cirebon Times",
      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPZlNCV1BxcVdVOFVRaDhQRG1JN3pVbEFQSDI3RHJQQlYyOGxQOXRQa3d5ZFFxMFhXNXhDZm5aX05WNDlJdTVKdHpjUjhmSG9ncXBVNVlZdHhWakhwR0FWaFBKeXNpUXM1a2drOVRQZVBEbXo4X1ROVHYzZmkxeUxGbll3?oc=5",
-     "categories": [
-      "Right issue (dilusi)"
-     ],
-     "severity": "sedang"
-    },
-    {
-     "date": "2026-11-05",
-     "title": "ULTJ siapkan rights issue Rp16,94 triliun untuk akuisisi FFI",
-     "source": "IDNFinancials",
-     "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNZVcteVNwN2hScWJRaWw0UHBxMzRnck5EX2MwaHpta2F2SE8zbHR1WUJQMVF3Tl8wR3JNcXZaWnBxNy1pLUgxdGVGSkp0QmpES2pWbXMzdXVUY0I4UUExYVVJUHJKX25ONlJLdWx4VjkzbEVIakZqNEZGcHlDcmsyeld1ZnNEakVQZnllSEI4ZUNsa0VuYm96TXJIemNQNHZaeXk5YzREVQ?oc=5",
      "categories": [
       "Right issue (dilusi)"
      ],
@@ -27584,33 +27300,6 @@
    }
   },
   {
-   "ticker": "RMKE.JK",
-   "code": "RMKE",
-   "name": "PT RMK Energy Tbk",
-   "sector": "Energy",
-   "price": 314.0,
-   "chg_1d": 0.00641,
-   "mcap": 6868750000000.0,
-   "avg_value_20d": 9396886680.0,
-   "pe": 15.332031,
-   "pb": 3.249273,
-   "roe": 0.22711,
-   "div_yield": 0.0192,
-   "news": null,
-   "short": {
-    "score": 10.0,
-    "signal": "HOLD"
-   },
-   "medium": {
-    "score": -61.7,
-    "signal": "STRONG SELL"
-   },
-   "long": {
-    "score": -13.8,
-    "signal": "HOLD"
-   }
-  },
-  {
    "ticker": "MBSS.JK",
    "code": "MBSS",
    "name": "PT Mitrabahtera Segara Sejati Tbk",
@@ -28562,8 +28251,8 @@
      "items": 20
     },
     "https://rss.tempo.co/bisnis": {
-     "status": "OK",
-     "items": 50
+     "status": "HTTP 403",
+     "items": 0
     },
     "https://www.idxchannel.com/rss": {
      "status": "OK",
@@ -28571,127 +28260,27 @@
     }
    },
    "google": {
-    "ok": 121,
+    "ok": 120,
     "fail": 0,
-    "items": 5891
+    "items": 5860
    },
    "skipped_budget": 0,
-   "recent_items": 1271,
-   "stocks_flagged": 7,
-   "seconds": 89
+   "recent_items": 1295,
+   "stocks_flagged": 5,
+   "seconds": 95
   },
   "items": {
-   "BRIS": [
-    {
-     "date": "2026-11-07",
-     "title": "Pemegang Saham Setujui Rights Issue BSI (BRIS), Perkuat Permodalan dan Dorong Peningkatan Free Float",
-     "source": "Media Asuransi News",
-     "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPWGcyaC1OZzY2UlVxXzc4Z1FfQzA2TWFkLXBZZ0cwdmZ1RllvVmxWM1JDWmJ4OC1kc25vR2Y3WFVScjRZaHZva3o2eHJfU3ZBajY5ejFtektZNTYzTGFxNjNUVUxscUFUWl93X1ByX0ZmM2xia05Nc19EVk55NFFzLTNONnVBNGVrdVRQdzBONGdGSmRfYUF6SXV3OUZDM3A0OUFLbnBBaFNBLVdmT0F2VUZlenlWcnRkS0J3YVZ2WmFYWHFpNjNUVXlPM1NEMnJfRzVKU081QQ?oc=5",
-     "categories": [
-      "Right issue (dilusi)"
-     ],
-     "severity": "sedang"
-    },
-    {
-     "date": "2026-11-06",
-     "title": "Tingkatkan Free Float Lewat Rights Issue, BRIS Bidik Investor Asing",
-     "source": "",
-     "link": "https://www.cnbcindonesia.com/market/20261106131015-17-782972/tingkatkan-free-float-lewat-rights-issue-bris-bidik-investor-asing",
-     "categories": [
-      "Right issue (dilusi)"
-     ],
-     "severity": "sedang"
-    }
-   ],
-   "DSSA": [
-    {
-     "date": "2026-11-04",
-     "title": "Pandu Sjahrir Lepas Saham Supra Sekuritas Sejak Juni Sebelum Sanksi OJK Perkara DSSA",
-     "source": "gadget.qoo10.co.id",
-     "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPZG5ZMU9fcWY4eE9USFJ6ekxjVGRoN3IwUUpPdXZMdXJqOUFSSUZEWTEzTzdPMHItc3czWUFMTHYxNHpXeklET0pvVXhJRTRiLVJlMTVwNHhIVmprNjNNdDlIVS03S2x2OENDNDRZMEc1U1g5UHlVTE5GbVgtMzkwcDNn?oc=5",
-     "categories": [
-      "Sanksi / denda"
-     ],
-     "severity": "sedang"
-    },
-    {
-     "date": "2026-11-03",
-     "title": "Daftar 25 Pihak Didenda OJK Rp 2,14 T di Kasus 'Main Saham' DSSA, IMPC dan FILM",
-     "source": "Katadata.co.id",
-     "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQdHhoakg5SHJDZEkyN2Etc20yeWtzbXhXci1JQVFlTGg5WGhJdG5aMldHTE1sVmUxWTNBNWZFN2N5eDhwS0tsZEd6VEw3c2p2VVB6VkNyWERoQnJTd0RvSUJPbzNCREIzUk5YX3k3cjZrNjEwSmNjZ0c0aWtoeGlRdEhONmp3QVI4SGprT0NFT0NnVFFSSFJHYUJmQ2hzMFlNbkF3QnFpTkViZ0tkYVI4aVo5S0NWRTBncGxIeExVdDFIQy1UdFpKUtIBzgFBVV95cUxQdU5FMHJZNWYtSnFvaXlKLVBWRmZIQzhHRXBoWVJmNmRlTkxYcU5JbVJ6TUQ0TV9vcWF3ZkJQUFU2WUI5ZzZsTTVQM3VsOS1pYkRIOHNzenJPOEFsV0NVd1V0MXB2TXJjSnBwdElsT0N3SVUyaWlhWGhrc0tJbDd6dXRHZERfTTZ6MUV1X19fZXk1ckJ5WlZUclF4ZEZNc055YTAzVi1DUkNkUW53bEp5Slo3T0RDWEVYcWJFNTNZVDQ5UjFzaEVCaFFPNHV6UQ?oc=5",
-     "categories": [
-      "Sanksi / denda"
-     ],
-     "severity": "sedang"
-    },
-    {
-     "date": "2026-11-02",
-     "title": "OJK Jatuhkan Sanksi Rp1,5119 Triliun dalam Kasus Saham DSSA",
-     "source": "bsinews.id",
-     "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9kNmNlV0dObERBUjBMQUhCamppOGxITUFqeF9PdmpCNXB5ZkJZMUdFMEZfQmN0YW9YT2tBZ0pmZVRTVDVvR2J6X3E1MkdwdEF0UkZSTGo0NmJibmk1bW1mV0Vn?oc=5",
-     "categories": [
-      "Sanksi / denda"
-     ],
-     "severity": "sedang"
-    },
-    {
-     "date": "2026-11-02",
-     "title": "Ini Daftar Pihak yang Disanksi OJK dalam Kasus DSSA, BREN, CUAN hingga Belvin Tannadi",
-     "source": "tutur.co.id",
-     "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxORnY3ZXlVdUJQUWZBMGxGWUNPandPamJhbnlmOEdMQWlULXNUWGY1d21SdE8xOGQ3VF84UC1pTW40dTQtai1MaXQ1LThPS2pHT3BKUHJLblotQlRwYXZXRVhYSkJWSHNEVEJ1cW05MUF6YUpPWGE3MmRHUC1BWEQzbEJVOEZrSVNfNkFFbV9heUR3SDBaNU9FYzl0NXlSSlI1azRkUG80MA?oc=5",
-     "categories": [
-      "Sanksi / denda"
-     ],
-     "severity": "sedang"
-    },
-    {
-     "date": "2026-11-02",
-     "title": "OJK Jatuhkan Denda Rp 1,5 Triliun dalam Kasus DSSA",
-     "source": "Demokratis.co.id",
-     "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBkWnR0YlIxa3A4cnFYcHF6LUxNZzVNOFpVdlNKSlRkTEJHa2JXd0VmbUhjLU1WRkgwdEhNWDgtSFhLTzZuUWVCOHJ1M0xjMFBVRXBkSk40TVdJam5IUFNsWWhDN2xHc2VVOUdn?oc=5",
-     "categories": [
-      "Sanksi / denda"
-     ],
-     "severity": "sedang"
-    }
-   ],
-   "EMAS": [
-    {
-     "date": "2026-11-07",
-     "title": "Merdeka Gold (EMAS) Private Placement 1,47 Miliar Saham Baru, Potensi Dilusi 9,09%",
-     "source": "kontan.co.id",
-     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOdFowb1pNZjJGT3lwSlgxNmgwOW5GU2JpdzNBOUxKOXVxdklRc1FzMS0yUlpJNHczM2Nod3had1hwTlMwVXl1S3RJalQwQjczWi1CbFQ1dF8tQzJiNGlQTThyVXp5bG1ZY3lMRmQ2a29QaDltY0JvenpyX1dpT3ZWS3FNXzhUaVZ5S2NQQkVoUFUzYTZFQXVsYjFBZjF3Qzlkd2hSa1lNNjJFLVVlcGtzOEdB0gGqAUFVX3lxTE1fTlZGdF9Nam5TaEY4S2N2cjF4Z3NLaGFEajFMVVRhVXNUX3NyQjZVSE1FREJIWlZEWHpDM2MyRVhNRmZrSk4yV1ZrWnExeUhVSkJxbnBJQl8yWjFpOG9KYmZQWEhFS1lvSk5oUGVkZXF5eUowUTdmZGZLMDJzOHZESXpSRkdkTURZM3NDOVRpWnhnczRDbGM2SlBncloyYTJ0VzVzNHZ3VDJR?oc=5",
-     "categories": [
-      "Private placement (dilusi)"
-     ],
-     "severity": "sedang"
-    }
-   ],
-   "BRMS": [
-    {
-     "date": "2026-11-07",
-     "title": "Saham Bumi Resources Minerals (BRMS) Kena Downgrade",
-     "source": "investor.id",
-     "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNbk1jYUVYSVk2NE9CaXAwZ25xMndyZFFQLWdZZnV6QWJhM0hwNk84OEF6T0cwQ2VsV0gyWktXVVJBQ0tqWk1td0E2QlZOSjYzNUk5YXBEcGNKSXlIaXNEYzdhbENaWmxKeDFyVHBIbENqSkZ5aFh3NGROOTlBSnpSai1aY0tUekhUVm9V?oc=5",
-     "categories": [
-      "Peringkat turun"
-     ],
-     "severity": "sedang"
-    }
-   ],
-   "MBMA": [
-    {
-     "date": "2026-11-02",
-     "title": "IHSG Hari Ini Rebound 0,75%: MEDC & TAPG Bagikan Dividen Interim, MBMA Siapkan Private Placement",
-     "source": "Ajaib",
-     "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQdHRoT1V4RW9aSHpLdEJwYTcwYlJxQ24xSFhaUTQ0bHlyWDhONi01T0FzVzRqajR2N09rZlRLNFFoRTJKb0JyeHJRTjZyMU9pelgyN0JxdUtHVnNiZWVibmVJdmFmQnpQOFdqQVdnRGpTM0YxcnRIemYxUXFPdm1LQVFVcTB2VFliMmptdnYtSXJiRy1xLXFqY0ZrZUVxLVpUb1ZoeEYtaw?oc=5",
-     "categories": [
-      "Private placement (dilusi)"
-     ],
-     "severity": "sedang"
-    }
-   ],
    "ULTJ": [
+    {
+     "date": "2026-11-09",
+     "title": "RUPSLB Ultrajaya (ULTJ) Setujui Rights Issue hingga Pembagian Dividen Spesial Rp1,04 Triliun",
+     "source": "",
+     "link": "https://www.idxchannel.com/market-news/rupslb-ultrajaya-ultj-setujui-rights-issue-hingga-pembagian-dividen-spesial-rp104-triliun",
+     "categories": [
+      "Right issue (dilusi)"
+     ],
+     "severity": "sedang"
+    },
     {
      "date": "2026-11-06",
      "title": "Ultra Jaya (ULTJ) dan Garuda Indonesia (GIAA) Gelar Rights Issue, Simak Prospeknya",
@@ -28714,16 +28303,6 @@
     },
     {
      "date": "2026-11-05",
-     "title": "ULTJ siapkan rights issue Rp16,94 triliun untuk akuisisi FFI",
-     "source": "IDNFinancials",
-     "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNZVcteVNwN2hScWJRaWw0UHBxMzRnck5EX2MwaHpta2F2SE8zbHR1WUJQMVF3Tl8wR3JNcXZaWnBxNy1pLUgxdGVGSkp0QmpES2pWbXMzdXVUY0I4UUExYVVJUHJKX25ONlJLdWx4VjkzbEVIakZqNEZGcHlDcmsyeld1ZnNEakVQZnllSEI4ZUNsa0VuYm96TXJIemNQNHZaeXk5YzREVQ?oc=5",
-     "categories": [
-      "Right issue (dilusi)"
-     ],
-     "severity": "sedang"
-    },
-    {
-     "date": "2026-11-05",
      "title": "ULTJ Siapkan Rights Issue untuk Caplok Saham Frisian Flag",
      "source": "KabarBursa.com",
      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPcjlxb3d2dUNfOUJmX2hzREhlQXpJdlo0dmZPWFNVci1vdDFlU2ZkS0d3YnQ3dThSb2VTRTM2Z2Z2dThiN0g5Tk0yUGJhX25NTTR6X1RySUlPNlZ5a1JTdGUwb1RxVXMyMmtQQTByZlctU09Zc2NOdzlFTWRldWtSMzJPZElGYjhzUXJkR0d4UmFZZUU1OVB2NDNOV0dWR2tFM2c?oc=5",
@@ -28739,6 +28318,52 @@
      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQNVFYd3VRMlM0N2twM2l2UFdYNTZQbFFPUVNWMHpDbE9pSkpkU21PRnpFWi1qb3MxdjJYRlBkTmhOdUlzMnlGOXBYYXR5Yk5RSG9TWS1IS0VLYkprMERSNUFGb1MzcUplTFo0anc3LURIcjJ3RmNPNl9xUG9Wc0IxcTZNNVdxcVVHeEJueVItNWRZTFZhS2IydEVfQ0tZenJtLUROZzYxajhaRzcxQmN1YmVMeDMzeUVZ0gGwAUFVX3lxTE1kbVg2RGhWeTltNy10aDBsWk9Na2R0QkkxNjRsM0M2aEVZVEJPcmllOGRyYjkxUGI2M1RtVURsbm9LNnNnSmlwMG1HSmpZSk5tLXZ4Zm45VXIyWXRKVUhvVmtseGFQY3NvN215X3UwSlVuLWpDOG1RdlpwVGlXczFfZnhESnJtSDZCS2F2dFdVdUE5Njl5emMyY29rSzNoakYxeFVSdExfdnJwamRwTElX?oc=5",
      "categories": [
       "Right issue (dilusi)"
+     ],
+     "severity": "sedang"
+    }
+   ],
+   "EMAS": [
+    {
+     "date": "2026-11-07",
+     "title": "Merdeka Gold (EMAS) Private Placement 1,47 Miliar Saham Baru, Potensi Dilusi 9,09%",
+     "source": "TradingView",
+     "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9WMEdBeHVBOXloOFo0a0xxY3NzY040cXRZQmRwVmxyS1lWRkludWRMVTVxS0FCNlB1QnJJeWtFaTB1X2NsbkExOHo3S0pYQ2NDZWFLWVg1UEYwX21sT0prckcyb3l1UQ?oc=5",
+     "categories": [
+      "Private placement (dilusi)"
+     ],
+     "severity": "sedang"
+    }
+   ],
+   "BRIS": [
+    {
+     "date": "2026-11-09",
+     "title": "BSI (BRIS) Kantongi Restu Rights Issue 6,8 Miliar Saham, Ini Rencana Penggunaannya",
+     "source": "kontan.co.id",
+     "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOZV9yZzA2b01CclljX1ZWRWFTVFM5SXBoRnJ5SW1IUmNXclU0bFhZQllkR0dyLWhHUmdNMGhxNzBkcHd6SmVxZDVWaGkwLWNmb0tOVW5kOENKeEgyWEdHV3RWdUVZSk0wc25SdGM4QzYtaW5KY1g0WmNHbjZ1QTNXS1o0djM4OEdVX3EwZXBqdzh6LTQxc0RfTDRZSXhYME85bkVlUWM2MUpLOTZBbUtCUFdPVdIBrAFBVV95cUxOUEVKR2U4SEtVLW9GQlVUcDJWZThDNmJXYWVSSTRSYVA1QVhuODV5NHRQNHZyRjRYSFdsNF9KSy1NTWhNeFpXNnNpNW5hVHZJWGU3TDhLX3Q2UUZPenVIUXZFaEhQeXVady1KdHB1Mkl2LXhZdEhfbF9VTUZjX2JiOVVHcEhNOU0wR1h5V29FRW9DRTdSOU0tYWdfNWVGVXpKXzg2dTJ4aTJzWlhM?oc=5",
+     "categories": [
+      "Right issue (dilusi)"
+     ],
+     "severity": "sedang"
+    },
+    {
+     "date": "2026-11-07",
+     "title": "Pemegang Saham Setujui Rights Issue BSI (BRIS), Perkuat Permodalan dan Dorong Peningkatan Free Float",
+     "source": "Media Asuransi News",
+     "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPWGcyaC1OZzY2UlVxXzc4Z1FfQzA2TWFkLXBZZ0cwdmZ1RllvVmxWM1JDWmJ4OC1kc25vR2Y3WFVScjRZaHZva3o2eHJfU3ZBajY5ejFtektZNTYzTGFxNjNUVUxscUFUWl93X1ByX0ZmM2xia05Nc19EVk55NFFzLTNONnVBNGVrdVRQdzBONGdGSmRfYUF6SXV3OUZDM3A0OUFLbnBBaFNBLVdmT0F2VUZlenlWcnRkS0J3YVZ2WmFYWHFpNjNUVXlPM1NEMnJfRzVKU081QQ?oc=5",
+     "categories": [
+      "Right issue (dilusi)"
+     ],
+     "severity": "sedang"
+    }
+   ],
+   "BRMS": [
+    {
+     "date": "2026-11-07",
+     "title": "Saham Bumi Resources Minerals (BRMS) Kena Downgrade",
+     "source": "investor.id",
+     "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNbk1jYUVYSVk2NE9CaXAwZ25xMndyZFFQLWdZZnV6QWJhM0hwNk84OEF6T0cwQ2VsV0gyWktXVVJBQ0tqWk1td0E2QlZOSjYzNUk5YXBEcGNKSXlIaXNEYzdhbENaWmxKeDFyVHBIbENqSkZ5aFh3NGROOTlBSnpSai1aY0tUekhUVm9V?oc=5",
+     "categories": [
+      "Peringkat turun"
      ],
      "severity": "sedang"
     }
