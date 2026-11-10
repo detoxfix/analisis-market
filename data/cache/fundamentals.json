@@ -2314,5 +2314,23 @@
   "rev_growth": 0.47,
   "shares": 3081350100.0,
   "ts": "2026-11-06T17:38:13"
+ },
+ "SRTG.JK": {
+  "name": "PT Saratoga Investama Sedaya Tbk",
+  "sector": "Financial Services",
+  "industry": "Asset Management",
+  "pe": 1.772867,
+  "pb": 0.383032,
+  "roe": 0.23993,
+  "der": 0.00898,
+  "div_yield_raw": 5.95,
+  "eps_ttm": 973.0,
+  "bvps": 4503.543,
+  "fin_currency": "IDR",
+  "v": 3,
+  "eps_growth": null,
+  "rev_growth": null,
+  "shares": 13561491300.0,
+  "ts": "2026-11-10T18:05:09"
  }
 }
