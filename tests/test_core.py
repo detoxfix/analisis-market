@@ -238,6 +238,27 @@ def test_news_rules():
     assert it["title"] == "BBRI digugat Rp 1 T" and it["source"] == "Kontan" and it["published"].day == 6
 
 
+def test_hourly_fill():
+    from datetime import datetime
+    from src import data as D
+    idx = pd.to_datetime(["2026-11-12 09:00", "2026-11-12 15:00", "2026-11-12 16:00",
+                          "2026-11-13 09:00", "2026-11-13 10:00", "2026-11-13 16:00",
+                          "2026-11-16 09:00", "2026-11-16 10:00"])
+    h = pd.DataFrame({"Open": [10, 11, 12, 20, 21, 22, 30, 31], "High": [11, 12, 13, 25, 22, 23, 31, 32],
+                      "Low": [9, 10, 11, 19, 18, 21, 29, 30], "Close": [11, 12, 12.5, 21, 22, 22.5, 31, 32],
+                      "Volume": [1, 2, 3, 4, 5, 6, 7, 8]}, index=idx)
+    d = D.hourly_to_daily(h, datetime(2026, 11, 16, 10, 30))        # Senin siang: sesi 16 Nov belum selesai
+    assert list(d.index.strftime("%Y-%m-%d")) == ["2026-11-12", "2026-11-13"]
+    r = d.loc["2026-11-13"]
+    assert (r["Open"], r["High"], r["Low"], r["Close"], r["Volume"]) == (20, 25, 18, 22.5, 15)
+    daily = pd.DataFrame({"Open": [1.0, 2], "High": [1.0, 2], "Low": [1.0, 2], "Close": [1.0, 2], "Volume": [1, 1]},
+                         index=pd.to_datetime(["2026-11-13", "2026-11-16"]))
+    px = {"A.JK": daily}
+    assert D.drop_unfinished(px, datetime(2026, 11, 16, 10, 30)) == 1 and len(px["A.JK"]) == 1
+    px = {"A.JK": daily}
+    assert D.drop_unfinished(px, datetime(2026, 11, 16, 17, 0)) == 0 and len(px["A.JK"]) == 2
+
+
 def test_config_edit():
     import yaml
     from src.configedit import set_horizon_param
