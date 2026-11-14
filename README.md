@@ -164,6 +164,10 @@ tests/test_core.py      uji unit (dijalankan otomatis sebelum dashboard harian d
   (naikkan bila rumus di kode berubah) membuat versi baru (v1, v2, ...). Setiap rekomendasi menyimpan versinya
   (kolom `strategy`); rekomendasi sebelum 9-11-2026 = v0. Track record menampilkan hasil per versi; alarm menilai
   versi aktif saja begitu versi itu punya ≥ 10 transaksi (sebelumnya digabung dengan versi lama).
+- **Data tepat waktu** (sejak 14-11-2026): update terjadwal 17:30, 20:30, dan 06:30 WIB (GitHub sering menunda jadwal);
+  Telegram hanya sekali per tanggal data. Bila bar harian Yahoo untuk hari bursa terakhir belum terbit, bar itu
+  dihitung dari data per jam (uji 13-11-2026 atas 122 saham: harga penutupan sama persis, volume selisih median 4%).
+  Bar sesi yang belum selesai dibuang. Matikan dengan `data.hourly_fill: false`.
 - **Peringatan data basi**: bila data harga belum sampai hari bursa terakhir (lewat `data.ready_after`, bawaan 17:00
   WIB), dashboard, Telegram, dan aplikasi menampilkan peringatan. Isi `data.holidays` dengan libur bursa.
 - **Usulan parameter bulanan** (`python tune.py --propose`, otomatis tanggal 1 lewat workflow Tuning strategi):
