@@ -1,19 +1,19 @@
 {
  "last": "2026-11-13",
- "n": 123,
- "filled": 123,
+ "n": 122,
+ "filled": 122,
  "fill_result": {
-  "filled": 123,
+  "filled": 122,
   "date": "2026-11-13"
  },
- "close_exact": 123,
+ "close_exact": 122,
  "close_max_diff": 0.0,
- "open_exact": 78,
- "high_exact": 123,
- "low_exact": 122,
- "volume_median_diff": -0.2837036136286607,
- "volume_p10": -0.46062568213901345,
- "volume_p90": -0.13135726034634718,
+ "open_exact": 80,
+ "high_exact": 122,
+ "low_exact": 121,
+ "volume_median_diff": -0.03992107928567451,
+ "volume_p10": -0.26183276102301045,
+ "volume_p90": 0.13443785454281723,
  "worst_close": [
   {
    "t": "BBCA.JK",
@@ -22,7 +22,7 @@
    "high": 0.0,
    "low": 0.0,
    "close": 0.0,
-   "volume": -0.45238989692361264
+   "volume": -0.24810243843431645
   },
   {
    "t": "BBRI.JK",
@@ -31,7 +31,7 @@
    "high": 0.0,
    "low": 0.0,
    "close": 0.0,
-   "volume": -0.4397036562309049
+   "volume": -0.1592388208328741
   },
   {
    "t": "BMRI.JK",
@@ -40,16 +40,7 @@
    "high": 0.0,
    "low": 0.0,
    "close": 0.0,
-   "volume": -0.46496063832273626
-  },
-  {
-   "t": "BREN.JK",
-   "filled": true,
-   "open": 0.0,
-   "high": 0.0,
-   "low": 0.0,
-   "close": 0.0,
-   "volume": -0.1572520761959908
+   "volume": -0.1894472415929297
   },
   {
    "t": "BYAN.JK",
@@ -58,7 +49,16 @@
    "high": 0.0,
    "low": 0.0,
    "close": 0.0,
-   "volume": -0.34563481134673646
+   "volume": 0.18580862316307645
+  },
+  {
+   "t": "BREN.JK",
+   "filled": true,
+   "open": 0.0,
+   "high": 0.0,
+   "low": 0.0,
+   "close": 0.0,
+   "volume": -0.00020409174177815625
   },
   {
    "t": "AMMN.JK",
@@ -67,7 +67,7 @@
    "high": 0.0,
    "low": 0.0,
    "close": 0.0,
-   "volume": -0.30402208201892744
+   "volume": 0.05857154604101322
   },
   {
    "t": "ASII.JK",
@@ -76,7 +76,7 @@
    "high": 0.0,
    "low": 0.0,
    "close": 0.0,
-   "volume": -0.21830824077074928
+   "volume": -0.2097805024345626
   },
   {
    "t": "TLKM.JK",
@@ -85,7 +85,7 @@
    "high": 0.0,
    "low": 0.0,
    "close": 0.0,
-   "volume": -0.3688075802586267
+   "volume": -0.17467163660510487
   }
  ],
  "not_filled": []
