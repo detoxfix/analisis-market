@@ -109,6 +109,79 @@ def download_prices(tickers: list[str], period: str = "3y", chunk: int = 60) -> 
     return out
 
 
+def drop_unfinished(prices: dict[str, pd.DataFrame], now: datetime, close_time: str = "16:30") -> int:
+    """Buang bar hari ini bila sesi bursa belum selesai (update dijalankan di tengah hari)."""
+    if now.strftime("%H:%M") >= close_time:
+        return 0
+    today, n = pd.Timestamp(now.date()), 0
+    for t, df in list(prices.items()):
+        if len(df) and df.index[-1] >= today:
+            prices[t] = df[df.index < today]
+            n += 1
+    return n
+
+
+def hourly_to_daily(h: pd.DataFrame, now: datetime, close_time: str = "16:30") -> pd.DataFrame:
+    """Gabungkan bar per jam (indeks waktu WIB, naive) menjadi bar harian; hanya sesi yang sudah selesai."""
+    h = h.dropna(subset=["Open", "High", "Low", "Close"])
+    if h.empty:
+        return h
+    g = h.groupby(h.index.normalize())
+    d = pd.DataFrame({"Open": g["Open"].first(), "High": g["High"].max(), "Low": g["Low"].min(),
+                      "Close": g["Close"].last(), "Volume": g["Volume"].sum(),
+                      "_last": g["Close"].apply(lambda x: x.index[-1].hour)})
+    today = pd.Timestamp(now.date())
+    done = (d.index < today) | (now.strftime("%H:%M") >= close_time)
+    d = d[done & (d["_last"] >= 15)]              # bar terakhir minimal jam 15: sesi lengkap
+    return d.drop(columns="_last")
+
+
+def fill_latest_from_hourly(prices: dict[str, pd.DataFrame], now: datetime, chunk: int = 60) -> dict:
+    """Yahoo sering terlambat menerbitkan bar HARIAN terakhir BEI, padahal bar per jam sudah lengkap.
+    Hari bursa yang belum ada di data harian diisi dari gabungan bar per jam (akan tergantikan bar
+    harian resmi pada update berikutnya). Return {"filled": jumlah saham, "date": tanggal terakhir}."""
+    import yfinance as yf
+
+    tickers, filled, last = list(prices), 0, None
+    for i in range(0, len(tickers), chunk):
+        batch = tickers[i:i + chunk]
+        try:
+            raw = yf.download(batch, period="5d", interval="1h", auto_adjust=True, group_by="ticker",
+                              threads=True, progress=False)
+        except Exception as e:  # noqa: BLE001
+            log.warning("Unduh data per jam gagal: %s", e)
+            continue
+        if raw is None or raw.empty:
+            continue
+        idx = pd.to_datetime(raw.index)
+        idx = idx.tz_convert("Asia/Jakarta").tz_localize(None) if idx.tz is not None else idx
+        raw.index = idx
+        for t in batch:
+            try:
+                sub = raw[t] if isinstance(raw.columns, pd.MultiIndex) else raw
+            except KeyError:
+                continue
+            if not {"Open", "High", "Low", "Close", "Volume"}.issubset(sub.columns):
+                continue
+            d = hourly_to_daily(sub[["Open", "High", "Low", "Close", "Volume"]], now)
+            new = d[d.index > prices[t].index[-1]].copy()
+            if len(new):
+                # data per jam tidak memuat volume lelang pembukaan/penutupan: sesuaikan dengan
+                # perbandingan volume harian vs per jam pada hari-hari sebelumnya
+                both = d.index.intersection(prices[t].index)
+                hv, dv = d.loc[both, "Volume"], prices[t].loc[both, "Volume"]
+                ok = (hv > 0) & (dv > 0)
+                if ok.any():
+                    new["Volume"] = new["Volume"] * float((dv[ok] / hv[ok]).median().clip(1.0, 3.0))
+                prices[t] = pd.concat([prices[t], new]).sort_index()
+                filled += 1
+                last = max(last, new.index[-1]) if last is not None else new.index[-1]
+        time.sleep(1.0)
+    if filled:
+        log.info("Data per jam: %d saham diisi sampai %s", filled, last.strftime("%Y-%m-%d"))
+    return {"filled": filled, "date": last.strftime("%Y-%m-%d") if last is not None else None}
+
+
 # ------------------------------------------------------------------ jumlah saham & fundamental
 def _fresh(entry: dict | None, days: int) -> bool:
     if not entry or "ts" not in entry:

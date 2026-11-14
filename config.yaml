@@ -18,6 +18,7 @@ data:
   fundamentals_cache_days: 7         # fundamental di-refresh mingguan (berubah per kuartal)
   shares_cache_days: 7
   ready_after: "17:00"               # jam WIB saat data penutupan hari itu biasanya sudah ada di Yahoo
+  hourly_fill: true                  # bila data harian Yahoo belum terbit, isi hari terakhir dari data per jam
   holidays:                          # libur bursa BEI (Sabtu/Minggu otomatis) agar peringatan "data basi" tidak salah
     - "2026-12-25"                   # Natal
     - "2026-12-31"                   # libur khusus bursa akhir tahun

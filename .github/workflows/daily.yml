@@ -2,7 +2,11 @@ name: Update sinyal IHSG harian
 
 on:
   schedule:
-    - cron: "30 10 * * 1-5"      # 17:30 WIB (10:30 UTC), Senin-Jumat
+    # GitHub sering menunda jadwal berjam-jam, jadi update dijalankan beberapa kali.
+    # Telegram hanya dikirim sekali per tanggal data (--notify-once).
+    - cron: "30 10 * * 1-5"      # 17:30 WIB Senin-Jumat (setelah bursa tutup)
+    - cron: "30 13 * * 1-5"      # 20:30 WIB Senin-Jumat (cadangan)
+    - cron: "30 23 * * 0-4"      # 06:30 WIB Senin-Jumat (sebelum bursa buka)
   workflow_dispatch:
 
 permissions:
@@ -35,7 +39,8 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          python main.py --backtest auto
+          if [ "${{ github.event_name }}" = "schedule" ]; then ONCE="--notify-once"; fi
+          python main.py --backtest auto $ONCE
           touch docs/.nojekyll
 
       - name: Simpan hasil ke repo

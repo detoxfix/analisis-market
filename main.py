@@ -101,6 +101,30 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
         if missing:
             shares.update(D.get_shares(missing, cfg["data"]["shares_cache_days"]))
         funds_all = None
+        # --- data tepat waktu: buang bar sesi yang belum selesai, isi hari terakhir dari data per jam
+        allpx = dict(prices)
+        if bench_px:
+            allpx[cfg["data"]["benchmark"]] = bench_px[cfg["data"]["benchmark"]]
+        n_drop = D.drop_unfinished(allpx, now)
+        if n_drop:
+            log.warning("Sesi bursa hari ini belum selesai: bar hari ini dibuang (%d saham)", n_drop)
+        hourly = {"filled": 0, "date": None}
+        if allpx and (cfg.get("data", {}) or {}).get("hourly_fill", True):
+            d0 = max(df.index[-1] for df in allpx.values() if len(df))
+            f0 = data_freshness(d0, now, (cfg.get("data", {}) or {}).get("holidays") or [],
+                                str((cfg.get("data", {}) or {}).get("ready_after", "17:00")))
+            if f0["stale"]:
+                try:
+                    hourly = D.fill_latest_from_hourly(allpx, now)
+                except Exception as e:  # noqa: BLE001
+                    log.warning("Pengisian dari data per jam gagal: %s", e)
+        bk = cfg["data"]["benchmark"]
+        if bk in allpx and bench_px:
+            bench = allpx.pop(bk)["Close"]
+        prices = {t: df for t, df in allpx.items() if t != bk and len(df) >= 60}
+        if hourly["filled"]:
+            sources.append(f"Hari bursa terakhir ({hourly['date']}) untuk {hourly['filled']} saham dihitung dari "
+                           "data per jam Yahoo karena data harian belum terbit")
 
     if not prices:
         raise SystemExit("Tidak ada data harga yang berhasil diunduh.")
@@ -339,7 +363,7 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
               else "Bearish" if b_last < b_ema20 and (b_sma200 is not None and b_last < b_sma200) else "Sideways")
     result = {
         "generated_at": now.strftime("%Y-%m-%d %H:%M"), "as_of": as_of.strftime("%Y-%m-%d"), "demo": demo,
-        "data_status": fresh if not demo else {**fresh, "stale": False, "text": None},
+        "data_status": ({**fresh, "hourly": hourly} if not demo else {**fresh, "stale": False, "text": None}),
         "params": {"min_market_cap": cfg["universe"]["min_market_cap"], "min_avg_value_20d": cfg["universe"]["min_avg_value_20d"],
                    "capital": cfg["capital"], "risk_per_trade": cfg["risk_per_trade"], "fees": cfg["fees"],
                    "split_date": cfg.get("backtest", {}).get("split_date"),
@@ -389,12 +413,21 @@ def main():
     ap.add_argument("--demo", action="store_true", help="data sintetis offline (untuk uji coba)")
     ap.add_argument("--backtest", choices=["never", "auto", "always"], default="auto")
     ap.add_argument("--no-notify", action="store_true")
+    ap.add_argument("--notify-once", action="store_true",
+                    help="kirim Telegram hanya bila tanggal data berbeda dari kiriman terakhir")
     a = ap.parse_args()
     with open(a.config, encoding="utf-8") as fh:
         cfg = yaml.safe_load(fh)
     res = run(cfg, demo=a.demo, backtest_mode=a.backtest)
     pos_full = res.pop("_positions_full", None)        # lengkap (lot & nominal) hanya untuk Telegram
     write_outputs(res, a.demo)
+    state_path = ROOT / "docs" / "data" / "notify_state.json"
+    if a.notify_once and not a.demo:               # update terjadwal berulang: kirim sekali per tanggal data
+        if (load_json(state_path, {}) or {}).get("as_of") == res["as_of"]:
+            log.info("Telegram dilewati: data %s sudah pernah dikirim", res["as_of"])
+            a.no_notify = True
+    if not a.demo and not a.no_notify:
+        dump_json({"as_of": res["as_of"], "sent_at": res["generated_at"]}, state_path)
     if not a.no_notify and not a.demo and cfg.get("notify", {}).get("telegram"):
         notify.telegram(res, os.environ.get("TELEGRAM_BOT_TOKEN"), os.environ.get("TELEGRAM_CHAT_ID"),
                         cfg.get("notify", {}).get("dashboard_url"), pos_full)
