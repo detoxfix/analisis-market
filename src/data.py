@@ -164,8 +164,15 @@ def fill_latest_from_hourly(prices: dict[str, pd.DataFrame], now: datetime, chun
             if not {"Open", "High", "Low", "Close", "Volume"}.issubset(sub.columns):
                 continue
             d = hourly_to_daily(sub[["Open", "High", "Low", "Close", "Volume"]], now)
-            new = d[d.index > prices[t].index[-1]]
+            new = d[d.index > prices[t].index[-1]].copy()
             if len(new):
+                # data per jam tidak memuat volume lelang pembukaan/penutupan: sesuaikan dengan
+                # perbandingan volume harian vs per jam pada hari-hari sebelumnya
+                both = d.index.intersection(prices[t].index)
+                hv, dv = d.loc[both, "Volume"], prices[t].loc[both, "Volume"]
+                ok = (hv > 0) & (dv > 0)
+                if ok.any():
+                    new["Volume"] = new["Volume"] * float((dv[ok] / hv[ok]).median().clip(1.0, 3.0))
                 prices[t] = pd.concat([prices[t], new]).sort_index()
                 filled += 1
                 last = max(last, new.index[-1]) if last is not None else new.index[-1]
