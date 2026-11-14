@@ -1,0 +1,92 @@
+{
+ "last": "2026-11-13",
+ "n": 123,
+ "filled": 123,
+ "fill_result": {
+  "filled": 123,
+  "date": "2026-11-13"
+ },
+ "close_exact": 123,
+ "close_max_diff": 0.0,
+ "open_exact": 78,
+ "high_exact": 123,
+ "low_exact": 122,
+ "volume_median_diff": -0.2837036136286607,
+ "volume_p10": -0.46062568213901345,
+ "volume_p90": -0.13135726034634718,
+ "worst_close": [
+  {
+   "t": "BBCA.JK",
+   "filled": true,
+   "open": 0.0,
+   "high": 0.0,
+   "low": 0.0,
+   "close": 0.0,
+   "volume": -0.45238989692361264
+  },
+  {
+   "t": "BBRI.JK",
+   "filled": true,
+   "open": 0.0033003300330032292,
+   "high": 0.0,
+   "low": 0.0,
+   "close": 0.0,
+   "volume": -0.4397036562309049
+  },
+  {
+   "t": "BMRI.JK",
+   "filled": true,
+   "open": 0.0,
+   "high": 0.0,
+   "low": 0.0,
+   "close": 0.0,
+   "volume": -0.46496063832273626
+  },
+  {
+   "t": "BREN.JK",
+   "filled": true,
+   "open": 0.0,
+   "high": 0.0,
+   "low": 0.0,
+   "close": 0.0,
+   "volume": -0.1572520761959908
+  },
+  {
+   "t": "BYAN.JK",
+   "filled": true,
+   "open": -0.002873563218390829,
+   "high": 0.0,
+   "low": 0.0,
+   "close": 0.0,
+   "volume": -0.34563481134673646
+  },
+  {
+   "t": "AMMN.JK",
+   "filled": true,
+   "open": 0.0,
+   "high": 0.0,
+   "low": 0.0,
+   "close": 0.0,
+   "volume": -0.30402208201892744
+  },
+  {
+   "t": "ASII.JK",
+   "filled": true,
+   "open": 0.0,
+   "high": 0.0,
+   "low": 0.0,
+   "close": 0.0,
+   "volume": -0.21830824077074928
+  },
+  {
+   "t": "TLKM.JK",
+   "filled": true,
+   "open": 0.0,
+   "high": 0.0,
+   "low": 0.0,
+   "close": 0.0,
+   "volume": -0.3688075802586267
+  }
+ ],
+ "not_filled": []
+}

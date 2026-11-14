@@ -1,0 +1,17 @@
+09:48:25 | WARNING | Situs IDX tidak bisa diakses dari jaringan ini. Lanjut tanpa data IDX. Rincian: 
+09:48:25 | INFO    | Screener Yahoo: 242 saham BEI ditemukan
+09:48:25 | INFO    | Kandidat awal: 265 saham (sumber: seed list + screener Yahoo (98 tambahan))
+09:48:26 | INFO    | Harga: batch 1/1 selesai (1 ticker valid)
+09:48:30 | INFO    | Harga: batch 1/5 selesai (60 ticker valid)
+09:48:35 | INFO    | Harga: batch 2/5 selesai (120 ticker valid)
+09:48:40 | INFO    | Harga: batch 3/5 selesai (180 ticker valid)
+09:48:44 | INFO    | Harga: batch 4/5 selesai (240 ticker valid)
+09:48:47 | INFO    | Harga: batch 5/5 selesai (265 ticker valid)
+09:48:48 | INFO    | Universe akhir: 121 saham lolos (dari 265) | market cap >= Rp 5.0 T
+09:48:48 | INFO    | Ambil fundamental 1 ticker (cache 120)
+09:48:49 | INFO    | Arsip harian: 121 saham -> daily_2026.csv
+09:48:50 | INFO    | Arsip laporan keuangan: 1/1 saham diperbarui (129 total terpantau)
+09:50:27 | INFO    | Berita negatif 7 hari: 2 saham ditandai (0 baru diarsip, 96 dtk)
+09:50:29 | INFO    | Track record: 51 rekomendasi (23 terbuka, 5 baru)
+09:50:29 | WARNING | Alarm Pendek: WASPADA — 8 transaksi (termasuk versi lama; versi aktif baru 0): rata-rata -6,3%, win rate 0%; perkiraan backtest +0,3%, win rate 42%. Rugi 8 kali berturut-turut sampai sekarang. Alarm dini (baru 8 dari 10 transaksi). Masih bisa kebetulan; pertimbangkan memperkecil ukuran posisi dan pantau terus.
+09:50:29 | INFO    | Selesai. Dashboard: /home/runner/work/analisis-market/analisis-market/docs/index.html | CSV: /home/runner/work/analisis-market/analisis-market/output/signals_latest.csv
