@@ -2322,11 +2322,11 @@
   "name": "PT Saratoga Investama Sedaya Tbk",
   "sector": "Financial Services",
   "industry": "Asset Management",
-  "pe": 1.772867,
-  "pb": 0.383032,
+  "pe": 1.747174,
+  "pb": 0.377481,
   "roe": 0.23993,
   "der": 0.00898,
-  "div_yield_raw": 5.95,
+  "div_yield_raw": 6.17,
   "eps_ttm": 973.0,
   "bvps": 4503.543,
   "fin_currency": "IDR",
@@ -2334,6 +2334,6 @@
   "eps_growth": null,
   "rev_growth": null,
   "shares": 13561491300.0,
-  "ts": "2026-11-10T18:05:09"
+  "ts": "2026-11-17T21:53:32"
  }
 }
