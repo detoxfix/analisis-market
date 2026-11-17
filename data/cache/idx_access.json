@@ -4,7 +4,8 @@
   "curl_safari": "2026-11-16T02:57:21",
   "cloudscraper": "2026-11-16T02:57:21",
   "requests": "2026-11-16T02:57:21",
-  "browser": "2026-11-16T02:57:21"
+  "browser": "2026-11-16T02:57:21",
+  "curl_firefox": "2026-11-17T05:10:18"
  },
  "method": "curl_firefox"
 }
