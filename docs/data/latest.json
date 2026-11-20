@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-20 04:44",
+ "generated_at": "2026-11-20 11:08",
  "as_of": "2026-11-19",
  "demo": false,
  "data_status": {
@@ -31,18 +31,12 @@
   }
  },
  "market": {
-  "bench": 5247.878906,
-  "bench_chg": -0.010722,
+  "bench": 5194.141113,
+  "bench_chg": -0.01024,
   "regime": "Bearish",
   "universe": 115,
   "scanned": 869,
   "series": [
-   [
-    "2026-05-11",
-    6905.62,
-    7419.08,
-    7998.83
-   ],
    [
     "2026-05-12",
     6858.9,
@@ -816,6 +810,12 @@
     5247.88,
     5723.23,
     6619.5
+   ],
+   [
+    "2026-11-19",
+    5194.14,
+    5695.33,
+    6599.8
    ]
   ],
   "above_sma50": false,
@@ -3953,7 +3953,7 @@
      "horizon": "short",
      "price": 7100.0,
      "chg_1d": 0.017921,
-     "mcap": 14819559390600.0,
+     "mcap": 14822448160500.0,
      "score": -69.0,
      "signal": "STRONG SELL",
      "confidence": 0.69,
@@ -10266,7 +10266,7 @@
      "atr_pct": 0.030986,
      "reasons": [
       "Harga di atas SMA50",
-      "Outperform IHSG +26.7% (3 bulan)",
+      "Outperform IHSG +27.5% (3 bulan)",
       "MACD di atas sinyal & di atas nol"
      ],
      "risks": [],
@@ -10377,7 +10377,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 23: tren naik kuat",
-      "Outperform IHSG +26.0% (3 bulan)"
+      "Outperform IHSG +26.8% (3 bulan)"
      ],
      "risks": [
       "Struktur MA menengah melemah"
@@ -10488,7 +10488,7 @@
      "atr_pct": 0.038703,
      "reasons": [
       "Harga di atas SMA50",
-      "Outperform IHSG +25.7% (3 bulan)",
+      "Outperform IHSG +26.5% (3 bulan)",
       "MACD di atas sinyal & di atas nol"
      ],
      "risks": [],
@@ -10598,7 +10598,7 @@
      "atr_pct": 0.033431,
      "reasons": [
       "Harga di atas SMA50",
-      "Outperform IHSG +24.0% (3 bulan)",
+      "Outperform IHSG +24.8% (3 bulan)",
       "MACD di atas sinyal & di atas nol"
      ],
      "risks": [],
@@ -10709,7 +10709,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 23: tren naik kuat",
-      "Outperform IHSG +21.2% (3 bulan)"
+      "Outperform IHSG +22.0% (3 bulan)"
      ],
      "risks": [
       "Struktur MA menengah melemah"
@@ -10821,7 +10821,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 21: tren naik kuat",
-      "Outperform IHSG +17.8% (3 bulan)"
+      "Outperform IHSG +18.6% (3 bulan)"
      ],
      "risks": [
       "Struktur MA menengah melemah",
@@ -10934,7 +10934,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 22: tren naik kuat",
-      "Outperform IHSG +17.6% (3 bulan)"
+      "Outperform IHSG +18.5% (3 bulan)"
      ],
      "risks": [
       "Struktur MA menengah melemah",
@@ -11047,7 +11047,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 29: tren naik kuat",
-      "Outperform IHSG +15.6% (3 bulan)"
+      "Outperform IHSG +16.4% (3 bulan)"
      ],
      "risks": [
       "Struktur MA menengah melemah",
@@ -11159,7 +11159,7 @@
      "atr_pct": 0.042186,
      "reasons": [
       "Harga di atas SMA50",
-      "Outperform IHSG +28.8% (3 bulan)",
+      "Outperform IHSG +29.7% (3 bulan)",
       "MACD di atas sinyal & di atas nol"
      ],
      "risks": [
@@ -11272,7 +11272,7 @@
      "reasons": [
       "ADX 26: tren naik kuat",
       "Momentum 3 bulan +33.1%",
-      "Outperform IHSG +52.6% (3 bulan)"
+      "Outperform IHSG +53.4% (3 bulan)"
      ],
      "risks": [
       "Harga di bawah SMA50"
@@ -11693,9 +11693,9 @@
      "price": 1085.0,
      "chg_1d": 0.0,
      "mcap": 18011000000000.0,
-     "score": -97.2,
+     "score": -96.0,
      "signal": "STRONG SELL",
-     "confidence": 0.972,
+     "confidence": 0.96,
      "atr_pct": 0.059897,
      "reasons": [
       "Harga di bawah SMA50",
@@ -13240,100 +13240,6 @@
      ]
     },
     {
-     "ticker": "JPFA.JK",
-     "code": "JPFA",
-     "name": "PT Japfa Comfeed Indonesia Tbk",
-     "sector": "Consumer Defensive",
-     "horizon": "medium",
-     "price": 1460.0,
-     "chg_1d": -0.026667,
-     "mcap": 17120799793460.0,
-     "score": -85.0,
-     "signal": "STRONG SELL",
-     "confidence": 0.85,
-     "atr_pct": 0.044387,
-     "reasons": [
-      "Harga di bawah SMA50",
-      "Struktur MA menengah melemah",
-      "ADX 46: tren turun kuat"
-     ],
-     "risks": [],
-     "news": null,
-     "foreign_5d": -58226657000.0,
-     "foreign_20d": -190970997500.0,
-     "foreign_20d_pct": -0.227428,
-     "foreign_days": 20,
-     "foreign_last": "2026-11-19",
-     "action": "Jual seluruh posisi",
-     "sell_portion": 1.0,
-     "sell_zone_low": 1460.0,
-     "sell_zone_high": 1490.0,
-     "breakdown_level": 1440.0,
-     "when_sell": "Jual saat pantulan (rebound) ke area jual pada T+1/T+2; jangan menunggu. Jangan buka posisi beli baru selama sinyal SELL.",
-     "spark": [
-      2052.7,
-      2081.08,
-      2118.92,
-      2118.92,
-      2251.35,
-      2185.14,
-      2185.14,
-      2251.35,
-      2213.51,
-      2194.59,
-      2128.38,
-      2147.3,
-      2147.3,
-      2175.68,
-      2194.59,
-      2156.76,
-      2147.3,
-      2109.46,
-      2137.84,
-      2062.16,
-      2014.86,
-      1958.11,
-      1948.65,
-      1920.27,
-      1929.73,
-      1887.16,
-      1901.35,
-      1910.81,
-      1929.73,
-      1891.89,
-      1929.73,
-      1967.57,
-      1877.7,
-      1891.89,
-      1887.16,
-      1669.59,
-      1556.08,
-      1627.03,
-      1655.41,
-      1683.78,
-      1721.62,
-      1688.51,
-      1688.51,
-      1712.16,
-      1641.22,
-      1645.95,
-      1641.22,
-      1575.0,
-      1532.43,
-      1575.0,
-      1550.0,
-      1500.0,
-      1490.0,
-      1470.0,
-      1495.0,
-      1550.0,
-      1515.0,
-      1520.0,
-      1500.0,
-      1460.0
-     ]
-    },
-    {
      "ticker": "MGLV.JK",
      "code": "MGLV",
      "name": "PT NexAI Digital Infrastruktur Tbk",
@@ -13341,7 +13247,7 @@
      "horizon": "medium",
      "price": 7100.0,
      "chg_1d": 0.017921,
-     "mcap": 14819559390600.0,
+     "mcap": 14822448160500.0,
      "score": -85.0,
      "signal": "STRONG SELL",
      "confidence": 0.85,
@@ -14671,6 +14577,100 @@
      ]
     },
     {
+     "ticker": "JPFA.JK",
+     "code": "JPFA",
+     "name": "PT Japfa Comfeed Indonesia Tbk",
+     "sector": "Consumer Defensive",
+     "horizon": "medium",
+     "price": 1460.0,
+     "chg_1d": -0.026667,
+     "mcap": 17120799793460.0,
+     "score": -84.7,
+     "signal": "STRONG SELL",
+     "confidence": 0.847,
+     "atr_pct": 0.044387,
+     "reasons": [
+      "Harga di bawah SMA50",
+      "Struktur MA menengah melemah",
+      "ADX 46: tren turun kuat"
+     ],
+     "risks": [],
+     "news": null,
+     "foreign_5d": -58226657000.0,
+     "foreign_20d": -190970997500.0,
+     "foreign_20d_pct": -0.227428,
+     "foreign_days": 20,
+     "foreign_last": "2026-11-19",
+     "action": "Jual seluruh posisi",
+     "sell_portion": 1.0,
+     "sell_zone_low": 1460.0,
+     "sell_zone_high": 1490.0,
+     "breakdown_level": 1440.0,
+     "when_sell": "Jual saat pantulan (rebound) ke area jual pada T+1/T+2; jangan menunggu. Jangan buka posisi beli baru selama sinyal SELL.",
+     "spark": [
+      2052.7,
+      2081.08,
+      2118.92,
+      2118.92,
+      2251.35,
+      2185.14,
+      2185.14,
+      2251.35,
+      2213.51,
+      2194.59,
+      2128.38,
+      2147.3,
+      2147.3,
+      2175.68,
+      2194.59,
+      2156.76,
+      2147.3,
+      2109.46,
+      2137.84,
+      2062.16,
+      2014.86,
+      1958.11,
+      1948.65,
+      1920.27,
+      1929.73,
+      1887.16,
+      1901.35,
+      1910.81,
+      1929.73,
+      1891.89,
+      1929.73,
+      1967.57,
+      1877.7,
+      1891.89,
+      1887.16,
+      1669.59,
+      1556.08,
+      1627.03,
+      1655.41,
+      1683.78,
+      1721.62,
+      1688.51,
+      1688.51,
+      1712.16,
+      1641.22,
+      1645.95,
+      1641.22,
+      1575.0,
+      1532.43,
+      1575.0,
+      1550.0,
+      1500.0,
+      1490.0,
+      1470.0,
+      1495.0,
+      1550.0,
+      1515.0,
+      1520.0,
+      1500.0,
+      1460.0
+     ]
+    },
+    {
      "ticker": "AMMN.JK",
      "code": "AMMN",
      "name": "PT Amman Mineral Internasional Tbk",
@@ -14679,9 +14679,9 @@
      "price": 3150.0,
      "chg_1d": -0.045455,
      "mcap": 228432385616400.0,
-     "score": -84.5,
+     "score": -83.3,
      "signal": "STRONG SELL",
-     "confidence": 0.845,
+     "confidence": 0.833,
      "atr_pct": 0.06846,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14773,9 +14773,9 @@
      "price": 655.0,
      "chg_1d": -0.007576,
      "mcap": 8854355500000.0,
-     "score": -83.3,
+     "score": -82.1,
      "signal": "STRONG SELL",
-     "confidence": 0.833,
+     "confidence": 0.821,
      "atr_pct": 0.056536,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14867,9 +14867,9 @@
      "price": 5675.0,
      "chg_1d": -0.046218,
      "mcap": 17667543759750.0,
-     "score": -82.9,
+     "score": -81.7,
      "signal": "STRONG SELL",
-     "confidence": 0.829,
+     "confidence": 0.817,
      "atr_pct": 0.052413,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14961,9 +14961,9 @@
      "price": 700.0,
      "chg_1d": -0.007092,
      "mcap": 44169020000000.0,
-     "score": -81.9,
+     "score": -80.7,
      "signal": "STRONG SELL",
-     "confidence": 0.819,
+     "confidence": 0.807,
      "atr_pct": 0.049303,
      "reasons": [
       "Harga di bawah SMA50",
@@ -15055,9 +15055,9 @@
      "price": 3050.0,
      "chg_1d": -0.052795,
      "mcap": 22715648034700.0,
-     "score": -78.6,
+     "score": -77.3,
      "signal": "STRONG SELL",
-     "confidence": 0.786,
+     "confidence": 0.773,
      "atr_pct": 0.067062,
      "reasons": [
       "Harga di bawah SMA50",
@@ -15243,100 +15243,6 @@
       715.0,
       690.0,
       685.0
-     ]
-    },
-    {
-     "ticker": "CPIN.JK",
-     "code": "CPIN",
-     "name": "PT Charoen Pokphand Indonesia Tbk",
-     "sector": "Consumer Defensive",
-     "horizon": "medium",
-     "price": 2330.0,
-     "chg_1d": -0.021008,
-     "mcap": 38207340000000.0,
-     "score": -75.0,
-     "signal": "STRONG SELL",
-     "confidence": 0.75,
-     "atr_pct": 0.044186,
-     "reasons": [
-      "Harga di bawah SMA50",
-      "Struktur MA menengah melemah",
-      "ADX 23: tren turun kuat"
-     ],
-     "risks": [],
-     "news": null,
-     "foreign_5d": -35980813000.0,
-     "foreign_20d": 40288549000.0,
-     "foreign_20d_pct": 0.040255,
-     "foreign_days": 20,
-     "foreign_last": "2026-11-19",
-     "action": "Jual seluruh posisi",
-     "sell_portion": 1.0,
-     "sell_zone_low": 2330.0,
-     "sell_zone_high": 2380.0,
-     "breakdown_level": 2270.0,
-     "when_sell": "Jual saat pantulan (rebound) ke area jual pada T+1/T+2; jangan menunggu. Jangan buka posisi beli baru selama sinyal SELL.",
-     "spark": [
-      3060.0,
-      2980.0,
-      3060.0,
-      3030.0,
-      3280.0,
-      3210.0,
-      3210.0,
-      3340.0,
-      3260.0,
-      3280.0,
-      3160.0,
-      3130.0,
-      3090.0,
-      3120.0,
-      3120.0,
-      3150.0,
-      3110.0,
-      3140.0,
-      3080.0,
-      3020.0,
-      3010.0,
-      2990.0,
-      2970.0,
-      2960.0,
-      2880.0,
-      2910.0,
-      2910.0,
-      2940.0,
-      2930.0,
-      2930.0,
-      2960.0,
-      3020.0,
-      2960.0,
-      2990.0,
-      2940.0,
-      2560.0,
-      2440.0,
-      2640.0,
-      2740.0,
-      2720.0,
-      2760.0,
-      2710.0,
-      2780.0,
-      2670.0,
-      2590.0,
-      2550.0,
-      2490.0,
-      2400.0,
-      2370.0,
-      2370.0,
-      2350.0,
-      2310.0,
-      2340.0,
-      2310.0,
-      2410.0,
-      2450.0,
-      2470.0,
-      2430.0,
-      2380.0,
-      2330.0
      ]
     },
     {
@@ -15528,6 +15434,100 @@
      ]
     },
     {
+     "ticker": "CPIN.JK",
+     "code": "CPIN",
+     "name": "PT Charoen Pokphand Indonesia Tbk",
+     "sector": "Consumer Defensive",
+     "horizon": "medium",
+     "price": 2330.0,
+     "chg_1d": -0.021008,
+     "mcap": 38207340000000.0,
+     "score": -73.7,
+     "signal": "STRONG SELL",
+     "confidence": 0.737,
+     "atr_pct": 0.044186,
+     "reasons": [
+      "Harga di bawah SMA50",
+      "Struktur MA menengah melemah",
+      "ADX 23: tren turun kuat"
+     ],
+     "risks": [],
+     "news": null,
+     "foreign_5d": -35980813000.0,
+     "foreign_20d": 40288549000.0,
+     "foreign_20d_pct": 0.040255,
+     "foreign_days": 20,
+     "foreign_last": "2026-11-19",
+     "action": "Jual seluruh posisi",
+     "sell_portion": 1.0,
+     "sell_zone_low": 2330.0,
+     "sell_zone_high": 2380.0,
+     "breakdown_level": 2270.0,
+     "when_sell": "Jual saat pantulan (rebound) ke area jual pada T+1/T+2; jangan menunggu. Jangan buka posisi beli baru selama sinyal SELL.",
+     "spark": [
+      3060.0,
+      2980.0,
+      3060.0,
+      3030.0,
+      3280.0,
+      3210.0,
+      3210.0,
+      3340.0,
+      3260.0,
+      3280.0,
+      3160.0,
+      3130.0,
+      3090.0,
+      3120.0,
+      3120.0,
+      3150.0,
+      3110.0,
+      3140.0,
+      3080.0,
+      3020.0,
+      3010.0,
+      2990.0,
+      2970.0,
+      2960.0,
+      2880.0,
+      2910.0,
+      2910.0,
+      2940.0,
+      2930.0,
+      2930.0,
+      2960.0,
+      3020.0,
+      2960.0,
+      2990.0,
+      2940.0,
+      2560.0,
+      2440.0,
+      2640.0,
+      2740.0,
+      2720.0,
+      2760.0,
+      2710.0,
+      2780.0,
+      2670.0,
+      2590.0,
+      2550.0,
+      2490.0,
+      2400.0,
+      2370.0,
+      2370.0,
+      2350.0,
+      2310.0,
+      2340.0,
+      2310.0,
+      2410.0,
+      2450.0,
+      2470.0,
+      2430.0,
+      2380.0,
+      2330.0
+     ]
+    },
+    {
      "ticker": "BSDE.JK",
      "code": "BSDE",
      "name": "PT Bumi Serpong Damai Tbk",
@@ -15536,9 +15536,9 @@
      "price": 470.0,
      "chg_1d": -0.004237,
      "mcap": 9950541931640.0,
-     "score": -71.4,
+     "score": -70.2,
      "signal": "STRONG SELL",
-     "confidence": 0.714,
+     "confidence": 0.702,
      "atr_pct": 0.03841,
      "reasons": [
       "Harga di bawah SMA50",
@@ -15619,100 +15619,6 @@
       486.0,
       472.0,
       470.0
-     ]
-    },
-    {
-     "ticker": "RMKE.JK",
-     "code": "RMKE",
-     "name": "PT RMK Energy Tbk",
-     "sector": "Energy",
-     "horizon": "medium",
-     "price": 306.0,
-     "chg_1d": -0.019231,
-     "mcap": 6693750000000.0,
-     "score": -70.4,
-     "signal": "STRONG SELL",
-     "confidence": 0.704,
-     "atr_pct": 0.050983,
-     "reasons": [
-      "Harga di bawah SMA50",
-      "Struktur MA menengah melemah",
-      "ADX 20: tren turun kuat"
-     ],
-     "risks": [],
-     "news": null,
-     "foreign_5d": -1310487200.0,
-     "foreign_20d": -15095405200.0,
-     "foreign_20d_pct": -0.097248,
-     "foreign_days": 20,
-     "foreign_last": "2026-11-19",
-     "action": "Jual seluruh posisi",
-     "sell_portion": 1.0,
-     "sell_zone_low": 306.0,
-     "sell_zone_high": 312.0,
-     "breakdown_level": 284.0,
-     "when_sell": "Jual saat pantulan (rebound) ke area jual pada T+1/T+2; jangan menunggu. Jangan buka posisi beli baru selama sinyal SELL.",
-     "spark": [
-      418.0,
-      420.0,
-      434.0,
-      438.0,
-      434.0,
-      422.0,
-      418.0,
-      434.0,
-      434.0,
-      418.0,
-      408.0,
-      412.0,
-      408.0,
-      400.0,
-      396.0,
-      394.0,
-      400.0,
-      410.0,
-      406.0,
-      402.0,
-      380.0,
-      362.0,
-      364.0,
-      344.0,
-      338.0,
-      328.0,
-      332.0,
-      348.0,
-      340.0,
-      332.0,
-      332.0,
-      326.0,
-      326.0,
-      324.0,
-      314.0,
-      276.0,
-      282.0,
-      298.0,
-      306.0,
-      306.0,
-      304.0,
-      300.0,
-      298.0,
-      308.0,
-      310.0,
-      294.0,
-      312.0,
-      296.0,
-      304.0,
-      312.0,
-      314.0,
-      308.0,
-      310.0,
-      310.0,
-      326.0,
-      328.0,
-      322.0,
-      320.0,
-      312.0,
-      306.0
      ]
     },
     {
@@ -15904,6 +15810,100 @@
      ]
     },
     {
+     "ticker": "RMKE.JK",
+     "code": "RMKE",
+     "name": "PT RMK Energy Tbk",
+     "sector": "Energy",
+     "horizon": "medium",
+     "price": 306.0,
+     "chg_1d": -0.019231,
+     "mcap": 6693750000000.0,
+     "score": -69.1,
+     "signal": "STRONG SELL",
+     "confidence": 0.691,
+     "atr_pct": 0.050983,
+     "reasons": [
+      "Harga di bawah SMA50",
+      "Struktur MA menengah melemah",
+      "ADX 20: tren turun kuat"
+     ],
+     "risks": [],
+     "news": null,
+     "foreign_5d": -1310487200.0,
+     "foreign_20d": -15095405200.0,
+     "foreign_20d_pct": -0.097248,
+     "foreign_days": 20,
+     "foreign_last": "2026-11-19",
+     "action": "Jual seluruh posisi",
+     "sell_portion": 1.0,
+     "sell_zone_low": 306.0,
+     "sell_zone_high": 312.0,
+     "breakdown_level": 284.0,
+     "when_sell": "Jual saat pantulan (rebound) ke area jual pada T+1/T+2; jangan menunggu. Jangan buka posisi beli baru selama sinyal SELL.",
+     "spark": [
+      418.0,
+      420.0,
+      434.0,
+      438.0,
+      434.0,
+      422.0,
+      418.0,
+      434.0,
+      434.0,
+      418.0,
+      408.0,
+      412.0,
+      408.0,
+      400.0,
+      396.0,
+      394.0,
+      400.0,
+      410.0,
+      406.0,
+      402.0,
+      380.0,
+      362.0,
+      364.0,
+      344.0,
+      338.0,
+      328.0,
+      332.0,
+      348.0,
+      340.0,
+      332.0,
+      332.0,
+      326.0,
+      326.0,
+      324.0,
+      314.0,
+      276.0,
+      282.0,
+      298.0,
+      306.0,
+      306.0,
+      304.0,
+      300.0,
+      298.0,
+      308.0,
+      310.0,
+      294.0,
+      312.0,
+      296.0,
+      304.0,
+      312.0,
+      314.0,
+      308.0,
+      310.0,
+      310.0,
+      326.0,
+      328.0,
+      322.0,
+      320.0,
+      312.0,
+      306.0
+     ]
+    },
+    {
      "ticker": "JARR.JK",
      "code": "JARR",
      "name": "PT Jhonlin Agro Raya Tbk",
@@ -15912,9 +15912,9 @@
      "price": 2320.0,
      "chg_1d": -0.008547,
      "mcap": 21415142916000.0,
-     "score": -69.0,
+     "score": -67.7,
      "signal": "STRONG SELL",
-     "confidence": 0.69,
+     "confidence": 0.677,
      "atr_pct": 0.062353,
      "reasons": [
       "Harga di bawah SMA50",
@@ -16006,9 +16006,9 @@
      "price": 6625.0,
      "chg_1d": 0.003788,
      "mcap": 36245261984125.0,
-     "score": -67.8,
+     "score": -66.5,
      "signal": "STRONG SELL",
-     "confidence": 0.678,
+     "confidence": 0.665,
      "atr_pct": 0.046875,
      "reasons": [
       "Harga di bawah SMA50",
@@ -16100,9 +16100,9 @@
      "price": 885.0,
      "chg_1d": -0.016667,
      "mcap": 37129514419185.0,
-     "score": -65.9,
+     "score": -64.7,
      "signal": "STRONG SELL",
-     "confidence": 0.659,
+     "confidence": 0.647,
      "atr_pct": 0.043864,
      "reasons": [
       "Harga di bawah SMA50",
@@ -16110,7 +16110,7 @@
       "ADX 23: tren turun kuat"
      ],
      "risks": [
-      "Outperform IHSG +5.5% (3 bulan)"
+      "Outperform IHSG +6.3% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -3521916000.0,
@@ -16196,9 +16196,9 @@
      "price": 1150.0,
      "chg_1d": -0.012876,
      "mcap": 28906665939800.0,
-     "score": -63.9,
+     "score": -62.6,
      "signal": "STRONG SELL",
-     "confidence": 0.639,
+     "confidence": 0.626,
      "atr_pct": 0.054814,
      "reasons": [
       "Harga di bawah SMA50",
@@ -16206,7 +16206,7 @@
       "Momentum 3 bulan -15.4%"
      ],
      "risks": [
-      "Outperform IHSG +4.1% (3 bulan)"
+      "Outperform IHSG +4.9% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": 47691059500.0,
@@ -16386,9 +16386,9 @@
      "price": 2610.0,
      "chg_1d": -0.007605,
      "mcap": 62720295932250.0,
-     "score": -57.6,
+     "score": -56.4,
      "signal": "SELL",
-     "confidence": 0.576,
+     "confidence": 0.564,
      "atr_pct": 0.048343,
      "reasons": [
       "Harga di bawah SMA50",
@@ -16396,7 +16396,7 @@
       "ADX 26: tren turun kuat"
      ],
      "risks": [
-      "Outperform IHSG +1.6% (3 bulan)"
+      "Outperform IHSG +2.4% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -172661934000.0,
@@ -16482,9 +16482,9 @@
      "price": 1445.0,
      "chg_1d": 0.017606,
      "mcap": 20096310767500.0,
-     "score": -55.1,
+     "score": -53.9,
      "signal": "SELL",
-     "confidence": 0.551,
+     "confidence": 0.539,
      "atr_pct": 0.040549,
      "reasons": [
       "Harga di bawah SMA50",
@@ -16578,9 +16578,9 @@
      "price": 1750.0,
      "chg_1d": -0.02507,
      "mcap": 34741945000000.0,
-     "score": -54.1,
+     "score": -52.9,
      "signal": "SELL",
-     "confidence": 0.541,
+     "confidence": 0.529,
      "atr_pct": 0.035961,
      "reasons": [
       "Harga di bawah SMA50",
@@ -16588,7 +16588,7 @@
       "MACD di bawah sinyal & di bawah nol"
      ],
      "risks": [
-      "Outperform IHSG +8.2% (3 bulan)"
+      "Outperform IHSG +9.0% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -3849966500.0,
@@ -16674,9 +16674,9 @@
      "price": 635.0,
      "chg_1d": -0.007812,
      "mcap": 73861978831500.0,
-     "score": -52.6,
+     "score": -51.4,
      "signal": "SELL",
-     "confidence": 0.526,
+     "confidence": 0.514,
      "atr_pct": 0.032764,
      "reasons": [
       "Harga di bawah SMA50",
@@ -16684,7 +16684,7 @@
       "MACD di bawah sinyal & di bawah nol"
      ],
      "risks": [
-      "Outperform IHSG +4.8% (3 bulan)"
+      "Outperform IHSG +5.6% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -3395033500.0,
@@ -16777,7 +16777,7 @@
      "reasons": [
       "Harga di bawah SMA50",
       "Momentum 3 bulan -33.5%",
-      "Underperform IHSG -13.9% (3 bulan)"
+      "Underperform IHSG -13.1% (3 bulan)"
      ],
      "risks": [],
      "news": null,
@@ -16960,9 +16960,9 @@
      "price": 358.0,
      "chg_1d": 0.005618,
      "mcap": 11903500000000.0,
-     "score": -44.8,
+     "score": -43.5,
      "signal": "SELL",
-     "confidence": 0.448,
+     "confidence": 0.435,
      "atr_pct": 0.069772,
      "reasons": [
       "Harga di bawah SMA50",
@@ -16970,7 +16970,7 @@
       "Momentum 3 bulan -19.4%"
      ],
      "risks": [
-      "Outperform IHSG +0.2% (3 bulan)"
+      "Outperform IHSG +1.0% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -107485400.0,
@@ -17056,9 +17056,9 @@
      "price": 380.0,
      "chg_1d": 0.0,
      "mcap": 22457279417780.0,
-     "score": -44.4,
+     "score": -43.2,
      "signal": "SELL",
-     "confidence": 0.444,
+     "confidence": 0.432,
      "atr_pct": 0.049802,
      "reasons": [
       "Harga di bawah SMA50",
@@ -17066,7 +17066,7 @@
       "Momentum 3 bulan -19.1%"
      ],
      "risks": [
-      "Outperform IHSG +0.4% (3 bulan)"
+      "Outperform IHSG +1.2% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": 3275186400.0,
@@ -17152,9 +17152,9 @@
      "price": 498.0,
      "chg_1d": 0.0,
      "mcap": 8579033898600.0,
-     "score": -44.2,
+     "score": -43.0,
      "signal": "SELL",
-     "confidence": 0.442,
+     "confidence": 0.43,
      "atr_pct": 0.052288,
      "reasons": [
       "Harga di bawah SMA50",
@@ -17162,7 +17162,7 @@
       "Momentum 3 bulan -19.0%"
      ],
      "risks": [
-      "Outperform IHSG +0.5% (3 bulan)"
+      "Outperform IHSG +1.3% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": 17359168300.0,
@@ -17248,9 +17248,9 @@
      "price": 2120.0,
      "chg_1d": -0.013953,
      "mcap": 210011899192000.0,
-     "score": -43.9,
+     "score": -42.6,
      "signal": "SELL",
-     "confidence": 0.439,
+     "confidence": 0.426,
      "atr_pct": 0.043361,
      "reasons": [
       "Harga di bawah SMA50",
@@ -17258,7 +17258,7 @@
       "Momentum 3 bulan -18.8%"
      ],
      "risks": [
-      "Outperform IHSG +0.8% (3 bulan)"
+      "Outperform IHSG +1.6% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -346439670000.0,
@@ -17344,9 +17344,9 @@
      "price": 515.0,
      "chg_1d": 0.0,
      "mcap": 9545883056325.0,
-     "score": -41.1,
+     "score": -39.9,
      "signal": "SELL",
-     "confidence": 0.411,
+     "confidence": 0.399,
      "atr_pct": 0.04108,
      "reasons": [
       "Harga di bawah SMA50",
@@ -17354,7 +17354,7 @@
       "Momentum 3 bulan -16.9%"
      ],
      "risks": [
-      "Outperform IHSG +2.6% (3 bulan)"
+      "Outperform IHSG +3.4% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": 9146873000.0,
@@ -17440,9 +17440,9 @@
      "price": 169.0,
      "chg_1d": -0.050562,
      "mcap": 5411730386517.0,
-     "score": -39.5,
+     "score": -38.3,
      "signal": "SELL",
-     "confidence": 0.395,
+     "confidence": 0.383,
      "atr_pct": 0.049536,
      "reasons": [
       "Harga di bawah SMA50",
@@ -17546,7 +17546,7 @@
       "MACD di bawah sinyal & di bawah nol"
      ],
      "risks": [
-      "Outperform IHSG +22.7% (3 bulan)",
+      "Outperform IHSG +23.6% (3 bulan)",
       "Momentum 3 bulan +3.2%"
      ],
      "news": null,
@@ -17643,7 +17643,7 @@
       "MACD di bawah sinyal & di bawah nol"
      ],
      "risks": [
-      "Outperform IHSG +13.0% (3 bulan)"
+      "Outperform IHSG +13.9% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": 13839420500.0,
@@ -17718,102 +17718,6 @@
       1260.0,
       1255.0,
       1295.0
-     ]
-    },
-    {
-     "ticker": "ADRO.JK",
-     "code": "ADRO",
-     "name": "PT Alamtri Resources Indonesia Tbk",
-     "sector": "Energy",
-     "horizon": "medium",
-     "price": 2320.0,
-     "chg_1d": -0.016949,
-     "mcap": 66817146544000.0,
-     "score": -35.9,
-     "signal": "SELL",
-     "confidence": 0.359,
-     "atr_pct": 0.038574,
-     "reasons": [
-      "Harga di bawah SMA50",
-      "Struktur MA menengah melemah",
-      "Momentum 3 bulan -14.1%"
-     ],
-     "risks": [
-      "Outperform IHSG +5.5% (3 bulan)"
-     ],
-     "news": null,
-     "foreign_5d": -53438604000.0,
-     "foreign_20d": -256147910000.0,
-     "foreign_20d_pct": -0.154949,
-     "foreign_days": 20,
-     "foreign_last": "2026-11-19",
-     "action": "Kurangi 50% posisi",
-     "sell_portion": 0.5,
-     "sell_zone_low": 2320.0,
-     "sell_zone_high": 2360.0,
-     "breakdown_level": 2280.0,
-     "when_sell": "Kurangi saat pantulan ke area jual. Sisa posisi: cut loss bila close di bawah level breakdown. Jangan buka posisi beli baru selama sinyal SELL.",
-     "spark": [
-      2670.0,
-      2840.0,
-      2780.0,
-      2650.0,
-      2740.0,
-      2720.0,
-      2700.0,
-      2690.0,
-      2690.0,
-      2670.0,
-      2640.0,
-      2620.0,
-      2590.0,
-      2600.0,
-      2670.0,
-      2640.0,
-      2620.0,
-      2610.0,
-      2600.0,
-      2560.0,
-      2600.0,
-      2590.0,
-      2470.0,
-      2430.0,
-      2410.0,
-      2500.0,
-      2590.0,
-      2600.0,
-      2600.0,
-      2550.0,
-      2580.0,
-      2490.0,
-      2520.0,
-      2510.0,
-      2460.0,
-      2210.0,
-      2210.0,
-      2400.0,
-      2400.0,
-      2440.0,
-      2460.0,
-      2450.0,
-      2460.0,
-      2440.0,
-      2370.0,
-      2400.0,
-      2430.0,
-      2320.0,
-      2350.0,
-      2330.0,
-      2310.0,
-      2330.0,
-      2340.0,
-      2310.0,
-      2450.0,
-      2480.0,
-      2440.0,
-      2410.0,
-      2360.0,
-      2320.0
      ]
     },
     {
@@ -17914,6 +17818,198 @@
      ]
     },
     {
+     "ticker": "ADRO.JK",
+     "code": "ADRO",
+     "name": "PT Alamtri Resources Indonesia Tbk",
+     "sector": "Energy",
+     "horizon": "medium",
+     "price": 2320.0,
+     "chg_1d": -0.016949,
+     "mcap": 66817146544000.0,
+     "score": -34.7,
+     "signal": "SELL",
+     "confidence": 0.347,
+     "atr_pct": 0.038574,
+     "reasons": [
+      "Harga di bawah SMA50",
+      "Struktur MA menengah melemah",
+      "Momentum 3 bulan -14.1%"
+     ],
+     "risks": [
+      "Outperform IHSG +6.3% (3 bulan)"
+     ],
+     "news": null,
+     "foreign_5d": -53438604000.0,
+     "foreign_20d": -256147910000.0,
+     "foreign_20d_pct": -0.154949,
+     "foreign_days": 20,
+     "foreign_last": "2026-11-19",
+     "action": "Kurangi 50% posisi",
+     "sell_portion": 0.5,
+     "sell_zone_low": 2320.0,
+     "sell_zone_high": 2360.0,
+     "breakdown_level": 2280.0,
+     "when_sell": "Kurangi saat pantulan ke area jual. Sisa posisi: cut loss bila close di bawah level breakdown. Jangan buka posisi beli baru selama sinyal SELL.",
+     "spark": [
+      2670.0,
+      2840.0,
+      2780.0,
+      2650.0,
+      2740.0,
+      2720.0,
+      2700.0,
+      2690.0,
+      2690.0,
+      2670.0,
+      2640.0,
+      2620.0,
+      2590.0,
+      2600.0,
+      2670.0,
+      2640.0,
+      2620.0,
+      2610.0,
+      2600.0,
+      2560.0,
+      2600.0,
+      2590.0,
+      2470.0,
+      2430.0,
+      2410.0,
+      2500.0,
+      2590.0,
+      2600.0,
+      2600.0,
+      2550.0,
+      2580.0,
+      2490.0,
+      2520.0,
+      2510.0,
+      2460.0,
+      2210.0,
+      2210.0,
+      2400.0,
+      2400.0,
+      2440.0,
+      2460.0,
+      2450.0,
+      2460.0,
+      2440.0,
+      2370.0,
+      2400.0,
+      2430.0,
+      2320.0,
+      2350.0,
+      2330.0,
+      2310.0,
+      2330.0,
+      2340.0,
+      2310.0,
+      2450.0,
+      2480.0,
+      2440.0,
+      2410.0,
+      2360.0,
+      2320.0
+     ]
+    },
+    {
+     "ticker": "CMNT.JK",
+     "code": "CMNT",
+     "name": "PT Cemindo Gemilang Tbk",
+     "sector": "Basic Materials",
+     "horizon": "medium",
+     "price": 720.0,
+     "chg_1d": 0.006993,
+     "mcap": 12330362880000.0,
+     "score": -32.7,
+     "signal": "SELL",
+     "confidence": 0.327,
+     "atr_pct": 0.027573,
+     "reasons": [
+      "Harga di bawah SMA50",
+      "Struktur MA menengah melemah",
+      "MACD di bawah sinyal & di bawah nol"
+     ],
+     "risks": [
+      "Outperform IHSG +17.7% (3 bulan)"
+     ],
+     "news": null,
+     "foreign_5d": -16673000.0,
+     "foreign_20d": -7071506500.0,
+     "foreign_20d_pct": -0.032059,
+     "foreign_days": 20,
+     "foreign_last": "2026-11-19",
+     "action": "Kurangi 50% posisi",
+     "sell_portion": 0.5,
+     "sell_zone_low": 720.0,
+     "sell_zone_high": 725.0,
+     "breakdown_level": 700.0,
+     "when_sell": "Kurangi saat pantulan ke area jual. Sisa posisi: cut loss bila close di bawah level breakdown. Jangan buka posisi beli baru selama sinyal SELL.",
+     "spark": [
+      745.0,
+      760.0,
+      745.0,
+      745.0,
+      740.0,
+      730.0,
+      740.0,
+      735.0,
+      755.0,
+      755.0,
+      755.0,
+      750.0,
+      775.0,
+      765.0,
+      770.0,
+      765.0,
+      750.0,
+      740.0,
+      740.0,
+      750.0,
+      750.0,
+      740.0,
+      745.0,
+      740.0,
+      750.0,
+      750.0,
+      740.0,
+      740.0,
+      735.0,
+      735.0,
+      735.0,
+      735.0,
+      745.0,
+      760.0,
+      760.0,
+      755.0,
+      755.0,
+      770.0,
+      760.0,
+      760.0,
+      760.0,
+      730.0,
+      740.0,
+      725.0,
+      750.0,
+      740.0,
+      740.0,
+      725.0,
+      715.0,
+      740.0,
+      740.0,
+      735.0,
+      730.0,
+      720.0,
+      710.0,
+      715.0,
+      720.0,
+      705.0,
+      715.0,
+      720.0
+     ]
+    },
+    {
      "ticker": "AVIA.JK",
      "code": "AVIA",
      "name": "PT Avia Avian Tbk",
@@ -17922,9 +18018,9 @@
      "price": 304.0,
      "chg_1d": -0.006536,
      "mcap": 18833880902400.0,
-     "score": -33.3,
+     "score": -32.0,
      "signal": "SELL",
-     "confidence": 0.333,
+     "confidence": 0.32,
      "atr_pct": 0.035955,
      "reasons": [
       "Harga di bawah SMA50",
@@ -17932,7 +18028,7 @@
       "ADX 23: tren turun kuat"
      ],
      "risks": [
-      "Outperform IHSG +8.5% (3 bulan)",
+      "Outperform IHSG +9.3% (3 bulan)",
       "RSI 50 di rezim bullish"
      ],
      "news": null,
@@ -18011,198 +18107,6 @@
      ]
     },
     {
-     "ticker": "CMNT.JK",
-     "code": "CMNT",
-     "name": "PT Cemindo Gemilang Tbk",
-     "sector": "Basic Materials",
-     "horizon": "medium",
-     "price": 720.0,
-     "chg_1d": 0.006993,
-     "mcap": 12330362880000.0,
-     "score": -32.7,
-     "signal": "SELL",
-     "confidence": 0.327,
-     "atr_pct": 0.027573,
-     "reasons": [
-      "Harga di bawah SMA50",
-      "Struktur MA menengah melemah",
-      "MACD di bawah sinyal & di bawah nol"
-     ],
-     "risks": [
-      "Outperform IHSG +16.8% (3 bulan)"
-     ],
-     "news": null,
-     "foreign_5d": -16673000.0,
-     "foreign_20d": -7071506500.0,
-     "foreign_20d_pct": -0.032059,
-     "foreign_days": 20,
-     "foreign_last": "2026-11-19",
-     "action": "Kurangi 50% posisi",
-     "sell_portion": 0.5,
-     "sell_zone_low": 720.0,
-     "sell_zone_high": 725.0,
-     "breakdown_level": 700.0,
-     "when_sell": "Kurangi saat pantulan ke area jual. Sisa posisi: cut loss bila close di bawah level breakdown. Jangan buka posisi beli baru selama sinyal SELL.",
-     "spark": [
-      745.0,
-      760.0,
-      745.0,
-      745.0,
-      740.0,
-      730.0,
-      740.0,
-      735.0,
-      755.0,
-      755.0,
-      755.0,
-      750.0,
-      775.0,
-      765.0,
-      770.0,
-      765.0,
-      750.0,
-      740.0,
-      740.0,
-      750.0,
-      750.0,
-      740.0,
-      745.0,
-      740.0,
-      750.0,
-      750.0,
-      740.0,
-      740.0,
-      735.0,
-      735.0,
-      735.0,
-      735.0,
-      745.0,
-      760.0,
-      760.0,
-      755.0,
-      755.0,
-      770.0,
-      760.0,
-      760.0,
-      760.0,
-      730.0,
-      740.0,
-      725.0,
-      750.0,
-      740.0,
-      740.0,
-      725.0,
-      715.0,
-      740.0,
-      740.0,
-      735.0,
-      730.0,
-      720.0,
-      710.0,
-      715.0,
-      720.0,
-      705.0,
-      715.0,
-      720.0
-     ]
-    },
-    {
-     "ticker": "BFIN.JK",
-     "code": "BFIN",
-     "name": "PT BFI Finance Indonesia Tbk",
-     "sector": "Financial Services",
-     "horizon": "medium",
-     "price": 770.0,
-     "chg_1d": -0.012821,
-     "mcap": 11580325387400.0,
-     "score": -32.0,
-     "signal": "SELL",
-     "confidence": 0.32,
-     "atr_pct": 0.048535,
-     "reasons": [
-      "Harga di bawah SMA50",
-      "Struktur MA menengah melemah",
-      "Momentum 3 bulan -12.5%"
-     ],
-     "risks": [
-      "Outperform IHSG +7.0% (3 bulan)"
-     ],
-     "news": null,
-     "foreign_5d": -1728652500.0,
-     "foreign_20d": -1301272000.0,
-     "foreign_20d_pct": -0.008155,
-     "foreign_days": 20,
-     "foreign_last": "2026-11-19",
-     "action": "Kurangi 50% posisi",
-     "sell_portion": 0.5,
-     "sell_zone_low": 770.0,
-     "sell_zone_high": 785.0,
-     "breakdown_level": 690.0,
-     "when_sell": "Kurangi saat pantulan ke area jual. Sisa posisi: cut loss bila close di bawah level breakdown. Jangan buka posisi beli baru selama sinyal SELL.",
-     "spark": [
-      920.0,
-      930.0,
-      980.0,
-      950.0,
-      965.0,
-      950.0,
-      1015.0,
-      1020.0,
-      1010.0,
-      1010.0,
-      1005.0,
-      995.0,
-      980.0,
-      980.0,
-      985.0,
-      965.0,
-      950.0,
-      935.0,
-      955.0,
-      950.0,
-      970.0,
-      940.0,
-      930.0,
-      920.0,
-      900.0,
-      910.0,
-      930.0,
-      925.0,
-      925.0,
-      945.0,
-      935.0,
-      915.0,
-      920.0,
-      910.0,
-      900.0,
-      765.0,
-      715.0,
-      745.0,
-      745.0,
-      815.0,
-      805.0,
-      775.0,
-      795.0,
-      800.0,
-      780.0,
-      745.0,
-      745.0,
-      730.0,
-      715.0,
-      710.0,
-      720.0,
-      725.0,
-      725.0,
-      740.0,
-      770.0,
-      800.0,
-      775.0,
-      785.0,
-      780.0,
-      770.0
-     ]
-    },
-    {
      "ticker": "AUTO.JK",
      "code": "AUTO",
      "name": "PT Astra Otoparts Tbk",
@@ -18221,7 +18125,7 @@
       "RSI 39 di rezim bearish / jenuh beli"
      ],
      "risks": [
-      "Outperform IHSG +12.8% (3 bulan)"
+      "Outperform IHSG +13.6% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -7454542000.0,
@@ -18299,100 +18203,99 @@
      ]
     },
     {
-     "ticker": "GGRM.JK",
-     "code": "GGRM",
-     "name": "PT Gudang Garam Tbk",
-     "sector": "Consumer Defensive",
+     "ticker": "BFIN.JK",
+     "code": "BFIN",
+     "name": "PT BFI Finance Indonesia Tbk",
+     "sector": "Financial Services",
      "horizon": "medium",
-     "price": 16400.0,
-     "chg_1d": 0.01548,
-     "mcap": 31555043200000.0,
-     "score": -30.5,
+     "price": 770.0,
+     "chg_1d": -0.012821,
+     "mcap": 11580325387400.0,
+     "score": -30.7,
      "signal": "SELL",
-     "confidence": 0.305,
-     "atr_pct": 0.036827,
+     "confidence": 0.307,
+     "atr_pct": 0.048535,
      "reasons": [
       "Harga di bawah SMA50",
       "Struktur MA menengah melemah",
-      "Momentum 3 bulan -16.5%"
+      "Momentum 3 bulan -12.5%"
      ],
      "risks": [
-      "RSI 53 di rezim bullish",
-      "Outperform IHSG +3.0% (3 bulan)"
+      "Outperform IHSG +7.9% (3 bulan)"
      ],
      "news": null,
-     "foreign_5d": 8884102500.0,
-     "foreign_20d": -6568642500.0,
-     "foreign_20d_pct": -0.018511,
+     "foreign_5d": -1728652500.0,
+     "foreign_20d": -1301272000.0,
+     "foreign_20d_pct": -0.008155,
      "foreign_days": 20,
      "foreign_last": "2026-11-19",
      "action": "Kurangi 50% posisi",
      "sell_portion": 0.5,
-     "sell_zone_low": 16400.0,
-     "sell_zone_high": 16700.0,
-     "breakdown_level": 14900.0,
+     "sell_zone_low": 770.0,
+     "sell_zone_high": 785.0,
+     "breakdown_level": 690.0,
      "when_sell": "Kurangi saat pantulan ke area jual. Sisa posisi: cut loss bila close di bawah level breakdown. Jangan buka posisi beli baru selama sinyal SELL.",
      "spark": [
-      19525.0,
-      20800.0,
-      20325.0,
-      20100.0,
-      20300.0,
-      20075.0,
-      20100.0,
-      20150.0,
-      19750.0,
-      19500.0,
-      19375.0,
-      19000.0,
-      17875.0,
-      17750.0,
-      17500.0,
-      17900.0,
-      17650.0,
-      17700.0,
-      17700.0,
-      17350.0,
-      17150.0,
-      17300.0,
-      16850.0,
-      16825.0,
-      16575.0,
-      16900.0,
-      17000.0,
-      17100.0,
-      16925.0,
-      16975.0,
-      18000.0,
-      17925.0,
-      17950.0,
-      17600.0,
-      17400.0,
-      15300.0,
-      14950.0,
-      15625.0,
-      16500.0,
-      16750.0,
-      16950.0,
-      16450.0,
-      17150.0,
-      16200.0,
-      16025.0,
-      16400.0,
-      16100.0,
-      15450.0,
-      15050.0,
-      14900.0,
-      15075.0,
-      15350.0,
-      15250.0,
-      15125.0,
-      15700.0,
-      16075.0,
-      16075.0,
-      16300.0,
-      16150.0,
-      16400.0
+      920.0,
+      930.0,
+      980.0,
+      950.0,
+      965.0,
+      950.0,
+      1015.0,
+      1020.0,
+      1010.0,
+      1010.0,
+      1005.0,
+      995.0,
+      980.0,
+      980.0,
+      985.0,
+      965.0,
+      950.0,
+      935.0,
+      955.0,
+      950.0,
+      970.0,
+      940.0,
+      930.0,
+      920.0,
+      900.0,
+      910.0,
+      930.0,
+      925.0,
+      925.0,
+      945.0,
+      935.0,
+      915.0,
+      920.0,
+      910.0,
+      900.0,
+      765.0,
+      715.0,
+      745.0,
+      745.0,
+      815.0,
+      805.0,
+      775.0,
+      795.0,
+      800.0,
+      780.0,
+      745.0,
+      745.0,
+      730.0,
+      715.0,
+      710.0,
+      720.0,
+      725.0,
+      725.0,
+      740.0,
+      770.0,
+      800.0,
+      775.0,
+      785.0,
+      780.0,
+      770.0
      ]
     }
    ]
@@ -24065,7 +23968,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": 10.9,
+    "score": 12.1,
     "signal": "HOLD"
    },
    "long": {
@@ -24225,7 +24128,7 @@
     "signal": "STRONG SELL"
    },
    "medium": {
-    "score": -84.5,
+    "score": -83.3,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -24289,7 +24192,7 @@
     "signal": "HOLD"
    },
    "medium": {
-    "score": -43.9,
+    "score": -42.6,
     "signal": "SELL"
    },
    "long": {
@@ -24460,7 +24363,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": 37.9,
+    "score": 39.1,
     "signal": "BUY"
    },
    "long": {
@@ -24524,7 +24427,7 @@
     "signal": "STRONG SELL"
    },
    "medium": {
-    "score": -52.6,
+    "score": -51.4,
     "signal": "SELL"
    },
    "long": {
@@ -24599,7 +24502,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -35.9,
+    "score": -34.7,
     "signal": "SELL"
    },
    "long": {
@@ -24695,7 +24598,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -57.6,
+    "score": -56.4,
     "signal": "SELL"
    },
    "long": {
@@ -24759,7 +24662,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": 37.3,
+    "score": 38.6,
     "signal": "BUY"
    },
    "long": {
@@ -24855,7 +24758,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": -20.9,
+    "score": -19.7,
     "signal": "HOLD"
    },
    "long": {
@@ -24951,7 +24854,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -81.9,
+    "score": -80.7,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -25132,18 +25035,7 @@
    "pb": 0.679261,
    "roe": 0.10725,
    "div_yield": 0.1044,
-   "news": [
-    {
-     "date": "2026-11-15",
-     "title": "Free Float Kurang, Induk CIMB Niaga Pertimbangkan Opsi Delisting BNGA",
-     "source": "Emitennews.com",
-     "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSkJ6UzRHQi1PZk5FQ29Uc3JkTXdUa0RXSzlOM0hUUmF6aDhhUjg1VW9lR2RVdHV5OW12MUhOZEd5cjhUa29nNXR3WXFaT2JGWnFITGpuRjVub0NNcmNvb2UxUUluTzBoQWs1VWdhWFIwdFVINTVmOGVYQndGUVh6eDc2ZUpSVTV3cUhjbkFQNkViUHFQNl9ncm9sX3U?oc=5",
-     "categories": [
-      "Suspensi / delisting"
-     ],
-     "severity": "tinggi"
-    }
-   ],
+   "news": null,
    "foreign_5d": -6089679000.0,
    "foreign_20d": -24340322500.0,
    "foreign_20d_pct": -0.128318,
@@ -25218,7 +25110,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -75.0,
+    "score": -73.7,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -25282,7 +25174,7 @@
     "signal": "STRONG SELL"
    },
    "medium": {
-    "score": -65.9,
+    "score": -64.7,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -25314,7 +25206,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -67.8,
+    "score": -66.5,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -25378,7 +25270,7 @@
     "signal": "STRONG SELL"
    },
    "medium": {
-    "score": -54.1,
+    "score": -52.9,
     "signal": "SELL"
    },
    "long": {
@@ -25589,7 +25481,7 @@
     "signal": "HOLD"
    },
    "medium": {
-    "score": 41.2,
+    "score": 42.4,
     "signal": "BUY"
    },
    "long": {
@@ -25621,8 +25513,8 @@
     "signal": "HOLD"
    },
    "medium": {
-    "score": -30.5,
-    "signal": "SELL"
+    "score": -29.3,
+    "signal": "HOLD"
    },
    "long": {
     "score": 53.9,
@@ -25685,7 +25577,7 @@
     "signal": "STRONG SELL"
    },
    "medium": {
-    "score": -63.9,
+    "score": -62.6,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -25781,7 +25673,7 @@
     "signal": "STRONG SELL"
    },
    "medium": {
-    "score": -78.6,
+    "score": -77.3,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -25877,7 +25769,7 @@
     "signal": "HOLD"
    },
    "medium": {
-    "score": -44.4,
+    "score": -43.2,
     "signal": "SELL"
    },
    "long": {
@@ -25909,7 +25801,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -69.0,
+    "score": -67.7,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -26005,7 +25897,7 @@
     "signal": "HOLD"
    },
    "medium": {
-    "score": -55.1,
+    "score": -53.9,
     "signal": "SELL"
    },
    "long": {
@@ -26069,7 +25961,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": -33.3,
+    "score": -32.0,
     "signal": "SELL"
    },
    "long": {
@@ -26165,7 +26057,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -97.2,
+    "score": -96.0,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -26229,7 +26121,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": 24.2,
+    "score": 25.4,
     "signal": "HOLD"
    },
    "long": {
@@ -26261,7 +26153,7 @@
     "signal": "STRONG SELL"
    },
    "medium": {
-    "score": -82.9,
+    "score": -81.7,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -26325,7 +26217,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -85.0,
+    "score": -84.7,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -26372,7 +26264,7 @@
    "sector": "Consumer Cyclical",
    "price": 7100.0,
    "chg_1d": 0.017921,
-   "mcap": 14819559390600.0,
+   "mcap": 14822448160500.0,
    "avg_value_20d": 6419667750.0,
    "pe": null,
    "pb": null,
@@ -26506,7 +26398,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": 30.3,
+    "score": 31.6,
     "signal": "BUY"
    },
    "long": {
@@ -26602,7 +26494,7 @@
     "signal": "HOLD"
    },
    "medium": {
-    "score": -44.8,
+    "score": -43.5,
     "signal": "SELL"
    },
    "long": {
@@ -26698,7 +26590,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -32.0,
+    "score": -30.7,
     "signal": "SELL"
    },
    "long": {
@@ -26922,7 +26814,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -71.4,
+    "score": -70.2,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -26986,7 +26878,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -41.1,
+    "score": -39.9,
     "signal": "SELL"
    },
    "long": {
@@ -27114,7 +27006,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -83.3,
+    "score": -82.1,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -27210,7 +27102,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -44.2,
+    "score": -43.0,
     "signal": "SELL"
    },
    "long": {
@@ -27498,7 +27390,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -70.4,
+    "score": -69.1,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -27690,7 +27582,7 @@
     "signal": "HOLD"
    },
    "medium": {
-    "score": -39.5,
+    "score": -38.3,
     "signal": "SELL"
    },
    "long": {
@@ -28833,17 +28725,14 @@
     }
    },
    "google": {
-    "ok": 108,
-    "fail": 7,
-    "items": 5690,
-    "errors": {
-     "HTTP 429": 7
-    }
+    "ok": 115,
+    "fail": 0,
+    "items": 6235
    },
    "skipped_budget": 0,
-   "recent_items": 1410,
-   "stocks_flagged": 5,
-   "seconds": 92
+   "recent_items": 1401,
+   "stocks_flagged": 4,
+   "seconds": 95
   },
   "items": {
    "DSSA": [
@@ -28868,18 +28757,6 @@
       "Private placement (dilusi)"
      ],
      "severity": "sedang"
-    }
-   ],
-   "BNGA": [
-    {
-     "date": "2026-11-15",
-     "title": "Free Float Kurang, Induk CIMB Niaga Pertimbangkan Opsi Delisting BNGA",
-     "source": "Emitennews.com",
-     "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSkJ6UzRHQi1PZk5FQ29Uc3JkTXdUa0RXSzlOM0hUUmF6aDhhUjg1VW9lR2RVdHV5OW12MUhOZEd5cjhUa29nNXR3WXFaT2JGWnFITGpuRjVub0NNcmNvb2UxUUluTzBoQWs1VWdhWFIwdFVINTVmOGVYQndGUVh6eDc2ZUpSVTV3cUhjbkFQNkViUHFQNl9ncm9sX3U?oc=5",
-     "categories": [
-      "Suspensi / delisting"
-     ],
-     "severity": "tinggi"
     }
    ],
    "MBMA": [
