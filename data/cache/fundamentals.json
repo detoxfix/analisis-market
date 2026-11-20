@@ -1767,8 +1767,8 @@
   "name": "PT Panin Financial Tbk",
   "sector": "Financial Services",
   "industry": "Banks - Regional",
-  "pe": 2.918009,
-  "pb": 0.162395,
+  "pe": 3.025421,
+  "pb": 0.168373,
   "roe": 0.05297,
   "der": null,
   "div_yield_raw": 0.0,
@@ -1779,7 +1779,7 @@
   "eps_growth": 0.065,
   "rev_growth": 0.17,
   "shares": 32022073293.0,
-  "ts": "2026-11-13T17:58:02"
+  "ts": "2026-11-20T18:44:14"
  },
  "WIFI.JK": {
   "name": "PT Solusi Sinergi Digital Tbk",
@@ -2286,19 +2286,19 @@
   "name": "PT RMK Energy Tbk",
   "sector": "Energy",
   "industry": "Thermal Coal",
-  "pe": 16.015625,
-  "pb": 3.385248,
+  "pe": 14.550781,
+  "pb": 3.075621,
   "roe": 0.22711,
   "der": 0.45343,
-  "div_yield_raw": 1.84,
+  "div_yield_raw": 1.96,
   "eps_ttm": 20.48,
   "bvps": 96.891,
   "fin_currency": "IDR",
   "v": 3,
   "eps_growth": 2.53,
   "rev_growth": 0.564,
-  "shares": 21875000000.0,
-  "ts": "2026-11-13T17:58:01"
+  "shares": 21817612000.0,
+  "ts": "2026-11-20T18:44:13"
  },
  "BJTM.JK": {
   "name": "PT Bank Pembangunan Daerah Jawa Timur Tbk",
