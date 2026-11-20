@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-21 01:42",
+ "generated_at": "2026-11-21 04:27",
  "as_of": "2026-11-20",
  "demo": false,
  "data_status": {
@@ -27143,17 +27143,14 @@
     }
    },
    "google": {
-    "ok": 107,
-    "fail": 4,
-    "items": 5854,
-    "errors": {
-     "HTTP 429": 4
-    }
+    "ok": 111,
+    "fail": 0,
+    "items": 6181
    },
    "skipped_budget": 0,
-   "recent_items": 1412,
+   "recent_items": 1483,
    "stocks_flagged": 4,
-   "seconds": 89
+   "seconds": 91
   },
   "items": {
    "DSSA": [
