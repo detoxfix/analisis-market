@@ -76,18 +76,42 @@ def _normalize(sub: pd.DataFrame) -> pd.DataFrame | None:
     return sub if len(sub) >= 60 else None
 
 
-def download_prices(tickers: list[str], period: str = "3y", chunk: int = 60) -> dict[str, pd.DataFrame]:
+def _yf_download(batch: list[str], deadline: int = 90, **kw):
+    """yf.download dengan batas waktu keras. Di sebagian jaringan/PC, Yahoo membuat unduhan menggantung
+    tanpa error; thread dibiarkan (daemon) dan pemanggil mendapat TimeoutError supaya bisa mencoba ulang."""
+    import threading
+
     import yfinance as yf
 
+    box: dict = {}
+
+    def work():
+        try:
+            box["v"] = yf.download(batch, progress=False, timeout=30, **kw)
+        except BaseException as e:  # noqa: BLE001
+            box["e"] = e
+
+    th = threading.Thread(target=work, daemon=True)
+    th.start()
+    th.join(deadline)
+    if th.is_alive():
+        raise TimeoutError(f"Yahoo tidak menjawab dalam {deadline} dtk")
+    if "e" in box:
+        raise box["e"]
+    return box["v"]
+
+
+def download_prices(tickers: list[str], period: str = "3y", chunk: int = 60) -> dict[str, pd.DataFrame]:
     out: dict[str, pd.DataFrame] = {}
     tickers = [jk(t) for t in tickers]
+    log.info("Mengunduh harga Yahoo Finance: %d ticker", len(tickers))
     for i in range(0, len(tickers), chunk):
         batch = tickers[i:i + chunk]
         raw = None
         for attempt in range(4):
             try:
-                raw = yf.download(batch, period=period, interval="1d", auto_adjust=True,
-                                  group_by="ticker", threads=True, progress=False)
+                raw = _yf_download(batch, period=period, interval="1d", auto_adjust=True,
+                                   group_by="ticker", threads=(attempt == 0))   # coba ulang tanpa multithread
                 break
             except Exception as e:  # noqa: BLE001  (rate limit dsb.)
                 wait = 10 * (attempt + 1)
@@ -140,14 +164,12 @@ def fill_latest_from_hourly(prices: dict[str, pd.DataFrame], now: datetime, chun
     """Yahoo sering terlambat menerbitkan bar HARIAN terakhir BEI, padahal bar per jam sudah lengkap.
     Hari bursa yang belum ada di data harian diisi dari gabungan bar per jam (akan tergantikan bar
     harian resmi pada update berikutnya). Return {"filled": jumlah saham, "date": tanggal terakhir}."""
-    import yfinance as yf
-
     tickers, filled, last = list(prices), 0, None
     for i in range(0, len(tickers), chunk):
         batch = tickers[i:i + chunk]
         try:
-            raw = yf.download(batch, period="5d", interval="1h", auto_adjust=True, group_by="ticker",
-                              threads=True, progress=False)
+            raw = _yf_download(batch, deadline=60, period="5d", interval="1h", auto_adjust=True,
+                               group_by="ticker", threads=False)
         except Exception as e:  # noqa: BLE001
             log.warning("Unduh data per jam gagal: %s", e)
             continue

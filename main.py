@@ -87,6 +87,7 @@ def run(cfg: dict, demo: bool = False, backtest_mode: str = "auto") -> dict:
         tickers, shares, names = candidate_list(cfg, idx_df, extra)
         sources.append("Daftar emiten & jumlah saham: idx.co.id (publik)" if shares
                        else "Daftar emiten: data/tickers_seed.csv" + (" + screener Yahoo Finance" if extra else ""))
+        log.info("Mengunduh indeks pembanding %s ...", cfg["data"]["benchmark"])
         bench_px = D.download_prices([cfg["data"]["benchmark"]], period=cfg["data"]["history_period"])
         bench = bench_px[cfg["data"]["benchmark"]]["Close"] if bench_px else None
         prices = D.download_prices(tickers, period=cfg["data"]["history_period"])

@@ -97,6 +97,43 @@ def save_settings(s: dict):
     SETTINGS.write_text(json.dumps(s, indent=1), encoding="utf-8")
 
 
+def _pid_alive(pid: int) -> bool:
+    """Apakah proses dengan PID itu masih hidup? (aman di Windows: tidak memakai os.kill)"""
+    if pid <= 0:
+        return False
+    if sys.platform.startswith("win"):
+        import ctypes
+        k = ctypes.windll.kernel32
+        h = k.OpenProcess(0x1000, False, pid)          # PROCESS_QUERY_LIMITED_INFORMATION
+        if not h:
+            return False
+        code = ctypes.c_ulong()
+        ok = k.GetExitCodeProcess(h, ctypes.byref(code))
+        k.CloseHandle(h)
+        return bool(ok) and code.value == 259          # STILL_ACTIVE
+    try:
+        os.kill(pid, 0)
+        return True
+    except ProcessLookupError:
+        return False
+    except PermissionError:
+        return True
+
+
+def _lock_busy() -> bool:
+    """True hanya bila update lain benar-benar masih jalan. Kunci sisa dari proses yang
+    sudah mati (aplikasi ditutup paksa, listrik padam) diabaikan, jadi tidak perlu dihapus manual."""
+    if not LOCK.exists():
+        return False
+    try:
+        pid = int(LOCK.read_text().strip() or 0)
+    except (ValueError, OSError):
+        pid = 0
+    if time.time() - LOCK.stat().st_mtime > 3 * 3600:   # batas atas: tidak ada update selama itu
+        return False
+    return pid != os.getpid() and _pid_alive(pid)
+
+
 # ============================================================== update (dipakai jendela & mode --auto)
 def run_update(demo: bool = False) -> dict:
     """Jalankan seluruh proses harian. Return ringkasan hasil."""
@@ -105,7 +142,7 @@ def run_update(demo: bool = False) -> dict:
     import main as M
     from src import notify
 
-    if LOCK.exists() and time.time() - LOCK.stat().st_mtime < 3600:
+    if _lock_busy():
         raise RuntimeError("Update lain sedang berjalan (mis. jadwal otomatis). Coba lagi beberapa menit lagi.")
     LOCK.write_text(str(os.getpid()))
     t0 = time.time()
