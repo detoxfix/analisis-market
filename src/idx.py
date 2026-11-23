@@ -111,23 +111,36 @@ def _browser_get(url: str, timeout: int):
 METHODS = ["curl_chrome", "curl_safari", "curl_firefox", "cloudscraper", "requests", "browser"]
 
 
-def _try(method: str, url: str, referer: str, timeout: int):
-    try:
-        if method == "browser":
-            return _browser_get(url, timeout)
-        return _http_get(method, url, referer, timeout)
-    except Exception as e:  # noqa: BLE001
-        return None, f"{e.__class__.__name__}: {str(e)[:80]}"
+_NET_ERR = ("SSL", "Connection", "Timeout", "Timed out", "reset", "closed")
+
+
+def _try(method: str, url: str, referer: str, timeout: int, retry: bool = False):
+    """Satu cara akses. retry=True: gangguan jaringan sesaat (SSL/koneksi terputus/timeout) dicoba ulang sekali."""
+    why = ""
+    for attempt in range(2 if retry and method != "browser" else 1):
+        try:
+            if method == "browser":
+                return _browser_get(url, timeout)
+            return _http_get(method, url, referer, timeout)
+        except Exception as e:  # noqa: BLE001
+            why = f"{e.__class__.__name__}: {str(e)[:80]}"
+            if attempt == 0 and any(k.lower() in why.lower() for k in _NET_ERR):
+                _SESS.pop(method, None)                  # sesi baru (cookie & koneksi baru)
+                time.sleep(3)
+                continue
+            break
+    return None, why
 
 
 def _order() -> list[str]:
+    """Cara yang terakhir berhasil dicoba pertama; cara yang baru-baru ini gagal tetap dicoba, tetapi
+    paling akhir (dulu dilewati 3 hari, sehingga satu gangguan sesaat bisa memutus akses IDX berhari-hari)."""
     st = load_json(STATE, {}) or {}
     ok = st.get("method")
     order = ([ok] if ok in METHODS else []) + [m for m in METHODS if m != ok]
-    # cara yang gagal < 3 hari lalu dilewati (kecuali cara yang terakhir berhasil)
     fresh_fail = {m for m, t in (st.get("failed") or {}).items()
                   if datetime.fromisoformat(t) > datetime.now() - timedelta(days=3)}
-    return [m for m in order if m == ok or m not in fresh_fail]
+    return [m for m in order if m == ok or m not in fresh_fail] + [m for m in order if m != ok and m in fresh_fail]
 
 
 def get_json(path: str, params: dict, referer: str, timeout: int = 20):
@@ -138,8 +151,8 @@ def get_json(path: str, params: dict, referer: str, timeout: int = 20):
     url = BASE + path + ("?" + urlencode(params) if params else "")
     methods = [_WORKING] if _WORKING else _order()
     notes = []
-    for m in methods:
-        js, why = _try(m, url, referer, timeout)
+    for i, m in enumerate(methods):
+        js, why = _try(m, url, referer, timeout, retry=(i == 0))
         if js is not None:
             if _WORKING != m:
                 log.info("Akses IDX berhasil dengan cara: %s", m)
