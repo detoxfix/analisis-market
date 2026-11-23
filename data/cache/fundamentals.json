@@ -2233,7 +2233,7 @@
   "sector": "Financial Services",
   "industry": "Financial Data & Stock Exchanges",
   "pe": null,
-  "pb": 4.082478,
+  "pb": 3.648592,
   "roe": -0.03378,
   "der": 0.00608,
   "div_yield_raw": 0.0,
@@ -2244,7 +2244,7 @@
   "eps_growth": null,
   "rev_growth": -0.666,
   "shares": 14705882400.0,
-  "ts": "2026-11-16T02:57:05"
+  "ts": "2026-11-23T03:53:44"
  },
  "CYBR.JK": {
   "name": "PT ITSEC Asia Tbk",
