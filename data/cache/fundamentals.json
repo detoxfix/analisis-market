@@ -1731,11 +1731,11 @@
   "name": "PT Surya Semesta Internusa Tbk",
   "sector": "Industrials",
   "industry": "Engineering & Construction",
-  "pe": 22.420671,
-  "pb": 0.946365,
+  "pe": 20.520615,
+  "pb": 0.866165,
   "roe": 0.0606,
   "der": 0.28441,
-  "div_yield_raw": 0.44,
+  "div_yield_raw": 0.48,
   "eps_ttm": 52.63,
   "bvps": 1246.876,
   "fin_currency": "IDR",
@@ -1743,7 +1743,7 @@
   "eps_growth": 1.057,
   "rev_growth": 0.207,
   "shares": 4705249440.0,
-  "ts": "2026-11-13T17:58:01"
+  "ts": "2026-11-24T20:47:32"
  },
  "ACES.JK": {
   "name": "PT Aspirasi Hidup Indonesia Tbk",
@@ -2335,5 +2335,41 @@
   "rev_growth": null,
   "shares": 13561491300.0,
   "ts": "2026-11-17T21:53:32"
+ },
+ "MORA.JK": {
+  "name": "PT Mora Telematika Indonesia Tbk",
+  "sector": "Communication Services",
+  "industry": "Telecom Services",
+  "pe": 48.79182,
+  "pb": 2.756484,
+  "roe": 0.06203,
+  "der": 0.94434,
+  "div_yield_raw": 0.0,
+  "eps_ttm": 21.52,
+  "bvps": 380.92,
+  "fin_currency": "IDR",
+  "v": 3,
+  "eps_growth": 0.024,
+  "rev_growth": 1.267,
+  "shares": 47774192736.0,
+  "ts": "2026-11-24T20:47:31"
+ },
+ "MTEL.JK": {
+  "name": "PT Dayamitra Telekomunikasi Tbk.",
+  "sector": "Communication Services",
+  "industry": "Telecom Services",
+  "pe": 10.615385,
+  "pb": 0.686931,
+  "roe": 0.06545,
+  "der": 0.6997,
+  "div_yield_raw": 9.43,
+  "eps_ttm": 26.0,
+  "bvps": 401.787,
+  "fin_currency": "IDR",
+  "v": 3,
+  "eps_growth": -0.091,
+  "rev_growth": 0.013,
+  "shares": 80303054344.0,
+  "ts": "2026-11-24T20:47:31"
  }
 }
