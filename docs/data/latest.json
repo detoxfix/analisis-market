@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24 05:09",
+ "generated_at": "2026-11-24 08:09",
  "as_of": "2026-11-23",
  "demo": false,
  "data_status": {
@@ -6944,18 +6944,7 @@
      "risks": [
       "Histogram MACD positif & menguat"
      ],
-     "news": [
-      {
-       "date": "2026-11-23",
-       "title": "MDKA Cetak Laba USD157 Juta Saat Saham Anjlok",
-       "source": "Lensa Hukum",
-       "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5qQlYyanljY3pyWHk3ZmxpNzZONENhcm0zVy04SU9lVEhtVVZxQ191RVlLV3VoMmVsS2thMF9YWWYySktIcl9BSWZEUlBDX0xvV1dSUkdUdXoxQTVGaE1JN21TVQ?oc=5",
-       "categories": [
-        "Kinerja memburuk"
-       ],
-       "severity": "sedang"
-      }
-     ],
+     "news": null,
      "foreign_5d": -18807044000.0,
      "foreign_20d": 116993613000.0,
      "foreign_20d_pct": 0.054256,
@@ -11044,18 +11033,7 @@
       "ADX 29: tren turun kuat"
      ],
      "risks": [],
-     "news": [
-      {
-       "date": "2026-11-23",
-       "title": "MDKA Cetak Laba USD157 Juta Saat Saham Anjlok",
-       "source": "Lensa Hukum",
-       "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5qQlYyanljY3pyWHk3ZmxpNzZONENhcm0zVy04SU9lVEhtVVZxQ191RVlLV3VoMmVsS2thMF9YWWYySktIcl9BSWZEUlBDX0xvV1dSUkdUdXoxQTVGaE1JN21TVQ?oc=5",
-       "categories": [
-        "Kinerja memburuk"
-       ],
-       "severity": "sedang"
-      }
-     ],
+     "news": null,
      "foreign_5d": -18807044000.0,
      "foreign_20d": 116993613000.0,
      "foreign_20d_pct": 0.054256,
@@ -20835,18 +20813,7 @@
      "risks": [
       "DER 0.86x (utang rendah)"
      ],
-     "news": [
-      {
-       "date": "2026-11-23",
-       "title": "MDKA Cetak Laba USD157 Juta Saat Saham Anjlok",
-       "source": "Lensa Hukum",
-       "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5qQlYyanljY3pyWHk3ZmxpNzZONENhcm0zVy04SU9lVEhtVVZxQ191RVlLV3VoMmVsS2thMF9YWWYySktIcl9BSWZEUlBDX0xvV1dSUkdUdXoxQTVGaE1JN21TVQ?oc=5",
-       "categories": [
-        "Kinerja memburuk"
-       ],
-       "severity": "sedang"
-      }
-     ],
+     "news": null,
      "foreign_5d": -18807044000.0,
      "foreign_20d": 116993613000.0,
      "foreign_20d_pct": 0.054256,
@@ -22946,18 +22913,7 @@
    "pb": null,
    "roe": 0.07467,
    "div_yield": 0.0065,
-   "news": [
-    {
-     "date": "2026-11-23",
-     "title": "MDKA Cetak Laba USD157 Juta Saat Saham Anjlok",
-     "source": "Lensa Hukum",
-     "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5qQlYyanljY3pyWHk3ZmxpNzZONENhcm0zVy04SU9lVEhtVVZxQ191RVlLV3VoMmVsS2thMF9YWWYySktIcl9BSWZEUlBDX0xvV1dSUkdUdXoxQTVGaE1JN21TVQ?oc=5",
-     "categories": [
-      "Kinerja memburuk"
-     ],
-     "severity": "sedang"
-    }
-   ],
+   "news": null,
    "foreign_5d": -18807044000.0,
    "foreign_20d": 116993613000.0,
    "foreign_20d_pct": 0.054256,
@@ -26672,17 +26628,14 @@
     }
    },
    "google": {
-    "ok": 107,
-    "fail": 3,
-    "items": 7790,
-    "errors": {
-     "HTTP 429": 3
-    }
+    "ok": 110,
+    "fail": 0,
+    "items": 8374
    },
    "skipped_budget": 0,
-   "recent_items": 1210,
-   "stocks_flagged": 5,
-   "seconds": 91
+   "recent_items": 1310,
+   "stocks_flagged": 4,
+   "seconds": 97
   },
   "items": {
    "SMGR": [
@@ -26735,18 +26688,6 @@
      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOVjF0b2VkM0pFSUZ4U1h3eHY2bkFMWmE3Y3JSeDBERnhraXdLY3BCQml1ajBxYXBKajZTTEZBRWQ4ZGZvQ0VaQ2RHTVhsTWxNdG1EY2JsTTF6UjdJMHBfS2UwOEc2VVRKUmtvS2lfVVFkem10eDRVbjAyWWJnR3djcVdmNm1McmduVnZhMU1lRFJPdXFqZnRWc21wUDNTSjJBVzFkdmJfX2c5U3B4aHA5SngyaUdISWM4bVNXaTlZMnZKNF9Na1hjYTRsUUwwQQ?oc=5",
      "categories": [
       "Right issue (dilusi)"
-     ],
-     "severity": "sedang"
-    }
-   ],
-   "MDKA": [
-    {
-     "date": "2026-11-23",
-     "title": "MDKA Cetak Laba USD157 Juta Saat Saham Anjlok",
-     "source": "Lensa Hukum",
-     "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5qQlYyanljY3pyWHk3ZmxpNzZONENhcm0zVy04SU9lVEhtVVZxQ191RVlLV3VoMmVsS2thMF9YWWYySktIcl9BSWZEUlBDX0xvV1dSUkdUdXoxQTVGaE1JN21TVQ?oc=5",
-     "categories": [
-      "Kinerja memburuk"
      ],
      "severity": "sedang"
     }
