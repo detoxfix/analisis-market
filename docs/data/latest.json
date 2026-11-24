@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24 08:09",
+ "generated_at": "2026-11-24 14:00",
  "as_of": "2026-11-23",
  "demo": false,
  "data_status": {
@@ -31,18 +31,12 @@
   }
  },
  "market": {
-  "bench": 5146.326172,
-  "bench_chg": -0.009206,
+  "bench": 5215.850098,
+  "bench_chg": 0.013509,
   "regime": "Bearish",
   "universe": 110,
   "scanned": 869,
   "series": [
-   [
-    "2026-05-13",
-    6723.32,
-    7357.37,
-    7995.55
-   ],
    [
     "2026-05-18",
     6599.24,
@@ -816,6 +810,12 @@
     5146.33,
     5667.43,
     6580.48
+   ],
+   [
+    "2026-11-23",
+    5215.85,
+    5641.05,
+    6561.6
    ]
   ],
   "above_sma50": false,
@@ -2419,7 +2419,28 @@
      "risks": [
       "IHSG di bawah EMA20 (pasar lemah)"
      ],
-     "news": null,
+     "news": [
+      {
+       "date": "2026-11-24",
+       "title": "BSI Raup Laba Rp 6,1 Triliun, Mirae Asset Ungkap Prospek Saham BRIS Usai Rights Issue",
+       "source": "TradingView",
+       "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8zdVg0YUd2dDllM2pvS0JzMU9GUGhFZDR2VUFMbEx0U19jU3A3Q19QVW1hYU1qeE1nX1dHbng1d2t3a3hoZ2JoTk5UTndaTVlHSEZtRkQ1S3RMLTRaRWdKSjhRcXNQcGM?oc=5",
+       "categories": [
+        "Right issue (dilusi)"
+       ],
+       "severity": "sedang"
+      },
+      {
+       "date": "2026-11-24",
+       "title": "BSI (BRIS) Bukukan Laba Rp 6,01 Triliun & Bersiap Right Issue, Simak Rekomendasinya",
+       "source": "TradingView",
+       "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFAxc1VQY1FOVkdsS0VseGZGcTNJR3Q1MTFia2E1c181TjFROWJPVTd3VExwTXhIdTRRYTIxTDU5TVJrT09Hc3FBY3ptckpSS05VVWJQUGlwNDNiZXBYWU1MM3JBR0J3RE0?oc=5",
+       "categories": [
+        "Right issue (dilusi)"
+       ],
+       "severity": "sedang"
+      }
+     ],
      "foreign_5d": 82485950000.0,
      "foreign_20d": 55995003000.0,
      "foreign_20d_pct": 0.022438,
@@ -2742,7 +2763,28 @@
      "risks": [
       "RSI 28 di zona momentum sehat"
      ],
-     "news": null,
+     "news": [
+      {
+       "date": "2026-11-17",
+       "title": "Saham MGLV Anjlok Usai Penggeledahan Kantor Megaspeed",
+       "source": "Limapagi",
+       "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE13T1ZpZVpSLXFSMjZINnpRNnhFQjFCUDJzNEhXdW9CZ0ZRNkp3RUJfUVNBSVd1M0doZDBRTWdNcXZmWFBvbmhNRUtiUlUxbjVIVHNmeFBjYWhDV1ZHY1FSQ3NHaEphcVVEc01wUGkxTzNHdnM?oc=5",
+       "categories": [
+        "Kasus hukum"
+       ],
+       "severity": "tinggi"
+      },
+      {
+       "date": "2026-11-17",
+       "title": "Terseret Sentimen Chip Nvidia, Saham MGLV Ambles 9,88% ke Bawah Harga Rights Issue",
+       "source": "InvestorTrust",
+       "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNTHgwZDdOaktxMHpjNHRXb1hjMzVZYmxHZ3BZSlBMOWlCSFI0X0RDN2hiYXZRWjdwNjdnNTQ0TEZKdm1fdl9UUXJhU0FIQ1NuZEF2YUprcmtoSS1hNGZZclFjU3VSbVh4UUZHaXBwVlA1NTJQcmRJMXNpSlVWdFdodXNWTGJIQ25iVi1idC1odU9sMFpsNS1QNXFhLU92T0EyUDB3dklsWk1abzFnUWdxZ0JxSGVQQ3hWeldn?oc=5",
+       "categories": [
+        "Right issue (dilusi)"
+       ],
+       "severity": "sedang"
+      }
+     ],
      "foreign_5d": 773580000.0,
      "foreign_20d": -3868560000.0,
      "foreign_20d_pct": -0.031239,
@@ -3588,18 +3630,7 @@
       "Histogram MACD negatif / melemah"
      ],
      "risks": [],
-     "news": [
-      {
-       "date": "2026-11-21",
-       "title": "Sengketa Lahan Awak Mas Tekan Saham Indika Energy",
-       "source": "www.suaralandak.co.id",
-       "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5WVExPZ2twQlUyZEJxVDA2U2k5MHpiSnhUcXd6N2g0cjFNV3l3U2NsMnd2eVdYeUthdGI2X3NMMUFpbVExWVFlTDRRXzRMa2tsQ0xPNk5NYnNIbGFNdnVGMU5iX0RWOXJ2V21QZUtpamFXYXhZWkE?oc=5",
-       "categories": [
-        "Gugatan"
-       ],
-       "severity": "sedang"
-      }
-     ],
+     "news": null,
      "foreign_5d": 689049000.0,
      "foreign_20d": 14786006000.0,
      "foreign_20d_pct": 0.019198,
@@ -4166,7 +4197,18 @@
       "IHSG di bawah EMA20 (pasar lemah)"
      ],
      "risks": [],
-     "news": null,
+     "news": [
+      {
+       "date": "2026-11-24",
+       "title": "ARCI RAUP LEDAKAN LABA 54,57 PERSEN",
+       "source": "Lotus Andalan Sekuritas",
+       "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB5by1LZ0ljNVJ3Rmk0a09pN3NPVjdJdUNmZ1VLRHhhN29MdkM1aXg3RmRDTXZVNFpVb2dpbVl2MVVzX2VvZ2ZSMFZvYVpyTnZMYlpxcVh2MzQ0YVFGSEcwb0licU9nbzFpeWsyWmM2WGVCTlF3bmFDS3pUbjBXZTA?oc=5",
+       "categories": [
+        "PHK / operasi terganggu"
+       ],
+       "severity": "sedang"
+      }
+     ],
      "foreign_5d": -18149755500.0,
      "foreign_20d": -76222867500.0,
      "foreign_20d_pct": -0.099497,
@@ -8942,7 +8984,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 24: tren naik kuat",
-      "Outperform IHSG +29.7% (3 bulan)"
+      "Outperform IHSG +28.6% (3 bulan)"
      ],
      "risks": [],
      "news": null,
@@ -9052,7 +9094,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "SMA50 > SMA100 & SMA50 menanjak (uptrend menengah)",
-      "Outperform IHSG +25.4% (3 bulan)"
+      "Outperform IHSG +24.4% (3 bulan)"
      ],
      "risks": [],
      "news": null,
@@ -9271,7 +9313,7 @@
      "atr_pct": 0.03671,
      "reasons": [
       "Harga di atas SMA50",
-      "Outperform IHSG +29.2% (3 bulan)",
+      "Outperform IHSG +28.2% (3 bulan)",
       "MACD di atas sinyal & di atas nol"
      ],
      "risks": [],
@@ -9381,7 +9423,7 @@
      "atr_pct": 0.028802,
      "reasons": [
       "Harga di atas SMA50",
-      "Outperform IHSG +29.3% (3 bulan)",
+      "Outperform IHSG +28.2% (3 bulan)",
       "MACD di atas sinyal & di atas nol"
      ],
      "risks": [],
@@ -9492,7 +9534,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 22: tren naik kuat",
-      "Outperform IHSG +20.5% (3 bulan)"
+      "Outperform IHSG +19.4% (3 bulan)"
      ],
      "risks": [
       "Struktur MA menengah melemah",
@@ -9604,7 +9646,7 @@
      "atr_pct": 0.03433,
      "reasons": [
       "Harga di atas SMA50",
-      "Outperform IHSG +19.9% (3 bulan)",
+      "Outperform IHSG +18.8% (3 bulan)",
       "MACD di atas sinyal & di atas nol"
      ],
      "risks": [
@@ -9717,7 +9759,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 28: tren naik kuat",
-      "Outperform IHSG +19.4% (3 bulan)"
+      "Outperform IHSG +18.4% (3 bulan)"
      ],
      "risks": [
       "Struktur MA menengah melemah",
@@ -9830,7 +9872,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 25: tren naik kuat",
-      "Outperform IHSG +18.9% (3 bulan)"
+      "Outperform IHSG +17.8% (3 bulan)"
      ],
      "risks": [
       "Struktur MA menengah melemah",
@@ -9943,7 +9985,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 20: tren naik kuat",
-      "Outperform IHSG +15.6% (3 bulan)"
+      "Outperform IHSG +14.5% (3 bulan)"
      ],
      "risks": [
       "Struktur MA menengah melemah",
@@ -10270,7 +10312,18 @@
       "ADX 24: tren turun kuat"
      ],
      "risks": [],
-     "news": null,
+     "news": [
+      {
+       "date": "2026-11-24",
+       "title": "ARCI RAUP LEDAKAN LABA 54,57 PERSEN",
+       "source": "Lotus Andalan Sekuritas",
+       "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB5by1LZ0ljNVJ3Rmk0a09pN3NPVjdJdUNmZ1VLRHhhN29MdkM1aXg3RmRDTXZVNFpVb2dpbVl2MVVzX2VvZ2ZSMFZvYVpyTnZMYlpxcVh2MzQ0YVFGSEcwb0licU9nbzFpeWsyWmM2WGVCTlF3bmFDS3pUbjBXZTA?oc=5",
+       "categories": [
+        "PHK / operasi terganggu"
+       ],
+       "severity": "sedang"
+      }
+     ],
      "foreign_5d": -18149755500.0,
      "foreign_20d": -76222867500.0,
      "foreign_20d_pct": -0.099497,
@@ -10346,111 +10399,6 @@
      ]
     },
     {
-     "ticker": "INDY.JK",
-     "code": "INDY",
-     "name": "PT. Indika Energy Tbk",
-     "sector": "Energy",
-     "horizon": "medium",
-     "price": 1580.0,
-     "chg_1d": 0.060403,
-     "mcap": 8232103360000.0,
-     "score": -100.0,
-     "signal": "STRONG SELL",
-     "confidence": 1.0,
-     "atr_pct": 0.078793,
-     "reasons": [
-      "Harga di bawah SMA50",
-      "Struktur MA menengah melemah",
-      "ADX 23: tren turun kuat"
-     ],
-     "risks": [],
-     "news": [
-      {
-       "date": "2026-11-21",
-       "title": "Sengketa Lahan Awak Mas Tekan Saham Indika Energy",
-       "source": "www.suaralandak.co.id",
-       "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5WVExPZ2twQlUyZEJxVDA2U2k5MHpiSnhUcXd6N2g0cjFNV3l3U2NsMnd2eVdYeUthdGI2X3NMMUFpbVExWVFlTDRRXzRMa2tsQ0xPNk5NYnNIbGFNdnVGMU5iX0RWOXJ2V21QZUtpamFXYXhZWkE?oc=5",
-       "categories": [
-        "Gugatan"
-       ],
-       "severity": "sedang"
-      }
-     ],
-     "foreign_5d": 689049000.0,
-     "foreign_20d": 14786006000.0,
-     "foreign_20d_pct": 0.019198,
-     "foreign_days": 20,
-     "foreign_last": "2026-11-20",
-     "action": "Jual seluruh posisi",
-     "sell_portion": 1.0,
-     "sell_zone_low": 1580.0,
-     "sell_zone_high": 1640.0,
-     "breakdown_level": 1470.0,
-     "when_sell": "Jual saat pantulan (rebound) ke area jual pada T+1/T+2; jangan menunggu. Jangan buka posisi beli baru selama sinyal SELL.",
-     "spark": [
-      2770.0,
-      2720.0,
-      2790.0,
-      2790.0,
-      2780.0,
-      2810.0,
-      3120.0,
-      2880.0,
-      2830.0,
-      2790.0,
-      2740.0,
-      2700.0,
-      2760.0,
-      2730.0,
-      2730.0,
-      2590.0,
-      2850.0,
-      2780.0,
-      2690.0,
-      2640.0,
-      2630.0,
-      2620.0,
-      2570.0,
-      2540.0,
-      2570.0,
-      2710.0,
-      2730.0,
-      2630.0,
-      2790.0,
-      2610.0,
-      2650.0,
-      2550.0,
-      2420.0,
-      2060.0,
-      1920.0,
-      2120.0,
-      2120.0,
-      2160.0,
-      2190.0,
-      2110.0,
-      2020.0,
-      1995.0,
-      1860.0,
-      1780.0,
-      1925.0,
-      1795.0,
-      1740.0,
-      1775.0,
-      1770.0,
-      1790.0,
-      1860.0,
-      1800.0,
-      1860.0,
-      1920.0,
-      1860.0,
-      1820.0,
-      1695.0,
-      1580.0,
-      1490.0,
-      1580.0
-     ]
-    },
-    {
      "ticker": "TKIM.JK",
      "code": "TKIM",
      "name": "PT Pabrik Kertas Tjiwi Kimia Tbk",
@@ -10459,9 +10407,9 @@
      "price": 5525.0,
      "chg_1d": -0.008969,
      "mcap": 17200560224250.0,
-     "score": -99.7,
+     "score": -100.0,
      "signal": "STRONG SELL",
-     "confidence": 0.997,
+     "confidence": 1.0,
      "atr_pct": 0.052953,
      "reasons": [
       "Harga di bawah SMA50",
@@ -10545,6 +10493,100 @@
      ]
     },
     {
+     "ticker": "INDY.JK",
+     "code": "INDY",
+     "name": "PT. Indika Energy Tbk",
+     "sector": "Energy",
+     "horizon": "medium",
+     "price": 1580.0,
+     "chg_1d": 0.060403,
+     "mcap": 8232103360000.0,
+     "score": -100.0,
+     "signal": "STRONG SELL",
+     "confidence": 1.0,
+     "atr_pct": 0.078793,
+     "reasons": [
+      "Harga di bawah SMA50",
+      "Struktur MA menengah melemah",
+      "ADX 23: tren turun kuat"
+     ],
+     "risks": [],
+     "news": null,
+     "foreign_5d": 689049000.0,
+     "foreign_20d": 14786006000.0,
+     "foreign_20d_pct": 0.019198,
+     "foreign_days": 20,
+     "foreign_last": "2026-11-20",
+     "action": "Jual seluruh posisi",
+     "sell_portion": 1.0,
+     "sell_zone_low": 1580.0,
+     "sell_zone_high": 1640.0,
+     "breakdown_level": 1470.0,
+     "when_sell": "Jual saat pantulan (rebound) ke area jual pada T+1/T+2; jangan menunggu. Jangan buka posisi beli baru selama sinyal SELL.",
+     "spark": [
+      2770.0,
+      2720.0,
+      2790.0,
+      2790.0,
+      2780.0,
+      2810.0,
+      3120.0,
+      2880.0,
+      2830.0,
+      2790.0,
+      2740.0,
+      2700.0,
+      2760.0,
+      2730.0,
+      2730.0,
+      2590.0,
+      2850.0,
+      2780.0,
+      2690.0,
+      2640.0,
+      2630.0,
+      2620.0,
+      2570.0,
+      2540.0,
+      2570.0,
+      2710.0,
+      2730.0,
+      2630.0,
+      2790.0,
+      2610.0,
+      2650.0,
+      2550.0,
+      2420.0,
+      2060.0,
+      1920.0,
+      2120.0,
+      2120.0,
+      2160.0,
+      2190.0,
+      2110.0,
+      2020.0,
+      1995.0,
+      1860.0,
+      1780.0,
+      1925.0,
+      1795.0,
+      1740.0,
+      1775.0,
+      1770.0,
+      1790.0,
+      1860.0,
+      1800.0,
+      1860.0,
+      1920.0,
+      1860.0,
+      1820.0,
+      1695.0,
+      1580.0,
+      1490.0,
+      1580.0
+     ]
+    },
+    {
      "ticker": "AMMN.JK",
      "code": "AMMN",
      "name": "PT Amman Mineral Internasional Tbk",
@@ -10553,9 +10595,9 @@
      "price": 3240.0,
      "chg_1d": 0.025316,
      "mcap": 234959025205440.0,
-     "score": -91.1,
+     "score": -92.7,
      "signal": "STRONG SELL",
-     "confidence": 0.911,
+     "confidence": 0.927,
      "atr_pct": 0.064854,
      "reasons": [
       "Harga di bawah SMA50",
@@ -10647,9 +10689,9 @@
      "price": 1070.0,
      "chg_1d": 0.019048,
      "mcap": 17762000000000.0,
-     "score": -88.7,
+     "score": -90.3,
      "signal": "STRONG SELL",
-     "confidence": 0.887,
+     "confidence": 0.903,
      "atr_pct": 0.059737,
      "reasons": [
       "Harga di bawah SMA50",
@@ -11691,7 +11733,28 @@
       "Momentum 3 bulan -48.1%"
      ],
      "risks": [],
-     "news": null,
+     "news": [
+      {
+       "date": "2026-11-17",
+       "title": "Saham MGLV Anjlok Usai Penggeledahan Kantor Megaspeed",
+       "source": "Limapagi",
+       "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE13T1ZpZVpSLXFSMjZINnpRNnhFQjFCUDJzNEhXdW9CZ0ZRNkp3RUJfUVNBSVd1M0doZDBRTWdNcXZmWFBvbmhNRUtiUlUxbjVIVHNmeFBjYWhDV1ZHY1FSQ3NHaEphcVVEc01wUGkxTzNHdnM?oc=5",
+       "categories": [
+        "Kasus hukum"
+       ],
+       "severity": "tinggi"
+      },
+      {
+       "date": "2026-11-17",
+       "title": "Terseret Sentimen Chip Nvidia, Saham MGLV Ambles 9,88% ke Bawah Harga Rights Issue",
+       "source": "InvestorTrust",
+       "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNTHgwZDdOaktxMHpjNHRXb1hjMzVZYmxHZ3BZSlBMOWlCSFI0X0RDN2hiYXZRWjdwNjdnNTQ0TEZKdm1fdl9UUXJhU0FIQ1NuZEF2YUprcmtoSS1hNGZZclFjU3VSbVh4UUZHaXBwVlA1NTJQcmRJMXNpSlVWdFdodXNWTGJIQ25iVi1idC1odU9sMFpsNS1QNXFhLU92T0EyUDB3dklsWk1abzFnUWdxZ0JxSGVQQ3hWeldn?oc=5",
+       "categories": [
+        "Right issue (dilusi)"
+       ],
+       "severity": "sedang"
+      }
+     ],
      "foreign_5d": 773580000.0,
      "foreign_20d": -3868560000.0,
      "foreign_20d_pct": -0.031239,
@@ -12057,9 +12120,9 @@
      "price": 294.0,
      "chg_1d": -0.013423,
      "mcap": 6431250000000.0,
-     "score": -83.3,
+     "score": -84.9,
      "signal": "STRONG SELL",
-     "confidence": 0.833,
+     "confidence": 0.849,
      "atr_pct": 0.051342,
      "reasons": [
       "Harga di bawah SMA50",
@@ -12151,9 +12214,9 @@
      "price": 462.0,
      "chg_1d": -0.008584,
      "mcap": 9781171005144.0,
-     "score": -81.7,
+     "score": -83.3,
      "signal": "STRONG SELL",
-     "confidence": 0.817,
+     "confidence": 0.833,
      "atr_pct": 0.037623,
      "reasons": [
       "Harga di bawah SMA50",
@@ -12245,9 +12308,9 @@
      "price": 6425.0,
      "chg_1d": -0.019084,
      "mcap": 35151065395925.0,
-     "score": -78.8,
+     "score": -80.4,
      "signal": "STRONG SELL",
-     "confidence": 0.788,
+     "confidence": 0.804,
      "atr_pct": 0.044892,
      "reasons": [
       "Harga di bawah SMA50",
@@ -12328,6 +12391,194 @@
       6625.0,
       6550.0,
       6425.0
+     ]
+    },
+    {
+     "ticker": "TINS.JK",
+     "code": "TINS",
+     "name": "PT TIMAH Tbk",
+     "sector": "Basic Materials",
+     "horizon": "medium",
+     "price": 3060.0,
+     "chg_1d": -0.025478,
+     "mcap": 22790125569240.0,
+     "score": -76.3,
+     "signal": "STRONG SELL",
+     "confidence": 0.763,
+     "atr_pct": 0.064571,
+     "reasons": [
+      "Harga di bawah SMA50",
+      "ADX 32: tren turun kuat",
+      "Momentum 3 bulan -24.3%"
+     ],
+     "risks": [],
+     "news": null,
+     "foreign_5d": -61839044000.0,
+     "foreign_20d": -279856568000.0,
+     "foreign_20d_pct": -0.08367,
+     "foreign_days": 20,
+     "foreign_last": "2026-11-20",
+     "action": "Jual seluruh posisi",
+     "sell_portion": 1.0,
+     "sell_zone_low": 3060.0,
+     "sell_zone_high": 3150.0,
+     "breakdown_level": 2970.0,
+     "when_sell": "Jual saat pantulan (rebound) ke area jual pada T+1/T+2; jangan menunggu. Jangan buka posisi beli baru selama sinyal SELL.",
+     "spark": [
+      4090.0,
+      4010.0,
+      4090.0,
+      4420.0,
+      4480.0,
+      4400.0,
+      4600.0,
+      4650.0,
+      4740.0,
+      4700.0,
+      4740.0,
+      4680.0,
+      4700.0,
+      4750.0,
+      4900.0,
+      4610.0,
+      4800.0,
+      4850.0,
+      4720.0,
+      4510.0,
+      4620.0,
+      4650.0,
+      4590.0,
+      4630.0,
+      4630.0,
+      4670.0,
+      4620.0,
+      4560.0,
+      4450.0,
+      4260.0,
+      4380.0,
+      4310.0,
+      4170.0,
+      3550.0,
+      3380.0,
+      3740.0,
+      3780.0,
+      3840.0,
+      3900.0,
+      3800.0,
+      3730.0,
+      3820.0,
+      3600.0,
+      3660.0,
+      3640.0,
+      3390.0,
+      3360.0,
+      3480.0,
+      3390.0,
+      3330.0,
+      3530.0,
+      3600.0,
+      3630.0,
+      3650.0,
+      3420.0,
+      3460.0,
+      3220.0,
+      3050.0,
+      3140.0,
+      3060.0
+     ]
+    },
+    {
+     "ticker": "CTRA.JK",
+     "code": "CTRA",
+     "name": "PT Ciputra Development Tbk",
+     "sector": "Real Estate",
+     "horizon": "medium",
+     "price": 488.0,
+     "chg_1d": -0.033663,
+     "mcap": 9045419284440.0,
+     "score": -75.5,
+     "signal": "STRONG SELL",
+     "confidence": 0.755,
+     "atr_pct": 0.04264,
+     "reasons": [
+      "Harga di bawah SMA50",
+      "Struktur MA menengah melemah",
+      "Momentum 3 bulan -23.8%"
+     ],
+     "risks": [],
+     "news": null,
+     "foreign_5d": 1146306000.0,
+     "foreign_20d": 21274867100.0,
+     "foreign_20d_pct": 0.131828,
+     "foreign_days": 20,
+     "foreign_last": "2026-11-20",
+     "action": "Jual seluruh posisi",
+     "sell_portion": 1.0,
+     "sell_zone_low": 488.0,
+     "sell_zone_high": 498.0,
+     "breakdown_level": 484.0,
+     "when_sell": "Jual saat pantulan (rebound) ke area jual pada T+1/T+2; jangan menunggu. Jangan buka posisi beli baru selama sinyal SELL.",
+     "spark": [
+      640.0,
+      625.0,
+      645.0,
+      635.0,
+      635.0,
+      630.0,
+      625.0,
+      620.0,
+      615.0,
+      615.0,
+      605.0,
+      600.0,
+      595.0,
+      570.0,
+      560.0,
+      565.0,
+      575.0,
+      565.0,
+      570.0,
+      555.0,
+      540.0,
+      530.0,
+      530.0,
+      535.0,
+      540.0,
+      540.0,
+      545.0,
+      540.0,
+      545.0,
+      540.0,
+      575.0,
+      585.0,
+      590.0,
+      540.0,
+      520.0,
+      545.0,
+      570.0,
+      575.0,
+      575.0,
+      575.0,
+      585.0,
+      580.0,
+      575.0,
+      570.0,
+      535.0,
+      498.0,
+      490.0,
+      494.0,
+      494.0,
+      498.0,
+      500.0,
+      498.0,
+      505.0,
+      520.0,
+      535.0,
+      520.0,
+      515.0,
+      515.0,
+      505.0,
+      488.0
      ]
     },
     {
@@ -13302,194 +13553,6 @@
      ]
     },
     {
-     "ticker": "TINS.JK",
-     "code": "TINS",
-     "name": "PT TIMAH Tbk",
-     "sector": "Basic Materials",
-     "horizon": "medium",
-     "price": 3060.0,
-     "chg_1d": -0.025478,
-     "mcap": 22790125569240.0,
-     "score": -74.7,
-     "signal": "STRONG SELL",
-     "confidence": 0.747,
-     "atr_pct": 0.064571,
-     "reasons": [
-      "Harga di bawah SMA50",
-      "ADX 32: tren turun kuat",
-      "Momentum 3 bulan -24.3%"
-     ],
-     "risks": [],
-     "news": null,
-     "foreign_5d": -61839044000.0,
-     "foreign_20d": -279856568000.0,
-     "foreign_20d_pct": -0.08367,
-     "foreign_days": 20,
-     "foreign_last": "2026-11-20",
-     "action": "Jual seluruh posisi",
-     "sell_portion": 1.0,
-     "sell_zone_low": 3060.0,
-     "sell_zone_high": 3150.0,
-     "breakdown_level": 2970.0,
-     "when_sell": "Jual saat pantulan (rebound) ke area jual pada T+1/T+2; jangan menunggu. Jangan buka posisi beli baru selama sinyal SELL.",
-     "spark": [
-      4090.0,
-      4010.0,
-      4090.0,
-      4420.0,
-      4480.0,
-      4400.0,
-      4600.0,
-      4650.0,
-      4740.0,
-      4700.0,
-      4740.0,
-      4680.0,
-      4700.0,
-      4750.0,
-      4900.0,
-      4610.0,
-      4800.0,
-      4850.0,
-      4720.0,
-      4510.0,
-      4620.0,
-      4650.0,
-      4590.0,
-      4630.0,
-      4630.0,
-      4670.0,
-      4620.0,
-      4560.0,
-      4450.0,
-      4260.0,
-      4380.0,
-      4310.0,
-      4170.0,
-      3550.0,
-      3380.0,
-      3740.0,
-      3780.0,
-      3840.0,
-      3900.0,
-      3800.0,
-      3730.0,
-      3820.0,
-      3600.0,
-      3660.0,
-      3640.0,
-      3390.0,
-      3360.0,
-      3480.0,
-      3390.0,
-      3330.0,
-      3530.0,
-      3600.0,
-      3630.0,
-      3650.0,
-      3420.0,
-      3460.0,
-      3220.0,
-      3050.0,
-      3140.0,
-      3060.0
-     ]
-    },
-    {
-     "ticker": "CTRA.JK",
-     "code": "CTRA",
-     "name": "PT Ciputra Development Tbk",
-     "sector": "Real Estate",
-     "horizon": "medium",
-     "price": 488.0,
-     "chg_1d": -0.033663,
-     "mcap": 9045419284440.0,
-     "score": -73.9,
-     "signal": "STRONG SELL",
-     "confidence": 0.739,
-     "atr_pct": 0.04264,
-     "reasons": [
-      "Harga di bawah SMA50",
-      "Struktur MA menengah melemah",
-      "Momentum 3 bulan -23.8%"
-     ],
-     "risks": [],
-     "news": null,
-     "foreign_5d": 1146306000.0,
-     "foreign_20d": 21274867100.0,
-     "foreign_20d_pct": 0.131828,
-     "foreign_days": 20,
-     "foreign_last": "2026-11-20",
-     "action": "Jual seluruh posisi",
-     "sell_portion": 1.0,
-     "sell_zone_low": 488.0,
-     "sell_zone_high": 498.0,
-     "breakdown_level": 484.0,
-     "when_sell": "Jual saat pantulan (rebound) ke area jual pada T+1/T+2; jangan menunggu. Jangan buka posisi beli baru selama sinyal SELL.",
-     "spark": [
-      640.0,
-      625.0,
-      645.0,
-      635.0,
-      635.0,
-      630.0,
-      625.0,
-      620.0,
-      615.0,
-      615.0,
-      605.0,
-      600.0,
-      595.0,
-      570.0,
-      560.0,
-      565.0,
-      575.0,
-      565.0,
-      570.0,
-      555.0,
-      540.0,
-      530.0,
-      530.0,
-      535.0,
-      540.0,
-      540.0,
-      545.0,
-      540.0,
-      545.0,
-      540.0,
-      575.0,
-      585.0,
-      590.0,
-      540.0,
-      520.0,
-      545.0,
-      570.0,
-      575.0,
-      575.0,
-      575.0,
-      585.0,
-      580.0,
-      575.0,
-      570.0,
-      535.0,
-      498.0,
-      490.0,
-      494.0,
-      494.0,
-      498.0,
-      500.0,
-      498.0,
-      505.0,
-      520.0,
-      535.0,
-      520.0,
-      515.0,
-      515.0,
-      505.0,
-      488.0
-     ]
-    },
-    {
      "ticker": "CPIN.JK",
      "code": "CPIN",
      "name": "PT Charoen Pokphand Indonesia Tbk",
@@ -13498,9 +13561,9 @@
      "price": 2290.0,
      "chg_1d": -0.008658,
      "mcap": 37551420000000.0,
-     "score": -73.0,
+     "score": -74.6,
      "signal": "STRONG SELL",
-     "confidence": 0.73,
+     "confidence": 0.746,
      "atr_pct": 0.042352,
      "reasons": [
       "Harga di bawah SMA50",
@@ -13592,9 +13655,9 @@
      "price": 660.0,
      "chg_1d": 0.0,
      "mcap": 8921946000000.0,
-     "score": -71.3,
+     "score": -72.9,
      "signal": "STRONG SELL",
-     "confidence": 0.713,
+     "confidence": 0.729,
      "atr_pct": 0.055684,
      "reasons": [
       "Harga di bawah SMA50",
@@ -13686,9 +13749,9 @@
      "price": 135.0,
      "chg_1d": 0.030534,
      "mcap": 8581234942800.0,
-     "score": -71.0,
+     "score": -72.6,
      "signal": "STRONG SELL",
-     "confidence": 0.71,
+     "confidence": 0.726,
      "atr_pct": 0.0515,
      "reasons": [
       "Harga di bawah SMA50",
@@ -13780,9 +13843,9 @@
      "price": 392.0,
      "chg_1d": 0.020833,
      "mcap": 10372320000000.0,
-     "score": -69.0,
+     "score": -70.0,
      "signal": "STRONG SELL",
-     "confidence": 0.69,
+     "confidence": 0.7,
      "atr_pct": 0.057405,
      "reasons": [
       "Harga di bawah SMA50",
@@ -13874,9 +13937,9 @@
      "price": 715.0,
      "chg_1d": -0.027211,
      "mcap": 45115499000000.0,
-     "score": -67.7,
+     "score": -69.3,
      "signal": "STRONG SELL",
-     "confidence": 0.677,
+     "confidence": 0.693,
      "atr_pct": 0.048292,
      "reasons": [
       "Harga di bawah SMA50",
@@ -13968,9 +14031,9 @@
      "price": 167.0,
      "chg_1d": -0.011834,
      "mcap": 5347686239931.0,
-     "score": -66.5,
+     "score": -68.1,
      "signal": "STRONG SELL",
-     "confidence": 0.665,
+     "confidence": 0.681,
      "atr_pct": 0.049426,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14062,9 +14125,9 @@
      "price": 2250.0,
      "chg_1d": -0.025974,
      "mcap": 20768996362500.0,
-     "score": -66.2,
+     "score": -67.8,
      "signal": "STRONG SELL",
-     "confidence": 0.662,
+     "confidence": 0.678,
      "atr_pct": 0.060583,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14145,6 +14208,102 @@
       2320.0,
       2310.0,
       2250.0
+     ]
+    },
+    {
+     "ticker": "MEDC.JK",
+     "code": "MEDC",
+     "name": "PT Medco Energi Internasional Tbk",
+     "sector": "Energy",
+     "horizon": "medium",
+     "price": 1165.0,
+     "chg_1d": 0.008658,
+     "mcap": 29283709408580.0,
+     "score": -65.5,
+     "signal": "STRONG SELL",
+     "confidence": 0.655,
+     "atr_pct": 0.05226,
+     "reasons": [
+      "Harga di bawah SMA50",
+      "ADX 31: tren turun kuat",
+      "Momentum 3 bulan -17.1%"
+     ],
+     "risks": [
+      "Outperform IHSG +3.0% (3 bulan)"
+     ],
+     "news": null,
+     "foreign_5d": 43432996000.0,
+     "foreign_20d": 106319227500.0,
+     "foreign_20d_pct": 0.082372,
+     "foreign_days": 20,
+     "foreign_last": "2026-11-20",
+     "action": "Jual seluruh posisi",
+     "sell_portion": 1.0,
+     "sell_zone_low": 1165.0,
+     "sell_zone_high": 1195.0,
+     "breakdown_level": 1125.0,
+     "when_sell": "Jual saat pantulan (rebound) ke area jual pada T+1/T+2; jangan menunggu. Jangan buka posisi beli baru selama sinyal SELL.",
+     "spark": [
+      1460.0,
+      1445.0,
+      1485.0,
+      1495.0,
+      1485.0,
+      1535.0,
+      1575.0,
+      1570.0,
+      1555.0,
+      1575.0,
+      1565.0,
+      1565.0,
+      1525.0,
+      1460.0,
+      1475.0,
+      1465.0,
+      1465.0,
+      1490.0,
+      1450.0,
+      1495.0,
+      1460.0,
+      1390.0,
+      1380.0,
+      1375.0,
+      1405.0,
+      1440.0,
+      1460.0,
+      1445.0,
+      1430.0,
+      1455.0,
+      1450.0,
+      1545.0,
+      1515.0,
+      1290.0,
+      1260.0,
+      1400.0,
+      1410.0,
+      1450.0,
+      1480.0,
+      1450.0,
+      1410.0,
+      1405.0,
+      1340.0,
+      1390.0,
+      1370.0,
+      1280.0,
+      1240.0,
+      1210.0,
+      1200.0,
+      1180.0,
+      1140.0,
+      1165.0,
+      1210.0,
+      1230.0,
+      1210.0,
+      1205.0,
+      1165.0,
+      1150.0,
+      1155.0,
+      1165.0
      ]
     },
     {
@@ -14244,102 +14403,6 @@
      ]
     },
     {
-     "ticker": "MEDC.JK",
-     "code": "MEDC",
-     "name": "PT Medco Energi Internasional Tbk",
-     "sector": "Energy",
-     "horizon": "medium",
-     "price": 1165.0,
-     "chg_1d": 0.008658,
-     "mcap": 29283709408580.0,
-     "score": -63.9,
-     "signal": "STRONG SELL",
-     "confidence": 0.639,
-     "atr_pct": 0.05226,
-     "reasons": [
-      "Harga di bawah SMA50",
-      "ADX 31: tren turun kuat",
-      "Momentum 3 bulan -17.1%"
-     ],
-     "risks": [
-      "Outperform IHSG +4.1% (3 bulan)"
-     ],
-     "news": null,
-     "foreign_5d": 43432996000.0,
-     "foreign_20d": 106319227500.0,
-     "foreign_20d_pct": 0.082372,
-     "foreign_days": 20,
-     "foreign_last": "2026-11-20",
-     "action": "Jual seluruh posisi",
-     "sell_portion": 1.0,
-     "sell_zone_low": 1165.0,
-     "sell_zone_high": 1195.0,
-     "breakdown_level": 1125.0,
-     "when_sell": "Jual saat pantulan (rebound) ke area jual pada T+1/T+2; jangan menunggu. Jangan buka posisi beli baru selama sinyal SELL.",
-     "spark": [
-      1460.0,
-      1445.0,
-      1485.0,
-      1495.0,
-      1485.0,
-      1535.0,
-      1575.0,
-      1570.0,
-      1555.0,
-      1575.0,
-      1565.0,
-      1565.0,
-      1525.0,
-      1460.0,
-      1475.0,
-      1465.0,
-      1465.0,
-      1490.0,
-      1450.0,
-      1495.0,
-      1460.0,
-      1390.0,
-      1380.0,
-      1375.0,
-      1405.0,
-      1440.0,
-      1460.0,
-      1445.0,
-      1430.0,
-      1455.0,
-      1450.0,
-      1545.0,
-      1515.0,
-      1290.0,
-      1260.0,
-      1400.0,
-      1410.0,
-      1450.0,
-      1480.0,
-      1450.0,
-      1410.0,
-      1405.0,
-      1340.0,
-      1390.0,
-      1370.0,
-      1280.0,
-      1240.0,
-      1210.0,
-      1200.0,
-      1180.0,
-      1140.0,
-      1165.0,
-      1210.0,
-      1230.0,
-      1210.0,
-      1205.0,
-      1165.0,
-      1150.0,
-      1155.0,
-      1165.0
-     ]
-    },
-    {
      "ticker": "PGEO.JK",
      "code": "PGEO",
      "name": "PT Pertamina Geothermal Energy Tbk",
@@ -14348,9 +14411,9 @@
      "price": 895.0,
      "chg_1d": 0.0,
      "mcap": 37549056954995.0,
-     "score": -62.1,
+     "score": -63.7,
      "signal": "STRONG SELL",
-     "confidence": 0.621,
+     "confidence": 0.637,
      "atr_pct": 0.042415,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14358,7 +14421,7 @@
       "ADX 26: tren turun kuat"
      ],
      "risks": [
-      "Outperform IHSG +7.6% (3 bulan)"
+      "Outperform IHSG +6.5% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": 667073000.0,
@@ -14444,9 +14507,9 @@
      "price": 1710.0,
      "chg_1d": -0.002915,
      "mcap": 33947843400000.0,
-     "score": -60.9,
+     "score": -62.5,
      "signal": "STRONG SELL",
-     "confidence": 0.609,
+     "confidence": 0.625,
      "atr_pct": 0.035567,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14454,7 +14517,7 @@
       "Momentum 3 bulan -15.1%"
      ],
      "risks": [
-      "Outperform IHSG +6.1% (3 bulan)"
+      "Outperform IHSG +5.0% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -4850606000.0,
@@ -14529,6 +14592,102 @@
       1750.0,
       1715.0,
       1710.0
+     ]
+    },
+    {
+     "ticker": "AKRA.JK",
+     "code": "AKRA",
+     "name": "PT AKR Corporindo Tbk",
+     "sector": "Energy",
+     "horizon": "medium",
+     "price": 1245.0,
+     "chg_1d": -0.042308,
+     "mcap": 24991475877000.0,
+     "score": -61.0,
+     "signal": "STRONG SELL",
+     "confidence": 0.61,
+     "atr_pct": 0.043682,
+     "reasons": [
+      "Harga di bawah SMA50",
+      "Struktur MA menengah melemah",
+      "MACD di bawah sinyal & di bawah nol"
+     ],
+     "risks": [
+      "Outperform IHSG +5.6% (3 bulan)"
+     ],
+     "news": null,
+     "foreign_5d": 4207806500.0,
+     "foreign_20d": -70263767500.0,
+     "foreign_20d_pct": -0.118764,
+     "foreign_days": 20,
+     "foreign_last": "2026-11-20",
+     "action": "Jual seluruh posisi",
+     "sell_portion": 1.0,
+     "sell_zone_low": 1245.0,
+     "sell_zone_high": 1270.0,
+     "breakdown_level": 1240.0,
+     "when_sell": "Jual saat pantulan (rebound) ke area jual pada T+1/T+2; jangan menunggu. Jangan buka posisi beli baru selama sinyal SELL.",
+     "spark": [
+      1400.0,
+      1395.0,
+      1400.0,
+      1385.0,
+      1450.0,
+      1525.0,
+      1550.0,
+      1520.0,
+      1520.0,
+      1510.0,
+      1490.0,
+      1475.0,
+      1470.0,
+      1470.0,
+      1455.0,
+      1450.0,
+      1460.0,
+      1490.0,
+      1465.0,
+      1460.0,
+      1435.0,
+      1450.0,
+      1450.0,
+      1460.0,
+      1500.0,
+      1520.0,
+      1500.0,
+      1450.0,
+      1485.0,
+      1470.0,
+      1475.0,
+      1480.0,
+      1470.0,
+      1250.0,
+      1165.0,
+      1210.0,
+      1295.0,
+      1320.0,
+      1390.0,
+      1400.0,
+      1435.0,
+      1405.0,
+      1400.0,
+      1375.0,
+      1355.0,
+      1320.0,
+      1300.0,
+      1310.0,
+      1370.0,
+      1340.0,
+      1275.0,
+      1270.0,
+      1270.0,
+      1280.0,
+      1260.0,
+      1260.0,
+      1255.0,
+      1295.0,
+      1300.0,
+      1245.0
      ]
     },
     {
@@ -14720,102 +14879,6 @@
      ]
     },
     {
-     "ticker": "AKRA.JK",
-     "code": "AKRA",
-     "name": "PT AKR Corporindo Tbk",
-     "sector": "Energy",
-     "horizon": "medium",
-     "price": 1245.0,
-     "chg_1d": -0.042308,
-     "mcap": 24991475877000.0,
-     "score": -59.4,
-     "signal": "SELL",
-     "confidence": 0.594,
-     "atr_pct": 0.043682,
-     "reasons": [
-      "Harga di bawah SMA50",
-      "Struktur MA menengah melemah",
-      "MACD di bawah sinyal & di bawah nol"
-     ],
-     "risks": [
-      "Outperform IHSG +6.7% (3 bulan)"
-     ],
-     "news": null,
-     "foreign_5d": 4207806500.0,
-     "foreign_20d": -70263767500.0,
-     "foreign_20d_pct": -0.118764,
-     "foreign_days": 20,
-     "foreign_last": "2026-11-20",
-     "action": "Kurangi 50% posisi",
-     "sell_portion": 0.5,
-     "sell_zone_low": 1245.0,
-     "sell_zone_high": 1270.0,
-     "breakdown_level": 1240.0,
-     "when_sell": "Kurangi saat pantulan ke area jual. Sisa posisi: cut loss bila close di bawah level breakdown. Jangan buka posisi beli baru selama sinyal SELL.",
-     "spark": [
-      1400.0,
-      1395.0,
-      1400.0,
-      1385.0,
-      1450.0,
-      1525.0,
-      1550.0,
-      1520.0,
-      1520.0,
-      1510.0,
-      1490.0,
-      1475.0,
-      1470.0,
-      1470.0,
-      1455.0,
-      1450.0,
-      1460.0,
-      1490.0,
-      1465.0,
-      1460.0,
-      1435.0,
-      1450.0,
-      1450.0,
-      1460.0,
-      1500.0,
-      1520.0,
-      1500.0,
-      1450.0,
-      1485.0,
-      1470.0,
-      1475.0,
-      1480.0,
-      1470.0,
-      1250.0,
-      1165.0,
-      1210.0,
-      1295.0,
-      1320.0,
-      1390.0,
-      1400.0,
-      1435.0,
-      1405.0,
-      1400.0,
-      1375.0,
-      1355.0,
-      1320.0,
-      1300.0,
-      1310.0,
-      1370.0,
-      1340.0,
-      1275.0,
-      1270.0,
-      1270.0,
-      1280.0,
-      1260.0,
-      1260.0,
-      1255.0,
-      1295.0,
-      1300.0,
-      1245.0
-     ]
-    },
-    {
      "ticker": "HMSP.JK",
      "code": "HMSP",
      "name": "PT Hanjaya Mandala Sampoerna Tbk",
@@ -14824,9 +14887,9 @@
      "price": 620.0,
      "chg_1d": -0.008,
      "mcap": 72117207678000.0,
-     "score": -52.6,
+     "score": -54.2,
      "signal": "SELL",
-     "confidence": 0.526,
+     "confidence": 0.542,
      "atr_pct": 0.032801,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14834,7 +14897,7 @@
       "Momentum 3 bulan -16.2%"
      ],
      "risks": [
-      "Outperform IHSG +4.9% (3 bulan)"
+      "Outperform IHSG +3.9% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -4075914000.0,
@@ -14920,9 +14983,9 @@
      "price": 1435.0,
      "chg_1d": 0.007018,
      "mcap": 19957235952500.0,
-     "score": -52.6,
+     "score": -54.2,
      "signal": "SELL",
-     "confidence": 0.526,
+     "confidence": 0.542,
      "atr_pct": 0.039509,
      "reasons": [
       "Harga di bawah SMA50",
@@ -15016,9 +15079,9 @@
      "price": 15800.0,
      "chg_1d": -0.010955,
      "mcap": 30400590400000.0,
-     "score": -49.4,
+     "score": -51.0,
      "signal": "SELL",
-     "confidence": 0.494,
+     "confidence": 0.51,
      "atr_pct": 0.037585,
      "reasons": [
       "Harga di bawah SMA50",
@@ -15110,9 +15173,9 @@
      "price": 2670.0,
      "chg_1d": 0.022989,
      "mcap": 64162141815750.0,
-     "score": -48.0,
+     "score": -49.6,
      "signal": "SELL",
-     "confidence": 0.48,
+     "confidence": 0.496,
      "atr_pct": 0.045658,
      "reasons": [
       "Harga di bawah SMA50",
@@ -15120,7 +15183,7 @@
       "ADX 26: tren turun kuat"
      ],
      "risks": [
-      "Outperform IHSG +7.3% (3 bulan)"
+      "Outperform IHSG +6.2% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -118369937000.0,
@@ -15206,9 +15269,9 @@
      "price": 2370.0,
      "chg_1d": 0.082192,
      "mcap": 317073341400000.0,
-     "score": -46.2,
+     "score": -47.8,
      "signal": "SELL",
-     "confidence": 0.462,
+     "confidence": 0.478,
      "atr_pct": 0.077328,
      "reasons": [
       "Harga di bawah SMA50",
@@ -15302,9 +15365,9 @@
      "price": 2040.0,
      "chg_1d": -0.014493,
      "mcap": 202086921864000.0,
-     "score": -45.6,
+     "score": -47.2,
      "signal": "SELL",
-     "confidence": 0.456,
+     "confidence": 0.472,
      "atr_pct": 0.045582,
      "reasons": [
       "Harga di bawah SMA50",
@@ -15396,9 +15459,9 @@
      "price": 510.0,
      "chg_1d": 0.028226,
      "mcap": 8785757607000.0,
-     "score": -45.6,
+     "score": -47.2,
      "signal": "SELL",
-     "confidence": 0.456,
+     "confidence": 0.472,
      "atr_pct": 0.050086,
      "reasons": [
       "Harga di bawah SMA50",
@@ -15482,6 +15545,102 @@
      ]
     },
     {
+     "ticker": "JSMR.JK",
+     "code": "JSMR",
+     "name": "PT Jasa Marga (Persero) Tbk",
+     "sector": "Industrials",
+     "horizon": "medium",
+     "price": 2600.0,
+     "chg_1d": 0.023622,
+     "mcap": 18870465120000.0,
+     "score": -45.3,
+     "signal": "SELL",
+     "confidence": 0.453,
+     "atr_pct": 0.037142,
+     "reasons": [
+      "Harga di bawah SMA50",
+      "Struktur MA menengah melemah",
+      "MACD di bawah sinyal & di bawah nol"
+     ],
+     "risks": [
+      "Outperform IHSG +7.9% (3 bulan)"
+     ],
+     "news": null,
+     "foreign_5d": -16284560000.0,
+     "foreign_20d": -24484564000.0,
+     "foreign_20d_pct": -0.067933,
+     "foreign_days": 20,
+     "foreign_last": "2026-11-20",
+     "action": "Kurangi 50% posisi",
+     "sell_portion": 0.5,
+     "sell_zone_low": 2600.0,
+     "sell_zone_high": 2640.0,
+     "breakdown_level": 2530.0,
+     "when_sell": "Kurangi saat pantulan ke area jual. Sisa posisi: cut loss bila close di bawah level breakdown. Jangan buka posisi beli baru selama sinyal SELL.",
+     "spark": [
+      2970.0,
+      2970.0,
+      3040.0,
+      2990.0,
+      2960.0,
+      3010.0,
+      3010.0,
+      2990.0,
+      2950.0,
+      2920.0,
+      2870.0,
+      2840.0,
+      2850.0,
+      2880.0,
+      2800.0,
+      2770.0,
+      2800.0,
+      2730.0,
+      2720.0,
+      2690.0,
+      2660.0,
+      2610.0,
+      2570.0,
+      2540.0,
+      2600.0,
+      2640.0,
+      2620.0,
+      2620.0,
+      2640.0,
+      2540.0,
+      2510.0,
+      2510.0,
+      2480.0,
+      2110.0,
+      2060.0,
+      2200.0,
+      2350.0,
+      2470.0,
+      2660.0,
+      2700.0,
+      2850.0,
+      2880.0,
+      2750.0,
+      2820.0,
+      2850.0,
+      2780.0,
+      2750.0,
+      2750.0,
+      2770.0,
+      2790.0,
+      2770.0,
+      2800.0,
+      2750.0,
+      2720.0,
+      2660.0,
+      2700.0,
+      2640.0,
+      2560.0,
+      2540.0,
+      2600.0
+     ]
+    },
+    {
      "ticker": "PACK.JK",
      "code": "PACK",
      "name": "PT Abadi Nusantara Hijau Investama Tbk",
@@ -15497,7 +15656,7 @@
      "reasons": [
       "Harga di bawah SMA50",
       "Momentum 3 bulan -39.3%",
-      "Underperform IHSG -18.2% (3 bulan)"
+      "Underperform IHSG -19.2% (3 bulan)"
      ],
      "risks": [],
      "news": null,
@@ -15768,102 +15927,6 @@
      ]
     },
     {
-     "ticker": "JSMR.JK",
-     "code": "JSMR",
-     "name": "PT Jasa Marga (Persero) Tbk",
-     "sector": "Industrials",
-     "horizon": "medium",
-     "price": 2600.0,
-     "chg_1d": 0.023622,
-     "mcap": 18870465120000.0,
-     "score": -43.7,
-     "signal": "SELL",
-     "confidence": 0.437,
-     "atr_pct": 0.037142,
-     "reasons": [
-      "Harga di bawah SMA50",
-      "Struktur MA menengah melemah",
-      "MACD di bawah sinyal & di bawah nol"
-     ],
-     "risks": [
-      "Outperform IHSG +9.0% (3 bulan)"
-     ],
-     "news": null,
-     "foreign_5d": -16284560000.0,
-     "foreign_20d": -24484564000.0,
-     "foreign_20d_pct": -0.067933,
-     "foreign_days": 20,
-     "foreign_last": "2026-11-20",
-     "action": "Kurangi 50% posisi",
-     "sell_portion": 0.5,
-     "sell_zone_low": 2600.0,
-     "sell_zone_high": 2640.0,
-     "breakdown_level": 2530.0,
-     "when_sell": "Kurangi saat pantulan ke area jual. Sisa posisi: cut loss bila close di bawah level breakdown. Jangan buka posisi beli baru selama sinyal SELL.",
-     "spark": [
-      2970.0,
-      2970.0,
-      3040.0,
-      2990.0,
-      2960.0,
-      3010.0,
-      3010.0,
-      2990.0,
-      2950.0,
-      2920.0,
-      2870.0,
-      2840.0,
-      2850.0,
-      2880.0,
-      2800.0,
-      2770.0,
-      2800.0,
-      2730.0,
-      2720.0,
-      2690.0,
-      2660.0,
-      2610.0,
-      2570.0,
-      2540.0,
-      2600.0,
-      2640.0,
-      2620.0,
-      2620.0,
-      2640.0,
-      2540.0,
-      2510.0,
-      2510.0,
-      2480.0,
-      2110.0,
-      2060.0,
-      2200.0,
-      2350.0,
-      2470.0,
-      2660.0,
-      2700.0,
-      2850.0,
-      2880.0,
-      2750.0,
-      2820.0,
-      2850.0,
-      2780.0,
-      2750.0,
-      2750.0,
-      2770.0,
-      2790.0,
-      2770.0,
-      2800.0,
-      2750.0,
-      2720.0,
-      2660.0,
-      2700.0,
-      2640.0,
-      2560.0,
-      2540.0,
-      2600.0
-     ]
-    },
-    {
      "ticker": "ADRO.JK",
      "code": "ADRO",
      "name": "PT Alamtri Resources Indonesia Tbk",
@@ -15872,9 +15935,9 @@
      "price": 2330.0,
      "chg_1d": 0.00431,
      "mcap": 67105151486000.0,
-     "score": -40.2,
+     "score": -41.8,
      "signal": "SELL",
-     "confidence": 0.402,
+     "confidence": 0.418,
      "atr_pct": 0.036074,
      "reasons": [
       "Harga di bawah SMA50",
@@ -15882,7 +15945,7 @@
       "Momentum 3 bulan -18.0%"
      ],
      "risks": [
-      "Outperform IHSG +3.2% (3 bulan)"
+      "Outperform IHSG +2.1% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -72382412000.0,
@@ -15960,6 +16023,102 @@
      ]
     },
     {
+     "ticker": "AUTO.JK",
+     "code": "AUTO",
+     "name": "PT Astra Otoparts Tbk",
+     "sector": "Consumer Cyclical",
+     "horizon": "medium",
+     "price": 2950.0,
+     "chg_1d": 0.003401,
+     "mcap": 14218212350000.0,
+     "score": -40.2,
+     "signal": "SELL",
+     "confidence": 0.402,
+     "atr_pct": 0.034492,
+     "reasons": [
+      "Harga di bawah SMA50",
+      "MACD di bawah sinyal & di bawah nol",
+      "Momentum 3 bulan -12.1%"
+     ],
+     "risks": [
+      "Outperform IHSG +7.9% (3 bulan)"
+     ],
+     "news": null,
+     "foreign_5d": -10519554000.0,
+     "foreign_20d": -26591016000.0,
+     "foreign_20d_pct": -0.242977,
+     "foreign_days": 20,
+     "foreign_last": "2026-11-20",
+     "action": "Kurangi 50% posisi",
+     "sell_portion": 0.5,
+     "sell_zone_low": 2950.0,
+     "sell_zone_high": 3000.0,
+     "breakdown_level": 2910.0,
+     "when_sell": "Kurangi saat pantulan ke area jual. Sisa posisi: cut loss bila close di bawah level breakdown. Jangan buka posisi beli baru selama sinyal SELL.",
+     "spark": [
+      3317.91,
+      3317.91,
+      3317.91,
+      3259.18,
+      3268.97,
+      3288.54,
+      3249.39,
+      3249.39,
+      3229.82,
+      3249.39,
+      3288.54,
+      3259.18,
+      3249.39,
+      3288.54,
+      3298.33,
+      3288.54,
+      3317.91,
+      3268.97,
+      3308.12,
+      3229.82,
+      3229.82,
+      3268.97,
+      3229.82,
+      3298.33,
+      3376.63,
+      3317.91,
+      3366.84,
+      3278.76,
+      3298.33,
+      3308.12,
+      3337.48,
+      3380.0,
+      3340.0,
+      3110.0,
+      3140.0,
+      3250.0,
+      3330.0,
+      3280.0,
+      3280.0,
+      3320.0,
+      3340.0,
+      3350.0,
+      3290.0,
+      3280.0,
+      3280.0,
+      3210.0,
+      3260.0,
+      3230.0,
+      3220.0,
+      3290.0,
+      3340.0,
+      3220.0,
+      3120.0,
+      3110.0,
+      3240.0,
+      3140.0,
+      3170.0,
+      3040.0,
+      2940.0,
+      2950.0
+     ]
+    },
+    {
      "ticker": "SMDR.JK",
      "code": "SMDR",
      "name": "PT Samudera Indonesia Tbk",
@@ -15978,7 +16137,7 @@
       "MACD di bawah sinyal & di bawah nol"
      ],
      "risks": [
-      "Outperform IHSG +21.8% (3 bulan)",
+      "Outperform IHSG +20.7% (3 bulan)",
       "Momentum 3 bulan +0.6%"
      ],
      "news": null,
@@ -16057,102 +16216,6 @@
      ]
     },
     {
-     "ticker": "AUTO.JK",
-     "code": "AUTO",
-     "name": "PT Astra Otoparts Tbk",
-     "sector": "Consumer Cyclical",
-     "horizon": "medium",
-     "price": 2950.0,
-     "chg_1d": 0.003401,
-     "mcap": 14218212350000.0,
-     "score": -38.6,
-     "signal": "SELL",
-     "confidence": 0.386,
-     "atr_pct": 0.034492,
-     "reasons": [
-      "Harga di bawah SMA50",
-      "MACD di bawah sinyal & di bawah nol",
-      "Momentum 3 bulan -12.1%"
-     ],
-     "risks": [
-      "Outperform IHSG +9.0% (3 bulan)"
-     ],
-     "news": null,
-     "foreign_5d": -10519554000.0,
-     "foreign_20d": -26591016000.0,
-     "foreign_20d_pct": -0.242977,
-     "foreign_days": 20,
-     "foreign_last": "2026-11-20",
-     "action": "Kurangi 50% posisi",
-     "sell_portion": 0.5,
-     "sell_zone_low": 2950.0,
-     "sell_zone_high": 3000.0,
-     "breakdown_level": 2910.0,
-     "when_sell": "Kurangi saat pantulan ke area jual. Sisa posisi: cut loss bila close di bawah level breakdown. Jangan buka posisi beli baru selama sinyal SELL.",
-     "spark": [
-      3317.91,
-      3317.91,
-      3317.91,
-      3259.18,
-      3268.97,
-      3288.54,
-      3249.39,
-      3249.39,
-      3229.82,
-      3249.39,
-      3288.54,
-      3259.18,
-      3249.39,
-      3288.54,
-      3298.33,
-      3288.54,
-      3317.91,
-      3268.97,
-      3308.12,
-      3229.82,
-      3229.82,
-      3268.97,
-      3229.82,
-      3298.33,
-      3376.63,
-      3317.91,
-      3366.84,
-      3278.76,
-      3298.33,
-      3308.12,
-      3337.48,
-      3380.0,
-      3340.0,
-      3110.0,
-      3140.0,
-      3250.0,
-      3330.0,
-      3280.0,
-      3280.0,
-      3320.0,
-      3340.0,
-      3350.0,
-      3290.0,
-      3280.0,
-      3280.0,
-      3210.0,
-      3260.0,
-      3230.0,
-      3220.0,
-      3290.0,
-      3340.0,
-      3220.0,
-      3120.0,
-      3110.0,
-      3240.0,
-      3140.0,
-      3170.0,
-      3040.0,
-      2940.0,
-      2950.0
-     ]
-    },
-    {
      "ticker": "TOWR.JK",
      "code": "TOWR",
      "name": "PT Sarana Menara Nusantara Tbk.",
@@ -16161,9 +16224,9 @@
      "price": 380.0,
      "chg_1d": -0.005236,
      "mcap": 22457279417780.0,
-     "score": -37.7,
+     "score": -39.3,
      "signal": "SELL",
-     "confidence": 0.377,
+     "confidence": 0.393,
      "atr_pct": 0.047694,
      "reasons": [
       "Harga di bawah SMA50",
@@ -16171,7 +16234,7 @@
       "Momentum 3 bulan -16.3%"
      ],
      "risks": [
-      "Outperform IHSG +4.8% (3 bulan)"
+      "Outperform IHSG +3.8% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": 694017000.0,
@@ -16257,9 +16320,9 @@
      "price": 785.0,
      "chg_1d": 0.019481,
      "mcap": 11805916141700.0,
-     "score": -36.7,
+     "score": -38.3,
      "signal": "SELL",
-     "confidence": 0.367,
+     "confidence": 0.383,
      "atr_pct": 0.048133,
      "reasons": [
       "Harga di bawah SMA50",
@@ -16267,7 +16330,7 @@
       "Momentum 3 bulan -15.6%"
      ],
      "risks": [
-      "Outperform IHSG +5.5% (3 bulan)"
+      "Outperform IHSG +4.5% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -1997903500.0,
@@ -16366,7 +16429,28 @@
       "ADX 24: tren naik kuat",
       "RSI 51 di rezim bullish"
      ],
-     "news": null,
+     "news": [
+      {
+       "date": "2026-11-24",
+       "title": "BSI Raup Laba Rp 6,1 Triliun, Mirae Asset Ungkap Prospek Saham BRIS Usai Rights Issue",
+       "source": "TradingView",
+       "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8zdVg0YUd2dDllM2pvS0JzMU9GUGhFZDR2VUFMbEx0U19jU3A3Q19QVW1hYU1qeE1nX1dHbng1d2t3a3hoZ2JoTk5UTndaTVlHSEZtRkQ1S3RMLTRaRWdKSjhRcXNQcGM?oc=5",
+       "categories": [
+        "Right issue (dilusi)"
+       ],
+       "severity": "sedang"
+      },
+      {
+       "date": "2026-11-24",
+       "title": "BSI (BRIS) Bukukan Laba Rp 6,01 Triliun & Bersiap Right Issue, Simak Rekomendasinya",
+       "source": "TradingView",
+       "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFAxc1VQY1FOVkdsS0VseGZGcTNJR3Q1MTFia2E1c181TjFROWJPVTd3VExwTXhIdTRRYTIxTDU5TVJrT09Hc3FBY3ptckpSS05VVWJQUGlwNDNiZXBYWU1MM3JBR0J3RE0?oc=5",
+       "categories": [
+        "Right issue (dilusi)"
+       ],
+       "severity": "sedang"
+      }
+     ],
      "foreign_5d": 82485950000.0,
      "foreign_20d": 55995003000.0,
      "foreign_20d_pct": 0.022438,
@@ -16466,9 +16550,19 @@
      "news": [
       {
        "date": "2026-11-18",
+       "title": "Gelar RUPSLB 8 Desember 2026, MBMA Masih Cari Investor Private Placement",
+       "source": "KONTAN",
+       "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQQ1FoTHVCZUpBZVg3dkhETU5nUzRaVWIwMk9NcW02YW96a3hKRG1kU1RwZ0RWOUpFbnBzcnhyNllzTjA1Unp5WGZ3d1NSTE5iNktfNnNRUkIySlBUSEFRWnJ6QUpwMEw2eHM4MnRNcG45d0NidXQyYkFIaFlyWHpvXzN5TzJxX3BTQ1E2Z0tmejVPbnE3Y2pBVWptQ1gxT1YxSnZ0eWNBSDE?oc=5",
+       "categories": [
+        "Private placement (dilusi)"
+       ],
+       "severity": "sedang"
+      },
+      {
+       "date": "2026-11-18",
        "title": "Buru Izin Investor, MBMA Private Placement 10,79 Miliar Saham",
-       "source": "Emitennews.com",
-       "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPVFd1dkdOdzFaeGdSckhNR01jZjR3M2dib3o2RTFmWlBiNmwybW9zdTdydThhcnRLN3J1NWE1M3RlNFlZRU1YbEg1aklkYl9hOGRuLW5JM1JNaGRJbzBJbnI1X2F2dmE1LUZMbTJvMlJMcXZ0MW1HS05rcy16b19xMFJRY0lNUXdpLVNwaE1FMEw?oc=5",
+       "source": "Lotus Andalan Sekuritas",
+       "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQN0QtVHpoNk5mYlFZNzk5WDdZNFZqMnZnNkd3QlNsU1NxV2pfRUtqY1ZVWmN2SGtLVm5sc1NBSlNUdWFydzQtclhTdWJVZUxZaVcxcHJMQ2dtc1RYQ0VORjhHUHptUWltYVByMF9ZU1NXeElVN0xIblh4TklBa192VDRRNnRhRFBkSFhUNUNXT2lNWlhNVVkwQUJuOVF0cFFNdUE?oc=5",
        "categories": [
         "Private placement (dilusi)"
        ],
@@ -16568,7 +16662,7 @@
       "RSI 39 di rezim bearish / jenuh beli"
      ],
      "risks": [
-      "Outperform IHSG +12.1% (3 bulan)"
+      "Outperform IHSG +11.1% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -34393565000.0,
@@ -16664,7 +16758,7 @@
       "MACD di bawah sinyal & di bawah nol"
      ],
      "risks": [
-      "Outperform IHSG +18.4% (3 bulan)"
+      "Outperform IHSG +17.3% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -74793227500.0,
@@ -16739,6 +16833,102 @@
       24000.0,
       23900.0,
       23100.0
+     ]
+    },
+    {
+     "ticker": "CMRY.JK",
+     "code": "CMRY",
+     "name": "PT Cisarua Mountain Dairy Tbk",
+     "sector": "Consumer Defensive",
+     "horizon": "medium",
+     "price": 4150.0,
+     "chg_1d": 0.0,
+     "mcap": 32928934450000.0,
+     "score": -30.6,
+     "signal": "SELL",
+     "confidence": 0.306,
+     "atr_pct": 0.03579,
+     "reasons": [
+      "Harga di bawah SMA50",
+      "Struktur MA menengah melemah",
+      "Momentum 3 bulan -12.3%"
+     ],
+     "risks": [
+      "Outperform IHSG +7.8% (3 bulan)"
+     ],
+     "news": null,
+     "foreign_5d": 8695499000.0,
+     "foreign_20d": 5065426000.0,
+     "foreign_20d_pct": 0.03018,
+     "foreign_days": 20,
+     "foreign_last": "2026-11-20",
+     "action": "Kurangi 50% posisi",
+     "sell_portion": 0.5,
+     "sell_zone_low": 4150.0,
+     "sell_zone_high": 4220.0,
+     "breakdown_level": 4060.0,
+     "when_sell": "Kurangi saat pantulan ke area jual. Sisa posisi: cut loss bila close di bawah level breakdown. Jangan buka posisi beli baru selama sinyal SELL.",
+     "spark": [
+      4730.0,
+      4602.69,
+      4730.0,
+      4570.0,
+      4590.0,
+      4650.0,
+      4500.0,
+      4450.0,
+      4410.0,
+      4460.0,
+      4550.0,
+      4480.0,
+      4470.0,
+      4500.0,
+      4460.0,
+      4480.0,
+      4550.0,
+      4450.0,
+      4370.0,
+      4370.0,
+      4330.0,
+      4350.0,
+      4340.0,
+      4380.0,
+      4430.0,
+      4420.0,
+      4470.0,
+      4430.0,
+      4440.0,
+      4500.0,
+      4480.0,
+      4510.0,
+      4610.0,
+      4250.0,
+      3960.0,
+      4150.0,
+      4250.0,
+      4210.0,
+      4140.0,
+      4140.0,
+      4060.0,
+      4150.0,
+      4250.0,
+      4220.0,
+      4120.0,
+      4110.0,
+      4060.0,
+      4330.0,
+      4250.0,
+      4140.0,
+      4170.0,
+      4190.0,
+      4220.0,
+      4290.0,
+      4400.0,
+      4390.0,
+      4290.0,
+      4240.0,
+      4150.0,
+      4150.0
      ]
     }
    ]
@@ -21107,9 +21297,19 @@
      "news": [
       {
        "date": "2026-11-18",
+       "title": "Gelar RUPSLB 8 Desember 2026, MBMA Masih Cari Investor Private Placement",
+       "source": "KONTAN",
+       "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQQ1FoTHVCZUpBZVg3dkhETU5nUzRaVWIwMk9NcW02YW96a3hKRG1kU1RwZ0RWOUpFbnBzcnhyNllzTjA1Unp5WGZ3d1NSTE5iNktfNnNRUkIySlBUSEFRWnJ6QUpwMEw2eHM4MnRNcG45d0NidXQyYkFIaFlyWHpvXzN5TzJxX3BTQ1E2Z0tmejVPbnE3Y2pBVWptQ1gxT1YxSnZ0eWNBSDE?oc=5",
+       "categories": [
+        "Private placement (dilusi)"
+       ],
+       "severity": "sedang"
+      },
+      {
+       "date": "2026-11-18",
        "title": "Buru Izin Investor, MBMA Private Placement 10,79 Miliar Saham",
-       "source": "Emitennews.com",
-       "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPVFd1dkdOdzFaeGdSckhNR01jZjR3M2dib3o2RTFmWlBiNmwybW9zdTdydThhcnRLN3J1NWE1M3RlNFlZRU1YbEg1aklkYl9hOGRuLW5JM1JNaGRJbzBJbnI1X2F2dmE1LUZMbTJvMlJMcXZ0MW1HS05rcy16b19xMFJRY0lNUXdpLVNwaE1FMEw?oc=5",
+       "source": "Lotus Andalan Sekuritas",
+       "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQN0QtVHpoNk5mYlFZNzk5WDdZNFZqMnZnNkd3QlNsU1NxV2pfRUtqY1ZVWmN2SGtLVm5sc1NBSlNUdWFydzQtclhTdWJVZUxZaVcxcHJMQ2dtc1RYQ0VORjhHUHptUWltYVByMF9ZU1NXeElVN0xIblh4TklBa192VDRRNnRhRFBkSFhUNUNXT2lNWlhNVVkwQUJuOVF0cFFNdUE?oc=5",
        "categories": [
         "Private placement (dilusi)"
        ],
@@ -21406,18 +21606,7 @@
       "Momentum 12 bulan +16%",
       "DER 0.93x (utang rendah)"
      ],
-     "news": [
-      {
-       "date": "2026-11-21",
-       "title": "Sengketa Lahan Awak Mas Tekan Saham Indika Energy",
-       "source": "www.suaralandak.co.id",
-       "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5WVExPZ2twQlUyZEJxVDA2U2k5MHpiSnhUcXd6N2g0cjFNV3l3U2NsMnd2eVdYeUthdGI2X3NMMUFpbVExWVFlTDRRXzRMa2tsQ0xPNk5NYnNIbGFNdnVGMU5iX0RWOXJ2V21QZUtpamFXYXhZWkE?oc=5",
-       "categories": [
-        "Gugatan"
-       ],
-       "severity": "sedang"
-      }
-     ],
+     "news": null,
      "foreign_5d": 689049000.0,
      "foreign_20d": 14786006000.0,
      "foreign_20d_pct": 0.019198,
@@ -22028,7 +22217,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": 40.8,
+    "score": 39.2,
     "signal": "BUY"
    },
    "long": {
@@ -22124,7 +22313,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": -46.2,
+    "score": -47.8,
     "signal": "SELL"
    },
    "long": {
@@ -22188,7 +22377,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -91.1,
+    "score": -92.7,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -22252,7 +22441,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -45.6,
+    "score": -47.2,
     "signal": "SELL"
    },
    "long": {
@@ -22476,7 +22665,7 @@
     "signal": "STRONG SELL"
    },
    "medium": {
-    "score": -52.6,
+    "score": -54.2,
     "signal": "SELL"
    },
    "long": {
@@ -22572,7 +22761,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -40.2,
+    "score": -41.8,
     "signal": "SELL"
    },
    "long": {
@@ -22636,7 +22825,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -48.0,
+    "score": -49.6,
     "signal": "SELL"
    },
    "long": {
@@ -22700,7 +22889,7 @@
     "signal": "HOLD"
    },
    "medium": {
-    "score": -3.9,
+    "score": -5.5,
     "signal": "HOLD"
    },
    "long": {
@@ -22721,7 +22910,28 @@
    "pb": 1.061936,
    "roe": 0.16148,
    "div_yield": 0.0271,
-   "news": null,
+   "news": [
+    {
+     "date": "2026-11-24",
+     "title": "BSI Raup Laba Rp 6,1 Triliun, Mirae Asset Ungkap Prospek Saham BRIS Usai Rights Issue",
+     "source": "TradingView",
+     "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8zdVg0YUd2dDllM2pvS0JzMU9GUGhFZDR2VUFMbEx0U19jU3A3Q19QVW1hYU1qeE1nX1dHbng1d2t3a3hoZ2JoTk5UTndaTVlHSEZtRkQ1S3RMLTRaRWdKSjhRcXNQcGM?oc=5",
+     "categories": [
+      "Right issue (dilusi)"
+     ],
+     "severity": "sedang"
+    },
+    {
+     "date": "2026-11-24",
+     "title": "BSI (BRIS) Bukukan Laba Rp 6,01 Triliun & Bersiap Right Issue, Simak Rekomendasinya",
+     "source": "TradingView",
+     "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFAxc1VQY1FOVkdsS0VseGZGcTNJR3Q1MTFia2E1c181TjFROWJPVTd3VExwTXhIdTRRYTIxTDU5TVJrT09Hc3FBY3ptckpSS05VVWJQUGlwNDNiZXBYWU1MM3JBR0J3RE0?oc=5",
+     "categories": [
+      "Right issue (dilusi)"
+     ],
+     "severity": "sedang"
+    }
+   ],
    "foreign_5d": 82485950000.0,
    "foreign_20d": 55995003000.0,
    "foreign_20d_pct": 0.022438,
@@ -22860,7 +23070,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": -12.7,
+    "score": -14.3,
     "signal": "HOLD"
    },
    "long": {
@@ -22892,7 +23102,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -67.7,
+    "score": -69.3,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23105,7 +23315,18 @@
    "pb": 0.679261,
    "roe": 0.10725,
    "div_yield": 0.1044,
-   "news": null,
+   "news": [
+    {
+     "date": "2026-11-20",
+     "title": "Free Float Kurang, Induk CIMB Niaga Pertimbangkan Opsi Delisting BNGA",
+     "source": "Emitennews.com",
+     "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSkJ6UzRHQi1PZk5FQ29Uc3JkTXdUa0RXSzlOM0hUUmF6aDhhUjg1VW9lR2RVdHV5OW12MUhOZEd5cjhUa29nNXR3WXFaT2JGWnFITGpuRjVub0NNcmNvb2UxUUluTzBoQWs1VWdhWFIwdFVINTVmOGVYQndGUVh6eDc2ZUpSVTV3cUhjbkFQNkViUHFQNl9ncm9sX3U?oc=5",
+     "categories": [
+      "Suspensi / delisting"
+     ],
+     "severity": "tinggi"
+    }
+   ],
    "foreign_5d": -2163355500.0,
    "foreign_20d": -21881579500.0,
    "foreign_20d_pct": -0.118619,
@@ -23140,9 +23361,19 @@
    "news": [
     {
      "date": "2026-11-18",
+     "title": "Gelar RUPSLB 8 Desember 2026, MBMA Masih Cari Investor Private Placement",
+     "source": "KONTAN",
+     "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQQ1FoTHVCZUpBZVg3dkhETU5nUzRaVWIwMk9NcW02YW96a3hKRG1kU1RwZ0RWOUpFbnBzcnhyNllzTjA1Unp5WGZ3d1NSTE5iNktfNnNRUkIySlBUSEFRWnJ6QUpwMEw2eHM4MnRNcG45d0NidXQyYkFIaFlyWHpvXzN5TzJxX3BTQ1E2Z0tmejVPbnE3Y2pBVWptQ1gxT1YxSnZ0eWNBSDE?oc=5",
+     "categories": [
+      "Private placement (dilusi)"
+     ],
+     "severity": "sedang"
+    },
+    {
+     "date": "2026-11-18",
      "title": "Buru Izin Investor, MBMA Private Placement 10,79 Miliar Saham",
-     "source": "Emitennews.com",
-     "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPVFd1dkdOdzFaeGdSckhNR01jZjR3M2dib3o2RTFmWlBiNmwybW9zdTdydThhcnRLN3J1NWE1M3RlNFlZRU1YbEg1aklkYl9hOGRuLW5JM1JNaGRJbzBJbnI1X2F2dmE1LUZMbTJvMlJMcXZ0MW1HS05rcy16b19xMFJRY0lNUXdpLVNwaE1FMEw?oc=5",
+     "source": "Lotus Andalan Sekuritas",
+     "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQN0QtVHpoNk5mYlFZNzk5WDdZNFZqMnZnNkd3QlNsU1NxV2pfRUtqY1ZVWmN2SGtLVm5sc1NBSlNUdWFydzQtclhTdWJVZUxZaVcxcHJMQ2dtc1RYQ0VORjhHUHptUWltYVByMF9ZU1NXeElVN0xIblh4TklBa192VDRRNnRhRFBkSFhUNUNXT2lNWlhNVVkwQUJuOVF0cFFNdUE?oc=5",
      "categories": [
       "Private placement (dilusi)"
      ],
@@ -23191,7 +23422,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -73.0,
+    "score": -74.6,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23223,7 +23454,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -62.1,
+    "score": -63.7,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23351,7 +23582,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -78.8,
+    "score": -80.4,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23415,7 +23646,7 @@
     "signal": "STRONG SELL"
    },
    "medium": {
-    "score": -60.9,
+    "score": -62.5,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23479,8 +23710,8 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -29.0,
-    "signal": "HOLD"
+    "score": -30.6,
+    "signal": "SELL"
    },
    "long": {
     "score": -27.9,
@@ -23543,7 +23774,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -49.4,
+    "score": -51.0,
     "signal": "SELL"
    },
    "long": {
@@ -23575,7 +23806,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -63.9,
+    "score": -65.5,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23639,8 +23870,8 @@
     "signal": "STRONG SELL"
    },
    "medium": {
-    "score": -59.4,
-    "signal": "SELL"
+    "score": -61.0,
+    "signal": "STRONG SELL"
    },
    "long": {
     "score": 48.9,
@@ -23734,7 +23965,7 @@
     "signal": "STRONG SELL"
    },
    "medium": {
-    "score": -74.7,
+    "score": -76.3,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23766,7 +23997,7 @@
     "signal": "HOLD"
    },
    "medium": {
-    "score": -37.7,
+    "score": -39.3,
     "signal": "SELL"
    },
    "long": {
@@ -23862,7 +24093,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -66.2,
+    "score": -67.8,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23915,7 +24146,18 @@
    "pb": null,
    "roe": 0.41328,
    "div_yield": 0.0497,
-   "news": null,
+   "news": [
+    {
+     "date": "2026-11-24",
+     "title": "ARCI RAUP LEDAKAN LABA 54,57 PERSEN",
+     "source": "Lotus Andalan Sekuritas",
+     "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB5by1LZ0ljNVJ3Rmk0a09pN3NPVjdJdUNmZ1VLRHhhN29MdkM1aXg3RmRDTXZVNFpVb2dpbVl2MVVzX2VvZ2ZSMFZvYVpyTnZMYlpxcVh2MzQ0YVFGSEcwb0licU9nbzFpeWsyWmM2WGVCTlF3bmFDS3pUbjBXZTA?oc=5",
+     "categories": [
+      "PHK / operasi terganggu"
+     ],
+     "severity": "sedang"
+    }
+   ],
    "foreign_5d": -18149755500.0,
    "foreign_20d": -76222867500.0,
    "foreign_20d_pct": -0.099497,
@@ -23958,7 +24200,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": -52.6,
+    "score": -54.2,
     "signal": "SELL"
    },
    "long": {
@@ -23990,7 +24232,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": 25.4,
+    "score": 23.8,
     "signal": "HOLD"
    },
    "long": {
@@ -24022,7 +24264,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -43.7,
+    "score": -45.3,
     "signal": "SELL"
    },
    "long": {
@@ -24118,7 +24360,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -88.7,
+    "score": -90.3,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -24150,7 +24392,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": 20.2,
+    "score": 18.6,
     "signal": "HOLD"
    },
    "long": {
@@ -24182,7 +24424,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -99.7,
+    "score": -100.0,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -24310,7 +24552,7 @@
     "signal": "STRONG SELL"
    },
    "medium": {
-    "score": -38.6,
+    "score": -40.2,
     "signal": "SELL"
    },
    "long": {
@@ -24374,7 +24616,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": -1.1,
+    "score": -2.7,
     "signal": "HOLD"
    },
    "long": {
@@ -24395,7 +24637,28 @@
    "pb": null,
    "roe": -0.2513,
    "div_yield": 0.0,
-   "news": null,
+   "news": [
+    {
+     "date": "2026-11-17",
+     "title": "Saham MGLV Anjlok Usai Penggeledahan Kantor Megaspeed",
+     "source": "Limapagi",
+     "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE13T1ZpZVpSLXFSMjZINnpRNnhFQjFCUDJzNEhXdW9CZ0ZRNkp3RUJfUVNBSVd1M0doZDBRTWdNcXZmWFBvbmhNRUtiUlUxbjVIVHNmeFBjYWhDV1ZHY1FSQ3NHaEphcVVEc01wUGkxTzNHdnM?oc=5",
+     "categories": [
+      "Kasus hukum"
+     ],
+     "severity": "tinggi"
+    },
+    {
+     "date": "2026-11-17",
+     "title": "Terseret Sentimen Chip Nvidia, Saham MGLV Ambles 9,88% ke Bawah Harga Rights Issue",
+     "source": "InvestorTrust",
+     "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNTHgwZDdOaktxMHpjNHRXb1hjMzVZYmxHZ3BZSlBMOWlCSFI0X0RDN2hiYXZRWjdwNjdnNTQ0TEZKdm1fdl9UUXJhU0FIQ1NuZEF2YUprcmtoSS1hNGZZclFjU3VSbVh4UUZHaXBwVlA1NTJQcmRJMXNpSlVWdFdodXNWTGJIQ25iVi1idC1odU9sMFpsNS1QNXFhLU92T0EyUDB3dklsWk1abzFnUWdxZ0JxSGVQQ3hWeldn?oc=5",
+     "categories": [
+      "Right issue (dilusi)"
+     ],
+     "severity": "sedang"
+    }
+   ],
    "foreign_5d": 773580000.0,
    "foreign_20d": -3868560000.0,
    "foreign_20d_pct": -0.031239,
@@ -24502,7 +24765,7 @@
     "signal": "HOLD"
    },
    "medium": {
-    "score": -36.7,
+    "score": -38.3,
     "signal": "SELL"
    },
    "long": {
@@ -24715,7 +24978,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -69.0,
+    "score": -70.0,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -24811,7 +25074,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -81.7,
+    "score": -83.3,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -24939,7 +25202,7 @@
     "signal": "STRONG SELL"
    },
    "medium": {
-    "score": -73.9,
+    "score": -75.5,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -25003,7 +25266,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -71.3,
+    "score": -72.9,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -25067,7 +25330,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -45.6,
+    "score": -47.2,
     "signal": "SELL"
    },
    "long": {
@@ -25099,7 +25362,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -71.0,
+    "score": -72.6,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -25152,18 +25415,7 @@
    "pb": null,
    "roe": 0.04053,
    "div_yield": 0.006,
-   "news": [
-    {
-     "date": "2026-11-21",
-     "title": "Sengketa Lahan Awak Mas Tekan Saham Indika Energy",
-     "source": "www.suaralandak.co.id",
-     "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5WVExPZ2twQlUyZEJxVDA2U2k5MHpiSnhUcXd6N2g0cjFNV3l3U2NsMnd2eVdYeUthdGI2X3NMMUFpbVExWVFlTDRRXzRMa2tsQ0xPNk5NYnNIbGFNdnVGMU5iX0RWOXJ2V21QZUtpamFXYXhZWkE?oc=5",
-     "categories": [
-      "Gugatan"
-     ],
-     "severity": "sedang"
-    }
-   ],
+   "news": null,
    "foreign_5d": 689049000.0,
    "foreign_20d": 14786006000.0,
    "foreign_20d_pct": 0.019198,
@@ -25366,7 +25618,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -83.3,
+    "score": -84.9,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -25558,7 +25810,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -66.5,
+    "score": -68.1,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -26628,14 +26880,17 @@
     }
    },
    "google": {
-    "ok": 110,
-    "fail": 0,
-    "items": 8374
+    "ok": 109,
+    "fail": 1,
+    "items": 8527,
+    "errors": {
+     "HTTP 429": 1
+    }
    },
    "skipped_budget": 0,
-   "recent_items": 1310,
-   "stocks_flagged": 4,
-   "seconds": 97
+   "recent_items": 1395,
+   "stocks_flagged": 7,
+   "seconds": 87
   },
   "items": {
    "SMGR": [
@@ -26692,26 +26947,92 @@
      "severity": "sedang"
     }
    ],
+   "BRIS": [
+    {
+     "date": "2026-11-24",
+     "title": "BSI Raup Laba Rp 6,1 Triliun, Mirae Asset Ungkap Prospek Saham BRIS Usai Rights Issue",
+     "source": "TradingView",
+     "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8zdVg0YUd2dDllM2pvS0JzMU9GUGhFZDR2VUFMbEx0U19jU3A3Q19QVW1hYU1qeE1nX1dHbng1d2t3a3hoZ2JoTk5UTndaTVlHSEZtRkQ1S3RMLTRaRWdKSjhRcXNQcGM?oc=5",
+     "categories": [
+      "Right issue (dilusi)"
+     ],
+     "severity": "sedang"
+    },
+    {
+     "date": "2026-11-24",
+     "title": "BSI (BRIS) Bukukan Laba Rp 6,01 Triliun & Bersiap Right Issue, Simak Rekomendasinya",
+     "source": "TradingView",
+     "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFAxc1VQY1FOVkdsS0VseGZGcTNJR3Q1MTFia2E1c181TjFROWJPVTd3VExwTXhIdTRRYTIxTDU5TVJrT09Hc3FBY3ptckpSS05VVWJQUGlwNDNiZXBYWU1MM3JBR0J3RE0?oc=5",
+     "categories": [
+      "Right issue (dilusi)"
+     ],
+     "severity": "sedang"
+    }
+   ],
+   "BNGA": [
+    {
+     "date": "2026-11-20",
+     "title": "Free Float Kurang, Induk CIMB Niaga Pertimbangkan Opsi Delisting BNGA",
+     "source": "Emitennews.com",
+     "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSkJ6UzRHQi1PZk5FQ29Uc3JkTXdUa0RXSzlOM0hUUmF6aDhhUjg1VW9lR2RVdHV5OW12MUhOZEd5cjhUa29nNXR3WXFaT2JGWnFITGpuRjVub0NNcmNvb2UxUUluTzBoQWs1VWdhWFIwdFVINTVmOGVYQndGUVh6eDc2ZUpSVTV3cUhjbkFQNkViUHFQNl9ncm9sX3U?oc=5",
+     "categories": [
+      "Suspensi / delisting"
+     ],
+     "severity": "tinggi"
+    }
+   ],
    "MBMA": [
     {
      "date": "2026-11-18",
+     "title": "Gelar RUPSLB 8 Desember 2026, MBMA Masih Cari Investor Private Placement",
+     "source": "KONTAN",
+     "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQQ1FoTHVCZUpBZVg3dkhETU5nUzRaVWIwMk9NcW02YW96a3hKRG1kU1RwZ0RWOUpFbnBzcnhyNllzTjA1Unp5WGZ3d1NSTE5iNktfNnNRUkIySlBUSEFRWnJ6QUpwMEw2eHM4MnRNcG45d0NidXQyYkFIaFlyWHpvXzN5TzJxX3BTQ1E2Z0tmejVPbnE3Y2pBVWptQ1gxT1YxSnZ0eWNBSDE?oc=5",
+     "categories": [
+      "Private placement (dilusi)"
+     ],
+     "severity": "sedang"
+    },
+    {
+     "date": "2026-11-18",
      "title": "Buru Izin Investor, MBMA Private Placement 10,79 Miliar Saham",
-     "source": "Emitennews.com",
-     "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPVFd1dkdOdzFaeGdSckhNR01jZjR3M2dib3o2RTFmWlBiNmwybW9zdTdydThhcnRLN3J1NWE1M3RlNFlZRU1YbEg1aklkYl9hOGRuLW5JM1JNaGRJbzBJbnI1X2F2dmE1LUZMbTJvMlJMcXZ0MW1HS05rcy16b19xMFJRY0lNUXdpLVNwaE1FMEw?oc=5",
+     "source": "Lotus Andalan Sekuritas",
+     "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQN0QtVHpoNk5mYlFZNzk5WDdZNFZqMnZnNkd3QlNsU1NxV2pfRUtqY1ZVWmN2SGtLVm5sc1NBSlNUdWFydzQtclhTdWJVZUxZaVcxcHJMQ2dtc1RYQ0VORjhHUHptUWltYVByMF9ZU1NXeElVN0xIblh4TklBa192VDRRNnRhRFBkSFhUNUNXT2lNWlhNVVkwQUJuOVF0cFFNdUE?oc=5",
      "categories": [
       "Private placement (dilusi)"
      ],
      "severity": "sedang"
     }
    ],
-   "INDY": [
+   "ARCI": [
     {
-     "date": "2026-11-21",
-     "title": "Sengketa Lahan Awak Mas Tekan Saham Indika Energy",
-     "source": "www.suaralandak.co.id",
-     "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5WVExPZ2twQlUyZEJxVDA2U2k5MHpiSnhUcXd6N2g0cjFNV3l3U2NsMnd2eVdYeUthdGI2X3NMMUFpbVExWVFlTDRRXzRMa2tsQ0xPNk5NYnNIbGFNdnVGMU5iX0RWOXJ2V21QZUtpamFXYXhZWkE?oc=5",
+     "date": "2026-11-24",
+     "title": "ARCI RAUP LEDAKAN LABA 54,57 PERSEN",
+     "source": "Lotus Andalan Sekuritas",
+     "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB5by1LZ0ljNVJ3Rmk0a09pN3NPVjdJdUNmZ1VLRHhhN29MdkM1aXg3RmRDTXZVNFpVb2dpbVl2MVVzX2VvZ2ZSMFZvYVpyTnZMYlpxcVh2MzQ0YVFGSEcwb0licU9nbzFpeWsyWmM2WGVCTlF3bmFDS3pUbjBXZTA?oc=5",
      "categories": [
-      "Gugatan"
+      "PHK / operasi terganggu"
+     ],
+     "severity": "sedang"
+    }
+   ],
+   "MGLV": [
+    {
+     "date": "2026-11-17",
+     "title": "Saham MGLV Anjlok Usai Penggeledahan Kantor Megaspeed",
+     "source": "Limapagi",
+     "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE13T1ZpZVpSLXFSMjZINnpRNnhFQjFCUDJzNEhXdW9CZ0ZRNkp3RUJfUVNBSVd1M0doZDBRTWdNcXZmWFBvbmhNRUtiUlUxbjVIVHNmeFBjYWhDV1ZHY1FSQ3NHaEphcVVEc01wUGkxTzNHdnM?oc=5",
+     "categories": [
+      "Kasus hukum"
+     ],
+     "severity": "tinggi"
+    },
+    {
+     "date": "2026-11-17",
+     "title": "Terseret Sentimen Chip Nvidia, Saham MGLV Ambles 9,88% ke Bawah Harga Rights Issue",
+     "source": "InvestorTrust",
+     "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNTHgwZDdOaktxMHpjNHRXb1hjMzVZYmxHZ3BZSlBMOWlCSFI0X0RDN2hiYXZRWjdwNjdnNTQ0TEZKdm1fdl9UUXJhU0FIQ1NuZEF2YUprcmtoSS1hNGZZclFjU3VSbVh4UUZHaXBwVlA1NTJQcmRJMXNpSlVWdFdodXNWTGJIQ25iVi1idC1odU9sMFpsNS1QNXFhLU92T0EyUDB3dklsWk1abzFnUWdxZ0JxSGVQQ3hWeldn?oc=5",
+     "categories": [
+      "Right issue (dilusi)"
      ],
      "severity": "sedang"
     }
