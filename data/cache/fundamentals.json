@@ -1695,8 +1695,8 @@
   "name": "PT MNC Digital Entertainment Tbk",
   "sector": "Communication Services",
   "industry": "Entertainment",
-  "pe": 7.814661,
-  "pb": 1.003249,
+  "pe": 7.399724,
+  "pb": 0.94998,
   "roe": 0.13596,
   "der": 0.03695,
   "div_yield_raw": 0.0,
@@ -1707,7 +1707,7 @@
   "eps_growth": -0.67,
   "rev_growth": -0.197,
   "shares": 60676178205.0,
-  "ts": "2026-11-16T20:39:18"
+  "ts": "2026-11-25T20:05:50"
  },
  "SMDR.JK": {
   "name": "PT Samudera Indonesia Tbk",
