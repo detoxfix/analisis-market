@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-25 06:13",
+ "generated_at": "2026-11-25 12:34",
  "as_of": "2026-11-24",
  "demo": false,
  "data_status": {
@@ -31,18 +31,12 @@
   }
  },
  "market": {
-  "bench": 5215.850098,
-  "bench_chg": 0.013509,
+  "bench": 5241.586914,
+  "bench_chg": 0.004934,
   "regime": "Bearish",
   "universe": 108,
   "scanned": 869,
   "series": [
-   [
-    "2026-05-18",
-    6599.24,
-    7323.73,
-    7992.59
-   ],
    [
     "2026-05-19",
     6370.68,
@@ -816,6 +810,12 @@
     5215.85,
     5641.05,
     6561.6
+   ],
+   [
+    "2026-11-24",
+    5241.59,
+    5616.66,
+    6543.05
    ]
   ],
   "above_sma50": false,
@@ -1859,7 +1859,18 @@
      "risks": [
       "IHSG di bawah EMA20 (pasar lemah)"
      ],
-     "news": null,
+     "news": [
+      {
+       "date": "2026-11-20",
+       "title": "Free Float Kurang, Induk CIMB Niaga Pertimbangkan Opsi Delisting BNGA",
+       "source": "Emitennews.com",
+       "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSkJ6UzRHQi1PZk5FQ29Uc3JkTXdUa0RXSzlOM0hUUmF6aDhhUjg1VW9lR2RVdHV5OW12MUhOZEd5cjhUa29nNXR3WXFaT2JGWnFITGpuRjVub0NNcmNvb2UxUUluTzBoQWs1VWdhWFIwdFVINTVmOGVYQndGUVh6eDc2ZUpSVTV3cUhjbkFQNkViUHFQNl9ncm9sX3U?oc=5",
+       "categories": [
+        "Suspensi / delisting"
+       ],
+       "severity": "tinggi"
+      }
+     ],
      "foreign_5d": -2163355500.0,
      "foreign_20d": -21881579500.0,
      "foreign_20d_pct": -0.118619,
@@ -3116,18 +3127,7 @@
       "Histogram MACD negatif / melemah"
      ],
      "risks": [],
-     "news": [
-      {
-       "date": "2026-11-21",
-       "title": "Sengketa Lahan Awak Mas Tekan Saham Indika Energy",
-       "source": "www.suaralandak.co.id",
-       "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5WVExPZ2twQlUyZEJxVDA2U2k5MHpiSnhUcXd6N2g0cjFNV3l3U2NsMnd2eVdYeUthdGI2X3NMMUFpbVExWVFlTDRRXzRMa2tsQ0xPNk5NYnNIbGFNdnVGMU5iX0RWOXJ2V21QZUtpamFXYXhZWkE?oc=5",
-       "categories": [
-        "Gugatan"
-       ],
-       "severity": "sedang"
-      }
-     ],
+     "news": null,
      "foreign_5d": 689049000.0,
      "foreign_20d": 14786006000.0,
      "foreign_20d_pct": 0.019198,
@@ -4371,7 +4371,28 @@
      "risks": [
       "Histogram MACD positif & menguat"
      ],
-     "news": null,
+     "news": [
+      {
+       "date": "2026-11-23",
+       "title": "Ujian Integritas Pasar Modal: HSC, Manipulasi Saham DSSA Hingga Denda 1,5 T Halaman 1",
+       "source": "Kompasiana.com",
+       "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQYmc1bWhtV3VsbnR2M0p6TXMzWm83RnJhYURoeXNGa1VYUjdnM0U1Q0p0N2tTNUdUV1A4WnFOVmxhTUU0SDY5UnFPZXpVc2FQaUtNZ2RCSVR1bGlmOXh1UWpaTFFScldRd25WbjktMDFYM01sTnhpVHM3Q3hfcmVvcFpVWXM5MXdHMy1ZNXlJRFNqMlZQSVgyVXZJRmVuWVdVNi1KT2VUcmxiaDZtT3RwTGZUUG93Ui1hTTZXT0txMEhjZnE2WkxVUFJlNGJPNzhZVXgxb3R4a05UTllhbUxpdw?oc=5",
+       "categories": [
+        "Sanksi / denda"
+       ],
+       "severity": "sedang"
+      },
+      {
+       "date": "2026-11-19",
+       "title": "DSSA Hormati Denda Rp1,5 Triliun dari OJK",
+       "source": "Lensa Hukum",
+       "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1nZTRvZ3pKekx1cWdWWnhHWi1pbXBaWERNcWVwc0pBckxfd0daSE1waUY3Vk5XNEhxSHlmNmZ2bFFIRnowV1diTWU5RnNlV1NNeUNNQjlWa3EydHExeWJUVTIwY3lzRTU1U1lNRGZ0YVNvUFE?oc=5",
+       "categories": [
+        "Sanksi / denda"
+       ],
+       "severity": "sedang"
+      }
+     ],
      "foreign_5d": -18536601500.0,
      "foreign_20d": -116387622000.0,
      "foreign_20d_pct": -0.077373,
@@ -8784,7 +8805,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "SMA50 > SMA100 & SMA50 menanjak (uptrend menengah)",
-      "Outperform IHSG +30.4% (3 bulan)"
+      "Outperform IHSG +30.0% (3 bulan)"
      ],
      "risks": [],
      "news": null,
@@ -8894,7 +8915,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 25: tren naik kuat",
-      "Outperform IHSG +25.4% (3 bulan)"
+      "Outperform IHSG +25.0% (3 bulan)"
      ],
      "risks": [],
      "news": null,
@@ -9114,7 +9135,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 22: tren naik kuat",
-      "Outperform IHSG +19.4% (3 bulan)"
+      "Outperform IHSG +19.0% (3 bulan)"
      ],
      "risks": [
       "Momentum 3 bulan -1.6%"
@@ -9225,7 +9246,7 @@
      "atr_pct": 0.028296,
      "reasons": [
       "Harga di atas SMA50",
-      "Outperform IHSG +32.1% (3 bulan)",
+      "Outperform IHSG +31.7% (3 bulan)",
       "MACD di atas sinyal & di atas nol"
      ],
      "risks": [],
@@ -9335,7 +9356,7 @@
      "atr_pct": 0.037123,
      "reasons": [
       "Harga di atas SMA50",
-      "Outperform IHSG +24.9% (3 bulan)",
+      "Outperform IHSG +24.6% (3 bulan)",
       "MACD di atas sinyal & di atas nol"
      ],
      "risks": [],
@@ -9445,7 +9466,7 @@
      "atr_pct": 0.033771,
      "reasons": [
       "Harga di atas SMA50",
-      "Outperform IHSG +23.6% (3 bulan)",
+      "Outperform IHSG +23.2% (3 bulan)",
       "MACD di atas sinyal & di atas nol"
      ],
      "risks": [],
@@ -9556,7 +9577,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 28: tren naik kuat",
-      "Outperform IHSG +21.5% (3 bulan)"
+      "Outperform IHSG +21.1% (3 bulan)"
      ],
      "risks": [
       "Struktur MA menengah melemah"
@@ -9668,7 +9689,7 @@
      "reasons": [
       "ADX 28: tren naik kuat",
       "Momentum 3 bulan +19.9%",
-      "Outperform IHSG +40.8% (3 bulan)"
+      "Outperform IHSG +40.5% (3 bulan)"
      ],
      "risks": [
       "Harga di bawah SMA50"
@@ -9780,7 +9801,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 24: tren naik kuat",
-      "Outperform IHSG +19.1% (3 bulan)"
+      "Outperform IHSG +18.7% (3 bulan)"
      ],
      "risks": [
       "Struktur MA menengah melemah",
@@ -9893,7 +9914,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 29: tren naik kuat",
-      "Outperform IHSG +17.9% (3 bulan)"
+      "Outperform IHSG +17.5% (3 bulan)"
      ],
      "risks": [
       "Struktur MA menengah melemah",
@@ -10419,18 +10440,7 @@
       "ADX 23: tren turun kuat"
      ],
      "risks": [],
-     "news": [
-      {
-       "date": "2026-11-21",
-       "title": "Sengketa Lahan Awak Mas Tekan Saham Indika Energy",
-       "source": "www.suaralandak.co.id",
-       "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5WVExPZ2twQlUyZEJxVDA2U2k5MHpiSnhUcXd6N2g0cjFNV3l3U2NsMnd2eVdYeUthdGI2X3NMMUFpbVExWVFlTDRRXzRMa2tsQ0xPNk5NYnNIbGFNdnVGMU5iX0RWOXJ2V21QZUtpamFXYXhZWkE?oc=5",
-       "categories": [
-        "Gugatan"
-       ],
-       "severity": "sedang"
-      }
-     ],
+     "news": null,
      "foreign_5d": 689049000.0,
      "foreign_20d": 14786006000.0,
      "foreign_20d_pct": 0.019198,
@@ -10514,9 +10524,9 @@
      "price": 1070.0,
      "chg_1d": 0.0,
      "mcap": 17762000000000.0,
-     "score": -94.0,
+     "score": -94.6,
      "signal": "STRONG SELL",
-     "confidence": 0.94,
+     "confidence": 0.946,
      "atr_pct": 0.057473,
      "reasons": [
       "Harga di bawah SMA50",
@@ -10608,9 +10618,9 @@
      "price": 3300.0,
      "chg_1d": 0.018519,
      "mcap": 239310118264800.0,
-     "score": -90.0,
+     "score": -90.6,
      "signal": "STRONG SELL",
-     "confidence": 0.9,
+     "confidence": 0.906,
      "atr_pct": 0.063023,
      "reasons": [
       "Harga di bawah SMA50",
@@ -10712,7 +10722,28 @@
       "ADX 30: tren turun kuat"
      ],
      "risks": [],
-     "news": null,
+     "news": [
+      {
+       "date": "2026-11-23",
+       "title": "Ujian Integritas Pasar Modal: HSC, Manipulasi Saham DSSA Hingga Denda 1,5 T Halaman 1",
+       "source": "Kompasiana.com",
+       "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQYmc1bWhtV3VsbnR2M0p6TXMzWm83RnJhYURoeXNGa1VYUjdnM0U1Q0p0N2tTNUdUV1A4WnFOVmxhTUU0SDY5UnFPZXpVc2FQaUtNZ2RCSVR1bGlmOXh1UWpaTFFScldRd25WbjktMDFYM01sTnhpVHM3Q3hfcmVvcFpVWXM5MXdHMy1ZNXlJRFNqMlZQSVgyVXZJRmVuWVdVNi1KT2VUcmxiaDZtT3RwTGZUUG93Ui1hTTZXT0txMEhjZnE2WkxVUFJlNGJPNzhZVXgxb3R4a05UTllhbUxpdw?oc=5",
+       "categories": [
+        "Sanksi / denda"
+       ],
+       "severity": "sedang"
+      },
+      {
+       "date": "2026-11-19",
+       "title": "DSSA Hormati Denda Rp1,5 Triliun dari OJK",
+       "source": "Lensa Hukum",
+       "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1nZTRvZ3pKekx1cWdWWnhHWi1pbXBaWERNcWVwc0pBckxfd0daSE1waUY3Vk5XNEhxSHlmNmZ2bFFIRnowV1diTWU5RnNlV1NNeUNNQjlWa3EydHExeWJUVTIwY3lzRTU1U1lNRGZ0YVNvUFE?oc=5",
+       "categories": [
+        "Sanksi / denda"
+       ],
+       "severity": "sedang"
+      }
+     ],
      "foreign_5d": -18536601500.0,
      "foreign_20d": -116387622000.0,
      "foreign_20d_pct": -0.077373,
@@ -12519,9 +12550,9 @@
      "price": 655.0,
      "chg_1d": -0.007576,
      "mcap": 8854355500000.0,
-     "score": -82.9,
+     "score": -83.5,
      "signal": "STRONG SELL",
-     "confidence": 0.829,
+     "confidence": 0.835,
      "atr_pct": 0.055373,
      "reasons": [
       "Harga di bawah SMA50",
@@ -12613,9 +12644,9 @@
      "price": 388.0,
      "chg_1d": -0.010204,
      "mcap": 10266480000000.0,
-     "score": -79.8,
+     "score": -80.4,
      "signal": "STRONG SELL",
-     "confidence": 0.798,
+     "confidence": 0.804,
      "atr_pct": 0.056799,
      "reasons": [
       "Harga di bawah SMA50",
@@ -13365,9 +13396,9 @@
      "price": 1710.0,
      "chg_1d": 0.0,
      "mcap": 33947843400000.0,
-     "score": -74.2,
+     "score": -74.8,
      "signal": "STRONG SELL",
-     "confidence": 0.742,
+     "confidence": 0.748,
      "atr_pct": 0.035532,
      "reasons": [
       "Harga di bawah SMA50",
@@ -13459,9 +13490,9 @@
      "price": 134.0,
      "chg_1d": -0.007407,
      "mcap": 8517670239520.0,
-     "score": -74.1,
+     "score": -74.7,
      "signal": "STRONG SELL",
-     "confidence": 0.741,
+     "confidence": 0.747,
      "atr_pct": 0.051377,
      "reasons": [
       "Harga di bawah SMA50",
@@ -13553,9 +13584,9 @@
      "price": 3130.0,
      "chg_1d": 0.022876,
      "mcap": 23311468311020.0,
-     "score": -73.8,
+     "score": -74.3,
      "signal": "STRONG SELL",
-     "confidence": 0.738,
+     "confidence": 0.743,
      "atr_pct": 0.062041,
      "reasons": [
       "Harga di bawah SMA50",
@@ -13647,9 +13678,9 @@
      "price": 492.0,
      "chg_1d": 0.008197,
      "mcap": 9119562065460.0,
-     "score": -73.2,
+     "score": -73.8,
      "signal": "STRONG SELL",
-     "confidence": 0.732,
+     "confidence": 0.738,
      "atr_pct": 0.04174,
      "reasons": [
       "Harga di bawah SMA50",
@@ -13741,9 +13772,9 @@
      "price": 6450.0,
      "chg_1d": 0.003891,
      "mcap": 35287839969450.0,
-     "score": -71.0,
+     "score": -71.6,
      "signal": "STRONG SELL",
-     "confidence": 0.71,
+     "confidence": 0.716,
      "atr_pct": 0.043462,
      "reasons": [
       "Harga di bawah SMA50",
@@ -13835,9 +13866,9 @@
      "price": 885.0,
      "chg_1d": -0.011173,
      "mcap": 37129514419185.0,
-     "score": -65.8,
+     "score": -66.4,
      "signal": "STRONG SELL",
-     "confidence": 0.658,
+     "confidence": 0.664,
      "atr_pct": 0.041848,
      "reasons": [
       "Harga di bawah SMA50",
@@ -13845,7 +13876,7 @@
       "ADX 26: tren turun kuat"
      ],
      "risks": [
-      "Outperform IHSG +6.1% (3 bulan)"
+      "Outperform IHSG +5.7% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": 667073000.0,
@@ -13931,9 +13962,9 @@
      "price": 720.0,
      "chg_1d": 0.006993,
      "mcap": 45430992000000.0,
-     "score": -64.9,
+     "score": -65.4,
      "signal": "STRONG SELL",
-     "confidence": 0.649,
+     "confidence": 0.654,
      "atr_pct": 0.048003,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14025,9 +14056,9 @@
      "price": 1030.0,
      "chg_1d": -0.067873,
      "mcap": 42770236751000.0,
-     "score": -61.9,
+     "score": -62.5,
      "signal": "STRONG SELL",
-     "confidence": 0.619,
+     "confidence": 0.625,
      "atr_pct": 0.055968,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14119,9 +14150,9 @@
      "price": 2380.0,
      "chg_1d": 0.039301,
      "mcap": 39027240000000.0,
-     "score": -61.9,
+     "score": -62.5,
      "signal": "STRONG SELL",
-     "confidence": 0.619,
+     "confidence": 0.625,
      "atr_pct": 0.040841,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14495,9 +14526,9 @@
      "price": 300.0,
      "chg_1d": 0.020408,
      "mcap": 6562500000000.0,
-     "score": -59.9,
-     "signal": "SELL",
-     "confidence": 0.599,
+     "score": -60.0,
+     "signal": "STRONG SELL",
+     "confidence": 0.6,
      "atr_pct": 0.051483,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14511,12 +14542,12 @@
      "foreign_20d_pct": -0.114073,
      "foreign_days": 20,
      "foreign_last": "2026-11-20",
-     "action": "Kurangi 50% posisi",
-     "sell_portion": 0.5,
+     "action": "Jual seluruh posisi",
+     "sell_portion": 1.0,
      "sell_zone_low": 300.0,
      "sell_zone_high": 306.0,
      "breakdown_level": 284.0,
-     "when_sell": "Kurangi saat pantulan ke area jual. Sisa posisi: cut loss bila close di bawah level breakdown. Jangan buka posisi beli baru selama sinyal SELL.",
+     "when_sell": "Jual saat pantulan (rebound) ke area jual pada T+1/T+2; jangan menunggu. Jangan buka posisi beli baru selama sinyal SELL.",
      "spark": [
       438.0,
       434.0,
@@ -14589,9 +14620,9 @@
      "price": 505.0,
      "chg_1d": -0.009804,
      "mcap": 8699622728500.0,
-     "score": -54.6,
+     "score": -55.1,
      "signal": "SELL",
-     "confidence": 0.546,
+     "confidence": 0.551,
      "atr_pct": 0.050505,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14683,9 +14714,9 @@
      "price": 1170.0,
      "chg_1d": 0.004292,
      "mcap": 29409390564840.0,
-     "score": -53.3,
+     "score": -53.9,
      "signal": "SELL",
-     "confidence": 0.533,
+     "confidence": 0.539,
      "atr_pct": 0.050762,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14693,7 +14724,7 @@
       "Momentum 3 bulan -19.9%"
      ],
      "risks": [
-      "Outperform IHSG +1.1% (3 bulan)"
+      "Outperform IHSG +0.7% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": 43432996000.0,
@@ -14779,9 +14810,9 @@
      "price": 1435.0,
      "chg_1d": 0.0,
      "mcap": 19957235952500.0,
-     "score": -52.2,
+     "score": -52.8,
      "signal": "SELL",
-     "confidence": 0.522,
+     "confidence": 0.528,
      "atr_pct": 0.037931,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14971,9 +15002,9 @@
      "price": 2670.0,
      "chg_1d": 0.0,
      "mcap": 64162141815750.0,
-     "score": -46.8,
+     "score": -47.4,
      "signal": "SELL",
-     "confidence": 0.468,
+     "confidence": 0.474,
      "atr_pct": 0.044269,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14981,7 +15012,7 @@
       "ADX 26: tren turun kuat"
      ],
      "risks": [
-      "Outperform IHSG +7.7% (3 bulan)"
+      "Outperform IHSG +7.3% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -118369937000.0,
@@ -15067,9 +15098,9 @@
      "price": 15850.0,
      "chg_1d": 0.003165,
      "mcap": 30496794800000.0,
-     "score": -46.6,
+     "score": -47.2,
      "signal": "SELL",
-     "confidence": 0.466,
+     "confidence": 0.472,
      "atr_pct": 0.036368,
      "reasons": [
       "Harga di bawah SMA50",
@@ -15150,6 +15181,102 @@
       15975.0,
       15800.0,
       15850.0
+     ]
+    },
+    {
+     "ticker": "JSMR.JK",
+     "code": "JSMR",
+     "name": "PT Jasa Marga (Persero) Tbk",
+     "sector": "Industrials",
+     "horizon": "medium",
+     "price": 2600.0,
+     "chg_1d": 0.0,
+     "mcap": 18870465120000.0,
+     "score": -45.3,
+     "signal": "SELL",
+     "confidence": 0.453,
+     "atr_pct": 0.036412,
+     "reasons": [
+      "Harga di bawah SMA50",
+      "Struktur MA menengah melemah",
+      "MACD di bawah sinyal & di bawah nol"
+     ],
+     "risks": [
+      "Outperform IHSG +8.1% (3 bulan)"
+     ],
+     "news": null,
+     "foreign_5d": -16284560000.0,
+     "foreign_20d": -24484564000.0,
+     "foreign_20d_pct": -0.067933,
+     "foreign_days": 20,
+     "foreign_last": "2026-11-20",
+     "action": "Kurangi 50% posisi",
+     "sell_portion": 0.5,
+     "sell_zone_low": 2600.0,
+     "sell_zone_high": 2640.0,
+     "breakdown_level": 2470.0,
+     "when_sell": "Kurangi saat pantulan ke area jual. Sisa posisi: cut loss bila close di bawah level breakdown. Jangan buka posisi beli baru selama sinyal SELL.",
+     "spark": [
+      2970.0,
+      3040.0,
+      2990.0,
+      2960.0,
+      3010.0,
+      3010.0,
+      2990.0,
+      2950.0,
+      2920.0,
+      2870.0,
+      2840.0,
+      2850.0,
+      2880.0,
+      2800.0,
+      2770.0,
+      2800.0,
+      2730.0,
+      2720.0,
+      2690.0,
+      2660.0,
+      2610.0,
+      2570.0,
+      2540.0,
+      2600.0,
+      2640.0,
+      2620.0,
+      2620.0,
+      2640.0,
+      2540.0,
+      2510.0,
+      2510.0,
+      2480.0,
+      2110.0,
+      2060.0,
+      2200.0,
+      2350.0,
+      2470.0,
+      2660.0,
+      2700.0,
+      2850.0,
+      2880.0,
+      2750.0,
+      2820.0,
+      2850.0,
+      2780.0,
+      2750.0,
+      2750.0,
+      2770.0,
+      2790.0,
+      2770.0,
+      2800.0,
+      2750.0,
+      2720.0,
+      2660.0,
+      2700.0,
+      2640.0,
+      2560.0,
+      2540.0,
+      2600.0,
+      2600.0
      ]
     },
     {
@@ -15264,7 +15391,7 @@
      "reasons": [
       "Harga di bawah SMA50",
       "Momentum 3 bulan -40.0%",
-      "Underperform IHSG -19.0% (3 bulan)"
+      "Underperform IHSG -19.4% (3 bulan)"
      ],
      "risks": [],
      "news": [
@@ -15450,102 +15577,6 @@
      ]
     },
     {
-     "ticker": "JSMR.JK",
-     "code": "JSMR",
-     "name": "PT Jasa Marga (Persero) Tbk",
-     "sector": "Industrials",
-     "horizon": "medium",
-     "price": 2600.0,
-     "chg_1d": 0.0,
-     "mcap": 18870465120000.0,
-     "score": -44.7,
-     "signal": "SELL",
-     "confidence": 0.447,
-     "atr_pct": 0.036412,
-     "reasons": [
-      "Harga di bawah SMA50",
-      "Struktur MA menengah melemah",
-      "MACD di bawah sinyal & di bawah nol"
-     ],
-     "risks": [
-      "Outperform IHSG +8.5% (3 bulan)"
-     ],
-     "news": null,
-     "foreign_5d": -16284560000.0,
-     "foreign_20d": -24484564000.0,
-     "foreign_20d_pct": -0.067933,
-     "foreign_days": 20,
-     "foreign_last": "2026-11-20",
-     "action": "Kurangi 50% posisi",
-     "sell_portion": 0.5,
-     "sell_zone_low": 2600.0,
-     "sell_zone_high": 2640.0,
-     "breakdown_level": 2470.0,
-     "when_sell": "Kurangi saat pantulan ke area jual. Sisa posisi: cut loss bila close di bawah level breakdown. Jangan buka posisi beli baru selama sinyal SELL.",
-     "spark": [
-      2970.0,
-      3040.0,
-      2990.0,
-      2960.0,
-      3010.0,
-      3010.0,
-      2990.0,
-      2950.0,
-      2920.0,
-      2870.0,
-      2840.0,
-      2850.0,
-      2880.0,
-      2800.0,
-      2770.0,
-      2800.0,
-      2730.0,
-      2720.0,
-      2690.0,
-      2660.0,
-      2610.0,
-      2570.0,
-      2540.0,
-      2600.0,
-      2640.0,
-      2620.0,
-      2620.0,
-      2640.0,
-      2540.0,
-      2510.0,
-      2510.0,
-      2480.0,
-      2110.0,
-      2060.0,
-      2200.0,
-      2350.0,
-      2470.0,
-      2660.0,
-      2700.0,
-      2850.0,
-      2880.0,
-      2750.0,
-      2820.0,
-      2850.0,
-      2780.0,
-      2750.0,
-      2750.0,
-      2770.0,
-      2790.0,
-      2770.0,
-      2800.0,
-      2750.0,
-      2720.0,
-      2660.0,
-      2700.0,
-      2640.0,
-      2560.0,
-      2540.0,
-      2600.0,
-      2600.0
-     ]
-    },
-    {
      "ticker": "CMRY.JK",
      "code": "CMRY",
      "name": "PT Cisarua Mountain Dairy Tbk",
@@ -15554,9 +15585,9 @@
      "price": 4150.0,
      "chg_1d": 0.0,
      "mcap": 32928934450000.0,
-     "score": -44.2,
+     "score": -44.8,
      "signal": "SELL",
-     "confidence": 0.442,
+     "confidence": 0.448,
      "atr_pct": 0.034438,
      "reasons": [
       "Harga di bawah SMA50",
@@ -15564,7 +15595,7 @@
       "MACD di bawah sinyal & di bawah nol"
      ],
      "risks": [
-      "Outperform IHSG +8.7% (3 bulan)"
+      "Outperform IHSG +8.3% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": 8695499000.0,
@@ -15650,9 +15681,9 @@
      "price": 2080.0,
      "chg_1d": 0.019608,
      "mcap": 206049410528000.0,
-     "score": -44.0,
+     "score": -44.6,
      "signal": "SELL",
-     "confidence": 0.44,
+     "confidence": 0.446,
      "atr_pct": 0.044603,
      "reasons": [
       "Harga di bawah SMA50",
@@ -15660,7 +15691,7 @@
       "Momentum 3 bulan -20.3%"
      ],
      "risks": [
-      "Outperform IHSG +0.7% (3 bulan)"
+      "Outperform IHSG +0.3% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -408851727000.0,
@@ -15756,7 +15787,7 @@
       "MACD di bawah sinyal & di bawah nol"
      ],
      "risks": [
-      "Outperform IHSG +19.7% (3 bulan)"
+      "Outperform IHSG +19.3% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -5270846000.0,
@@ -15842,9 +15873,9 @@
      "price": 380.0,
      "chg_1d": 0.0,
      "mcap": 22457279417780.0,
-     "score": -37.4,
+     "score": -38.0,
      "signal": "SELL",
-     "confidence": 0.374,
+     "confidence": 0.38,
      "atr_pct": 0.045791,
      "reasons": [
       "Harga di bawah SMA50",
@@ -15852,7 +15883,7 @@
       "Momentum 3 bulan -15.9%"
      ],
      "risks": [
-      "Outperform IHSG +5.0% (3 bulan)"
+      "Outperform IHSG +4.7% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": 694017000.0,
@@ -15930,6 +15961,102 @@
      ]
     },
     {
+     "ticker": "ADRO.JK",
+     "code": "ADRO",
+     "name": "PT Alamtri Resources Indonesia Tbk",
+     "sector": "Energy",
+     "horizon": "medium",
+     "price": 2340.0,
+     "chg_1d": 0.004292,
+     "mcap": 67393156428000.0,
+     "score": -37.9,
+     "signal": "SELL",
+     "confidence": 0.379,
+     "atr_pct": 0.034575,
+     "reasons": [
+      "Harga di bawah SMA50",
+      "Struktur MA menengah melemah",
+      "Momentum 3 bulan -15.8%"
+     ],
+     "risks": [
+      "Outperform IHSG +4.8% (3 bulan)"
+     ],
+     "news": null,
+     "foreign_5d": -72382412000.0,
+     "foreign_20d": -246695082000.0,
+     "foreign_20d_pct": -0.150069,
+     "foreign_days": 20,
+     "foreign_last": "2026-11-20",
+     "action": "Kurangi 50% posisi",
+     "sell_portion": 0.5,
+     "sell_zone_low": 2340.0,
+     "sell_zone_high": 2380.0,
+     "breakdown_level": 2280.0,
+     "when_sell": "Kurangi saat pantulan ke area jual. Sisa posisi: cut loss bila close di bawah level breakdown. Jangan buka posisi beli baru selama sinyal SELL.",
+     "spark": [
+      2650.0,
+      2740.0,
+      2720.0,
+      2700.0,
+      2690.0,
+      2690.0,
+      2670.0,
+      2640.0,
+      2620.0,
+      2590.0,
+      2600.0,
+      2670.0,
+      2640.0,
+      2620.0,
+      2610.0,
+      2600.0,
+      2560.0,
+      2600.0,
+      2590.0,
+      2470.0,
+      2430.0,
+      2410.0,
+      2500.0,
+      2590.0,
+      2600.0,
+      2600.0,
+      2550.0,
+      2580.0,
+      2490.0,
+      2520.0,
+      2510.0,
+      2460.0,
+      2210.0,
+      2210.0,
+      2400.0,
+      2400.0,
+      2440.0,
+      2460.0,
+      2450.0,
+      2460.0,
+      2440.0,
+      2370.0,
+      2400.0,
+      2430.0,
+      2320.0,
+      2350.0,
+      2330.0,
+      2310.0,
+      2330.0,
+      2340.0,
+      2310.0,
+      2450.0,
+      2480.0,
+      2440.0,
+      2410.0,
+      2360.0,
+      2320.0,
+      2320.0,
+      2330.0,
+      2340.0
+     ]
+    },
+    {
      "ticker": "PNLF.JK",
      "code": "PNLF",
      "name": "PT Panin Financial Tbk",
@@ -15938,9 +16065,9 @@
      "price": 169.0,
      "chg_1d": 0.011976,
      "mcap": 5411730386517.0,
-     "score": -37.4,
+     "score": -37.9,
      "signal": "SELL",
-     "confidence": 0.374,
+     "confidence": 0.379,
      "atr_pct": 0.047465,
      "reasons": [
       "Harga di bawah SMA50",
@@ -16026,102 +16153,6 @@
      ]
     },
     {
-     "ticker": "ADRO.JK",
-     "code": "ADRO",
-     "name": "PT Alamtri Resources Indonesia Tbk",
-     "sector": "Energy",
-     "horizon": "medium",
-     "price": 2340.0,
-     "chg_1d": 0.004292,
-     "mcap": 67393156428000.0,
-     "score": -37.3,
-     "signal": "SELL",
-     "confidence": 0.373,
-     "atr_pct": 0.034575,
-     "reasons": [
-      "Harga di bawah SMA50",
-      "Struktur MA menengah melemah",
-      "Momentum 3 bulan -15.8%"
-     ],
-     "risks": [
-      "Outperform IHSG +5.1% (3 bulan)"
-     ],
-     "news": null,
-     "foreign_5d": -72382412000.0,
-     "foreign_20d": -246695082000.0,
-     "foreign_20d_pct": -0.150069,
-     "foreign_days": 20,
-     "foreign_last": "2026-11-20",
-     "action": "Kurangi 50% posisi",
-     "sell_portion": 0.5,
-     "sell_zone_low": 2340.0,
-     "sell_zone_high": 2380.0,
-     "breakdown_level": 2280.0,
-     "when_sell": "Kurangi saat pantulan ke area jual. Sisa posisi: cut loss bila close di bawah level breakdown. Jangan buka posisi beli baru selama sinyal SELL.",
-     "spark": [
-      2650.0,
-      2740.0,
-      2720.0,
-      2700.0,
-      2690.0,
-      2690.0,
-      2670.0,
-      2640.0,
-      2620.0,
-      2590.0,
-      2600.0,
-      2670.0,
-      2640.0,
-      2620.0,
-      2610.0,
-      2600.0,
-      2560.0,
-      2600.0,
-      2590.0,
-      2470.0,
-      2430.0,
-      2410.0,
-      2500.0,
-      2590.0,
-      2600.0,
-      2600.0,
-      2550.0,
-      2580.0,
-      2490.0,
-      2520.0,
-      2510.0,
-      2460.0,
-      2210.0,
-      2210.0,
-      2400.0,
-      2400.0,
-      2440.0,
-      2460.0,
-      2450.0,
-      2460.0,
-      2440.0,
-      2370.0,
-      2400.0,
-      2430.0,
-      2320.0,
-      2350.0,
-      2330.0,
-      2310.0,
-      2330.0,
-      2340.0,
-      2310.0,
-      2450.0,
-      2480.0,
-      2440.0,
-      2410.0,
-      2360.0,
-      2320.0,
-      2320.0,
-      2330.0,
-      2340.0
-     ]
-    },
-    {
      "ticker": "UNTR.JK",
      "code": "UNTR",
      "name": "PT United Tractors Tbk",
@@ -16140,7 +16171,7 @@
       "MACD di bawah sinyal & di bawah nol"
      ],
      "risks": [
-      "Outperform IHSG +13.8% (3 bulan)"
+      "Outperform IHSG +13.4% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -74793227500.0,
@@ -16252,9 +16283,9 @@
       },
       {
        "date": "2026-11-24",
-       "title": "BSI Raup Laba Rp 6,1 Triliun, Mirae Asset Ungkap Prospek Saham BRIS Usai Rights Issue",
+       "title": "BSI (BRIS) Bukukan Laba Rp 6,01 Triliun & Bersiap Right Issue, Simak Rekomendasinya",
        "source": "kontan.co.id",
-       "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQSnJ0UmFGMEY0MzlqWE04TjZzTHBhVEpGWjdpc0RDRVFjM3I3bTlpTXdfQjVORXhGSnozQ2FzV3VsVFlPaEYyWHktVDRPUF84cW52X01ZQnVHWlZmZDJ5TjctenU0ZVZiaU1KUHRpeHA0NEdBZUlwbWNMWEMzNjlsdU5Bb09QSmk1ME1Ga0UzSDd4VjV4bzBvUDMxOGZpNk51bmZOeFNiWldydzVkN2E3SDluMmF6QTR4bUHSAbMBQVVfeXFMTURzV0ZTSVAtMmphVlR5WWVGRDVMYXJncVowOXpneVpEb0dCVEdjak95QjhPb1ZEZWNQU0RxclRLQjR1eWU0YThMeDFYb045TTRtNWpaZmxrYUFIbGRUXzNTUDJ4RWdJSEVxdDF4TFNvZTdsS2VyVldPUkhwcGttNzVwc3VnRHVCNkVpcjhSVVR3bEFsWW5CMDFfV08xOEQtMTVpWTNQX3BRSnhDNGR0NVhyWWM?oc=5",
+       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQZTAwYWxZUGVDSjJLZjBhUUNmbkljekxHQWtsODFTc2Q5Wko3V1NmVnAzRC00S1dvQTE1Zk9NYkI4Y2NXWjMtaC1uakJONEZHaUVuVENoWnFIXy1NNlNkSlo4VzFQS09XaUxSNFlrZ3hPNE9Rc1d3b002MWNEYkFBb0YxMms4T0NPUzNQQzNXUXF0bEFFLWhQbDRQc0RrMHBtWXllaGI1Z1loMTdqYW5EcFVn0gGrAUFVX3lxTE1NNzZvTENKVV9OQy1jZjB0a0Fua1NNMzdPTU9YZFU5bHNsRkJ6eUVMWjlEVTZZb0FMbk5ybnAtXzd2clFUekhBcEo2S3l2VDJtYWdqdWQyRWZva3o1OHpZOU9BR3pyVTVMeHdsOFZFOW9hYkl0ZWZXdEl0SGJVSERybEw4MDVBeVlNclNkRDE5YnM0cm8yZzhsS2I2MGZnZmNWX0tET2hMZklwZw?oc=5",
        "categories": [
         "Right issue (dilusi)"
        ],
@@ -16262,9 +16293,19 @@
       },
       {
        "date": "2026-11-24",
-       "title": "BSI (BRIS) Bukukan Laba Rp 6,01 Triliun & Bersiap Right Issue, Simak Rekomendasinya",
+       "title": "BSI (BRIS) Akui Laba per Saham Berpotensi Terdilusi dalam Jangka Pendek Imbas Rights Issue",
+       "source": "InvestorTrust",
+       "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxONUQ1VTcyLWpfeGE0S2pEV1gwTzhKRDU2cHNnTVNyMTVURzFNNi1GQ3RNUXdLLW5jQ2REWWk1YWFWd1hZc0FxMkR0dDBFZmpCZU9YR2I0V2pWckpBQmE2RXdVVDhGQmRkUFBfTk90Y2ZVeEc3RmdEcGdBQUZHSnpWZEg3NkJnaTVmRS00UmprUm5FdGx3SmpTV0t0aXhhQ0N5STBZZHdFQ3lTdjFsTGhJTGF6R1VZWFhRS3ZmS1dUWGpXYl9Ka0E?oc=5",
+       "categories": [
+        "Right issue (dilusi)"
+       ],
+       "severity": "sedang"
+      },
+      {
+       "date": "2026-11-24",
+       "title": "BSI Raup Laba Rp 6,1 Triliun, Mirae Asset Ungkap Prospek Saham BRIS Usai Rights Issue",
        "source": "kontan.co.id",
-       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQZTAwYWxZUGVDSjJLZjBhUUNmbkljekxHQWtsODFTc2Q5Wko3V1NmVnAzRC00S1dvQTE1Zk9NYkI4Y2NXWjMtaC1uakJONEZHaUVuVENoWnFIXy1NNlNkSlo4VzFQS09XaUxSNFlrZ3hPNE9Rc1d3b002MWNEYkFBb0YxMms4T0NPUzNQQzNXUXF0bEFFLWhQbDRQc0RrMHBtWXllaGI1Z1loMTdqYW5EcFVn0gGrAUFVX3lxTE1NNzZvTENKVV9OQy1jZjB0a0Fua1NNMzdPTU9YZFU5bHNsRkJ6eUVMWjlEVTZZb0FMbk5ybnAtXzd2clFUekhBcEo2S3l2VDJtYWdqdWQyRWZva3o1OHpZOU9BR3pyVTVMeHdsOFZFOW9hYkl0ZWZXdEl0SGJVSERybEw4MDVBeVlNclNkRDE5YnM0cm8yZzhsS2I2MGZnZmNWX0tET2hMZklwZw?oc=5",
+       "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQSnJ0UmFGMEY0MzlqWE04TjZzTHBhVEpGWjdpc0RDRVFjM3I3bTlpTXdfQjVORXhGSnozQ2FzV3VsVFlPaEYyWHktVDRPUF84cW52X01ZQnVHWlZmZDJ5TjctenU0ZVZiaU1KUHRpeHA0NEdBZUlwbWNMWEMzNjlsdU5Bb09QSmk1ME1Ga0UzSDd4VjV4bzBvUDMxOGZpNk51bmZOeFNiWldydzVkN2E3SDluMmF6QTR4bUHSAbMBQVVfeXFMTURzV0ZTSVAtMmphVlR5WWVGRDVMYXJncVowOXpneVpEb0dCVEdjak95QjhPb1ZEZWNQU0RxclRLQjR1eWU0YThMeDFYb045TTRtNWpaZmxrYUFIbGRUXzNTUDJ4RWdJSEVxdDF4TFNvZTdsS2VyVldPUkhwcGttNzVwc3VnRHVCNkVpcjhSVVR3bEFsWW5CMDFfV08xOEQtMTVpWTNQX3BRSnhDNGR0NVhyWWM?oc=5",
        "categories": [
         "Right issue (dilusi)"
        ],
@@ -16461,7 +16502,7 @@
       "RSI 40 di rezim bearish / jenuh beli"
      ],
      "risks": [
-      "Outperform IHSG +12.0% (3 bulan)"
+      "Outperform IHSG +11.6% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -34393565000.0,
@@ -16557,7 +16598,7 @@
       "RSI 35 di rezim bearish / jenuh beli"
      ],
      "risks": [
-      "Outperform IHSG +12.6% (3 bulan)"
+      "Outperform IHSG +12.2% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -777486500.0,
@@ -16643,9 +16684,9 @@
      "price": 790.0,
      "chg_1d": 0.006369,
      "mcap": 11881113059800.0,
-     "score": -32.6,
+     "score": -33.2,
      "signal": "SELL",
-     "confidence": 0.326,
+     "confidence": 0.332,
      "atr_pct": 0.045769,
      "reasons": [
       "Harga di bawah SMA50",
@@ -16654,7 +16695,7 @@
      ],
      "risks": [
       "RSI 51 di rezim bullish",
-      "Outperform IHSG +1.6% (3 bulan)"
+      "Outperform IHSG +1.2% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -1997903500.0,
@@ -16740,9 +16781,9 @@
      "price": 9950.0,
      "chg_1d": 0.146974,
      "mcap": 331666683250000.0,
-     "score": -32.3,
+     "score": -32.9,
      "signal": "SELL",
-     "confidence": 0.323,
+     "confidence": 0.329,
      "atr_pct": 0.060194,
      "reasons": [
       "Harga di bawah SMA50",
@@ -20779,18 +20820,7 @@
       "Momentum 12 bulan +9%",
       "DER 0.93x (utang rendah)"
      ],
-     "news": [
-      {
-       "date": "2026-11-21",
-       "title": "Sengketa Lahan Awak Mas Tekan Saham Indika Energy",
-       "source": "www.suaralandak.co.id",
-       "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5WVExPZ2twQlUyZEJxVDA2U2k5MHpiSnhUcXd6N2g0cjFNV3l3U2NsMnd2eVdYeUthdGI2X3NMMUFpbVExWVFlTDRRXzRMa2tsQ0xPNk5NYnNIbGFNdnVGMU5iX0RWOXJ2V21QZUtpamFXYXhZWkE?oc=5",
-       "categories": [
-        "Gugatan"
-       ],
-       "severity": "sedang"
-      }
-     ],
+     "news": null,
      "foreign_5d": 689049000.0,
      "foreign_20d": 14786006000.0,
      "foreign_20d_pct": 0.019198,
@@ -21667,8 +21697,8 @@
       {
        "date": "2026-11-23",
        "title": "Gak Alihkan Saham SMCB ke Publik, SMGR Kena Sanksi OJK",
-       "source": "",
-       "link": "https://www.cnbcindonesia.com/market/20261123102451-17-787489/gak-alihkan-saham-smcb-ke-publik-smgr-kena-sanksi-ojk",
+       "source": "CNBC Indonesia",
+       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNS1B5cUtndElsWURlMHhlaGpTSHJYa0lBZEVySUt1VXNyTF9PRUdnU241SzlrQlVkNUIwcUYtN3F6aUlaR0YyWnhCQnJEUFhLcHJzTGRmYnUzVGZzMFYxZ0FQZVRfMkRiN19NaDhCeXd2VnpSVmpwVmFVUTRNRy1maTNQSTl1LVdjX09vLUhzRGtDdXV4NU1OMVZfaGhaWEdKcy10RENXb1FZUWFxTVNKdHZqSEVBd9IBuwFBVV95cUxOd1NLdjU3NnBCeV9qTzV4Q0Naa0p0VmJCSXNuSnVGTWIxVkpRT0FpTHE2QW1Gdl9GbTVidXlsYVlMQVBteHdCaXQxMVVjNExEMDA4Q0d4U2NXaEhyakJIbEdDQXBDcUJyQkNRRC16elg1RE8yWkhNaGl4bTJRbkNZbkNoalc3djlGNVVpRGw4RTBGYVRYaDdCUm8zXy1LUEU3RWJkTERKSkdCdU9rTnUweHNjNi1SWTludkc0?oc=5",
        "categories": [
         "Sanksi / denda"
        ],
@@ -22079,7 +22109,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": 41.2,
+    "score": 40.6,
     "signal": "BUY"
    },
    "long": {
@@ -22175,7 +22205,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": -32.3,
+    "score": -32.9,
     "signal": "SELL"
    },
    "long": {
@@ -22239,7 +22269,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -90.0,
+    "score": -90.6,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -22303,7 +22333,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -44.0,
+    "score": -44.6,
     "signal": "SELL"
    },
    "long": {
@@ -22356,7 +22386,28 @@
    "pb": null,
    "roe": 0.18789,
    "div_yield": 0.0,
-   "news": null,
+   "news": [
+    {
+     "date": "2026-11-23",
+     "title": "Ujian Integritas Pasar Modal: HSC, Manipulasi Saham DSSA Hingga Denda 1,5 T Halaman 1",
+     "source": "Kompasiana.com",
+     "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQYmc1bWhtV3VsbnR2M0p6TXMzWm83RnJhYURoeXNGa1VYUjdnM0U1Q0p0N2tTNUdUV1A4WnFOVmxhTUU0SDY5UnFPZXpVc2FQaUtNZ2RCSVR1bGlmOXh1UWpaTFFScldRd25WbjktMDFYM01sTnhpVHM3Q3hfcmVvcFpVWXM5MXdHMy1ZNXlJRFNqMlZQSVgyVXZJRmVuWVdVNi1KT2VUcmxiaDZtT3RwTGZUUG93Ui1hTTZXT0txMEhjZnE2WkxVUFJlNGJPNzhZVXgxb3R4a05UTllhbUxpdw?oc=5",
+     "categories": [
+      "Sanksi / denda"
+     ],
+     "severity": "sedang"
+    },
+    {
+     "date": "2026-11-19",
+     "title": "DSSA Hormati Denda Rp1,5 Triliun dari OJK",
+     "source": "Lensa Hukum",
+     "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1nZTRvZ3pKekx1cWdWWnhHWi1pbXBaWERNcWVwc0pBckxfd0daSE1waUY3Vk5XNEhxSHlmNmZ2bFFIRnowV1diTWU5RnNlV1NNeUNNQjlWa3EydHExeWJUVTIwY3lzRTU1U1lNRGZ0YVNvUFE?oc=5",
+     "categories": [
+      "Sanksi / denda"
+     ],
+     "severity": "sedang"
+    }
+   ],
    "foreign_5d": -18536601500.0,
    "foreign_20d": -116387622000.0,
    "foreign_20d_pct": -0.077373,
@@ -22559,7 +22610,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -37.3,
+    "score": -37.9,
     "signal": "SELL"
    },
    "long": {
@@ -22591,7 +22642,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -46.8,
+    "score": -47.4,
     "signal": "SELL"
    },
    "long": {
@@ -22753,9 +22804,9 @@
     },
     {
      "date": "2026-11-24",
-     "title": "BSI Raup Laba Rp 6,1 Triliun, Mirae Asset Ungkap Prospek Saham BRIS Usai Rights Issue",
+     "title": "BSI (BRIS) Bukukan Laba Rp 6,01 Triliun & Bersiap Right Issue, Simak Rekomendasinya",
      "source": "kontan.co.id",
-     "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQSnJ0UmFGMEY0MzlqWE04TjZzTHBhVEpGWjdpc0RDRVFjM3I3bTlpTXdfQjVORXhGSnozQ2FzV3VsVFlPaEYyWHktVDRPUF84cW52X01ZQnVHWlZmZDJ5TjctenU0ZVZiaU1KUHRpeHA0NEdBZUlwbWNMWEMzNjlsdU5Bb09QSmk1ME1Ga0UzSDd4VjV4bzBvUDMxOGZpNk51bmZOeFNiWldydzVkN2E3SDluMmF6QTR4bUHSAbMBQVVfeXFMTURzV0ZTSVAtMmphVlR5WWVGRDVMYXJncVowOXpneVpEb0dCVEdjak95QjhPb1ZEZWNQU0RxclRLQjR1eWU0YThMeDFYb045TTRtNWpaZmxrYUFIbGRUXzNTUDJ4RWdJSEVxdDF4TFNvZTdsS2VyVldPUkhwcGttNzVwc3VnRHVCNkVpcjhSVVR3bEFsWW5CMDFfV08xOEQtMTVpWTNQX3BRSnhDNGR0NVhyWWM?oc=5",
+     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQZTAwYWxZUGVDSjJLZjBhUUNmbkljekxHQWtsODFTc2Q5Wko3V1NmVnAzRC00S1dvQTE1Zk9NYkI4Y2NXWjMtaC1uakJONEZHaUVuVENoWnFIXy1NNlNkSlo4VzFQS09XaUxSNFlrZ3hPNE9Rc1d3b002MWNEYkFBb0YxMms4T0NPUzNQQzNXUXF0bEFFLWhQbDRQc0RrMHBtWXllaGI1Z1loMTdqYW5EcFVn0gGrAUFVX3lxTE1NNzZvTENKVV9OQy1jZjB0a0Fua1NNMzdPTU9YZFU5bHNsRkJ6eUVMWjlEVTZZb0FMbk5ybnAtXzd2clFUekhBcEo2S3l2VDJtYWdqdWQyRWZva3o1OHpZOU9BR3pyVTVMeHdsOFZFOW9hYkl0ZWZXdEl0SGJVSERybEw4MDVBeVlNclNkRDE5YnM0cm8yZzhsS2I2MGZnZmNWX0tET2hMZklwZw?oc=5",
      "categories": [
       "Right issue (dilusi)"
      ],
@@ -22763,9 +22814,19 @@
     },
     {
      "date": "2026-11-24",
-     "title": "BSI (BRIS) Bukukan Laba Rp 6,01 Triliun & Bersiap Right Issue, Simak Rekomendasinya",
+     "title": "BSI (BRIS) Akui Laba per Saham Berpotensi Terdilusi dalam Jangka Pendek Imbas Rights Issue",
+     "source": "InvestorTrust",
+     "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxONUQ1VTcyLWpfeGE0S2pEV1gwTzhKRDU2cHNnTVNyMTVURzFNNi1GQ3RNUXdLLW5jQ2REWWk1YWFWd1hZc0FxMkR0dDBFZmpCZU9YR2I0V2pWckpBQmE2RXdVVDhGQmRkUFBfTk90Y2ZVeEc3RmdEcGdBQUZHSnpWZEg3NkJnaTVmRS00UmprUm5FdGx3SmpTV0t0aXhhQ0N5STBZZHdFQ3lTdjFsTGhJTGF6R1VZWFhRS3ZmS1dUWGpXYl9Ka0E?oc=5",
+     "categories": [
+      "Right issue (dilusi)"
+     ],
+     "severity": "sedang"
+    },
+    {
+     "date": "2026-11-24",
+     "title": "BSI Raup Laba Rp 6,1 Triliun, Mirae Asset Ungkap Prospek Saham BRIS Usai Rights Issue",
      "source": "kontan.co.id",
-     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQZTAwYWxZUGVDSjJLZjBhUUNmbkljekxHQWtsODFTc2Q5Wko3V1NmVnAzRC00S1dvQTE1Zk9NYkI4Y2NXWjMtaC1uakJONEZHaUVuVENoWnFIXy1NNlNkSlo4VzFQS09XaUxSNFlrZ3hPNE9Rc1d3b002MWNEYkFBb0YxMms4T0NPUzNQQzNXUXF0bEFFLWhQbDRQc0RrMHBtWXllaGI1Z1loMTdqYW5EcFVn0gGrAUFVX3lxTE1NNzZvTENKVV9OQy1jZjB0a0Fua1NNMzdPTU9YZFU5bHNsRkJ6eUVMWjlEVTZZb0FMbk5ybnAtXzd2clFUekhBcEo2S3l2VDJtYWdqdWQyRWZva3o1OHpZOU9BR3pyVTVMeHdsOFZFOW9hYkl0ZWZXdEl0SGJVSERybEw4MDVBeVlNclNkRDE5YnM0cm8yZzhsS2I2MGZnZmNWX0tET2hMZklwZw?oc=5",
+     "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQSnJ0UmFGMEY0MzlqWE04TjZzTHBhVEpGWjdpc0RDRVFjM3I3bTlpTXdfQjVORXhGSnozQ2FzV3VsVFlPaEYyWHktVDRPUF84cW52X01ZQnVHWlZmZDJ5TjctenU0ZVZiaU1KUHRpeHA0NEdBZUlwbWNMWEMzNjlsdU5Bb09QSmk1ME1Ga0UzSDd4VjV4bzBvUDMxOGZpNk51bmZOeFNiWldydzVkN2E3SDluMmF6QTR4bUHSAbMBQVVfeXFMTURzV0ZTSVAtMmphVlR5WWVGRDVMYXJncVowOXpneVpEb0dCVEdjak95QjhPb1ZEZWNQU0RxclRLQjR1eWU0YThMeDFYb045TTRtNWpaZmxrYUFIbGRUXzNTUDJ4RWdJSEVxdDF4TFNvZTdsS2VyVldPUkhwcGttNzVwc3VnRHVCNkVpcjhSVVR3bEFsWW5CMDFfV08xOEQtMTVpWTNQX3BRSnhDNGR0NVhyWWM?oc=5",
      "categories": [
       "Right issue (dilusi)"
      ],
@@ -23006,7 +23067,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -64.9,
+    "score": -65.4,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23070,7 +23131,7 @@
     "signal": "HOLD"
    },
    "medium": {
-    "score": -61.9,
+    "score": -62.5,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23155,7 +23216,18 @@
    "pb": 0.679261,
    "roe": 0.10725,
    "div_yield": 0.1044,
-   "news": null,
+   "news": [
+    {
+     "date": "2026-11-20",
+     "title": "Free Float Kurang, Induk CIMB Niaga Pertimbangkan Opsi Delisting BNGA",
+     "source": "Emitennews.com",
+     "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSkJ6UzRHQi1PZk5FQ29Uc3JkTXdUa0RXSzlOM0hUUmF6aDhhUjg1VW9lR2RVdHV5OW12MUhOZEd5cjhUa29nNXR3WXFaT2JGWnFITGpuRjVub0NNcmNvb2UxUUluTzBoQWs1VWdhWFIwdFVINTVmOGVYQndGUVh6eDc2ZUpSVTV3cUhjbkFQNkViUHFQNl9ncm9sX3U?oc=5",
+     "categories": [
+      "Suspensi / delisting"
+     ],
+     "severity": "tinggi"
+    }
+   ],
    "foreign_5d": -2163355500.0,
    "foreign_20d": -21881579500.0,
    "foreign_20d_pct": -0.118619,
@@ -23230,7 +23302,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -61.9,
+    "score": -62.5,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23326,7 +23398,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -65.8,
+    "score": -66.4,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23422,7 +23494,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -71.0,
+    "score": -71.6,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23486,7 +23558,7 @@
     "signal": "STRONG SELL"
    },
    "medium": {
-    "score": -74.2,
+    "score": -74.8,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23550,7 +23622,7 @@
     "signal": "STRONG SELL"
    },
    "medium": {
-    "score": -44.2,
+    "score": -44.8,
     "signal": "SELL"
    },
    "long": {
@@ -23614,7 +23686,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -46.6,
+    "score": -47.2,
     "signal": "SELL"
    },
    "long": {
@@ -23646,7 +23718,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -53.3,
+    "score": -53.9,
     "signal": "SELL"
    },
    "long": {
@@ -23742,7 +23814,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -73.8,
+    "score": -74.3,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23869,7 +23941,7 @@
     "signal": "HOLD"
    },
    "medium": {
-    "score": -37.4,
+    "score": -38.0,
     "signal": "SELL"
    },
    "long": {
@@ -23933,7 +24005,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -20.3,
+    "score": -20.9,
     "signal": "HOLD"
    },
    "long": {
@@ -24104,7 +24176,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": -52.2,
+    "score": -52.8,
     "signal": "SELL"
    },
    "long": {
@@ -24136,7 +24208,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -44.7,
+    "score": -45.3,
     "signal": "SELL"
    },
    "long": {
@@ -24200,7 +24272,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -94.0,
+    "score": -94.6,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -24232,7 +24304,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": 24.8,
+    "score": 24.2,
     "signal": "HOLD"
    },
    "long": {
@@ -24456,7 +24528,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": 29.8,
+    "score": 29.3,
     "signal": "HOLD"
    },
    "long": {
@@ -24552,7 +24624,7 @@
     "signal": "HOLD"
    },
    "medium": {
-    "score": -13.5,
+    "score": -14.1,
     "signal": "HOLD"
    },
    "long": {
@@ -24584,7 +24656,7 @@
     "signal": "HOLD"
    },
    "medium": {
-    "score": -32.6,
+    "score": -33.2,
     "signal": "SELL"
    },
    "long": {
@@ -24716,8 +24788,8 @@
     {
      "date": "2026-11-23",
      "title": "Gak Alihkan Saham SMCB ke Publik, SMGR Kena Sanksi OJK",
-     "source": "",
-     "link": "https://www.cnbcindonesia.com/market/20261123102451-17-787489/gak-alihkan-saham-smcb-ke-publik-smgr-kena-sanksi-ojk",
+     "source": "CNBC Indonesia",
+     "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNS1B5cUtndElsWURlMHhlaGpTSHJYa0lBZEVySUt1VXNyTF9PRUdnU241SzlrQlVkNUIwcUYtN3F6aUlaR0YyWnhCQnJEUFhLcHJzTGRmYnUzVGZzMFYxZ0FQZVRfMkRiN19NaDhCeXd2VnpSVmpwVmFVUTRNRy1maTNQSTl1LVdjX09vLUhzRGtDdXV4NU1OMVZfaGhaWEdKcy10RENXb1FZUWFxTVNKdHZqSEVBd9IBuwFBVV95cUxOd1NLdjU3NnBCeV9qTzV4Q0Naa0p0VmJCSXNuSnVGTWIxVkpRT0FpTHE2QW1Gdl9GbTVidXlsYVlMQVBteHdCaXQxMVVjNExEMDA4Q0d4U2NXaEhyakJIbEdDQXBDcUJyQkNRRC16elg1RE8yWkhNaGl4bTJRbkNZbkNoalc3djlGNVVpRGw4RTBGYVRYaDdCUm8zXy1LUEU3RWJkTERKSkdCdU9rTnUweHNjNi1SWTludkc0?oc=5",
      "categories": [
       "Sanksi / denda"
      ],
@@ -24776,7 +24848,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -79.8,
+    "score": -80.4,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -24968,7 +25040,7 @@
     "signal": "STRONG SELL"
    },
    "medium": {
-    "score": -73.2,
+    "score": -73.8,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -25032,7 +25104,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -82.9,
+    "score": -83.5,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -25064,7 +25136,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -54.6,
+    "score": -55.1,
     "signal": "SELL"
    },
    "long": {
@@ -25096,7 +25168,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -74.1,
+    "score": -74.7,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -25245,18 +25317,7 @@
    "pb": null,
    "roe": 0.04053,
    "div_yield": 0.006,
-   "news": [
-    {
-     "date": "2026-11-21",
-     "title": "Sengketa Lahan Awak Mas Tekan Saham Indika Energy",
-     "source": "www.suaralandak.co.id",
-     "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5WVExPZ2twQlUyZEJxVDA2U2k5MHpiSnhUcXd6N2g0cjFNV3l3U2NsMnd2eVdYeUthdGI2X3NMMUFpbVExWVFlTDRRXzRMa2tsQ0xPNk5NYnNIbGFNdnVGMU5iX0RWOXJ2V21QZUtpamFXYXhZWkE?oc=5",
-     "categories": [
-      "Gugatan"
-     ],
-     "severity": "sedang"
-    }
-   ],
+   "news": null,
    "foreign_5d": 689049000.0,
    "foreign_20d": 14786006000.0,
    "foreign_20d_pct": 0.019198,
@@ -25363,8 +25424,8 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -59.9,
-    "signal": "SELL"
+    "score": -60.0,
+    "signal": "STRONG SELL"
    },
    "long": {
     "score": -6.0,
@@ -25491,7 +25552,7 @@
     "signal": "HOLD"
    },
    "medium": {
-    "score": -37.4,
+    "score": -37.9,
     "signal": "SELL"
    },
    "long": {
@@ -26675,14 +26736,17 @@
     }
    },
    "google": {
-    "ok": 108,
-    "fail": 0,
-    "items": 7449
+    "ok": 107,
+    "fail": 1,
+    "items": 8053,
+    "errors": {
+     "HTTP 429": 1
+    }
    },
    "skipped_budget": 0,
-   "recent_items": 1238,
-   "stocks_flagged": 6,
-   "seconds": 91
+   "recent_items": 1347,
+   "stocks_flagged": 7,
+   "seconds": 88
   },
   "items": {
    "BRIS": [
@@ -26698,16 +26762,6 @@
     },
     {
      "date": "2026-11-24",
-     "title": "BSI Raup Laba Rp 6,1 Triliun, Mirae Asset Ungkap Prospek Saham BRIS Usai Rights Issue",
-     "source": "kontan.co.id",
-     "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQSnJ0UmFGMEY0MzlqWE04TjZzTHBhVEpGWjdpc0RDRVFjM3I3bTlpTXdfQjVORXhGSnozQ2FzV3VsVFlPaEYyWHktVDRPUF84cW52X01ZQnVHWlZmZDJ5TjctenU0ZVZiaU1KUHRpeHA0NEdBZUlwbWNMWEMzNjlsdU5Bb09QSmk1ME1Ga0UzSDd4VjV4bzBvUDMxOGZpNk51bmZOeFNiWldydzVkN2E3SDluMmF6QTR4bUHSAbMBQVVfeXFMTURzV0ZTSVAtMmphVlR5WWVGRDVMYXJncVowOXpneVpEb0dCVEdjak95QjhPb1ZEZWNQU0RxclRLQjR1eWU0YThMeDFYb045TTRtNWpaZmxrYUFIbGRUXzNTUDJ4RWdJSEVxdDF4TFNvZTdsS2VyVldPUkhwcGttNzVwc3VnRHVCNkVpcjhSVVR3bEFsWW5CMDFfV08xOEQtMTVpWTNQX3BRSnhDNGR0NVhyWWM?oc=5",
-     "categories": [
-      "Right issue (dilusi)"
-     ],
-     "severity": "sedang"
-    },
-    {
-     "date": "2026-11-24",
      "title": "BSI (BRIS) Bukukan Laba Rp 6,01 Triliun & Bersiap Right Issue, Simak Rekomendasinya",
      "source": "kontan.co.id",
      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQZTAwYWxZUGVDSjJLZjBhUUNmbkljekxHQWtsODFTc2Q5Wko3V1NmVnAzRC00S1dvQTE1Zk9NYkI4Y2NXWjMtaC1uakJONEZHaUVuVENoWnFIXy1NNlNkSlo4VzFQS09XaUxSNFlrZ3hPNE9Rc1d3b002MWNEYkFBb0YxMms4T0NPUzNQQzNXUXF0bEFFLWhQbDRQc0RrMHBtWXllaGI1Z1loMTdqYW5EcFVn0gGrAUFVX3lxTE1NNzZvTENKVV9OQy1jZjB0a0Fua1NNMzdPTU9YZFU5bHNsRkJ6eUVMWjlEVTZZb0FMbk5ybnAtXzd2clFUekhBcEo2S3l2VDJtYWdqdWQyRWZva3o1OHpZOU9BR3pyVTVMeHdsOFZFOW9hYkl0ZWZXdEl0SGJVSERybEw4MDVBeVlNclNkRDE5YnM0cm8yZzhsS2I2MGZnZmNWX0tET2hMZklwZw?oc=5",
@@ -26715,28 +26769,60 @@
       "Right issue (dilusi)"
      ],
      "severity": "sedang"
+    },
+    {
+     "date": "2026-11-24",
+     "title": "BSI (BRIS) Akui Laba per Saham Berpotensi Terdilusi dalam Jangka Pendek Imbas Rights Issue",
+     "source": "InvestorTrust",
+     "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxONUQ1VTcyLWpfeGE0S2pEV1gwTzhKRDU2cHNnTVNyMTVURzFNNi1GQ3RNUXdLLW5jQ2REWWk1YWFWd1hZc0FxMkR0dDBFZmpCZU9YR2I0V2pWckpBQmE2RXdVVDhGQmRkUFBfTk90Y2ZVeEc3RmdEcGdBQUZHSnpWZEg3NkJnaTVmRS00UmprUm5FdGx3SmpTV0t0aXhhQ0N5STBZZHdFQ3lTdjFsTGhJTGF6R1VZWFhRS3ZmS1dUWGpXYl9Ka0E?oc=5",
+     "categories": [
+      "Right issue (dilusi)"
+     ],
+     "severity": "sedang"
+    },
+    {
+     "date": "2026-11-24",
+     "title": "BSI Raup Laba Rp 6,1 Triliun, Mirae Asset Ungkap Prospek Saham BRIS Usai Rights Issue",
+     "source": "kontan.co.id",
+     "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQSnJ0UmFGMEY0MzlqWE04TjZzTHBhVEpGWjdpc0RDRVFjM3I3bTlpTXdfQjVORXhGSnozQ2FzV3VsVFlPaEYyWHktVDRPUF84cW52X01ZQnVHWlZmZDJ5TjctenU0ZVZiaU1KUHRpeHA0NEdBZUlwbWNMWEMzNjlsdU5Bb09QSmk1ME1Ga0UzSDd4VjV4bzBvUDMxOGZpNk51bmZOeFNiWldydzVkN2E3SDluMmF6QTR4bUHSAbMBQVVfeXFMTURzV0ZTSVAtMmphVlR5WWVGRDVMYXJncVowOXpneVpEb0dCVEdjak95QjhPb1ZEZWNQU0RxclRLQjR1eWU0YThMeDFYb045TTRtNWpaZmxrYUFIbGRUXzNTUDJ4RWdJSEVxdDF4TFNvZTdsS2VyVldPUkhwcGttNzVwc3VnRHVCNkVpcjhSVVR3bEFsWW5CMDFfV08xOEQtMTVpWTNQX3BRSnhDNGR0NVhyWWM?oc=5",
+     "categories": [
+      "Right issue (dilusi)"
+     ],
+     "severity": "sedang"
     }
    ],
-   "SMGR": [
+   "DSSA": [
     {
      "date": "2026-11-23",
-     "title": "Gak Alihkan Saham SMCB ke Publik, SMGR Kena Sanksi OJK",
-     "source": "",
-     "link": "https://www.cnbcindonesia.com/market/20261123102451-17-787489/gak-alihkan-saham-smcb-ke-publik-smgr-kena-sanksi-ojk",
+     "title": "Ujian Integritas Pasar Modal: HSC, Manipulasi Saham DSSA Hingga Denda 1,5 T Halaman 1",
+     "source": "Kompasiana.com",
+     "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQYmc1bWhtV3VsbnR2M0p6TXMzWm83RnJhYURoeXNGa1VYUjdnM0U1Q0p0N2tTNUdUV1A4WnFOVmxhTUU0SDY5UnFPZXpVc2FQaUtNZ2RCSVR1bGlmOXh1UWpaTFFScldRd25WbjktMDFYM01sTnhpVHM3Q3hfcmVvcFpVWXM5MXdHMy1ZNXlJRFNqMlZQSVgyVXZJRmVuWVdVNi1KT2VUcmxiaDZtT3RwTGZUUG93Ui1hTTZXT0txMEhjZnE2WkxVUFJlNGJPNzhZVXgxb3R4a05UTllhbUxpdw?oc=5",
      "categories": [
       "Sanksi / denda"
      ],
      "severity": "sedang"
     },
     {
-     "date": "2026-11-21",
-     "title": "OJK Denda GOOD SMGR dan MARK atas Pelanggaran Pasar Modal",
-     "source": "www.suaralandak.co.id",
-     "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5NNEVkV3lfY3dhVTFGYkNkRzdEekJETHQ1eWtxYVpSRkxkMTdoWllGRTB5dXdZWFpDZTI4eWJoVlJ4ZDJmSTNUcnhpYXFXcEZDYmREWWZhclRkRmE0NzA2MkxtdW8?oc=5",
+     "date": "2026-11-19",
+     "title": "DSSA Hormati Denda Rp1,5 Triliun dari OJK",
+     "source": "Lensa Hukum",
+     "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1nZTRvZ3pKekx1cWdWWnhHWi1pbXBaWERNcWVwc0pBckxfd0daSE1waUY3Vk5XNEhxSHlmNmZ2bFFIRnowV1diTWU5RnNlV1NNeUNNQjlWa3EydHExeWJUVTIwY3lzRTU1U1lNRGZ0YVNvUFE?oc=5",
      "categories": [
       "Sanksi / denda"
      ],
      "severity": "sedang"
+    }
+   ],
+   "BNGA": [
+    {
+     "date": "2026-11-20",
+     "title": "Free Float Kurang, Induk CIMB Niaga Pertimbangkan Opsi Delisting BNGA",
+     "source": "Emitennews.com",
+     "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSkJ6UzRHQi1PZk5FQ29Uc3JkTXdUa0RXSzlOM0hUUmF6aDhhUjg1VW9lR2RVdHV5OW12MUhOZEd5cjhUa29nNXR3WXFaT2JGWnFITGpuRjVub0NNcmNvb2UxUUluTzBoQWs1VWdhWFIwdFVINTVmOGVYQndGUVh6eDc2ZUpSVTV3cUhjbkFQNkViUHFQNl9ncm9sX3U?oc=5",
+     "categories": [
+      "Suspensi / delisting"
+     ],
+     "severity": "tinggi"
     }
    ],
    "PTRO": [
@@ -26795,14 +26881,24 @@
      "severity": "sedang"
     }
    ],
-   "INDY": [
+   "SMGR": [
+    {
+     "date": "2026-11-23",
+     "title": "Gak Alihkan Saham SMCB ke Publik, SMGR Kena Sanksi OJK",
+     "source": "CNBC Indonesia",
+     "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNS1B5cUtndElsWURlMHhlaGpTSHJYa0lBZEVySUt1VXNyTF9PRUdnU241SzlrQlVkNUIwcUYtN3F6aUlaR0YyWnhCQnJEUFhLcHJzTGRmYnUzVGZzMFYxZ0FQZVRfMkRiN19NaDhCeXd2VnpSVmpwVmFVUTRNRy1maTNQSTl1LVdjX09vLUhzRGtDdXV4NU1OMVZfaGhaWEdKcy10RENXb1FZUWFxTVNKdHZqSEVBd9IBuwFBVV95cUxOd1NLdjU3NnBCeV9qTzV4Q0Naa0p0VmJCSXNuSnVGTWIxVkpRT0FpTHE2QW1Gdl9GbTVidXlsYVlMQVBteHdCaXQxMVVjNExEMDA4Q0d4U2NXaEhyakJIbEdDQXBDcUJyQkNRRC16elg1RE8yWkhNaGl4bTJRbkNZbkNoalc3djlGNVVpRGw4RTBGYVRYaDdCUm8zXy1LUEU3RWJkTERKSkdCdU9rTnUweHNjNi1SWTludkc0?oc=5",
+     "categories": [
+      "Sanksi / denda"
+     ],
+     "severity": "sedang"
+    },
     {
      "date": "2026-11-21",
-     "title": "Sengketa Lahan Awak Mas Tekan Saham Indika Energy",
+     "title": "OJK Denda GOOD SMGR dan MARK atas Pelanggaran Pasar Modal",
      "source": "www.suaralandak.co.id",
-     "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5WVExPZ2twQlUyZEJxVDA2U2k5MHpiSnhUcXd6N2g0cjFNV3l3U2NsMnd2eVdYeUthdGI2X3NMMUFpbVExWVFlTDRRXzRMa2tsQ0xPNk5NYnNIbGFNdnVGMU5iX0RWOXJ2V21QZUtpamFXYXhZWkE?oc=5",
+     "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5NNEVkV3lfY3dhVTFGYkNkRzdEekJETHQ1eWtxYVpSRkxkMTdoWllGRTB5dXdZWFpDZTI4eWJoVlJ4ZDJmSTNUcnhpYXFXcEZDYmREWWZhclRkRmE0NzA2MkxtdW8?oc=5",
      "categories": [
-      "Gugatan"
+      "Sanksi / denda"
      ],
      "severity": "sedang"
     }
