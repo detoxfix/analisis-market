@@ -1,11 +1,11 @@
 {
  "failed": {
-  "curl_safari": "2026-11-26T19:44:43",
-  "cloudscraper": "2026-11-26T19:44:43",
-  "requests": "2026-11-26T19:44:43",
-  "browser": "2026-11-26T19:44:43",
-  "curl_firefox": "2026-11-26T19:44:43",
-  "curl_chrome": "2026-11-26T19:44:43"
+  "curl_safari": "2026-11-26T22:31:56",
+  "cloudscraper": "2026-11-26T22:31:56",
+  "requests": "2026-11-26T22:31:56",
+  "browser": "2026-11-26T22:31:56",
+  "curl_firefox": "2026-11-26T22:31:56",
+  "curl_chrome": "2026-11-26T22:31:56"
  },
  "method": "curl_firefox"
 }

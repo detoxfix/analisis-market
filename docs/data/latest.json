@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27 02:44",
+ "generated_at": "2026-11-27 05:31",
  "as_of": "2026-11-26",
  "demo": false,
  "data_status": {
@@ -9,8 +9,8 @@
   "stale": false,
   "text": null,
   "hourly": {
-   "filled": 791,
-   "date": "2026-11-26"
+   "filled": 0,
+   "date": null
   }
  },
  "params": {
@@ -31,12 +31,18 @@
   }
  },
  "market": {
-  "bench": 5242.171875,
-  "bench_chg": 0.008573,
+  "bench": 5197.61377,
+  "bench_chg": -0.008389,
   "regime": "Bearish",
   "universe": 107,
   "scanned": 869,
   "series": [
+   [
+    "2026-05-20",
+    6318.5,
+    7246.37,
+    7983.04
+   ],
    [
     "2026-05-21",
     6094.94,
@@ -810,12 +816,6 @@
     5197.61,
     5591.87,
     6524.16
-   ],
-   [
-    "2026-11-26",
-    5242.17,
-    5567.47,
-    6505.47
    ]
   ],
   "above_sma50": false,
@@ -839,9 +839,9 @@
      "price": 1485.0,
      "chg_1d": 0.027682,
      "mcap": 20652610027500.0,
-     "score": 80.0,
+     "score": 65.0,
      "signal": "STRONG BUY",
-     "confidence": 0.8,
+     "confidence": 0.65,
      "atr_pct": 0.036741,
      "reasons": [
       "Harga di atas EMA20 (tren pendek naik)",
@@ -3126,7 +3126,7 @@
      "reasons": [
       "Harga di bawah EMA20 (tren pendek turun)",
       "EMA9 di bawah EMA20 (dead cross pendek)",
-      "Volume 1.9x rata-rata pada hari turun (distribusi)"
+      "Volume 1.6x rata-rata pada hari turun (distribusi)"
      ],
      "risks": [
       "Histogram MACD positif & menguat"
@@ -3894,18 +3894,7 @@
       "IHSG di bawah EMA20 (pasar lemah)"
      ],
      "risks": [],
-     "news": [
-      {
-       "date": "2026-11-21",
-       "title": "Sengketa Lahan Awak Mas Tekan Saham Indika Energy",
-       "source": "www.suaralandak.co.id",
-       "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5WVExPZ2twQlUyZEJxVDA2U2k5MHpiSnhUcXd6N2g0cjFNV3l3U2NsMnd2eVdYeUthdGI2X3NMMUFpbVExWVFlTDRRXzRMa2tsQ0xPNk5NYnNIbGFNdnVGMU5iX0RWOXJ2V21QZUtpamFXYXhZWkE?oc=5",
-       "categories": [
-        "Gugatan"
-       ],
-       "severity": "sedang"
-      }
-     ],
+     "news": null,
      "foreign_5d": 689049000.0,
      "foreign_20d": 14786006000.0,
      "foreign_20d_pct": 0.019198,
@@ -4961,6 +4950,26 @@
      ],
      "news": [
       {
+       "date": "2026-11-26",
+       "title": "PTRO Dapat Restu Rights Issue dan Penjaminan Aset",
+       "source": "investor.id",
+       "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOT2tlSlJDSFlkNVFxSVlXbDBVbWpKaWdidXNnaER6NkhaeXVXcmZxX0hkU19ONlRTb1ROdGRUOHhaaVUxV2NDVFVVZEtmS0pGb0xldFNQc0VuRGdTN21CazRKMUwyYmVzYzloZzlJN1BTZnR0MEUtX0c3UmNFV1NqTG5tR1NFYUtoWnZn?oc=5",
+       "categories": [
+        "Right issue (dilusi)"
+       ],
+       "severity": "sedang"
+      },
+      {
+       "date": "2026-11-26",
+       "title": "Petrosea (PTRO) Resmi Kantongi Restu Rights Issue Maksimal 170 Juta Saham",
+       "source": "Rmol.id",
+       "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZm5uXzVocUZudENKTkhGaU8tTXpUZE5wbEYxR0ZBcEJnRDBWSU82WDFmR1ZGa29FOUFDSi1xZmtlOTZlUkJXX3lacWdyc1E5dF9SZnhuaU1CUGh1ejR5cFdjaEhVNFZ6YVBYalV0aEJpNVI0SW9oaVlLS2MxOWxJVnF1U01TQXlMeExnd3NablROV25KRGRNNUdKeFBsZmNTdmpGY180UTM3YlVmdnhV?oc=5",
+       "categories": [
+        "Right issue (dilusi)"
+       ],
+       "severity": "sedang"
+      },
+      {
        "date": "2026-11-25",
        "title": "Petrosea (PTRO) Rights Issue 170 Juta Saham Baru, Cek Prospek Sahamnya",
        "source": "kontan.co.id",
@@ -4985,26 +4994,6 @@
        "title": "Rights Issue PTRO Perkuat Modal untuk Ekspansi Proyek EPC",
        "source": "Demokratis.co.id",
        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBCbGpDODlIZ2t1MTZveF9rRWNRLVRpR2hGZ21MV2pVTGxwSFFGZERwcTFWTElnNGduQzFIQUJhYkZab1BlQ2ZNNWtuenRKYjRJWVo0YmJqTjFkR2t1RGZaemxhOXc1TU0?oc=5",
-       "categories": [
-        "Right issue (dilusi)"
-       ],
-       "severity": "sedang"
-      },
-      {
-       "date": "2026-11-23",
-       "title": "PTRO Siapkan Rights Issue Maksimal 170 Juta Saham, Minta Restu RUPSLB",
-       "source": "SWA.co.id",
-       "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSFA5Z0lyWm5fZVR0V2RtQ0Z6Z2ZLQ2I5ckVWcXJLRDJ2N0JHV09kYnhmZE1ETzBRaTh3MmREMHFqSWJvMEd0TEszLXhLUzZfbERLNFNYQlhRNlFfWVItY3lFdlhXSVV6UXo4RFVaSk51QjNBNDRRNHlPSmVEMkpRZlgzMUVMaE1YbTVPd2h5dVNpWXZFR2EzSTZkV3pDYjA?oc=5",
-       "categories": [
-        "Right issue (dilusi)"
-       ],
-       "severity": "sedang"
-      },
-      {
-       "date": "2026-11-23",
-       "title": "Jadwal RUPS Hari Ini: BYAN Rombak Pengurus, PTRO Bahas Rights Issue",
-       "source": "CNBC Indonesia",
-       "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNVFJPVXVUQ2d1dEYxODkwbkNJbkJTZU96ZXNCNDYzN1o4R1J2bnpVSWxDNnBrcU05ZlJtc0pkQWt5TUlkS1BLRE5Va2pHSi1ldEtZOGNBbnFsd2l0YkE4LWVTY0taV0VXZnI3eTlEMjVPR0lzU0dUTDh4dm1iTTZnWlZVNUplUUVESkMzOUQwOHlfZXlqQlhaVHNUTnhkcWlkM1V4ckhZakktbUVtRVhpUDBIU3lvNmVEaTlHTHJmX1NZQTQ4WkHSAcsBQVVfeXFMTnBwZzJyazlHMU50UkJRRERfR0c3VTBEa0pOY1Nzdm5lWGJYZGZKMlN0MUY5eWtMZVduT1V3S0phb2dEVUlqUmlzMzRJZUlxazhGU2dHbEdMYV8zb2lMTEZyQklrT3g1YmtNaHByLVRIbnAyVkloMXNLT3dCa25xSE40TlJvY1AzZmoyckNqQzhZdUZNN1RFd0VFTmpFY2Jkc2l4MzBEVHBOb0stNUdxUzVDQm9aRXV3S0MtZFpMRTVJckNqUEUxcEhLdUU?oc=5",
        "categories": [
         "Right issue (dilusi)"
        ],
@@ -7342,7 +7331,18 @@
      "risks": [
       "Histogram MACD positif & menguat"
      ],
-     "news": null,
+     "news": [
+      {
+       "date": "2026-11-23",
+       "title": "MDKA Cetak Laba USD157 Juta Saat Saham Anjlok",
+       "source": "شبكة تواصل الإخبارية",
+       "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5VTEc5WGliVWloXy0xU0tCZnJqOC1ZV3JLaHRnZjk5a1Z4a1lHYTZPVkM1bHNVOGhEdE5ldzB6aEFmMV93c0dud2lpSTFldllWR0V3?oc=5",
+       "categories": [
+        "Kinerja memburuk"
+       ],
+       "severity": "sedang"
+      }
+     ],
      "foreign_5d": -18807044000.0,
      "foreign_20d": 116993613000.0,
      "foreign_20d_pct": 0.054256,
@@ -8402,7 +8402,7 @@
      "score": 100.0,
      "signal": "STRONG BUY",
      "confidence": 1.0,
-     "atr_pct": 0.063262,
+     "atr_pct": 0.063518,
      "reasons": [
       "Harga di atas SMA50",
       "SMA50 > SMA100 & SMA50 menanjak (uptrend menengah)",
@@ -8846,7 +8846,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "SMA50 > SMA100 & SMA50 menanjak (uptrend menengah)",
-      "Outperform IHSG +31.4% (3 bulan)"
+      "Outperform IHSG +32.1% (3 bulan)"
      ],
      "risks": [],
      "news": null,
@@ -8956,7 +8956,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 21: tren naik kuat",
-      "Outperform IHSG +30.8% (3 bulan)"
+      "Outperform IHSG +31.5% (3 bulan)"
      ],
      "risks": [],
      "news": null,
@@ -9066,7 +9066,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 21: tren naik kuat",
-      "Outperform IHSG +24.6% (3 bulan)"
+      "Outperform IHSG +25.3% (3 bulan)"
      ],
      "risks": [],
      "news": null,
@@ -9176,7 +9176,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 28: tren naik kuat",
-      "Outperform IHSG +24.0% (3 bulan)"
+      "Outperform IHSG +24.7% (3 bulan)"
      ],
      "risks": [],
      "news": null,
@@ -9286,7 +9286,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 22: tren naik kuat",
-      "Outperform IHSG +21.7% (3 bulan)"
+      "Outperform IHSG +22.4% (3 bulan)"
      ],
      "risks": [],
      "news": null,
@@ -9506,7 +9506,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "SMA50 > SMA100 & SMA50 menanjak (uptrend menengah)",
-      "Outperform IHSG +27.0% (3 bulan)"
+      "Outperform IHSG +27.6% (3 bulan)"
      ],
      "risks": [],
      "news": null,
@@ -9616,7 +9616,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 29: tren naik kuat",
-      "Outperform IHSG +21.4% (3 bulan)"
+      "Outperform IHSG +22.1% (3 bulan)"
      ],
      "risks": [
       "Struktur MA menengah melemah"
@@ -9728,7 +9728,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 23: tren naik kuat",
-      "Outperform IHSG +19.2% (3 bulan)"
+      "Outperform IHSG +19.8% (3 bulan)"
      ],
      "risks": [
       "Struktur MA menengah melemah",
@@ -9841,7 +9841,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 31: tren naik kuat",
-      "Outperform IHSG +18.3% (3 bulan)"
+      "Outperform IHSG +19.0% (3 bulan)"
      ],
      "risks": [
       "Struktur MA menengah melemah",
@@ -9954,7 +9954,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 25: tren naik kuat",
-      "Outperform IHSG +17.9% (3 bulan)"
+      "Outperform IHSG +18.5% (3 bulan)"
      ],
      "risks": [
       "Struktur MA menengah melemah",
@@ -10574,18 +10574,7 @@
       "ADX 24: tren turun kuat"
      ],
      "risks": [],
-     "news": [
-      {
-       "date": "2026-11-21",
-       "title": "Sengketa Lahan Awak Mas Tekan Saham Indika Energy",
-       "source": "www.suaralandak.co.id",
-       "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5WVExPZ2twQlUyZEJxVDA2U2k5MHpiSnhUcXd6N2g0cjFNV3l3U2NsMnd2eVdYeUthdGI2X3NMMUFpbVExWVFlTDRRXzRMa2tsQ0xPNk5NYnNIbGFNdnVGMU5iX0RWOXJ2V21QZUtpamFXYXhZWkE?oc=5",
-       "categories": [
-        "Gugatan"
-       ],
-       "severity": "sedang"
-      }
-     ],
+     "news": null,
      "foreign_5d": 689049000.0,
      "foreign_20d": 14786006000.0,
      "foreign_20d_pct": 0.019198,
@@ -10669,9 +10658,9 @@
      "price": 2840.0,
      "chg_1d": -0.034014,
      "mcap": 21151619809360.0,
-     "score": -98.8,
+     "score": -97.8,
      "signal": "STRONG SELL",
-     "confidence": 0.988,
+     "confidence": 0.978,
      "atr_pct": 0.067886,
      "reasons": [
       "Harga di bawah SMA50",
@@ -10763,9 +10752,9 @@
      "price": 1025.0,
      "chg_1d": -0.014423,
      "mcap": 17015000000000.0,
-     "score": -94.7,
+     "score": -93.7,
      "signal": "STRONG SELL",
-     "confidence": 0.947,
+     "confidence": 0.937,
      "atr_pct": 0.057082,
      "reasons": [
       "Harga di bawah SMA50",
@@ -10857,9 +10846,9 @@
      "price": 3220.0,
      "chg_1d": 0.009404,
      "mcap": 233508660852320.0,
-     "score": -93.9,
+     "score": -92.9,
      "signal": "STRONG SELL",
-     "confidence": 0.939,
+     "confidence": 0.929,
      "atr_pct": 0.062282,
      "reasons": [
       "Harga di bawah SMA50",
@@ -10951,9 +10940,9 @@
      "price": 478.0,
      "chg_1d": 0.0,
      "mcap": 8860062331890.0,
-     "score": -91.8,
+     "score": -90.8,
      "signal": "STRONG SELL",
-     "confidence": 0.918,
+     "confidence": 0.908,
      "atr_pct": 0.041613,
      "reasons": [
       "Harga di bawah SMA50",
@@ -11431,7 +11420,18 @@
       "ADX 28: tren turun kuat"
      ],
      "risks": [],
-     "news": null,
+     "news": [
+      {
+       "date": "2026-11-23",
+       "title": "MDKA Cetak Laba USD157 Juta Saat Saham Anjlok",
+       "source": "شبكة تواصل الإخبارية",
+       "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5VTEc5WGliVWloXy0xU0tCZnJqOC1ZV3JLaHRnZjk5a1Z4a1lHYTZPVkM1bHNVOGhEdE5ldzB6aEFmMV93c0dud2lpSTFldllWR0V3?oc=5",
+       "categories": [
+        "Kinerja memburuk"
+       ],
+       "severity": "sedang"
+      }
+     ],
      "foreign_5d": -18807044000.0,
      "foreign_20d": 116993613000.0,
      "foreign_20d_pct": 0.054256,
@@ -11903,6 +11903,26 @@
      "risks": [],
      "news": [
       {
+       "date": "2026-11-26",
+       "title": "PTRO Dapat Restu Rights Issue dan Penjaminan Aset",
+       "source": "investor.id",
+       "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOT2tlSlJDSFlkNVFxSVlXbDBVbWpKaWdidXNnaER6NkhaeXVXcmZxX0hkU19ONlRTb1ROdGRUOHhaaVUxV2NDVFVVZEtmS0pGb0xldFNQc0VuRGdTN21CazRKMUwyYmVzYzloZzlJN1BTZnR0MEUtX0c3UmNFV1NqTG5tR1NFYUtoWnZn?oc=5",
+       "categories": [
+        "Right issue (dilusi)"
+       ],
+       "severity": "sedang"
+      },
+      {
+       "date": "2026-11-26",
+       "title": "Petrosea (PTRO) Resmi Kantongi Restu Rights Issue Maksimal 170 Juta Saham",
+       "source": "Rmol.id",
+       "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZm5uXzVocUZudENKTkhGaU8tTXpUZE5wbEYxR0ZBcEJnRDBWSU82WDFmR1ZGa29FOUFDSi1xZmtlOTZlUkJXX3lacWdyc1E5dF9SZnhuaU1CUGh1ejR5cFdjaEhVNFZ6YVBYalV0aEJpNVI0SW9oaVlLS2MxOWxJVnF1U01TQXlMeExnd3NablROV25KRGRNNUdKeFBsZmNTdmpGY180UTM3YlVmdnhV?oc=5",
+       "categories": [
+        "Right issue (dilusi)"
+       ],
+       "severity": "sedang"
+      },
+      {
        "date": "2026-11-25",
        "title": "Petrosea (PTRO) Rights Issue 170 Juta Saham Baru, Cek Prospek Sahamnya",
        "source": "kontan.co.id",
@@ -11927,26 +11947,6 @@
        "title": "Rights Issue PTRO Perkuat Modal untuk Ekspansi Proyek EPC",
        "source": "Demokratis.co.id",
        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBCbGpDODlIZ2t1MTZveF9rRWNRLVRpR2hGZ21MV2pVTGxwSFFGZERwcTFWTElnNGduQzFIQUJhYkZab1BlQ2ZNNWtuenRKYjRJWVo0YmJqTjFkR2t1RGZaemxhOXc1TU0?oc=5",
-       "categories": [
-        "Right issue (dilusi)"
-       ],
-       "severity": "sedang"
-      },
-      {
-       "date": "2026-11-23",
-       "title": "PTRO Siapkan Rights Issue Maksimal 170 Juta Saham, Minta Restu RUPSLB",
-       "source": "SWA.co.id",
-       "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSFA5Z0lyWm5fZVR0V2RtQ0Z6Z2ZLQ2I5ckVWcXJLRDJ2N0JHV09kYnhmZE1ETzBRaTh3MmREMHFqSWJvMEd0TEszLXhLUzZfbERLNFNYQlhRNlFfWVItY3lFdlhXSVV6UXo4RFVaSk51QjNBNDRRNHlPSmVEMkpRZlgzMUVMaE1YbTVPd2h5dVNpWXZFR2EzSTZkV3pDYjA?oc=5",
-       "categories": [
-        "Right issue (dilusi)"
-       ],
-       "severity": "sedang"
-      },
-      {
-       "date": "2026-11-23",
-       "title": "Jadwal RUPS Hari Ini: BYAN Rombak Pengurus, PTRO Bahas Rights Issue",
-       "source": "CNBC Indonesia",
-       "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNVFJPVXVUQ2d1dEYxODkwbkNJbkJTZU96ZXNCNDYzN1o4R1J2bnpVSWxDNnBrcU05ZlJtc0pkQWt5TUlkS1BLRE5Va2pHSi1ldEtZOGNBbnFsd2l0YkE4LWVTY0taV0VXZnI3eTlEMjVPR0lzU0dUTDh4dm1iTTZnWlZVNUplUUVESkMzOUQwOHlfZXlqQlhaVHNUTnhkcWlkM1V4ckhZakktbUVtRVhpUDBIU3lvNmVEaTlHTHJmX1NZQTQ4WkHSAcsBQVVfeXFMTnBwZzJyazlHMU50UkJRRERfR0c3VTBEa0pOY1Nzdm5lWGJYZGZKMlN0MUY5eWtMZVduT1V3S0phb2dEVUlqUmlzMzRJZUlxazhGU2dHbEdMYV8zb2lMTEZyQklrT3g1YmtNaHByLVRIbnAyVkloMXNLT3dCa25xSE40TlJvY1AzZmoyckNqQzhZdUZNN1RFd0VFTmpFY2Jkc2l4MzBEVHBOb0stNUdxUzVDQm9aRXV3S0MtZFpMRTVJckNqUEUxcEhLdUU?oc=5",
        "categories": [
         "Right issue (dilusi)"
        ],
@@ -12788,9 +12788,9 @@
      "price": 2300.0,
      "chg_1d": -0.004329,
      "mcap": 37715400000000.0,
-     "score": -82.7,
+     "score": -81.7,
      "signal": "STRONG SELL",
-     "confidence": 0.827,
+     "confidence": 0.817,
      "atr_pct": 0.040632,
      "reasons": [
       "Harga di bawah SMA50",
@@ -12882,9 +12882,9 @@
      "price": 388.0,
      "chg_1d": 0.021053,
      "mcap": 10266480000000.0,
-     "score": -82.0,
+     "score": -81.0,
      "signal": "STRONG SELL",
-     "confidence": 0.82,
+     "confidence": 0.81,
      "atr_pct": 0.052525,
      "reasons": [
       "Harga di bawah SMA50",
@@ -12976,9 +12976,9 @@
      "price": 6325.0,
      "chg_1d": -0.003937,
      "mcap": 34603967101825.0,
-     "score": -81.3,
+     "score": -80.3,
      "signal": "STRONG SELL",
-     "confidence": 0.813,
+     "confidence": 0.803,
      "atr_pct": 0.042853,
      "reasons": [
       "Harga di bawah SMA50",
@@ -13446,9 +13446,9 @@
      "price": 3400.0,
      "chg_1d": 0.0,
      "mcap": 35835267415600.0,
-     "score": -74.9,
+     "score": -73.9,
      "signal": "STRONG SELL",
-     "confidence": 0.749,
+     "confidence": 0.739,
      "atr_pct": 0.057775,
      "reasons": [
       "Harga di bawah SMA50",
@@ -13540,9 +13540,9 @@
      "price": 1705.0,
      "chg_1d": -0.008721,
      "mcap": 33848580700000.0,
-     "score": -74.9,
+     "score": -73.9,
      "signal": "STRONG SELL",
-     "confidence": 0.749,
+     "confidence": 0.739,
      "atr_pct": 0.033944,
      "reasons": [
       "Harga di bawah SMA50",
@@ -13634,9 +13634,9 @@
      "price": 665.0,
      "chg_1d": 0.015267,
      "mcap": 8989536500000.0,
-     "score": -73.5,
+     "score": -72.5,
      "signal": "STRONG SELL",
-     "confidence": 0.735,
+     "confidence": 0.725,
      "atr_pct": 0.050134,
      "reasons": [
       "Harga di bawah SMA50",
@@ -13728,9 +13728,9 @@
      "price": 302.0,
      "chg_1d": 0.013423,
      "mcap": 6606250000000.0,
-     "score": -73.5,
+     "score": -72.5,
      "signal": "STRONG SELL",
-     "confidence": 0.735,
+     "confidence": 0.725,
      "atr_pct": 0.047307,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14031,9 +14031,9 @@
      "price": 710.0,
      "chg_1d": 0.007092,
      "mcap": 44800006000000.0,
-     "score": -68.1,
+     "score": -67.1,
      "signal": "STRONG SELL",
-     "confidence": 0.681,
+     "confidence": 0.671,
      "atr_pct": 0.045854,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14125,9 +14125,9 @@
      "price": 880.0,
      "chg_1d": 0.011494,
      "mcap": 36919743151280.0,
-     "score": -66.0,
+     "score": -65.0,
      "signal": "STRONG SELL",
-     "confidence": 0.66,
+     "confidence": 0.65,
      "atr_pct": 0.040927,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14135,7 +14135,7 @@
       "ADX 29: tren turun kuat"
      ],
      "risks": [
-      "Outperform IHSG +6.0% (3 bulan)"
+      "Outperform IHSG +6.7% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": 667073000.0,
@@ -14221,9 +14221,9 @@
      "price": 2580.0,
      "chg_1d": 0.032,
      "mcap": 18725307696000.0,
-     "score": -65.6,
+     "score": -64.6,
      "signal": "STRONG SELL",
-     "confidence": 0.656,
+     "confidence": 0.646,
      "atr_pct": 0.037769,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14231,7 +14231,7 @@
       "ADX 21: tren turun kuat"
      ],
      "risks": [
-      "Outperform IHSG +6.3% (3 bulan)"
+      "Outperform IHSG +6.9% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -16284560000.0,
@@ -14349,6 +14349,16 @@
        "severity": "sedang"
       },
       {
+       "date": "2026-11-26",
+       "title": "BSI (BRIS) Gelar Rights Issue Februari 2027, Siapkan 6,8 Miliar Saham Baru",
+       "source": "IDX Channel",
+       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNNDF3VkdhaHJsblp0aFV3djMxaUhaYUVCQ0Qzdld4RXJ4SjJ2QVFiSDF6ZVhuVGdyeVZON0g4ZmwyQmJOR0ROQnV0UHNWZHBjRUVoT2tBVXoyYkxnT1lTdlZIYkRtSkxDZ3VxeG8wcHg5VVpYMVBOQWcybk55dDVhU3A5RXhfTHlCNjdmcUhMbGJYY1pGNUw5TzQtVW1TS1E2UFFZeE54bVBDNVkwS2fSAbMBQVVfeXFMT2oyQnhMODdyUmhuWWV1RVZQYUozY296dGNkQ3BsX196eW5leFJJcFJwbVZBTm9iVXAxNkFiR01MU2dUcVBuY0JVSDRVZDNSMzdJcnF1SWFOaEhOQ3BKN0lWYnRNN2h0QWJtaTYzVFRLTWhHMEh3QjY0YXBVQklwdTl3LXA4NzE4Y0VyWnptdTFkOWZibGVHT2czYWliVEZ4X0RhWE5KVnpHMmRtekhicmlVOEE?oc=5",
+       "categories": [
+        "Right issue (dilusi)"
+       ],
+       "severity": "sedang"
+      },
+      {
        "date": "2026-11-24",
        "title": "BSI (BRIS) Akui Rights Issue Berpotensi Tekan Laba Per Saham",
        "source": "CNBC Indonesia",
@@ -14363,16 +14373,6 @@
        "title": "BSI Raup Laba Rp 6,1 Triliun, Mirae Asset Ungkap Prospek Saham BRIS Usai Rights Issue",
        "source": "kontan.co.id",
        "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQSnJ0UmFGMEY0MzlqWE04TjZzTHBhVEpGWjdpc0RDRVFjM3I3bTlpTXdfQjVORXhGSnozQ2FzV3VsVFlPaEYyWHktVDRPUF84cW52X01ZQnVHWlZmZDJ5TjctenU0ZVZiaU1KUHRpeHA0NEdBZUlwbWNMWEMzNjlsdU5Bb09QSmk1ME1Ga0UzSDd4VjV4bzBvUDMxOGZpNk51bmZOeFNiWldydzVkN2E3SDluMmF6QTR4bUHSAbMBQVVfeXFMTURzV0ZTSVAtMmphVlR5WWVGRDVMYXJncVowOXpneVpEb0dCVEdjak95QjhPb1ZEZWNQU0RxclRLQjR1eWU0YThMeDFYb045TTRtNWpaZmxrYUFIbGRUXzNTUDJ4RWdJSEVxdDF4TFNvZTdsS2VyVldPUkhwcGttNzVwc3VnRHVCNkVpcjhSVVR3bEFsWW5CMDFfV08xOEQtMTVpWTNQX3BRSnhDNGR0NVhyWWM?oc=5",
-       "categories": [
-        "Right issue (dilusi)"
-       ],
-       "severity": "sedang"
-      },
-      {
-       "date": "2026-11-24",
-       "title": "BSI (BRIS) Bukukan Laba Rp 6,01 Triliun & Bersiap Right Issue, Simak Rekomendasinya",
-       "source": "kontan.co.id",
-       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQZTAwYWxZUGVDSjJLZjBhUUNmbkljekxHQWtsODFTc2Q5Wko3V1NmVnAzRC00S1dvQTE1Zk9NYkI4Y2NXWjMtaC1uakJONEZHaUVuVENoWnFIXy1NNlNkSlo4VzFQS09XaUxSNFlrZ3hPNE9Rc1d3b002MWNEYkFBb0YxMms4T0NPUzNQQzNXUXF0bEFFLWhQbDRQc0RrMHBtWXllaGI1Z1loMTdqYW5EcFVn0gGrAUFVX3lxTE1NNzZvTENKVV9OQy1jZjB0a0Fua1NNMzdPTU9YZFU5bHNsRkJ6eUVMWjlEVTZZb0FMbk5ybnAtXzd2clFUekhBcEo2S3l2VDJtYWdqdWQyRWZva3o1OHpZOU9BR3pyVTVMeHdsOFZFOW9hYkl0ZWZXdEl0SGJVSERybEw4MDVBeVlNclNkRDE5YnM0cm8yZzhsS2I2MGZnZmNWX0tET2hMZklwZw?oc=5",
        "categories": [
         "Right issue (dilusi)"
        ],
@@ -14744,9 +14744,9 @@
      "price": 510.0,
      "chg_1d": 0.009901,
      "mcap": 8785757607000.0,
-     "score": -56.7,
+     "score": -55.7,
      "signal": "SELL",
-     "confidence": 0.567,
+     "confidence": 0.557,
      "atr_pct": 0.047433,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14845,7 +14845,7 @@
      "reasons": [
       "Harga di bawah SMA50",
       "Momentum 3 bulan -32.9%",
-      "Underperform IHSG -11.5% (3 bulan)"
+      "Underperform IHSG -10.9% (3 bulan)"
      ],
      "risks": [],
      "news": null,
@@ -14932,9 +14932,9 @@
      "price": 1225.0,
      "chg_1d": 0.033755,
      "mcap": 30791883283700.0,
-     "score": -54.2,
+     "score": -53.2,
      "signal": "SELL",
-     "confidence": 0.542,
+     "confidence": 0.532,
      "atr_pct": 0.047739,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14942,7 +14942,7 @@
       "ADX 30: tren turun kuat"
      ],
      "risks": [
-      "Outperform IHSG +3.9% (3 bulan)"
+      "Outperform IHSG +4.5% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": 43432996000.0,
@@ -15028,9 +15028,9 @@
      "price": 2640.0,
      "chg_1d": 0.007634,
      "mcap": 63441218874000.0,
-     "score": -52.2,
+     "score": -51.2,
      "signal": "SELL",
-     "confidence": 0.522,
+     "confidence": 0.512,
      "atr_pct": 0.041465,
      "reasons": [
       "Harga di bawah SMA50",
@@ -15038,7 +15038,7 @@
       "ADX 25: tren turun kuat"
      ],
      "risks": [
-      "Outperform IHSG +5.2% (3 bulan)"
+      "Outperform IHSG +5.9% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -118369937000.0,
@@ -15134,7 +15134,7 @@
       "MACD di bawah sinyal & di bawah nol"
      ],
      "risks": [
-      "Outperform IHSG +11.0% (3 bulan)"
+      "Outperform IHSG +11.7% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -5270846000.0,
@@ -15326,7 +15326,7 @@
       "MACD di bawah sinyal & di bawah nol"
      ],
      "risks": [
-      "Outperform IHSG +12.1% (3 bulan)"
+      "Outperform IHSG +12.7% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -777486500.0,
@@ -15412,9 +15412,9 @@
      "price": 2010.0,
      "chg_1d": 0.0,
      "mcap": 199115055366000.0,
-     "score": -47.0,
+     "score": -46.0,
      "signal": "SELL",
-     "confidence": 0.47,
+     "confidence": 0.46,
      "atr_pct": 0.043681,
      "reasons": [
       "Harga di bawah SMA50",
@@ -15506,9 +15506,9 @@
      "price": 15750.0,
      "chg_1d": -0.001585,
      "mcap": 30304386000000.0,
-     "score": -46.5,
+     "score": -45.5,
      "signal": "SELL",
-     "confidence": 0.465,
+     "confidence": 0.455,
      "atr_pct": 0.033735,
      "reasons": [
       "Harga di bawah SMA50",
@@ -15589,102 +15589,6 @@
       15850.0,
       15775.0,
       15750.0
-     ]
-    },
-    {
-     "ticker": "CMRY.JK",
-     "code": "CMRY",
-     "name": "PT Cisarua Mountain Dairy Tbk",
-     "sector": "Consumer Defensive",
-     "horizon": "medium",
-     "price": 4120.0,
-     "chg_1d": -0.002421,
-     "mcap": 32690893960000.0,
-     "score": -45.2,
-     "signal": "SELL",
-     "confidence": 0.452,
-     "atr_pct": 0.031706,
-     "reasons": [
-      "Harga di bawah SMA50",
-      "Struktur MA menengah melemah",
-      "MACD di bawah sinyal & di bawah nol"
-     ],
-     "risks": [
-      "Outperform IHSG +8.5% (3 bulan)"
-     ],
-     "news": null,
-     "foreign_5d": 8695499000.0,
-     "foreign_20d": 5065426000.0,
-     "foreign_20d_pct": 0.03018,
-     "foreign_days": 20,
-     "foreign_last": "2026-11-20",
-     "action": "Kurangi 50% posisi",
-     "sell_portion": 0.5,
-     "sell_zone_low": 4120.0,
-     "sell_zone_high": 4180.0,
-     "breakdown_level": 4060.0,
-     "when_sell": "Kurangi saat pantulan ke area jual. Sisa posisi: cut loss bila close di bawah level breakdown. Jangan buka posisi beli baru selama sinyal SELL.",
-     "spark": [
-      4570.0,
-      4590.0,
-      4650.0,
-      4500.0,
-      4450.0,
-      4410.0,
-      4460.0,
-      4550.0,
-      4480.0,
-      4470.0,
-      4500.0,
-      4460.0,
-      4480.0,
-      4550.0,
-      4450.0,
-      4370.0,
-      4370.0,
-      4330.0,
-      4350.0,
-      4340.0,
-      4380.0,
-      4430.0,
-      4420.0,
-      4470.0,
-      4430.0,
-      4440.0,
-      4500.0,
-      4480.0,
-      4510.0,
-      4610.0,
-      4250.0,
-      3960.0,
-      4150.0,
-      4250.0,
-      4210.0,
-      4140.0,
-      4140.0,
-      4060.0,
-      4150.0,
-      4250.0,
-      4220.0,
-      4120.0,
-      4110.0,
-      4060.0,
-      4330.0,
-      4250.0,
-      4140.0,
-      4170.0,
-      4190.0,
-      4220.0,
-      4290.0,
-      4400.0,
-      4390.0,
-      4290.0,
-      4240.0,
-      4150.0,
-      4150.0,
-      4150.0,
-      4130.0,
-      4120.0
      ]
     },
     {
@@ -15895,7 +15799,7 @@
      "reasons": [
       "Harga di bawah SMA50",
       "Momentum 3 bulan -40.7%",
-      "Underperform IHSG -19.3% (3 bulan)"
+      "Underperform IHSG -18.7% (3 bulan)"
      ],
      "risks": [],
      "news": [
@@ -16081,6 +15985,102 @@
      ]
     },
     {
+     "ticker": "CMRY.JK",
+     "code": "CMRY",
+     "name": "PT Cisarua Mountain Dairy Tbk",
+     "sector": "Consumer Defensive",
+     "horizon": "medium",
+     "price": 4120.0,
+     "chg_1d": -0.002421,
+     "mcap": 32690893960000.0,
+     "score": -44.2,
+     "signal": "SELL",
+     "confidence": 0.442,
+     "atr_pct": 0.031706,
+     "reasons": [
+      "Harga di bawah SMA50",
+      "Struktur MA menengah melemah",
+      "MACD di bawah sinyal & di bawah nol"
+     ],
+     "risks": [
+      "Outperform IHSG +9.2% (3 bulan)"
+     ],
+     "news": null,
+     "foreign_5d": 8695499000.0,
+     "foreign_20d": 5065426000.0,
+     "foreign_20d_pct": 0.03018,
+     "foreign_days": 20,
+     "foreign_last": "2026-11-20",
+     "action": "Kurangi 50% posisi",
+     "sell_portion": 0.5,
+     "sell_zone_low": 4120.0,
+     "sell_zone_high": 4180.0,
+     "breakdown_level": 4060.0,
+     "when_sell": "Kurangi saat pantulan ke area jual. Sisa posisi: cut loss bila close di bawah level breakdown. Jangan buka posisi beli baru selama sinyal SELL.",
+     "spark": [
+      4570.0,
+      4590.0,
+      4650.0,
+      4500.0,
+      4450.0,
+      4410.0,
+      4460.0,
+      4550.0,
+      4480.0,
+      4470.0,
+      4500.0,
+      4460.0,
+      4480.0,
+      4550.0,
+      4450.0,
+      4370.0,
+      4370.0,
+      4330.0,
+      4350.0,
+      4340.0,
+      4380.0,
+      4430.0,
+      4420.0,
+      4470.0,
+      4430.0,
+      4440.0,
+      4500.0,
+      4480.0,
+      4510.0,
+      4610.0,
+      4250.0,
+      3960.0,
+      4150.0,
+      4250.0,
+      4210.0,
+      4140.0,
+      4140.0,
+      4060.0,
+      4150.0,
+      4250.0,
+      4220.0,
+      4120.0,
+      4110.0,
+      4060.0,
+      4330.0,
+      4250.0,
+      4140.0,
+      4170.0,
+      4190.0,
+      4220.0,
+      4290.0,
+      4400.0,
+      4390.0,
+      4290.0,
+      4240.0,
+      4150.0,
+      4150.0,
+      4150.0,
+      4130.0,
+      4120.0
+     ]
+    },
+    {
      "ticker": "AKRA.JK",
      "code": "AKRA",
      "name": "PT AKR Corporindo Tbk",
@@ -16099,7 +16099,7 @@
       "ADX 20: tren turun kuat"
      ],
      "risks": [
-      "Outperform IHSG +11.7% (3 bulan)"
+      "Outperform IHSG +12.4% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": 4207806500.0,
@@ -16185,9 +16185,9 @@
      "price": 370.0,
      "chg_1d": -0.021164,
      "mcap": 21866298380470.0,
-     "score": -38.5,
+     "score": -37.5,
      "signal": "SELL",
-     "confidence": 0.385,
+     "confidence": 0.375,
      "atr_pct": 0.043943,
      "reasons": [
       "Harga di bawah SMA50",
@@ -16195,7 +16195,7 @@
       "Momentum 3 bulan -17.0%"
      ],
      "risks": [
-      "Outperform IHSG +4.3% (3 bulan)"
+      "Outperform IHSG +5.0% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": 694017000.0,
@@ -16281,9 +16281,9 @@
      "price": 168.0,
      "chg_1d": 0.005988,
      "mcap": 5379708313224.0,
-     "score": -38.4,
+     "score": -37.4,
      "signal": "SELL",
-     "confidence": 0.384,
+     "confidence": 0.374,
      "atr_pct": 0.04527,
      "reasons": [
       "Harga di bawah SMA50",
@@ -16484,7 +16484,7 @@
       "MACD di bawah sinyal & di bawah nol"
      ],
      "risks": [
-      "Outperform IHSG +17.7% (3 bulan)"
+      "Outperform IHSG +18.4% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -74793227500.0,
@@ -16577,7 +16577,7 @@
      "reasons": [
       "Harga di bawah SMA50",
       "Momentum 3 bulan -34.0%",
-      "Underperform IHSG -12.6% (3 bulan)"
+      "Underperform IHSG -12.0% (3 bulan)"
      ],
      "risks": [
       "ADX 22: tren naik kuat"
@@ -18185,7 +18185,7 @@
      "score": 45.6,
      "signal": "BUY",
      "confidence": 0.41,
-     "atr_pct": 0.063262,
+     "atr_pct": 0.063518,
      "reasons": [
       "Harga di atas SMA200 (uptrend primer)",
       "Momentum 12 bulan +1060%",
@@ -19708,6 +19708,26 @@
      ],
      "news": [
       {
+       "date": "2026-11-26",
+       "title": "PTRO Dapat Restu Rights Issue dan Penjaminan Aset",
+       "source": "investor.id",
+       "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOT2tlSlJDSFlkNVFxSVlXbDBVbWpKaWdidXNnaER6NkhaeXVXcmZxX0hkU19ONlRTb1ROdGRUOHhaaVUxV2NDVFVVZEtmS0pGb0xldFNQc0VuRGdTN21CazRKMUwyYmVzYzloZzlJN1BTZnR0MEUtX0c3UmNFV1NqTG5tR1NFYUtoWnZn?oc=5",
+       "categories": [
+        "Right issue (dilusi)"
+       ],
+       "severity": "sedang"
+      },
+      {
+       "date": "2026-11-26",
+       "title": "Petrosea (PTRO) Resmi Kantongi Restu Rights Issue Maksimal 170 Juta Saham",
+       "source": "Rmol.id",
+       "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZm5uXzVocUZudENKTkhGaU8tTXpUZE5wbEYxR0ZBcEJnRDBWSU82WDFmR1ZGa29FOUFDSi1xZmtlOTZlUkJXX3lacWdyc1E5dF9SZnhuaU1CUGh1ejR5cFdjaEhVNFZ6YVBYalV0aEJpNVI0SW9oaVlLS2MxOWxJVnF1U01TQXlMeExnd3NablROV25KRGRNNUdKeFBsZmNTdmpGY180UTM3YlVmdnhV?oc=5",
+       "categories": [
+        "Right issue (dilusi)"
+       ],
+       "severity": "sedang"
+      },
+      {
        "date": "2026-11-25",
        "title": "Petrosea (PTRO) Rights Issue 170 Juta Saham Baru, Cek Prospek Sahamnya",
        "source": "kontan.co.id",
@@ -19732,26 +19752,6 @@
        "title": "Rights Issue PTRO Perkuat Modal untuk Ekspansi Proyek EPC",
        "source": "Demokratis.co.id",
        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBCbGpDODlIZ2t1MTZveF9rRWNRLVRpR2hGZ21MV2pVTGxwSFFGZERwcTFWTElnNGduQzFIQUJhYkZab1BlQ2ZNNWtuenRKYjRJWVo0YmJqTjFkR2t1RGZaemxhOXc1TU0?oc=5",
-       "categories": [
-        "Right issue (dilusi)"
-       ],
-       "severity": "sedang"
-      },
-      {
-       "date": "2026-11-23",
-       "title": "PTRO Siapkan Rights Issue Maksimal 170 Juta Saham, Minta Restu RUPSLB",
-       "source": "SWA.co.id",
-       "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSFA5Z0lyWm5fZVR0V2RtQ0Z6Z2ZLQ2I5ckVWcXJLRDJ2N0JHV09kYnhmZE1ETzBRaTh3MmREMHFqSWJvMEd0TEszLXhLUzZfbERLNFNYQlhRNlFfWVItY3lFdlhXSVV6UXo4RFVaSk51QjNBNDRRNHlPSmVEMkpRZlgzMUVMaE1YbTVPd2h5dVNpWXZFR2EzSTZkV3pDYjA?oc=5",
-       "categories": [
-        "Right issue (dilusi)"
-       ],
-       "severity": "sedang"
-      },
-      {
-       "date": "2026-11-23",
-       "title": "Jadwal RUPS Hari Ini: BYAN Rombak Pengurus, PTRO Bahas Rights Issue",
-       "source": "CNBC Indonesia",
-       "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNVFJPVXVUQ2d1dEYxODkwbkNJbkJTZU96ZXNCNDYzN1o4R1J2bnpVSWxDNnBrcU05ZlJtc0pkQWt5TUlkS1BLRE5Va2pHSi1ldEtZOGNBbnFsd2l0YkE4LWVTY0taV0VXZnI3eTlEMjVPR0lzU0dUTDh4dm1iTTZnWlZVNUplUUVESkMzOUQwOHlfZXlqQlhaVHNUTnhkcWlkM1V4ckhZakktbUVtRVhpUDBIU3lvNmVEaTlHTHJmX1NZQTQ4WkHSAcsBQVVfeXFMTnBwZzJyazlHMU50UkJRRERfR0c3VTBEa0pOY1Nzdm5lWGJYZGZKMlN0MUY5eWtMZVduT1V3S0phb2dEVUlqUmlzMzRJZUlxazhGU2dHbEdMYV8zb2lMTEZyQklrT3g1YmtNaHByLVRIbnAyVkloMXNLT3dCa25xSE40TlJvY1AzZmoyckNqQzhZdUZNN1RFd0VFTmpFY2Jkc2l4MzBEVHBOb0stNUdxUzVDQm9aRXV3S0MtZFpMRTVJckNqUEUxcEhLdUU?oc=5",
        "categories": [
         "Right issue (dilusi)"
        ],
@@ -20646,18 +20646,7 @@
       "DER 0.93x (utang rendah)",
       "Momentum 12 bulan +4%"
      ],
-     "news": [
-      {
-       "date": "2026-11-21",
-       "title": "Sengketa Lahan Awak Mas Tekan Saham Indika Energy",
-       "source": "www.suaralandak.co.id",
-       "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5WVExPZ2twQlUyZEJxVDA2U2k5MHpiSnhUcXd6N2g0cjFNV3l3U2NsMnd2eVdYeUthdGI2X3NMMUFpbVExWVFlTDRRXzRMa2tsQ0xPNk5NYnNIbGFNdnVGMU5iX0RWOXJ2V21QZUtpamFXYXhZWkE?oc=5",
-       "categories": [
-        "Gugatan"
-       ],
-       "severity": "sedang"
-      }
-     ],
+     "news": null,
      "foreign_5d": 689049000.0,
      "foreign_20d": 14786006000.0,
      "foreign_20d_pct": 0.019198,
@@ -21142,7 +21131,18 @@
       "ROE 12.6% (profitabilitas tinggi)",
       "DER 0.92x (utang rendah)"
      ],
-     "news": null,
+     "news": [
+      {
+       "date": "2026-11-23",
+       "title": "MDKA Cetak Laba USD157 Juta Saat Saham Anjlok",
+       "source": "شبكة تواصل الإخبارية",
+       "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5VTEc5WGliVWloXy0xU0tCZnJqOC1ZV3JLaHRnZjk5a1Z4a1lHYTZPVkM1bHNVOGhEdE5ldzB6aEFmMV93c0dud2lpSTFldllWR0V3?oc=5",
+       "categories": [
+        "Kinerja memburuk"
+       ],
+       "severity": "sedang"
+      }
+     ],
      "foreign_5d": -18807044000.0,
      "foreign_20d": 116993613000.0,
      "foreign_20d_pct": 0.054256,
@@ -21639,16 +21639,6 @@
      ],
      "news": [
       {
-       "date": "2026-11-23",
-       "title": "Gak Alihkan Saham SMCB ke Publik, SMGR Kena Sanksi OJK",
-       "source": "CNBC Indonesia",
-       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNS1B5cUtndElsWURlMHhlaGpTSHJYa0lBZEVySUt1VXNyTF9PRUdnU241SzlrQlVkNUIwcUYtN3F6aUlaR0YyWnhCQnJEUFhLcHJzTGRmYnUzVGZzMFYxZ0FQZVRfMkRiN19NaDhCeXd2VnpSVmpwVmFVUTRNRy1maTNQSTl1LVdjX09vLUhzRGtDdXV4NU1OMVZfaGhaWEdKcy10RENXb1FZUWFxTVNKdHZqSEVBd9IBuwFBVV95cUxOd1NLdjU3NnBCeV9qTzV4Q0Naa0p0VmJCSXNuSnVGTWIxVkpRT0FpTHE2QW1Gdl9GbTVidXlsYVlMQVBteHdCaXQxMVVjNExEMDA4Q0d4U2NXaEhyakJIbEdDQXBDcUJyQkNRRC16elg1RE8yWkhNaGl4bTJRbkNZbkNoalc3djlGNVVpRGw4RTBGYVRYaDdCUm8zXy1LUEU3RWJkTERKSkdCdU9rTnUweHNjNi1SWTludkc0?oc=5",
-       "categories": [
-        "Sanksi / denda"
-       ],
-       "severity": "sedang"
-      },
-      {
        "date": "2026-11-21",
        "title": "OJK Denda GOOD SMGR dan MARK atas Pelanggaran Pasar Modal",
        "source": "www.suaralandak.co.id",
@@ -21941,7 +21931,7 @@
    "price": 5900.0,
    "chg_1d": 0.012876,
    "mcap": 720049567050000.0,
-   "avg_value_20d": 1066959980797.2415,
+   "avg_value_20d": 1082688661400.0,
    "pe": 12.215321,
    "pb": 2.557222,
    "roe": 0.21199,
@@ -21968,7 +21958,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": 39.8,
+    "score": 40.8,
     "signal": "BUY"
    },
    "long": {
@@ -21984,7 +21974,7 @@
    "price": 3080.0,
    "chg_1d": 0.003257,
    "mcap": 462133707687960.0,
-   "avg_value_20d": 717433160327.4097,
+   "avg_value_20d": 718691662650.0,
    "pe": 7.298578,
    "pb": 1.369524,
    "roe": 0.18742,
@@ -22016,7 +22006,7 @@
    "price": 3990.0,
    "chg_1d": -0.0025,
    "mcap": 368675999984040.0,
-   "avg_value_20d": 554718456547.3087,
+   "avg_value_20d": 559466091450.0,
    "pe": 5.80693,
    "pb": 1.266488,
    "roe": 0.21758,
@@ -22048,7 +22038,7 @@
    "price": 9300.0,
    "chg_1d": -0.033766,
    "mcap": 310000015500000.0,
-   "avg_value_20d": 7330344313.481176,
+   "avg_value_20d": 7434886875.0,
    "pe": 25.674295,
    "pb": null,
    "roe": 0.326,
@@ -22080,7 +22070,7 @@
    "price": 2280.0,
    "chg_1d": -0.008696,
    "mcap": 305032581600000.0,
-   "avg_value_20d": 69303857089.24414,
+   "avg_value_20d": 69734725125.0,
    "pe": 112.03931,
    "pb": null,
    "roe": 0.20714,
@@ -22112,7 +22102,7 @@
    "price": 3220.0,
    "chg_1d": 0.009404,
    "mcap": 233508660852320.0,
-   "avg_value_20d": 167236272141.498,
+   "avg_value_20d": 168437163350.0,
    "pe": 10.414309,
    "pb": null,
    "roe": 0.23271,
@@ -22128,7 +22118,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -93.9,
+    "score": -92.9,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -22144,7 +22134,7 @@
    "price": 5675.0,
    "chg_1d": 0.022523,
    "mcap": 229744164069500.0,
-   "avg_value_20d": 258756226631.1791,
+   "avg_value_20d": 260129853450.0,
    "pe": 7.607239,
    "pb": 0.945923,
    "roe": 0.11631,
@@ -22176,7 +22166,7 @@
    "price": 2010.0,
    "chg_1d": 0.0,
    "mcap": 199115055366000.0,
-   "avg_value_20d": 379583059348.4762,
+   "avg_value_20d": 380439300125.0,
    "pe": 12.319196,
    "pb": 1.618372,
    "roe": 0.16298,
@@ -22192,7 +22182,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -47.0,
+    "score": -46.0,
     "signal": "SELL"
    },
    "long": {
@@ -22208,7 +22198,7 @@
    "price": 3580.0,
    "chg_1d": 0.0,
    "mcap": 132189136433880.0,
-   "avg_value_20d": 150153177123.99338,
+   "avg_value_20d": 150360791850.0,
    "pe": 6.347518,
    "pb": 0.785427,
    "roe": 0.1216,
@@ -22240,7 +22230,7 @@
    "price": 595.0,
    "chg_1d": 0.0,
    "mcap": 114619657600000.0,
-   "avg_value_20d": 57643416590.56161,
+   "avg_value_20d": 57809645975.0,
    "pe": 20.746164,
    "pb": null,
    "roe": 0.18789,
@@ -22272,7 +22262,7 @@
    "price": 1185.0,
    "chg_1d": 0.0,
    "mcap": 102516180934020.0,
-   "avg_value_20d": 175792424284.7427,
+   "avg_value_20d": 177156710550.0,
    "pe": 343.47824,
    "pb": null,
    "roe": 0.03797,
@@ -22304,7 +22294,7 @@
    "price": 23925.0,
    "chg_1d": 0.006309,
    "mcap": 89243483128800.0,
-   "avg_value_20d": 54082166198.88254,
+   "avg_value_20d": 54422188597.11914,
    "pe": 10.899773,
    "pb": 0.83242,
    "roe": 0.0741,
@@ -22336,7 +22326,7 @@
    "price": 7150.0,
    "chg_1d": -0.006944,
    "mcap": 83382642200000.0,
-   "avg_value_20d": 52334254333.826004,
+   "avg_value_20d": 52400920500.0,
    "pe": 10.070422,
    "pb": 1.506987,
    "roe": 0.13506,
@@ -22368,7 +22358,7 @@
    "price": 10450.0,
    "chg_1d": 0.055556,
    "mcap": 81373018892000.0,
-   "avg_value_20d": 137912926632.31693,
+   "avg_value_20d": 137976263125.0,
    "pe": 5.510092,
    "pb": null,
    "roe": 0.23995,
@@ -22400,7 +22390,7 @@
    "price": 2430.0,
    "chg_1d": 0.042918,
    "mcap": 69985200906000.0,
-   "avg_value_20d": 75607668321.65105,
+   "avg_value_20d": 76333067150.0,
    "pe": 6.130481,
    "pb": null,
    "roe": 0.14188,
@@ -22432,7 +22422,7 @@
    "price": 730.0,
    "chg_1d": 0.149606,
    "mcap": 68435469172120.0,
-   "avg_value_20d": 219971859354.83014,
+   "avg_value_20d": 224000590525.0,
    "pe": 29.072083,
    "pb": null,
    "roe": 0.06345,
@@ -22464,7 +22454,7 @@
    "price": 4450.0,
    "chg_1d": 0.002252,
    "mcap": 65554578967000.0,
-   "avg_value_20d": 54111867646.85395,
+   "avg_value_20d": 54139042575.0,
    "pe": null,
    "pb": null,
    "roe": -0.06502,
@@ -22496,7 +22486,7 @@
    "price": 2640.0,
    "chg_1d": 0.007634,
    "mcap": 63441218874000.0,
-   "avg_value_20d": 199066436649.32867,
+   "avg_value_20d": 199625201300.0,
    "pe": 7.12743,
    "pb": 1.599518,
    "roe": 0.28695,
@@ -22512,7 +22502,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -52.2,
+    "score": -51.2,
     "signal": "SELL"
    },
    "long": {
@@ -22528,7 +22518,7 @@
    "price": 1650.0,
    "chg_1d": 0.021672,
    "mcap": 62947500000000.0,
-   "avg_value_20d": 36784622331.4835,
+   "avg_value_20d": 36778651175.0,
    "pe": 17.795513,
    "pb": 14.902591,
    "roe": 1.01963,
@@ -22560,7 +22550,7 @@
    "price": 7125.0,
    "chg_1d": 0.014235,
    "mcap": 62560538812500.0,
-   "avg_value_20d": 45443658306.666,
+   "avg_value_20d": 45403395000.0,
    "pe": 5.864198,
    "pb": 0.783373,
    "roe": 0.13095,
@@ -22592,7 +22582,7 @@
    "price": 3360.0,
    "chg_1d": -0.011765,
    "mcap": 61116727385280.0,
-   "avg_value_20d": 12217392486.34998,
+   "avg_value_20d": 12228235200.0,
    "pe": 26.215183,
    "pb": 2.08024,
    "roe": 0.08189,
@@ -22624,7 +22614,7 @@
    "price": 1165.0,
    "chg_1d": -0.004274,
    "mcap": 53203077449435.0,
-   "avg_value_20d": 98233162832.34192,
+   "avg_value_20d": 98318055875.0,
    "pe": 6.90534,
    "pb": 1.03441,
    "roe": 0.15801,
@@ -22651,6 +22641,16 @@
      "severity": "sedang"
     },
     {
+     "date": "2026-11-26",
+     "title": "BSI (BRIS) Gelar Rights Issue Februari 2027, Siapkan 6,8 Miliar Saham Baru",
+     "source": "IDX Channel",
+     "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNNDF3VkdhaHJsblp0aFV3djMxaUhaYUVCQ0Qzdld4RXJ4SjJ2QVFiSDF6ZVhuVGdyeVZON0g4ZmwyQmJOR0ROQnV0UHNWZHBjRUVoT2tBVXoyYkxnT1lTdlZIYkRtSkxDZ3VxeG8wcHg5VVpYMVBOQWcybk55dDVhU3A5RXhfTHlCNjdmcUhMbGJYY1pGNUw5TzQtVW1TS1E2UFFZeE54bVBDNVkwS2fSAbMBQVVfeXFMT2oyQnhMODdyUmhuWWV1RVZQYUozY296dGNkQ3BsX196eW5leFJJcFJwbVZBTm9iVXAxNkFiR01MU2dUcVBuY0JVSDRVZDNSMzdJcnF1SWFOaEhOQ3BKN0lWYnRNN2h0QWJtaTYzVFRLTWhHMEh3QjY0YXBVQklwdTl3LXA4NzE4Y0VyWnptdTFkOWZibGVHT2czYWliVEZ4X0RhWE5KVnpHMmRtekhicmlVOEE?oc=5",
+     "categories": [
+      "Right issue (dilusi)"
+     ],
+     "severity": "sedang"
+    },
+    {
      "date": "2026-11-24",
      "title": "BSI (BRIS) Akui Rights Issue Berpotensi Tekan Laba Per Saham",
      "source": "CNBC Indonesia",
@@ -22665,16 +22665,6 @@
      "title": "BSI Raup Laba Rp 6,1 Triliun, Mirae Asset Ungkap Prospek Saham BRIS Usai Rights Issue",
      "source": "kontan.co.id",
      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQSnJ0UmFGMEY0MzlqWE04TjZzTHBhVEpGWjdpc0RDRVFjM3I3bTlpTXdfQjVORXhGSnozQ2FzV3VsVFlPaEYyWHktVDRPUF84cW52X01ZQnVHWlZmZDJ5TjctenU0ZVZiaU1KUHRpeHA0NEdBZUlwbWNMWEMzNjlsdU5Bb09QSmk1ME1Ga0UzSDd4VjV4bzBvUDMxOGZpNk51bmZOeFNiWldydzVkN2E3SDluMmF6QTR4bUHSAbMBQVVfeXFMTURzV0ZTSVAtMmphVlR5WWVGRDVMYXJncVowOXpneVpEb0dCVEdjak95QjhPb1ZEZWNQU0RxclRLQjR1eWU0YThMeDFYb045TTRtNWpaZmxrYUFIbGRUXzNTUDJ4RWdJSEVxdDF4TFNvZTdsS2VyVldPUkhwcGttNzVwc3VnRHVCNkVpcjhSVVR3bEFsWW5CMDFfV08xOEQtMTVpWTNQX3BRSnhDNGR0NVhyWWM?oc=5",
-     "categories": [
-      "Right issue (dilusi)"
-     ],
-     "severity": "sedang"
-    },
-    {
-     "date": "2026-11-24",
-     "title": "BSI (BRIS) Bukukan Laba Rp 6,01 Triliun & Bersiap Right Issue, Simak Rekomendasinya",
-     "source": "kontan.co.id",
-     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQZTAwYWxZUGVDSjJLZjBhUUNmbkljekxHQWtsODFTc2Q5Wko3V1NmVnAzRC00S1dvQTE1Zk9NYkI4Y2NXWjMtaC1uakJONEZHaUVuVENoWnFIXy1NNlNkSlo4VzFQS09XaUxSNFlrZ3hPNE9Rc1d3b002MWNEYkFBb0YxMms4T0NPUzNQQzNXUXF0bEFFLWhQbDRQc0RrMHBtWXllaGI1Z1loMTdqYW5EcFVn0gGrAUFVX3lxTE1NNzZvTENKVV9OQy1jZjB0a0Fua1NNMzdPTU9YZFU5bHNsRkJ6eUVMWjlEVTZZb0FMbk5ybnAtXzd2clFUekhBcEo2S3l2VDJtYWdqdWQyRWZva3o1OHpZOU9BR3pyVTVMeHdsOFZFOW9hYkl0ZWZXdEl0SGJVSERybEw4MDVBeVlNclNkRDE5YnM0cm8yZzhsS2I2MGZnZmNWX0tET2hMZklwZw?oc=5",
      "categories": [
       "Right issue (dilusi)"
      ],
@@ -22707,7 +22697,7 @@
    "price": 400.0,
    "chg_1d": 0.06383,
    "mcap": 49931749880000.0,
-   "avg_value_20d": 28952714084.99832,
+   "avg_value_20d": 30286601430.0,
    "pe": 42.328045,
    "pb": null,
    "roe": 0.06756,
@@ -22739,7 +22729,7 @@
    "price": 131.0,
    "chg_1d": 0.031496,
    "mcap": 48644936360908.0,
-   "avg_value_20d": 334758631691.5402,
+   "avg_value_20d": 341440286360.0,
    "pe": 23.688969,
    "pb": null,
    "roe": 0.05421,
@@ -22771,7 +22761,7 @@
    "price": 1000.0,
    "chg_1d": 0.0,
    "mcap": 47774192736000.0,
-   "avg_value_20d": 5460472636.700018,
+   "avg_value_20d": 5380605850.0,
    "pe": 48.79182,
    "pb": 2.756484,
    "roe": 0.06203,
@@ -22803,7 +22793,7 @@
    "price": 4720.0,
    "chg_1d": -0.012552,
    "mcap": 45669857849520.0,
-   "avg_value_20d": 7241795480.260602,
+   "avg_value_20d": 7237777700.0,
    "pe": 9.953815,
    "pb": 0.831031,
    "roe": 0.08605,
@@ -22835,7 +22825,7 @@
    "price": 1115.0,
    "chg_1d": 0.004505,
    "mcap": 45583799622500.0,
-   "avg_value_20d": 41858787432.18324,
+   "avg_value_20d": 42350484975.0,
    "pe": 6.876773,
    "pb": null,
    "roe": 0.2307,
@@ -22867,7 +22857,7 @@
    "price": 710.0,
    "chg_1d": 0.007092,
    "mcap": 44800006000000.0,
-   "avg_value_20d": 29137187649.093494,
+   "avg_value_20d": 29157911950.0,
    "pe": 3.996173,
    "pb": 0.951499,
    "roe": 0.24398,
@@ -22883,7 +22873,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -68.1,
+    "score": -67.1,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -22899,7 +22889,7 @@
    "price": 1045.0,
    "chg_1d": 0.004808,
    "mcap": 43393104276500.0,
-   "avg_value_20d": 61325944835.17149,
+   "avg_value_20d": 61042531875.0,
    "pe": 12.331839,
    "pb": 2.36273,
    "roe": 0.19355,
@@ -22915,7 +22905,7 @@
     "signal": "HOLD"
    },
    "medium": {
-    "score": -28.2,
+    "score": -27.2,
     "signal": "HOLD"
    },
    "long": {
@@ -22931,12 +22921,23 @@
    "price": 1750.0,
    "chg_1d": 0.0,
    "mcap": 42827721599250.0,
-   "avg_value_20d": 92253723751.61392,
+   "avg_value_20d": 92272396300.0,
    "pe": 45.919704,
    "pb": null,
    "roe": 0.12639,
    "div_yield": 0.007,
-   "news": null,
+   "news": [
+    {
+     "date": "2026-11-23",
+     "title": "MDKA Cetak Laba USD157 Juta Saat Saham Anjlok",
+     "source": "شبكة تواصل الإخبارية",
+     "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5VTEc5WGliVWloXy0xU0tCZnJqOC1ZV3JLaHRnZjk5a1Z4a1lHYTZPVkM1bHNVOGhEdE5ldzB6aEFmMV93c0dud2lpSTFldllWR0V3?oc=5",
+     "categories": [
+      "Kinerja memburuk"
+     ],
+     "severity": "sedang"
+    }
+   ],
    "foreign_5d": -18807044000.0,
    "foreign_20d": 116993613000.0,
    "foreign_20d_pct": 0.054256,
@@ -22963,7 +22964,7 @@
    "price": 1320.0,
    "chg_1d": -0.060498,
    "mcap": 42571070463240.0,
-   "avg_value_20d": 93146579423.64622,
+   "avg_value_20d": 91635511575.0,
    "pe": 6.21996,
    "pb": 1.130295,
    "roe": 0.18091,
@@ -22995,7 +22996,7 @@
    "price": 360.0,
    "chg_1d": 0.040462,
    "mcap": 40470804000000.0,
-   "avg_value_20d": 105055316360.34077,
+   "avg_value_20d": 107033431290.0,
    "pe": 25.174826,
    "pb": null,
    "roe": 0.30101,
@@ -23027,7 +23028,7 @@
    "price": 1595.0,
    "chg_1d": -0.021472,
    "mcap": 39700800135480.0,
-   "avg_value_20d": 6759243192.265534,
+   "avg_value_20d": 6781318450.0,
    "pe": 6.574338,
    "pb": 0.698981,
    "roe": 0.10725,
@@ -23059,7 +23060,7 @@
    "price": 280.0,
    "chg_1d": 0.037037,
    "mcap": 39699531294640.0,
-   "avg_value_20d": 182807553340.10394,
+   "avg_value_20d": 185071989050.0,
    "pe": 64.965195,
    "pb": null,
    "roe": 0.03515,
@@ -23091,7 +23092,7 @@
    "price": 695.0,
    "chg_1d": -0.014184,
    "mcap": 38160365000000.0,
-   "avg_value_20d": 9160068148.265577,
+   "avg_value_20d": 9140043825.0,
    "pe": 47.964115,
    "pb": 11.342124,
    "roe": 0.23944,
@@ -23123,7 +23124,7 @@
    "price": 2300.0,
    "chg_1d": -0.004329,
    "mcap": 37715400000000.0,
-   "avg_value_20d": 43485379696.11304,
+   "avg_value_20d": 43493258100.0,
    "pe": 5.054945,
    "pb": 1.036904,
    "roe": 0.21837,
@@ -23139,7 +23140,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -82.7,
+    "score": -81.7,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23155,7 +23156,7 @@
    "price": 805.0,
    "chg_1d": 0.00625,
    "mcap": 37684780189700.0,
-   "avg_value_20d": 29874492699.72486,
+   "avg_value_20d": 29954671550.0,
    "pe": 9.685958,
    "pb": 1.448905,
    "roe": 0.1513,
@@ -23187,7 +23188,7 @@
    "price": 1545.0,
    "chg_1d": 0.016447,
    "mcap": 37453130162820.0,
-   "avg_value_20d": 62366155562.14573,
+   "avg_value_20d": 62980965000.0,
    "pe": 7.997308,
    "pb": null,
    "roe": 0.11188,
@@ -23219,7 +23220,7 @@
    "price": 880.0,
    "chg_1d": 0.011494,
    "mcap": 36919743151280.0,
-   "avg_value_20d": 12748521542.333572,
+   "avg_value_20d": 12777069025.0,
    "pe": 13.578152,
    "pb": null,
    "roe": 0.07884,
@@ -23235,7 +23236,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -66.0,
+    "score": -65.0,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23251,7 +23252,7 @@
    "price": 336.0,
    "chg_1d": -0.017544,
    "mcap": 36286461086400.0,
-   "avg_value_20d": 56503434130.18655,
+   "avg_value_20d": 56581572990.0,
    "pe": 27.654322,
    "pb": null,
    "roe": 0.13987,
@@ -23283,7 +23284,7 @@
    "price": 3400.0,
    "chg_1d": 0.0,
    "mcap": 35835267415600.0,
-   "avg_value_20d": 49915948460.95521,
+   "avg_value_20d": 49988532650.0,
    "pe": 12.167627,
    "pb": null,
    "roe": 0.06067,
@@ -23299,7 +23300,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -74.9,
+    "score": -73.9,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23315,7 +23316,7 @@
    "price": 6325.0,
    "chg_1d": -0.003937,
    "mcap": 34603967101825.0,
-   "avg_value_20d": 25720779870.399853,
+   "avg_value_20d": 25715162125.0,
    "pe": 3.416537,
    "pb": null,
    "roe": 0.0839,
@@ -23331,7 +23332,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -81.3,
+    "score": -80.3,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23347,7 +23348,7 @@
    "price": 1540.0,
    "chg_1d": 0.019868,
    "mcap": 34432397576500.0,
-   "avg_value_20d": 11271554714.492361,
+   "avg_value_20d": 11060763300.0,
    "pe": 9.985735,
    "pb": 1.796513,
    "roe": 0.19018,
@@ -23379,7 +23380,7 @@
    "price": 2960.0,
    "chg_1d": 0.00339,
    "mcap": 34101151380000.0,
-   "avg_value_20d": 80039372066.19841,
+   "avg_value_20d": 80307440150.0,
    "pe": 5.736434,
    "pb": 1.25702,
    "roe": 0.24898,
@@ -23411,7 +23412,7 @@
    "price": 1705.0,
    "chg_1d": -0.008721,
    "mcap": 33848580700000.0,
-   "avg_value_20d": 13362041749.923113,
+   "avg_value_20d": 13388805728.845215,
    "pe": 7.490883,
    "pb": 2.888969,
    "roe": 0.39415,
@@ -23427,7 +23428,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -74.9,
+    "score": -73.9,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23443,7 +23444,7 @@
    "price": 4120.0,
    "chg_1d": -0.002421,
    "mcap": 32690893960000.0,
-   "avg_value_20d": 7722444228.757136,
+   "avg_value_20d": 7755548100.0,
    "pe": 15.209125,
    "pb": 4.727302,
    "roe": 0.30537,
@@ -23459,7 +23460,7 @@
     "signal": "STRONG SELL"
    },
    "medium": {
-    "score": -45.2,
+    "score": -44.2,
     "signal": "SELL"
    },
    "long": {
@@ -23475,7 +23476,7 @@
    "price": 1700.0,
    "chg_1d": 0.005917,
    "mcap": 30939766166700.0,
-   "avg_value_20d": 41435457087.684,
+   "avg_value_20d": 41377537400.0,
    "pe": null,
    "pb": 1.094771,
    "roe": -0.11328,
@@ -23507,7 +23508,7 @@
    "price": 1225.0,
    "chg_1d": 0.033755,
    "mcap": 30791883283700.0,
-   "avg_value_20d": 60681803376.00807,
+   "avg_value_20d": 61518581425.0,
    "pe": 5.305557,
    "pb": null,
    "roe": 0.15089,
@@ -23523,7 +23524,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -54.2,
+    "score": -53.2,
     "signal": "SELL"
    },
    "long": {
@@ -23539,7 +23540,7 @@
    "price": 15750.0,
    "chg_1d": -0.001585,
    "mcap": 30304386000000.0,
-   "avg_value_20d": 13567804892.507748,
+   "avg_value_20d": 13573345625.0,
    "pe": 6.095225,
    "pb": 0.462307,
    "roe": 0.07791,
@@ -23555,7 +23556,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -46.5,
+    "score": -45.5,
     "signal": "SELL"
    },
    "long": {
@@ -23571,7 +23572,7 @@
    "price": 24800.0,
    "chg_1d": 0.006085,
    "mcap": 28022140000000.0,
-   "avg_value_20d": 32800857449.102974,
+   "avg_value_20d": 33131759875.0,
    "pe": 7.188843,
    "pb": null,
    "roe": 0.1195,
@@ -23603,7 +23604,7 @@
    "price": 1265.0,
    "chg_1d": 0.016064,
    "mcap": 25392945369000.0,
-   "avg_value_20d": 20598447958.918507,
+   "avg_value_20d": 20660571050.0,
    "pe": 8.249103,
    "pb": 1.993335,
    "roe": 0.22207,
@@ -23635,12 +23636,32 @@
    "price": 2260.0,
    "chg_1d": 0.018018,
    "mcap": 22794473000000.0,
-   "avg_value_20d": 111378987908.33975,
+   "avg_value_20d": 112011897100.0,
    "pe": 38.474632,
    "pb": null,
    "roe": 0.11533,
    "div_yield": 0.0,
    "news": [
+    {
+     "date": "2026-11-26",
+     "title": "PTRO Dapat Restu Rights Issue dan Penjaminan Aset",
+     "source": "investor.id",
+     "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOT2tlSlJDSFlkNVFxSVlXbDBVbWpKaWdidXNnaER6NkhaeXVXcmZxX0hkU19ONlRTb1ROdGRUOHhaaVUxV2NDVFVVZEtmS0pGb0xldFNQc0VuRGdTN21CazRKMUwyYmVzYzloZzlJN1BTZnR0MEUtX0c3UmNFV1NqTG5tR1NFYUtoWnZn?oc=5",
+     "categories": [
+      "Right issue (dilusi)"
+     ],
+     "severity": "sedang"
+    },
+    {
+     "date": "2026-11-26",
+     "title": "Petrosea (PTRO) Resmi Kantongi Restu Rights Issue Maksimal 170 Juta Saham",
+     "source": "Rmol.id",
+     "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZm5uXzVocUZudENKTkhGaU8tTXpUZE5wbEYxR0ZBcEJnRDBWSU82WDFmR1ZGa29FOUFDSi1xZmtlOTZlUkJXX3lacWdyc1E5dF9SZnhuaU1CUGh1ejR5cFdjaEhVNFZ6YVBYalV0aEJpNVI0SW9oaVlLS2MxOWxJVnF1U01TQXlMeExnd3NablROV25KRGRNNUdKeFBsZmNTdmpGY180UTM3YlVmdnhV?oc=5",
+     "categories": [
+      "Right issue (dilusi)"
+     ],
+     "severity": "sedang"
+    },
     {
      "date": "2026-11-25",
      "title": "Petrosea (PTRO) Rights Issue 170 Juta Saham Baru, Cek Prospek Sahamnya",
@@ -23666,26 +23687,6 @@
      "title": "Rights Issue PTRO Perkuat Modal untuk Ekspansi Proyek EPC",
      "source": "Demokratis.co.id",
      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBCbGpDODlIZ2t1MTZveF9rRWNRLVRpR2hGZ21MV2pVTGxwSFFGZERwcTFWTElnNGduQzFIQUJhYkZab1BlQ2ZNNWtuenRKYjRJWVo0YmJqTjFkR2t1RGZaemxhOXc1TU0?oc=5",
-     "categories": [
-      "Right issue (dilusi)"
-     ],
-     "severity": "sedang"
-    },
-    {
-     "date": "2026-11-23",
-     "title": "PTRO Siapkan Rights Issue Maksimal 170 Juta Saham, Minta Restu RUPSLB",
-     "source": "SWA.co.id",
-     "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSFA5Z0lyWm5fZVR0V2RtQ0Z6Z2ZLQ2I5ckVWcXJLRDJ2N0JHV09kYnhmZE1ETzBRaTh3MmREMHFqSWJvMEd0TEszLXhLUzZfbERLNFNYQlhRNlFfWVItY3lFdlhXSVV6UXo4RFVaSk51QjNBNDRRNHlPSmVEMkpRZlgzMUVMaE1YbTVPd2h5dVNpWXZFR2EzSTZkV3pDYjA?oc=5",
-     "categories": [
-      "Right issue (dilusi)"
-     ],
-     "severity": "sedang"
-    },
-    {
-     "date": "2026-11-23",
-     "title": "Jadwal RUPS Hari Ini: BYAN Rombak Pengurus, PTRO Bahas Rights Issue",
-     "source": "CNBC Indonesia",
-     "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNVFJPVXVUQ2d1dEYxODkwbkNJbkJTZU96ZXNCNDYzN1o4R1J2bnpVSWxDNnBrcU05ZlJtc0pkQWt5TUlkS1BLRE5Va2pHSi1ldEtZOGNBbnFsd2l0YkE4LWVTY0taV0VXZnI3eTlEMjVPR0lzU0dUTDh4dm1iTTZnWlZVNUplUUVESkMzOUQwOHlfZXlqQlhaVHNUTnhkcWlkM1V4ckhZakktbUVtRVhpUDBIU3lvNmVEaTlHTHJmX1NZQTQ4WkHSAcsBQVVfeXFMTnBwZzJyazlHMU50UkJRRERfR0c3VTBEa0pOY1Nzdm5lWGJYZGZKMlN0MUY5eWtMZVduT1V3S0phb2dEVUlqUmlzMzRJZUlxazhGU2dHbEdMYV8zb2lMTEZyQklrT3g1YmtNaHByLVRIbnAyVkloMXNLT3dCa25xSE40TlJvY1AzZmoyckNqQzhZdUZNN1RFd0VFTmpFY2Jkc2l4MzBEVHBOb0stNUdxUzVDQm9aRXV3S0MtZFpMRTVJckNqUEUxcEhLdUU?oc=5",
      "categories": [
       "Right issue (dilusi)"
      ],
@@ -23718,7 +23719,7 @@
    "price": 370.0,
    "chg_1d": -0.021164,
    "mcap": 21866298380470.0,
-   "avg_value_20d": 15592615409.60473,
+   "avg_value_20d": 15489786330.0,
    "pe": 5.441176,
    "pb": 0.730952,
    "roe": 0.14213,
@@ -23734,7 +23735,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -38.5,
+    "score": -37.5,
     "signal": "SELL"
    },
    "long": {
@@ -23750,7 +23751,7 @@
    "price": 545.0,
    "chg_1d": 0.028302,
    "mcap": 21716514515625.0,
-   "avg_value_20d": 70630731539.43262,
+   "avg_value_20d": 71224718225.0,
    "pe": null,
    "pb": null,
    "roe": 0.1317,
@@ -23782,7 +23783,7 @@
    "price": 6200.0,
    "chg_1d": -0.004016,
    "mcap": 21272655073800.0,
-   "avg_value_20d": 8154603786.836115,
+   "avg_value_20d": 8149356750.0,
    "pe": 8.235263,
    "pb": 0.892111,
    "roe": 0.11088,
@@ -23814,7 +23815,7 @@
    "price": 2840.0,
    "chg_1d": -0.034014,
    "mcap": 21151619809360.0,
-   "avg_value_20d": 169131224713.42273,
+   "avg_value_20d": 166688535350.0,
    "pe": 4.382716,
    "pb": 1.766768,
    "roe": 0.49345,
@@ -23830,7 +23831,7 @@
     "signal": "STRONG SELL"
    },
    "medium": {
-    "score": -98.8,
+    "score": -97.8,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23846,7 +23847,7 @@
    "price": 252.0,
    "chg_1d": -0.030769,
    "mcap": 21057038715888.0,
-   "avg_value_20d": 6193659984.75509,
+   "avg_value_20d": 6122368320.0,
    "pe": 10.615385,
    "pb": 0.686931,
    "roe": 0.06545,
@@ -23878,7 +23879,7 @@
    "price": 2000.0,
    "chg_1d": 0.0,
    "mcap": 20796350400000.0,
-   "avg_value_20d": 16469221508.094604,
+   "avg_value_20d": 16614855120.36377,
    "pe": 11.390819,
    "pb": 2.502828,
    "roe": 0.22619,
@@ -23910,7 +23911,7 @@
    "price": 334.0,
    "chg_1d": 0.012121,
    "mcap": 20692487570400.0,
-   "avg_value_20d": 10365477930.522192,
+   "avg_value_20d": 10330859725.012817,
    "pe": 10.220318,
    "pb": 1.965631,
    "roe": 0.1952,
@@ -23942,7 +23943,7 @@
    "price": 1485.0,
    "chg_1d": 0.027682,
    "mcap": 20652610027500.0,
-   "avg_value_20d": 12220974992.712757,
+   "avg_value_20d": 12087318275.0,
    "pe": 14.400698,
    "pb": 2.677137,
    "roe": 0.18358,
@@ -23954,11 +23955,11 @@
    "foreign_days": 20,
    "foreign_last": "2026-11-20",
    "short": {
-    "score": 80.0,
+    "score": 65.0,
     "signal": "STRONG BUY"
    },
    "medium": {
-    "score": -22.2,
+    "score": -21.2,
     "signal": "HOLD"
    },
    "long": {
@@ -23974,7 +23975,7 @@
    "price": 2220.0,
    "chg_1d": 0.0,
    "mcap": 20492076411000.0,
-   "avg_value_20d": 11318221710.541775,
+   "avg_value_20d": 11361636850.0,
    "pe": 52.039383,
    "pb": 9.28812,
    "roe": 0.19304,
@@ -24006,7 +24007,7 @@
    "price": 800.0,
    "chg_1d": 0.025641,
    "mcap": 20188000000000.0,
-   "avg_value_20d": 40065023894.177055,
+   "avg_value_20d": 40078204475.0,
    "pe": 8.065329,
    "pb": null,
    "roe": 0.36055,
@@ -24049,7 +24050,7 @@
    "price": 2580.0,
    "chg_1d": 0.032,
    "mcap": 18725307696000.0,
-   "avg_value_20d": 12957467203.30215,
+   "avg_value_20d": 13042157550.0,
    "pe": 5.431007,
    "pb": 0.495295,
    "roe": 0.07894,
@@ -24065,7 +24066,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -65.6,
+    "score": -64.6,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -24081,7 +24082,7 @@
    "price": 9475.0,
    "chg_1d": 0.007979,
    "mcap": 18236421955175.0,
-   "avg_value_20d": 17920682346.979515,
+   "avg_value_20d": 17902721750.0,
    "pe": 7.906177,
    "pb": 0.74877,
    "roe": 0.09861,
@@ -24113,7 +24114,7 @@
    "price": 302.0,
    "chg_1d": 0.086331,
    "mcap": 17742500000000.0,
-   "avg_value_20d": 61720000235.58657,
+   "avg_value_20d": 61608742070.0,
    "pe": null,
    "pb": 12.660351,
    "roe": 0.00357,
@@ -24145,7 +24146,7 @@
    "price": 615.0,
    "chg_1d": 0.008197,
    "mcap": 17529960000000.0,
-   "avg_value_20d": 10702209336.002941,
+   "avg_value_20d": 10630658775.0,
    "pe": 8.94936,
    "pb": 1.729914,
    "roe": 0.2155,
@@ -24161,7 +24162,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": 26.7,
+    "score": 27.7,
     "signal": "HOLD"
    },
    "long": {
@@ -24177,7 +24178,7 @@
    "price": 1025.0,
    "chg_1d": -0.014423,
    "mcap": 17015000000000.0,
-   "avg_value_20d": 6266232209.245473,
+   "avg_value_20d": 6233334725.0,
    "pe": 6.619737,
    "pb": 1.074707,
    "roe": 0.17667,
@@ -24193,7 +24194,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -94.7,
+    "score": -93.7,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -24209,7 +24210,7 @@
    "price": 5450.0,
    "chg_1d": -0.009091,
    "mcap": 16967068456500.0,
-   "avg_value_20d": 6764355866.669987,
+   "avg_value_20d": 6764545000.0,
    "pe": 2.423019,
    "pb": null,
    "roe": 0.13147,
@@ -24241,7 +24242,7 @@
    "price": 1430.0,
    "chg_1d": 0.0,
    "mcap": 16769002537430.0,
-   "avg_value_20d": 49275847920.28217,
+   "avg_value_20d": 49387783217.95776,
    "pe": 3.461883,
    "pb": 0.778633,
    "roe": 0.25112,
@@ -24273,7 +24274,7 @@
    "price": 256.0,
    "chg_1d": -0.015385,
    "mcap": 15725171579648.0,
-   "avg_value_20d": 15397009445.093998,
+   "avg_value_20d": 15371555400.0,
    "pe": 164.10257,
    "pb": 0.41404,
    "roe": 0.01034,
@@ -24305,7 +24306,7 @@
    "price": 308.0,
    "chg_1d": 0.026667,
    "mcap": 14833157539200.0,
-   "avg_value_20d": 11245046863.100998,
+   "avg_value_20d": 11035681420.0,
    "pe": 7.368421,
    "pb": 0.639827,
    "roe": 0.09013,
@@ -24337,7 +24338,7 @@
    "price": 1015.0,
    "chg_1d": 0.00995,
    "mcap": 14102511468535.0,
-   "avg_value_20d": 22370802905.68665,
+   "avg_value_20d": 22432878550.0,
    "pe": 3.601973,
    "pb": 0.393396,
    "roe": 0.11066,
@@ -24353,7 +24354,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": 28.4,
+    "score": 29.4,
     "signal": "HOLD"
    },
    "long": {
@@ -24369,7 +24370,7 @@
    "price": 720.0,
    "chg_1d": 0.006993,
    "mcap": 12330362880000.0,
-   "avg_value_20d": 9326816641.177814,
+   "avg_value_20d": 9284841075.0,
    "pe": null,
    "pb": 5.431134,
    "roe": -0.06919,
@@ -24401,7 +24402,7 @@
    "price": 117.0,
    "chg_1d": 0.0,
    "mcap": 12070549619739.0,
-   "avg_value_20d": 8152958839.56394,
+   "avg_value_20d": 8032690925.0,
    "pe": null,
    "pb": 0.443351,
    "roe": -0.02607,
@@ -24433,7 +24434,7 @@
    "price": 5775.0,
    "chg_1d": -0.097656,
    "mcap": 12067330159500.0,
-   "avg_value_20d": 6209277115.081141,
+   "avg_value_20d": 6115540125.0,
    "pe": null,
    "pb": null,
    "roe": -0.2513,
@@ -24465,7 +24466,7 @@
    "price": 795.0,
    "chg_1d": 0.0,
    "mcap": 11956309977900.0,
-   "avg_value_20d": 7691807850.179575,
+   "avg_value_20d": 7707926375.0,
    "pe": 6.92147,
    "pb": 1.027351,
    "roe": 0.1549,
@@ -24481,7 +24482,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": -29.4,
+    "score": -28.3,
     "signal": "HOLD"
    },
    "long": {
@@ -24497,7 +24498,7 @@
    "price": 9700.0,
    "chg_1d": -0.020202,
    "mcap": 11664250000000.0,
-   "avg_value_20d": 90954845684.32686,
+   "avg_value_20d": 91080307000.0,
    "pe": 11.162255,
    "pb": null,
    "roe": null,
@@ -24529,7 +24530,7 @@
    "price": 332.0,
    "chg_1d": 0.006061,
    "mcap": 11335173372372.0,
-   "avg_value_20d": 83593543930.00955,
+   "avg_value_20d": 83637493250.0,
    "pe": 22.25201,
    "pb": 3.172025,
    "roe": 0.08349,
@@ -24572,7 +24573,7 @@
    "price": 1585.0,
    "chg_1d": 0.006349,
    "mcap": 10809642884525.0,
-   "avg_value_20d": 11536400742.79281,
+   "avg_value_20d": 11548222000.0,
    "pe": 4.531808,
    "pb": 0.712303,
    "roe": 0.16711,
@@ -24604,7 +24605,7 @@
    "price": 62.0,
    "chg_1d": 0.016393,
    "mcap": 10544665957560.0,
-   "avg_value_20d": 11999151780.153591,
+   "avg_value_20d": 12126731710.0,
    "pe": null,
    "pb": 1.803217,
    "roe": -0.44469,
@@ -24636,22 +24637,12 @@
    "price": 1545.0,
    "chg_1d": -0.006431,
    "mcap": 10431129437505.0,
-   "avg_value_20d": 15689352078.959202,
+   "avg_value_20d": 15725825700.0,
    "pe": 17.166666,
    "pb": 0.236629,
    "roe": 0.01023,
    "div_yield": 0.0182,
    "news": [
-    {
-     "date": "2026-11-23",
-     "title": "Gak Alihkan Saham SMCB ke Publik, SMGR Kena Sanksi OJK",
-     "source": "CNBC Indonesia",
-     "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNS1B5cUtndElsWURlMHhlaGpTSHJYa0lBZEVySUt1VXNyTF9PRUdnU241SzlrQlVkNUIwcUYtN3F6aUlaR0YyWnhCQnJEUFhLcHJzTGRmYnUzVGZzMFYxZ0FQZVRfMkRiN19NaDhCeXd2VnpSVmpwVmFVUTRNRy1maTNQSTl1LVdjX09vLUhzRGtDdXV4NU1OMVZfaGhaWEdKcy10RENXb1FZUWFxTVNKdHZqSEVBd9IBuwFBVV95cUxOd1NLdjU3NnBCeV9qTzV4Q0Naa0p0VmJCSXNuSnVGTWIxVkpRT0FpTHE2QW1Gdl9GbTVidXlsYVlMQVBteHdCaXQxMVVjNExEMDA4Q0d4U2NXaEhyakJIbEdDQXBDcUJyQkNRRC16elg1RE8yWkhNaGl4bTJRbkNZbkNoalc3djlGNVVpRGw4RTBGYVRYaDdCUm8zXy1LUEU3RWJkTERKSkdCdU9rTnUweHNjNi1SWTludkc0?oc=5",
-     "categories": [
-      "Sanksi / denda"
-     ],
-     "severity": "sedang"
-    },
     {
      "date": "2026-11-21",
      "title": "OJK Denda GOOD SMGR dan MARK atas Pelanggaran Pasar Modal",
@@ -24673,7 +24664,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": 23.5,
+    "score": 24.5,
     "signal": "HOLD"
    },
    "long": {
@@ -24689,7 +24680,7 @@
    "price": 388.0,
    "chg_1d": 0.021053,
    "mcap": 10266480000000.0,
-   "avg_value_20d": 30422621592.011395,
+   "avg_value_20d": 30300858560.0,
    "pe": 2.884973,
    "pb": null,
    "roe": 0.51382,
@@ -24705,7 +24696,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -82.0,
+    "score": -81.0,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -24721,7 +24712,7 @@
    "price": 338.0,
    "chg_1d": 0.0,
    "mcap": 10140000000000.0,
-   "avg_value_20d": 6353357523.269583,
+   "avg_value_20d": 6359005846.193237,
    "pe": 9.73222,
    "pb": 3.039159,
    "roe": 0.30795,
@@ -24753,7 +24744,7 @@
    "price": 236.0,
    "chg_1d": 0.008547,
    "mcap": 9602234481584.0,
-   "avg_value_20d": 133667717532.42159,
+   "avg_value_20d": 133828035990.0,
    "pe": 2.088496,
    "pb": 1.116383,
    "roe": 0.70732,
@@ -24785,7 +24776,7 @@
    "price": 1650.0,
    "chg_1d": 0.009174,
    "mcap": 9501814476000.0,
-   "avg_value_20d": 5000202939.019766,
+   "avg_value_20d": 5033801411.599731,
    "pe": 8.04878,
    "pb": 2.315422,
    "roe": 0.29054,
@@ -24817,7 +24808,7 @@
    "price": 585.0,
    "chg_1d": -0.025,
    "mcap": 9118342021230.0,
-   "avg_value_20d": 25883597990.543987,
+   "avg_value_20d": 25840286800.0,
    "pe": 42.857143,
    "pb": 3.639554,
    "roe": 0.08073,
@@ -24849,7 +24840,7 @@
    "price": 665.0,
    "chg_1d": 0.015267,
    "mcap": 8989536500000.0,
-   "avg_value_20d": 8210760983.454233,
+   "avg_value_20d": 8217993600.0,
    "pe": 7.154384,
    "pb": null,
    "roe": 0.08968,
@@ -24865,7 +24856,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -73.5,
+    "score": -72.5,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -24881,7 +24872,7 @@
    "price": 290.0,
    "chg_1d": 0.0,
    "mcap": 8923682307580.0,
-   "avg_value_20d": 121625061897.84854,
+   "avg_value_20d": 121449990850.0,
    "pe": 292.9293,
    "pb": 3.263854,
    "roe": 0.01729,
@@ -24934,7 +24925,7 @@
    "price": 478.0,
    "chg_1d": 0.0,
    "mcap": 8860062331890.0,
-   "avg_value_20d": 8711868316.625366,
+   "avg_value_20d": 8699763505.0,
    "pe": 3.76378,
    "pb": 0.358367,
    "roe": 0.09352,
@@ -24950,7 +24941,7 @@
     "signal": "STRONG SELL"
    },
    "medium": {
-    "score": -91.8,
+    "score": -90.8,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -24966,7 +24957,7 @@
    "price": 510.0,
    "chg_1d": 0.009901,
    "mcap": 8785757607000.0,
-   "avg_value_20d": 30521002988.321785,
+   "avg_value_20d": 30495658340.0,
    "pe": 7.265992,
    "pb": null,
    "roe": 0.17152,
@@ -24982,7 +24973,7 @@
     "signal": "HOLD"
    },
    "medium": {
-    "score": -56.7,
+    "score": -55.7,
     "signal": "SELL"
    },
    "long": {
@@ -24998,7 +24989,7 @@
    "price": 410.0,
    "chg_1d": -0.033019,
    "mcap": 8665519125000.0,
-   "avg_value_20d": 73566952574.097,
+   "avg_value_20d": 73491136100.0,
    "pe": 12.394196,
    "pb": null,
    "roe": 0.21242,
@@ -25030,7 +25021,7 @@
    "price": 133.0,
    "chg_1d": 0.007576,
    "mcap": 8454105536240.0,
-   "avg_value_20d": 6151514068.639055,
+   "avg_value_20d": 6133532180.0,
    "pe": 8.090024,
    "pb": 1.27134,
    "roe": 0.1404,
@@ -25062,7 +25053,7 @@
    "price": 1105.0,
    "chg_1d": -0.026432,
    "mcap": 8427462615000.0,
-   "avg_value_20d": 6075646771.752451,
+   "avg_value_20d": 6062358600.0,
    "pe": 6.553197,
    "pb": 0.80196,
    "roe": 0.12294,
@@ -25094,7 +25085,7 @@
    "price": 6950.0,
    "chg_1d": -0.014184,
    "mcap": 8340000000000.0,
-   "avg_value_20d": 14000857182.063854,
+   "avg_value_20d": 13775231250.0,
    "pe": 57.57124,
    "pb": 39.645416,
    "roe": 0.31954,
@@ -25126,7 +25117,7 @@
    "price": 500.0,
    "chg_1d": -0.009901,
    "mcap": 7975000000000.0,
-   "avg_value_20d": 28758911601.51488,
+   "avg_value_20d": 28744605880.0,
    "pe": 5.263158,
    "pb": 0.791012,
    "roe": 0.16479,
@@ -25142,7 +25133,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -21.9,
+    "score": -20.9,
     "signal": "HOLD"
    },
    "long": {
@@ -25158,7 +25149,7 @@
    "price": 165.0,
    "chg_1d": 0.0,
    "mcap": 7952688331500.0,
-   "avg_value_20d": 22186122100.896458,
+   "avg_value_20d": 22216324070.0,
    "pe": 4.504504,
    "pb": 1.088577,
    "roe": 0.25895,
@@ -25190,23 +25181,12 @@
    "price": 1490.0,
    "chg_1d": 0.024055,
    "mcap": 7763186080000.0,
-   "avg_value_20d": 38700085179.91893,
+   "avg_value_20d": 39020986000.0,
    "pe": 17.461618,
    "pb": null,
    "roe": 0.04053,
    "div_yield": 0.007,
-   "news": [
-    {
-     "date": "2026-11-21",
-     "title": "Sengketa Lahan Awak Mas Tekan Saham Indika Energy",
-     "source": "www.suaralandak.co.id",
-     "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5WVExPZ2twQlUyZEJxVDA2U2k5MHpiSnhUcXd6N2g0cjFNV3l3U2NsMnd2eVdYeUthdGI2X3NMMUFpbVExWVFlTDRRXzRMa2tsQ0xPNk5NYnNIbGFNdnVGMU5iX0RWOXJ2V21QZUtpamFXYXhZWkE?oc=5",
-     "categories": [
-      "Gugatan"
-     ],
-     "severity": "sedang"
-    }
-   ],
+   "news": null,
    "foreign_5d": 689049000.0,
    "foreign_20d": 14786006000.0,
    "foreign_20d_pct": 0.019198,
@@ -25233,7 +25213,7 @@
    "price": 940.0,
    "chg_1d": 0.005348,
    "mcap": 7521044813760.0,
-   "avg_value_20d": 12748952663.47769,
+   "avg_value_20d": 12748931775.0,
    "pe": null,
    "pb": 3.593341,
    "roe": -0.13017,
@@ -25265,7 +25245,7 @@
    "price": 525.0,
    "chg_1d": -0.009434,
    "mcap": 7204453410000.0,
-   "avg_value_20d": 7800193906.806684,
+   "avg_value_20d": 7793972175.0,
    "pe": 19.833775,
    "pb": 0.796298,
    "roe": 0.04196,
@@ -25297,7 +25277,7 @@
    "price": 302.0,
    "chg_1d": 0.013423,
    "mcap": 6606250000000.0,
-   "avg_value_20d": 6757398914.154221,
+   "avg_value_20d": 6731290070.0,
    "pe": 14.550781,
    "pb": 3.075621,
    "roe": 0.22711,
@@ -25313,7 +25293,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -73.5,
+    "score": -72.5,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -25329,7 +25309,7 @@
    "price": 356.0,
    "chg_1d": -0.005587,
    "mcap": 6094858733200.0,
-   "avg_value_20d": 6975861073.630804,
+   "avg_value_20d": 6993084030.0,
    "pe": 7.712305,
    "pb": 0.926483,
    "roe": 0.12173,
@@ -25361,7 +25341,7 @@
    "price": 1230.0,
    "chg_1d": -0.02381,
    "mcap": 5664472752000.0,
-   "avg_value_20d": 13924713198.023901,
+   "avg_value_20d": 13886829975.0,
    "pe": 4.35198,
    "pb": 1.439787,
    "roe": 0.3847,
@@ -25393,7 +25373,7 @@
    "price": 168.0,
    "chg_1d": 0.005988,
    "mcap": 5379708313224.0,
-   "avg_value_20d": 7243418983.824591,
+   "avg_value_20d": 7251133015.0,
    "pe": 3.025421,
    "pb": 0.168373,
    "roe": 0.05297,
@@ -25409,7 +25389,7 @@
     "signal": "HOLD"
    },
    "medium": {
-    "score": -38.4,
+    "score": -37.4,
     "signal": "SELL"
    },
    "long": {
@@ -25425,7 +25405,7 @@
    "price": 1960.0,
    "chg_1d": 0.002558,
    "mcap": 5321505448000.0,
-   "avg_value_20d": 24417799491.528614,
+   "avg_value_20d": 24414489700.0,
    "pe": 10.822152,
    "pb": null,
    "roe": 0.55656,
@@ -25457,7 +25437,7 @@
    "price": 352.0,
    "chg_1d": 0.011494,
    "mcap": 5176470604800.0,
-   "avg_value_20d": 21617563430.95059,
+   "avg_value_20d": 21626672740.0,
    "pe": null,
    "pb": 3.648592,
    "roe": -0.03378,
@@ -25489,7 +25469,7 @@
    "price": 81.0,
    "chg_1d": 0.025316,
    "mcap": 5160525950277.0,
-   "avg_value_20d": 39840648502.3749,
+   "avg_value_20d": 39508850505.0,
    "pe": 245.45453,
    "pb": null,
    "roe": 0.01893,
@@ -25521,7 +25501,7 @@
    "price": 312.0,
    "chg_1d": 0.0,
    "mcap": 5109187200000.0,
-   "avg_value_20d": 6059260976.174151,
+   "avg_value_20d": 6058455330.0,
    "pe": 6.028986,
    "pb": null,
    "roe": 0.10927,
@@ -26595,12 +26575,12 @@
    "google": {
     "ok": 107,
     "fail": 0,
-    "items": 7885
+    "items": 8159
    },
    "skipped_budget": 0,
-   "recent_items": 1235,
+   "recent_items": 1341,
    "stocks_flagged": 8,
-   "seconds": 93
+   "seconds": 90
   },
   "items": {
    "BBCA": [
@@ -26637,6 +26617,16 @@
      "severity": "sedang"
     },
     {
+     "date": "2026-11-26",
+     "title": "BSI (BRIS) Gelar Rights Issue Februari 2027, Siapkan 6,8 Miliar Saham Baru",
+     "source": "IDX Channel",
+     "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNNDF3VkdhaHJsblp0aFV3djMxaUhaYUVCQ0Qzdld4RXJ4SjJ2QVFiSDF6ZVhuVGdyeVZON0g4ZmwyQmJOR0ROQnV0UHNWZHBjRUVoT2tBVXoyYkxnT1lTdlZIYkRtSkxDZ3VxeG8wcHg5VVpYMVBOQWcybk55dDVhU3A5RXhfTHlCNjdmcUhMbGJYY1pGNUw5TzQtVW1TS1E2UFFZeE54bVBDNVkwS2fSAbMBQVVfeXFMT2oyQnhMODdyUmhuWWV1RVZQYUozY296dGNkQ3BsX196eW5leFJJcFJwbVZBTm9iVXAxNkFiR01MU2dUcVBuY0JVSDRVZDNSMzdJcnF1SWFOaEhOQ3BKN0lWYnRNN2h0QWJtaTYzVFRLTWhHMEh3QjY0YXBVQklwdTl3LXA4NzE4Y0VyWnptdTFkOWZibGVHT2czYWliVEZ4X0RhWE5KVnpHMmRtekhicmlVOEE?oc=5",
+     "categories": [
+      "Right issue (dilusi)"
+     ],
+     "severity": "sedang"
+    },
+    {
      "date": "2026-11-24",
      "title": "BSI (BRIS) Akui Rights Issue Berpotensi Tekan Laba Per Saham",
      "source": "CNBC Indonesia",
@@ -26655,19 +26645,41 @@
       "Right issue (dilusi)"
      ],
      "severity": "sedang"
-    },
+    }
+   ],
+   "MDKA": [
     {
-     "date": "2026-11-24",
-     "title": "BSI (BRIS) Bukukan Laba Rp 6,01 Triliun & Bersiap Right Issue, Simak Rekomendasinya",
-     "source": "kontan.co.id",
-     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQZTAwYWxZUGVDSjJLZjBhUUNmbkljekxHQWtsODFTc2Q5Wko3V1NmVnAzRC00S1dvQTE1Zk9NYkI4Y2NXWjMtaC1uakJONEZHaUVuVENoWnFIXy1NNlNkSlo4VzFQS09XaUxSNFlrZ3hPNE9Rc1d3b002MWNEYkFBb0YxMms4T0NPUzNQQzNXUXF0bEFFLWhQbDRQc0RrMHBtWXllaGI1Z1loMTdqYW5EcFVn0gGrAUFVX3lxTE1NNzZvTENKVV9OQy1jZjB0a0Fua1NNMzdPTU9YZFU5bHNsRkJ6eUVMWjlEVTZZb0FMbk5ybnAtXzd2clFUekhBcEo2S3l2VDJtYWdqdWQyRWZva3o1OHpZOU9BR3pyVTVMeHdsOFZFOW9hYkl0ZWZXdEl0SGJVSERybEw4MDVBeVlNclNkRDE5YnM0cm8yZzhsS2I2MGZnZmNWX0tET2hMZklwZw?oc=5",
+     "date": "2026-11-23",
+     "title": "MDKA Cetak Laba USD157 Juta Saat Saham Anjlok",
+     "source": "شبكة تواصل الإخبارية",
+     "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5VTEc5WGliVWloXy0xU0tCZnJqOC1ZV3JLaHRnZjk5a1Z4a1lHYTZPVkM1bHNVOGhEdE5ldzB6aEFmMV93c0dud2lpSTFldllWR0V3?oc=5",
      "categories": [
-      "Right issue (dilusi)"
+      "Kinerja memburuk"
      ],
      "severity": "sedang"
     }
    ],
    "PTRO": [
+    {
+     "date": "2026-11-26",
+     "title": "PTRO Dapat Restu Rights Issue dan Penjaminan Aset",
+     "source": "investor.id",
+     "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOT2tlSlJDSFlkNVFxSVlXbDBVbWpKaWdidXNnaER6NkhaeXVXcmZxX0hkU19ONlRTb1ROdGRUOHhaaVUxV2NDVFVVZEtmS0pGb0xldFNQc0VuRGdTN21CazRKMUwyYmVzYzloZzlJN1BTZnR0MEUtX0c3UmNFV1NqTG5tR1NFYUtoWnZn?oc=5",
+     "categories": [
+      "Right issue (dilusi)"
+     ],
+     "severity": "sedang"
+    },
+    {
+     "date": "2026-11-26",
+     "title": "Petrosea (PTRO) Resmi Kantongi Restu Rights Issue Maksimal 170 Juta Saham",
+     "source": "Rmol.id",
+     "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZm5uXzVocUZudENKTkhGaU8tTXpUZE5wbEYxR0ZBcEJnRDBWSU82WDFmR1ZGa29FOUFDSi1xZmtlOTZlUkJXX3lacWdyc1E5dF9SZnhuaU1CUGh1ejR5cFdjaEhVNFZ6YVBYalV0aEJpNVI0SW9oaVlLS2MxOWxJVnF1U01TQXlMeExnd3NablROV25KRGRNNUdKeFBsZmNTdmpGY180UTM3YlVmdnhV?oc=5",
+     "categories": [
+      "Right issue (dilusi)"
+     ],
+     "severity": "sedang"
+    },
     {
      "date": "2026-11-25",
      "title": "Petrosea (PTRO) Rights Issue 170 Juta Saham Baru, Cek Prospek Sahamnya",
@@ -26693,26 +26705,6 @@
      "title": "Rights Issue PTRO Perkuat Modal untuk Ekspansi Proyek EPC",
      "source": "Demokratis.co.id",
      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBCbGpDODlIZ2t1MTZveF9rRWNRLVRpR2hGZ21MV2pVTGxwSFFGZERwcTFWTElnNGduQzFIQUJhYkZab1BlQ2ZNNWtuenRKYjRJWVo0YmJqTjFkR2t1RGZaemxhOXc1TU0?oc=5",
-     "categories": [
-      "Right issue (dilusi)"
-     ],
-     "severity": "sedang"
-    },
-    {
-     "date": "2026-11-23",
-     "title": "PTRO Siapkan Rights Issue Maksimal 170 Juta Saham, Minta Restu RUPSLB",
-     "source": "SWA.co.id",
-     "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSFA5Z0lyWm5fZVR0V2RtQ0Z6Z2ZLQ2I5ckVWcXJLRDJ2N0JHV09kYnhmZE1ETzBRaTh3MmREMHFqSWJvMEd0TEszLXhLUzZfbERLNFNYQlhRNlFfWVItY3lFdlhXSVV6UXo4RFVaSk51QjNBNDRRNHlPSmVEMkpRZlgzMUVMaE1YbTVPd2h5dVNpWXZFR2EzSTZkV3pDYjA?oc=5",
-     "categories": [
-      "Right issue (dilusi)"
-     ],
-     "severity": "sedang"
-    },
-    {
-     "date": "2026-11-23",
-     "title": "Jadwal RUPS Hari Ini: BYAN Rombak Pengurus, PTRO Bahas Rights Issue",
-     "source": "CNBC Indonesia",
-     "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNVFJPVXVUQ2d1dEYxODkwbkNJbkJTZU96ZXNCNDYzN1o4R1J2bnpVSWxDNnBrcU05ZlJtc0pkQWt5TUlkS1BLRE5Va2pHSi1ldEtZOGNBbnFsd2l0YkE4LWVTY0taV0VXZnI3eTlEMjVPR0lzU0dUTDh4dm1iTTZnWlZVNUplUUVESkMzOUQwOHlfZXlqQlhaVHNUTnhkcWlkM1V4ckhZakktbUVtRVhpUDBIU3lvNmVEaTlHTHJmX1NZQTQ4WkHSAcsBQVVfeXFMTnBwZzJyazlHMU50UkJRRERfR0c3VTBEa0pOY1Nzdm5lWGJYZGZKMlN0MUY5eWtMZVduT1V3S0phb2dEVUlqUmlzMzRJZUlxazhGU2dHbEdMYV8zb2lMTEZyQklrT3g1YmtNaHByLVRIbnAyVkloMXNLT3dCa25xSE40TlJvY1AzZmoyckNqQzhZdUZNN1RFd0VFTmpFY2Jkc2l4MzBEVHBOb0stNUdxUzVDQm9aRXV3S0MtZFpMRTVJckNqUEUxcEhLdUU?oc=5",
      "categories": [
       "Right issue (dilusi)"
      ],
@@ -26745,16 +26737,6 @@
    ],
    "SMGR": [
     {
-     "date": "2026-11-23",
-     "title": "Gak Alihkan Saham SMCB ke Publik, SMGR Kena Sanksi OJK",
-     "source": "CNBC Indonesia",
-     "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNS1B5cUtndElsWURlMHhlaGpTSHJYa0lBZEVySUt1VXNyTF9PRUdnU241SzlrQlVkNUIwcUYtN3F6aUlaR0YyWnhCQnJEUFhLcHJzTGRmYnUzVGZzMFYxZ0FQZVRfMkRiN19NaDhCeXd2VnpSVmpwVmFVUTRNRy1maTNQSTl1LVdjX09vLUhzRGtDdXV4NU1OMVZfaGhaWEdKcy10RENXb1FZUWFxTVNKdHZqSEVBd9IBuwFBVV95cUxOd1NLdjU3NnBCeV9qTzV4Q0Naa0p0VmJCSXNuSnVGTWIxVkpRT0FpTHE2QW1Gdl9GbTVidXlsYVlMQVBteHdCaXQxMVVjNExEMDA4Q0d4U2NXaEhyakJIbEdDQXBDcUJyQkNRRC16elg1RE8yWkhNaGl4bTJRbkNZbkNoalc3djlGNVVpRGw4RTBGYVRYaDdCUm8zXy1LUEU3RWJkTERKSkdCdU9rTnUweHNjNi1SWTludkc0?oc=5",
-     "categories": [
-      "Sanksi / denda"
-     ],
-     "severity": "sedang"
-    },
-    {
      "date": "2026-11-21",
      "title": "OJK Denda GOOD SMGR dan MARK atas Pelanggaran Pasar Modal",
      "source": "www.suaralandak.co.id",
@@ -26783,18 +26765,6 @@
      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPQ211SFZtbWJ2WFpvLV9vd0pxaFVVUWdSZVZuT1BrSElQT2V3c3JTT29INTF2RG5nd0c3V2w1Ml82MTQ1Q0FWX2MwNTZlaXNXdDE4YjNaTFJzeUU0dXl2c2VxVlVmd3BBYWlOc1p5VE4xcXl2VmxEU1JYZHNZTVZwWGNiUEJscGV6dllaQUhaNzRNY2VLallCVENDRE1uYWFXLTlpeXB1cWNtUFpmb3dCZktESzI1QlNuQ29Kc0NUeGhOblp2WnN4NkUwenlNM0E?oc=5",
      "categories": [
       "Right issue (dilusi)"
-     ],
-     "severity": "sedang"
-    }
-   ],
-   "INDY": [
-    {
-     "date": "2026-11-21",
-     "title": "Sengketa Lahan Awak Mas Tekan Saham Indika Energy",
-     "source": "www.suaralandak.co.id",
-     "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5WVExPZ2twQlUyZEJxVDA2U2k5MHpiSnhUcXd6N2g0cjFNV3l3U2NsMnd2eVdYeUthdGI2X3NMMUFpbVExWVFlTDRRXzRMa2tsQ0xPNk5NYnNIbGFNdnVGMU5iX0RWOXJ2V21QZUtpamFXYXhZWkE?oc=5",
-     "categories": [
-      "Gugatan"
      ],
      "severity": "sedang"
     }
@@ -31350,7 +31320,6 @@
   "Daftar emiten & jumlah saham: idx.co.id (publik)",
   "Harga OHLCV harian, jumlah saham & fundamental: Yahoo Finance via yfinance (open source, Apache-2.0)",
   "Arsip fundamental harian & laporan keuangan (kuartalan/tahunan) disimpan di repo: data/fundamentals_history",
-  "Hari bursa terakhir (2026-11-26) untuk 791 saham dihitung dari data per jam Yahoo karena data harian belum terbit",
   "Transaksi asing harian: idx.co.id (ringkasan perdagangan saham)",
   "Peringatan berita: Google News RSS & RSS portal berita (judul + kata kunci risiko)"
  ]
