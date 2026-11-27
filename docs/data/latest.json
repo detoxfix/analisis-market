@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27 05:31",
+ "generated_at": "2026-11-27 12:14",
  "as_of": "2026-11-26",
  "demo": false,
  "data_status": {
@@ -31,18 +31,12 @@
   }
  },
  "market": {
-  "bench": 5197.61377,
-  "bench_chg": -0.008389,
+  "bench": 5242.171875,
+  "bench_chg": 0.008573,
   "regime": "Bearish",
   "universe": 107,
   "scanned": 869,
   "series": [
-   [
-    "2026-05-20",
-    6318.5,
-    7246.37,
-    7983.04
-   ],
    [
     "2026-05-21",
     6094.94,
@@ -816,6 +810,12 @@
     5197.61,
     5591.87,
     6524.16
+   ],
+   [
+    "2026-11-26",
+    5242.17,
+    5567.47,
+    6505.47
    ]
   ],
   "above_sma50": false,
@@ -1747,18 +1747,7 @@
      "risks": [
       "IHSG di bawah EMA20 (pasar lemah)"
      ],
-     "news": [
-      {
-       "date": "2026-11-24",
-       "title": "Saham BBCA Kena Downgrade JP Morgan, Target Harga Dipangkas Jadi Rp4.800",
-       "source": "FAJAR",
-       "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQLVp4czJQZVBUaExPSEZJUkl6bnA3OHhUZFR1aURZcENoS1o3SWxCYjY4czlEckNaVlZkZGtLSVdPZDBfc2lEaXZ4MHlrZEJ1aDRvaEJHb1BkTGpuX3k0ZlBKWE5QWVVERW5nSmRvWVE4eDZrcUY1bUYzMjdVaU8wR3BCOTloUlc5enVTVzVjTzV0R20zNkU1aVNRbmdtb2VZZy1mY0Z3?oc=5",
-       "categories": [
-        "Peringkat turun"
-       ],
-       "severity": "sedang"
-      }
-     ],
+     "news": null,
      "foreign_5d": -109026735000.0,
      "foreign_20d": 1687538205500.0,
      "foreign_20d_pct": 0.067425,
@@ -2753,7 +2742,38 @@
       "Histogram MACD negatif / melemah"
      ],
      "risks": [],
-     "news": null,
+     "news": [
+      {
+       "date": "2026-11-27",
+       "title": "Raup Untung Rp 10 Triliun, Bareskrim Tangkap Tersangka Dugaan Goreng Saham DSSA",
+       "source": "Cryptowave",
+       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNNVJhSDdKRXdGVTA1enZvanc0YVJ2alpGRlRwb18xWXpWQjBsaEFMbkxwMENJZ0l6QWd4MmNkUVBtZHluMFZhLXM5MGxQVGtjYWNFUERBOEcwR0pSM1dVR1dyY0p1ZlViSk5iOUQ4bGNySnhFQnJYR2tyaGtYTkc5WnBzV2xmYXFIQVNhM3YzbWJaQXVMaEZLNkdCMWE2M0RHYkl3bFQwTnYweVNMWUNYTzJn?oc=5",
+       "categories": [
+        "Kasus hukum"
+       ],
+       "severity": "tinggi"
+      },
+      {
+       "date": "2026-11-27",
+       "title": "Tersangka Manipulasi DSSA Ditangkap — Untung Rp10 Triliun",
+       "source": "feedberry.com",
+       "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOMVlWMjI3Z1R3MlhTZFJxa2lDYUZDLUFMdjBnSjBrY05BY0RXS3dGdEVienpYNHJIbDdhU0p6ZjFFempKWjFqRGJEUkRLc0JTamlEaDI4cy1HSlhweUFHV3I5eW80TDNWV2VQd1pZWTFlWjN5aTl0ZlZ5aGNlTmdlR3YzMTN2eFJtWjFpRUF3?oc=5",
+       "categories": [
+        "Kasus hukum"
+       ],
+       "severity": "tinggi"
+      },
+      {
+       "date": "2026-11-25",
+       "title": "Bareskrim Tangkap Tersangka Manipulasi Saham DSSA, Raup Untung Rp10T!",
+       "source": "Emitennews.com",
+       "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNMlZyOGFyTkdER1pDMzZzWUxPLVlHS0JMbUhiV1ljaUE4UUxETi16cFVtRmtVLWNjVDdLblpRSV9jYTVBSkp6dWdyR01HaFJDTXpuMkotaXVGLVNKdGxFVTNteVNkaXNUZDhHaXQ0ZjJIbzdMMER4czJ3RGRQM3VtVWo2a0kwWjk5dmNrN25LbHFRbjFwV2Ntd2gwcw?oc=5",
+       "categories": [
+        "Kasus hukum"
+       ],
+       "severity": "tinggi"
+      }
+     ],
      "foreign_5d": -18536601500.0,
      "foreign_20d": -116387622000.0,
      "foreign_20d_pct": -0.077373,
@@ -3695,18 +3715,7 @@
       "IHSG di bawah EMA20 (pasar lemah)"
      ],
      "risks": [],
-     "news": [
-      {
-       "date": "2026-11-24",
-       "title": "ARCI RAUP LEDAKAN LABA 54,57 PERSEN",
-       "source": "Lotus Andalan Sekuritas",
-       "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB5by1LZ0ljNVJ3Rmk0a09pN3NPVjdJdUNmZ1VLRHhhN29MdkM1aXg3RmRDTXZVNFpVb2dpbVl2MVVzX2VvZ2ZSMFZvYVpyTnZMYlpxcVh2MzQ0YVFGSEcwb0licU9nbzFpeWsyWmM2WGVCTlF3bmFDS3pUbjBXZTA?oc=5",
-       "categories": [
-        "PHK / operasi terganggu"
-       ],
-       "severity": "sedang"
-      }
-     ],
+     "news": null,
      "foreign_5d": -18149755500.0,
      "foreign_20d": -76222867500.0,
      "foreign_20d_pct": -0.099497,
@@ -4950,26 +4959,6 @@
      ],
      "news": [
       {
-       "date": "2026-11-26",
-       "title": "PTRO Dapat Restu Rights Issue dan Penjaminan Aset",
-       "source": "investor.id",
-       "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOT2tlSlJDSFlkNVFxSVlXbDBVbWpKaWdidXNnaER6NkhaeXVXcmZxX0hkU19ONlRTb1ROdGRUOHhaaVUxV2NDVFVVZEtmS0pGb0xldFNQc0VuRGdTN21CazRKMUwyYmVzYzloZzlJN1BTZnR0MEUtX0c3UmNFV1NqTG5tR1NFYUtoWnZn?oc=5",
-       "categories": [
-        "Right issue (dilusi)"
-       ],
-       "severity": "sedang"
-      },
-      {
-       "date": "2026-11-26",
-       "title": "Petrosea (PTRO) Resmi Kantongi Restu Rights Issue Maksimal 170 Juta Saham",
-       "source": "Rmol.id",
-       "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZm5uXzVocUZudENKTkhGaU8tTXpUZE5wbEYxR0ZBcEJnRDBWSU82WDFmR1ZGa29FOUFDSi1xZmtlOTZlUkJXX3lacWdyc1E5dF9SZnhuaU1CUGh1ejR5cFdjaEhVNFZ6YVBYalV0aEJpNVI0SW9oaVlLS2MxOWxJVnF1U01TQXlMeExnd3NablROV25KRGRNNUdKeFBsZmNTdmpGY180UTM3YlVmdnhV?oc=5",
-       "categories": [
-        "Right issue (dilusi)"
-       ],
-       "severity": "sedang"
-      },
-      {
        "date": "2026-11-25",
        "title": "Petrosea (PTRO) Rights Issue 170 Juta Saham Baru, Cek Prospek Sahamnya",
        "source": "kontan.co.id",
@@ -4994,6 +4983,26 @@
        "title": "Rights Issue PTRO Perkuat Modal untuk Ekspansi Proyek EPC",
        "source": "Demokratis.co.id",
        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBCbGpDODlIZ2t1MTZveF9rRWNRLVRpR2hGZ21MV2pVTGxwSFFGZERwcTFWTElnNGduQzFIQUJhYkZab1BlQ2ZNNWtuenRKYjRJWVo0YmJqTjFkR2t1RGZaemxhOXc1TU0?oc=5",
+       "categories": [
+        "Right issue (dilusi)"
+       ],
+       "severity": "sedang"
+      },
+      {
+       "date": "2026-11-23",
+       "title": "PTRO Siapkan Rights Issue Maksimal 170 Juta Saham, Minta Restu RUPSLB",
+       "source": "SWA.co.id",
+       "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSFA5Z0lyWm5fZVR0V2RtQ0Z6Z2ZLQ2I5ckVWcXJLRDJ2N0JHV09kYnhmZE1ETzBRaTh3MmREMHFqSWJvMEd0TEszLXhLUzZfbERLNFNYQlhRNlFfWVItY3lFdlhXSVV6UXo4RFVaSk51QjNBNDRRNHlPSmVEMkpRZlgzMUVMaE1YbTVPd2h5dVNpWXZFR2EzSTZkV3pDYjA?oc=5",
+       "categories": [
+        "Right issue (dilusi)"
+       ],
+       "severity": "sedang"
+      },
+      {
+       "date": "2026-11-23",
+       "title": "Jadwal RUPS Hari Ini: BYAN Rombak Pengurus, PTRO Bahas Rights Issue",
+       "source": "CNBC Indonesia",
+       "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNVFJPVXVUQ2d1dEYxODkwbkNJbkJTZU96ZXNCNDYzN1o4R1J2bnpVSWxDNnBrcU05ZlJtc0pkQWt5TUlkS1BLRE5Va2pHSi1ldEtZOGNBbnFsd2l0YkE4LWVTY0taV0VXZnI3eTlEMjVPR0lzU0dUTDh4dm1iTTZnWlZVNUplUUVESkMzOUQwOHlfZXlqQlhaVHNUTnhkcWlkM1V4ckhZakktbUVtRVhpUDBIU3lvNmVEaTlHTHJmX1NZQTQ4WkHSAcsBQVVfeXFMTnBwZzJyazlHMU50UkJRRERfR0c3VTBEa0pOY1Nzdm5lWGJYZGZKMlN0MUY5eWtMZVduT1V3S0phb2dEVUlqUmlzMzRJZUlxazhGU2dHbEdMYV8zb2lMTEZyQklrT3g1YmtNaHByLVRIbnAyVkloMXNLT3dCa25xSE40TlJvY1AzZmoyckNqQzhZdUZNN1RFd0VFTmpFY2Jkc2l4MzBEVHBOb0stNUdxUzVDQm9aRXV3S0MtZFpMRTVJckNqUEUxcEhLdUU?oc=5",
        "categories": [
         "Right issue (dilusi)"
        ],
@@ -8846,7 +8855,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "SMA50 > SMA100 & SMA50 menanjak (uptrend menengah)",
-      "Outperform IHSG +32.1% (3 bulan)"
+      "Outperform IHSG +31.4% (3 bulan)"
      ],
      "risks": [],
      "news": null,
@@ -8956,7 +8965,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 21: tren naik kuat",
-      "Outperform IHSG +31.5% (3 bulan)"
+      "Outperform IHSG +30.8% (3 bulan)"
      ],
      "risks": [],
      "news": null,
@@ -9066,7 +9075,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 21: tren naik kuat",
-      "Outperform IHSG +25.3% (3 bulan)"
+      "Outperform IHSG +24.6% (3 bulan)"
      ],
      "risks": [],
      "news": null,
@@ -9176,7 +9185,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 28: tren naik kuat",
-      "Outperform IHSG +24.7% (3 bulan)"
+      "Outperform IHSG +24.0% (3 bulan)"
      ],
      "risks": [],
      "news": null,
@@ -9286,7 +9295,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 22: tren naik kuat",
-      "Outperform IHSG +22.4% (3 bulan)"
+      "Outperform IHSG +21.7% (3 bulan)"
      ],
      "risks": [],
      "news": null,
@@ -9506,7 +9515,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "SMA50 > SMA100 & SMA50 menanjak (uptrend menengah)",
-      "Outperform IHSG +27.6% (3 bulan)"
+      "Outperform IHSG +27.0% (3 bulan)"
      ],
      "risks": [],
      "news": null,
@@ -9616,7 +9625,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 29: tren naik kuat",
-      "Outperform IHSG +22.1% (3 bulan)"
+      "Outperform IHSG +21.4% (3 bulan)"
      ],
      "risks": [
       "Struktur MA menengah melemah"
@@ -9728,7 +9737,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 23: tren naik kuat",
-      "Outperform IHSG +19.8% (3 bulan)"
+      "Outperform IHSG +19.2% (3 bulan)"
      ],
      "risks": [
       "Struktur MA menengah melemah",
@@ -9841,7 +9850,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 31: tren naik kuat",
-      "Outperform IHSG +19.0% (3 bulan)"
+      "Outperform IHSG +18.3% (3 bulan)"
      ],
      "risks": [
       "Struktur MA menengah melemah",
@@ -9954,7 +9963,7 @@
      "reasons": [
       "Harga di atas SMA50",
       "ADX 25: tren naik kuat",
-      "Outperform IHSG +18.5% (3 bulan)"
+      "Outperform IHSG +17.9% (3 bulan)"
      ],
      "risks": [
       "Struktur MA menengah melemah",
@@ -10093,7 +10102,38 @@
       "ADX 30: tren turun kuat"
      ],
      "risks": [],
-     "news": null,
+     "news": [
+      {
+       "date": "2026-11-27",
+       "title": "Raup Untung Rp 10 Triliun, Bareskrim Tangkap Tersangka Dugaan Goreng Saham DSSA",
+       "source": "Cryptowave",
+       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNNVJhSDdKRXdGVTA1enZvanc0YVJ2alpGRlRwb18xWXpWQjBsaEFMbkxwMENJZ0l6QWd4MmNkUVBtZHluMFZhLXM5MGxQVGtjYWNFUERBOEcwR0pSM1dVR1dyY0p1ZlViSk5iOUQ4bGNySnhFQnJYR2tyaGtYTkc5WnBzV2xmYXFIQVNhM3YzbWJaQXVMaEZLNkdCMWE2M0RHYkl3bFQwTnYweVNMWUNYTzJn?oc=5",
+       "categories": [
+        "Kasus hukum"
+       ],
+       "severity": "tinggi"
+      },
+      {
+       "date": "2026-11-27",
+       "title": "Tersangka Manipulasi DSSA Ditangkap — Untung Rp10 Triliun",
+       "source": "feedberry.com",
+       "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOMVlWMjI3Z1R3MlhTZFJxa2lDYUZDLUFMdjBnSjBrY05BY0RXS3dGdEVienpYNHJIbDdhU0p6ZjFFempKWjFqRGJEUkRLc0JTamlEaDI4cy1HSlhweUFHV3I5eW80TDNWV2VQd1pZWTFlWjN5aTl0ZlZ5aGNlTmdlR3YzMTN2eFJtWjFpRUF3?oc=5",
+       "categories": [
+        "Kasus hukum"
+       ],
+       "severity": "tinggi"
+      },
+      {
+       "date": "2026-11-25",
+       "title": "Bareskrim Tangkap Tersangka Manipulasi Saham DSSA, Raup Untung Rp10T!",
+       "source": "Emitennews.com",
+       "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNMlZyOGFyTkdER1pDMzZzWUxPLVlHS0JMbUhiV1ljaUE4UUxETi16cFVtRmtVLWNjVDdLblpRSV9jYTVBSkp6dWdyR01HaFJDTXpuMkotaXVGLVNKdGxFVTNteVNkaXNUZDhHaXQ0ZjJIbzdMMER4czJ3RGRQM3VtVWo2a0kwWjk5dmNrN25LbHFRbjFwV2Ntd2gwcw?oc=5",
+       "categories": [
+        "Kasus hukum"
+       ],
+       "severity": "tinggi"
+      }
+     ],
      "foreign_5d": -18536601500.0,
      "foreign_20d": -116387622000.0,
      "foreign_20d_pct": -0.077373,
@@ -10375,18 +10415,7 @@
       "ADX 23: tren turun kuat"
      ],
      "risks": [],
-     "news": [
-      {
-       "date": "2026-11-24",
-       "title": "ARCI RAUP LEDAKAN LABA 54,57 PERSEN",
-       "source": "Lotus Andalan Sekuritas",
-       "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB5by1LZ0ljNVJ3Rmk0a09pN3NPVjdJdUNmZ1VLRHhhN29MdkM1aXg3RmRDTXZVNFpVb2dpbVl2MVVzX2VvZ2ZSMFZvYVpyTnZMYlpxcVh2MzQ0YVFGSEcwb0licU9nbzFpeWsyWmM2WGVCTlF3bmFDS3pUbjBXZTA?oc=5",
-       "categories": [
-        "PHK / operasi terganggu"
-       ],
-       "severity": "sedang"
-      }
-     ],
+     "news": null,
      "foreign_5d": -18149755500.0,
      "foreign_20d": -76222867500.0,
      "foreign_20d_pct": -0.099497,
@@ -10658,9 +10687,9 @@
      "price": 2840.0,
      "chg_1d": -0.034014,
      "mcap": 21151619809360.0,
-     "score": -97.8,
+     "score": -98.8,
      "signal": "STRONG SELL",
-     "confidence": 0.978,
+     "confidence": 0.988,
      "atr_pct": 0.067886,
      "reasons": [
       "Harga di bawah SMA50",
@@ -10752,9 +10781,9 @@
      "price": 1025.0,
      "chg_1d": -0.014423,
      "mcap": 17015000000000.0,
-     "score": -93.7,
+     "score": -94.7,
      "signal": "STRONG SELL",
-     "confidence": 0.937,
+     "confidence": 0.947,
      "atr_pct": 0.057082,
      "reasons": [
       "Harga di bawah SMA50",
@@ -10846,9 +10875,9 @@
      "price": 3220.0,
      "chg_1d": 0.009404,
      "mcap": 233508660852320.0,
-     "score": -92.9,
+     "score": -93.9,
      "signal": "STRONG SELL",
-     "confidence": 0.929,
+     "confidence": 0.939,
      "atr_pct": 0.062282,
      "reasons": [
       "Harga di bawah SMA50",
@@ -10940,9 +10969,9 @@
      "price": 478.0,
      "chg_1d": 0.0,
      "mcap": 8860062331890.0,
-     "score": -90.8,
+     "score": -91.8,
      "signal": "STRONG SELL",
-     "confidence": 0.908,
+     "confidence": 0.918,
      "atr_pct": 0.041613,
      "reasons": [
       "Harga di bawah SMA50",
@@ -11903,26 +11932,6 @@
      "risks": [],
      "news": [
       {
-       "date": "2026-11-26",
-       "title": "PTRO Dapat Restu Rights Issue dan Penjaminan Aset",
-       "source": "investor.id",
-       "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOT2tlSlJDSFlkNVFxSVlXbDBVbWpKaWdidXNnaER6NkhaeXVXcmZxX0hkU19ONlRTb1ROdGRUOHhaaVUxV2NDVFVVZEtmS0pGb0xldFNQc0VuRGdTN21CazRKMUwyYmVzYzloZzlJN1BTZnR0MEUtX0c3UmNFV1NqTG5tR1NFYUtoWnZn?oc=5",
-       "categories": [
-        "Right issue (dilusi)"
-       ],
-       "severity": "sedang"
-      },
-      {
-       "date": "2026-11-26",
-       "title": "Petrosea (PTRO) Resmi Kantongi Restu Rights Issue Maksimal 170 Juta Saham",
-       "source": "Rmol.id",
-       "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZm5uXzVocUZudENKTkhGaU8tTXpUZE5wbEYxR0ZBcEJnRDBWSU82WDFmR1ZGa29FOUFDSi1xZmtlOTZlUkJXX3lacWdyc1E5dF9SZnhuaU1CUGh1ejR5cFdjaEhVNFZ6YVBYalV0aEJpNVI0SW9oaVlLS2MxOWxJVnF1U01TQXlMeExnd3NablROV25KRGRNNUdKeFBsZmNTdmpGY180UTM3YlVmdnhV?oc=5",
-       "categories": [
-        "Right issue (dilusi)"
-       ],
-       "severity": "sedang"
-      },
-      {
        "date": "2026-11-25",
        "title": "Petrosea (PTRO) Rights Issue 170 Juta Saham Baru, Cek Prospek Sahamnya",
        "source": "kontan.co.id",
@@ -11947,6 +11956,26 @@
        "title": "Rights Issue PTRO Perkuat Modal untuk Ekspansi Proyek EPC",
        "source": "Demokratis.co.id",
        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBCbGpDODlIZ2t1MTZveF9rRWNRLVRpR2hGZ21MV2pVTGxwSFFGZERwcTFWTElnNGduQzFIQUJhYkZab1BlQ2ZNNWtuenRKYjRJWVo0YmJqTjFkR2t1RGZaemxhOXc1TU0?oc=5",
+       "categories": [
+        "Right issue (dilusi)"
+       ],
+       "severity": "sedang"
+      },
+      {
+       "date": "2026-11-23",
+       "title": "PTRO Siapkan Rights Issue Maksimal 170 Juta Saham, Minta Restu RUPSLB",
+       "source": "SWA.co.id",
+       "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSFA5Z0lyWm5fZVR0V2RtQ0Z6Z2ZLQ2I5ckVWcXJLRDJ2N0JHV09kYnhmZE1ETzBRaTh3MmREMHFqSWJvMEd0TEszLXhLUzZfbERLNFNYQlhRNlFfWVItY3lFdlhXSVV6UXo4RFVaSk51QjNBNDRRNHlPSmVEMkpRZlgzMUVMaE1YbTVPd2h5dVNpWXZFR2EzSTZkV3pDYjA?oc=5",
+       "categories": [
+        "Right issue (dilusi)"
+       ],
+       "severity": "sedang"
+      },
+      {
+       "date": "2026-11-23",
+       "title": "Jadwal RUPS Hari Ini: BYAN Rombak Pengurus, PTRO Bahas Rights Issue",
+       "source": "CNBC Indonesia",
+       "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNVFJPVXVUQ2d1dEYxODkwbkNJbkJTZU96ZXNCNDYzN1o4R1J2bnpVSWxDNnBrcU05ZlJtc0pkQWt5TUlkS1BLRE5Va2pHSi1ldEtZOGNBbnFsd2l0YkE4LWVTY0taV0VXZnI3eTlEMjVPR0lzU0dUTDh4dm1iTTZnWlZVNUplUUVESkMzOUQwOHlfZXlqQlhaVHNUTnhkcWlkM1V4ckhZakktbUVtRVhpUDBIU3lvNmVEaTlHTHJmX1NZQTQ4WkHSAcsBQVVfeXFMTnBwZzJyazlHMU50UkJRRERfR0c3VTBEa0pOY1Nzdm5lWGJYZGZKMlN0MUY5eWtMZVduT1V3S0phb2dEVUlqUmlzMzRJZUlxazhGU2dHbEdMYV8zb2lMTEZyQklrT3g1YmtNaHByLVRIbnAyVkloMXNLT3dCa25xSE40TlJvY1AzZmoyckNqQzhZdUZNN1RFd0VFTmpFY2Jkc2l4MzBEVHBOb0stNUdxUzVDQm9aRXV3S0MtZFpMRTVJckNqUEUxcEhLdUU?oc=5",
        "categories": [
         "Right issue (dilusi)"
        ],
@@ -12788,9 +12817,9 @@
      "price": 2300.0,
      "chg_1d": -0.004329,
      "mcap": 37715400000000.0,
-     "score": -81.7,
+     "score": -82.7,
      "signal": "STRONG SELL",
-     "confidence": 0.817,
+     "confidence": 0.827,
      "atr_pct": 0.040632,
      "reasons": [
       "Harga di bawah SMA50",
@@ -12882,9 +12911,9 @@
      "price": 388.0,
      "chg_1d": 0.021053,
      "mcap": 10266480000000.0,
-     "score": -81.0,
+     "score": -82.0,
      "signal": "STRONG SELL",
-     "confidence": 0.81,
+     "confidence": 0.82,
      "atr_pct": 0.052525,
      "reasons": [
       "Harga di bawah SMA50",
@@ -12976,9 +13005,9 @@
      "price": 6325.0,
      "chg_1d": -0.003937,
      "mcap": 34603967101825.0,
-     "score": -80.3,
+     "score": -81.3,
      "signal": "STRONG SELL",
-     "confidence": 0.803,
+     "confidence": 0.813,
      "atr_pct": 0.042853,
      "reasons": [
       "Harga di bawah SMA50",
@@ -13446,9 +13475,9 @@
      "price": 3400.0,
      "chg_1d": 0.0,
      "mcap": 35835267415600.0,
-     "score": -73.9,
+     "score": -74.9,
      "signal": "STRONG SELL",
-     "confidence": 0.739,
+     "confidence": 0.749,
      "atr_pct": 0.057775,
      "reasons": [
       "Harga di bawah SMA50",
@@ -13540,9 +13569,9 @@
      "price": 1705.0,
      "chg_1d": -0.008721,
      "mcap": 33848580700000.0,
-     "score": -73.9,
+     "score": -74.9,
      "signal": "STRONG SELL",
-     "confidence": 0.739,
+     "confidence": 0.749,
      "atr_pct": 0.033944,
      "reasons": [
       "Harga di bawah SMA50",
@@ -13634,9 +13663,9 @@
      "price": 665.0,
      "chg_1d": 0.015267,
      "mcap": 8989536500000.0,
-     "score": -72.5,
+     "score": -73.5,
      "signal": "STRONG SELL",
-     "confidence": 0.725,
+     "confidence": 0.735,
      "atr_pct": 0.050134,
      "reasons": [
       "Harga di bawah SMA50",
@@ -13728,9 +13757,9 @@
      "price": 302.0,
      "chg_1d": 0.013423,
      "mcap": 6606250000000.0,
-     "score": -72.5,
+     "score": -73.5,
      "signal": "STRONG SELL",
-     "confidence": 0.725,
+     "confidence": 0.735,
      "atr_pct": 0.047307,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14031,9 +14060,9 @@
      "price": 710.0,
      "chg_1d": 0.007092,
      "mcap": 44800006000000.0,
-     "score": -67.1,
+     "score": -68.1,
      "signal": "STRONG SELL",
-     "confidence": 0.671,
+     "confidence": 0.681,
      "atr_pct": 0.045854,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14125,9 +14154,9 @@
      "price": 880.0,
      "chg_1d": 0.011494,
      "mcap": 36919743151280.0,
-     "score": -65.0,
+     "score": -66.0,
      "signal": "STRONG SELL",
-     "confidence": 0.65,
+     "confidence": 0.66,
      "atr_pct": 0.040927,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14135,7 +14164,7 @@
       "ADX 29: tren turun kuat"
      ],
      "risks": [
-      "Outperform IHSG +6.7% (3 bulan)"
+      "Outperform IHSG +6.0% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": 667073000.0,
@@ -14221,9 +14250,9 @@
      "price": 2580.0,
      "chg_1d": 0.032,
      "mcap": 18725307696000.0,
-     "score": -64.6,
+     "score": -65.6,
      "signal": "STRONG SELL",
-     "confidence": 0.646,
+     "confidence": 0.656,
      "atr_pct": 0.037769,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14231,7 +14260,7 @@
       "ADX 21: tren turun kuat"
      ],
      "risks": [
-      "Outperform IHSG +6.9% (3 bulan)"
+      "Outperform IHSG +6.3% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -16284560000.0,
@@ -14341,18 +14370,8 @@
       {
        "date": "2026-11-26",
        "title": "BSI (BRIS) Rights Issue Maksimal 6,8 Miliar Saham, Siap Perkuat Modal",
-       "source": "kontan.co.id",
-       "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOcGhFeGxEWmIyeXJHQjhBbnVRVkEyODNEb3psVWRyb01Gamo3U0xvMlBNWVhhbTh3V3BDSXkySGFSSHdQLXJLLVB2bU1POGFOeVR1azd3NU1MczNSRTBZSm84UjRsTUM4ZDRLb2lyS0pwOGFXNU9DSkYyYV9HM085dVY3UG8yNzRhcF9XLWJzU2tOdlRQOEloS1QwYVVILVVGRlHSAZsBQVVfeXFMT3pBSmkwcmZ1V0swcUdFc3FYVExPVnVmYWx2UllWdmdvUzgzdElpU04zNFdlZHZrYlJYTHE1dWdwSlBScTBWaVVMVEo3TlVmS3dhbTRoWXVfVkZTRTVsUUFsNnU1WE80SDJhTEFGc1c5TldvU1lrY2JuSXJCaW16QVdSRTh5WnRtek9BLTVPNFdnc3NzUy1wSlhGMTQ?oc=5",
-       "categories": [
-        "Right issue (dilusi)"
-       ],
-       "severity": "sedang"
-      },
-      {
-       "date": "2026-11-26",
-       "title": "BSI (BRIS) Gelar Rights Issue Februari 2027, Siapkan 6,8 Miliar Saham Baru",
-       "source": "IDX Channel",
-       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNNDF3VkdhaHJsblp0aFV3djMxaUhaYUVCQ0Qzdld4RXJ4SjJ2QVFiSDF6ZVhuVGdyeVZON0g4ZmwyQmJOR0ROQnV0UHNWZHBjRUVoT2tBVXoyYkxnT1lTdlZIYkRtSkxDZ3VxeG8wcHg5VVpYMVBOQWcybk55dDVhU3A5RXhfTHlCNjdmcUhMbGJYY1pGNUw5TzQtVW1TS1E2UFFZeE54bVBDNVkwS2fSAbMBQVVfeXFMT2oyQnhMODdyUmhuWWV1RVZQYUozY296dGNkQ3BsX196eW5leFJJcFJwbVZBTm9iVXAxNkFiR01MU2dUcVBuY0JVSDRVZDNSMzdJcnF1SWFOaEhOQ3BKN0lWYnRNN2h0QWJtaTYzVFRLTWhHMEh3QjY0YXBVQklwdTl3LXA4NzE4Y0VyWnptdTFkOWZibGVHT2czYWliVEZ4X0RhWE5KVnpHMmRtekhicmlVOEE?oc=5",
+       "source": "TradingView",
+       "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9aWC1CLWFqU19NMncxTTdLemEwWnpaZVVqZTU4ZWxsaUpDVmlfV1RWZFp0Q2lNdmRxdHBTUVh3WDZPbTdRNUlTRUJLVDN2ZzF5UWVsRmxaN3dxY2h3bC1aN1c5OFBtd0x5ZFdlVkdhUDVCR2RGdS1DRDNQMzU1RUU?oc=5",
        "categories": [
         "Right issue (dilusi)"
        ],
@@ -14373,6 +14392,16 @@
        "title": "BSI Raup Laba Rp 6,1 Triliun, Mirae Asset Ungkap Prospek Saham BRIS Usai Rights Issue",
        "source": "kontan.co.id",
        "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQSnJ0UmFGMEY0MzlqWE04TjZzTHBhVEpGWjdpc0RDRVFjM3I3bTlpTXdfQjVORXhGSnozQ2FzV3VsVFlPaEYyWHktVDRPUF84cW52X01ZQnVHWlZmZDJ5TjctenU0ZVZiaU1KUHRpeHA0NEdBZUlwbWNMWEMzNjlsdU5Bb09QSmk1ME1Ga0UzSDd4VjV4bzBvUDMxOGZpNk51bmZOeFNiWldydzVkN2E3SDluMmF6QTR4bUHSAbMBQVVfeXFMTURzV0ZTSVAtMmphVlR5WWVGRDVMYXJncVowOXpneVpEb0dCVEdjak95QjhPb1ZEZWNQU0RxclRLQjR1eWU0YThMeDFYb045TTRtNWpaZmxrYUFIbGRUXzNTUDJ4RWdJSEVxdDF4TFNvZTdsS2VyVldPUkhwcGttNzVwc3VnRHVCNkVpcjhSVVR3bEFsWW5CMDFfV08xOEQtMTVpWTNQX3BRSnhDNGR0NVhyWWM?oc=5",
+       "categories": [
+        "Right issue (dilusi)"
+       ],
+       "severity": "sedang"
+      },
+      {
+       "date": "2026-11-24",
+       "title": "BSI (BRIS) Bukukan Laba Rp 6,01 Triliun & Bersiap Right Issue, Simak Rekomendasinya",
+       "source": "kontan.co.id",
+       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQZTAwYWxZUGVDSjJLZjBhUUNmbkljekxHQWtsODFTc2Q5Wko3V1NmVnAzRC00S1dvQTE1Zk9NYkI4Y2NXWjMtaC1uakJONEZHaUVuVENoWnFIXy1NNlNkSlo4VzFQS09XaUxSNFlrZ3hPNE9Rc1d3b002MWNEYkFBb0YxMms4T0NPUzNQQzNXUXF0bEFFLWhQbDRQc0RrMHBtWXllaGI1Z1loMTdqYW5EcFVn0gGrAUFVX3lxTE1NNzZvTENKVV9OQy1jZjB0a0Fua1NNMzdPTU9YZFU5bHNsRkJ6eUVMWjlEVTZZb0FMbk5ybnAtXzd2clFUekhBcEo2S3l2VDJtYWdqdWQyRWZva3o1OHpZOU9BR3pyVTVMeHdsOFZFOW9hYkl0ZWZXdEl0SGJVSERybEw4MDVBeVlNclNkRDE5YnM0cm8yZzhsS2I2MGZnZmNWX0tET2hMZklwZw?oc=5",
        "categories": [
         "Right issue (dilusi)"
        ],
@@ -14744,9 +14773,9 @@
      "price": 510.0,
      "chg_1d": 0.009901,
      "mcap": 8785757607000.0,
-     "score": -55.7,
+     "score": -56.7,
      "signal": "SELL",
-     "confidence": 0.557,
+     "confidence": 0.567,
      "atr_pct": 0.047433,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14845,7 +14874,7 @@
      "reasons": [
       "Harga di bawah SMA50",
       "Momentum 3 bulan -32.9%",
-      "Underperform IHSG -10.9% (3 bulan)"
+      "Underperform IHSG -11.5% (3 bulan)"
      ],
      "risks": [],
      "news": null,
@@ -14932,9 +14961,9 @@
      "price": 1225.0,
      "chg_1d": 0.033755,
      "mcap": 30791883283700.0,
-     "score": -53.2,
+     "score": -54.2,
      "signal": "SELL",
-     "confidence": 0.532,
+     "confidence": 0.542,
      "atr_pct": 0.047739,
      "reasons": [
       "Harga di bawah SMA50",
@@ -14942,7 +14971,7 @@
       "ADX 30: tren turun kuat"
      ],
      "risks": [
-      "Outperform IHSG +4.5% (3 bulan)"
+      "Outperform IHSG +3.9% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": 43432996000.0,
@@ -15028,9 +15057,9 @@
      "price": 2640.0,
      "chg_1d": 0.007634,
      "mcap": 63441218874000.0,
-     "score": -51.2,
+     "score": -52.2,
      "signal": "SELL",
-     "confidence": 0.512,
+     "confidence": 0.522,
      "atr_pct": 0.041465,
      "reasons": [
       "Harga di bawah SMA50",
@@ -15038,7 +15067,7 @@
       "ADX 25: tren turun kuat"
      ],
      "risks": [
-      "Outperform IHSG +5.9% (3 bulan)"
+      "Outperform IHSG +5.2% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -118369937000.0,
@@ -15134,7 +15163,7 @@
       "MACD di bawah sinyal & di bawah nol"
      ],
      "risks": [
-      "Outperform IHSG +11.7% (3 bulan)"
+      "Outperform IHSG +11.0% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -5270846000.0,
@@ -15326,7 +15355,7 @@
       "MACD di bawah sinyal & di bawah nol"
      ],
      "risks": [
-      "Outperform IHSG +12.7% (3 bulan)"
+      "Outperform IHSG +12.1% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -777486500.0,
@@ -15412,9 +15441,9 @@
      "price": 2010.0,
      "chg_1d": 0.0,
      "mcap": 199115055366000.0,
-     "score": -46.0,
+     "score": -47.0,
      "signal": "SELL",
-     "confidence": 0.46,
+     "confidence": 0.47,
      "atr_pct": 0.043681,
      "reasons": [
       "Harga di bawah SMA50",
@@ -15506,9 +15535,9 @@
      "price": 15750.0,
      "chg_1d": -0.001585,
      "mcap": 30304386000000.0,
-     "score": -45.5,
+     "score": -46.5,
      "signal": "SELL",
-     "confidence": 0.455,
+     "confidence": 0.465,
      "atr_pct": 0.033735,
      "reasons": [
       "Harga di bawah SMA50",
@@ -15589,6 +15618,102 @@
       15850.0,
       15775.0,
       15750.0
+     ]
+    },
+    {
+     "ticker": "CMRY.JK",
+     "code": "CMRY",
+     "name": "PT Cisarua Mountain Dairy Tbk",
+     "sector": "Consumer Defensive",
+     "horizon": "medium",
+     "price": 4120.0,
+     "chg_1d": -0.002421,
+     "mcap": 32690893960000.0,
+     "score": -45.2,
+     "signal": "SELL",
+     "confidence": 0.452,
+     "atr_pct": 0.031706,
+     "reasons": [
+      "Harga di bawah SMA50",
+      "Struktur MA menengah melemah",
+      "MACD di bawah sinyal & di bawah nol"
+     ],
+     "risks": [
+      "Outperform IHSG +8.5% (3 bulan)"
+     ],
+     "news": null,
+     "foreign_5d": 8695499000.0,
+     "foreign_20d": 5065426000.0,
+     "foreign_20d_pct": 0.03018,
+     "foreign_days": 20,
+     "foreign_last": "2026-11-20",
+     "action": "Kurangi 50% posisi",
+     "sell_portion": 0.5,
+     "sell_zone_low": 4120.0,
+     "sell_zone_high": 4180.0,
+     "breakdown_level": 4060.0,
+     "when_sell": "Kurangi saat pantulan ke area jual. Sisa posisi: cut loss bila close di bawah level breakdown. Jangan buka posisi beli baru selama sinyal SELL.",
+     "spark": [
+      4570.0,
+      4590.0,
+      4650.0,
+      4500.0,
+      4450.0,
+      4410.0,
+      4460.0,
+      4550.0,
+      4480.0,
+      4470.0,
+      4500.0,
+      4460.0,
+      4480.0,
+      4550.0,
+      4450.0,
+      4370.0,
+      4370.0,
+      4330.0,
+      4350.0,
+      4340.0,
+      4380.0,
+      4430.0,
+      4420.0,
+      4470.0,
+      4430.0,
+      4440.0,
+      4500.0,
+      4480.0,
+      4510.0,
+      4610.0,
+      4250.0,
+      3960.0,
+      4150.0,
+      4250.0,
+      4210.0,
+      4140.0,
+      4140.0,
+      4060.0,
+      4150.0,
+      4250.0,
+      4220.0,
+      4120.0,
+      4110.0,
+      4060.0,
+      4330.0,
+      4250.0,
+      4140.0,
+      4170.0,
+      4190.0,
+      4220.0,
+      4290.0,
+      4400.0,
+      4390.0,
+      4290.0,
+      4240.0,
+      4150.0,
+      4150.0,
+      4150.0,
+      4130.0,
+      4120.0
      ]
     },
     {
@@ -15799,7 +15924,7 @@
      "reasons": [
       "Harga di bawah SMA50",
       "Momentum 3 bulan -40.7%",
-      "Underperform IHSG -18.7% (3 bulan)"
+      "Underperform IHSG -19.3% (3 bulan)"
      ],
      "risks": [],
      "news": [
@@ -15985,102 +16110,6 @@
      ]
     },
     {
-     "ticker": "CMRY.JK",
-     "code": "CMRY",
-     "name": "PT Cisarua Mountain Dairy Tbk",
-     "sector": "Consumer Defensive",
-     "horizon": "medium",
-     "price": 4120.0,
-     "chg_1d": -0.002421,
-     "mcap": 32690893960000.0,
-     "score": -44.2,
-     "signal": "SELL",
-     "confidence": 0.442,
-     "atr_pct": 0.031706,
-     "reasons": [
-      "Harga di bawah SMA50",
-      "Struktur MA menengah melemah",
-      "MACD di bawah sinyal & di bawah nol"
-     ],
-     "risks": [
-      "Outperform IHSG +9.2% (3 bulan)"
-     ],
-     "news": null,
-     "foreign_5d": 8695499000.0,
-     "foreign_20d": 5065426000.0,
-     "foreign_20d_pct": 0.03018,
-     "foreign_days": 20,
-     "foreign_last": "2026-11-20",
-     "action": "Kurangi 50% posisi",
-     "sell_portion": 0.5,
-     "sell_zone_low": 4120.0,
-     "sell_zone_high": 4180.0,
-     "breakdown_level": 4060.0,
-     "when_sell": "Kurangi saat pantulan ke area jual. Sisa posisi: cut loss bila close di bawah level breakdown. Jangan buka posisi beli baru selama sinyal SELL.",
-     "spark": [
-      4570.0,
-      4590.0,
-      4650.0,
-      4500.0,
-      4450.0,
-      4410.0,
-      4460.0,
-      4550.0,
-      4480.0,
-      4470.0,
-      4500.0,
-      4460.0,
-      4480.0,
-      4550.0,
-      4450.0,
-      4370.0,
-      4370.0,
-      4330.0,
-      4350.0,
-      4340.0,
-      4380.0,
-      4430.0,
-      4420.0,
-      4470.0,
-      4430.0,
-      4440.0,
-      4500.0,
-      4480.0,
-      4510.0,
-      4610.0,
-      4250.0,
-      3960.0,
-      4150.0,
-      4250.0,
-      4210.0,
-      4140.0,
-      4140.0,
-      4060.0,
-      4150.0,
-      4250.0,
-      4220.0,
-      4120.0,
-      4110.0,
-      4060.0,
-      4330.0,
-      4250.0,
-      4140.0,
-      4170.0,
-      4190.0,
-      4220.0,
-      4290.0,
-      4400.0,
-      4390.0,
-      4290.0,
-      4240.0,
-      4150.0,
-      4150.0,
-      4150.0,
-      4130.0,
-      4120.0
-     ]
-    },
-    {
      "ticker": "AKRA.JK",
      "code": "AKRA",
      "name": "PT AKR Corporindo Tbk",
@@ -16099,7 +16128,7 @@
       "ADX 20: tren turun kuat"
      ],
      "risks": [
-      "Outperform IHSG +12.4% (3 bulan)"
+      "Outperform IHSG +11.7% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": 4207806500.0,
@@ -16185,9 +16214,9 @@
      "price": 370.0,
      "chg_1d": -0.021164,
      "mcap": 21866298380470.0,
-     "score": -37.5,
+     "score": -38.5,
      "signal": "SELL",
-     "confidence": 0.375,
+     "confidence": 0.385,
      "atr_pct": 0.043943,
      "reasons": [
       "Harga di bawah SMA50",
@@ -16195,7 +16224,7 @@
       "Momentum 3 bulan -17.0%"
      ],
      "risks": [
-      "Outperform IHSG +5.0% (3 bulan)"
+      "Outperform IHSG +4.3% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": 694017000.0,
@@ -16281,9 +16310,9 @@
      "price": 168.0,
      "chg_1d": 0.005988,
      "mcap": 5379708313224.0,
-     "score": -37.4,
+     "score": -38.4,
      "signal": "SELL",
-     "confidence": 0.374,
+     "confidence": 0.384,
      "atr_pct": 0.04527,
      "reasons": [
       "Harga di bawah SMA50",
@@ -16484,7 +16513,7 @@
       "MACD di bawah sinyal & di bawah nol"
      ],
      "risks": [
-      "Outperform IHSG +18.4% (3 bulan)"
+      "Outperform IHSG +17.7% (3 bulan)"
      ],
      "news": null,
      "foreign_5d": -74793227500.0,
@@ -16577,7 +16606,7 @@
      "reasons": [
       "Harga di bawah SMA50",
       "Momentum 3 bulan -34.0%",
-      "Underperform IHSG -12.0% (3 bulan)"
+      "Underperform IHSG -12.6% (3 bulan)"
      ],
      "risks": [
       "ADX 22: tren naik kuat"
@@ -19708,26 +19737,6 @@
      ],
      "news": [
       {
-       "date": "2026-11-26",
-       "title": "PTRO Dapat Restu Rights Issue dan Penjaminan Aset",
-       "source": "investor.id",
-       "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOT2tlSlJDSFlkNVFxSVlXbDBVbWpKaWdidXNnaER6NkhaeXVXcmZxX0hkU19ONlRTb1ROdGRUOHhaaVUxV2NDVFVVZEtmS0pGb0xldFNQc0VuRGdTN21CazRKMUwyYmVzYzloZzlJN1BTZnR0MEUtX0c3UmNFV1NqTG5tR1NFYUtoWnZn?oc=5",
-       "categories": [
-        "Right issue (dilusi)"
-       ],
-       "severity": "sedang"
-      },
-      {
-       "date": "2026-11-26",
-       "title": "Petrosea (PTRO) Resmi Kantongi Restu Rights Issue Maksimal 170 Juta Saham",
-       "source": "Rmol.id",
-       "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZm5uXzVocUZudENKTkhGaU8tTXpUZE5wbEYxR0ZBcEJnRDBWSU82WDFmR1ZGa29FOUFDSi1xZmtlOTZlUkJXX3lacWdyc1E5dF9SZnhuaU1CUGh1ejR5cFdjaEhVNFZ6YVBYalV0aEJpNVI0SW9oaVlLS2MxOWxJVnF1U01TQXlMeExnd3NablROV25KRGRNNUdKeFBsZmNTdmpGY180UTM3YlVmdnhV?oc=5",
-       "categories": [
-        "Right issue (dilusi)"
-       ],
-       "severity": "sedang"
-      },
-      {
        "date": "2026-11-25",
        "title": "Petrosea (PTRO) Rights Issue 170 Juta Saham Baru, Cek Prospek Sahamnya",
        "source": "kontan.co.id",
@@ -19752,6 +19761,26 @@
        "title": "Rights Issue PTRO Perkuat Modal untuk Ekspansi Proyek EPC",
        "source": "Demokratis.co.id",
        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBCbGpDODlIZ2t1MTZveF9rRWNRLVRpR2hGZ21MV2pVTGxwSFFGZERwcTFWTElnNGduQzFIQUJhYkZab1BlQ2ZNNWtuenRKYjRJWVo0YmJqTjFkR2t1RGZaemxhOXc1TU0?oc=5",
+       "categories": [
+        "Right issue (dilusi)"
+       ],
+       "severity": "sedang"
+      },
+      {
+       "date": "2026-11-23",
+       "title": "PTRO Siapkan Rights Issue Maksimal 170 Juta Saham, Minta Restu RUPSLB",
+       "source": "SWA.co.id",
+       "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSFA5Z0lyWm5fZVR0V2RtQ0Z6Z2ZLQ2I5ckVWcXJLRDJ2N0JHV09kYnhmZE1ETzBRaTh3MmREMHFqSWJvMEd0TEszLXhLUzZfbERLNFNYQlhRNlFfWVItY3lFdlhXSVV6UXo4RFVaSk51QjNBNDRRNHlPSmVEMkpRZlgzMUVMaE1YbTVPd2h5dVNpWXZFR2EzSTZkV3pDYjA?oc=5",
+       "categories": [
+        "Right issue (dilusi)"
+       ],
+       "severity": "sedang"
+      },
+      {
+       "date": "2026-11-23",
+       "title": "Jadwal RUPS Hari Ini: BYAN Rombak Pengurus, PTRO Bahas Rights Issue",
+       "source": "CNBC Indonesia",
+       "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNVFJPVXVUQ2d1dEYxODkwbkNJbkJTZU96ZXNCNDYzN1o4R1J2bnpVSWxDNnBrcU05ZlJtc0pkQWt5TUlkS1BLRE5Va2pHSi1ldEtZOGNBbnFsd2l0YkE4LWVTY0taV0VXZnI3eTlEMjVPR0lzU0dUTDh4dm1iTTZnWlZVNUplUUVESkMzOUQwOHlfZXlqQlhaVHNUTnhkcWlkM1V4ckhZakktbUVtRVhpUDBIU3lvNmVEaTlHTHJmX1NZQTQ4WkHSAcsBQVVfeXFMTnBwZzJyazlHMU50UkJRRERfR0c3VTBEa0pOY1Nzdm5lWGJYZGZKMlN0MUY5eWtMZVduT1V3S0phb2dEVUlqUmlzMzRJZUlxazhGU2dHbEdMYV8zb2lMTEZyQklrT3g1YmtNaHByLVRIbnAyVkloMXNLT3dCa25xSE40TlJvY1AzZmoyckNqQzhZdUZNN1RFd0VFTmpFY2Jkc2l4MzBEVHBOb0stNUdxUzVDQm9aRXV3S0MtZFpMRTVJckNqUEUxcEhLdUU?oc=5",
        "categories": [
         "Right issue (dilusi)"
        ],
@@ -21239,18 +21268,7 @@
       "ROE 21.2% (profitabilitas tinggi)",
       "Dividend yield 6.5%"
      ],
-     "news": [
-      {
-       "date": "2026-11-24",
-       "title": "Saham BBCA Kena Downgrade JP Morgan, Target Harga Dipangkas Jadi Rp4.800",
-       "source": "FAJAR",
-       "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQLVp4czJQZVBUaExPSEZJUkl6bnA3OHhUZFR1aURZcENoS1o3SWxCYjY4czlEckNaVlZkZGtLSVdPZDBfc2lEaXZ4MHlrZEJ1aDRvaEJHb1BkTGpuX3k0ZlBKWE5QWVVERW5nSmRvWVE4eDZrcUY1bUYzMjdVaU8wR3BCOTloUlc5enVTVzVjTzV0R20zNkU1aVNRbmdtb2VZZy1mY0Z3?oc=5",
-       "categories": [
-        "Peringkat turun"
-       ],
-       "severity": "sedang"
-      }
-     ],
+     "news": null,
      "foreign_5d": -109026735000.0,
      "foreign_20d": 1687538205500.0,
      "foreign_20d_pct": 0.067425,
@@ -21936,18 +21954,7 @@
    "pb": 2.557222,
    "roe": 0.21199,
    "div_yield": 0.0654,
-   "news": [
-    {
-     "date": "2026-11-24",
-     "title": "Saham BBCA Kena Downgrade JP Morgan, Target Harga Dipangkas Jadi Rp4.800",
-     "source": "FAJAR",
-     "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQLVp4czJQZVBUaExPSEZJUkl6bnA3OHhUZFR1aURZcENoS1o3SWxCYjY4czlEckNaVlZkZGtLSVdPZDBfc2lEaXZ4MHlrZEJ1aDRvaEJHb1BkTGpuX3k0ZlBKWE5QWVVERW5nSmRvWVE4eDZrcUY1bUYzMjdVaU8wR3BCOTloUlc5enVTVzVjTzV0R20zNkU1aVNRbmdtb2VZZy1mY0Z3?oc=5",
-     "categories": [
-      "Peringkat turun"
-     ],
-     "severity": "sedang"
-    }
-   ],
+   "news": null,
    "foreign_5d": -109026735000.0,
    "foreign_20d": 1687538205500.0,
    "foreign_20d_pct": 0.067425,
@@ -21958,7 +21965,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": 40.8,
+    "score": 39.8,
     "signal": "BUY"
    },
    "long": {
@@ -22118,7 +22125,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -92.9,
+    "score": -93.9,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -22182,7 +22189,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -46.0,
+    "score": -47.0,
     "signal": "SELL"
    },
    "long": {
@@ -22235,7 +22242,38 @@
    "pb": null,
    "roe": 0.18789,
    "div_yield": 0.0,
-   "news": null,
+   "news": [
+    {
+     "date": "2026-11-27",
+     "title": "Raup Untung Rp 10 Triliun, Bareskrim Tangkap Tersangka Dugaan Goreng Saham DSSA",
+     "source": "Cryptowave",
+     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNNVJhSDdKRXdGVTA1enZvanc0YVJ2alpGRlRwb18xWXpWQjBsaEFMbkxwMENJZ0l6QWd4MmNkUVBtZHluMFZhLXM5MGxQVGtjYWNFUERBOEcwR0pSM1dVR1dyY0p1ZlViSk5iOUQ4bGNySnhFQnJYR2tyaGtYTkc5WnBzV2xmYXFIQVNhM3YzbWJaQXVMaEZLNkdCMWE2M0RHYkl3bFQwTnYweVNMWUNYTzJn?oc=5",
+     "categories": [
+      "Kasus hukum"
+     ],
+     "severity": "tinggi"
+    },
+    {
+     "date": "2026-11-27",
+     "title": "Tersangka Manipulasi DSSA Ditangkap — Untung Rp10 Triliun",
+     "source": "feedberry.com",
+     "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOMVlWMjI3Z1R3MlhTZFJxa2lDYUZDLUFMdjBnSjBrY05BY0RXS3dGdEVienpYNHJIbDdhU0p6ZjFFempKWjFqRGJEUkRLc0JTamlEaDI4cy1HSlhweUFHV3I5eW80TDNWV2VQd1pZWTFlWjN5aTl0ZlZ5aGNlTmdlR3YzMTN2eFJtWjFpRUF3?oc=5",
+     "categories": [
+      "Kasus hukum"
+     ],
+     "severity": "tinggi"
+    },
+    {
+     "date": "2026-11-25",
+     "title": "Bareskrim Tangkap Tersangka Manipulasi Saham DSSA, Raup Untung Rp10T!",
+     "source": "Emitennews.com",
+     "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNMlZyOGFyTkdER1pDMzZzWUxPLVlHS0JMbUhiV1ljaUE4UUxETi16cFVtRmtVLWNjVDdLblpRSV9jYTVBSkp6dWdyR01HaFJDTXpuMkotaXVGLVNKdGxFVTNteVNkaXNUZDhHaXQ0ZjJIbzdMMER4czJ3RGRQM3VtVWo2a0kwWjk5dmNrN25LbHFRbjFwV2Ntd2gwcw?oc=5",
+     "categories": [
+      "Kasus hukum"
+     ],
+     "severity": "tinggi"
+    }
+   ],
    "foreign_5d": -18536601500.0,
    "foreign_20d": -116387622000.0,
    "foreign_20d_pct": -0.077373,
@@ -22502,7 +22540,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -51.2,
+    "score": -52.2,
     "signal": "SELL"
    },
    "long": {
@@ -22633,18 +22671,8 @@
     {
      "date": "2026-11-26",
      "title": "BSI (BRIS) Rights Issue Maksimal 6,8 Miliar Saham, Siap Perkuat Modal",
-     "source": "kontan.co.id",
-     "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOcGhFeGxEWmIyeXJHQjhBbnVRVkEyODNEb3psVWRyb01Gamo3U0xvMlBNWVhhbTh3V3BDSXkySGFSSHdQLXJLLVB2bU1POGFOeVR1azd3NU1MczNSRTBZSm84UjRsTUM4ZDRLb2lyS0pwOGFXNU9DSkYyYV9HM085dVY3UG8yNzRhcF9XLWJzU2tOdlRQOEloS1QwYVVILVVGRlHSAZsBQVVfeXFMT3pBSmkwcmZ1V0swcUdFc3FYVExPVnVmYWx2UllWdmdvUzgzdElpU04zNFdlZHZrYlJYTHE1dWdwSlBScTBWaVVMVEo3TlVmS3dhbTRoWXVfVkZTRTVsUUFsNnU1WE80SDJhTEFGc1c5TldvU1lrY2JuSXJCaW16QVdSRTh5WnRtek9BLTVPNFdnc3NzUy1wSlhGMTQ?oc=5",
-     "categories": [
-      "Right issue (dilusi)"
-     ],
-     "severity": "sedang"
-    },
-    {
-     "date": "2026-11-26",
-     "title": "BSI (BRIS) Gelar Rights Issue Februari 2027, Siapkan 6,8 Miliar Saham Baru",
-     "source": "IDX Channel",
-     "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNNDF3VkdhaHJsblp0aFV3djMxaUhaYUVCQ0Qzdld4RXJ4SjJ2QVFiSDF6ZVhuVGdyeVZON0g4ZmwyQmJOR0ROQnV0UHNWZHBjRUVoT2tBVXoyYkxnT1lTdlZIYkRtSkxDZ3VxeG8wcHg5VVpYMVBOQWcybk55dDVhU3A5RXhfTHlCNjdmcUhMbGJYY1pGNUw5TzQtVW1TS1E2UFFZeE54bVBDNVkwS2fSAbMBQVVfeXFMT2oyQnhMODdyUmhuWWV1RVZQYUozY296dGNkQ3BsX196eW5leFJJcFJwbVZBTm9iVXAxNkFiR01MU2dUcVBuY0JVSDRVZDNSMzdJcnF1SWFOaEhOQ3BKN0lWYnRNN2h0QWJtaTYzVFRLTWhHMEh3QjY0YXBVQklwdTl3LXA4NzE4Y0VyWnptdTFkOWZibGVHT2czYWliVEZ4X0RhWE5KVnpHMmRtekhicmlVOEE?oc=5",
+     "source": "TradingView",
+     "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9aWC1CLWFqU19NMncxTTdLemEwWnpaZVVqZTU4ZWxsaUpDVmlfV1RWZFp0Q2lNdmRxdHBTUVh3WDZPbTdRNUlTRUJLVDN2ZzF5UWVsRmxaN3dxY2h3bC1aN1c5OFBtd0x5ZFdlVkdhUDVCR2RGdS1DRDNQMzU1RUU?oc=5",
      "categories": [
       "Right issue (dilusi)"
      ],
@@ -22665,6 +22693,16 @@
      "title": "BSI Raup Laba Rp 6,1 Triliun, Mirae Asset Ungkap Prospek Saham BRIS Usai Rights Issue",
      "source": "kontan.co.id",
      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQSnJ0UmFGMEY0MzlqWE04TjZzTHBhVEpGWjdpc0RDRVFjM3I3bTlpTXdfQjVORXhGSnozQ2FzV3VsVFlPaEYyWHktVDRPUF84cW52X01ZQnVHWlZmZDJ5TjctenU0ZVZiaU1KUHRpeHA0NEdBZUlwbWNMWEMzNjlsdU5Bb09QSmk1ME1Ga0UzSDd4VjV4bzBvUDMxOGZpNk51bmZOeFNiWldydzVkN2E3SDluMmF6QTR4bUHSAbMBQVVfeXFMTURzV0ZTSVAtMmphVlR5WWVGRDVMYXJncVowOXpneVpEb0dCVEdjak95QjhPb1ZEZWNQU0RxclRLQjR1eWU0YThMeDFYb045TTRtNWpaZmxrYUFIbGRUXzNTUDJ4RWdJSEVxdDF4TFNvZTdsS2VyVldPUkhwcGttNzVwc3VnRHVCNkVpcjhSVVR3bEFsWW5CMDFfV08xOEQtMTVpWTNQX3BRSnhDNGR0NVhyWWM?oc=5",
+     "categories": [
+      "Right issue (dilusi)"
+     ],
+     "severity": "sedang"
+    },
+    {
+     "date": "2026-11-24",
+     "title": "BSI (BRIS) Bukukan Laba Rp 6,01 Triliun & Bersiap Right Issue, Simak Rekomendasinya",
+     "source": "kontan.co.id",
+     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQZTAwYWxZUGVDSjJLZjBhUUNmbkljekxHQWtsODFTc2Q5Wko3V1NmVnAzRC00S1dvQTE1Zk9NYkI4Y2NXWjMtaC1uakJONEZHaUVuVENoWnFIXy1NNlNkSlo4VzFQS09XaUxSNFlrZ3hPNE9Rc1d3b002MWNEYkFBb0YxMms4T0NPUzNQQzNXUXF0bEFFLWhQbDRQc0RrMHBtWXllaGI1Z1loMTdqYW5EcFVn0gGrAUFVX3lxTE1NNzZvTENKVV9OQy1jZjB0a0Fua1NNMzdPTU9YZFU5bHNsRkJ6eUVMWjlEVTZZb0FMbk5ybnAtXzd2clFUekhBcEo2S3l2VDJtYWdqdWQyRWZva3o1OHpZOU9BR3pyVTVMeHdsOFZFOW9hYkl0ZWZXdEl0SGJVSERybEw4MDVBeVlNclNkRDE5YnM0cm8yZzhsS2I2MGZnZmNWX0tET2hMZklwZw?oc=5",
      "categories": [
       "Right issue (dilusi)"
      ],
@@ -22873,7 +22911,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -67.1,
+    "score": -68.1,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -22905,7 +22943,7 @@
     "signal": "HOLD"
    },
    "medium": {
-    "score": -27.2,
+    "score": -28.2,
     "signal": "HOLD"
    },
    "long": {
@@ -23140,7 +23178,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -81.7,
+    "score": -82.7,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23236,7 +23274,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -65.0,
+    "score": -66.0,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23300,7 +23338,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -73.9,
+    "score": -74.9,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23332,7 +23370,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -80.3,
+    "score": -81.3,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23428,7 +23466,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -73.9,
+    "score": -74.9,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23460,7 +23498,7 @@
     "signal": "STRONG SELL"
    },
    "medium": {
-    "score": -44.2,
+    "score": -45.2,
     "signal": "SELL"
    },
    "long": {
@@ -23524,7 +23562,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -53.2,
+    "score": -54.2,
     "signal": "SELL"
    },
    "long": {
@@ -23556,7 +23594,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -45.5,
+    "score": -46.5,
     "signal": "SELL"
    },
    "long": {
@@ -23643,26 +23681,6 @@
    "div_yield": 0.0,
    "news": [
     {
-     "date": "2026-11-26",
-     "title": "PTRO Dapat Restu Rights Issue dan Penjaminan Aset",
-     "source": "investor.id",
-     "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOT2tlSlJDSFlkNVFxSVlXbDBVbWpKaWdidXNnaER6NkhaeXVXcmZxX0hkU19ONlRTb1ROdGRUOHhaaVUxV2NDVFVVZEtmS0pGb0xldFNQc0VuRGdTN21CazRKMUwyYmVzYzloZzlJN1BTZnR0MEUtX0c3UmNFV1NqTG5tR1NFYUtoWnZn?oc=5",
-     "categories": [
-      "Right issue (dilusi)"
-     ],
-     "severity": "sedang"
-    },
-    {
-     "date": "2026-11-26",
-     "title": "Petrosea (PTRO) Resmi Kantongi Restu Rights Issue Maksimal 170 Juta Saham",
-     "source": "Rmol.id",
-     "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZm5uXzVocUZudENKTkhGaU8tTXpUZE5wbEYxR0ZBcEJnRDBWSU82WDFmR1ZGa29FOUFDSi1xZmtlOTZlUkJXX3lacWdyc1E5dF9SZnhuaU1CUGh1ejR5cFdjaEhVNFZ6YVBYalV0aEJpNVI0SW9oaVlLS2MxOWxJVnF1U01TQXlMeExnd3NablROV25KRGRNNUdKeFBsZmNTdmpGY180UTM3YlVmdnhV?oc=5",
-     "categories": [
-      "Right issue (dilusi)"
-     ],
-     "severity": "sedang"
-    },
-    {
      "date": "2026-11-25",
      "title": "Petrosea (PTRO) Rights Issue 170 Juta Saham Baru, Cek Prospek Sahamnya",
      "source": "kontan.co.id",
@@ -23687,6 +23705,26 @@
      "title": "Rights Issue PTRO Perkuat Modal untuk Ekspansi Proyek EPC",
      "source": "Demokratis.co.id",
      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBCbGpDODlIZ2t1MTZveF9rRWNRLVRpR2hGZ21MV2pVTGxwSFFGZERwcTFWTElnNGduQzFIQUJhYkZab1BlQ2ZNNWtuenRKYjRJWVo0YmJqTjFkR2t1RGZaemxhOXc1TU0?oc=5",
+     "categories": [
+      "Right issue (dilusi)"
+     ],
+     "severity": "sedang"
+    },
+    {
+     "date": "2026-11-23",
+     "title": "PTRO Siapkan Rights Issue Maksimal 170 Juta Saham, Minta Restu RUPSLB",
+     "source": "SWA.co.id",
+     "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSFA5Z0lyWm5fZVR0V2RtQ0Z6Z2ZLQ2I5ckVWcXJLRDJ2N0JHV09kYnhmZE1ETzBRaTh3MmREMHFqSWJvMEd0TEszLXhLUzZfbERLNFNYQlhRNlFfWVItY3lFdlhXSVV6UXo4RFVaSk51QjNBNDRRNHlPSmVEMkpRZlgzMUVMaE1YbTVPd2h5dVNpWXZFR2EzSTZkV3pDYjA?oc=5",
+     "categories": [
+      "Right issue (dilusi)"
+     ],
+     "severity": "sedang"
+    },
+    {
+     "date": "2026-11-23",
+     "title": "Jadwal RUPS Hari Ini: BYAN Rombak Pengurus, PTRO Bahas Rights Issue",
+     "source": "CNBC Indonesia",
+     "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNVFJPVXVUQ2d1dEYxODkwbkNJbkJTZU96ZXNCNDYzN1o4R1J2bnpVSWxDNnBrcU05ZlJtc0pkQWt5TUlkS1BLRE5Va2pHSi1ldEtZOGNBbnFsd2l0YkE4LWVTY0taV0VXZnI3eTlEMjVPR0lzU0dUTDh4dm1iTTZnWlZVNUplUUVESkMzOUQwOHlfZXlqQlhaVHNUTnhkcWlkM1V4ckhZakktbUVtRVhpUDBIU3lvNmVEaTlHTHJmX1NZQTQ4WkHSAcsBQVVfeXFMTnBwZzJyazlHMU50UkJRRERfR0c3VTBEa0pOY1Nzdm5lWGJYZGZKMlN0MUY5eWtMZVduT1V3S0phb2dEVUlqUmlzMzRJZUlxazhGU2dHbEdMYV8zb2lMTEZyQklrT3g1YmtNaHByLVRIbnAyVkloMXNLT3dCa25xSE40TlJvY1AzZmoyckNqQzhZdUZNN1RFd0VFTmpFY2Jkc2l4MzBEVHBOb0stNUdxUzVDQm9aRXV3S0MtZFpMRTVJckNqUEUxcEhLdUU?oc=5",
      "categories": [
       "Right issue (dilusi)"
      ],
@@ -23735,7 +23773,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -37.5,
+    "score": -38.5,
     "signal": "SELL"
    },
    "long": {
@@ -23831,7 +23869,7 @@
     "signal": "STRONG SELL"
    },
    "medium": {
-    "score": -97.8,
+    "score": -98.8,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -23959,7 +23997,7 @@
     "signal": "STRONG BUY"
    },
    "medium": {
-    "score": -21.2,
+    "score": -22.2,
     "signal": "HOLD"
    },
    "long": {
@@ -24012,18 +24050,7 @@
    "pb": null,
    "roe": 0.36055,
    "div_yield": 0.0519,
-   "news": [
-    {
-     "date": "2026-11-24",
-     "title": "ARCI RAUP LEDAKAN LABA 54,57 PERSEN",
-     "source": "Lotus Andalan Sekuritas",
-     "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB5by1LZ0ljNVJ3Rmk0a09pN3NPVjdJdUNmZ1VLRHhhN29MdkM1aXg3RmRDTXZVNFpVb2dpbVl2MVVzX2VvZ2ZSMFZvYVpyTnZMYlpxcVh2MzQ0YVFGSEcwb0licU9nbzFpeWsyWmM2WGVCTlF3bmFDS3pUbjBXZTA?oc=5",
-     "categories": [
-      "PHK / operasi terganggu"
-     ],
-     "severity": "sedang"
-    }
-   ],
+   "news": null,
    "foreign_5d": -18149755500.0,
    "foreign_20d": -76222867500.0,
    "foreign_20d_pct": -0.099497,
@@ -24066,7 +24093,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -64.6,
+    "score": -65.6,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -24162,7 +24189,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": 27.7,
+    "score": 26.7,
     "signal": "HOLD"
    },
    "long": {
@@ -24194,7 +24221,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -93.7,
+    "score": -94.7,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -24354,7 +24381,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": 29.4,
+    "score": 28.4,
     "signal": "HOLD"
    },
    "long": {
@@ -24482,7 +24509,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": -28.3,
+    "score": -29.4,
     "signal": "HOLD"
    },
    "long": {
@@ -24664,7 +24691,7 @@
     "signal": "BUY"
    },
    "medium": {
-    "score": 24.5,
+    "score": 23.5,
     "signal": "HOLD"
    },
    "long": {
@@ -24696,7 +24723,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -81.0,
+    "score": -82.0,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -24856,7 +24883,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -72.5,
+    "score": -73.5,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -24941,7 +24968,7 @@
     "signal": "STRONG SELL"
    },
    "medium": {
-    "score": -90.8,
+    "score": -91.8,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -24973,7 +25000,7 @@
     "signal": "HOLD"
    },
    "medium": {
-    "score": -55.7,
+    "score": -56.7,
     "signal": "SELL"
    },
    "long": {
@@ -25133,7 +25160,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -20.9,
+    "score": -21.9,
     "signal": "HOLD"
    },
    "long": {
@@ -25293,7 +25320,7 @@
     "signal": "SELL"
    },
    "medium": {
-    "score": -72.5,
+    "score": -73.5,
     "signal": "STRONG SELL"
    },
    "long": {
@@ -25389,7 +25416,7 @@
     "signal": "HOLD"
    },
    "medium": {
-    "score": -37.4,
+    "score": -38.4,
     "signal": "SELL"
    },
    "long": {
@@ -26575,24 +26602,44 @@
    "google": {
     "ok": 107,
     "fail": 0,
-    "items": 8159
+    "items": 7690
    },
    "skipped_budget": 0,
-   "recent_items": 1341,
-   "stocks_flagged": 8,
-   "seconds": 90
+   "recent_items": 1352,
+   "stocks_flagged": 7,
+   "seconds": 81
   },
   "items": {
-   "BBCA": [
+   "DSSA": [
     {
-     "date": "2026-11-24",
-     "title": "Saham BBCA Kena Downgrade JP Morgan, Target Harga Dipangkas Jadi Rp4.800",
-     "source": "FAJAR",
-     "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQLVp4czJQZVBUaExPSEZJUkl6bnA3OHhUZFR1aURZcENoS1o3SWxCYjY4czlEckNaVlZkZGtLSVdPZDBfc2lEaXZ4MHlrZEJ1aDRvaEJHb1BkTGpuX3k0ZlBKWE5QWVVERW5nSmRvWVE4eDZrcUY1bUYzMjdVaU8wR3BCOTloUlc5enVTVzVjTzV0R20zNkU1aVNRbmdtb2VZZy1mY0Z3?oc=5",
+     "date": "2026-11-27",
+     "title": "Raup Untung Rp 10 Triliun, Bareskrim Tangkap Tersangka Dugaan Goreng Saham DSSA",
+     "source": "Cryptowave",
+     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNNVJhSDdKRXdGVTA1enZvanc0YVJ2alpGRlRwb18xWXpWQjBsaEFMbkxwMENJZ0l6QWd4MmNkUVBtZHluMFZhLXM5MGxQVGtjYWNFUERBOEcwR0pSM1dVR1dyY0p1ZlViSk5iOUQ4bGNySnhFQnJYR2tyaGtYTkc5WnBzV2xmYXFIQVNhM3YzbWJaQXVMaEZLNkdCMWE2M0RHYkl3bFQwTnYweVNMWUNYTzJn?oc=5",
      "categories": [
-      "Peringkat turun"
+      "Kasus hukum"
      ],
-     "severity": "sedang"
+     "severity": "tinggi"
+    },
+    {
+     "date": "2026-11-27",
+     "title": "Tersangka Manipulasi DSSA Ditangkap — Untung Rp10 Triliun",
+     "source": "feedberry.com",
+     "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOMVlWMjI3Z1R3MlhTZFJxa2lDYUZDLUFMdjBnSjBrY05BY0RXS3dGdEVienpYNHJIbDdhU0p6ZjFFempKWjFqRGJEUkRLc0JTamlEaDI4cy1HSlhweUFHV3I5eW80TDNWV2VQd1pZWTFlWjN5aTl0ZlZ5aGNlTmdlR3YzMTN2eFJtWjFpRUF3?oc=5",
+     "categories": [
+      "Kasus hukum"
+     ],
+     "severity": "tinggi"
+    },
+    {
+     "date": "2026-11-25",
+     "title": "Bareskrim Tangkap Tersangka Manipulasi Saham DSSA, Raup Untung Rp10T!",
+     "source": "Emitennews.com",
+     "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNMlZyOGFyTkdER1pDMzZzWUxPLVlHS0JMbUhiV1ljaUE4UUxETi16cFVtRmtVLWNjVDdLblpRSV9jYTVBSkp6dWdyR01HaFJDTXpuMkotaXVGLVNKdGxFVTNteVNkaXNUZDhHaXQ0ZjJIbzdMMER4czJ3RGRQM3VtVWo2a0kwWjk5dmNrN25LbHFRbjFwV2Ntd2gwcw?oc=5",
+     "categories": [
+      "Kasus hukum"
+     ],
+     "severity": "tinggi"
     }
    ],
    "BRIS": [
@@ -26609,18 +26656,8 @@
     {
      "date": "2026-11-26",
      "title": "BSI (BRIS) Rights Issue Maksimal 6,8 Miliar Saham, Siap Perkuat Modal",
-     "source": "kontan.co.id",
-     "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOcGhFeGxEWmIyeXJHQjhBbnVRVkEyODNEb3psVWRyb01Gamo3U0xvMlBNWVhhbTh3V3BDSXkySGFSSHdQLXJLLVB2bU1POGFOeVR1azd3NU1MczNSRTBZSm84UjRsTUM4ZDRLb2lyS0pwOGFXNU9DSkYyYV9HM085dVY3UG8yNzRhcF9XLWJzU2tOdlRQOEloS1QwYVVILVVGRlHSAZsBQVVfeXFMT3pBSmkwcmZ1V0swcUdFc3FYVExPVnVmYWx2UllWdmdvUzgzdElpU04zNFdlZHZrYlJYTHE1dWdwSlBScTBWaVVMVEo3TlVmS3dhbTRoWXVfVkZTRTVsUUFsNnU1WE80SDJhTEFGc1c5TldvU1lrY2JuSXJCaW16QVdSRTh5WnRtek9BLTVPNFdnc3NzUy1wSlhGMTQ?oc=5",
-     "categories": [
-      "Right issue (dilusi)"
-     ],
-     "severity": "sedang"
-    },
-    {
-     "date": "2026-11-26",
-     "title": "BSI (BRIS) Gelar Rights Issue Februari 2027, Siapkan 6,8 Miliar Saham Baru",
-     "source": "IDX Channel",
-     "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNNDF3VkdhaHJsblp0aFV3djMxaUhaYUVCQ0Qzdld4RXJ4SjJ2QVFiSDF6ZVhuVGdyeVZON0g4ZmwyQmJOR0ROQnV0UHNWZHBjRUVoT2tBVXoyYkxnT1lTdlZIYkRtSkxDZ3VxeG8wcHg5VVpYMVBOQWcybk55dDVhU3A5RXhfTHlCNjdmcUhMbGJYY1pGNUw5TzQtVW1TS1E2UFFZeE54bVBDNVkwS2fSAbMBQVVfeXFMT2oyQnhMODdyUmhuWWV1RVZQYUozY296dGNkQ3BsX196eW5leFJJcFJwbVZBTm9iVXAxNkFiR01MU2dUcVBuY0JVSDRVZDNSMzdJcnF1SWFOaEhOQ3BKN0lWYnRNN2h0QWJtaTYzVFRLTWhHMEh3QjY0YXBVQklwdTl3LXA4NzE4Y0VyWnptdTFkOWZibGVHT2czYWliVEZ4X0RhWE5KVnpHMmRtekhicmlVOEE?oc=5",
+     "source": "TradingView",
+     "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9aWC1CLWFqU19NMncxTTdLemEwWnpaZVVqZTU4ZWxsaUpDVmlfV1RWZFp0Q2lNdmRxdHBTUVh3WDZPbTdRNUlTRUJLVDN2ZzF5UWVsRmxaN3dxY2h3bC1aN1c5OFBtd0x5ZFdlVkdhUDVCR2RGdS1DRDNQMzU1RUU?oc=5",
      "categories": [
       "Right issue (dilusi)"
      ],
@@ -26645,6 +26682,16 @@
       "Right issue (dilusi)"
      ],
      "severity": "sedang"
+    },
+    {
+     "date": "2026-11-24",
+     "title": "BSI (BRIS) Bukukan Laba Rp 6,01 Triliun & Bersiap Right Issue, Simak Rekomendasinya",
+     "source": "kontan.co.id",
+     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQZTAwYWxZUGVDSjJLZjBhUUNmbkljekxHQWtsODFTc2Q5Wko3V1NmVnAzRC00S1dvQTE1Zk9NYkI4Y2NXWjMtaC1uakJONEZHaUVuVENoWnFIXy1NNlNkSlo4VzFQS09XaUxSNFlrZ3hPNE9Rc1d3b002MWNEYkFBb0YxMms4T0NPUzNQQzNXUXF0bEFFLWhQbDRQc0RrMHBtWXllaGI1Z1loMTdqYW5EcFVn0gGrAUFVX3lxTE1NNzZvTENKVV9OQy1jZjB0a0Fua1NNMzdPTU9YZFU5bHNsRkJ6eUVMWjlEVTZZb0FMbk5ybnAtXzd2clFUekhBcEo2S3l2VDJtYWdqdWQyRWZva3o1OHpZOU9BR3pyVTVMeHdsOFZFOW9hYkl0ZWZXdEl0SGJVSERybEw4MDVBeVlNclNkRDE5YnM0cm8yZzhsS2I2MGZnZmNWX0tET2hMZklwZw?oc=5",
+     "categories": [
+      "Right issue (dilusi)"
+     ],
+     "severity": "sedang"
     }
    ],
    "MDKA": [
@@ -26660,26 +26707,6 @@
     }
    ],
    "PTRO": [
-    {
-     "date": "2026-11-26",
-     "title": "PTRO Dapat Restu Rights Issue dan Penjaminan Aset",
-     "source": "investor.id",
-     "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOT2tlSlJDSFlkNVFxSVlXbDBVbWpKaWdidXNnaER6NkhaeXVXcmZxX0hkU19ONlRTb1ROdGRUOHhaaVUxV2NDVFVVZEtmS0pGb0xldFNQc0VuRGdTN21CazRKMUwyYmVzYzloZzlJN1BTZnR0MEUtX0c3UmNFV1NqTG5tR1NFYUtoWnZn?oc=5",
-     "categories": [
-      "Right issue (dilusi)"
-     ],
-     "severity": "sedang"
-    },
-    {
-     "date": "2026-11-26",
-     "title": "Petrosea (PTRO) Resmi Kantongi Restu Rights Issue Maksimal 170 Juta Saham",
-     "source": "Rmol.id",
-     "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZm5uXzVocUZudENKTkhGaU8tTXpUZE5wbEYxR0ZBcEJnRDBWSU82WDFmR1ZGa29FOUFDSi1xZmtlOTZlUkJXX3lacWdyc1E5dF9SZnhuaU1CUGh1ejR5cFdjaEhVNFZ6YVBYalV0aEJpNVI0SW9oaVlLS2MxOWxJVnF1U01TQXlMeExnd3NablROV25KRGRNNUdKeFBsZmNTdmpGY180UTM3YlVmdnhV?oc=5",
-     "categories": [
-      "Right issue (dilusi)"
-     ],
-     "severity": "sedang"
-    },
     {
      "date": "2026-11-25",
      "title": "Petrosea (PTRO) Rights Issue 170 Juta Saham Baru, Cek Prospek Sahamnya",
@@ -26709,16 +26736,24 @@
       "Right issue (dilusi)"
      ],
      "severity": "sedang"
-    }
-   ],
-   "ARCI": [
+    },
     {
-     "date": "2026-11-24",
-     "title": "ARCI RAUP LEDAKAN LABA 54,57 PERSEN",
-     "source": "Lotus Andalan Sekuritas",
-     "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB5by1LZ0ljNVJ3Rmk0a09pN3NPVjdJdUNmZ1VLRHhhN29MdkM1aXg3RmRDTXZVNFpVb2dpbVl2MVVzX2VvZ2ZSMFZvYVpyTnZMYlpxcVh2MzQ0YVFGSEcwb0licU9nbzFpeWsyWmM2WGVCTlF3bmFDS3pUbjBXZTA?oc=5",
+     "date": "2026-11-23",
+     "title": "PTRO Siapkan Rights Issue Maksimal 170 Juta Saham, Minta Restu RUPSLB",
+     "source": "SWA.co.id",
+     "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSFA5Z0lyWm5fZVR0V2RtQ0Z6Z2ZLQ2I5ckVWcXJLRDJ2N0JHV09kYnhmZE1ETzBRaTh3MmREMHFqSWJvMEd0TEszLXhLUzZfbERLNFNYQlhRNlFfWVItY3lFdlhXSVV6UXo4RFVaSk51QjNBNDRRNHlPSmVEMkpRZlgzMUVMaE1YbTVPd2h5dVNpWXZFR2EzSTZkV3pDYjA?oc=5",
      "categories": [
-      "PHK / operasi terganggu"
+      "Right issue (dilusi)"
+     ],
+     "severity": "sedang"
+    },
+    {
+     "date": "2026-11-23",
+     "title": "Jadwal RUPS Hari Ini: BYAN Rombak Pengurus, PTRO Bahas Rights Issue",
+     "source": "CNBC Indonesia",
+     "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNVFJPVXVUQ2d1dEYxODkwbkNJbkJTZU96ZXNCNDYzN1o4R1J2bnpVSWxDNnBrcU05ZlJtc0pkQWt5TUlkS1BLRE5Va2pHSi1ldEtZOGNBbnFsd2l0YkE4LWVTY0taV0VXZnI3eTlEMjVPR0lzU0dUTDh4dm1iTTZnWlZVNUplUUVESkMzOUQwOHlfZXlqQlhaVHNUTnhkcWlkM1V4ckhZakktbUVtRVhpUDBIU3lvNmVEaTlHTHJmX1NZQTQ4WkHSAcsBQVVfeXFMTnBwZzJyazlHMU50UkJRRERfR0c3VTBEa0pOY1Nzdm5lWGJYZGZKMlN0MUY5eWtMZVduT1V3S0phb2dEVUlqUmlzMzRJZUlxazhGU2dHbEdMYV8zb2lMTEZyQklrT3g1YmtNaHByLVRIbnAyVkloMXNLT3dCa25xSE40TlJvY1AzZmoyckNqQzhZdUZNN1RFd0VFTmpFY2Jkc2l4MzBEVHBOb0stNUdxUzVDQm9aRXV3S0MtZFpMRTVJckNqUEUxcEhLdUU?oc=5",
+     "categories": [
+      "Right issue (dilusi)"
      ],
      "severity": "sedang"
     }
